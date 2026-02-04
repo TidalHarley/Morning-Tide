@@ -1,0 +1,138 @@
+# AI Tides Pipeline - GitHub Actions Workflow
+# 每天自动运行 AI 情报聚合
+
+name: AI Tides Daily Pipeline
+
+on:
+  # 定时触发 - 每天北京时间 07:00 (UTC 23:00)
+  schedule:
+    - cron: '0 23 * * *'
+  
+  # 手动触发
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: '开启调试模式'
+        required: false
+        default: 'false'
+
+env:
+  PYTHON_VERSION: '3.11'
+
+permissions:
+  contents: write
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+
+    steps:
+      # 1. 检出代码
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # 2. 设置 Python 环境
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+          cache-dependency-path: 'pipeline/requirements.txt'
+
+      # 3. 安装依赖
+      - name: 📦 Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r pipeline/requirements.txt
+
+      # 4. 创建输出目录
+      - name: 📁 Create Output Directory
+        run: mkdir -p pipeline/output
+
+      # 5. 运行 Pipeline
+      - name: 🌊 Run AI Tides Pipeline
+        if: ${{ env.DASHSCOPE_API_KEY != '' }}
+        run: python -m pipeline.main
+
+      - name: Skip pipeline (missing key)
+        if: ${{ env.DASHSCOPE_API_KEY == '' }}
+        run: echo "DASHSCOPE_API_KEY is not set. Skipping."
+
+      # 6. 上传报告作为 Artifact
+      - name: 📤 Upload Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-tides-report-${{ github.run_number }}
+          path: |
+            pipeline/output/*.md
+            pipeline/output/*.json
+          retention-days: 30
+
+      # 7. 提交更新的数据文件到仓库
+      - name: 📝 Commit Updated Data
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # 检查是否有变更
+          if git diff --quiet src/data/tide-news.json; then
+            echo "No changes to commit"
+          else
+            git add src/data/tide-news.json
+            git add pipeline/output/
+            git commit -m "🌊 Daily AI Tides Update - $(date +'%Y-%m-%d')"
+            git push
+          fi
+
+      # 8. 发送通知 (可选 - 失败时)
+      - name: 🔔 Notify on Failure
+        if: failure()
+        run: |
+          echo "Pipeline failed! Check the logs for details."
+          # 可以在这里添加 Slack/Discord/Email 通知
+
+  # 可选: 部署到 GitHub Pages
+  deploy-pages:
+    needs: run-pipeline
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      
+      - name: 🔄 Pull Latest Changes
+        run: git pull origin main
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 Install Dependencies
+        run: npm ci
+
+      - name: 🏗️ Build
+        run: npm run build
+
+      - name: 📤 Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      - name: 🚀 Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

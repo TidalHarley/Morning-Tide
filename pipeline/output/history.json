@@ -1,0 +1,16 @@
+[
+  {
+    "date": "2026-02-02",
+    "papers_count": 18,
+    "news_count": 11,
+    "top_paper": "From Similarity to Vulnerability: Key Collision Attack on LLM Semantic Caching",
+    "top_news": "Snowflake与OpenAI联手，2亿美元将AI智能体嵌入企业数据平台"
+  },
+  {
+    "date": "2026-01-30",
+    "papers_count": 18,
+    "news_count": 11,
+    "top_paper": "Liquid Interfaces: A Dynamic Ontology for the Interoperability of Autonomous Systems",
+    "top_news": "梅赛德斯-奔驰推L4-ready S-Class，搭载NVIDIA DRIVE AV"
+  }
+]

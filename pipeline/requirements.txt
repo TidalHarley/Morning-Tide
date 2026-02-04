@@ -1,0 +1,23 @@
+# AI Tides Pipeline Dependencies
+# Data Ingestion
+huggingface_hub>=0.20.0
+feedparser>=6.0.10
+requests>=2.31.0
+aiohttp>=3.9.0
+
+# Data Processing
+python-dateutil>=2.8.2
+pytz>=2024.1
+
+# AI API
+openai>=1.40.0
+
+# Utilities
+pydantic>=2.5.0
+tenacity>=8.2.0
+python-dotenv>=1.0.0
+beautifulsoup4>=4.12.0
+fastapi>=0.110.0
+uvicorn>=0.27.0
+sentence-transformers>=2.7.0
+numpy>=1.26.0

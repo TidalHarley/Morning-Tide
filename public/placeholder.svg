@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1f2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2d3748;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a202c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fb923c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="200" cy="600" r="300" fill="#374151" fill-opacity="0.3"/>
+  <circle cx="1000" cy="200" r="250" fill="#374151" fill-opacity="0.2"/>
+  
+  <!-- Grid pattern -->
+  <g stroke="#4b5563" stroke-opacity="0.15" stroke-width="1">
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="900" y1="0" x2="900" y2="800"/>
+  </g>
+  
+  <!-- Central icon area -->
+  <g transform="translate(600, 340)">
+    <!-- AI-style hexagon -->
+    <polygon points="0,-60 52,-30 52,30 0,60 -52,30 -52,-30" fill="none" stroke="url(#accentGrad)" stroke-width="3"/>
+    <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="#374151" fill-opacity="0.5"/>
+    
+    <!-- Neural network dots -->
+    <circle cx="-20" cy="-10" r="4" fill="#f97316"/>
+    <circle cx="20" cy="-10" r="4" fill="#f97316"/>
+    <circle cx="0" cy="15" r="4" fill="#f97316"/>
+    <line x1="-20" y1="-10" x2="20" y2="-10" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.6"/>
+    <line x1="-20" y1="-10" x2="0" y2="15" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.6"/>
+    <line x1="20" y1="-10" x2="0" y2="15" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.6"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="600" y="460" text-anchor="middle" fill="#9ca3af" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="500">AI News</text>
+  <text x="600" y="500" text-anchor="middle" fill="#6b7280" font-family="system-ui, -apple-system, sans-serif" font-size="18">Image Loading</text>
+  
+  <!-- Bottom accent line -->
+  <rect x="0" y="796" width="1200" height="4" fill="url(#accentGrad)" fill-opacity="0.8"/>
+</svg>

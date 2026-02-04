@@ -1,0 +1,40 @@
+version: "3.9"
+
+services:
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile.pipeline
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    command: python -m pipeline.main
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_FEEDBACK_ENDPOINT=http://localhost:8000/feedback
+    volumes:
+      - .:/app
+      - node_modules_cache:/app/node_modules
+    command: npm run dev -- --host 0.0.0.0 --port 5173
+
+  feedback:
+    build:
+      context: .
+      dockerfile: Dockerfile.pipeline
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: uvicorn pipeline.feedback_server:app --host 0.0.0.0 --port 8000
+
+volumes:
+  node_modules_cache:

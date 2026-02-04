@@ -1,0 +1,8 @@
+node_modules
+pipeline/output
+dist
+.git
+.github
+.env
+__pycache__
+*.pyc
