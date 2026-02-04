@@ -1,8 +1,8 @@
 {
   "date": "2026-02-04",
-  "generatedAt": "2026-02-04T16:48:45.187221",
-  "introduction": "今日AI领域迎来两大关键趋势：通用智能体正系统性地嵌入真实世界模型，而工业级AI基础设施开始从概念走向落地。这标志着AI正从“能回答”迈向“能行动、能验证、能负责”的新阶段。\n- 多篇论文揭示智能体如何在部分可观测环境中构建世界模型；\n- Xcode 26.3集成Claude与Codex编码代理，开发者工作流被重构；\n- NVIDIA与达索系统共建物理驱动的工业AI架构；\n- 文档智能、医疗诊断、天气预测等垂直领域出现端到端自动化突破；\n- AI安全研究聚焦后门触发器提取与多模态对齐风险。\n读者应关注智能体从实验走向生产环境带来的效率红利，同时警惕其在安全、隐私和可靠性上的新挑战——真正的AI生产力革命，正在工具链与信任机制的双重演进中悄然发生。",
-  "longformScript": "今天，AI 不再只是回答问题的“聪明助手”，而是开始真正动手做事、承担责任的“行动者”。从开发者工具到工业设计，从文档处理到企业运营，智能体正系统性地嵌入真实工作流——它们不仅理解任务，还能执行、验证、迭代。与此同时，支撑这一切的基础设施也在加速落地：芯片、协议、平台纷纷就位，让这场生产力变革从实验室走向生产线。\n\n最直观的变化，发生在开发者的键盘上。Apple 刚刚发布的 Xcode 26.3 候选版，正式引入了“智能体编程”功能。这意味着，当你在写 Swift 或 Objective-C 时，Claude Agent 或 Codex 不再只是提供建议的旁观者，而是能主动拆解需求、翻阅项目文档、修改配置文件，甚至调用 Xcode Previews 实时预览效果的协作伙伴。它不再局限于单行代码补全，而是贯穿整个开发周期的代理。更关键的是，Apple 开放了 Model Context Protocol，未来任何兼容的智能体都能接入这套工作流。这不只是效率提升，而是一次开发范式的迁移——IDE 正从“辅助工具”进化为“智能协作者”。对普通用户来说，这意味着 Apple 生态中的应用将更快迭代、更少漏洞；对开发者而言，则是把重复劳动交给 AI，自己聚焦于架构与创意。\n\n这种“智能体+专业场景”的融合，正在多个领域同步展开。NVIDIA 和达索系统的合作尤为典型：他们联手将物理规律嵌入虚拟孪生平台，构建所谓的“行业世界模型”。工程师现在可以在软件中模拟整座工厂的运行，AI 智能体作为“虚拟伙伴”参与材料测试、产线优化甚至生物实验设计。这不是简单的数字复刻，而是能预测、推理、优化的知识工厂。同样，NVIDIA 的 Nemotron Labs 方案则把静态文档变成了动态知识引擎——无论是金融合同、科研论文还是法律条款，系统能自动提取结构化信息，结合上下文生成可操作的业务洞察，并保留完整溯源。这些案例的共同点在于：AI 不再孤立存在，而是深度耦合到专业工具链中，成为工作流程的一部分，而非外挂插件。\n\n当然，智能体要真正可靠地“行动”，离不开底层基础设施的支撑。今天，硬件和编排层也在快速演进。半导体领域出现了新变量：初创公司 Positron 刚刚融资 2.3 亿美元，推出功耗不到 NVIDIA H100 三分之一、但推理性能相当的 Atlas 芯片，瞄准的是企业大规模部署 AI 时对高效推理的迫切需求。与此同时，Intel 也正式宣布进军 GPU 市场，试图打破 NVIDIA 在 AI 加速领域的垄断。这些动向意味着，未来 AI 的算力选择将更加多元，成本结构也可能重塑。而在软件层面，开源社区正加速构建智能体的“操作系统”——比如 GitHub 上热门的 Maestro 项目，定位为“智能体编排指挥中心”，用于协调多个 AI 代理的协作；OpenBMB 的 ChatDev 2.0 则通过多智能体分工，实现从需求到测试的端到端软件自动生成。这些工具虽处早期，却指向一个清晰方向：未来的复杂任务，将由一群专业化智能体协同完成，而非依赖单一模型。\n\n不过，当 AI 从“建议者”变成“执行者”，市场反应也变得格外敏感。Anthropic 最近发布的一款自动化工具，竟引发科技股单日蒸发 2850 亿美元市值，金融和软件板块首当其冲。投资者显然在担忧：如果 AI 能直接替代律师审合同、分析师写报告、程序员写代码，那么现有企业的商业模式是否会被侵蚀？这种焦虑并非空穴来风。但有趣的是，另一面的故事也在发生——德甲的沃尔夫斯堡俱乐部没有把 AI 当成裁员工具，而是将其部署为全员赋能平台，用于提升运营效率、促进知识共享，同时明确保护其足球文化核心。这提醒我们：技术本身不决定结果，关键在于组织如何设计人机协作的边界。AI 的价值不在于取代人，而在于放大人的判断与创造力。\n\n所以，面对今天的进展，我们或许该调整观察视角。不必过度追逐某个模型的参数规模，而应关注智能体如何被集成到真实工作流中——它们是否可验证、可追溯、可干预？是否真正解决了专业场景中的痛点？对开发者、工程师或管理者来说，现在正是尝试将 AI 从“玩具”转化为“工具”的时机：从小范围试点开始，建立反馈闭环，逐步构建信任机制。毕竟，真正的生产力革命，从来不是由技术单独驱动的，而是工具链与组织能力共同演化的结果。\n\n今天的 AI 正站在一个微妙的临界点上：一边是前所未有的行动能力，一边是尚未完全建立的信任框架。但无论如何，它已经不再满足于坐在问答席上——它开始走进车间、办公室、代码库，准备亲手改变些什么。",
+  "generatedAt": "2026-02-04T23:44:07.001315",
+  "introduction": "今日AI领域在基础模型能力、智能体安全与真实世界应用三方面取得关键进展。多篇论文聚焦智能体内在世界模型、跨模态安全评估及低资源语言覆盖，凸显行业从“能用”向“可靠可用”的转型。\n• 智能体研究深入其认知机制与安全边界；\n• AI天气预报首次在印度季风预测中展现实用价值；\n• 隐私优先的图像溯源框架应对生成内容泛滥；\n• 大公司加速AI产品商业化与合规博弈；\n• 芯片与基础设施投资持续加码。\n读者应关注智能体安全基准与真实场景落地案例，警惕过度营销的“AI赋能”叙事，优先评估技术是否解决具体痛点而非堆砌概念。",
+  "longformScript": "今天AI领域发生的事，有点像一场静水深流的变革——表面看是几家大厂在推新功能、抢用户、打嘴仗，但底下涌动的，其实是整个行业对“AI到底该怎么用、为谁服务”的重新校准。从无广告的思考空间，到足球俱乐部的日常运营，再到参议员对购物推荐的质询，技术正从炫技走向责任，从通用能力走向具体场景的可靠交付。\n\n先说一个耐人寻味的信号：Anthropic正式宣布，Claude将永久无广告。这听起来像是营销话术，但背后有实打实的立场选择。他们明确表示，深度思考、编程、处理个人敏感问题这些高价值任务，不该被商业激励干扰。换句话说，当你在Claude里讨论心理健康、写一封辞职信，或者调试一段关键代码时，系统不会悄悄塞给你某个心理咨询平台或云服务的链接。这种“纯净性”在当下其实很稀缺——尤其当Gemini开始内置结账功能、ChatGPT测试免费用户的广告推送时，Anthropic的选择更像一种反向宣言。当然，它靠企业订阅和教育合作维持运转，并非完全理想主义，但至少划出了一条线：有些认知空间，不该被变现逻辑渗透。\n\n而另一边，OpenAI正忙着把AI变成可嵌入、可控制的“工具流”。他们刚发布的Codex App Server，不只是个API，而是一套让开发者能精细管理AI代理行为的框架。比如，当AI调用外部工具执行任务时，系统可以实时流式反馈进度，甚至在关键操作前弹出审批提示；修改代码时还能自动对比差异。这意味着未来的AI应用不再是“黑箱输出”，而是透明、可中断、可追溯的工作伙伴。配合GitHub上新出现的Skills Catalog，OpenAI似乎在构建一个模块化的AI能力市场——开发者像搭积木一样组合技能，普通人则可能在不知不觉中使用到更稳定、更可控的自动化服务。\n\n这种“可控性”也正在金融、体育、法律等垂直领域落地。微软开源的Qlib平台，把量化投资的全流程——从因子挖掘、策略回测到实盘部署——都交给AI代理自动跑通，大大降低算法交易的门槛。德甲的沃尔夫斯堡俱乐部则全员启用ChatGPT，不是为了噱头，而是让球探分析对手录像更快、市场部生成多语言内容更高效，甚至教练组用它整理训练数据。有趣的是，他们强调“不失足球本色”——AI是辅助，不是主角。同样，NVIDIA推出的Nemotron智能文档系统，能把PDF里的合同条款、财报图表自动转成可查询的商业智能，在金融纠纷处理或科研分析中直接派上用场。这些案例的共同点是：AI不再只是聊天或画画，而是嵌入真实工作流，解决具体痛点。\n\n但越是深入现实，风险就越具体。美国参议员沃伦就直接点名谷歌，质疑Gemini内置购物功能会不会利用聊天中的情绪或需求，悄悄引导你买更贵的商品。这问题不抽象——当AI同时知道你在聊“预算紧张”、又在搜索“笔记本电脑”，它推荐的到底是性价比最优解，还是沃尔玛给的高佣金机型？类似的担忧也出现在语音AI领域。ElevenLabs刚融了5亿美元，估值飙到110亿，他们的合成语音已经能以假乱真。虽然主要用于内容创作，但一旦被滥用，深度伪造的音频可能成为诈骗或舆论操纵的新武器。技术越强大，治理就得越前置。\n\n更底层的博弈还在硬件和生态层面。一家叫Positron的芯片公司，拿了2.3亿美元融资，目标直指英伟达。他们的新芯片功耗只有H100的三分之一，性能却相当，OpenAI据说已在测试。如果真能打破垄断，未来AI推理成本可能大幅下降，尤其利好视频生成、实时客服这类高负载场景。但这也意味着，算力格局的变化会间接影响我们每天用的AI服务——价格、速度、甚至功能开放程度，都可能随之调整。\n\n那么，作为普通用户，该怎么看待今天的这些动静？首先，别被“月活7.5亿”这样的数字迷惑。Gemini用户增长快，但内置结账是否影响推荐公正性，还得看谷歌接下来的回应。其次，关注不同平台的“默认设置”：Claude承诺无广告，但功能可能偏向专业场景；ChatGPT免费版可能有广告隔离，但数据政策仍需细读。最重要的是，优先选择那些把AI当作“工具”而非“推销员”的产品——尤其是在处理敏感任务时。技术本身没有善恶，但商业模式会塑造它的行为。\n\n今天的AI世界，一边是超级碗广告里的理念之争，一边是足球俱乐部后台的数据清洗；一边是百亿估值的语音模型，一边是参议员对购物推荐的警惕。热闹之下，真正的进步或许不在于模型又多聪明，而在于我们是否开始认真对待它的边界、责任与用途。毕竟，一个能帮你写诗的AI很酷，但一个在关键时刻不卖你保险的AI，才值得托付。",
   "audioUrl": "",
   "papers": [
     {
@@ -11,7 +11,7 @@
       "url": "https://arxiv.org/abs/2602.03146v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "该研究证明，即使在部分可观测和随机性环境下，通用智能体仍必然包含对其环境的内在世界模型；通过放宽原定理中对确定性和完全可观测性的假设，并弱化“通用性”定义，作者表明即便是能力较弱的随机智能体也无法避免通过学习构建环境表征，从而揭示了世界模型在智能体决策中的根本性作用。",
+      "summary": "该研究扩展了此前关于智能体是否内含环境世界模型的理论，首次在部分可观测且随机性的环境中证明：即使是随机性、非完全观测下的通用智能体，也必须通过学习构建其环境的近似模型；研究还弱化了“通用性”定义，表明能力较弱的智能体同样隐含世界模型，从而揭示了世界建模是智能体有效决策的内在必要条件。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -21,7 +21,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：10/10，理由：首次证明通用智能体在部分可观测与随机环境下必然包含世界模型，奠定通用人工智能的理论基石，具有历史性意义。",
+        "模型评分：10/10，理由：从理论上证明通用智能体必然包含世界模型，为理解AI认知能力提供根本性依据，具有里程碑式意义。",
         "热度：7 / 评论 0"
       ],
       "score": 10.0,
@@ -36,7 +36,7 @@
       "url": "https://arxiv.org/abs/2602.03767v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "研究提出一种面向决策的AI天气预报评估框架，将气象学、人工智能与社会科学结合，应用于印度季风预测；该框架利用AI天气预测（AIWP）模型在区域尺度上提前数周准确预测农业关键的季风起始指数，并于2025年支撑政府向3800万农民推送AI季风预警，成功捕捉异常季风停滞事件，为低收入脆弱群体应对气候冲击提供了可操作、可扩展的适应路径。",
+      "summary": "研究提出一种面向决策的AI天气预报评估框架，将气象学、AI与社会科学结合，以印度季风预测为例，在区域尺度上提前数周准确预测对雨养农业至关重要的季风开始时间；该框架已支撑2025年印度政府向3800万农民推送AI季风预警，成功捕捉异常季风停滞事件，为低收入脆弱群体应对气候冲击提供可操作信息，推动AI天气模型从技术指标转向实际民生价值。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -46,7 +46,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：10/10，理由：开创性地将决策导向基准应用于AI气象预测，尤其服务于印度季风等关键民生场景，具有全球公共价值与变革性影响力。",
+        "模型评分：10/10，理由：构建面向印度季风的决策导向AI气象评估基准，将AI天气预测转化为实际社会价值，具有历史性变革意义。",
         "热度：7 / 评论 0"
       ],
       "score": 10.0,
@@ -58,82 +58,120 @@
       ]
     },
     {
-      "id": "arxiv_2602_02620v1",
-      "title": "CryoLVM: Self-supervised Learning from Cryo-EM Density Maps with Large Vision Models",
-      "url": "https://arxiv.org/abs/2602.02620v1",
+      "id": "arxiv_2602_03145v1",
+      "title": "Internet of Agentic AI: Incentive-Compatible Distributed Teaming and Workflow",
+      "url": "https://arxiv.org/abs/2602.03145v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "CryoLVM是一种基于大型视觉模型的自监督基础模型，利用JEPA架构与SCUNet骨干网络从冷冻电镜（cryo-EM）密度图中学习通用结构表征，并引入直方图分布对齐损失加速训练；该模型在密度图锐化、超分辨率和缺失楔修复三项关键任务上均超越现有方法，展现出作为cryo-EM多任务统一平台的潜力。",
+      "summary": "论文提出“智能体AI互联网”（Internet of Agentic AI）框架，支持分布于云边端的异构自主智能体动态组建任务导向型工作流联盟；通过形式化网络原生协作模型，引入兼顾能力覆盖、网络位置与经济可行性的激励相容机制，并设计去中心化联盟选择算法，已在医疗场景验证其在专业化、弹性与经济性方面的优势，为大规模智能体协同提供可扩展的协调层，兼容Model Context Protocol（MCP）。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Agent",
+        "RAG",
+        "Research"
+      ],
+      "paperCategory": "General AI",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：10/10，理由：提出AI代理系统的分布式协作架构，突破中心化瓶颈，推动下一代去中心化智能体生态构建，具有里程碑式全球影响力。",
+        "热度：13 / 评论 0"
+      ],
+      "score": 10.0,
+      "publishedAt": "2026-02-03T06:00:34+00:00",
+      "authors": [
+        "Ya-Ting Yang",
+        "Quanyan Zhu"
+      ]
+    },
+    {
+      "id": "arxiv_2602_02734v1",
+      "title": "WAXAL: A Large-Scale Multilingual African Language Speech Corpus",
+      "url": "https://arxiv.org/abs/2602.02734v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "研究发布了WAXAL——一个涵盖21种撒哈拉以南非洲语言、服务超1亿人口的大规模多语言语音语料库，包含约1250小时转录自然语音（用于ASR）和180小时高质量单人朗读录音（用于TTS）；数据由非洲四家学术与社区机构合作采集，采用严格质量控制流程，并以CC-BY-4.0许可开源，旨在弥合语音技术资源鸿沟，推动包容性AI发展与语言数字存续。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Audio",
+        "Industry",
+        "Research",
+        "Open Source"
+      ],
+      "paperCategory": "General AI",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：10/10，理由：构建非洲多语言语音语料库，填补全球低资源语言技术空白，推动AI公平性发展，具有里程碑式的全球包容性意义。",
+        "热度：10 / 评论 0"
+      ],
+      "score": 10.0,
+      "publishedAt": "2026-02-02T19:49:19+00:00",
+      "authors": [
+        "Abdoulaye Diack",
+        "Perry Nelson",
+        "Kwaku Agbesi"
+      ]
+    },
+    {
+      "id": "arxiv_2602_03423v1",
+      "title": "Origin Lens: A Privacy-First Mobile Framework for Cryptographic Image Provenance and AI Detection",
+      "url": "https://arxiv.org/abs/2602.03423v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "论文提出Origin Lens——一个注重隐私的移动端框架，通过Rust/Flutter混合架构在设备端本地执行加密图像溯源与AI生成内容检测；系统融合加密来源凭证、生成模型指纹及可选的检索增强验证，为用户提供分级可信度提示，符合欧盟《AI法案》与《数字服务法》要求，为终端用户对抗视觉虚假信息提供轻量、合规的验证基础设施。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "Vision",
-        "Training",
         "RAG"
       ],
-      "paperCategory": "General AI",
+      "paperCategory": "Computer Vision",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：10/10，理由：首次将大视觉模型应用于冷冻电镜密度图自监督学习，有望重塑结构生物学研究范式，是AI for Science的关键里程碑。",
-        "热度：10 / 评论 0"
+        "模型评分：10/10，理由：提出隐私优先的图像溯源与AI检测移动框架，直击生成式AI滥用带来的信息真实性危机，具备全球政策与技术治理层面的里程碑意义。",
+        "热度：9 / 评论 0"
       ],
       "score": 10.0,
-      "publishedAt": "2026-02-02T13:36:36+00:00",
+      "publishedAt": "2026-02-03T11:49:00+00:00",
       "authors": [
-        "Weining Fu",
-        "Kai Shu",
-        "Kui Xu"
+        "Alexander Loth",
+        "Dominique Conceicao Rosario",
+        "Peter Ebinger"
       ]
     },
     {
-      "id": "arxiv_2602_02689v1",
-      "title": "Eidolon: A Practical Post-Quantum Signature Scheme Based on k-Colorability in the Age of Graph Neural Networks",
-      "url": "https://arxiv.org/abs/2602.02689v1",
+      "id": "arxiv_2602_02537v1",
+      "title": "WorldVQA: Measuring Atomic World Knowledge in Multimodal Large Language Models",
+      "url": "https://arxiv.org/abs/2602.02537v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "Eidolon是一种基于NP完全问题k-染色性的实用后量子签名方案，通过推广Goldreich-Micali-Wigderson零知识协议并结合Merkle树压缩签名体积；其创新在于使用“静默”植入染色生成统计特性接近随机图的困难实例，实验证明当节点数n≥60时，传统求解器与定制图神经网络（GNN）均无法恢复密钥，重新确立组合难题作为后量子密码可行基础的地位。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [],
-      "paperCategory": "General AI",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：10/10，理由：提出基于图神经网络的后量子签名方案Eidolon，结合NP难问题与现代密码学，是应对量子威胁的关键突破，具有全球安全战略意义。",
-        "热度：6 / 评论 0"
-      ],
-      "score": 10.0,
-      "publishedAt": "2026-02-02T19:05:50+00:00",
-      "authors": [
-        "Asmaa Cherkaoui",
-        "Ramon Flores",
-        "Delaram Kahrobaei"
-      ]
-    },
-    {
-      "id": "arxiv_2602_02521v1",
-      "title": "Scaled Dot-Product Attention implements projection of inputs onto a common surface",
-      "url": "https://arxiv.org/abs/2602.02521v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "研究揭示缩放点积注意力（SDPA）在数学上等价于将输入向量投影到由输入自身决定的公共非线性曲面上，从而捕获时变且上下文相关的依赖关系；这一新解释摒弃了传统“查询-键-值”的数据库类比，为语言模型中上下文语义的动态形成提供几何视角，并为时间序列建模及算法加速提供理论依据。",
+      "summary": "研究推出WorldVQA基准，专门评估多模态大语言模型（MLLMs）的原子级视觉世界知识，通过分层分类体系（从常见物体到长尾稀有实体）严格解耦“知识记忆”与“推理能力”，仅测量模型对视觉实体的识别与命名事实性，旨在建立衡量模型视觉百科全书广度与幻觉率的标准化测试，推动MLLMs的事实可靠性评估。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
-        "LLM"
+        "LLM",
+        "Multimodal",
+        "RAG",
+        "Reasoning"
       ],
-      "paperCategory": "General AI",
+      "paperCategory": "Computer Vision",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：10/10，理由：首次从几何投影角度解析SDPA机制，颠覆传统“查询-键-值”认知，是Transformer底层原理的重大理论突破。",
-        "热度：7 / 评论 0"
+        "模型评分：10/10，理由：创建首个专门测量多模态大模型原子世界知识的基准，从根本上区分视觉知识与推理能力，为评估AI认知本质提供历史性标准。",
+        "热度：14 / 评论 0"
       ],
       "score": 10.0,
-      "publishedAt": "2026-01-25T21:17:12+00:00",
+      "publishedAt": "2026-01-28T11:27:22+00:00",
       "authors": [
-        "Terence D Sanger"
+        "Runjie Zhou",
+        "Youbo Shao",
+        "Haoyu Lu"
       ]
     },
     {
@@ -142,7 +180,7 @@
       "url": "https://arxiv.org/abs/2602.02995v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "Agent Alpha通过引入基于alpha-UCT的蒙特卡洛树搜索（MCTS），在GUI智能体中统一生成、探索与评估过程，实现步骤级规划与前缀复用；其采用对比驱动评估缓解评分偏差，并以多样性约束维持高效搜索空间，在OSWorld基准上以约77%成功率显著超越轨迹级采样基线，解决了现有方法无法回溯修正早期错误的缺陷。",
+      "summary": "论文提出Agent Alpha框架，将蒙特卡洛树搜索（MCTS）引入计算机使用智能体的交互循环，通过alpha-UCT引导的步级搜索统一生成、探索与评估过程，实现早期剪枝与前缀复用；结合对比驱动评估与多样性约束扩展，在OSWorld基准上以约77%成功率显著超越轨迹级采样基线，解决了GUI智能体无法回溯利用部分成功路径的关键局限。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -154,7 +192,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：引入树搜索统一生成、探索与评估，突破GUI Agent的可回溯性瓶颈，具备成为下一代智能代理架构的潜力。",
+        "模型评分：9/10，理由：Agent Alpha引入树搜索统一生成、探索与评估，显著提升GUI Agent的容错与回溯能力，代表当前Agent架构的前沿方向。",
         "热度：11 / 评论 0"
       ],
       "score": 9.0,
@@ -166,12 +204,42 @@
       ]
     },
     {
+      "id": "arxiv_2602_03255v1",
+      "title": "LPS-Bench: Benchmarking Safety Awareness of Computer-Use Agents in Long-Horizon Planning under Benign and Adversarial Scenarios",
+      "url": "https://arxiv.org/abs/2602.03255v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "研究发布LPS-Bench基准，首次系统评估基于MCP的计算机使用智能体（CUAs）在长周期任务中的规划阶段安全意识，覆盖7类任务、9种风险、65个良性与对抗性场景；通过多智能体自动化流水线生成数据，并采用LLM-as-a-judge评估规划轨迹，发现现有CUAs普遍存在安全盲区，并提出缓解策略，代码已开源以推动安全可靠的智能体长期规划研究。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Agent",
+        "Open Source",
+        "Benchmark"
+      ],
+      "paperCategory": "General AI",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：针对长周期规划中计算机使用代理的安全性问题，构建首个兼顾良性与对抗场景的基准评测体系，具备行业级影响力。",
+        "热度：12 / 评论 0"
+      ],
+      "score": 9.0,
+      "publishedAt": "2026-02-03T08:40:24+00:00",
+      "authors": [
+        "Tianyu Chen",
+        "Chujia Hu",
+        "Ge Gao"
+      ]
+    },
+    {
       "id": "arxiv_2602_03302v1",
       "title": "Full end-to-end diagnostic workflow automation of 3D OCT via foundation model-driven AI for retinal diseases",
       "url": "https://arxiv.org/abs/2602.03302v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "FOCUS系统首次实现3D OCT视网膜疾病诊断的端到端自动化，整合图像质量评估、异常检测与多病种分类于一体，通过自适应聚合2D切片预测生成患者级诊断；在涵盖40,672张切片的多中心数据上验证，其患者级诊断F1达94.39%，性能媲美专家且效率更高，为无人化眼科筛查和大规模眼病早筛提供可落地的技术蓝图。",
+      "summary": "研究团队提出FOCUS系统，首个基于视觉基础模型的端到端3D OCT视网膜疾病诊断自动化框架，通过EfficientNetV2-S进行图像质量评估，并利用微调后的视觉基础模型完成异常检测与多病种分类，再以自适应聚合方法将2D切片预测整合为3D患者级诊断；在4,645名患者、覆盖四级医疗机构和多种OCT设备的数据上验证，FOCUS在质量评估（F1=99.01%）、异常检测（F1=97.46%）和患者级诊断（F1=94.39%）均表现优异，且在人机对比中媲美专家水平，显著提升效率，为实现无人化眼科筛查和扩大人群眼底病可及性提供可行路径。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -183,7 +251,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：首次实现3D OCT全端到端诊断自动化，融合基础模型驱动AI，有望推动医疗影像智能化变革，具有全球临床应用影响力。",
+        "模型评分：9/10，理由：首次实现3D OCT全链路诊断自动化，融合基础模型驱动医学影像分析，有望推动全球眼科AI临床落地，具有重大产业影响力。",
         "热度：12 / 评论 0"
       ],
       "score": 9.0,
@@ -200,7 +268,7 @@
       "url": "https://arxiv.org/abs/2602.03200v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "Hand3R是首个支持在线单目视频中同步重建动态手部与稠密3D场景的4D框架，通过将预训练手部专家模型与4D场景基础模型结合，利用场景感知视觉提示机制将高保真手部先验注入持久场景记忆，在单次前向传播中同时输出精确手部网格与度量尺度场景几何，无需离线优化即可实现野外环境中手-场景交互的完整重建。",
+      "summary": "Hand3R是首个支持在线单目视频输入的4D手-场景联合重建框架，通过将预训练手部专家模型与4D场景基础模型结合，并引入场景感知的视觉提示机制，将高保真手部先验注入持久场景记忆，在单次前向传播中同步生成精确的手部网格与度量尺度的稠密场景几何；该方法无需离线优化，即可在局部手部重建与全局定位任务中达到有竞争力性能，为具身智能理解物理交互提供了关键的动态手-环境联合表征能力。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -211,7 +279,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：Hand3R实现野外动态手-场景4D重建，为具身智能和人机交互提供关键基础设施，具有全球产业变革意义。",
+        "模型评分：9/10，理由：首次实现野外环境下4D手-场景联合重建，为具身智能与物理交互理解提供关键基础设施，具备行业变革潜力。",
         "热度：10 / 评论 0"
       ],
       "score": 9.0,
@@ -223,120 +291,89 @@
       ]
     },
     {
-      "id": "arxiv_2602_02963v1",
-      "title": "TRACE: Temporal Radiology with Anatomical Change Explanation for Grounded X-ray Report Generation",
-      "url": "https://arxiv.org/abs/2602.02963v1",
+      "id": "arxiv_2602_02918v1",
+      "title": "A Multi-scale Linear-time Encoder for Whole-Slide Image Analysis",
+      "url": "https://arxiv.org/abs/2602.02918v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "论文提出TRACE模型，首次实现胸部X光片的时序对比、变化分类与空间定位联合任务：给定前后两张X光片，TRACE能生成描述病情变化（恶化、改善或稳定）的自然语言报告，并通过边界框精准定位异常区域，空间定位准确率超90%；研究还发现，仅当时序比较与空间定位联合训练时，模型才能有效检测变化，表明视觉接地为时序推理提供了关键的空间注意力机制。",
+      "summary": "研究提出MARBLE——首个纯Mamba架构的多尺度全切片图像（WSI）分析框架，采用多状态线性时间状态空间模型并行处理多个放大倍率，通过粗到细的推理机制高效捕捉跨尺度依赖，避免了Transformer的二次注意力开销；在五个公开数据集上，MARBLE在AUC（最高+6.9%）、准确率（+20.3%）和C-index（+2.3%）均显著优于现有方法，为千兆像素级病理图像的高效、可扩展分析提供了新范式。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
-        "LLM",
         "Vision",
-        "Multimodal",
         "Reasoning"
       ],
       "paperCategory": "Computer Vision",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：首次实现胸部X光片时序对比与解剖变化解释的联合生成，对临床辅助诊断系统具有变革性意义。",
+        "模型评分：9/10，理由：首个纯Mamba架构的WSI分析框架，实现线性时间处理，推动医学影像AI向高效、可扩展方向演进，具备重大产业转化前景。",
         "热度：8 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-02-03T01:03:41+00:00",
+      "publishedAt": "2026-02-02T23:47:07+00:00",
       "authors": [
-        "OFM Riaz Rahman Aranya",
-        "Kevin Desai"
+        "Jagan Mohan Reddy Dwarampudi",
+        "Joshua Wong",
+        "Hien Van Nguyen"
       ]
     },
     {
-      "id": "arxiv_2602_03361v1",
-      "title": "Z3D: Zero-Shot 3D Visual Grounding from Images",
-      "url": "https://arxiv.org/abs/2602.03361v1",
+      "id": "arxiv_2602_02974v1",
+      "title": "SceneLinker: Compositional 3D Scene Generation via Semantic Scene Graph from RGB Sequences",
+      "url": "https://arxiv.org/abs/2602.02974v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "论文提出Z3D框架，首次在无需几何监督或物体先验的条件下，仅基于多视角图像实现零样本3D视觉定位；该方法通过高质量的零样本3D实例分割生成候选框，并结合基于提示的分割推理充分利用现代视觉语言模型能力，在ScanRefer和Nr3D基准上达到零样本方法的最先进性能。",
+      "summary": "SceneLinker通过从RGB序列构建语义场景图来生成组合式3D场景，其核心包括一个带交叉校验特征注意力的图网络用于场景图预测，以及一个联合形状与布局的图变分自编码器（graph-VAE）用于3D生成；该方法在3RScan/3DSSG和SG-FRONT数据集上超越现有技术，能准确还原复杂室内环境中物体的空间关系与布局，使用户可基于真实物理空间自动生成一致的3D混合现实内容。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
-        "Vision",
-        "Multimodal",
         "3D",
-        "Reasoning"
+        "Open Source",
+        "Benchmark"
       ],
       "paperCategory": "Computer Vision",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：实现仅用多视角图像进行零样本3D视觉定位，无需几何监督或先验，是通用视觉理解的重大进展，可能重塑3D AI训练范式。",
-        "热度：11 / 评论 0"
+        "模型评分：9/10，理由：提出基于RGB序列生成组合式3D场景的SceneLinker框架，为混合现实内容自适应生成提供关键技术支撑，具有全球产业级影响。",
+        "热度：7 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-02-03T10:35:18+00:00",
+      "publishedAt": "2026-02-03T01:22:07+00:00",
       "authors": [
-        "Nikita Drozdov",
-        "Andrey Lemeshko",
-        "Nikita Gavrilov"
+        "Seok-Young Kim",
+        "Dooyoung Kim",
+        "Woojin Cho"
       ]
     },
     {
-      "id": "arxiv_2602_02539v1",
-      "title": "How Much Information Can a Vision Token Hold? A Scaling Law for Recognition Limits in VLMs",
-      "url": "https://arxiv.org/abs/2602.02539v1",
+      "id": "arxiv_2602_03447v1",
+      "title": "HetroD: A High-Fidelity Drone Dataset and Benchmark for Autonomous Driving in Heterogeneous Traffic",
+      "url": "https://arxiv.org/abs/2602.03447v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "研究通过控制实验探究视觉语言模型中单个视觉token的信息承载上限，发现随着图像中文本字符数增加，识别性能呈现三阶段转变：稳定期、不稳定期和崩溃期；作者据此提出一个统一平均token负载与视觉密度的隐式难度指标，并建立概率性缩放律，该规律在多种VLM中具有普适性，为视觉上下文压缩中的效率-精度权衡提供实证指导。",
+      "summary": "HetroD是一个面向异构交通的高保真无人机数据集与基准，聚焦行人、骑行者等弱势道路使用者（VRU）与车辆混行的复杂行为（如钩形转弯、车道分割），包含65.4k条厘米级精度轨迹（70%为VRU）、高清地图与信号灯状态；评估显示当前自动驾驶预测与规划模型难以处理VRU的横向移动和非结构化机动，凸显了在密集多智能体场景中开发更鲁棒算法的迫切需求，为异构交通环境下的自主驾驶研究提供了关键资源。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
-        "LLM",
-        "Vision",
-        "Multimodal",
-        "RAG"
+        "Agent",
+        "Open Source",
+        "Benchmark"
       ],
-      "paperCategory": "Computer Vision",
+      "paperCategory": "Robotics",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：揭示视觉令牌信息容量极限并建立缩放定律，深刻影响多模态大模型设计，是当前VLM研究的关键理论突破。",
+        "模型评分：9/10，理由：构建首个面向异构交通环境的高保真无人机数据集与基准，填补关键空白，对自动驾驶系统在复杂城市场景中的训练与评估具有战略意义。",
         "热度：13 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-01-28T15:21:51+00:00",
+      "publishedAt": "2026-02-03T12:12:47+00:00",
       "authors": [
-        "Shuxin Zhuang",
-        "Zi Liang",
-        "Runsheng Yu"
-      ]
-    },
-    {
-      "id": "arxiv_2602_03423v1",
-      "title": "Origin Lens: A Privacy-First Mobile Framework for Cryptographic Image Provenance and AI Detection",
-      "url": "https://arxiv.org/abs/2602.03423v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "论文提出Origin Lens——一个注重隐私的移动端框架，可在设备端本地执行加密图像溯源验证与AI生成内容检测，无需依赖服务器；系统融合加密溯源信息、生成模型指纹及可选的检索增强验证，向用户提供分级可信度指示，并符合欧盟《AI法案》和《数字服务法》要求，为终端用户对抗视觉虚假信息提供可操作工具。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Vision",
-        "RAG"
-      ],
-      "paperCategory": "Computer Vision",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：Origin Lens 提出隐私优先的图像溯源与AI检测框架，直击生成式AI信息真实性危机，具备全球数字治理战略意义。",
-        "热度：9 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-03T11:49:00+00:00",
-      "authors": [
-        "Alexander Loth",
-        "Dominique Conceicao Rosario",
-        "Peter Ebinger"
+        "Yu-Hsiang Chen",
+        "Wei-Jer Chang",
+        "Christian Kotulla"
       ]
     },
     {
@@ -345,7 +382,7 @@
       "url": "https://arxiv.org/abs/2602.02533v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "论文提出HMVLA框架，将视觉-语言-动作（VLA）模型的多模态特征嵌入双曲空间以更好建模图像与文本中的层次语义结构，并引入稀疏门控的专家混合机制提升对齐效率与理解能力；实验表明该方法在准确性和泛化性上优于现有基线，且在跨域重建数据集上验证了其鲁棒性。",
+      "summary": "HMVLA提出一种基于双曲空间的多模态融合框架，用于视觉-语言-动作（VLA）模型，通过将图像与文本特征嵌入双曲空间以更好建模其内在层次结构，并引入稀疏门控的专家混合（MoE）机制增强语义对齐；实验表明该方法在准确率与泛化能力上优于基线，且在跨域数据集重构测试中展现出更强鲁棒性，为机器人领域中感知与控制的语义一致性提供了新思路。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -358,7 +395,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：提出超球面多模态融合框架，突破视觉-语言-动作模型的表征瓶颈，有望推动下一代具身智能系统的全球研发范式变革。",
+        "模型评分：9/10，理由：HMVLA 提出超球面多模态融合框架，显著提升视觉-语言-动作模型的泛化能力，是当前 VLA 领域最具影响力的 SOTA 工作之一。",
         "热度：18 / 评论 0"
       ],
       "score": 9.0,
@@ -370,12 +407,41 @@
       ]
     },
     {
+      "id": "arxiv_2602_03112v1",
+      "title": "A Unified Candidate Set with Scene-Adaptive Refinement via Diffusion for End-to-End Autonomous Driving",
+      "url": "https://arxiv.org/abs/2602.03112v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "CdDrive提出一种统一候选集的端到端自动驾驶规划方法，保留固定轨迹词表以确保常规场景稳定性，同时通过词表条件扩散去噪生成场景自适应候选轨迹，并由共享选择模块联合评分；其创新组件HATNA（Horizon-Aware Trajectory Noise Adapter）通过时序平滑与视界感知噪声调制提升扩散轨迹的几何连续性，在NAVSIM v1/v2上取得领先性能，有效平衡了简单与高交互场景下的规划可靠性。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Multimodal",
+        "Diffusion",
+        "RAG"
+      ],
+      "paperCategory": "Robotics",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：提出端到端自动驾驶中多模态轨迹生成的统一候选集框架，针对自动驾驶核心挑战，具备显著技术影响力和产业落地前景。",
+        "热度：12 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-03T05:14:08+00:00",
+      "authors": [
+        "Zhengfei Wu",
+        "Shuaixi Pan",
+        "Shuohan Chen"
+      ]
+    },
+    {
       "id": "arxiv_2602_03793v1",
       "title": "BridgeV2W: Bridging Video Generation Models to Embodied World Models via Embodiment Masks",
       "url": "https://arxiv.org/abs/2602.03793v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "论文提出BridgeV2W方法，通过将机器人关节坐标空间的动作转换为像素对齐的“具身掩码”，并以ControlNet风格注入预训练视频生成模型，从而弥合动作控制信号与像素级视频预测之间的鸿沟；该方法统一了不同机器人本体的架构，引入基于光流的运动损失聚焦动态区域，在DROID和AgiBot-G1数据集上提升了视频生成质量，并成功应用于策略评估与目标导向规划等下游任务。",
+      "summary": "BridgeV2W通过将坐标空间动作转换为像素对齐的具身掩码（由URDF与相机参数渲染），并以ControlNet式路径注入预训练视频生成模型，解决了具身世界模型中动作-视频空间错位、视角敏感与架构不统一三大挑战；其引入的光流运动损失聚焦动态区域以缓解背景过拟合，在DROID和AgiBot-G1数据集上显著提升视频生成质量，并成功应用于策略评估与目标导向规划等下游任务，推动了通用具身世界模型的发展。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -388,7 +454,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：提出通过具身掩码连接视频生成模型与具身世界模型，解决机器人视觉-动作对齐难题，具有显著技术突破和未来6-12个月行业应用潜力。",
+        "模型评分：8/10，理由：将视频生成模型与具身世界模型结合，通过化身掩码解决动作空间对齐难题，推动机器人感知与决策一体化发展，具备行业变革潜力。",
         "热度：15 / 评论 0"
       ],
       "score": 8.0,
@@ -400,41 +466,12 @@
       ]
     },
     {
-      "id": "arxiv_2602_03112v1",
-      "title": "A Unified Candidate Set with Scene-Adaptive Refinement via Diffusion for End-to-End Autonomous Driving",
-      "url": "https://arxiv.org/abs/2602.03112v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "论文提出CdDrive框架用于端到端自动驾驶，通过保留固定轨迹词表候选并新增由词表条件引导的扩散去噪生成的场景自适应候选，再由共享选择模块统一评分，兼顾常规与高交互场景性能；同时引入HATNA模块，利用时间平滑与视界感知噪声调制提升扩散轨迹的几何连续性，在NAVSIM v1/v2上取得领先结果。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Multimodal",
-        "Diffusion",
-        "RAG"
-      ],
-      "paperCategory": "Robotics",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：提出基于扩散模型的自适应候选集生成方法，提升端到端自动驾驶的多模态规划能力，是当前自动驾驶核心瓶颈的关键进展。",
-        "热度：12 / 评论 0"
-      ],
-      "score": 8.0,
-      "publishedAt": "2026-02-03T05:14:08+00:00",
-      "authors": [
-        "Zhengfei Wu",
-        "Shuaixi Pan",
-        "Shuohan Chen"
-      ]
-    },
-    {
       "id": "arxiv_2602_03547v1",
       "title": "AffordanceGrasp-R1:Leveraging Reasoning-Based Affordance Segmentation with Reinforcement Learning for Robotic Grasping",
       "url": "https://arxiv.org/abs/2602.03547v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "论文提出AffordanceGrasp-R1框架，结合思维链冷启动策略与强化学习进行推理驱动的可供性分割，用于语言引导的机器人抓取；该方法从全局点云生成抓取候选，并用指令条件化的可供性掩码过滤，显著优于现有SOTA方法，在真实机器人平台上验证了其在复杂语言操控场景下的鲁棒性与泛化能力。",
+      "summary": "AffordanceGrasp-R1 提出一种结合链式推理（CoT）冷启动策略与强化学习的机器人抓取框架，通过指令条件下的可供性分割增强空间推理能力，并重构抓取流程：先从全局点云生成候选抓取位姿，再利用可供性掩码进行筛选。该方法在多个基准数据集上持续优于当前最优模型，且在真实世界语言引导的复杂操作任务中展现出强鲁棒性与泛化能力。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -447,7 +484,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：融合推理与强化学习的抓取框架，推动机器人自主决策能力跃升，有望影响下一代智能操作系统的构建。",
+        "模型评分：8/10，理由：结合思维链推理与强化学习实现智能抓取，推动机器人认知与操作融合，属当前主流SOTA方向，媒体关注度高。",
         "热度：20 / 评论 0"
       ],
       "score": 8.0,
@@ -464,7 +501,7 @@
       "url": "https://arxiv.org/abs/2602.02590v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "针对视觉导航中生成可靠轨迹的难题，研究者提出StepNav框架，通过引入基于变分原理的结构化多模态轨迹先验，替代传统生成模型中无结构的噪声先验。该方法首先学习几何感知的成功概率场以识别所有可行导航通道，再构建显式多模态混合先验初始化条件流匹配过程，并将轨迹优化建模为带显式平滑性与安全性正则项的最优控制问题。实验表明，StepNav在仿真与真实世界基准上均显著优于现有生成式规划器，在安全性、效率和鲁棒性方面取得一致提升，且生成步骤更少，为实际自主导航系统提供了更可靠的轨迹生成方案。",
+      "summary": "StepNav 提出一种基于变分原理的结构化多模态轨迹先验框架，用于高效、安全的视觉导航。该方法首先学习几何感知的成功概率场以识别所有可行通行走廊，进而构建显式的多模态混合先验来初始化条件流匹配过程，并将轨迹优化建模为带显式平滑性与安全性正则项的最优控制问题。相比依赖非结构化噪声先验的现有生成式规划器，StepNav 在仿真与真实环境中均显著提升了规划的安全性、效率与鲁棒性，代码已开源。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -476,7 +513,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：引入结构化轨迹先验解决视觉导航中的安全与效率问题，推动生成式导航迈向实用化，具备行业引领潜力。",
+        "模型评分：8/10，理由：引入结构化轨迹先验提升视觉导航效率与安全性，解决生成模型在复杂环境中的关键缺陷，具显著行业影响力。",
         "热度：11 / 评论 0"
       ],
       "score": 8.0,
@@ -486,166 +523,90 @@
         "Aodi Wu",
         "Haodong Han"
       ]
-    },
-    {
-      "id": "arxiv_2602_02730v1",
-      "title": "AROLA: A Modular Layered Architecture for Scaled Autonomous Racing",
-      "url": "https://arxiv.org/abs/2602.02730v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "为应对缩比自动驾驶赛车软件栈碎片化与复现性差的问题，研究团队提出AROLA——一种模块化分层架构，将感知、定位、规划、控制等流程解耦为通过标准化ROS 2接口连接的可互换组件，避免依赖自定义消息类型。配套的Race Monitor轻量级框架可实时记录圈速、轨迹质量与计算负载，并生成标准化赛后分析报告。该架构已在RoboRacer平台的仿真与硬件上验证，并成功部署于2025年RoboRacer IV25竞赛，证明其通过模块化设计、透明接口和系统化评估有效加速开发并提升可复现性。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "RAG",
-        "Benchmark"
-      ],
-      "paperCategory": "Robotics",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：提出面向规模化自动驾驶竞速的模块化分层架构，解决软件系统可扩展性痛点，具备行业落地潜力与开源生态影响力。",
-        "热度：9 / 评论 0"
-      ],
-      "score": 8.0,
-      "publishedAt": "2026-02-02T19:46:34+00:00",
-      "authors": [
-        "Fam Shihata",
-        "Mohammed Abdelazim",
-        "Ahmed Hussein"
-      ]
     }
   ],
   "news": [
     {
-      "id": "hn_46874619",
-      "title": "Xcode 26.3 支持 Claude 与 Codex 智能体编程",
-      "url": "https://www.apple.com/newsroom/2026/02/xcode-26-point-3-unlocks-the-power-of-agentic-coding/",
+      "id": "hn_46884883",
+      "title": "Anthropic 宣布 Claude 永久无广告，打造纯净思考空间",
+      "url": "https://www.anthropic.com/news/claude-is-a-space-to-think",
       "type": "news",
       "source": "Hacker News",
-      "summary": "Apple在Xcode 26.3中正式引入**agentic coding（智能体编程）**功能，允许开发者直接调用Anthropic的Claude Agent和OpenAI的Codex等编码智能体，使其能自主分解任务、理解项目架构、搜索文档、修改设置并利用Xcode Previews验证结果，从而贯穿整个开发周期提升效率。这一更新将大模型的高级推理能力深度集成到Apple原生开发工具链中，不仅扩展了Xcode 26已有的Swift助手功能，还通过开放的Model Context Protocol支持任意兼容智能体。对开发者而言，这意味着可大幅简化工作流、加速迭代；普通用户未来将受益于更高质量、创新更快的Apple平台应用。该版本已向Apple Developer Program成员提供候选版。",
-      "fullText": "Xcode 26.3 unlocks the power of agentic coding - Apple Apple Store Mac iPad iPhone Watch Vision AirPods TV & Home Entertainment Accessories Support 0 + Newsroom Open Newsroom navigation Close Newsroom navigation Apple Services Apple Stories Search Newsroom Close opens in new window UPDATE February 3, 2026 Xcode 26.3 unlocks the power of agentic coding Developers can leverage coding agents, including Anthropic’s Claude Agent and OpenAI’s Codex, directly in Xcode to tackle complex tasks autonomously, helping them develop apps faster than ever Xcode 26.3 unlocks agentic coding, allowing developers to harness agents like Anthropic’s Claude Agent and OpenAI’s Codex directly in Xcode. Xcode 26.3 introduces support for agentic coding, a new way in Xcode for developers to build apps using coding agents such as Anthropic’s Claude Agent and OpenAI’s Codex. With agentic coding, Xcode can work with greater autonomy toward a developer’s goals — from breaking down tasks to making decisions based on the project architecture and using built-in tools. Expanding on the intelligence features introduced in Xcode 26, which brought a brand-new coding assistant for writing and editing in Swift, this release gives coding agents access to even more of Xcode’s capabilities. Agents like Claude Agent and Codex can now collaborate throughout the entire development life cycle, giving developers the power to streamline workflows, iterate faster, and bring ideas to life like never before. Agents can search documentation, explore file structures, update project settings, and verify their work visually by capturing Xcode Previews and iterating through builds and fixes. “At Apple, our goal is to make tools that put industry-leading technologies directly in developers’ hands so they can build the very best apps,” said Susan Prescott, Apple’s vice president of Worldwide Developer Relations. “Agentic coding supercharges productivity and creativity, streamlining the development workflow so developers can focus on innovation.” In Xcode, a developer uses agentic coding for an iPhone app showing a detailed view of Mount Fuji. In Xcode, a developer uses agentic coding for an iPhone app showing a detailed view of Yellowstone National Park. With seamless access to Anthropic’s Claude Agent (pictured) and OpenAI’s Codex, developers can bring the advanced reasoning of powerful models directly into their app-building workflow. With seamless access to Anthropic’s Claude Agent and OpenAI’s Codex (pictured), developers can bring the advanced reasoning of powerful models directly into their app-building workflow. previous next With seamless access to Claude Agent and Codex, developers can bring the advanced reasoning of these models directly into their app-building workflow. 1 This connection combines the power of these agents with Xcode’s native capabilities to provide the best results when developing for Apple platforms, giving developers the flexibility to work with the model that best fits their project. In addition to these built-in integrations, Xcode 26.3 makes its capabilities available through the Model Context Protocol, an open standard that gives developers the flexibility to use any compatible agent or tool with Xcode. Availability Xcode 26.3 is available as a release candidate for all members of the Apple Developer Program starting today, with a release coming soon on the App Store. Share article Media Text of this article February 3, 2026 UPDATE Xcode 26.3 unlocks the power of agentic coding Developers can leverage coding agents, including Anthropic’s Claude Agent and OpenAI’s Codex, directly in Xcode to tackle complex tasks autonomously, helping them develop apps faster than ever Xcode 26.3 introduces support for agentic coding, a new way in Xcode for developers to build apps using coding agents such as Anthropic’s Claude Agent and OpenAI’s Codex. With agentic coding, Xcode can work with greater autonomy toward a developer’s goals — from breaking down tasks to making decisions based on the project architecture and using built-in tools. Expanding on the intelligence features introduced in Xcode 26, which brought a brand-new coding assistant for writing and editing in Swift, this release gives coding agents access to even more of Xcode’s capabilities. Agents like Claude Agent and Codex can now collaborate throughout the entire development life cycle, giving developers the power to streamline workflows, iterate faster, and bring ideas to life like never before. Agents can search documentation, explore file structures, update project settings, and verify their work visually by capturing Xcode Previews and iterating through builds and fixes. “At Apple, our goal is to make tools that put industry-leading technologies directly in developers’ hands so they can build the very best apps,” said Susan Prescott, Apple’s vice president of Worldwide Developer Relations. “Agentic coding supercharges productivity and creativity, streamlining the development workflow so developers can focus on innovation.” With seamless access to Claude Agent and Codex, developers can bring the advanced reasoning of these models directly into their app-building workflow. 1 This connection combines the power of these agents with Xcode’s native capabilities to provide the best results when developing for Apple platforms, giving developers the flexibility to work with the model that best fits their project. In addition to these built-in integrations, Xcode 26.3 makes its capabilities available through the Model Context Protocol, an open standard that gives developers the flexibility to use any compatible agent or tool with Xcode. Availability Xcode 26.3 is available as a release candidate for all members of the Apple Developer Program starting today, with a release coming soon on the App Store. Anthropic and OpenAI’s terms of service may apply. Press Contacts Adam Dema Apple AdamDema@apple.com Apple Media Helpline media.help@apple.com Copy text Images in this article Download all images Anthropic and OpenAI’s terms of service may apply. Press Contacts Adam Dema Apple AdamDema@apple.com Apple Media Helpline media.help@apple.com More from Apple Newsroom UPDATE Apple Sports adds golf to its lineup February 4, 2026 UPDATE Apple Music kicks off Bad Bunny’s Road to Halftime ahead of Super Bowl LX February 2, 2026 PRESS RELEASE Apple reports first quarter results January 29, 2026 Apple Newsroom The latest news and updates, direct from Apple. Read more Stay up to date with the latest articles from Apple Newsroom. Dismiss Get Notifications Apple Footer  Apple Newsroom Xcode 26.3 unlocks the power of agentic coding Shop and Learn Shop and Learn Store Mac iPad iPhone Watch Vision AirPods TV & Home AirTag Accessories Gift Cards Apple Wallet Apple Wallet Wallet Apple Card Apple Pay Apple Cash Account Account Manage Your Apple Account Apple Store Account iCloud.com Entertainment Entertainment Apple One Apple TV Apple Music Apple Arcade Apple Fitness+ Apple News+ Apple Podcasts Apple Books App Store Apple Store Apple Store Find a Store Genius Bar Today at Apple Group Reservations Apple Camp Apple Store App Certified Refurbished Apple Trade In Financing Carrier Deals at Apple Order Status Shopping Help For Business For Business Apple and Business Shop for Business For Education For Education Apple and Education Shop for K-12 Shop for College For Healthcare For Healthcare Apple and Healthcare For Government For Government Apple and Government Shop for Veterans and Military Shop for State and Local Employees Shop for Federal Employees Apple Values Apple Values Accessibility Education Environment Inclusion and Diversity Privacy Racial Equity and Justice Supply Chain Innovation About Apple About Apple Newsroom Apple Leadership Career Opportunities Investors Ethics & Compliance Events Contact Apple More ways to shop: Find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE (1-800-692-7753). United States Español Copyright © 2026 Apple Inc. All rights reserved. Privacy Policy Terms of Use Sales and Refunds Legal Site Map",
-      "imageUrl": "https://www.apple.com/newsroom/images/2026/02/xcode-26-point-3-unlocks-the-power-of-agentic-coding/tile/Apple-Xcode-agentic-coding-hero-lp.jpg.og.jpg?202602041259",
+      "summary": "**Anthropic 宣布 Claude 将永久保持无广告**，强调其作为深度思考与工作助手的核心定位不应受商业激励干扰；此举确保用户在处理敏感话题、复杂编程或个人问题时获得纯粹、可信的协助，避免模型响应被广告商影响或诱导消费，同时公司通过企业合约与订阅制维持运营，并持续扩大教育与非营利组织的免费访问——普通用户可继续在无干扰环境中使用 Claude 进行高价值认知任务，无需担忧隐私泄露或隐性推销。",
+      "fullText": "Skip to main content Skip to footer Research Economic Futures Commitments Learn News Try Claude Announcements Claude is a space to think Feb 4, 2026 There are many good places for advertising. A conversation with Claude is not one of them. Advertising drives competition, helps people discover new products, and allows services like email and social media to be offered for free. We’ve run our own ad campaigns , and our AI models have, in turn, helped many of our customers in the advertising industry. But including ads in conversations with Claude would be incompatible with what we want Claude to be: a genuinely helpful assistant for work and for deep thinking. We want Claude to act unambiguously in our users’ interests. So we’ve made a choice: Claude will remain ad-free. Our users won’t see “sponsored” links adjacent to their conversations with Claude; nor will Claude’s responses be influenced by advertisers or include third-party product placements our users did not ask for. The nature of AI conversations When people use search engines or social media, they’ve come to expect a mixture of organic and sponsored content. Filtering signal from noise is part of the interaction. Conversations with AI assistants are meaningfully different. The format is open-ended; users often share context and reveal more than they would in a search query. This openness is part of what makes conversations with AI valuable, but it’s also what makes them susceptible to influence in ways that other digital products are not. Our analysis of conversations with Claude (conducted in a way that keeps all data private and anonymous ) shows that an appreciable portion involve topics that are sensitive or deeply personal—the kinds of conversations you might have with a trusted advisor. Many other uses involve complex software engineering tasks, deep work, or thinking through difficult problems. The appearance of ads in these contexts would feel incongruous—and, in many cases, inappropriate. We still have much to learn about the impact of AI models on the people who use them. Early research suggests both benefits—like people finding support they couldn’t access elsewhere—and risks, including the potential for models to reinforce harmful beliefs in vulnerable users. Introducing advertising incentives at this stage would add another level of complexity. Our understanding of how models translate the goals we set them into specific behaviors is still developing; an ad-based system could therefore have unpredictable results. Incentive structures Being genuinely helpful is one of the core principles of Claude’s Constitution , the document that describes our vision for Claude’s character and guides how we train the model. An advertising-based business model would introduce incentives that could work against this principle. Consider a concrete example. A user mentions they’re having trouble sleeping. An assistant without advertising incentives would explore the various potential causes—stress, environment, habits, and so on—based on what might be most insightful to the user. An ad-supported assistant has an additional consideration: whether the conversation presents an opportunity to make a transaction. These objectives may often align—but not always. And, unlike a list of search results, ads that influence a model’s responses may make it difficult to tell whether a given recommendation comes with a commercial motive or not. Users shouldn’t have to second-guess whether an AI is genuinely helping them or subtly steering the conversation towards something monetizable. Even ads that don’t directly influence an AI model’s responses and instead appear separately within the chat window would compromise what we want Claude to be: a clear space to think and work. Such ads would also introduce an incentive to optimize for engagement—for the amount of time people spend using Claude and how often they return. These metrics aren’t necessarily aligned with being genuinely helpful. The most useful AI interaction might be a short one, or one that resolves the user’s request without prompting further conversation. We recognize that not all advertising implementations are equivalent. More transparent or opt-in approaches—where users explicitly choose to see sponsored content—might avoid some of the concerns outlined above. But the history of ad-supported products suggests that advertising incentives, once introduced, tend to expand over time as they become integrated into revenue targets and product development, blurring boundaries that were once more clear-cut. We’ve chosen not to introduce these dynamics into Claude. Our approach Anthropic is focused on businesses, developers, and helping our users flourish. Our business model is straightforward: we generate revenue through enterprise contracts and paid subscriptions, and we reinvest that revenue into improving Claude for our users. This is a choice with tradeoffs, and we respect that other AI companies might reasonably reach different conclusions. Expanding access to Claude is central to our public benefit mission, and we want to do it without selling our users’ attention or data to advertisers. To that end, we’ve brought AI tools and training to educators in over 60 countries, begun national AI education pilots with multiple governments , and made Claude available to nonprofits at a significant discount. We continue to invest in our smaller models so that our free offering remains at the frontier of intelligence, and we may consider lower-cost subscription tiers and regional pricing where there is clear demand for it. Should we need to revisit this approach, we’ll be transparent about our reasons for doing so. Supporting commerce AI will increasingly interact with commerce, and we look forward to supporting this in ways that help our users. We’re particularly interested in the potential of agentic commerce, where Claude acts on a user’s behalf to handle a purchase or booking end to end. And we’ll continue to build features that enable our users to find, compare, or buy products, connect with businesses, and more—when they choose to do so. We’re also exploring more ways to make Claude a focused space to be at your most productive. Users can already connect third-party tools they use for work—like Figma, Asana, and Canva—and interact with them directly within Claude. We expect to introduce many more useful integrations and expand this toolkit over time. All third-party interactions will be grounded in the same overarching design principle: they should be initiated by the user (where the AI is working for them) rather than an advertiser (where the AI is working, at least in part, for someone else). Today, whether someone asks Claude to research running shoes, compare mortgage rates, or recommend a restaurant for a special occasion, Claude’s only incentive is to give a helpful answer. We’d like to preserve that. A trusted tool for thought We want our users to trust Claude to help them keep thinking—about their work, their challenges, and their ideas. Our experience of using the internet has made it easy to assume that advertising on the products we use is inevitable. But open a notebook, pick up a well-crafted tool, or stand in front of a clean chalkboard, and there are no ads in sight. We think Claude should work the same way. Related content Apple’s Xcode now supports the Claude Agent SDK Read more Anthropic partners with Allen Institute and Howard Hughes Medical Institute to accelerate scientific discovery Read more ServiceNow chooses Claude to power customer apps and increase internal productivity Read more Products Claude Claude Code Cowork Claude in Chrome Claude in Excel Claude in Slack Skills Max plan Team plan Enterprise plan Download app Pricing Log in to Claude Models Opus Sonnet Haiku Solutions AI agents Code modernization Coding Customer support Education Financial services Government Healthcare Life sciences Nonprofits Claude Developer Platform Overview Developer docs Pricing Regional Compliance Amazon Bedrock Google Cloud’s Vertex AI Console login Learn Blog Claude partner network Connectors Courses Customer stories Engineering at Anthropic Events Plugins Powered by Claude Service partners Startups program Tutorials Use cases Company Anthropic Careers Economic Futures Research News Claude’s Constitution Responsible Scaling Policy Security and compliance Transparency Help and security Availability Status Support center Terms and policies Privacy policy Consumer health data privacy policy Responsible disclosure policy Terms of service: Commercial Terms of service: Consumer Usage policy © 2025 Anthropic PBC Claude is a space to think | Anthropic \\ Anthropic",
+      "imageUrl": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20House&backgroundColor=cactus",
+      "tags": [
+        "LLM"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源权威：官方/白名单",
+        "跨源重复：1 个来源",
+        "模型评分：7/10，理由：Claude宣布永久无广告，强化了AI助手的可信度与专注性，对用户体验和行业伦理具有显著影响，属于主流产品战略的重要升级。",
+        "热度：321 / 评论 171"
+      ],
+      "score": 11.37,
+      "publishedAt": "2026-02-04T12:08:49+00:00",
+      "authors": [
+        "meetpateltech"
+      ]
+    },
+    {
+      "id": "rss_2202133647",
+      "title": "Codex 推出 App Server，支持流式工具调用与审批",
+      "url": "https://openai.com/index/unlocking-the-codex-harness",
+      "type": "news",
+      "source": "OpenAI Blog",
+      "summary": "**Codex App Server 发布双向 JSON-RPC API**，支持嵌入 Codex 智能体并实现流式进度更新、工具调用、用户审批及代码差异对比等核心功能；该服务器为开发者提供标准化接口以集成高级 AI 代理能力，使应用能实时响应复杂任务执行过程——开发者可立即通过该 API 构建具备透明操作与可控交互的智能应用，提升自动化工作流的可靠性与用户体验。",
+      "fullText": "Learn how to embed the Codex agent using the Codex App Server, a bidirectional JSON-RPC API powering streaming progress, tool use, approvals, and diffs.",
+      "imageUrl": "",
+      "tags": [
+        "Agent"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源权威：官方/白名单",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：OpenAI发布Codex App Server，提供双向JSON-RPC API支持工具调用与流式交互，是AI代理系统工程化的重要突破，具备战略级行业影响。",
+        "热度：0 / 评论 0"
+      ],
+      "score": 10.0,
+      "publishedAt": "2026-02-04T13:00:00+00:00",
+      "authors": []
+    },
+    {
+      "id": "github_microsoft_qlib",
+      "title": "微软 Qlib 集成 RD-Agent，推动量化投资 AI 自动化",
+      "url": "https://github.com/microsoft/qlib",
+      "type": "news",
+      "source": "GitHub Trending",
+      "summary": "**微软开源 Qlib 平台**，这是一个面向量化投资的 AI 研发框架，支持监督学习、市场动态建模与强化学习等多种机器学习范式，并集成 RD-Agent 实现量化研究全流程自动化；该平台帮助金融从业者从策略探索到生产部署高效利用 AI 技术——量化研究人员可借助 Qlib 快速实验新型 AI 模型，降低算法交易系统的开发门槛与迭代成本。",
+      "fullText": "",
+      "imageUrl": "https://opengraph.githubassets.com/383182298891a434babcb473c08631aa39803caa57214be41520ab0119af0668/microsoft/qlib",
       "tags": [
         "Agent",
-        "RAG"
-      ],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源权威：官方/白名单",
-        "跨源重复：1 个来源",
-        "模型评分：7/10，理由：Xcode 26.3 集成 AI 编码代理，推动开发者工具智能化，具有显著行业影响力，但属于平台级功能增强而非颠覆性变革。",
-        "热度：347 / 评论 300"
-      ],
-      "score": 9.58,
-      "publishedAt": "2026-02-03T18:04:08+00:00",
-      "authors": [
-        "davidbarker"
-      ]
-    },
-    {
-      "id": "rss_7908192869",
-      "title": "NVIDIA 与达索共建 AI 虚拟孪生工业架构",
-      "url": "https://blogs.nvidia.com/blog/huang-3dexperience-2026/",
-      "type": "news",
-      "source": "NVIDIA Blog",
-      "summary": "NVIDIA CEO黄仁勋与达索系统CEO Pascal Daloz在3DEXPERIENCE World大会上宣布深化合作，**融合NVIDIA的加速计算与AI库与达索的Virtual Twin虚拟孪生平台**，构建基于物理规律的“行业世界模型”，使工程师能在软件中设计、模拟并优化产品乃至整座工厂的行为。该架构将AI智能体作为“虚拟伙伴”嵌入3DEXPERIENCE平台，赋能生物研究、材料发现、AI驱动工程仿真及软件定义的自主生产系统。此举不仅将工程设计规模提升百至百万倍，更将虚拟孪生从“数字模型”升级为“知识工厂”，让企业能在物理建造前验证创意、规避错误。对普通人而言，这将加速未来更安全、更创新的产品问世，而工程师则获得强大创造力放大器而非替代品。",
-      "fullText": "At 3DEXPERIENCE World in Houston, NVIDIA founder and CEO Jensen Huang and Dassault Systèmes CEO Pascal Daloz laid out a blueprint for industrial AI rooted in physics-based “world models” — systems designed to simulate products, factories and even biological systems before they’re built. “Artificial intelligence will be infrastructure,” like water, electricity and the internet, Huang told the crowd, playfully referring to the engineering-heavy audience as “Solid Workers,” a nod to Dassault Systèmes’ SolidWorks platform. The announcement continues a collaboration spanning more than a quarter-century between NVIDIA and Dassault Systèmes. “This is the largest collaboration our two companies have ever had in over a quarter century,” Huang said. “We’re going to fuse these technologies so engineers can work at a scale that’s 100 times, 1,000 times — and eventually a million times greater than before.” The new partnership brings NVIDIA accelerated computing and AI libraries together with Dassault Systèmes’ Virtual Twin platforms to move more engineering work into real-time digital workflows, powered by AI companions that help teams explore, validate, prototype and iterate faster. Huang framed the shift as a reinvention of the computing stack: moving from hand-specified, structured digital designs to systems that can generate, simulate and optimize in software — at industrial scale. From Digital Models to Industry World Models Virtual twins are not applications, “they are knowledge factories,” Daloz said. The partnership aims to establish industry world models — science-validated AI systems grounded in physics that can serve as mission-critical platforms across biology, materials science, engineering and manufacturing. In Daloz’s framing, the value moves upstream: virtual twins become the place where knowledge is created, tested and trusted — before anything is built in the physical world. Dassault Systèmes, whose 3DEXPERIENCE platform serves more than 45 million users and 400,000 customers globally, has long been a leader in virtual twin technology — digital replicas that let engineers simulate products and processes before building them physically. The collaboration brings together accelerated computing, AI and digital twin technologies so engineers can design geometry as well as behavior — and explore radically larger design spaces earlier in development. Together, the companies outlined how this shared architecture will show up across science, engineering and manufacturing workflows: Advancing Biology and Materials Research​: The NVIDIA BioNeMo platform and BIOVIA science-validated world models accelerate the discovery of new molecules and next-generation materials. AI-Driven Design and Engineering: SIMULIA AI-based Virtual Twin Physics Behavior using NVIDIA CUDA-X and AI physics libraries empowers designers and engineers to accurately and instantly predict outcomes. Virtual Twins for Every Factory: NVIDIA Omniverse physical AI libraries integrated with the DELMIA Virtual Twin enable autonomous, software-defined production systems. Virtual Companions Supercharge Dassault Systèmes’ Users: The 3DEXPERIENCE agentic platform, combining NVIDIA AI technologies and NVIDIA Nemotron open models with Dassault Systèmes’ Industry World Models, powers Virtual Companions to tap into deep industrial context, delivering trusted, actionable intelligence. Huang said that in domains like biology and materials, the frontier is learning the underlying “language” of complex systems and then generating new options that can be evaluated and validated in simulation. Designing and Operating the Factory in Software A central theme of the discussion was how factories themselves are changing — from static physical assets to living systems that are designed, simulated and operated as virtual twins. As part of the partnership, Dassault Systèmes is deploying NVIDIA-powered AI factories on three continents through its OUTSCALE sovereign cloud, enabling customers to run AI workloads while maintaining data residency and security requirements. Both executives emphasized that the goal isn’t to replace engineers — it’s to amplify them. As AI agent companions take on more exploratory and repetitive tasks, designers and engineers gain leverage and creativity, not redundancy. AI Companions That Expand Human Creativity Every designer will have a “team of companions,” Huang said — a shift he described as fundamentally positive for engineers, software platforms and the broader ecosystem built on them. For the 10s of millions of engineers who use Dassault Systèmes tools to design everything from aircraft to consumer packaged goods, the shift isn’t about replacing human creativity — it’s about expanding it. “Success is not about automation,” Daloz said. “[Engineers] don’t want to automate the past — they want to invent the future.” Looking ahead, Daloz framed the partnership as about more than performance gains — it’s an effort to open new possibilities, help companies eliminate bad choices before they become expensive mistakes and create entirely new categories of products. “Virtual twins and the 3D universes are not applications,” Daloz said. “They are knowledge factories.” The fireside conversation between Huang and Daloz was broadcast live from 3DEXPERIENCE World.",
-      "imageUrl": "https://blogs.nvidia.com/wp-content/uploads/2026/02/dassault-jhh-email-1280x680-28.jpg",
-      "tags": [
-        "3D"
-      ],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源权威：官方/白名单",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：NVIDIA 与 Dassault Systèmes 合作构建工业级物理世界模型，定义未来工程范式，具有全球产业战略意义。",
-        "热度：0 / 评论 0"
-      ],
-      "score": 9.5,
-      "publishedAt": "2026-02-03T22:14:51+00:00",
-      "authors": [
-        "Brian Caulfield"
-      ]
-    },
-    {
-      "id": "rss_2670224873",
-      "title": "NVIDIA Nemotron 将文档转为实时商业智能",
-      "url": "https://blogs.nvidia.com/blog/ai-agents-intelligent-document-processing/",
-      "type": "news",
-      "source": "NVIDIA Blog",
-      "summary": "NVIDIA推出的Nemotron Labs方案利用**Nemotron开源模型与GPU加速技术**，构建智能文档处理系统，能自动从PDF、表格、图表等复杂格式中提取结构化信息，通过检索增强生成（RAG）转化为可操作的业务洞察。该系统已在金融（如Justt.ai自动化争议处理）、法律（如DocuSign合同智能解析）和科研（如Edison Scientific文献挖掘）领域落地，实现高精度溯源、大规模文档实时更新与多模态内容理解。对AI领域而言，它展示了开放模型如何驱动垂直场景的可信智能体；对企业用户，可将静态文档库转为动态知识引擎；普通从业者则能借助此类工具快速获取精准信息，减少手动整理负担，提升决策效率与合规性。",
-      "fullText": "Editor’s note: This post is part of the Nemotron Labs blog series, which explores how the latest open models, datasets and training techniques help businesses build specialized AI systems and applications on NVIDIA platforms. Each post highlights practical ways to use an open stack to deliver value in production — from transparent research copilots to scalable AI agents. Businesses today face the challenge of uncovering valuable insights buried within a wide variety of documents — including reports, presentations, PDFs, web pages and spreadsheets. Often, teams piece together insights by manually reviewing files, copying data into spreadsheets, building dashboards and using basic search or template-based optical character recognition (OCR) tools that often miss important details in complex media. Intelligent document processing is an AI-powered workflow that automatically reads, understands and extracts insights from documents. It interprets rich formats inside those documents — including tables, charts, images and text — using AI agents and techniques like retrieval-augmented generation (RAG) to turn the multimodal content into insights that other multi-agent systems and people can easily use. With NVIDIA Nemotron open models and GPU-accelerated libraries, organizations can build AI-powered document intelligence systems for research, financial services, legal workflows and more. These open models, datasets and training recipes have powered strong results on leaderboards such as MTEB, MMTEB and ViDoRe V3, benchmarks for evaluating multilingual and multimodal retrieval models. Teams can choose from among the best models for tasks like search and question answering. How Document Processing Streamlines Business Intelligence Document intelligence systems that can pull meaning from complex layouts, scale to huge file libraries and show exactly where an answer came from are incredibly useful in high-stakes environments. These systems: Understand rich document content, moving beyond simple text scraping to capture information from charts, tables, figures and mixed-language pages and treating documents as a human would by recognizing structure, relationships and context​​. Handle large quantities of shifting data, ingesting and processing massive collections of documents in parallel, and keeping knowledge bases continuously up to date.​​ Find exactly what users need, helping AI agents pinpoint the most relevant passages, tables or paragraphs to a query so they can respond with precision and accuracy.​​ Show the evidence behind answers by providing citations to specific pages or charts so teams can gain transparency and auditability, which is critical in regulated industries.​​ The result is a shift from static document archives to living knowledge systems that directly power business intelligence, customer experiences and operational workflows. Document Intelligence at Work Intelligent document processing systems built on NVIDIA Nemotron RAG models, Nemotron Parse and accelerated computing are already reshaping how organizations across industries gain insights from their documents.​​ Justt: AI-Native Chargeback Management and Dispute Optimization In financial services, payment disputes create significant revenue loss and operational complexity for merchants, largely because the evidence needed to handle them lives in unstructured formats. Transaction logs, customer communications and policy documents are often fragmented across systems and difficult to process at scale, making dispute handling slow, manual and costly. Justt.ai provides an AI-driven platform that automates the full chargeback lifecycle at scale. The platform connects directly to payment service providers and merchant data sources to ingest transaction data, customer interactions and policies, then automatically assembles dispute-specific evidence that aligns with card network and issuer requirements. The platform’s AI-powered dispute optimization, powered by Nemotron Parse, applies predictive analytics to determine which chargebacks to fight or accept, and how to optimize each response for maximum net recovery. Leading hospitality operators like HEI Hotels &amp; Resorts use the platform to automate dispute handling across their properties, recapturing revenue while maintaining guest relationships. By pairing document-centric intelligence with decision automation, merchants can recapture a significant portion of revenue lost to illegitimate chargebacks while reducing manual review effort.​ Docusign: Scaling Agreement Intelligence Docusign is the global leader in Intelligent Agreement Management, handling millions of transactions every day for more than 1.8 million customers and over 1 billion users. Agreements are the foundation of every business, but the critical information they contain are often buried inside pages of documents. To surface the information, Docusign needed high-fidelity extraction of tables, text and metadata from complex documents like PDFs so organizations could understand and act on obligations, risks and opportunities faster. Docusign is evaluating Nemotron Parse for deeper contract understanding at scale. Running on NVIDIA GPUs, the model combines advanced AI with layout detection and OCR. The system can reliably interpret complex tables and reconstruct tables with required information. This reduces the need for manual corrections and helps ensure that even the most complex contracts are processed with the speed and accuracy their customers expect. With this foundation, Docusign will transform agreement repositories into structured data that powers contract search, analysis and AI-driven workflows — turning agreements into business assets that help organizations and their teams improve visibility, reduce risk and make faster decisions. Edison Scientific: Research Across Massive Literature Scale Edison Scientific’s Kosmos AI Scientist helps researchers navigate complex scientific landscapes to synthesize literature, identify connections and surface evidence.​ Edison needed a way to rapidly and accurately extract structured information from large volumes of PDFs, including equations, tables and figures that traditional information parsing methods often mishandle.​ By integrating the NVIDIA Nemotron Parse model into its PaperQA2 pipeline, Edison can decompose research papers, index key concepts and ground responses in specific passages, improving both throughput and answer quality for scientists.​​ This approach turns a sprawling research corpus into an interactive, queryable knowledge engine that accelerates hypothesis generation and literature review.​ The high efficiency of Nemotron Parse enables cost-efficient serving at scale, allowing Edison’s team to unlock the whole multimodal pipeline. Designing an Intelligent Document Processing Application With NVIDIA Technologies A robust, domain-specific document intelligence pipeline requires technologies that can handle data extraction, embedding and reranking, while keeping the data secure and compliant with regulations.​​ Extraction: Nemotron extraction and OCR models rapidly ingest multimodal PDFs, text, tables, graphs and images to convert them into structured, machine-readable content while preserving layout and semantics. Embedding: Nemotron embedding models convert passages, entities and visual elements into vector representations tuned for document retrieval, enabling semantically accurate search.​​ Reranking: Nemotron reranking models evaluate candidate passages to ensure the most relevant content is surfaced as context for large language models (LLMs), improving answer fidelity and reducing hallucinations.​​ Parsing: Nemotron Parse models decipher document semantics to extract text and tables with precise spatial grounding and correct reading flow. Overcoming layout variability, they turn unstructured documents into actionable data that enhances the accuracy of LLMs and agentic workflows. These capabilities are packaged as NVIDIA NIM microservices and foundation models that run efficiently on NVIDIA GPUs, allowing teams to scale from proof of concept to production while keeping sensitive data within their chosen cloud or data center environment. The most effective AI systems use a mix of frontier models and open source models like NVIDIA Nemotron, with an LLM router analyzing each task and automatically selecting the model best suited for it. This approach keeps performance strong while managing computing costs and improving efficiency. Get Started With NVIDIA Nemotron Access a step-by-step tutorial on how to build a document processing pipeline with RAG capabilities. Explore how Nemotron RAG can power specialized agents tailored for different industries.​ Plus, experiment with Nemotron RAG models and the NVIDIA NeMo Retriever open library, available on GitHub and Hugging Face, as well as Nemotron Parse on Hugging Face. Join the community of developers building with the NVIDIA Blueprint for Enterprise RAG — trusted by a dozen industry-leading AI Data Platform providers and available now on build.nvidia.com, GitHub and the NGC catalog. Stay up to date on agentic AI, NVIDIA Nemotron and more by subscribing to NVIDIA AI news, joining the community and following NVIDIA AI on LinkedIn, Instagram, X and Facebook. Explore self-paced video tutorials and livestreams.",
-      "imageUrl": "https://blogs.nvidia.com/wp-content/uploads/2026/02/nemotron-labs-featured.jpg",
-      "tags": [
-        "Agent"
-      ],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源权威：官方/白名单",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：Nemotron Labs 展示 AI 代理在文档智能处理中的实战能力，推动企业级 AI 应用落地，具备显著行业影响力。",
-        "热度：0 / 评论 0"
-      ],
-      "score": 8.9,
-      "publishedAt": "2026-02-04T16:00:36+00:00",
-      "authors": [
-        "Moon Chung"
-      ]
-    },
-    {
-      "id": "github_openai_skills",
-      "title": "OpenAI 发布 Codex 技能目录",
-      "url": "https://github.com/openai/skills",
-      "type": "news",
-      "source": "GitHub Trending",
-      "summary": "OpenAI发布了名为“skills”的代码库，作为Codex模型的技能目录（Skills Catalog），旨在系统化组织和调用Codex在不同编程任务中的能力，为开发者提供更结构化的AI编程辅助参考。",
-      "fullText": "",
-      "imageUrl": "https://opengraph.githubassets.com/1578986e0199240a5be4a4c6d3b0dc2a8ee6fb3ae741db6da8be85ffca0f8427/openai/skills",
-      "tags": [
-        "Industry"
+        "Industry",
+        "Research",
+        "Open Source"
       ],
       "paperCategory": "",
       "signalReasons": [
         "来源：GitHub Trending",
         "跨源重复：1 个来源",
-        "模型评分：6/10，理由：Codex技能目录为开发者提供参考，具有一定实用性但属于常规资源整理。",
-        "热度：3502 / 评论 0"
+        "模型评分：9/10，理由：微软推出AI量化投资平台，融合强化学习与金融建模，推动AI在资本市场的深度应用，具战略级影响。",
+        "热度：36518 / 评论 0"
       ],
-      "score": 8.6,
-      "publishedAt": "2026-02-04T16:41:58.191181+00:00",
+      "score": 9.9,
+      "publishedAt": "2026-02-04T23:36:42.393626+00:00",
       "authors": []
     },
     {
-      "id": "github_pedramamini_Maestro",
-      "title": "Maestro：AI 智能体编排指挥中心开源",
-      "url": "https://github.com/pedramamini/Maestro",
-      "type": "news",
-      "source": "GitHub Trending",
-      "summary": "GitHub项目Maestro被定位为“智能体编排指挥中心”（Agent Orchestration Command Center），旨在提供统一界面或框架，用于协调、调度和管理多个AI智能体的协同工作流程，提升复杂任务中多智能体系统的可控性与效率。",
-      "fullText": "",
-      "imageUrl": "https://opengraph.githubassets.com/4cc4075756e88ba94888382e46706cb74e0ef7fb71239dfd92fcfc9655b953e7/pedramamini/Maestro",
-      "tags": [
-        "Agent"
-      ],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：GitHub Trending",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：Agent编排指挥中心构建统一控制架构，是迈向复杂AI系统治理的核心基础设施突破。",
-        "热度：1610 / 评论 0"
-      ],
-      "score": 8.4,
-      "publishedAt": "2026-02-04T16:42:08.141595+00:00",
-      "authors": []
-    },
-    {
-      "id": "rss_2230587095",
-      "title": "沃尔夫斯堡全队部署 ChatGPT 提升运营效能",
+      "id": "rss_8842896970",
+      "title": "沃尔夫斯堡全队启用 ChatGPT，提升效率不失足球本色",
       "url": "https://openai.com/index/vfl-wolfsburg",
       "type": "news",
       "source": "OpenAI Blog",
-      "summary": "德甲沃尔夫斯堡足球俱乐部（VfL Wolfsburg）将ChatGPT转化为**全俱乐部范围的通用能力**，通过聚焦员工赋能而非小范围试点，系统性提升运营效率、创意产出与知识共享，同时确保不削弱其核心足球文化身份。这一举措表明生成式AI正从技术实验走向组织级生产力工具，对体育行业而言，它优化了非竞技环节的决策与协作；对普通企业，提供了以人为本规模化AI落地的范本；员工则可借助AI辅助日常分析、沟通与内容创作，释放更多精力投入高价值工作。",
+      "summary": "**德甲沃尔夫斯堡俱乐部全面部署 ChatGPT**，通过赋能员工而非仅限试点项目，系统性提升运营效率、创意产出与知识共享，同时坚守足球专业身份；这一举措表明生成式 AI 可深度融入传统体育组织的核心业务流程——俱乐部工作人员可借助 AI 加速数据分析、内容创作与决策支持，而球迷和公众则可能体验到更敏捷、个性化的服务与互动。",
       "fullText": "By focusing on people, not pilots, the Bundesliga club is scaling efficiency, creativity, and knowledge—without losing its football identity.",
       "imageUrl": "",
       "tags": [
@@ -655,222 +616,285 @@
       "signalReasons": [
         "来源权威：官方/白名单",
         "跨源重复：1 个来源",
-        "模型评分：6/10，理由：德甲俱乐部规模化应用 ChatGPT 提升运营效率，具代表性案例价值，但属垂直场景落地，影响范围有限。",
+        "模型评分：8/10，理由：VfL Wolfsburg将ChatGPT全面部署于俱乐部运营，展示AI在传统体育组织中的规模化落地能力，具有典型示范意义。",
         "热度：0 / 评论 0"
       ],
-      "score": 8.2,
+      "score": 9.4,
       "publishedAt": "2026-02-04T00:00:00+00:00",
       "authors": []
     },
     {
-      "id": "github_OpenBMB_ChatDev",
-      "title": "OpenBMB/ChatDev",
-      "url": "https://github.com/OpenBMB/ChatDev",
+      "id": "rss_9250664580",
+      "title": "NVIDIA Nemotron 将文档转为实时商业智能",
+      "url": "https://blogs.nvidia.com/blog/ai-agents-intelligent-document-processing/",
       "type": "news",
-      "source": "GitHub Trending",
-      "summary": "OpenBMB 发布 ChatDev 2.0，该框架通过多智能体协作机制，利用大语言模型（LLM）实现端到端的软件开发自动化，涵盖需求分析、设计、编码、测试等全流程；这一方法显著提升了 AI 在复杂软件工程任务中的自主性和协同效率，为开发者提供了一种无需人工干预即可完成完整项目构建的新范式，普通开发者可借助该开源工具快速生成原型或验证想法。",
-      "fullText": "",
-      "imageUrl": "https://github.com/OpenBMB/ChatDev/raw/main/assets/puppeteer.png",
+      "source": "NVIDIA Blog",
+      "summary": "**Nemotron Labs 推出基于 NVIDIA Nemotron 开源模型的智能文档处理方案**，利用 AI 代理与 RAG 技术自动解析 PDF、网页、表格等多模态文档中的图表、文本与结构信息，转化为可追溯、可操作的实时商业智能；该系统已在金融纠纷处理（Justt）、电子签约（DocuSign）和科研文献分析（Edison Scientific）等场景落地，显著提升高风险行业对非结构化数据的利用效率——企业可借此构建活知识库，普通员工能快速从海量文档中精准获取证据与洞察，减少手动整理并增强决策可信度。",
+      "fullText": "Editor’s note: This post is part of the Nemotron Labs blog series, which explores how the latest open models, datasets and training techniques help businesses build specialized AI systems and applications on NVIDIA platforms. Each post highlights practical ways to use an open stack to deliver value in production — from transparent research copilots to scalable AI agents. Businesses today face the challenge of uncovering valuable insights buried within a wide variety of documents — including reports, presentations, PDFs, web pages and spreadsheets. Often, teams piece together insights by manually reviewing files, copying data into spreadsheets, building dashboards and using basic search or template-based optical character recognition (OCR) tools that often miss important details in complex media. Intelligent document processing is an AI-powered workflow that automatically reads, understands and extracts insights from documents. It interprets rich formats inside those documents — including tables, charts, images and text — using AI agents and techniques like retrieval-augmented generation (RAG) to turn the multimodal content into insights that other multi-agent systems and people can easily use. With NVIDIA Nemotron open models and GPU-accelerated libraries, organizations can build AI-powered document intelligence systems for research, financial services, legal workflows and more. These open models, datasets and training recipes have powered strong results on leaderboards such as MTEB, MMTEB and ViDoRe V3, benchmarks for evaluating multilingual and multimodal retrieval models. Teams can choose from among the best models for tasks like search and question answering. How Document Processing Streamlines Business Intelligence Document intelligence systems that can pull meaning from complex layouts, scale to huge file libraries and show exactly where an answer came from are incredibly useful in high-stakes environments. These systems: Understand rich document content, moving beyond simple text scraping to capture information from charts, tables, figures and mixed-language pages and treating documents as a human would by recognizing structure, relationships and context​​. Handle large quantities of shifting data, ingesting and processing massive collections of documents in parallel, and keeping knowledge bases continuously up to date.​​ Find exactly what users need, helping AI agents pinpoint the most relevant passages, tables or paragraphs to a query so they can respond with precision and accuracy.​​ Show the evidence behind answers by providing citations to specific pages or charts so teams can gain transparency and auditability, which is critical in regulated industries.​​ The result is a shift from static document archives to living knowledge systems that directly power business intelligence, customer experiences and operational workflows. Document Intelligence at Work Intelligent document processing systems built on NVIDIA Nemotron RAG models, Nemotron Parse and accelerated computing are already reshaping how organizations across industries gain insights from their documents.​​ Justt: AI-Native Chargeback Management and Dispute Optimization In financial services, payment disputes create significant revenue loss and operational complexity for merchants, largely because the evidence needed to handle them lives in unstructured formats. Transaction logs, customer communications and policy documents are often fragmented across systems and difficult to process at scale, making dispute handling slow, manual and costly. Justt.ai provides an AI-driven platform that automates the full chargeback lifecycle at scale. The platform connects directly to payment service providers and merchant data sources to ingest transaction data, customer interactions and policies, then automatically assembles dispute-specific evidence that aligns with card network and issuer requirements. The platform’s AI-powered dispute optimization, powered by Nemotron Parse, applies predictive analytics to determine which chargebacks to fight or accept, and how to optimize each response for maximum net recovery. Leading hospitality operators like HEI Hotels &amp; Resorts use the platform to automate dispute handling across their properties, recapturing revenue while maintaining guest relationships. By pairing document-centric intelligence with decision automation, merchants can recapture a significant portion of revenue lost to illegitimate chargebacks while reducing manual review effort.​ Read about how Justt’s chargeback management tool autonomously processes financial data to handle disputes for merchants. Docusign: Scaling Agreement Intelligence Docusign is the global leader in Intelligent Agreement Management, handling millions of transactions every day for more than 1.8 million customers and over 1 billion users. Agreements are the foundation of every business, but the critical information they contain are often buried inside pages of documents. To surface the information, Docusign needed high-fidelity extraction of tables, text and metadata from complex documents like PDFs so organizations could understand and act on obligations, risks and opportunities faster. Docusign is evaluating Nemotron Parse for deeper contract understanding at scale. Running on NVIDIA GPUs, the model combines advanced AI with layout detection and OCR. The system can reliably interpret complex tables and reconstruct tables with required information. This reduces the need for manual corrections and helps ensure that even the most complex contracts are processed with the speed and accuracy their customers expect. With this foundation, Docusign will transform agreement repositories into structured data that powers contract search, analysis and AI-driven workflows — turning agreements into business assets that help organizations and their teams improve visibility, reduce risk and make faster decisions. Edison Scientific: Research Across Massive Literature Scale Edison Scientific’s Kosmos AI Scientist helps researchers navigate complex scientific landscapes to synthesize literature, identify connections and surface evidence.​ Edison needed a way to rapidly and accurately extract structured information from large volumes of PDFs, including equations, tables and figures that traditional information parsing methods often mishandle.​ By integrating the NVIDIA Nemotron Parse model into its PaperQA pipeline, Edison can decompose research papers, index key concepts and ground responses in specific passages, improving both throughput and answer quality for scientists.​​ This approach turns a sprawling research corpus into an interactive, queryable knowledge engine that accelerates hypothesis generation and literature review.​ The high efficiency of Nemotron Parse enables cost-efficient serving at scale, allowing Edison’s team to unlock the whole multimodal pipeline. Designing an Intelligent Document Processing Application With NVIDIA Technologies A robust, domain-specific document intelligence pipeline requires technologies that can handle data extraction, embedding and reranking, while keeping the data secure and compliant with regulations.​​ Extraction: Nemotron extraction and OCR models rapidly ingest multimodal PDFs, text, tables, graphs and images to convert them into structured, machine-readable content while preserving layout and semantics. Embedding: Nemotron embedding models convert passages, entities and visual elements into vector representations tuned for document retrieval, enabling semantically accurate search.​​ Reranking: Nemotron reranking models evaluate candidate passages to ensure the most relevant content is surfaced as context for large language models (LLMs), improving answer fidelity and reducing hallucinations.​​ Parsing: Nemotron Parse models decipher document semantics to extract text and tables with precise spatial grounding and correct reading flow. Overcoming layout variability, they turn unstructured documents into actionable data that enhances the accuracy of LLMs and agentic workflows. These capabilities are packaged as NVIDIA NIM microservices and foundation models that run efficiently on NVIDIA GPUs, allowing teams to scale from proof of concept to production while keeping sensitive data within their chosen cloud or data center environment. The most effective AI systems use a mix of frontier models and open source models like NVIDIA Nemotron, with an LLM router analyzing each task and automatically selecting the model best suited for it. This approach keeps performance strong while managing computing costs and improving efficiency. Get Started With NVIDIA Nemotron Access a step-by-step tutorial on how to build a document processing pipeline with RAG capabilities. Explore how Nemotron RAG can power specialized agents tailored for different industries.​ Plus, experiment with Nemotron RAG models and the NVIDIA NeMo Retriever open library, available on GitHub and Hugging Face, as well as Nemotron Parse on Hugging Face. Join the community of developers building with the NVIDIA Blueprint for Enterprise RAG — trusted by a dozen industry-leading AI Data Platform providers and available now on build.nvidia.com, GitHub and the NGC catalog. Stay up to date on agentic AI, NVIDIA Nemotron and more by subscribing to NVIDIA AI news, joining the community and following NVIDIA AI on LinkedIn, Instagram, X and Facebook. Explore self-paced video tutorials and livestreams.",
+      "imageUrl": "https://blogs.nvidia.com/wp-content/uploads/2026/02/nemotron-labs-featured.jpg",
       "tags": [
-        "LLM",
         "Agent"
       ],
       "paperCategory": "",
       "signalReasons": [
-        "来源：GitHub Trending",
+        "来源权威：官方/白名单",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：ChatDev 2.0通过多智能体协作实现全流程开发，体现Agent协同范式的关键进展。",
-        "热度：29914 / 评论 0"
-      ],
-      "score": 7.8,
-      "publishedAt": "2026-02-04T16:42:06.480115+00:00",
-      "authors": []
-    },
-    {
-      "id": "hn_46876720",
-      "title": "Anthropic 新工具引发科技股抛售潮，单日蒸发2850亿美元",
-      "url": "https://www.bloomberg.com/news/articles/2026-02-03/legal-software-stocks-plunge-as-anthropic-releases-new-ai-tool",
-      "type": "news",
-      "source": "Hacker News",
-      "summary": "**Anthropic** 推出的新 AI 自动化工具引发市场剧烈反应，导致软件、金融及资产管理板块单日蒸发 **2850 亿美元**市值，其中 Goldman Sachs 软件股指数下跌 6%，金融服务业指数跌近 7%，纳斯达克 100 指数一度下挫 2.4%；这一事件凸显投资者对 AI 替代人力风险的高度敏感，尤其担忧自动化工具可能侵蚀企业现有商业模式和收入来源，普通投资者需警惕高估值 AI 相关股票的短期波动风险，并重新评估技术变革对行业格局的冲击。",
-      "fullText": "Anthropic AI Tool Sparks Selloff From Software to Broader Market - Bloomberg Skip to content Bloomberg the Company & Its Products The Company & its Products Bloomberg Terminal Demo Request Bloomberg Anywhere Remote Login Bloomberg Anywhere Login Bloomberg Customer Support Customer Support Bloomberg Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world For Customers Bloomberg Anywhere Remote Login Software Updates Manage Products and Account Information Support Americas +1 212 318 2000 EMEA +44 20 7330 7500 Asia Pacific +65 6212 1000 Company About Careers Inclusion at Bloomberg Tech at Bloomberg Philanthropy Sustainability Bloomberg Beta Communications Press Announcements Press Contacts Follow Facebook Instagram LinkedIn YouTube Products Bloomberg Professional Services Bloomberg Terminal Data Trading Risk Compliance Indices Industry Products Bloomberg Law Bloomberg Tax Bloomberg Government BloombergNEF Media Bloomberg Markets Bloomberg Technology Bloomberg Pursuits Bloomberg Politics Bloomberg Opinion Bloomberg Businessweek Bloomberg Live Conferences Bloomberg Radio Bloomberg Television News Bureaus Media Services Bloomberg Media Distribution Advertising Company About Careers Inclusion at Bloomberg Tech at Bloomberg Philanthropy Sustainability Bloomberg Beta Communications Press Announcements Press Contacts Follow Facebook Instagram LinkedIn YouTube Products Bloomberg Professional Services Bloomberg Terminal Data Trading Risk Compliance Indices Industry Products Bloomberg Law Bloomberg Tax Bloomberg Government BloombergNEF Media Bloomberg Markets Bloomberg Technology Bloomberg Pursuits Bloomberg Politics Bloomberg Opinion Bloomberg Businessweek Bloomberg Live Conferences Bloomberg Radio Bloomberg Television News Bureaus Media Services Bloomberg Media Distribution Advertising Bloomberg Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world For Customers Bloomberg Anywhere Remote Login Software Updates Manage Contracts and Orders Support Americas +1 212 318 2000 EMEA +44 20 7330 7500 Asia Pacific +65 6212 1000 Sign In Subscribe Search Live TV Markets Chevron Down Economics Industries Tech Politics Businessweek Opinion Video More Chevron Down US Edition Chevron Down Menu Subscribe US Stocks: Today’s Markets Wrap Bashed by Software Risk Busy IPO Week Retail Fervor Fades Midterm Trading Themes Stock Movers Podcast Back Forward Technology AI Anthropic AI Tool Sparks Selloff From Software to Broader Market Facebook X LinkedIn Email Link Gift Facebook X LinkedIn Email Link Gift Gift this article Contact us: Provide news feedback or report an error Confidential tip? Send a tip to our reporters Site feedback: Take our Survey New Window Facebook X LinkedIn Email Link Gift By Carmen Reinicke , Joe Easton , and Henry Ren February 3, 2026 at 11:09 AM UTC Updated on February 4, 2026 at 5:18 AM UTC Bookmark Save A new AI automation tool from Anthropic PBC sparked a $285 billion rout in stocks across the software, financial services and asset management sectors on Tuesday as investors raced to dump shares with even the slightest exposure. A Goldman Sachs basket of US software stocks sank 6%, its biggest one-day decline since April’s tariff-fueled selloff, while an index of financial services firms tumbled almost 7%. The Nasdaq 100 Index fell as much as 2.4% at one point before trimming losses to 1.6%. Home BTV+ Market Data Opinion Audio Originals Magazine Events News Markets Economics Technology Politics Green Crypto AI Work & Life Wealth Pursuits Businessweek CityLab Sports Equality Management & Work Market Data Stocks Commodities Rates & Bonds Currencies Futures Sectors Economic Calendar Explore Newsletters Explainers Pointed News Quiz Alphadots Game The Big Take Graphics Submit a Tip About Us Terms of Service Do Not Sell or Share My Personal Information Trademarks Privacy Policy Careers Advertise Ad Choices Help ©2026 Bloomberg L.P. All Rights Reserved.",
-      "imageUrl": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iJ.mYHJSTVes/v0/1200x800.jpg",
-      "tags": [
-        "Industry"
-      ],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：Hacker News",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：Anthropic AI工具引发市场波动，反映顶级AI模型对金融与科技市场的战略级影响，具备全球产业变革意义。",
-        "热度：78 / 评论 66"
-      ],
-      "score": 7.02,
-      "publishedAt": "2026-02-03T20:21:21+00:00",
-      "authors": [
-        "garbawarb"
-      ]
-    },
-    {
-      "id": "rss_2105648833",
-      "title": "Apple Xcode 集成 Claude 与 Codex，AI 可直接操作代码",
-      "url": "https://www.theverge.com/news/873300/apple-xcode-openai-anthropic-ai-agentic-coding",
-      "type": "news",
-      "source": "The Verge AI",
-      "summary": "**Apple** 在 **Xcode 26.3** 中深度集成 **Anthropic 的 Claude Agent** 与 **OpenAI 的 Codex**，使 AI 不仅能提供建议，还能直接在开发环境中执行代码编写、项目配置修改、文档搜索等操作；此举将大幅提升 iOS/macOS 开发者的生产力，标志着主流 IDE 正从“辅助”迈向“代理”时代，普通开发者可立即通过 Apple Developer Program 试用该功能，体验由 AI 主动驱动的编程工作流。",
-      "fullText": "Apple’s Xcode adds OpenAI and Anthropic’s coding agents | The Verge Skip to main content The homepage The Verge The Verge logo. The Verge The Verge logo. Tech Reviews Science Entertainment AI Policy Hamburger Navigation Button The homepage The Verge The Verge logo. Hamburger Navigation Button Navigation Drawer The Verge The Verge logo. Login / Sign Up close Close Search Tech Expand Amazon Apple Facebook Google Microsoft Samsung Business See all tech Gadgets Expand Laptops Phones TVs Headphones Speakers Wearables See all gadgets Reviews Expand Smart Home Reviews Phone Reviews Tablet Reviews Headphone Reviews See all reviews AI Expand OpenAI Anthropic See all AI Verge Shopping Expand Buying Guides Deals Gift Guides See all shopping Policy Expand Antitrust Politics Law Security See all policy Science Expand Space Energy Environment Health See all science Entertainment Expand TV Shows Movies Audio See all entertainment Gaming Expand Xbox PlayStation Nintendo See all gaming Streaming Expand Disney HBO Netflix YouTube Creators See all streaming Transportation Expand Electric Cars Autonomous Cars Ride-sharing Scooters See all transportation Features Verge Video Expand TikTok YouTube Instagram Podcasts Expand Decoder The Vergecast Version History Newsletters Expand The Verge Daily Installer Verge Deals Notepad Optimizer Regulator The Stepback Archives Store Subscribe Facebook Threads Instagram Youtube RSS The Verge The Verge logo. Apple’s Xcode adds OpenAI and Anthropic’s coding agents Comments Drawer Comments Loading comments Getting the conversation ready... News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI Tech Close Tech Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Tech Apple’s Xcode adds OpenAI and Anthropic’s coding agents Developers can use Anthropic’s Claude Agent and OpenAI’s Codex to take action in Xcode on their behalf. Developers can use Anthropic’s Claude Agent and OpenAI’s Codex to take action in Xcode on their behalf. by Emma Roth Close Emma Roth News Writer Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Emma Roth Feb 3, 2026, 7:04 PM UTC Link Share Gift Emma Roth Close Emma Roth Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Emma Roth is a news writer who covers the streaming wars, consumer tech, crypto, social media, and much more. Previously, she was a writer and editor at MUO. Apple is building OpenAI and Anthropic’s AI-powered coding agents directly into Xcode. New integrations in Xcode 26.3 will give developers the ability to call upon Anthropic’s Claude Agent and OpenAI’s Codex to write and edit code, update project settings, search documentation, and more. Xcode is the software developers can use to create and test apps for the iPhone, Mac, iPad, Apple Watch, and Apple TV. Both Claude and ChatGPT were previously available inside Xcode, but this latest update will allow AI agents to take action inside the app, rather than just provide coding assistance. Apple is also making Xcode available through the Model Context Protocol, an open-source standard that will enable developers to plug other AI tools into the app. OpenAI’s Codex will appear in a project’s sidebar. Image: Apple The news of Apple’s Xcode update comes just one day after OpenAI launched its AI-powered Codex app on Mac, which lets developers write code alongside a team of AI agents. Apple says Xcode 26.3 will be available to members of the Apple Developer Program starting today, “with a release coming soon on the App Store.” Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates. Emma Roth Close Emma Roth News Writer Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Emma Roth AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI Anthropic Close Anthropic Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Anthropic Apple Close Apple Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Apple News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News OpenAI Close OpenAI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All OpenAI Tech Close Tech Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Tech Most Popular Most Popular How to tear gas children Aluminium: Why Google’s Android for PC launch may be messy and controversial Everyone is stealing TV I didn’t expect to love Dyson’s PencilVac Fluffycones – but I did Google Home finally adds support for buttons The Verge Daily A free daily digest of the news that matters most. Email (required) Sign Up By submitting your email, you agree to our Terms and Privacy Notice . This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. Advertiser Content From This is the title for the native ad More in News Amazon rolls out Alexa Plus nationwide and launches a new free tier Anthropic says ‘Claude will remain ad-free,’ unlike ChatGPT Sen. Warren wants to know what Google Gemini’s built-in checkout means for user privacy AMD hints Microsoft could launch its next-gen Xbox in 2027 Department of Justice appeals Google search monopoly ruling Slopaganda goes West Amazon rolls out Alexa Plus nationwide and launches a new free tier Jennifer Pattison Tuohy Two hours ago Anthropic says ‘Claude will remain ad-free,’ unlike ChatGPT Dominic Preston 1:09 PM UTC Sen. Warren wants to know what Google Gemini’s built-in checkout means for user privacy Emma Roth 12:00 PM UTC AMD hints Microsoft could launch its next-gen Xbox in 2027 Tom Warren Feb 3 Department of Justice appeals Google search monopoly ruling Stevie Bonifield Feb 3 Slopaganda goes West Mia Sato Feb 3 Advertiser Content From This is the title for the native ad Top Stories 1:30 PM UTC Everyone is stealing TV 1:09 PM UTC Anthropic says ‘Claude will remain ad-free,’ unlike ChatGPT Feb 3 Aluminium: Why Google’s Android for PC launch may be messy and controversial Feb 3 The Model S changed everything Feb 3 I didn’t expect to love Dyson’s PencilVac Fluffycones – but I did Feb 3 ICE is afraid of children protesting The Verge The Verge logo. Facebook Threads Instagram Youtube RSS Contact Tip Us Community Guidelines Archives About Ethics Statement How We Rate and Review Products Cookie Settings Terms of Use Privacy Notice Cookie Policy Licensing FAQ Accessibility Platform Status © 2026 Vox Media , LLC. All Rights Reserved",
-      "imageUrl": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK071_APPLE_P.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
-      "tags": [
-        "LLM",
-        "Agent",
-        "Industry"
-      ],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：The Verge AI",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：Apple 将 OpenAI 与 Anthropic 的代码代理深度集成至 Xcode，标志着 AI 编程工具正式进入主流开发生态，具有深远的行业战略意义。",
+        "模型评分：8/10，理由：NVIDIA博客揭示AI Agent如何将文档转化为实时商业智能，推动企业级AI应用落地，具备显著产业变革潜力。",
         "热度：0 / 评论 0"
       ],
-      "score": 6.4,
-      "publishedAt": "2026-02-03T19:04:09+00:00",
+      "score": 8.9,
+      "publishedAt": "2026-02-04T16:00:36+00:00",
       "authors": [
-        "Emma Roth"
+        "Moon Chung"
       ]
     },
     {
-      "id": "rss_1185406348",
-      "title": "Positron 获2.3亿美元融资，推低功耗AI芯片挑战Nvidia",
+      "id": "rss_6478907325",
+      "title": "Gemini 月活用户超 7.5 亿，Google 加速 AI 消费端布局",
+      "url": "https://techcrunch.com/2026/02/04/googles-gemini-app-has-surpassed-750m-monthly-active-users/",
+      "type": "news",
+      "source": "TechCrunch AI",
+      "summary": "**Google 宣布 Gemini 应用月活用户突破 7.5 亿**，较上季度增长 1 亿，在与 ChatGPT（约 8.1 亿）和 Meta AI（近 5 亿）的竞争中加速追赶；这一增长由 Gemini 3 模型升级及免费+订阅双轨策略驱动，凸显大模型消费端普及速度——普通用户可通过手机应用免费使用先进 AI 功能，而新推出的 $7.99/月 Google AI Plus 计划将进一步降低高阶服务门槛，推动日常生产力工具向 AI 原生体验演进。",
+      "fullText": "Google’s Gemini app has surpassed 750M monthly active users | TechCrunch TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture More from TechCrunch Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Crunchboard Contact Us Image Credits: Jagmeet Singh / TechCrunch AI Google’s Gemini app has surpassed 750M monthly active users Lauren Forristal 2:53 PM PST · February 4, 2026 Google’s AI chatbot Gemini has surpassed 750 million monthly active users (MAUs), according to the company’s fourth-quarter 2025 earnings . This figure illustrates the rapid consumer adoption of Gemini, which has quickly become a prominent player in the AI space. Last quarter, Google reported 650 million monthly active users for Gemini, indicating substantial growth in a short period. In comparison, Meta AI has reported nearly 500 million monthly users. However, while Gemini is gaining traction, it still trails behind its biggest rival, ChatGPT, which is estimated to have around 810 million MAUs in late 2025. The recently revealed number comes on the heels of the launch of Gemini 3, which showcases the company’s most advanced model yet, providing responses that the company claims exhibit an unprecedented level of depth and nuance. CEO Sundar Pichai highlighted that the introduction of Gemini 3 in AI mode was a “positive driver” for the company’s growth and emphasized that continued investment and iteration will maintain this momentum. Google recently rolled out a more affordable plan, the Google AI Plus , priced at $7.99 per month. The plan is expected to drive further growth by appealing to budget-conscious consumers, although it was made available too recently to have any influence on the quarterly figures. “We are focused on a free tier and subscriptions and seeing great growth,” Philipp Schindler, Google’s chief business officer, said during the call to investors. Gemini’s growth is particularly notable given Alphabet’s overall financial performance. The company has surpassed $400 billion in annual revenue for the first time this quarter. Google attributes the achievement to the expansion of its AI division, which has seen increased demand. Recently, Google introduced the latest generation of its TPU AI accelerator chip, called Ironwood , to compete with Nvidia. Techcrunch event TechCrunch Founder Summit 2026: Tickets Live On June 23 in Boston , more than 1,100 founders come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Save up to $300 on your pass or save up to 30% with group tickets for teams of four or more. TechCrunch Founder Summit: Tickets Live On June 23 in Boston , more than 1,100 founders come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Save up to $300 on your pass or save up to 30% with group tickets for teams of four or more. Boston, MA | June 23, 2026 REGISTER NOW “The launch of Gemini 3 was a major milestone, and we have great momentum. Our first party models, like Gemini, now process over 10 billion tokens per minute via direct API use by our customers, and the Gemini App has grown to over 750 million monthly active users. Search saw more usage than ever before, with AI continuing to drive an expansionary moment,” Pichai stated in today’s release. Topics AI , Apps , google gemini Lauren Forristal Lauren covers media, streaming, apps and platforms at TechCrunch. You can contact or verify outreach from Lauren by emailing laurenf.techcrunch@gmail.com or via encrypted message at laurenforris22.25 on Signal. View Bio October 13-15 San Francisco, CA Tickets are live at the lowest rates of the year. Save up to $680 on your pass now. Meet investors. Discover your next portfolio company. Hear from 250+ tech leaders , dive into 200+ sessions , and explore 300+ startups building what’s next. Don’t miss these one-time savings. REGISTER NOW Most Popular Fintech CEO and Forbes 30 Under 30 alum has been charged for alleged fraud Lucas Ropek Notepad++ says Chinese government hackers hijacked its software updates for months Zack Whittaker Meet the new European unicorns of 2026 Anna Heim Nvidia CEO pushes back against report that his company’s $100B OpenAI investment has stalled Anthony Ha OpenClaw’s AI assistants are now building their own social network Anna Heim Elon Musk’s SpaceX, Tesla, and xAI in talks to merge, according to reports Amanda Silberling Kirsten Korosec Waymo robotaxi hits a child near an elementary school in Santa Monica Sean O'Kane Loading the next article Error loading the next article X LinkedIn Facebook Instagram youTube Mastodon Threads Bluesky TechCrunch Staff Contact Us Advertise Crunchboard Jobs Site Map Terms of Service Privacy Policy RSS Terms of Use Code of Conduct Tesla Earnings Zoox Moltbot Snap Specs Amazon Go Tech Layoffs ChatGPT © 2025 TechCrunch Media LLC.",
+      "imageUrl": "https://techcrunch.com/wp-content/uploads/2026/01/google-gemini-jagmeet-singh-techcrunch.jpg?resize=1200%2C630",
+      "tags": [
+        "LLM",
+        "Industry"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源：TechCrunch AI",
+        "跨源重复：1 个来源",
+        "模型评分：10/10，理由：Gemini用户突破7.5亿，是首个达到此规模的通用型AI应用，标志着AI从技术实验进入主流消费时代的历史性里程碑。",
+        "热度：0 / 评论 0"
+      ],
+      "score": 6.5,
+      "publishedAt": "2026-02-04T22:53:46+00:00",
+      "authors": [
+        "Lauren Forristal"
+      ]
+    },
+    {
+      "id": "rss_6799215741",
+      "title": "Positron融资2.3亿美元挑战英伟达AI芯片",
       "url": "https://techcrunch.com/2026/02/04/exclusive-positron-raises-230m-series-b-to-take-on-nvidias-ai-chips/",
       "type": "news",
       "source": "TechCrunch AI",
-      "summary": "**半导体初创公司 Positron** 宣布完成 **2.3 亿美元 B 轮融资**，由 Arena Private Wealth、Jump Trading 和 Unless 共同领投，卡塔尔投资局（QIA）战略参投，估值达 **10 亿美元**；该公司专注于高带宽内存芯片，其 Atlas 芯片在推理性能上可媲美 **Nvidia H100**，功耗却不到三分之一，旨在满足企业从模型训练转向大规模部署时对高效推理硬件的迫切需求，普通用户未来可能受益于更低成本、更低延迟的 AI 应用服务。",
-      "fullText": "Exclusive: Positron raises $230M Series B to take on Nvidia's AI chips | TechCrunch TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture More from TechCrunch Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Crunchboard Contact Us Image Credits: Positron AI Exclusive: Positron raises $230M Series B to take on Nvidia’s AI chips Rebecca Bellan 12:18 AM PST · February 4, 2026 Semiconductor startup Positron has secured $230 million in Series B funding, TechCrunch has exclusively learned. The outfit plans to use the capital to speed up deployment of its high-speed memory chips, a critical component for the chips used for AI workloads, sources familiar with the matter told TechCrunch. The round, which brought Positron to a $1 billion valuation, was co-led by Arena Private Wealth, Jump Trading, and Unless, with strategic investment from Qatar Investment Authority (QIA), the country’s sovereign wealth fund, which has been increasingly focused on building out AI infrastructure, the sources said. The Reno-based startup’s Series B comes as hyperscalers and AI firms push to reduce their reliance on longstanding leader Nvidia. These firms include OpenAI, which, despite being one of Nvidia’s largest and most important customers, is reportedly unsatisfied with some of the firm’s latest AI chips and has been seeking alternatives since last year. Meanwhile, Qatar, through QIA, has been accelerating a broader push into so-called “sovereign” AI infrastructure – a priority repeatedly underscored at Web Summit Qatar in Doha this week. Several sources told TechCrunch the country views compute capacity as critical to staying competitive on the global economic stage, and is positioning itself as a leading AI services hub in the Middle East, fueling interest in startups like Positron. The strategy is already taking shape through major commitments, including a $20 billion AI infrastructure joint venture with Brookfield Asset Management that was announced in December. Positron’s fundraise brings the three-year-old startup’s total capital raised to just over $300 million. The startup previously raised $75 million last year from investors including Valor Equity Partners, Atreides Management, DFJ Growth, Flume Ventures and Resilience Reserve. The company claims its first-generation chip, Atlas, manufactured in Arizona, can match the performance of Nvidia’s H100 GPUs for less than a third of the power. Positron is focused on inference – computing needed to run AI models for real-world applications – rather than training large language models, positioning the company well as demand surges for inference hardware as businesses increasingly shift focus from building large models to deploying them at scale. Techcrunch event TechCrunch Founder Summit 2026: Tickets Live On June 23 in Boston , more than 1,100 founders come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Save up to $300 on your pass or save up to 30% with group tickets for teams of four or more. TechCrunch Founder Summit: Tickets Live On June 23 in Boston , more than 1,100 founders come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Save up to $300 on your pass or save up to 30% with group tickets for teams of four or more. Boston, MA | June 23, 2026 REGISTER NOW With the funding, Positron aims to accelerate its roadmap to ship its next-generation Asimov silicon chip, targeting production in early 2027. Sources tell TechCrunch that beyond its memory capabilities, Positron’s chips also perform strongly in high-frequency and video-processing workloads. TechCrunch has reached out to Positron for more information. This article has been updated to include updates from Positron about co-lead investors and valuation. Correction: A previous version of this article misstated the date of QIA’s partnership with Brookfield. Topics AI , AI chips , Exclusive , Fundraising , positron , semiconductors , Startups Rebecca Bellan Senior Reporter Rebecca Bellan is a senior reporter at TechCrunch where she covers the business, policy, and emerging trends shaping artificial intelligence. Her work has also appeared in Forbes, Bloomberg, The Atlantic, The Daily Beast, and other publications. You can contact or verify outreach from Rebecca by emailing rebecca.bellan@techcrunch.com or via encrypted message at rebeccabellan.491 on Signal. View Bio October 13-15 San Francisco, CA Tickets are live at the lowest rates of the year. Save up to $680 on your pass now. Meet investors. Discover your next portfolio company. Hear from 250+ tech leaders , dive into 200+ sessions , and explore 300+ startups building what’s next. Don’t miss these one-time savings. REGISTER NOW Most Popular Fintech CEO and Forbes 30 Under 30 alum has been charged for alleged fraud Lucas Ropek Notepad++ says Chinese government hackers hijacked its software updates for months Zack Whittaker Meet the new European unicorns of 2026 Anna Heim Nvidia CEO pushes back against report that his company’s $100B OpenAI investment has stalled Anthony Ha OpenClaw’s AI assistants are now building their own social network Anna Heim Elon Musk’s SpaceX, Tesla, and xAI in talks to merge, according to reports Amanda Silberling Kirsten Korosec Waymo robotaxi hits a child near an elementary school in Santa Monica Sean O'Kane Loading the next article Error loading the next article X LinkedIn Facebook Instagram youTube Mastodon Threads Bluesky TechCrunch Staff Contact Us Advertise Crunchboard Jobs Site Map Terms of Service Privacy Policy RSS Terms of Use Code of Conduct Tesla Earnings Zoox Moltbot Snap Specs Amazon Go Tech Layoffs ChatGPT © 2025 TechCrunch Media LLC.",
+      "summary": "半导体初创公司Positron宣布完成2.3亿美元B轮融资，估值达10亿美元，由Arena Private Wealth、Jump Trading和Unless共同领投，卡塔尔投资局（QIA）参与战略投资；该公司计划加速部署其高能效AI推理芯片Atlas，并于2027年初推出下一代Asimov芯片，其性能对标英伟达H100但功耗不到三分之一。此举正值全球AI企业寻求降低对英伟达依赖之际，OpenAI等大客户已开始探索替代方案，而卡塔尔则借投资布局中东“主权AI”基础设施。对普通用户而言，更多高性能低功耗芯片的出现可能推动AI应用成本下降，尤其在视频处理与实时推理场景中带来更高效的服务。",
+      "fullText": "Exclusive: Positron raises $230M Series B to take on Nvidia's AI chips | TechCrunch TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture More from TechCrunch Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Crunchboard Contact Us Image Credits: Positron AI Exclusive: Positron raises $230M Series B to take on Nvidia’s AI chips Rebecca Bellan 12:18 AM PST · February 4, 2026 Semiconductor startup Positron has secured $230 million in Series B funding, TechCrunch has exclusively learned. The outfit plans to use the capital to speed up deployment of its high-speed memory chips, a critical component for the chips used for AI workloads, sources familiar with the matter told TechCrunch. The round, which brought Positron to a $1 billion valuation, was co-led by Arena Private Wealth, Jump Trading, and Unless, with strategic investment from Qatar Investment Authority (QIA), the country’s sovereign wealth fund, which has been increasingly focused on building out AI infrastructure, the sources said. The Reno-based startup’s Series B comes as hyperscalers and AI firms push to reduce their reliance on longstanding leader Nvidia. These firms include OpenAI, which, despite being one of Nvidia’s largest and most important customers, is reportedly unsatisfied with some of the firm’s latest AI chips and has been seeking alternatives since last year. Meanwhile, Qatar, through QIA, has been accelerating a broader push into so-called “sovereign” AI infrastructure — a priority repeatedly underscored at Web Summit Qatar in Doha this week. Several sources told TechCrunch the country views compute capacity as critical to staying competitive on the global economic stage, and is positioning itself as a leading AI services hub in the Middle East, fueling interest in startups like Positron. The strategy is already taking shape through major commitments, including a $20 billion AI infrastructure joint venture with Brookfield Asset Management that was announced in December. Positron’s fundraise brings the three-year-old startup’s total capital raised to just over $300 million. The startup previously raised $75 million last year from investors including Valor Equity Partners, Atreides Management, DFJ Growth, Flume Ventures, and Resilience Reserve. The company claims its first-generation chip, Atlas, manufactured in Arizona, can match the performance of Nvidia’s H100 GPUs for less than a third of the power. Positron is focused on inference — computing needed to run AI models for real-world applications — rather than training large language models, positioning the company well as demand surges for inference hardware as businesses increasingly shift focus from building large models to deploying them at scale. Techcrunch event TechCrunch Founder Summit 2026: Tickets Live On June 23 in Boston , more than 1,100 founders come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Save up to $300 on your pass or save up to 30% with group tickets for teams of four or more. TechCrunch Founder Summit: Tickets Live On June 23 in Boston , more than 1,100 founders come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Save up to $300 on your pass or save up to 30% with group tickets for teams of four or more. Boston, MA | June 23, 2026 REGISTER NOW With the funding, Positron aims to accelerate its roadmap to ship its next-generation Asimov silicon chip, targeting production in early 2027. Sources tell TechCrunch that beyond its memory capabilities, Positron’s chips also perform strongly in high-frequency and video-processing workloads. TechCrunch has reached out to Positron for more information. This article has been updated to include updates from Positron about co-lead investors and valuation. Correction: A previous version of this article misstated the date of QIA’s partnership with Brookfield. Topics AI , AI chips , Exclusive , Fundraising , positron , semiconductors , Startups Rebecca Bellan Senior Reporter Rebecca Bellan is a senior reporter at TechCrunch where she covers the business, policy, and emerging trends shaping artificial intelligence. Her work has also appeared in Forbes, Bloomberg, The Atlantic, The Daily Beast, and other publications. You can contact or verify outreach from Rebecca by emailing rebecca.bellan@techcrunch.com or via encrypted message at rebeccabellan.491 on Signal. View Bio October 13-15 San Francisco, CA Tickets are live at the lowest rates of the year. Save up to $680 on your pass now. Meet investors. Discover your next portfolio company. Hear from 250+ tech leaders , dive into 200+ sessions , and explore 300+ startups building what’s next. Don’t miss these one-time savings. REGISTER NOW Most Popular Fintech CEO and Forbes 30 Under 30 alum has been charged for alleged fraud Lucas Ropek Notepad++ says Chinese government hackers hijacked its software updates for months Zack Whittaker Meet the new European unicorns of 2026 Anna Heim Nvidia CEO pushes back against report that his company’s $100B OpenAI investment has stalled Anthony Ha OpenClaw’s AI assistants are now building their own social network Anna Heim Elon Musk’s SpaceX, Tesla, and xAI in talks to merge, according to reports Amanda Silberling Kirsten Korosec Waymo robotaxi hits a child near an elementary school in Santa Monica Sean O'Kane Loading the next article Error loading the next article X LinkedIn Facebook Instagram youTube Mastodon Threads Bluesky TechCrunch Staff Contact Us Advertise Crunchboard Jobs Site Map Terms of Service Privacy Policy RSS Terms of Use Code of Conduct Tesla Earnings Zoox Moltbot Snap Specs Amazon Go Tech Layoffs ChatGPT © 2025 TechCrunch Media LLC.",
       "imageUrl": "https://techcrunch.com/wp-content/uploads/2026/02/positron.jpg?w=1200",
       "tags": [],
       "paperCategory": "",
       "signalReasons": [
         "来源：TechCrunch AI",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：Positron 获 $2.3 亿融资以挑战 Nvidia 的 AI 芯片主导地位，反映全球算力竞争加剧，具有重塑半导体产业格局的战略意义。",
+        "模型评分：10/10，理由：Positron融资$230M挑战Nvidia芯片霸权，背后是全球算力多元化布局的战略动向，或将重塑AI硬件格局，具有历史性意义。",
         "热度：0 / 评论 0"
       ],
-      "score": 5.9,
+      "score": 6.5,
       "publishedAt": "2026-02-04T08:18:51+00:00",
       "authors": [
         "Rebecca Bellan"
       ]
     },
     {
-      "id": "rss_3316901866",
-      "title": "Intel 正式进军GPU市场，挑战Nvidia主导地位",
-      "url": "https://techcrunch.com/2026/02/03/intel-will-start-making-gpus-a-market-dominated-by-nvidia/",
+      "id": "rss_1972251559",
+      "title": "Altman怒斥Anthropic超级碗广告“不诚实”",
+      "url": "https://www.theverge.com/news/874084/ai-chatgpt-claude-super-bowl-ads-openai-anthropic",
+      "type": "news",
+      "source": "The Verge AI",
+      "summary": "OpenAI CEO Sam Altman在X平台公开批评Anthropic在超级碗广告中对其广告策略的描绘“明显不诚实”，强调ChatGPT的广告测试仅面向免费用户且内容与回答完全隔离，不会影响模型输出；他同时指责Anthropic试图通过限制开发者使用其代码模型、主导AI使用规则来推行“威权式”控制，而OpenAI则致力于普惠AI与民主化决策。这场争论凸显了AI行业在商业模式与治理理念上的根本分歧：一方主张通过订阅制服务高净值用户，另一方则坚持免费访问以扩大AI普及。普通用户需关注不同平台的数据使用政策，并根据自身对广告容忍度与功能需求选择AI助手。",
+      "fullText": "Sam Altman responds to Anthropic’s ‘funny’ Super Bowl ads | The Verge Skip to main content The homepage The Verge The Verge logo. The Verge The Verge logo. Tech Reviews Science Entertainment AI Policy Hamburger Navigation Button The homepage The Verge The Verge logo. Hamburger Navigation Button Navigation Drawer The Verge The Verge logo. Login / Sign Up close Close Search Tech Expand Amazon Apple Facebook Google Microsoft Samsung Business See all tech Gadgets Expand Laptops Phones TVs Headphones Speakers Wearables See all gadgets Reviews Expand Smart Home Reviews Phone Reviews Tablet Reviews Headphone Reviews See all reviews AI Expand OpenAI Anthropic See all AI Verge Shopping Expand Buying Guides Deals Gift Guides See all shopping Policy Expand Antitrust Politics Law Security See all policy Science Expand Space Energy Environment Health See all science Entertainment Expand TV Shows Movies Audio See all entertainment Gaming Expand Xbox PlayStation Nintendo See all gaming Streaming Expand Disney HBO Netflix YouTube Creators See all streaming Transportation Expand Electric Cars Autonomous Cars Ride-sharing Scooters See all transportation Features Verge Video Expand TikTok YouTube Instagram Podcasts Expand Decoder The Vergecast Version History Newsletters Expand The Verge Daily Installer Verge Deals Notepad Optimizer Regulator The Stepback Archives Store Subscribe Facebook Threads Instagram Youtube RSS The Verge The Verge logo. Sam Altman responds to Anthropic’s ‘funny’ Super Bowl ads Comments Drawer Comments Loading comments Getting the conversation ready... News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI Business Close Business Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Business Sam Altman responds to Anthropic’s ‘funny’ Super Bowl ads The OpenAI boss said Anthropic’s portrayal of how ads impact ChatGPT is ‘clearly dishonest.’ The OpenAI boss said Anthropic’s portrayal of how ads impact ChatGPT is ‘clearly dishonest.’ by Richard Lawler Close Richard Lawler Senior News Editor Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Richard Lawler and Hayden Field Close Hayden Field Senior AI Reporter Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Hayden Field Feb 4, 2026, 9:03 PM UTC Link Share Gift Image: The Verge Sam Altman responded to Anthropic’s new Super Bowl ad in an X post on Wednesday, saying the OpenAI competitor’s campaign is “clearly dishonest,” and called it “on brand” for Anthropic to “doublespeak.” “We would obviously never run ads in the way Anthropic depicts them,” he wrote. “We are not stupid and we know our users would reject that.” You can read his statement in full, below. Anthropic, founded in 2021 by ex-OpenAI research executives who reportedly left over differences in opinions on AI safety and mission, doesn’t mention OpenAI or ChatGPT by name in its Super Bowl Sunday ad campaign. But in contrast to OpenAI’s January news that it would soon start testing ads , Anthropic says, “Our users won’t see ‘sponsored’ links adjacent to their conversations with Claude; nor will Claude’s responses be influenced by advertisers or include third-party product placements our users did not ask for.” OpenAI says its ad test will only appear for logged-in users on free or ChatGPT Go accounts, while maintaining that “Ads do not influence the answers ChatGPT gives you. Answers are optimized based on what’s most helpful to you. Ads are always separate and clearly labeled.” According to Altman, OpenAI’s Super Bowl ad is “about builders, and how anyone can now build anything.” Related Humans are infiltrating the social network for AI bots Get ready for the AI ad-pocalypse Sam Altman (X): First, the good part of the Anthropic ads: they are funny, and I laughed. But I wonder why Anthropic would go for something so clearly dishonest. Our most important principle for ads says that we won’t do exactly this; we would obviously never run ads in the way Anthropic depicts them. We are not stupid and we know our users would reject that. I guess it’s on brand for Anthropic doublespeak to use a deceptive ad to critique theoretical deceptive ads that aren’t real, but a Super Bowl ad is not where I would expect it. More importantly, we believe everyone deserves to use AI and are committed to free access, because we believe access creates agency. More Texans use ChatGPT for free than total people use Claude in the US, so we have a differently-shaped problem than they do. (If you want to pay for ChatGPT Plus or Pro, we don’t show you ads.) Anthropic serves an expensive product to rich people. We are glad they do that and we are doing that too, but we also feel strongly that we need to bring AI to billions of people who can’t pay for subscriptions. Maybe even more importantly: Anthropic wants to control what people do with AI—they block companies they don’t like from using their coding product (including us), they want to write the rules themselves for what people can and can’t use AI for, and now they also want to tell other companies what their business models can be. We are committed to broad, democratic decision making in addition to access. We are also committed to building the most resilient ecosystem for advanced AI. We care a great deal about safe, broadly beneficial AGI, and we know the only way to get there is to work with the world to prepare. One authoritarian company won’t get us there on their own, to say nothing of the other obvious risks. It is a dark path. As for our Super Bowl ad: it’s about builders, and how anyone can now build anything. We are enjoying watching so many people switch to Codex. There have now been 500,000 app downloads since launch on Monday, and we think builders are really going to love what’s coming in the next few weeks. I believe Codex is going to win. We will continue to work hard to make even more intelligence available for lower and lower prices to our users. This time belongs to the builders, not the people who want to control them. Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates. Richard Lawler Close Richard Lawler Senior News Editor Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Richard Lawler Hayden Field Close Hayden Field Senior AI Reporter Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Hayden Field AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI Anthropic Close Anthropic Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Anthropic Business Close Business Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Business News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News OpenAI Close OpenAI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All OpenAI Most Popular Most Popular Everyone is stealing TV Anthropic says ‘Claude will remain ad-free,’ unlike ChatGPT Aluminium: Why Google’s Android for PC launch may be messy and controversial I drove three Chinese cars — here’s why they would clean up in the US I didn’t expect to love Dyson’s PencilVac Fluffycones – but I did The Verge Daily A free daily digest of the news that matters most. Email (required) Sign Up By submitting your email, you agree to our Terms and Privacy Notice . This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. Advertiser Content From This is the title for the native ad More in News Overwatch: All the news about Blizzard’s hit hero shooter Ikea’s cheap new smart home gear is struggling to get connected OpenClaw’s AI ‘skill’ extensions are a security nightmare Google Cloud’s customer chief returns to Microsoft as head of security Google’s Pixel 10A will be revealed on February 18th Roblox calls its take on AI world models ‘real-time dreaming’ Overwatch: All the news about Blizzard’s hit hero shooter Verge Staff Two hours ago Ikea’s cheap new smart home gear is struggling to get connected Jennifer Pattison Tuohy 7:35 PM UTC OpenClaw’s AI ‘skill’ extensions are a security nightmare Emma Roth 7:03 PM UTC Google Cloud’s customer chief returns to Microsoft as head of security Tom Warren 5:27 PM UTC Google’s Pixel 10A will be revealed on February 18th Emma Roth 5:24 PM UTC Roblox calls its take on AI world models ‘real-time dreaming’ Jay Peters 5:00 PM UTC Advertiser Content From This is the title for the native ad Top Stories 1:30 PM UTC Everyone is stealing TV 5:30 PM UTC “I was detained by federal agents in Minneapolis” 5:30 PM UTC Apple TV details its 2026 streaming lineup with big list of announcements 3:00 PM UTC I drove three Chinese cars — here’s why they would clean up in the US 5:00 PM UTC Fallout’s season 2 finale left plenty unanswered as it expanded in scope 1:09 PM UTC Anthropic says ‘Claude will remain ad-free,’ unlike ChatGPT The Verge The Verge logo. Facebook Threads Instagram Youtube RSS Contact Tip Us Community Guidelines Archives About Ethics Statement How We Rate and Review Products Cookie Settings Terms of Use Privacy Notice Cookie Policy Licensing FAQ Accessibility Platform Status © 2026 Vox Media , LLC. All Rights Reserved",
+      "imageUrl": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/STK201_SAM_ALTMAN_CVIRGINIA_C.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "tags": [
+        "Industry"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源：The Verge AI",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：Sam Altman公开回应竞争对手广告，反映头部AI公司间战略博弈，引发全球舆论关注，具重大行业影响。",
+        "热度：0 / 评论 0"
+      ],
+      "score": 6.4,
+      "publishedAt": "2026-02-04T21:03:05+00:00",
+      "authors": [
+        "Hayden Field"
+      ]
+    },
+    {
+      "id": "rss_4011405363",
+      "title": "沃伦质询谷歌Gemini内置结账的隐私风险",
+      "url": "https://www.theverge.com/news/873476/senator-elizabeth-warren-google-gemini-ai-shopping-privacy",
+      "type": "news",
+      "source": "The Verge AI",
+      "summary": "美国参议员伊丽莎白·沃伦致信谷歌CEO桑达尔·皮查伊，要求澄清Gemini AI内置结账功能如何保护用户隐私，担忧该功能可能使谷歌与零售伙伴（如Walmart、Target）结合搜索、聊天及购物数据，操纵消费者购买更高价商品；她特别质疑谷歌是否利用敏感信息推动“升级销售”，以及是否会优先展示合作商家产品。此举直指AI代理商业化中的核心风险——数据融合可能加剧行为操控。普通用户若使用Gemini购物，应留意推荐是否基于真实需求而非广告激励，并等待谷歌2月17日前的正式回应以评估透明度。",
+      "fullText": "Sen. Warren wants to know what Google Gemini’s built-in checkout means for user privacy | The Verge Skip to main content The homepage The Verge The Verge logo. The Verge The Verge logo. Tech Reviews Science Entertainment AI Policy Hamburger Navigation Button The homepage The Verge The Verge logo. Hamburger Navigation Button Navigation Drawer The Verge The Verge logo. Login / Sign Up close Close Search Tech Expand Amazon Apple Facebook Google Microsoft Samsung Business See all tech Gadgets Expand Laptops Phones TVs Headphones Speakers Wearables See all gadgets Reviews Expand Smart Home Reviews Phone Reviews Tablet Reviews Headphone Reviews See all reviews AI Expand OpenAI Anthropic See all AI Verge Shopping Expand Buying Guides Deals Gift Guides See all shopping Policy Expand Antitrust Politics Law Security See all policy Science Expand Space Energy Environment Health See all science Entertainment Expand TV Shows Movies Audio See all entertainment Gaming Expand Xbox PlayStation Nintendo See all gaming Streaming Expand Disney HBO Netflix YouTube Creators See all streaming Transportation Expand Electric Cars Autonomous Cars Ride-sharing Scooters See all transportation Features Verge Video Expand TikTok YouTube Instagram Podcasts Expand Decoder The Vergecast Version History Newsletters Expand The Verge Daily Installer Verge Deals Notepad Optimizer Regulator The Stepback Archives Store Subscribe Facebook Threads Instagram Youtube RSS The Verge The Verge logo. Sen. Warren wants to know what Google Gemini’s built-in checkout means for user privacy Comments Drawer Comments Loading comments Getting the conversation ready... News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI Policy Close Policy Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Policy Sen. Warren wants to know what Google Gemini’s built-in checkout means for user privacy Warren is asking Google for more details about the kinds of data it will send to retail partners — and how much. Warren is asking Google for more details about the kinds of data it will send to retail partners — and how much. by Emma Roth Close Emma Roth News Writer Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Emma Roth Feb 4, 2026, 12:00 PM UTC Link Share Gift Image: Cath Virginia / The Verge Emma Roth Close Emma Roth Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Emma Roth is a news writer who covers the streaming wars, consumer tech, crypto, social media, and much more. Previously, she was a writer and editor at MUO. Sen. Elizabeth Warren (D-MA) is pressing Google for more information about its plans to build a checkout feature into its Gemini AI chatbot. In a letter to Google CEO Sundar Pichai , Warren expresses concerns that the integration could allow Google and retailers “to exploit sensitive user data” or “manipulate consumers into spending more and paying higher prices.” Last month, Google announced that it will soon allow users to buy products directly within Gemini through the Universal Commerce Protocol (UCP), a standard it developed in partnership with Shopify, Target, Walmart, Wayfair, and Etsy. The UCP is supposed to make it easier for AI agents to communicate with retailers, but Warren wants to know just how much user information — and what kinds — Google plans on providing to retailers through this pipeline. Related I saw the future of retail, and it’s all AI Google escalates AI shopping war “Google already possesses unprecedented troves of user search and AI chat data, and such intimate data could be merged with both user data from other Google services and third-party retailer data to drive consumer behavior in an exploitative manner,” Warren writes, while also questioning whether Google will prioritize shopping results from retail partners over competitors. Warren adds that the company has already admitted that it will use “sensitive data to help retailers upsell consumers into buying a more ‘premium’ product.” The letter cites a reply from Google on X in which it clarified that retailers will be able to “show additional premium product options that people might be interested in.” In addition to a series of questions about user privacy, Warren is asking Google for information about how user data will affect pricing, as well as whether it will inform users when Gemini suggests a product “based on upselling objectives, advertising incentives, or sensitive user data.” Google has until February 17th to respond. Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates. Emma Roth Close Emma Roth News Writer Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Emma Roth AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI Google Close Google Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Google News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News Policy Close Policy Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Policy Politics Close Politics Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Politics Tech Close Tech Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Tech Most Popular Most Popular Everyone is stealing TV Anthropic says ‘Claude will remain ad-free,’ unlike ChatGPT Aluminium: Why Google’s Android for PC launch may be messy and controversial I drove three Chinese cars — here’s why they would clean up in the US I didn’t expect to love Dyson’s PencilVac Fluffycones – but I did The Verge Daily A free daily digest of the news that matters most. Email (required) Sign Up By submitting your email, you agree to our Terms and Privacy Notice . This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. Advertiser Content From This is the title for the native ad More in News Overwatch: All the news about Blizzard’s hit hero shooter Ikea’s cheap new smart home gear is struggling to get connected OpenClaw’s AI ‘skill’ extensions are a security nightmare Google Cloud’s customer chief returns to Microsoft as head of security Google’s Pixel 10A will be revealed on February 18th Roblox calls its take on AI world models ‘real-time dreaming’ Overwatch: All the news about Blizzard’s hit hero shooter Verge Staff Two hours ago Ikea’s cheap new smart home gear is struggling to get connected Jennifer Pattison Tuohy 7:35 PM UTC OpenClaw’s AI ‘skill’ extensions are a security nightmare Emma Roth 7:03 PM UTC Google Cloud’s customer chief returns to Microsoft as head of security Tom Warren 5:27 PM UTC Google’s Pixel 10A will be revealed on February 18th Emma Roth 5:24 PM UTC Roblox calls its take on AI world models ‘real-time dreaming’ Jay Peters 5:00 PM UTC Advertiser Content From This is the title for the native ad Top Stories 1:30 PM UTC Everyone is stealing TV 5:30 PM UTC “I was detained by federal agents in Minneapolis” 5:30 PM UTC Apple TV details its 2026 streaming lineup with big list of announcements 3:00 PM UTC I drove three Chinese cars — here’s why they would clean up in the US 5:00 PM UTC Fallout’s season 2 finale left plenty unanswered as it expanded in scope 1:09 PM UTC Anthropic says ‘Claude will remain ad-free,’ unlike ChatGPT The Verge The Verge logo. Facebook Threads Instagram Youtube RSS Contact Tip Us Community Guidelines Archives About Ethics Statement How We Rate and Review Products Cookie Settings Terms of Use Privacy Notice Cookie Policy Licensing FAQ Accessibility Platform Status © 2026 Vox Media , LLC. All Rights Reserved",
+      "imageUrl": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK255_Google_Gemini_B_474198.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "tags": [
+        "LLM",
+        "Industry"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源：The Verge AI",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：美国参议员对Google Gemini内置结算功能的质询，凸显AI商业化中的隐私与监管博弈，可能推动全球AI政策走向。",
+        "热度：0 / 评论 0"
+      ],
+      "score": 5.9,
+      "publishedAt": "2026-02-04T12:00:00+00:00",
+      "authors": [
+        "Emma Roth"
+      ]
+    },
+    {
+      "id": "rss_2285564954",
+      "title": "ElevenLabs融资5亿美元，估值达110亿美元",
+      "url": "https://techcrunch.com/2026/02/04/elevenlabs-raises-500m-from-sequioia-at-a-11-billion-valuation/",
       "type": "news",
       "source": "TechCrunch AI",
-      "summary": "**Intel** 宣布将正式进军 **GPU 市场**，由新任高管 Kevork Kechichian 和 Eric Demers 领导团队，围绕客户需求制定 GPU 战略，重点瞄准 AI 训练与高性能计算领域；此举标志着这家传统 CPU 巨头正试图打破 **Nvidia** 在 AI 加速芯片领域的垄断地位，尽管尚处早期阶段，但若成功将增加芯片供应链的多样性，普通企业和开发者未来或有更多性价比选择以降低对单一供应商的依赖。",
-      "fullText": "Intel will start making GPUs, a market dominated by Nvidia | TechCrunch TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture More from TechCrunch Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Crunchboard Contact Us In Brief Posted: 1:01 PM PST · February 3, 2026 Image Credits: Alex Wroblewski/Bloomberg / Getty Images Rebecca Szkutak Intel will start making GPUs, a market dominated by Nvidia As Intel continues to try to turn itself around, its CEO promised that the company will start producing a new type of chip, one that has been made very popular by rival Nvidia. At the Cisco AI Summit on Tuesday, Intel CEO Lip-Bu Tan announced that the company will start producing graphics processing units (GPUs). These are more specialized processors, compared to the CPUs Intel traditionally produces, and are used for gaming and tasks like training artificial intelligence models. TechCrunch reached out to Intel for more information. The project will be overseen by Kevork Kechichian, the executive vice president and general manager of Intel’s data center group, according to reporting from Reuters . Kechichian was hired in September among a slew of new engineer-focused hires . Intel also hired Eric Demers for the effort in January. Demers was previously at Qualcomm for more than 13 years, most recently serving as a senior vice president of engineering. This initiative seems to be in relatively early stages as Tan said the company plans to develop its strategy around customer demands and needs. While Nvidia didn’t invent the GPU, that specific kind of chip has played a large role in its success. Its GPUs for AI systems are so advanced and popular, the chipmaker currently holds a commanding market lead . Techcrunch event TechCrunch Founder Summit 2026: Tickets Live On June 23 in Boston , more than 1,100 founders come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Save up to $300 on your pass or save up to 30% with group tickets for teams of four or more. TechCrunch Founder Summit: Tickets Live On June 23 in Boston , more than 1,100 founders come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Save up to $300 on your pass or save up to 30% with group tickets for teams of four or more. Boston, MA | June 23, 2026 REGISTER NOW It’s interesting to see Intel expand into this area now as Tan said the company would be consolidating and focusing on its core businesses when he took the helm as CEO last March. While GPUs are still semiconductors, of course, this is still a notable expansion. Topics AI , artificial intelligence , Enterprise , GPUS , In Brief , Intel , nvidia , United States October 13-15 San Francisco, CA Tickets are live at the lowest rates of the year. Save up to $680 on your pass now. Meet investors. Discover your next portfolio company. Hear from 250+ tech leaders , dive into 200+ sessions , and explore 300+ startups building what’s next. Don’t miss these one-time savings. REGISTER NOW Newsletters See More Subscribe for the industry’s biggest tech news TechCrunch Daily News Every weekday and Sunday, you can get the best of TechCrunch’s coverage. TechCrunch Mobility TechCrunch Mobility is your destination for transportation news and insight. Startups Weekly Startups are the core of TechCrunch, so get our best coverage delivered weekly. StrictlyVC Provides movers and shakers with the info they need to start their day. No newsletters selected. Subscribe By submitting your email, you agree to our Terms and Privacy Notice . Related Enterprise What Snowflake’s deal with OpenAI tells us about the enterprise AI race Rebecca Szkutak 2 days ago AI A timeline of the US semiconductor market in 2025 Rebecca Szkutak Jan 21, 2026 AI Intel spinout Articul8 raises more than half of $70M round at $500M valuation Jagmeet Singh Jan 7, 2026 Latest in Enterprise Apps After backlash, Adobe cancels Adobe Animate shutdown and puts app on ‘maintenance mode’ Sarah Perez 2 hours ago AI Accel doubles down on Fibr AI as agents turn static websites into one-to-one experiences Jagmeet Singh 4 hours ago In Brief Intel will start making GPUs, a market dominated by Nvidia Rebecca Szkutak 20 hours ago X LinkedIn Facebook Instagram youTube Mastodon Threads Bluesky TechCrunch Staff Contact Us Advertise Crunchboard Jobs Site Map Terms of Service Privacy Policy RSS Terms of Use Code of Conduct Tesla Earnings Zoox Moltbot Snap Specs Amazon Go Tech Layoffs ChatGPT © 2025 TechCrunch Media LLC.",
-      "imageUrl": "https://techcrunch.com/wp-content/uploads/2025/08/GettyImages-2228936694.jpg?resize=1200%2C630",
+      "summary": "语音AI公司ElevenLabs宣布获红杉资本领投的5亿美元融资，估值飙升至110亿美元，较一年前增长超三倍；现有投资者a16z和Iconiq大幅加注，新进投资者包括Lightspeed等，资金将用于拓展印度、日本等国际市场，并从纯语音向音视频多模态AI代理延伸。该公司年经常性收入已达3.3亿美元，五个月内ARR从2亿增至3亿，显示企业对高质量合成语音需求激增。对内容创作者和开发者而言，这意味着更强大的工具可用于生成带语音的视频内容或构建能“说话、打字、行动”的智能体，但同时也需关注深度伪造带来的伦理挑战。",
+      "fullText": "ElevenLabs raises $500M from Sequoia at an $11 billion valuation | TechCrunch TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture More from TechCrunch Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Crunchboard Contact Us Image Credits: ElevenLabs Venture ElevenLabs raises $500M from Sequoia at an $11 billion valuation Ivan Mehta 7:33 AM PST · February 4, 2026 Voice AI company ElevenLabs said today it raised $500 million in a new funding round led by Sequoia Capital, which was an investor in the startup’s last secondary round through a tender . Sequoia partner Andrew Reed is joining the company’s board. The startup is now valued at $11 billion, more than three times its valuation in its last round in January 2025 . Earlier in the year, the Financial Times reported that the startup was looking to raise at that valuation. The company said that existing investor a16z quadrupled its investment amount, and Iconiq, which led the last round, tripled it. Some prior investors, like BroadLight, NFDG, Valor Capital, AMP Coalition, and Smash Capital, also joined the round. New investors for the funding included Lightspeed Venture Partners, Evantic Capital, and Bond. ElevenLabs said that it will disclose some investors later in February, which might be strategic partners. The company has raised over $781 million to date. It said that it will use the funding for research and product development, along with expansion in international markets like India, Japan, Singapore, Brazil, and Mexico. The company’s co-founder, Mati Staniszewski, indicated that ElevenLabs might work on agents beyond voice and incorporate video. In January, the company announced a partnership with LTX to produce audio-to-video content . “The intersection of models and products is critical – and our team has proven, time and again, how to translate research into real-world experiences. This funding helps us go beyond voice alone to transform how we interact with technology altogether. We plan to expand our Creative offering – helping creators combine our best-in-class audio with video and Agents – enabling businesses to build agents that can talk, type, and take action,” he said in a statement. The company has seen good growth momentum as it closed the year at $330 million ARR. In an interview with Bloomberg earlier this year, Staniszewski said that it took ElevenLabs five months to reach $200 million to $300 million in ARR. Voice AI model providers are an attractive target for investors and big tech companies. In January, rival Deepgram raised $130 million from AVP at a $1.3 billion valuation . Meanwhile, Google hired top talent from voice model company Hume AI , including CEO Alan Cowen. Topics AI , ElevenLabs , sequia capital , Startups , TC , Venture , voice AI Ivan Mehta Ivan covers global consumer tech developments at TechCrunch. He is based out of India and has previously worked at publications including Huffington Post and The Next Web. You can contact or verify outreach from Ivan by emailing im@ivanmehta.com or via encrypted message at ivan.42 on Signal. View Bio October 13-15 San Francisco, CA Tickets are live at the lowest rates of the year. Save up to $680 on your pass now. Meet investors. Discover your next portfolio company. Hear from 250+ tech leaders , dive into 200+ sessions , and explore 300+ startups building what’s next. Don’t miss these one-time savings. REGISTER NOW Most Popular Fintech CEO and Forbes 30 Under 30 alum has been charged for alleged fraud Lucas Ropek Notepad++ says Chinese government hackers hijacked its software updates for months Zack Whittaker Meet the new European unicorns of 2026 Anna Heim Nvidia CEO pushes back against report that his company’s $100B OpenAI investment has stalled Anthony Ha OpenClaw’s AI assistants are now building their own social network Anna Heim Elon Musk’s SpaceX, Tesla, and xAI in talks to merge, according to reports Amanda Silberling Kirsten Korosec Waymo robotaxi hits a child near an elementary school in Santa Monica Sean O'Kane Loading the next article Error loading the next article X LinkedIn Facebook Instagram youTube Mastodon Threads Bluesky TechCrunch Staff Contact Us Advertise Crunchboard Jobs Site Map Terms of Service Privacy Policy RSS Terms of Use Code of Conduct Tesla Earnings Zoox Moltbot Snap Specs Amazon Go Tech Layoffs ChatGPT © 2025 TechCrunch Media LLC.",
+      "imageUrl": "https://techcrunch.com/wp-content/uploads/2025/01/ElevenLabs-feat.jpg?resize=1200%2C630",
       "tags": [],
       "paperCategory": "",
       "signalReasons": [
         "来源：TechCrunch AI",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：Intel 正式宣布进军 GPU 市场，打破 Nvidia 长期垄断，将深刻影响全球 AI 算力基础设施布局，具有重大产业战略意义。",
+        "模型评分：9/10，理由：ElevenLabs获$500M融资且估值达$11B，反映全球对语音AI赛道的高度认可，具有战略级产业影响与资本风向标意义。",
         "热度：0 / 评论 0"
       ],
-      "score": 5.9,
-      "publishedAt": "2026-02-03T21:01:34+00:00",
+      "score": 5.4,
+      "publishedAt": "2026-02-04T15:33:58+00:00",
       "authors": [
-        "Rebecca Szkutak"
+        "Ivan Mehta"
       ]
+    },
+    {
+      "id": "github_openai_skills",
+      "title": "openai/skills",
+      "url": "https://github.com/openai/skills",
+      "type": "news",
+      "source": "GitHub Trending",
+      "summary": "Skills Catalog for Codex，该事件带来新的技术/监管/产品变化，并将改变AI领域的将影响AI模型能力、成本或应用边界，同时意味着普通人可能在工具可用性、价格或隐私体验上感知变化。",
+      "fullText": "",
+      "imageUrl": "https://opengraph.githubassets.com/4cce169c829d29506cc8079f25ea65cb868fa0d31cbedd906918ea5dc00913dc/openai/skills",
+      "tags": [
+        "Industry"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源：GitHub Trending",
+        "跨源重复：1 个来源",
+        "模型评分：6/10，理由：OpenAI发布Codex技能目录，属平台生态建设，有一定实用性，但未带来技术范式变革。",
+        "热度：3636 / 评论 0"
+      ],
+      "score": 8.6,
+      "publishedAt": "2026-02-04T23:36:35.771620+00:00",
+      "authors": []
     }
   ],
   "stats": {
     "total_papers_ingested": 482,
-    "total_news_ingested": 53,
+    "total_news_ingested": 63,
     "l1_papers_passed": 225,
-    "l1_news_passed": 35,
+    "l1_news_passed": 51,
     "l2_papers_scored": 54,
-    "l2_news_scored": 22,
+    "l2_news_scored": 30,
     "l3_papers_selected": 18,
     "l3_news_selected": 11,
     "news_source_counts": {
-      "Hacker News": 20,
-      "GitHub Trending": 10,
-      "TechCrunch AI": 7,
+      "Hacker News": 30,
+      "TechCrunch AI": 13,
+      "GitHub Trending": 6,
       "The Verge AI": 6,
-      "AWS Machine Learning Blog": 4,
-      "NVIDIA Blog": 2,
-      "Hugging Face Blog": 2,
-      "OpenAI Blog": 1,
-      "MIT Tech Review AI": 1
+      "OpenAI Blog": 2,
+      "Google AI Blog": 1,
+      "NVIDIA Blog": 1,
+      "Hugging Face Blog": 1,
+      "MIT Tech Review AI": 1,
+      "AWS Machine Learning Blog": 1,
+      "MIT CSAIL News": 1
     },
     "rss_source_counts": {
-      "TechCrunch AI": 7,
+      "TechCrunch AI": 13,
       "The Verge AI": 6,
-      "AWS Machine Learning Blog": 4,
-      "NVIDIA Blog": 2,
-      "Hugging Face Blog": 2,
-      "OpenAI Blog": 1,
-      "MIT Tech Review AI": 1
+      "OpenAI Blog": 2,
+      "Google AI Blog": 1,
+      "NVIDIA Blog": 1,
+      "Hugging Face Blog": 1,
+      "MIT Tech Review AI": 1,
+      "AWS Machine Learning Blog": 1,
+      "MIT CSAIL News": 1
     },
     "news_title_source_counts": {
       "voxtral transcribe 2": 1,
-      "tractor": 1,
-      "data centers in space makes no sense": 1,
-      "show hn ghidra mcp server 110 tools for ai assisted reverse engineering": 1,
-      "broken proofs and broken provers": 1,
-      "xcode 26 3 developers can leverage coding agents directly in xcode": 1,
-      "microsoft s pivotal ai product is running into big problems": 1,
+      "claude code for infrastructure": 1,
+      "a real world benchmark for ai code review": 1,
+      "ai is killing b2b saas": 1,
+      "microsoft s copilot chatbot is running into problems": 1,
+      "rs sdk drive runescape with claude code": 1,
+      "tell hn another round of zendesk email spam": 1,
       "claude is a space to think": 1,
-      "notepad supply chain attack breakdown": 1,
-      "us gen x is definitely feeling the pressure": 1,
-      "china moon mission aiming for 2030 lunar landing": 1,
-      "time to gpt 2 down to 2 91 hours": 1,
-      "sandboxing ai agents in linux": 1,
+      "show hn interactive california budget by claude code": 1,
+      "show hn ghidra mcp server 110 tools for ai assisted reverse engineering": 1,
+      "technocracy 2 0": 1,
+      "epstein financed german ai researcher joscha bach": 1,
+      "professors are being watched we ve never seen this much surveillance": 1,
+      "i was just laid off by the washington post in the middle of a warzone": 1,
+      "broken proofs and broken provers": 1,
+      "pinterest ceo fires obstructionist employees who created tool to track layoffs": 1,
+      "show hn mmdr 1000x faster mermaid rendering in pure rust no browser": 1,
+      "jetbrains drops x11 for wayland as default in intellij based ides": 1,
+      "dhs hunts down 67 year old u s citizen who criticized them in email": 1,
+      "why this computer scientist says all cryptocurrency should die in a fire 2022": 1,
+      "ice urged to explain memo about collecting info on protesters": 1,
+      "speculative sampling explained": 1,
+      "many people have no mental imagery what s going on in their brains": 1,
+      "wayland by default in 2026 1 eap jetbrains": 1,
+      "workspace studio automate your work with gemini": 1,
       "oracle to raise 50b as ai debt piles up": 1,
-      "defining safe hardware design pdf": 1,
-      "migrate wizard imap based email migration tool": 1,
-      "openclaw is basically a cascade of llms in prime position to mess stuff up": 1,
-      "ai and trust 2023": 1,
-      "show hn i built ai wattpad to eval llms on fiction": 1,
-      "anthropic ai tool sparks selloff from software to broader market": 1,
+      "ai needs to augment rather than replace humans or the workplace is doomed": 1,
+      "us gen x is definitely feeling the pressure": 1,
+      "time to gpt 2 down to 2 91 hours": 1,
+      "fastmail donates usd 10k to the perl and raku foundation": 1,
       "thedotmack claude mem": 1,
-      "masoncl review prompts": 1,
       "openai skills": 1,
-      "automazeio ccpm": 1,
-      "obra superpowers": 1,
-      "virattt dexter": 1,
-      "karpathy nanochat": 1,
       "openbmb chatdev": 1,
+      "canner wrenai": 1,
       "pedramamini maestro": 1,
-      "vm0 ai vm0": 1,
+      "microsoft qlib": 1,
+      "unlocking the codex harness how we built the app server": 1,
       "vfl wolfsburg turns chatgpt into a club wide capability": 1,
+      "the latest ai news we announced in january": 1,
       "nemotron labs how ai agents are turning documents into real time business intelligence": 1,
-      "everything will be represented in a virtual twin nvidia ceo jensen huang says at 3dexperience world": 1,
+      "google 8217 s annual revenue tops 400 billion for the first time": 1,
+      "sam altman responds to anthropic s funny super bowl ads": 1,
+      "openclaw 8217 s ai 8216 skill 8217 extensions are a security nightmare": 1,
+      "github adds claude and codex ai coding agents": 1,
       "anthropic says claude will remain ad free unlike chatgpt": 1,
       "sen warren wants to know what google gemini s built in checkout means for user privacy": 1,
-      "elon musk is merging spacex and xai to build data centers in space or so he says": 1,
-      "microsoft says it s building an app store for ai content licensing": 1,
-      "apple s xcode adds openai and anthropic s coding agents": 1,
-      "french police raid x 8217 s paris office as uk investigation continues": 1,
+      "alphabet won t talk about the google apple ai deal even to investors": 1,
+      "google s gemini app has surpassed 750m monthly active users": 1,
+      "meet gizmo a tiktok for interactive vibe coded mini apps": 1,
+      "ai sre resolve ai confirms 125m raise unicorn valuation": 1,
+      "amazon to begin testing ai tools for film and tv production next month": 1,
+      "a16z just raised 1 7b for ai infrastructure here s where it s going": 1,
+      "what a16z is actually funding and what it s ignoring when it comes to ai infra": 1,
+      "tinder looks to ai to help fight swipe fatigue and dating app burnout": 1,
+      "roblox s 4d creation feature is now available in open beta": 1,
       "elevenlabs raises 500m from sequoia at an 11 billion valuation": 1,
-      "alexa amazon s ai assistant is now available to everyone in the u s": 1,
+      "alexa amazon s ai assistant is now available to everyone in the us": 1,
       "accel doubles down on fibr ai as agents turn static websites into one to one experiences": 1,
       "exclusive positron raises 230m series b to take on nvidia s ai chips": 1,
-      "intel will start making gpus a market dominated by nvidia": 1,
-      "xcode moves into agentic coding with deeper openai and anthropic integrations": 1,
-      "lotus health nabs 35m for ai doctor that sees patients for free": 1,
       "nemotron colembed v2 raising the bar for multimodal retrieval with vidore v3 s top model": 1,
-      "h company s new holo2 model takes the lead in ui localization": 1,
       "from guardrails to governance a ceo s guide for securing agentic systems": 1,
       "accelerating your marketing ideation with generative ai part 2 generate custom marketing images from historical references": 1,
-      "democratizing business intelligence bgl s journey with claude agent sdk and amazon bedrock agentcore": 1,
-      "use amazon quick suite custom action connectors to upload text files to google drive using openapi specification": 1,
-      "ai agents in enterprises best practices with amazon bedrock agentcore": 1
+      "antonio torralba three mit alumni named 2025 acm fellows": 1
     },
     "total_papers_deduped": 482,
-    "total_news_deduped": 53,
-    "news_recent_filtered": 53
+    "total_news_deduped": 63,
+    "news_recent_filtered": 63
   }
 }
