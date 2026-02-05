@@ -1,388 +1,362 @@
 {
-  "date": "2026-02-04",
-  "generatedAt": "2026-02-04T23:44:07.001315",
-  "introduction": "今日AI领域在基础模型能力、智能体安全与真实世界应用三方面取得关键进展。多篇论文聚焦智能体内在世界模型、跨模态安全评估及低资源语言覆盖，凸显行业从“能用”向“可靠可用”的转型。\n• 智能体研究深入其认知机制与安全边界；\n• AI天气预报首次在印度季风预测中展现实用价值；\n• 隐私优先的图像溯源框架应对生成内容泛滥；\n• 大公司加速AI产品商业化与合规博弈；\n• 芯片与基础设施投资持续加码。\n读者应关注智能体安全基准与真实场景落地案例，警惕过度营销的“AI赋能”叙事，优先评估技术是否解决具体痛点而非堆砌概念。",
-  "longformScript": "今天AI领域发生的事，有点像一场静水深流的变革——表面看是几家大厂在推新功能、抢用户、打嘴仗，但底下涌动的，其实是整个行业对“AI到底该怎么用、为谁服务”的重新校准。从无广告的思考空间，到足球俱乐部的日常运营，再到参议员对购物推荐的质询，技术正从炫技走向责任，从通用能力走向具体场景的可靠交付。\n\n先说一个耐人寻味的信号：Anthropic正式宣布，Claude将永久无广告。这听起来像是营销话术，但背后有实打实的立场选择。他们明确表示，深度思考、编程、处理个人敏感问题这些高价值任务，不该被商业激励干扰。换句话说，当你在Claude里讨论心理健康、写一封辞职信，或者调试一段关键代码时，系统不会悄悄塞给你某个心理咨询平台或云服务的链接。这种“纯净性”在当下其实很稀缺——尤其当Gemini开始内置结账功能、ChatGPT测试免费用户的广告推送时，Anthropic的选择更像一种反向宣言。当然，它靠企业订阅和教育合作维持运转，并非完全理想主义，但至少划出了一条线：有些认知空间，不该被变现逻辑渗透。\n\n而另一边，OpenAI正忙着把AI变成可嵌入、可控制的“工具流”。他们刚发布的Codex App Server，不只是个API，而是一套让开发者能精细管理AI代理行为的框架。比如，当AI调用外部工具执行任务时，系统可以实时流式反馈进度，甚至在关键操作前弹出审批提示；修改代码时还能自动对比差异。这意味着未来的AI应用不再是“黑箱输出”，而是透明、可中断、可追溯的工作伙伴。配合GitHub上新出现的Skills Catalog，OpenAI似乎在构建一个模块化的AI能力市场——开发者像搭积木一样组合技能，普通人则可能在不知不觉中使用到更稳定、更可控的自动化服务。\n\n这种“可控性”也正在金融、体育、法律等垂直领域落地。微软开源的Qlib平台，把量化投资的全流程——从因子挖掘、策略回测到实盘部署——都交给AI代理自动跑通，大大降低算法交易的门槛。德甲的沃尔夫斯堡俱乐部则全员启用ChatGPT，不是为了噱头，而是让球探分析对手录像更快、市场部生成多语言内容更高效，甚至教练组用它整理训练数据。有趣的是，他们强调“不失足球本色”——AI是辅助，不是主角。同样，NVIDIA推出的Nemotron智能文档系统，能把PDF里的合同条款、财报图表自动转成可查询的商业智能，在金融纠纷处理或科研分析中直接派上用场。这些案例的共同点是：AI不再只是聊天或画画，而是嵌入真实工作流，解决具体痛点。\n\n但越是深入现实，风险就越具体。美国参议员沃伦就直接点名谷歌，质疑Gemini内置购物功能会不会利用聊天中的情绪或需求，悄悄引导你买更贵的商品。这问题不抽象——当AI同时知道你在聊“预算紧张”、又在搜索“笔记本电脑”，它推荐的到底是性价比最优解，还是沃尔玛给的高佣金机型？类似的担忧也出现在语音AI领域。ElevenLabs刚融了5亿美元，估值飙到110亿，他们的合成语音已经能以假乱真。虽然主要用于内容创作，但一旦被滥用，深度伪造的音频可能成为诈骗或舆论操纵的新武器。技术越强大，治理就得越前置。\n\n更底层的博弈还在硬件和生态层面。一家叫Positron的芯片公司，拿了2.3亿美元融资，目标直指英伟达。他们的新芯片功耗只有H100的三分之一，性能却相当，OpenAI据说已在测试。如果真能打破垄断，未来AI推理成本可能大幅下降，尤其利好视频生成、实时客服这类高负载场景。但这也意味着，算力格局的变化会间接影响我们每天用的AI服务——价格、速度、甚至功能开放程度，都可能随之调整。\n\n那么，作为普通用户，该怎么看待今天的这些动静？首先，别被“月活7.5亿”这样的数字迷惑。Gemini用户增长快，但内置结账是否影响推荐公正性，还得看谷歌接下来的回应。其次，关注不同平台的“默认设置”：Claude承诺无广告，但功能可能偏向专业场景；ChatGPT免费版可能有广告隔离，但数据政策仍需细读。最重要的是，优先选择那些把AI当作“工具”而非“推销员”的产品——尤其是在处理敏感任务时。技术本身没有善恶，但商业模式会塑造它的行为。\n\n今天的AI世界，一边是超级碗广告里的理念之争，一边是足球俱乐部后台的数据清洗；一边是百亿估值的语音模型，一边是参议员对购物推荐的警惕。热闹之下，真正的进步或许不在于模型又多聪明，而在于我们是否开始认真对待它的边界、责任与用途。毕竟，一个能帮你写诗的AI很酷，但一个在关键时刻不卖你保险的AI，才值得托付。",
+  "date": "2026-02-05",
+  "generatedAt": "2026-02-05T23:37:52.074244",
+  "introduction": "今日AI领域迎来“智能体爆发”临界点：Claude Opus 4.6与GPT-5.3-Codex同步升级，不仅大幅提升代码能力，更首次实现百万级上下文与多智能体协同开发。这标志着AI正从单点工具转向可自主协作的生产力系统。\n• 多智能体团队成功构建C编译器，验证了AI自主软件工程可行性；\n• GPT-5驱动的生物实验室将蛋白合成成本降低40%；\n• 微软发布首个低资源语言语音识别基准PazaBench；\n• OpenAI推出企业级智能体管理平台Frontier；\n• 新研究揭示前沿模型存在“对齐漂移”风险，安全挑战加剧。\n读者应关注智能体协同带来的效率跃升，同时警惕其在安全、偏见和可靠性方面的潜在隐患——技术红利与治理压力正同步放大。",
+  "longformScript": "今天，AI领域正悄然跨过一个关键门槛——从“聪明的工具”迈向“能协作的团队”。Anthropic和OpenAI几乎同步发布的新模型，不仅在编码、推理和上下文处理上再进一步，更开始尝试让多个AI智能体像人类工程师一样分工合作。与此同时，微软在语音识别的包容性上迈出扎实一步，而MIT等机构则在为这些越来越自主的系统加上“安全绳”。技术红利正在加速释放，但伴随而来的治理挑战也前所未有地清晰。\n\n最引人注目的，无疑是Anthropic推出的Claude Opus 4.6。这个版本不只是小幅升级，而是把上下文窗口推到100万token的Beta阶段，同时大幅强化了编码与多步任务执行能力。它甚至能在Excel和PowerPoint里帮普通人做财务分析或写报告，而且据官方称，安全表现已达行业前沿。但真正让人眼前一亮的，是Anthropic用16个Opus 4.6智能体组成的“虚拟开发团队”，在无人干预的情况下，花了两周时间、约两万美元，从零构建出一个能编译Linux 6.9内核的C编译器。这个10万行Rust代码的成果，不是玩具项目，而是能跑QEMU和FFmpeg的真实工具链。这说明，AI不再只是帮你写函数，而是开始具备组织复杂工程的能力——通过任务锁、共享测试套件和外部验证机制，它们学会了如何避免“各自为战”的混乱。对开发者而言，这意味着未来或许能用类似框架自动搭建基础工具，把精力留给更高层的设计。\n\n另一边，OpenAI也没闲着。他们发布了GPT-5.3-Codex，号称目前最强的“具身编码模型”——这个词听起来有点抽象，其实核心意思是：AI现在不仅能生成代码片段，还能理解整个系统的业务逻辑和架构约束，做出更符合上下文的决策。配合新推出的Frontier平台，企业可以部署由多个AI代理组成的团队，统一管理权限、共享上下文，解决过去单点工具难以协同的问题。这标志着AI正从个人助手向组织级智能体演进。更有意思的是，GPT-5还被用在了生物实验室里：与Ginkgo Bioworks的自动化平台结合后，AI通过闭环实验将无细胞蛋白合成的成本降低了40%。虽然离你我日常还有点远，但这预示着药物研发这类高成本、长周期的领域，可能迎来效率革命。\n\n不过，当AI越来越能干，风险也在同步放大。Anthropic的Opus 4.6在开源代码库中一次性挖出了500个零日漏洞，这固然展示了AI在软件供应链安全上的巨大价值，但也反过来提醒我们：如果攻击者也能用同样强大的工具呢？OpenAI显然意识到了这一点，所以同步推出了“Trusted Access for Cyber”框架，试图通过基于信任的访问控制，在开放前沿网络安全能力的同时防止滥用。这种“可控开放”的思路，可能是未来高风险AI能力落地的关键路径。而MIT与Asari AI联合提出的EnCompass框架，则从另一个角度提升可靠性——当AI代理执行任务出错时，它能自动回溯、并行尝试不同路径，找到最优解。在代码迁移这类容错要求高的场景中，错误率显著下降。这些努力都在说明：随着AI自主性增强，如何让它“知错能改”“不乱来”，已成技术发展的核心命题。\n\n值得欣慰的是，AI的进步并未只集中在巨头的实验室里。微软研究院发布的Paza语音识别系统，覆盖了39种非洲语言，并在肯尼亚六种本地语言上通过真实农户的手机测试进行优化。这是首个针对低资源语言的标准化评测基准，强调社区参与和真实场景验证。长期以来，主流语音技术几乎只服务英语等大语种，而Paza的出现，意味着全球更多非英语用户未来能真正用母语与AI对话。这种包容性进展，虽然不像大模型升级那样轰动，却可能带来更深远的社会影响。\n\n那么，作为普通听众，该如何看待今天的这些变化？一方面，AI确实在从“工具”变成“协作者”——无论是帮你写代码、分析财报，还是辅助理解癌症治疗方案，它的角色越来越主动。但另一方面，这种主动性也带来了新的责任：你不能把AI当成权威，尤其在医疗、安全等关键领域。就像那个借助ChatGPT理解治疗方案的家庭，他们始终以医生意见为准，AI只是帮助梳理信息、准备问题。技术越强大，越需要我们保持清醒：它擅长的是扩展人类能力，而非替代人类判断。\n\n今天的AI世界，一边是智能体团队自主构建编译器的震撼演示，一边是为低资源语言搭建语音桥梁的务实努力；一边是效率的飞跃，一边是安全的警钟。这或许正是技术成熟期的常态——突破与风险并存，红利与责任同在。我们不必恐慌，也不该盲目乐观，而是学会在这样一个越来越“能干”的AI生态中，找到自己的位置：既善用其力，也守住边界。",
   "audioUrl": "",
   "papers": [
     {
-      "id": "arxiv_2602_03146v1",
-      "title": "General Agents Contain World Models, even under Partial Observability and Stochasticity",
-      "url": "https://arxiv.org/abs/2602.03146v1",
+      "id": "arxiv_2602_04849v1",
+      "title": "El Agente Estructural: An Artificially Intelligent Molecular Editor",
+      "url": "https://arxiv.org/abs/2602.04849v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "该研究扩展了此前关于智能体是否内含环境世界模型的理论，首次在部分可观测且随机性的环境中证明：即使是随机性、非完全观测下的通用智能体，也必须通过学习构建其环境的近似模型；研究还弱化了“通用性”定义，表明能力较弱的智能体同样隐含世界模型，从而揭示了世界建模是智能体有效决策的内在必要条件。",
+      "summary": "研究提出名为 El Agente Estructural 的多模态、自然语言驱动的分子编辑智能体，通过整合领域知识工具与视觉-语言模型，模拟人类专家在三维空间中直接操作分子结构的方式，实现对原子替换、连接性及立体化学的精准控制，无需重建整个分子骨架；该系统在位点选择性官能化、配体结合、异构体互变、反应机制引导的结构生成等真实场景中展现出化学意义明确的几何操控能力，并将作为结构编辑模块集成至自主量子化学平台 El Agente Quntur，显著提升其三维分子建模能力。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
+        "LLM",
+        "Vision",
+        "Multimodal",
         "Agent"
       ],
       "paperCategory": "General AI",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：10/10，理由：从理论上证明通用智能体必然包含世界模型，为理解AI认知能力提供根本性依据，具有里程碑式意义。",
-        "热度：7 / 评论 0"
+        "模型评分：10/10，理由：推出首个自然语言驱动的结构化分子编辑智能体，实现类人化学操作，直接推动药物发现与材料设计自动化，是AI for Science领域的历史性突破。",
+        "热度：18 / 评论 0"
       ],
       "score": 10.0,
-      "publishedAt": "2026-02-03T06:00:41+00:00",
+      "publishedAt": "2026-02-04T18:38:48+00:00",
       "authors": [
-        "Santiago Cifuentes"
+        "Changhyeok Choi",
+        "Yunheng Zou",
+        "Marcel Müller"
       ]
     },
     {
-      "id": "arxiv_2602_03767v1",
-      "title": "Decision-oriented benchmarking to transform AI weather forecast access: Application to the Indian monsoon",
-      "url": "https://arxiv.org/abs/2602.03767v1",
+      "id": "arxiv_2602_04872v1",
+      "title": "Multi-layer Cross-Attention is Provably Optimal for Multi-modal In-context Learning",
+      "url": "https://arxiv.org/abs/2602.04872v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "研究提出一种面向决策的AI天气预报评估框架，将气象学、AI与社会科学结合，以印度季风预测为例，在区域尺度上提前数周准确预测对雨养农业至关重要的季风开始时间；该框架已支撑2025年印度政府向3800万农民推送AI季风预警，成功捕捉异常季风停滞事件，为低收入脆弱群体应对气候冲击提供可操作信息，推动AI天气模型从技术指标转向实际民生价值。",
+      "summary": "针对多模态上下文学习缺乏理论基础的问题，研究构建了一个基于潜在因子模型的可解析框架，证明单层线性自注意力无法在任务分布上一致达到贝叶斯最优性能；为此提出一种新型线性化交叉注意力机制，在上下文长度和层数均较大的设定下，通过梯度流优化可被严格证明为贝叶斯最优，首次从理论上确立了深度与交叉注意力在多模态上下文学习中的必要性与有效性。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [],
+      "paperCategory": "General AI",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：10/10，理由：首次证明多层交叉注意力在多模态上下文学习中的最优性，为Transformer架构理论提供关键支撑，具有里程碑意义。",
+        "热度：12 / 评论 0"
+      ],
+      "score": 10.0,
+      "publishedAt": "2026-02-04T18:57:30+00:00",
+      "authors": [
+        "Nicholas Barnfield",
+        "Subhabrata Sen",
+        "Pragya Sur"
+      ]
+    },
+    {
+      "id": "arxiv_2602_04739v1",
+      "title": "Alignment Drift in Multimodal LLMs: A Two-Phase, Longitudinal Evaluation of Harm Across Eight Model Releases",
+      "url": "https://arxiv.org/abs/2602.04739v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "研究对八个主流多模态大语言模型（MLLM）版本进行纵向安全评估，使用由26名专业红队人员编写的726个对抗性提示，收集82,256条人工危害评分；结果发现模型家族间安全性差异显著：Pixtral系列最易受攻击，Claude因高拒绝率表现最安全；同时观察到明显的“对齐漂移”现象——GPT和Claude后续版本攻击成功率上升，而Pixtral和Qwen略有下降；此外，模态效应随时间变化，早期文本提示更有效，后期GPT-5和Claude 4.5在图文模态上脆弱性趋同，表明MLLM安全性既非均匀也非稳定，亟需长期、多模态基准持续追踪。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
+        "LLM",
+        "Multimodal",
+        "Audio",
         "Benchmark"
       ],
       "paperCategory": "General AI",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：10/10，理由：构建面向印度季风的决策导向AI气象评估基准，将AI天气预测转化为实际社会价值，具有历史性变革意义。",
-        "热度：7 / 评论 0"
+        "模型评分：9/10，理由：首次系统评估多模态大模型在长期演进中的对齐漂移问题，揭示安全风险演化规律，直接影响AI安全治理与模型迭代策略，属关键行业安全基准。",
+        "热度：21 / 评论 0"
       ],
-      "score": 10.0,
-      "publishedAt": "2026-02-03T17:27:22+00:00",
+      "score": 9.0,
+      "publishedAt": "2026-02-04T16:42:02+00:00",
       "authors": [
-        "Rajat Masiwal",
-        "Colin Aitken",
-        "Adam Marchakitus"
+        "Casey Ford",
+        "Madison Van Doren",
+        "Emily Dix"
       ]
     },
     {
-      "id": "arxiv_2602_03145v1",
-      "title": "Internet of Agentic AI: Incentive-Compatible Distributed Teaming and Workflow",
-      "url": "https://arxiv.org/abs/2602.03145v1",
+      "id": "arxiv_2602_04634v1",
+      "title": "WideSeek-R1: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2602.04634v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "论文提出“智能体AI互联网”（Internet of Agentic AI）框架，支持分布于云边端的异构自主智能体动态组建任务导向型工作流联盟；通过形式化网络原生协作模型，引入兼顾能力覆盖、网络位置与经济可行性的激励相容机制，并设计去中心化联盟选择算法，已在医疗场景验证其在专业化、弹性与经济性方面的优势，为大规模智能体协同提供可扩展的协调层，兼容Model Context Protocol（MCP）。",
+      "summary": "为应对广泛信息检索任务中单智能体架构的瓶颈，研究提出 WideSeek-R1 框架，采用主-子智能体结构并通过多智能体强化学习训练，实现可扩展的并行执行与协同调度；该系统在共享LLM基础上为各子智能体分配隔离上下文与专用工具，在2万条宽域信息任务数据集上联合优化，其4B参数版本在WideSearch基准上达到40.0%的项级F1分数，性能媲美671B参数的单智能体DeepSeek-R1，且随并行子智能体数量增加持续提升，验证了“宽度扩展”在复杂信息寻求任务中的有效性。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "LLM",
         "Agent",
+        "Reasoning",
+        "Benchmark"
+      ],
+      "paperCategory": "General AI",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：提出基于多智能体强化学习的宽度扩展范式，突破传统深度扩展局限，为广域信息搜索与复杂任务组织提供全新架构，可能重塑LLM应用范式。",
+        "热度：17 / 评论 0"
+      ],
+      "score": 9.0,
+      "publishedAt": "2026-02-04T15:05:12+00:00",
+      "authors": [
+        "Zelai Xu",
+        "Zhexuan Xu",
+        "Ruize Zhang"
+      ]
+    },
+    {
+      "id": "arxiv_2602_04575v1",
+      "title": "Vibe AIGC: A New Paradigm for Content Generation via Agentic Orchestration",
+      "url": "https://arxiv.org/abs/2602.04575v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "针对当前生成式AI存在的“意图-执行鸿沟”问题，研究提出 Vibe AIGC 新范式，通过智能体编排实现内容生成的系统化工程：用户以“Vibe”形式表达高层意图（含美学偏好、功能逻辑等），由中央元规划器将其分解为可执行、可验证、自适应的多智能体工作流；该方法将生成过程从随机推理转向逻辑编排，旨在使AI从脆弱的黑盒模型转变为可靠、可协作的系统级创作伙伴，从而降低复杂长周期数字资产的创作门槛。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Agent",
+        "Inference",
         "RAG",
+        "Industry"
+      ],
+      "paperCategory": "General AI",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：提出AIGC新范式——代理编排，突破传统模型中心化局限，可能重塑内容生成产业格局，具有全球战略意义。",
+        "热度：18 / 评论 0"
+      ],
+      "score": 9.0,
+      "publishedAt": "2026-02-04T14:01:44+00:00",
+      "authors": [
+        "Jiaheng Liu",
+        "Yuanxing Zhang",
+        "Shihao Li"
+      ]
+    },
+    {
+      "id": "arxiv_2602_04813v1",
+      "title": "Agentic AI in Healthcare & Medicine: A Seven-Dimensional Taxonomy for Empirical Evaluation of LLM-based Agents",
+      "url": "https://arxiv.org/abs/2602.04813v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "为系统评估医疗领域LLM智能体的研究现状，研究构建包含七个维度（认知能力、知识管理、交互模式、适应与学习、安全伦理、框架类型、核心任务）及29个子维度的实证分类法，对49项研究进行标注分析；结果显示外部知识集成较普遍（76%完全实现），但事件触发激活（92%未实现）和漂移检测（98%未实现）严重缺失；多智能体架构占主导（82%完全实现），而治疗规划等行动导向任务仍存在显著缺口（59%未实现），揭示了当前医疗AI智能体在动态响应与临床闭环能力上的关键不足。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Agent",
+        "Reasoning",
         "Research"
       ],
       "paperCategory": "General AI",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：10/10，理由：提出AI代理系统的分布式协作架构，突破中心化瓶颈，推动下一代去中心化智能体生态构建，具有里程碑式全球影响力。",
-        "热度：13 / 评论 0"
+        "模型评分：9/10，理由：建立医疗LLM代理的七维评估体系，为医疗AI落地提供可量化的标准框架，影响深远且具全球政策参考价值。",
+        "热度：17 / 评论 0"
       ],
-      "score": 10.0,
-      "publishedAt": "2026-02-03T06:00:34+00:00",
+      "score": 9.0,
+      "publishedAt": "2026-02-04T17:59:14+00:00",
       "authors": [
-        "Ya-Ting Yang",
-        "Quanyan Zhu"
+        "Shubham Vatsal",
+        "Harsh Dubey",
+        "Aditi Singh"
       ]
     },
     {
-      "id": "arxiv_2602_02734v1",
-      "title": "WAXAL: A Large-Scale Multilingual African Language Speech Corpus",
-      "url": "https://arxiv.org/abs/2602.02734v1",
+      "id": "arxiv_2602_04712v1",
+      "title": "SAR-RAG: ATR Visual Question Answering by Semantic Search, Retrieval, and MLLM Generation",
+      "url": "https://arxiv.org/abs/2602.04712v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "研究发布了WAXAL——一个涵盖21种撒哈拉以南非洲语言、服务超1亿人口的大规模多语言语音语料库，包含约1250小时转录自然语音（用于ASR）和180小时高质量单人朗读录音（用于TTS）；数据由非洲四家学术与社区机构合作采集，采用严格质量控制流程，并以CC-BY-4.0许可开源，旨在弥合语音技术资源鸿沟，推动包容性AI发展与语言数字存续。",
+      "summary": "针对合成孔径雷达（SAR）自动目标识别（ATR）中目标难以区分的问题，研究提出 SAR-RAG 方法，将多模态大语言模型（MLLM）与语义向量数据库结合，通过检索具有已知目标类型的相似图像样本作为上下文记忆，增强对军事车辆类别、特征及尺寸的判别能力；实验表明，该方法在图像检索指标、分类准确率及尺寸回归任务上均优于基线MLLM，验证了检索增强机制在遥感视觉问答与国防安防场景中的实用价值。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
-        "Audio",
-        "Industry",
-        "Research",
-        "Open Source"
-      ],
-      "paperCategory": "General AI",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：10/10，理由：构建非洲多语言语音语料库，填补全球低资源语言技术空白，推动AI公平性发展，具有里程碑式的全球包容性意义。",
-        "热度：10 / 评论 0"
-      ],
-      "score": 10.0,
-      "publishedAt": "2026-02-02T19:49:19+00:00",
-      "authors": [
-        "Abdoulaye Diack",
-        "Perry Nelson",
-        "Kwaku Agbesi"
-      ]
-    },
-    {
-      "id": "arxiv_2602_03423v1",
-      "title": "Origin Lens: A Privacy-First Mobile Framework for Cryptographic Image Provenance and AI Detection",
-      "url": "https://arxiv.org/abs/2602.03423v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "论文提出Origin Lens——一个注重隐私的移动端框架，通过Rust/Flutter混合架构在设备端本地执行加密图像溯源与AI生成内容检测；系统融合加密来源凭证、生成模型指纹及可选的检索增强验证，为用户提供分级可信度提示，符合欧盟《AI法案》与《数字服务法》要求，为终端用户对抗视觉虚假信息提供轻量、合规的验证基础设施。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
+        "LLM",
         "Vision",
-        "RAG"
+        "Multimodal",
+        "Agent"
       ],
       "paperCategory": "Computer Vision",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：10/10，理由：提出隐私优先的图像溯源与AI检测移动框架，直击生成式AI滥用带来的信息真实性危机，具备全球政策与技术治理层面的里程碑意义。",
-        "热度：9 / 评论 0"
+        "模型评分：9/10，理由：SAR-RAG融合语义检索与多模态生成，面向国防安全场景的自动目标识别，具备战略级技术突破潜力，影响国家安全与军事AI布局。",
+        "热度：19 / 评论 0"
       ],
-      "score": 10.0,
-      "publishedAt": "2026-02-03T11:49:00+00:00",
+      "score": 9.0,
+      "publishedAt": "2026-02-04T16:23:16+00:00",
       "authors": [
-        "Alexander Loth",
-        "Dominique Conceicao Rosario",
-        "Peter Ebinger"
+        "David F. Ramirez",
+        "Tim Overman",
+        "Kristen Jaskie"
       ]
     },
     {
-      "id": "arxiv_2602_02537v1",
-      "title": "WorldVQA: Measuring Atomic World Knowledge in Multimodal Large Language Models",
-      "url": "https://arxiv.org/abs/2602.02537v1",
+      "id": "arxiv_2602_03915v1",
+      "title": "Phaedra: Learning High-Fidelity Discrete Tokenization for the Physical Science",
+      "url": "https://arxiv.org/abs/2602.03915v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "研究推出WorldVQA基准，专门评估多模态大语言模型（MLLMs）的原子级视觉世界知识，通过分层分类体系（从常见物体到长尾稀有实体）严格解耦“知识记忆”与“推理能力”，仅测量模型对视觉实体的识别与命名事实性，旨在建立衡量模型视觉百科全书广度与幻觉率的标准化测试，推动MLLMs的事实可靠性评估。",
+      "summary": "针对科学图像（如物理仿真数据）对保真度和物理属性保留的特殊需求，研究发现现有面向自然图像的分词器难以同时捕捉精细结构与精确幅值；为此提出 Phaedra 分词方法，融合经典形状-增益量化与本征正交分解思想，在多个偏微分方程（PDE）数据集上显著提升重建质量，并在分布外泛化测试中（包括不同条件下的已知PDE、未知PDE及真实地球观测与天气数据）展现出强鲁棒性，为科学计算中的离散表示学习提供了新路径。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Vision",
+        "Inference"
+      ],
+      "paperCategory": "Computer Vision",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：提出面向物理科学的高保真离散分词方法，打通AI for Science的关键瓶颈，有望重塑科学计算与生成建模范式。",
+        "热度：12 / 评论 0"
+      ],
+      "score": 9.0,
+      "publishedAt": "2026-02-03T17:12:57+00:00",
+      "authors": [
+        "Levi Lingsch",
+        "Georgios Kissas",
+        "Johannes Jakubik"
+      ]
+    },
+    {
+      "id": "arxiv_2602_04256v1",
+      "title": "AppleVLM: End-to-end Autonomous Driving with Advanced Perception and Planning-Enhanced Vision-Language Models",
+      "url": "https://arxiv.org/abs/2602.04256v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "AppleVLM 提出一种融合先进感知与规划增强的视觉-语言模型，用于端到端自动驾驶。该方法通过可变形 Transformer 融合多视角时空图像提升感知鲁棒性，并引入显式鸟瞰图规划模态以缓解语言指令偏差，再经由层次化思维链微调的 VLM 解码器输出驾驶路径；在 CARLA 闭环测试中达到 SOTA 性能，并成功部署于 AGV 平台实现实景复杂户外环境下的端到端自动驾驶。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "LLM",
+        "Vision",
         "Multimodal",
-        "RAG",
         "Reasoning"
       ],
-      "paperCategory": "Computer Vision",
+      "paperCategory": "Robotics",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：10/10，理由：创建首个专门测量多模态大模型原子世界知识的基准，从根本上区分视觉知识与推理能力，为评估AI认知本质提供历史性标准。",
-        "热度：14 / 评论 0"
-      ],
-      "score": 10.0,
-      "publishedAt": "2026-01-28T11:27:22+00:00",
-      "authors": [
-        "Runjie Zhou",
-        "Youbo Shao",
-        "Haoyu Lu"
-      ]
-    },
-    {
-      "id": "arxiv_2602_02995v1",
-      "title": "Agent Alpha: Tree Search Unifying Generation, Exploration and Evaluation for Computer-Use Agents",
-      "url": "https://arxiv.org/abs/2602.02995v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "论文提出Agent Alpha框架，将蒙特卡洛树搜索（MCTS）引入计算机使用智能体的交互循环，通过alpha-UCT引导的步级搜索统一生成、探索与评估过程，实现早期剪枝与前缀复用；结合对比驱动评估与多样性约束扩展，在OSWorld基准上以约77%成功率显著超越轨迹级采样基线，解决了GUI智能体无法回溯利用部分成功路径的关键局限。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Agent",
-        "Research",
-        "Benchmark"
-      ],
-      "paperCategory": "General AI",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：Agent Alpha引入树搜索统一生成、探索与评估，显著提升GUI Agent的容错与回溯能力，代表当前Agent架构的前沿方向。",
-        "热度：11 / 评论 0"
+        "模型评分：9/10，理由：苹果公司发布端到端自动驾驶系统，融合先进感知与视觉语言模型，代表产业级重大突破，具全球影响力。",
+        "热度：20 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-02-03T02:07:12+00:00",
+      "publishedAt": "2026-02-04T06:37:14+00:00",
       "authors": [
-        "Sizhe Tang",
-        "Rongqian Chen",
-        "Tian Lan"
+        "Yuxuan Han",
+        "Kunyuan Wu",
+        "Qianyi Shao"
       ]
     },
     {
-      "id": "arxiv_2602_03255v1",
-      "title": "LPS-Bench: Benchmarking Safety Awareness of Computer-Use Agents in Long-Horizon Planning under Benign and Adversarial Scenarios",
-      "url": "https://arxiv.org/abs/2602.03255v1",
+      "id": "arxiv_2602_04549v1",
+      "title": "Nix and Fix: Targeting 1000x Compression of 3D Gaussian Splatting with Diffusion Models",
+      "url": "https://arxiv.org/abs/2602.04549v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "研究发布LPS-Bench基准，首次系统评估基于MCP的计算机使用智能体（CUAs）在长周期任务中的规划阶段安全意识，覆盖7类任务、9种风险、65个良性与对抗性场景；通过多智能体自动化流水线生成数据，并采用LLM-as-a-judge评估规划轨迹，发现现有CUAs普遍存在安全盲区，并提出缓解策略，代码已开源以推动安全可靠的智能体长期规划研究。",
+      "summary": "NiFi 方法利用基于扩散模型的一步蒸馏技术实现 3D Gaussian Splatting（3DGS）的极端压缩，在低至 0.1 MB 的码率下仍保持高感知质量，相比原始 3DGS 实现近 1000 倍压缩率提升，显著缓解其因高存储开销而难以应用于沉浸式通信等场景的问题。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
-        "LLM",
-        "Agent",
-        "Open Source",
-        "Benchmark"
-      ],
-      "paperCategory": "General AI",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：针对长周期规划中计算机使用代理的安全性问题，构建首个兼顾良性与对抗场景的基准评测体系，具备行业级影响力。",
-        "热度：12 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-03T08:40:24+00:00",
-      "authors": [
-        "Tianyu Chen",
-        "Chujia Hu",
-        "Ge Gao"
-      ]
-    },
-    {
-      "id": "arxiv_2602_03302v1",
-      "title": "Full end-to-end diagnostic workflow automation of 3D OCT via foundation model-driven AI for retinal diseases",
-      "url": "https://arxiv.org/abs/2602.03302v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "研究团队提出FOCUS系统，首个基于视觉基础模型的端到端3D OCT视网膜疾病诊断自动化框架，通过EfficientNetV2-S进行图像质量评估，并利用微调后的视觉基础模型完成异常检测与多病种分类，再以自适应聚合方法将2D切片预测整合为3D患者级诊断；在4,645名患者、覆盖四级医疗机构和多种OCT设备的数据上验证，FOCUS在质量评估（F1=99.01%）、异常检测（F1=97.46%）和患者级诊断（F1=94.39%）均表现优异，且在人机对比中媲美专家水平，显著提升效率，为实现无人化眼科筛查和扩大人群眼底病可及性提供可行路径。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Vision",
-        "3D",
-        "RAG"
-      ],
-      "paperCategory": "Computer Vision",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：首次实现3D OCT全链路诊断自动化，融合基础模型驱动医学影像分析，有望推动全球眼科AI临床落地，具有重大产业影响力。",
-        "热度：12 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-03T09:28:51+00:00",
-      "authors": [
-        "Jinze Zhang",
-        "Jian Zhong",
-        "Li Lin"
-      ]
-    },
-    {
-      "id": "arxiv_2602_03200v1",
-      "title": "Hand3R: Online 4D Hand-Scene Reconstruction in the Wild",
-      "url": "https://arxiv.org/abs/2602.03200v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "Hand3R是首个支持在线单目视频输入的4D手-场景联合重建框架，通过将预训练手部专家模型与4D场景基础模型结合，并引入场景感知的视觉提示机制，将高保真手部先验注入持久场景记忆，在单次前向传播中同步生成精确的手部网格与度量尺度的稠密场景几何；该方法无需离线优化，即可在局部手部重建与全局定位任务中达到有竞争力性能，为具身智能理解物理交互提供了关键的动态手-环境联合表征能力。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Robotics",
+        "Diffusion",
         "3D"
       ],
       "paperCategory": "Computer Vision",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：首次实现野外环境下4D手-场景联合重建，为具身智能与物理交互理解提供关键基础设施，具备行业变革潜力。",
-        "热度：10 / 评论 0"
+        "模型评分：9/10，理由：利用扩散模型实现3DGS千倍压缩，解决其存储瓶颈，极大拓展沉浸式通信等应用场景，是3D内容生成领域的战略性突破。",
+        "热度：9 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-02-03T07:13:01+00:00",
+      "publishedAt": "2026-02-04T13:39:00+00:00",
       "authors": [
-        "Wendi Hu",
-        "Haonan Zhou",
-        "Wenhao Hu"
+        "Cem Eteke",
+        "Enzo Tartaglione"
       ]
     },
     {
-      "id": "arxiv_2602_02918v1",
-      "title": "A Multi-scale Linear-time Encoder for Whole-Slide Image Analysis",
-      "url": "https://arxiv.org/abs/2602.02918v1",
+      "id": "arxiv_2602_04876v1",
+      "title": "PerpetualWonder: Long-Horizon Action-Conditioned 4D Scene Generation",
+      "url": "https://arxiv.org/abs/2602.04876v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "研究提出MARBLE——首个纯Mamba架构的多尺度全切片图像（WSI）分析框架，采用多状态线性时间状态空间模型并行处理多个放大倍率，通过粗到细的推理机制高效捕捉跨尺度依赖，避免了Transformer的二次注意力开销；在五个公开数据集上，MARBLE在AUC（最高+6.9%）、准确率（+20.3%）和C-index（+2.3%）均显著优于现有方法，为千兆像素级病理图像的高效、可扩展分析提供了新范式。",
+      "summary": "PerpetualWonder 提出首个真正闭环的 4D 场景生成系统，通过统一物理状态与视觉表示的双向链接机制，使生成式优化能同步修正动力学与外观，并结合多视角监督解决优化歧义；仅从单张图像即可模拟长时程、多步骤的物理合理且视觉一致的动作交互场景。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
-        "Vision",
-        "Reasoning"
+        "Vision"
       ],
       "paperCategory": "Computer Vision",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：首个纯Mamba架构的WSI分析框架，实现线性时间处理，推动医学影像AI向高效、可扩展方向演进，具备重大产业转化前景。",
-        "热度：8 / 评论 0"
+        "模型评分：9/10，理由：实现从单图生成长时序、动作条件的4D场景，推动生成式模拟在机器人与虚拟现实领域的变革性进展。",
+        "热度：5 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-02-02T23:47:07+00:00",
+      "publishedAt": "2026-02-04T18:58:55+00:00",
       "authors": [
-        "Jagan Mohan Reddy Dwarampudi",
-        "Joshua Wong",
-        "Hien Van Nguyen"
+        "Jiahao Zhan",
+        "Zizhang Li",
+        "Hong-Xing Yu"
       ]
     },
     {
-      "id": "arxiv_2602_02974v1",
-      "title": "SceneLinker: Compositional 3D Scene Generation via Semantic Scene Graph from RGB Sequences",
-      "url": "https://arxiv.org/abs/2602.02974v1",
+      "id": "arxiv_2602_04317v1",
+      "title": "JOintGS: Joint Optimization of Cameras, Bodies and 3D Gaussians for In-the-Wild Monocular Reconstruction",
+      "url": "https://arxiv.org/abs/2602.04317v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "SceneLinker通过从RGB序列构建语义场景图来生成组合式3D场景，其核心包括一个带交叉校验特征注意力的图网络用于场景图预测，以及一个联合形状与布局的图变分自编码器（graph-VAE）用于3D生成；该方法在3RScan/3DSSG和SG-FRONT数据集上超越现有技术，能准确还原复杂室内环境中物体的空间关系与布局，使用户可基于真实物理空间自动生成一致的3D混合现实内容。",
+      "summary": "JOintGS 提出一个联合优化相机外参、人体姿态与 3D 高斯表示的框架，通过前景-背景解耦实现三者协同精炼：静态背景高斯锚定相机估计，优化后的相机提升人体对齐精度，进而减少动态伪影；在 NeuMan 和 EMDB 数据集上 PSNR 提升 2.1 dB，显著优于现有方法，且对噪声初始化更具鲁棒性，同时支持实时渲染。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "3D",
-        "Open Source",
-        "Benchmark"
+        "Open Source"
       ],
       "paperCategory": "Computer Vision",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：提出基于RGB序列生成组合式3D场景的SceneLinker框架，为混合现实内容自适应生成提供关键技术支撑，具有全球产业级影响。",
-        "热度：7 / 评论 0"
+        "模型评分：9/10，理由：联合优化相机、人体姿态与3D高斯，实现野外单目人体重建的重大突破，推动虚拟人与数字孪生技术落地，具备全球产业影响。",
+        "热度：11 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-02-03T01:22:07+00:00",
+      "publishedAt": "2026-02-04T08:33:51+00:00",
       "authors": [
-        "Seok-Young Kim",
-        "Dooyoung Kim",
-        "Woojin Cho"
+        "Zihan Lou",
+        "Jinlong Fan",
+        "Sihan Ma"
       ]
     },
     {
-      "id": "arxiv_2602_03447v1",
-      "title": "HetroD: A High-Fidelity Drone Dataset and Benchmark for Autonomous Driving in Heterogeneous Traffic",
-      "url": "https://arxiv.org/abs/2602.03447v1",
+      "id": "arxiv_2602_04515v1",
+      "title": "EgoActor: Grounding Task Planning into Spatial-aware Egocentric Actions for Humanoid Robots via Visual-Language Models",
+      "url": "https://arxiv.org/abs/2602.04515v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "HetroD是一个面向异构交通的高保真无人机数据集与基准，聚焦行人、骑行者等弱势道路使用者（VRU）与车辆混行的复杂行为（如钩形转弯、车道分割），包含65.4k条厘米级精度轨迹（70%为VRU）、高清地图与信号灯状态；评估显示当前自动驾驶预测与规划模型难以处理VRU的横向移动和非结构化机动，凸显了在密集多智能体场景中开发更鲁棒算法的迫切需求，为异构交通环境下的自主驾驶研究提供了关键资源。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Agent",
-        "Open Source",
-        "Benchmark"
-      ],
-      "paperCategory": "Robotics",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：构建首个面向异构交通环境的高保真无人机数据集与基准，填补关键空白，对自动驾驶系统在复杂城市场景中的训练与评估具有战略意义。",
-        "热度：13 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-03T12:12:47+00:00",
-      "authors": [
-        "Yu-Hsiang Chen",
-        "Wei-Jer Chang",
-        "Christian Kotulla"
-      ]
-    },
-    {
-      "id": "arxiv_2602_02533v1",
-      "title": "HMVLA: Hyperbolic Multimodal Fusion for Vision-Language-Action Models",
-      "url": "https://arxiv.org/abs/2602.02533v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "HMVLA提出一种基于双曲空间的多模态融合框架，用于视觉-语言-动作（VLA）模型，通过将图像与文本特征嵌入双曲空间以更好建模其内在层次结构，并引入稀疏门控的专家混合（MoE）机制增强语义对齐；实验表明该方法在准确率与泛化能力上优于基线，且在跨域数据集重构测试中展现出更强鲁棒性，为机器人领域中感知与控制的语义一致性提供了新思路。",
+      "summary": "EgoActor 提出 EgoActing 任务，将高层指令直接映射为具身人形机器人的空间感知动作，包括行走、转头、操作等；其基于视觉-语言模型的统一架构利用真实世界第一人称 RGB 演示、空间推理问答和仿真数据训练，在 1 秒内完成上下文感知的动作推理，在模拟与真实环境中均能有效衔接任务规划与电机执行，并泛化至未见任务与环境。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -395,146 +369,178 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：HMVLA 提出超球面多模态融合框架，显著提升视觉-语言-动作模型的泛化能力，是当前 VLA 领域最具影响力的 SOTA 工作之一。",
-        "热度：18 / 评论 0"
+        "模型评分：9/10，理由：将视觉语言模型融入人形机器人任务规划，实现空间感知与指令语义的深度融合，是当前具身智能领域的战略级突破。",
+        "热度：13 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-01-28T07:50:30+00:00",
+      "publishedAt": "2026-02-04T13:04:56+00:00",
       "authors": [
-        "Kun Wang",
-        "Xiao Feng",
-        "Mingcheng Qu"
+        "Yu Bai",
+        "MingMing Yu",
+        "Chaojie Li"
       ]
     },
     {
-      "id": "arxiv_2602_03112v1",
-      "title": "A Unified Candidate Set with Scene-Adaptive Refinement via Diffusion for End-to-End Autonomous Driving",
-      "url": "https://arxiv.org/abs/2602.03112v1",
+      "id": "arxiv_2602_04329v1",
+      "title": "Safe and Stylized Trajectory Planning for Autonomous Driving via Diffusion Model",
+      "url": "https://arxiv.org/abs/2602.04329v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "CdDrive提出一种统一候选集的端到端自动驾驶规划方法，保留固定轨迹词表以确保常规场景稳定性，同时通过词表条件扩散去噪生成场景自适应候选轨迹，并由共享选择模块联合评分；其创新组件HATNA（Horizon-Aware Trajectory Noise Adapter）通过时序平滑与视界感知噪声调制提升扩散轨迹的几何连续性，在NAVSIM v1/v2上取得领先性能，有效平衡了简单与高交互场景下的规划可靠性。",
+      "summary": "SDD Planner 是一种基于扩散模型的轨迹规划框架，通过多源风格感知编码器融合动态代理与环境信息，并在去噪过程中动态调节安全与风格权重，生成既安全又符合用户偏好的驾驶轨迹；在 StyleDrive 上 SM-PDMS 指标提升 3.9%，在 NuPlan Test14 及 Test14-hard 均排名第一，实车闭环测试验证了其在复杂场景中兼顾安全性与驾驶风格的实用性。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
-        "Multimodal",
+        "Agent",
         "Diffusion",
-        "RAG"
-      ],
-      "paperCategory": "Robotics",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：提出端到端自动驾驶中多模态轨迹生成的统一候选集框架，针对自动驾驶核心挑战，具备显著技术影响力和产业落地前景。",
-        "热度：12 / 评论 0"
-      ],
-      "score": 8.0,
-      "publishedAt": "2026-02-03T05:14:08+00:00",
-      "authors": [
-        "Zhengfei Wu",
-        "Shuaixi Pan",
-        "Shuohan Chen"
-      ]
-    },
-    {
-      "id": "arxiv_2602_03793v1",
-      "title": "BridgeV2W: Bridging Video Generation Models to Embodied World Models via Embodiment Masks",
-      "url": "https://arxiv.org/abs/2602.03793v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "BridgeV2W通过将坐标空间动作转换为像素对齐的具身掩码（由URDF与相机参数渲染），并以ControlNet式路径注入预训练视频生成模型，解决了具身世界模型中动作-视频空间错位、视角敏感与架构不统一三大挑战；其引入的光流运动损失聚焦动态区域以缓解背景过拟合，在DROID和AgiBot-G1数据集上显著提升视频生成质量，并成功应用于策略评估与目标导向规划等下游任务，推动了通用具身世界模型的发展。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Robotics",
-        "RAG",
-        "Open Source",
+        "Research",
         "Benchmark"
       ],
       "paperCategory": "Robotics",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：将视频生成模型与具身世界模型结合，通过化身掩码解决动作空间对齐难题，推动机器人感知与决策一体化发展，具备行业变革潜力。",
-        "热度：15 / 评论 0"
+        "模型评分：9/10，理由：利用扩散模型实现安全且风格化的自动驾驶轨迹规划，融合实时性、安全性与驾驶个性，代表自动驾驶智能化的关键跃迁。",
+        "热度：14 / 评论 0"
       ],
-      "score": 8.0,
-      "publishedAt": "2026-02-03T17:56:28+00:00",
+      "score": 9.0,
+      "publishedAt": "2026-02-04T08:46:05+00:00",
       "authors": [
-        "Yixiang Chen",
-        "Peiyan Li",
-        "Jiabing Yang"
+        "Shuo Pei",
+        "Yong Wang",
+        "Yuanchen Zhu"
       ]
     },
     {
-      "id": "arxiv_2602_03547v1",
-      "title": "AffordanceGrasp-R1:Leveraging Reasoning-Based Affordance Segmentation with Reinforcement Learning for Robotic Grasping",
-      "url": "https://arxiv.org/abs/2602.03547v1",
+      "id": "arxiv_2602_04157v1",
+      "title": "A Modern System Recipe for Situated Embodied Human-Robot Conversation with Real-Time Multimodal LLMs and Tool-Calling",
+      "url": "https://arxiv.org/abs/2602.04157v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "AffordanceGrasp-R1 提出一种结合链式推理（CoT）冷启动策略与强化学习的机器人抓取框架，通过指令条件下的可供性分割增强空间推理能力，并重构抓取流程：先从全局点云生成候选抓取位姿，再利用可供性掩码进行筛选。该方法在多个基准数据集上持续优于当前最优模型，且在真实世界语言引导的复杂操作任务中展现出强鲁棒性与泛化能力。",
+      "summary": "该研究提出一种轻量级系统方案，将实时多模态大语言模型与注意力及主动感知工具接口结合，使机器人能在家庭场景中根据对话内容动态决定注视目标与发言时机；在六类需频繁切换注意力的任务中，系统在工具决策准确率和交互质量主观评分上均表现良好，验证了多模态 LLM 与工具调用在具身对话中的可行性。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Multimodal",
+        "Agent",
+        "Robotics"
+      ],
+      "paperCategory": "Robotics",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：提出实时多模态大模型与工具调用结合的具身对话系统，是当前机器人具身智能与人机交互融合的关键突破，具备全球产业引领性。",
+        "热度：13 / 评论 0"
+      ],
+      "score": 9.0,
+      "publishedAt": "2026-02-04T02:48:16+00:00",
+      "authors": [
+        "Dong Won Lee",
+        "Sarah Gillet",
+        "Louis-Philippe Morency"
+      ]
+    },
+    {
+      "id": "arxiv_2602_04056v1",
+      "title": "Modular Safety Guardrails Are Necessary for Foundation-Model-Enabled Robots in the Real World",
+      "url": "https://arxiv.org/abs/2602.04056v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "论文指出基础模型驱动的机器人需超越传统物理约束的安全范式，应从动作安全、决策安全与以人为本安全三个维度构建保障体系；作者主张采用模块化安全护栏架构，包含监控与干预层，并通过跨层表征对齐与保守性分配实现高效协同，为开放、长尾、动态演化的现实部署提供可扩展的安全基础。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "Robotics",
-        "RAG",
+        "Reasoning",
+        "Research",
+        "Benchmark"
+      ],
+      "paperCategory": "Robotics",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：首次系统论证基础模型机器人必须配备模块化安全护栏，触及AI伦理与安全落地的核心命题，可能影响全球机器人安全标准制定。",
+        "热度：14 / 评论 0"
+      ],
+      "score": 9.0,
+      "publishedAt": "2026-02-03T22:41:51+00:00",
+      "authors": [
+        "Joonkyung Kim",
+        "Wenxi Chen",
+        "Davood Soleymanzadeh"
+      ]
+    },
+    {
+      "id": "arxiv_2602_04129v1",
+      "title": "KGLAMP: Knowledge Graph-guided Language model for Adaptive Multi-robot Planning and Replanning",
+      "url": "https://arxiv.org/abs/2602.04129v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "针对异构多机器人系统在动态环境中难以构建准确符号表示和维持计划一致性的挑战，研究者提出KGLAMP框架，该方法结合知识图谱与大语言模型（LLM），通过结构化知识图谱编码物体关系、空间可达性及机器人能力，引导LLM生成精确的PDDL问题描述；该图谱作为可动态更新的持久记忆，在检测到环境不一致时触发重规划，使符号计划能适应世界状态变化；在MAT-THOR基准测试中，KGLAMP相较纯LLM或传统PDDL方法性能提升至少25.5%。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Agent",
+        "Robotics",
+        "Benchmark"
+      ],
+      "paperCategory": "Robotics",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：提出知识图谱引导的多机器人自适应规划方法，解决复杂系统协调难题，推动智能机器人系统发展。",
+        "热度：13 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-04T01:46:02+00:00",
+      "authors": [
+        "Chak Lam Shek",
+        "Faizan M. Tariq",
+        "Sangjae Bae"
+      ]
+    },
+    {
+      "id": "arxiv_2602_04476v1",
+      "title": "Vision-aligned Latent Reasoning for Multi-modal Large Language Model",
+      "url": "https://arxiv.org/abs/2602.04476v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "为解决多模态大语言模型（MLLMs）在长上下文推理中视觉信息逐渐稀释的问题，研究者提出Vision-aligned Latent Reasoning（VaLR）框架，该方法在每一步思维链推理前动态生成与视觉对齐的潜在标记，并通过将MLLM中间嵌入与视觉编码器对齐来保留视觉知识；实验表明，VaLR在VSI-Bench等需长上下文理解或精细视觉感知的基准上显著优于现有方法，性能从33.0%提升至52.9%，并首次展现出测试时缩放能力，证明其在复杂多模态推理任务中的有效性。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Vision",
         "Reasoning",
         "Benchmark"
       ],
-      "paperCategory": "Robotics",
+      "paperCategory": "Computer Vision",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：结合思维链推理与强化学习实现智能抓取，推动机器人认知与操作融合，属当前主流SOTA方向，媒体关注度高。",
-        "热度：20 / 评论 0"
-      ],
-      "score": 8.0,
-      "publishedAt": "2026-02-03T14:00:56+00:00",
-      "authors": [
-        "Dingyi Zhou",
-        "Mu He",
-        "Zhuowei Fang"
-      ]
-    },
-    {
-      "id": "arxiv_2602_02590v1",
-      "title": "StepNav: Structured Trajectory Priors for Efficient and Multimodal Visual Navigation",
-      "url": "https://arxiv.org/abs/2602.02590v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "StepNav 提出一种基于变分原理的结构化多模态轨迹先验框架，用于高效、安全的视觉导航。该方法首先学习几何感知的成功概率场以识别所有可行通行走廊，进而构建显式的多模态混合先验来初始化条件流匹配过程，并将轨迹优化建模为带显式平滑性与安全性正则项的最优控制问题。相比依赖非结构化噪声先验的现有生成式规划器，StepNav 在仿真与真实环境中均显著提升了规划的安全性、效率与鲁棒性，代码已开源。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Multimodal",
-        "Open Source",
-        "Benchmark"
-      ],
-      "paperCategory": "Robotics",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：引入结构化轨迹先验提升视觉导航效率与安全性，解决生成模型在复杂环境中的关键缺陷，具显著行业影响力。",
+        "模型评分：8/10，理由：提出视觉对齐的潜在推理机制，针对多模态大模型在长序列推理中视觉信息衰减的核心瓶颈，具有显著技术突破性，可能推动下一代MLLM架构演进。",
         "热度：11 / 评论 0"
       ],
       "score": 8.0,
-      "publishedAt": "2026-02-01T06:45:42+00:00",
+      "publishedAt": "2026-02-04T12:04:02+00:00",
       "authors": [
-        "Xubo Luo",
-        "Aodi Wu",
-        "Haodong Han"
+        "Byungwoo Jeon",
+        "Yoonwoo Jeong",
+        "Hyunseok Lee"
       ]
     }
   ],
   "news": [
     {
-      "id": "hn_46884883",
-      "title": "Anthropic 宣布 Claude 永久无广告，打造纯净思考空间",
-      "url": "https://www.anthropic.com/news/claude-is-a-space-to-think",
+      "id": "hn_46902223",
+      "title": "Anthropic发布Claude Opus 4.6：1M上下文、更强编码与自主任务能力",
+      "url": "https://www.anthropic.com/news/claude-opus-4-6",
       "type": "news",
       "source": "Hacker News",
-      "summary": "**Anthropic 宣布 Claude 将永久保持无广告**，强调其作为深度思考与工作助手的核心定位不应受商业激励干扰；此举确保用户在处理敏感话题、复杂编程或个人问题时获得纯粹、可信的协助，避免模型响应被广告商影响或诱导消费，同时公司通过企业合约与订阅制维持运营，并持续扩大教育与非营利组织的免费访问——普通用户可继续在无干扰环境中使用 Claude 进行高价值认知任务，无需担忧隐私泄露或隐性推销。",
-      "fullText": "Skip to main content Skip to footer Research Economic Futures Commitments Learn News Try Claude Announcements Claude is a space to think Feb 4, 2026 There are many good places for advertising. A conversation with Claude is not one of them. Advertising drives competition, helps people discover new products, and allows services like email and social media to be offered for free. We’ve run our own ad campaigns , and our AI models have, in turn, helped many of our customers in the advertising industry. But including ads in conversations with Claude would be incompatible with what we want Claude to be: a genuinely helpful assistant for work and for deep thinking. We want Claude to act unambiguously in our users’ interests. So we’ve made a choice: Claude will remain ad-free. Our users won’t see “sponsored” links adjacent to their conversations with Claude; nor will Claude’s responses be influenced by advertisers or include third-party product placements our users did not ask for. The nature of AI conversations When people use search engines or social media, they’ve come to expect a mixture of organic and sponsored content. Filtering signal from noise is part of the interaction. Conversations with AI assistants are meaningfully different. The format is open-ended; users often share context and reveal more than they would in a search query. This openness is part of what makes conversations with AI valuable, but it’s also what makes them susceptible to influence in ways that other digital products are not. Our analysis of conversations with Claude (conducted in a way that keeps all data private and anonymous ) shows that an appreciable portion involve topics that are sensitive or deeply personal—the kinds of conversations you might have with a trusted advisor. Many other uses involve complex software engineering tasks, deep work, or thinking through difficult problems. The appearance of ads in these contexts would feel incongruous—and, in many cases, inappropriate. We still have much to learn about the impact of AI models on the people who use them. Early research suggests both benefits—like people finding support they couldn’t access elsewhere—and risks, including the potential for models to reinforce harmful beliefs in vulnerable users. Introducing advertising incentives at this stage would add another level of complexity. Our understanding of how models translate the goals we set them into specific behaviors is still developing; an ad-based system could therefore have unpredictable results. Incentive structures Being genuinely helpful is one of the core principles of Claude’s Constitution , the document that describes our vision for Claude’s character and guides how we train the model. An advertising-based business model would introduce incentives that could work against this principle. Consider a concrete example. A user mentions they’re having trouble sleeping. An assistant without advertising incentives would explore the various potential causes—stress, environment, habits, and so on—based on what might be most insightful to the user. An ad-supported assistant has an additional consideration: whether the conversation presents an opportunity to make a transaction. These objectives may often align—but not always. And, unlike a list of search results, ads that influence a model’s responses may make it difficult to tell whether a given recommendation comes with a commercial motive or not. Users shouldn’t have to second-guess whether an AI is genuinely helping them or subtly steering the conversation towards something monetizable. Even ads that don’t directly influence an AI model’s responses and instead appear separately within the chat window would compromise what we want Claude to be: a clear space to think and work. Such ads would also introduce an incentive to optimize for engagement—for the amount of time people spend using Claude and how often they return. These metrics aren’t necessarily aligned with being genuinely helpful. The most useful AI interaction might be a short one, or one that resolves the user’s request without prompting further conversation. We recognize that not all advertising implementations are equivalent. More transparent or opt-in approaches—where users explicitly choose to see sponsored content—might avoid some of the concerns outlined above. But the history of ad-supported products suggests that advertising incentives, once introduced, tend to expand over time as they become integrated into revenue targets and product development, blurring boundaries that were once more clear-cut. We’ve chosen not to introduce these dynamics into Claude. Our approach Anthropic is focused on businesses, developers, and helping our users flourish. Our business model is straightforward: we generate revenue through enterprise contracts and paid subscriptions, and we reinvest that revenue into improving Claude for our users. This is a choice with tradeoffs, and we respect that other AI companies might reasonably reach different conclusions. Expanding access to Claude is central to our public benefit mission, and we want to do it without selling our users’ attention or data to advertisers. To that end, we’ve brought AI tools and training to educators in over 60 countries, begun national AI education pilots with multiple governments , and made Claude available to nonprofits at a significant discount. We continue to invest in our smaller models so that our free offering remains at the frontier of intelligence, and we may consider lower-cost subscription tiers and regional pricing where there is clear demand for it. Should we need to revisit this approach, we’ll be transparent about our reasons for doing so. Supporting commerce AI will increasingly interact with commerce, and we look forward to supporting this in ways that help our users. We’re particularly interested in the potential of agentic commerce, where Claude acts on a user’s behalf to handle a purchase or booking end to end. And we’ll continue to build features that enable our users to find, compare, or buy products, connect with businesses, and more—when they choose to do so. We’re also exploring more ways to make Claude a focused space to be at your most productive. Users can already connect third-party tools they use for work—like Figma, Asana, and Canva—and interact with them directly within Claude. We expect to introduce many more useful integrations and expand this toolkit over time. All third-party interactions will be grounded in the same overarching design principle: they should be initiated by the user (where the AI is working for them) rather than an advertiser (where the AI is working, at least in part, for someone else). Today, whether someone asks Claude to research running shoes, compare mortgage rates, or recommend a restaurant for a special occasion, Claude’s only incentive is to give a helpful answer. We’d like to preserve that. A trusted tool for thought We want our users to trust Claude to help them keep thinking—about their work, their challenges, and their ideas. Our experience of using the internet has made it easy to assume that advertising on the products we use is inevitable. But open a notebook, pick up a well-crafted tool, or stand in front of a clean chalkboard, and there are no ads in sight. We think Claude should work the same way. Related content Apple’s Xcode now supports the Claude Agent SDK Read more Anthropic partners with Allen Institute and Howard Hughes Medical Institute to accelerate scientific discovery Read more ServiceNow chooses Claude to power customer apps and increase internal productivity Read more Products Claude Claude Code Cowork Claude in Chrome Claude in Excel Claude in Slack Skills Max plan Team plan Enterprise plan Download app Pricing Log in to Claude Models Opus Sonnet Haiku Solutions AI agents Code modernization Coding Customer support Education Financial services Government Healthcare Life sciences Nonprofits Claude Developer Platform Overview Developer docs Pricing Regional Compliance Amazon Bedrock Google Cloud’s Vertex AI Console login Learn Blog Claude partner network Connectors Courses Customer stories Engineering at Anthropic Events Plugins Powered by Claude Service partners Startups program Tutorials Use cases Company Anthropic Careers Economic Futures Research News Claude’s Constitution Responsible Scaling Policy Security and compliance Transparency Help and security Availability Status Support center Terms and policies Privacy policy Consumer health data privacy policy Responsible disclosure policy Terms of service: Commercial Terms of service: Consumer Usage policy © 2025 Anthropic PBC Claude is a space to think | Anthropic \\ Anthropic",
-      "imageUrl": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20House&backgroundColor=cactus",
+      "summary": "**Anthropic发布Claude Opus 4.6**，该模型在编码、长上下文处理（支持1M token上下文窗口Beta版）、多步推理和自主任务执行方面显著提升，在Terminal-Bench 2.0、Humanity’s Last Exam和GDPval-AA等专业评估中超越GPT-5.2等竞品最多190 Elo分；其新增的自适应思考、努力控制和上下文压缩功能使开发者能平衡智能、速度与成本；对普通人而言，Opus 4.6现已集成于Claude.ai、Excel和PowerPoint（预览），可更可靠地完成财务分析、文档创作等日常知识工作，且安全表现达行业前沿水平。",
+      "fullText": "Skip to main content Skip to footer Research Economic Futures Commitments Learn News Try Claude Announcements Introducing Claude Opus 4.6 Feb 5, 2026 We’re upgrading our smartest model. The new Claude Opus 4.6 improves on its predecessor’s coding skills. It plans more carefully, sustains agentic tasks for longer, can operate more reliably in larger codebases, and has better code review and debugging skills to catch its own mistakes. And, in a first for our Opus-class models, Opus 4.6 features a 1M token context window in beta. Opus 4.6 can also apply its improved abilities to a range of everyday work tasks: running financial analyses, doing research, and using and creating documents, spreadsheets, and presentations. Within Cowork , where Claude can multitask autonomously, Opus 4.6 can put all these skills to work on your behalf. The model’s performance is state-of-the-art on several evaluations. For example, it achieves the highest score on the agentic coding evaluation Terminal-Bench 2.0 and leads all other frontier models on Humanity’s Last Exam , a complex multidisciplinary reasoning test. On GDPval-AA —an evaluation of performance on economically valuable knowledge work tasks in finance, legal, and other domains 1 —Opus 4.6 outperforms the industry’s next-best model (OpenAI’s GPT-5.2) by around 144 Elo points, 2 and its own predecessor (Claude Opus 4.5) by 190 points. Opus 4.6 also performs better than any other model on BrowseComp , which measures a model’s ability to locate hard-to-find information online. As we show in our extensive system card , Opus 4.6 also shows an overall safety profile as good as, or better than, any other frontier model in the industry, with low rates of misaligned behavior across safety evaluations. Knowledge work Agentic search Coding Reasoning Opus 4.6 is state-of-the-art on real-world work tasks across several professional domains. Opus 4.6 gets the highest score in the industry for deep, multi-step agentic search. Opus 4.6 excels at real-world agentic coding and system tasks. Opus 4.6 extends the frontier of expert-level reasoning. In Claude Code, you can now assemble agent teams to work on tasks together. On the API, Claude can use compaction to summarize its own context and perform longer-running tasks without bumping up against limits. We’re also introducing adaptive thinking , where the model can pick up on contextual clues about how much to use its extended thinking, and new effort controls to give developers more control over intelligence, speed, and cost. We’ve made substantial upgrades to Claude in Excel , and we’re releasing Claude in PowerPoint in a research preview. This makes Claude much more capable for everyday work. Claude Opus 4.6 is available today on claude.ai , our API, and all major cloud platforms. If you’re a developer, use claude-opus-4-6 via the Claude API . Pricing remains the same at $5/$25 per million tokens; for full details, see our pricing page . We cover the model, our new product updates, our evaluations, and our extensive safety testing in depth below. First impressions We build Claude with Claude. Our engineers write code with Claude Code every day, and every new model first gets tested on our own work. With Opus 4.6, we’ve found that the model brings more focus to the most challenging parts of a task without being told to, moves quickly through the more straightforward parts, handles ambiguous problems with better judgment, and stays productive over longer sessions. Opus 4.6 often thinks more deeply and more carefully revisits its reasoning before settling on an answer. This produces better results on harder problems, but can add cost and latency on simpler ones. If you’re finding that the model is overthinking on a given task, we recommend dialing effort down from its default setting (high) to medium. You can control this easily with the /effort parameter . Here are some of the things our Early Access partners told us about Claude Opus 4.6, including its propensity to work autonomously without hand-holding, its success where previous models failed, and its effect on how teams work: Claude Opus 4.6 is the strongest model Anthropic has shipped. It takes complicated requests and actually follows through, breaking them into concrete steps, executing, and producing polished work even when the task is ambitious. For Notion users, it feels less like a tool and more like a capable collaborator. Sarah Sachs AI Lead , Notion Early testing shows Claude Opus 4.6 delivering on the complex, multi-step coding work developers face every day—especially agentic workflows that demand planning and tool calling. This starts unlocking long-horizon tasks at the frontier. Mario Rodriguez Chief Product Officer , GitHub Claude Opus 4.6 is a huge leap for agentic planning. It breaks complex tasks into independent subtasks, runs tools and subagents in parallel, and identifies blockers with real precision. Michele Catasta President , Replit Claude Opus 4.6 is the best model we've tested yet. Its reasoning and planning capabilities have been exceptional at powering our AI Teammates. It's also a fantastic coding model – its ability to navigate a large codebase and identify the right changes to make is state of the art. Amritansh Raghav Interim CTO , Asana Claude Opus 4.6 reasons through complex problems at a level we haven't seen before. It considers edge cases that other models miss and consistently lands on more elegant, well-considered solutions. We're particularly impressed with Opus 4.6 in Devin Review, where it's increased our bug catching rates. Scott Wu CEO , Cognition Claude Opus 4.6 feels noticeably better than Opus 4.5 in Windsurf, especially on tasks that require careful exploration like debugging and understanding unfamiliar codebases. We’ve noticed Opus 4.6 thinks longer, which pays off when deeper reasoning is needed. Jeff Wang CEO , Windsurf Claude Opus 4.6 represents a meaningful leap in long-context performance. In our testing, we saw it handle much larger bodies of information with a level of consistency that strengthens how we design and deploy complex research workflows. Progress in this area gives us more powerful building blocks to deliver truly expert-grade systems professionals can trust. Joel Hron Chief Technology Officer , Thomson Reuters Across 40 cybersecurity investigations, Claude Opus 4.6 produced the best results 38 of 40 times in a blind ranking against Claude 4.5 models. Each model ran end to end on the same agentic harness with up to 9 subagents and 100+ tool calls. Stian Kirkeberg Head of AI & ML , NBIM Claude Opus 4.6 is the new frontier on long-running tasks from our internal benchmarks and testing. It's also been highly effective at reviewing code. Michael Truell Co-founder & CEO , Cursor Claude Opus 4.6 achieved the highest BigLaw Bench score of any Claude model at 90.2%. With 40% perfect scores and 84% above 0.8, it’s remarkably capable for legal reasoning. Niko Grupen Head of AI Research , Harvey Claude Opus 4.6 autonomously closed 13 issues and assigned 12 issues to the right team members in a single day, managing a ~50-person organization across 6 repositories. It handled both product and organizational decisions while synthesizing context across multiple domains, and it knew when to escalate to a human. Yusuke Kaji General Manager, AI , Rakuten Claude Opus 4.6 is an uplift in design quality. It works beautifully with our design systems and it’s more autonomous, which is core to Lovable’s values. People should be creating things that matter, not micromanaging AI. Fabian Hedin Co-founder , Lovable Claude Opus 4.6 excels in high-reasoning tasks like multi-source analysis across legal, financial, and technical content. Box’s eval showed a 10% lift in performance, reaching 68% vs. a 58% baseline, and near-perfect scores in technical domains. Yashodha Bhavnani Head of AI , Box Claude Opus 4.6 generates complex, interactive apps and prototypes in Figma Make with an impressive creative range. The model translates detailed designs and multi-layered tasks into code on the first try, making it a powerful starting point for teams to explore and build ideas. Loredana Crisan Chief Design Officer , Figma Claude Opus 4.6 is the best Anthropic model we’ve tested. It understands intent with minimal prompting and went above and beyond, exploring and creating details I didn’t even know I wanted until I saw them. It felt like I was working with the model, not waiting on it. Paulo Arruda Staff Engineer , Shopify Both hands-on testing and evals show Claude Opus 4.6 is a meaningful improvement for design systems and large codebases, use cases that drive enormous enterprise value. It also one-shotted a fully functional physics engine, handling a large multi-scope task in a single pass. Eric Simons CEO , Bolt.new Claude Opus 4.6 is the biggest leap I’ve seen in months. I’m more comfortable giving it a sequence of tasks across the stack and letting it run. It’s smart enough to use subagents for the individual pieces. Jerry Tsui Staff Software Engineer , Ramp Claude Opus 4.6 handled a multi-million-line codebase migration like a senior engineer. It planned up front, adapted its strategy as it learned, and finished in half the time. Gregor Stewart Chief AI Officer , SentinelOne We only ship models in v0 when developers will genuinely feel the difference. Claude Opus 4.6 passed that bar with ease. Its frontier-level reasoning, especially with edge cases, helps v0 to deliver on our number-one aim: to let anyone elevate their ideas from prototype to production. Zeb Hermann General Manager, v0 , Vercel The performance jump with Claude Opus 4.6 feels almost unbelievable. Real-world tasks that were challenging for Opus [4.5] suddenly became easy. This feels like a watershed moment for spreadsheet agents on Shortcut. Nico Christie Co-founder & CTO , Shortcut.ai 01 / 20 Evaluating Claude Opus 4.6 Across agentic coding, computer use, tool use, search, and finance , Opus 4.6 is an industry-leading model, often by a wide margin. The table below shows how Claude Opus 4.6 compares to our previous models and to other industry models on a variety of benchmarks. Opus 4.6 is much better at retrieving relevant information from large sets of documents. This extends to long-context tasks, where it holds and tracks information over hundreds of thousands of tokens with less drift, and picks up buried details that even Opus 4.5 would miss. A common complaint about AI models is “ context rot ,” where performance degrades as conversations exceed a certain number of tokens. Opus 4.6 performs markedly better than its predecessors: on the 8-needle 1M variant of MRCR v2 —a needle-in-a-haystack benchmark that tests a model’s ability to retrieve information “hidden” in vast amounts of text—Opus 4.6 scores 76%, whereas Sonnet 4.5 scores just 18.5%. This is a qualitative shift in how much context a model can actually use while maintaining peak performance. All in all, Opus 4.6 is better at finding information across long contexts, better at reasoning after absorbing that information, and has substantially better expert-level reasoning abilities in general. Long-context retrieval Long-context reasoning Opus 4.6 shows significant improvement in long-context retrieval. Opus 4.6 excels at deep reasoning across long contexts. Finally, the charts below show how Claude Opus 4.6 performs on a variety of benchmarks that assess its software engineering skills, multilingual coding ability, long-term coherence, cybersecurity capabilities, and its life sciences knowledge. Root cause analysis Multilingual coding Long-term coherence Cybersecurity Life sciences Opus 4.6 excels at diagnosing complex software failures. Opus 4.6 resolves software engineering issues across programming languages. Opus 4.6 maintains focus over time and earns $3,050.53 more than Opus 4.5 on Vending-Bench 2. Opus 4.6 finds real vulnerabilities in codebases better than any other model. ",
+      "imageUrl": "https://cdn.sanity.io/images/4zrzovbb/website/01d06528567e4bd22c3ddedc87f609ee5716a009-2400x1260.png",
       "tags": [
         "LLM"
       ],
@@ -542,24 +548,24 @@
       "signalReasons": [
         "来源权威：官方/白名单",
         "跨源重复：1 个来源",
-        "模型评分：7/10，理由：Claude宣布永久无广告，强化了AI助手的可信度与专注性，对用户体验和行业伦理具有显著影响，属于主流产品战略的重要升级。",
-        "热度：321 / 评论 171"
+        "模型评分：9/10，理由：Claude Opus 4.6在代码生成、自主代理任务和1M上下文窗口上的突破，标志着LLM向真正自主开发能力迈进的关键一步，具有全球产业影响力。",
+        "热度：1343 / 评论 596"
       ],
-      "score": 11.37,
-      "publishedAt": "2026-02-04T12:08:49+00:00",
+      "score": 14.0,
+      "publishedAt": "2026-02-05T17:38:53+00:00",
       "authors": [
-        "meetpateltech"
+        "HellsMaddy"
       ]
     },
     {
-      "id": "rss_2202133647",
-      "title": "Codex 推出 App Server，支持流式工具调用与审批",
-      "url": "https://openai.com/index/unlocking-the-codex-harness",
+      "id": "hn_46903616",
+      "title": "Claude Opus 4.6多代理团队自主构建可编译Linux的C编译器",
+      "url": "https://www.anthropic.com/engineering/building-c-compiler",
       "type": "news",
-      "source": "OpenAI Blog",
-      "summary": "**Codex App Server 发布双向 JSON-RPC API**，支持嵌入 Codex 智能体并实现流式进度更新、工具调用、用户审批及代码差异对比等核心功能；该服务器为开发者提供标准化接口以集成高级 AI 代理能力，使应用能实时响应复杂任务执行过程——开发者可立即通过该 API 构建具备透明操作与可控交互的智能应用，提升自动化工作流的可靠性与用户体验。",
-      "fullText": "Learn how to embed the Codex agent using the Codex App Server, a bidirectional JSON-RPC API powering streaming progress, tool use, approvals, and diffs.",
-      "imageUrl": "",
+      "source": "Hacker News",
+      "summary": "**Anthropic研究人员利用16个Claude Opus 4.6代理组成的团队，在无人干预下耗时两周、花费约2万美元，成功从零构建出一个10万行Rust编写的C编译器**，该编译器可编译Linux 6.9内核及QEMU、FFmpeg等大型项目；这一实验验证了多代理并行协作在复杂软件开发中的可行性，通过任务锁机制、高质量测试套件和GCC作为Oracle等设计，解决了单代理效率低与合并冲突问题；对AI领域而言，这标志着LLM向长期、高复杂度自主工程迈出关键一步；普通开发者可关注其开源成果，未来或能借助类似框架自动化构建基础工具链。",
+      "fullText": "Skip to main content Skip to footer Research Economic Futures Commitments Learn News Try Claude Engineering at Anthropic Building a C compiler with a team of parallel Claudes Published Feb 05, 2026 We tasked Opus 4.6 using agent teams to build a C Compiler, and then (mostly) walked away. Here's what it taught us about the future of autonomous software development. Written by Nicholas Carlini, a researcher on our Safeguards team. I've been experimenting with a new approach to supervising language models that we’re calling \"agent teams.\" With agent teams, multiple Claude instances work in parallel on a shared codebase without active human intervention. This approach dramatically expands the scope of what's achievable with LLM agents. To stress test it, I tasked 16 agents with writing a Rust-based C compiler, from scratch, capable of compiling the Linux kernel. Over nearly 2,000 Claude Code sessions and $20,000 in API costs, the agent team produced a 100,000-line compiler that can build Linux 6.9 on x86, ARM, and RISC-V. The compiler is an interesting artifact on its own, but I focus here on what I learned about designing harnesses for long-running autonomous agent teams: how to write tests that keep agents on track without human oversight, how to structure work so multiple agents can make progress in parallel, and where this approach hits its ceiling. Enabling long-running Claudes Existing agent scaffolds like Claude Code require an operator to be online and available to work jointly. If you ask for a solution to a long and complex problem, the model may solve part of it, but eventually it will stop and wait for continued input—a question, a status update, or a request for clarification. To elicit sustained, autonomous progress, I built a harness that sticks Claude in a simple loop (if you’ve seen Ralph-loop, this should look familiar). When it finishes one task, it immediately picks up the next. (Run this in a container, not your actual machine). #!/bin/bash while true; do COMMIT=$(git rev-parse --short=6 HEAD) LOGFILE=\"agent_logs/agent_${COMMIT}.log\" claude --dangerously-skip-permissions \\ -p \"$(cat AGENT_PROMPT.md)\" \\ --model claude-opus-X-Y &> \"$LOGFILE\" done Copy In the agent prompt, I tell Claude what problem to solve and ask it to approach the problem by breaking it into small pieces, tracking what it’s working on, figuring out what to work on next, and to effectively keep going until it’s perfect. (On this last point, Claude has no choice. The loop runs forever—although in one instance, I did see Claude pkill -9 bash on accident, thus killing itself and ending the loop. Whoops!). Running Claude in parallel Running multiple instances in parallel can address two weaknesses of a single-agent harness: One Claude Code session can only do one thing at a time. Especially as the scope of a project expands, debugging multiple issues in parallel is far more efficient. Running multiple Claude agents allows for specialization. While a few agents are tasked to solve the actual problem at hand, other specialized agents can be invoked to (for example) maintain documentation, keep an eye on code quality, or solve specialized sub-tasks. My implementation of parallel Claude is bare-bones. A new bare git repo is created, and for each agent, a Docker container is spun up with the repo mounted to /upstream . Each agent clones a local copy to /workspace , and when it's done, pushes from its own local container to upstream. To prevent two agents from trying to solve the same problem at the same time, the harness uses a simple synchronization algorithm: Claude takes a \"lock\" on a task by writing a text file to current_tasks/ (e.g., one agent might lock current_tasks/parse_if_statement.txt, while another locks current_tasks/codegen_function_definition.txt). If two agents try to claim the same task, git's synchronization forces the second agent to pick a different one. Claude works on the task, then pulls from upstream, merges changes from other agents, pushes its changes, and removes the lock. Merge conflicts are frequent, but Claude is smart enough to figure that out. The infinite agent-generation-loop spawns a new Claude Code session in a fresh container, and the cycle repeats. This is a very early research prototype. I haven’t yet implemented any other method for communication between agents, nor do I enforce any process for managing high-level goals. I don’t use an orchestration agent. Instead, I leave it up to each Claude agent to decide how to act. In most cases, Claude picks up the “next most obvious” problem. When stuck on a bug, Claude will often maintain a running doc of failed approaches and remaining tasks. In the git repository of the project, you can read through the history and watch it take out locks on various tasks. Lessons from programming with Claude agent teams The scaffolding runs Claude in a loop, but that loop is only useful if Claude can tell how to make progress. Most of my effort went into designing the environment around Claude—the tests, the environment, the feedback—so that it could orient itself without me. These are the approaches I’ve found most helpful when orchestrating multiple Claude instances. Write extremely high-quality tests Claude will work autonomously to solve whatever problem I give it. So it’s important that the task verifier is nearly perfect, otherwise Claude will solve the wrong problem. Improving the testing harness required finding high-quality compiler test suites, writing verifiers and build scripts for open-source software packages, and watching for mistakes Claude was making, then designing new tests as I identified those failure modes. For example, near the end of the project, Claude started to frequently break existing functionality each time it implemented a new feature. To address this, I built a continuous integration pipeline and implemented stricter enforcement that allowed Claude to better test its work so that new commits can’t break existing code. Put yourself in Claude’s shoes I had to constantly remind myself that I was writing this test harness for Claude and not for myself, which meant rethinking many of my assumptions about how tests should communicate results. For example, each agent is dropped into a fresh container with no context and will spend significant time orienting itself, especially on large projects. Before we even reach the tests, to help Claude help itself, I included instructions to maintain extensive READMEs and progress files that should be updated frequently with the current status. I also kept in mind the fact that language models have inherent limitations, which, in this case, needed to be designed around. These include: Context window pollution: The test harness should not print thousands of useless bytes. At most, it should print a few lines of output and log all important information to a file so Claude can find it when needed. Logfiles should be easy to process automatically: if there are errors, Claude should write ERROR and put the reason on the same line so grep will find it. It helps to pre-compute aggregate summary statistics so Claude doesn't have to recompute them. Time blindness: Claude can't tell time and, left alone, will happily spend hours running tests instead of making progress. The harness prints incremental progress infrequently (to avoid polluting context) and includes a default --fast option that runs a 1% or 10% random sample. This subsample is deterministic per-agent but random across VMs, so Claude still covers all files but each agent can perfectly identify regressions. Make parallelism easy When there are many distinct failing tests, parallelization is trivial: each agent picks a different failing test to work on. After the test suite reached a 99% pass rate, each agent worked on getting a different small open-source project (e.g., SQlite, Redis, libjpeg, MQuickJS, Lua) to compile. But when agents started to compile the Linux kernel, they got stuck. Unlike a test suite with hundreds of independent tests, compiling the Linux kernel is one giant task. Every agent would hit the same bug, fix that bug, and then overwrite each other's changes. Having 16 agents running didn't help because each was stuck solving the same task. The fix was to use GCC as an online known-good compiler oracle to compare against. I wrote a new test harness that randomly compiled most of the kernel using GCC, and only the remaining files with Claude's C Compiler. If the kernel worked, then the problem wasn’t in Claude’s subset of the files. If it broke, then it could further refine by re-compiling some of these files with GCC. This let each agent work in parallel, fixing different bugs in different files, until Claude's compiler could eventually compile all files. (After this worked, it was still necessary to apply delta debugging techniques to find pairs of files that failed together but worked independently.) Multiple agent roles Parallelism also enables specialization. LLM-written code frequently re-implements existing functionality, so I tasked one agent with coalescing any duplicate code it found. I put another in charge of improving the performance of the compiler itself, and a third I made responsible for outputting efficient compiled code. I asked another agent to critique the design of the project from the perspective of a Rust developer, and make structural changes to the project to improve the overall code quality, and another to work on documentation. Stress testing the limits of agent teams This project was designed as a capability benchmark. I am interested in stress-testing the limits of what LLMs can just barely achieve today in order to help us prepare for what models will reliably achieve in the future. I’ve been using the C Compiler project as a benchmark across the entire Claude 4 model series. As I did with prior projects, I started by drafting what I wanted: a from-scratch optimizing compiler with no dependencies, GCC-compatible, able to compile the Linux kernel, and designed to support multiple backends. While I specified some aspects of the design (e.g., that it should have an SSA IR to enable multiple optimization passes) I did not go into any detail on how to do so. Previous Opus 4 models were barely capable of producing a functional compiler. Opus 4.5 was the first to cross a threshold that allowed it to produce a functional compiler which could pass large test suites, but it was still incapable of compiling any real large projects. My goal with Opus 4.6 was to again test the limits. Evaluation Over nearly 2,000 Claude Code sessions across two weeks, Opus 4.6 consumed 2 billion input tokens and generated 140 million output tokens, a total cost just under $20,000. Compared to even the most expensive Claude Max plans, this was an extremely expensive project. But that total is a fraction of what it would cost me to produce this myself—let alone an entire team. This was a clean-room implementation (Claude did not have internet access at any point during its development); it depends only on the Rust standard library. The 100,000-line compiler can build a bootable Linux 6.9 on x86, ARM, and RISC-V. It can also compile QEMU, FFmpeg, SQlite, postgres, redis, and has a 99% pass rate on most compiler test suites including the GCC torture test suite . It also passes the developer's ultimate litmus test: it can compile and run Doom. The compiler, however, is not without limitations. These include: It lacks the 16-bit x86 compiler that is necessary to boot Linux out of real mode. For this, it calls out to GCC (the x86_32 and x86_64 compilers are its own). It does not have its own assembler and linker; these are the very last bits that Claude started automating and are still somewhat buggy. The demo video was produced with a GCC assembler and linker. The compiler successfully builds many projects, but not all. It's not yet a drop-in replacement for a real compiler. The generated code is not",
+      "imageUrl": "https://cdn.sanity.io/images/4zrzovbb/website/6cc87859f5453e9481278681aa6409856d61153c-2400x1260.png",
       "tags": [
         "Agent"
       ],
@@ -567,47 +573,196 @@
       "signalReasons": [
         "来源权威：官方/白名单",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：OpenAI发布Codex App Server，提供双向JSON-RPC API支持工具调用与流式交互，是AI代理系统工程化的重要突破，具备战略级行业影响。",
+        "模型评分：10/10，理由：首次展示多智能体团队在无干预下从零构建可编译Linux内核的C编译器，是AI自主软件工程的里程碑事件，具有历史级变革意义。",
+        "热度：288 / 评论 273"
+      ],
+      "score": 12.9,
+      "publishedAt": "2026-02-05T19:07:51+00:00",
+      "authors": [
+        "modeless"
+      ]
+    },
+    {
+      "id": "rss_8543333499",
+      "title": "GPT-5+Ginkgo自动化实验室将无细胞蛋白合成成本降低40%",
+      "url": "https://openai.com/index/gpt-5-lowers-protein-synthesis-cost",
+      "type": "news",
+      "source": "OpenAI Blog",
+      "summary": "**OpenAI的GPT-5与Ginkgo Bioworks云自动化平台结合，在自主实验室中通过闭环实验将无细胞蛋白合成成本降低40%**，展示了AI驱动科学发现的效率突破；该成果凸显了大模型在生物制造等高成本研发领域的降本增效潜力；对普通人而言，此类技术有望加速药物和生物材料开发，未来可通过关注合成生物学进展了解相关应用落地。",
+      "fullText": "An autonomous lab combining OpenAI’s GPT-5 with Ginkgo Bioworks’ cloud automation cut cell-free protein synthesis costs by 40% through closed-loop experimentation.",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Industry"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源权威：官方/白名单",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：GPT-5与生物制造平台结合实现40%成本降低，开创AI驱动生命科学实验闭环的新范式，对全球生物医药产业有深远影响。",
         "热度：0 / 评论 0"
       ],
       "score": 10.0,
-      "publishedAt": "2026-02-04T13:00:00+00:00",
+      "publishedAt": "2026-02-05T11:00:00+00:00",
       "authors": []
     },
     {
-      "id": "github_microsoft_qlib",
-      "title": "微软 Qlib 集成 RD-Agent，推动量化投资 AI 自动化",
-      "url": "https://github.com/microsoft/qlib",
+      "id": "rss_1892820505",
+      "title": "OpenAI推出企业AI代理管理平台Frontier",
+      "url": "https://openai.com/index/introducing-openai-frontier",
       "type": "news",
-      "source": "GitHub Trending",
-      "summary": "**微软开源 Qlib 平台**，这是一个面向量化投资的 AI 研发框架，支持监督学习、市场动态建模与强化学习等多种机器学习范式，并集成 RD-Agent 实现量化研究全流程自动化；该平台帮助金融从业者从策略探索到生产部署高效利用 AI 技术——量化研究人员可借助 Qlib 快速实验新型 AI 模型，降低算法交易系统的开发门槛与迭代成本。",
-      "fullText": "",
-      "imageUrl": "https://opengraph.githubassets.com/383182298891a434babcb473c08631aa39803caa57214be41520ab0119af0668/microsoft/qlib",
+      "source": "OpenAI Blog",
+      "summary": "**OpenAI推出企业级平台Frontier，用于构建、部署和管理具备共享上下文、统一权限与治理机制的AI代理团队**，旨在解决企业中多代理协作的协调与安全难题；该平台填补了AI代理规模化应用的基础设施空白，推动AI从单点工具向组织级智能体演进；企业用户可借此更安全地集成AI代理到工作流，而普通从业者应关注其如何重塑企业软件协作模式。",
+      "fullText": "OpenAI Frontier is an enterprise platform for building, deploying, and managing AI agents with shared context, onboarding, permissions, and governance.",
+      "imageUrl": "",
       "tags": [
         "Agent",
-        "Industry",
-        "Research",
-        "Open Source"
+        "Industry"
       ],
       "paperCategory": "",
       "signalReasons": [
-        "来源：GitHub Trending",
+        "来源权威：官方/白名单",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：微软推出AI量化投资平台，融合强化学习与金融建模，推动AI在资本市场的深度应用，具战略级影响。",
-        "热度：36518 / 评论 0"
+        "模型评分：9/10，理由：OpenAI Frontier平台系统化支持企业级AI代理管理，推动组织级AI应用落地，是迈向企业智能化基础设施的关键一步。",
+        "热度：0 / 评论 0"
       ],
-      "score": 9.9,
-      "publishedAt": "2026-02-04T23:36:42.393626+00:00",
+      "score": 10.0,
+      "publishedAt": "2026-02-05T06:00:00+00:00",
       "authors": []
     },
     {
-      "id": "rss_8842896970",
-      "title": "沃尔夫斯堡全队启用 ChatGPT，提升效率不失足球本色",
-      "url": "https://openai.com/index/vfl-wolfsburg",
+      "id": "rss_4318326935",
+      "title": "微软发布Paza：首个低资源语言语音识别基准与社区共建模型",
+      "url": "https://www.microsoft.com/en-us/research/blog/paza-introducing-automatic-speech-recognition-benchmarks-and-models-for-low-resource-languages/",
+      "type": "news",
+      "source": "Microsoft Research",
+      "summary": "**微软研究院发布Paza语音识别系统及PazaBench评测基准，覆盖39种非洲语言，包含52个模型，并在肯尼亚六种本地语言（如斯瓦希里语、马赛语）上通过真实农户在移动设备上的测试进行优化**；该工作首次建立低资源语言ASR的标准化评测体系，强调社区参与和真实场景验证，弥补了主流语音技术对全球多数语言的忽视；对普通人而言，这意味着未来更多非英语用户可通过语音与AI交互，相关模型和基准已开放供研究者使用以推动包容性AI发展。",
+      "fullText": "At a glance Microsoft Research releases PazaBench and Paza automatic speech recognition models, advancing speech technology for low resource languages. Human-centered pipeline for low-resource languages: Built for and tested by communities, Paza is an end-to-end, continuous pipeline that elevates historically under-represented languages and makes speech models usable in real-world, low-resource contexts. First-of-its-kind ASR leaderboard, starting with African languages: Pazabench is the first automatic speech recognition (ASR) leaderboard for low-resource languages. Launching with 39 African languages and 51 state-of-the-art models, it tracks three key metrics across leading public and community datasets. Human-centered&nbsp;Paza&nbsp;ASR&nbsp;models:&nbsp;Minimal&nbsp;data, fine-tuned&nbsp;ASR models&nbsp;grounded in&nbsp;real-world&nbsp;testing&nbsp;with farmers on everyday mobile devices, covering&nbsp;six&nbsp;Kenyan languages:&nbsp;Swahili,&nbsp;Dholuo, Kalenjin, Kikuyu, Maasai,&nbsp;and Somali. According to the 2025&nbsp;Microsoft AI Diffusion Report&nbsp;approximately one&nbsp;in&nbsp;six&nbsp;people globally had used a generative AI product.&nbsp;Yet for billions of&nbsp;people,&nbsp;the promise of voice interaction still falls short, and&nbsp;whilst&nbsp;AI is becoming increasingly multilingual, a key question&nbsp;remains:&nbsp;Do&nbsp;these models&nbsp;actually work&nbsp;for all languages and the people who rely on them?&nbsp;This challenge is one we first confronted through&nbsp;Project Gecko—a collaboration between Microsoft Research and&nbsp;Digital&nbsp;Green (opens in new tab),&nbsp;where&nbsp;field teams across Africa and India focused on building usable AI tools for farmers. Gecko revealed how often speech systems fail in real‑world, low‑resource environments—where many languages go&nbsp;unrecognized&nbsp;and non‑Western accents are frequently misunderstood. Yet speech remains the primary medium of communication globally. For communities across Kenya, Africa, and beyond, this mismatch creates cascading challenges: without foundational data&nbsp;representing&nbsp;their languages and cultures, innovation stalls, and the digital and AI divides widen.&nbsp; Paza addresses this with a human-centered speech models pipeline. Through&nbsp;PazaBench, it benchmarks low-resource languages using both public and community-sourced data, and through Paza&nbsp;models, it&nbsp;fine-tunes&nbsp;speech models&nbsp;to deliver outsized gains in mid- and low-resource languages, evaluating with community testers using real devices in real contexts. Upcoming playbooks complement this work by sharing practical guidance on&nbsp;dataset creation,&nbsp;fine-tuning&nbsp;approaches&nbsp;with minimal data&nbsp;and evaluation considerations, introducing a continuous pipeline that&nbsp;enables&nbsp;researchers&nbsp;and practitioners to build and evaluate systems grounded in real human use. How Project Gecko informed Paza’s design In addition to building cost-effective, adaptable AI systems, the extensive&nbsp;fieldwork on&nbsp;Project Gecko highlighted an important lesson:&nbsp;Building usable speech&nbsp;models&nbsp;in low‑resource settings is not only a data problem,&nbsp;but also&nbsp;a design and evaluation problem.&nbsp;For AI systems to be useful, they must work in local languages, support hands‑free interaction through voice, text, and video, and deliver information in formats that fit real-world environments, that is, on low-bandwidth&nbsp;mobile devices,&nbsp;in&nbsp;noisy settings, and&nbsp;for&nbsp;varying literacy levels.&nbsp;&nbsp; These insights shaped the design of Paza, from&nbsp;the&nbsp;Swahili&nbsp;phrase&nbsp;paza&nbsp;sauti&nbsp;meaning “to project,” or “to raise your voice.” &nbsp;The name reflects our intent: rather than simply adding more languages to existing systems,&nbsp;Paza is about co-creating speech technologies in partnership with the communities who use them.&nbsp;Guided by this principle, Paza puts human use&nbsp;first,&nbsp;which&nbsp;enables&nbsp;model improvement.&nbsp; Azure AI Foundry Labs Get a glimpse of potential future directions for AI, with these experimental technologies from Microsoft Research. Azure AI Foundry Opens in a new tab PazaBench: The first ASR leaderboard for low-resource languages PazaBench is the first automatic speech recognition (ASR) leaderboard dedicated to low‑resource languages. It launches&nbsp;with&nbsp;initial&nbsp;coverage&nbsp;for&nbsp;39 African languages and benchmarks&nbsp;52 state‑of‑the‑art ASR and language models, including newly released Paza ASR models for six Kenyan languages. The platform aggregates leading public and community datasets from diverse styles of speech including conversational, scripted read aloud, unscripted, broadcast news, and domain-specific data—into one easy‑to‑explore platform per language.&nbsp;This makes it easier for&nbsp;researchers, developers, and product teams to easily assess which models perform best across underserved languages and diverse regions, understand trade-offs between speed and accuracy&nbsp;while&nbsp;identifying&nbsp;where gaps persist.&nbsp; PazaBench tracks three core metrics: Character Error Rate (CER) which is important for languages with rich word forms, where meaning is built by combining word parts, therefore errors at the character level can significantly impact meaning Word Error Rate (WER) for word-level transcript accuracy RTFx (Inverse Real‑Time Factor) which measures how fast transcription runs relative to real‑time audio duration. More than scores,&nbsp;PazaBench&nbsp;standardizes evaluation to prioritize dataset gaps,&nbsp;identify&nbsp;underperforming languages, and highlight where localized models beat&nbsp;wider coverage ASR models—offering early evidence of&nbsp;the value of African‑centric innovation. Explore PazaBench To contribute to the benchmark, request additional language evaluation on the leaderboard. Paza ASR Models: Built with and for Kenyan languages The Paza ASR models consist of three fine-tuned ASR models built on top of state‑of‑the‑art model architectures. Each model targets Swahili, a mid-resource language and five low‑resource Kenyan languages; Dholuo, Kalenjin, Kikuyu, Maasai and Somali. The models are fine-tuned on public and curated proprietary datasets. Fine‑tuning the three models allowed us to explore supportive approaches toward a shared goal: building speech recognition systems that are usable for local contexts starting with the six Kenyan languages and bridging the gaps of multi-lingual and multi-modal video question and answering through the MMCT agent. (opens in new tab) See the MMCT agent in action in the field Early versions of two models in Kikuyu and Swahili were deployed on mobile devices and tested directly with farmers in real‑world settings, enabling the team to observe how the models performed with everyday use. Farmers provided in‑the‑moment feedback on accuracy, usability, and relevance, highlighting where transcripts broke down, which errors were most disruptive, and what improvements would make the models more helpful in practice. This feedback loop directly informed subsequent fine‑tuning, ensuring model improvements were driven not only by benchmark scores, but by the needs and expectations of the communities they are intended to serve. Explore Paza Collection Here Here is how Paza models compare to&nbsp;three&nbsp;state-of-the-art&nbsp;ASR&nbsp;models&nbsp;today: Figure 1: Character Error Rate (CER) comparison across the Kenyan languages for several state‑of‑the‑art ASR models including the Paza models. Lower CER indicates better transcription performance. Figure 2: Word Error Rate (WER) comparison across the Kenyan languages for several state‑of‑the‑art ASR models including the Paza models. Lower WER indicates better transcription performance. 1) Paza‑Phi‑4‑Multimodal‑Instruct Microsoft’s Phi‑4 multimodal‑instruct (opens in new tab) is a next‑generation small language model built to reason across audio, text, and vision. With Paza, we extend its audio capabilities, adapting a powerful multimodal architecture into a high‑quality automatic speech recognition (ASR) system for low‑resource African languages. Fine‑tuned on unified multilingual speech datasets, the model was optimized specifically for transcription in the six languages. The model preserves its underlying transformer architecture and multi-modal capabilities, while selectively fine-tuning only the audio‑specific components, enabling strong cross‑lingual generalization. As the results below show, this model delivers consistent improvements in transcription quality across all six languages. Figure 3: Character Error Rate (CER) comparison across&nbsp;the six&nbsp;languages for the base&nbsp;model&nbsp;versus the finetuned Paza model.&nbsp;Lower CER&nbsp;indicates&nbsp;better transcription performance. Figure 4: Word Error Rate (WER) comparison across the six languages for the base model versus the finetuned Paza model. Lower WER indicates better transcription performance. Test the model here 2) Paza‑MMS‑1B‑All This model is fine-tuned on Meta’s mms-1b-all model, which employs a large-scale Wav2Vec2.0-style encoder with lightweight language-specific adapters to enable efficient multilingual specialization. For this release, each of the six language adapters was fine‑tuned independently on curated low‑resource datasets, allowing targeted adaptation while keeping the shared encoder largely frozen. As shown in the figures below, this model improves transcription accuracy while maintaining the model’s strong cross‑lingual generalization. Figure 5: Character Error Rate (CER)&nbsp;comparison across the six&nbsp;languages for the base model&nbsp;versus&nbsp;the finetuned Paza model.&nbsp;Lower CER&nbsp;indicates&nbsp;better transcription performance. Figure 6: Word Error Rate (WER)&nbsp;comparison across the six&nbsp;languages for the base model&nbsp;versus the finetuned Paza model.&nbsp;Lower WER indicates better transcription performance. Join the Research Early Access Program 3) Paza‑Whisper‑Large‑v3‑Turbo This model is finetuned on OpenAI’s whisper-large-v3-turbo&nbsp;base model. Whisper is a transformer-based encoder–decoder model which&nbsp;delivers robust automatic speech recognition (ASR)&nbsp;capabilities. This model was fine‑tuned on the entire unified multilingual ASR dataset,&nbsp;on&nbsp;the mentioned six languages, to encourage cross-lingual generalization.&nbsp;In addition, an extra post‑processing step was applied to address the known Whisper hallucination failure modes, improving transcription reliability. As shown below, this release achieves improved transcription accuracy while retaining Whisper’s robustness. Figure 7: Character Error Rate (CER) comparison across the six&nbsp;languages for the base model versus the finetuned Paza model.&nbsp;Lower CER&nbsp;indicates&nbsp;better transcription performance. Figure 8: Word Error Rate (WER) comparison across the six&nbsp;languages for the base model versus the finetuned Paza model.&nbsp;Lower WER indicates better transcription performance. Test the model here Where do we go from here AI is reshaping how the world communicates. Designing with people, not just for them, means looking beyond the languages that are already well‑served. We plan to expand PazaBench beyond African languages and evaluate state‑of‑the‑art ASR models across&nbsp;more low‑resource languages globally. The Paza ASR models are an early step; truly supporting small and under‑represented languages requires dedicated datasets, strong local partnerships, and rigorous evaluation. Meaningful progress depends on sustained collaboration with the communities who speak these languages, and expanding responsibly means prioritizing depth and quality over broad but shallow coverage.&nbsp; As we continue this work,&nbsp;we&#8217;re&nbsp;distilling our methods into a forthcoming playbook to help the broader ecosystem curate data",
+      "imageUrl": "https://www.microsoft.com/en-us/research/wp-content/uploads/2026/01/Paza-TWLIFB-1200x627-1.jpg",
+      "tags": [
+        "Audio",
+        "Industry",
+        "Research",
+        "Benchmark"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源权威：官方/白名单",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：开创首个低资源语言ASR基准与模型，推动全球语音技术公平性，具重大社会与产业影响。",
+        "热度：0 / 评论 0"
+      ],
+      "score": 9.5,
+      "publishedAt": "2026-02-05T05:07:55+00:00",
+      "authors": [
+        "Mercy Muchai, Kevin  Chege, Nick  Mumero, Stephanie Nyairo"
+      ]
+    },
+    {
+      "id": "rss_1755498968",
+      "title": "OpenAI推Trusted Access for Cyber：可控开放前沿网络安全AI能力",
+      "url": "https://openai.com/index/trusted-access-for-cyber",
       "type": "news",
       "source": "OpenAI Blog",
-      "summary": "**德甲沃尔夫斯堡俱乐部全面部署 ChatGPT**，通过赋能员工而非仅限试点项目，系统性提升运营效率、创意产出与知识共享，同时坚守足球专业身份；这一举措表明生成式 AI 可深度融入传统体育组织的核心业务流程——俱乐部工作人员可借助 AI 加速数据分析、内容创作与决策支持，而球迷和公众则可能体验到更敏捷、个性化的服务与互动。",
-      "fullText": "By focusing on people, not pilots, the Bundesliga club is scaling efficiency, creativity, and knowledge—without losing its football identity.",
+      "summary": "**OpenAI推出Trusted Access for Cyber框架，通过基于信任的访问机制，在扩大前沿网络安全能力（如漏洞分析）使用范围的同时强化防滥用保障**；该举措试图平衡AI赋能安全研究与防止恶意使用的矛盾，为高风险AI能力部署提供新范式；安全研究人员可申请受控访问以提升工作效率，而公众则受益于更负责任的AI安全工具生态，减少技术被武器化的风险。",
+      "fullText": "OpenAI introduces Trusted Access for Cyber, a trust-based framework that expands access to frontier cyber capabilities while strengthening safeguards against misuse.",
+      "imageUrl": "",
+      "tags": [
+        "Industry"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源权威：官方/白名单",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：OpenAI推出可信访问框架以规范前沿网络安全能力，平衡创新与风险，对全球AI治理与企业安全策略具有重要引导作用。",
+        "热度：0 / 评论 0"
+      ],
+      "score": 9.4,
+      "publishedAt": "2026-02-05T10:00:00+00:00",
+      "authors": []
+    },
+    {
+      "id": "rss_8391686313",
+      "title": "GPT-5.3-Codex 发布：最强具身编码模型问世",
+      "url": "https://openai.com/index/gpt-5-3-codex-system-card",
+      "type": "news",
+      "source": "OpenAI Blog",
+      "summary": "OpenAI 发布 **GPT-5.3-Codex**，这是目前最强大的具身编码模型，融合了 GPT-5.2-Codex 的前沿代码生成能力与 GPT-5.2 的推理和专业知识，显著提升 AI 在复杂编程任务中的自主决策水平；该模型代表了 agentic coding（具身编码）方向的关键进展，使开发者能构建更可靠、上下文感知更强的 AI 编程助手；对普通程序员而言，这意味着未来可借助此类模型更高效地完成需理解业务逻辑与系统架构的编码任务，而不仅限于片段补全。",
+      "fullText": "GPT‑5.3-Codex is the most capable agentic coding model to date, combining the frontier coding performance of GPT‑5.2-Codex with the reasoning and professional knowledge capabilities of GPT‑5.2.",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Agent",
+        "Reasoning"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源权威：官方/白名单",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：GPT-5.3-Codex被定位为最强大代理编程模型，整合推理与专业知识，代表当前代码生成领域的顶尖水平，具备重大行业影响。",
+        "热度：0 / 评论 0"
+      ],
+      "score": 9.4,
+      "publishedAt": "2026-02-05T00:00:00+00:00",
+      "authors": []
+    },
+    {
+      "id": "hn_46902909",
+      "title": "Opus 4.6 一次性挖出 500 个开源零日漏洞",
+      "url": "https://www.axios.com/2026/02/05/anthropic-claude-opus-46-software-hunting",
+      "type": "news",
+      "source": "Hacker News",
+      "summary": "安全工具 **Opus 4.6** 在开源代码库中一次性发现 **500 个零日漏洞**，凸显自动化静态分析在保障软件供应链安全中的关键作用；这一成果表明，现代 AI 驱动的漏洞挖掘技术已能大规模识别未知风险，对维护全球开源生态安全具有紧迫现实意义；开发者应主动采用此类工具扫描依赖项，并及时更新组件以降低被攻击面。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源：Hacker News",
+        "跨源重复：1 个来源",
+        "模型评分：10/10，理由：Opus 4.6在开源代码中发现500个零日漏洞，是AI驱动安全检测的重大突破，具有全球级行业变革意义。",
+        "热度：174 / 评论 104"
+      ],
+      "score": 8.39,
+      "publishedAt": "2026-02-05T18:25:05+00:00",
+      "authors": [
+        "speckx"
+      ]
+    },
+    {
+      "id": "rss_0538573076",
+      "title": "Rethinking imitation learning with Predictive Inverse Dynamics Models",
+      "url": "https://www.microsoft.com/en-us/research/blog/rethinking-imitation-learning-with-predictive-inverse-dynamics-models/",
+      "type": "news",
+      "source": "Microsoft Research",
+      "summary": "微软研究院提出 **Predictive Inverse Dynamics Models (PIDMs)**，通过预测合理未来状态并反推所需动作，重构模仿学习范式；该方法在仅用传统行为克隆（Behavior Cloning）五分之一演示数据的情况下，在 2D 导航和 3D 游戏（如 Bleeding Edge）任务中实现更高成功率，核心在于将“复制动作”转为“理解意图”；其重要性在于显著降低对高质量人类示范数据的依赖，为机器人、游戏 AI 等数据稀缺场景提供高效学习路径。",
+      "fullText": "At a glance Imitation learning becomes easier when an AI&nbsp;agent&nbsp;understands why an action is taken. Predictive Inverse Dynamics Models (PIDMs)&nbsp;predict&nbsp;plausible future states,&nbsp;clarifying the direction of behavior during imitation&nbsp;learning. Even imperfect predictions reduce ambiguity,&nbsp;making&nbsp;it clearer which action makes sense&nbsp;in the moment. This makes PIDMs far more data‑efficient than traditional approaches. Imitation&nbsp;learning&nbsp;teaches&nbsp;AI agents by example: show the agent recordings of how people perform a task and let it&nbsp;infer&nbsp;what to do.&nbsp;The&nbsp;most common&nbsp;approach,&nbsp;Behavior Cloning&nbsp;(BC),&nbsp;frames this as a simple question: “Given the current state&nbsp;of the environment, what action&nbsp;would&nbsp;an expert take?” In practice, this is done through supervised learning, where the states serve as inputs and expert actions as outputs. While simple in principle, BC often requires large demonstration datasets to account for the natural variability in human behavior, but collecting such datasets can be costly and difficult in real-world settings. Predictive Inverse Dynamics Models (PIDMs) offer a different take on imitation learning by changing how agents interpret human behavior. Instead of directly mapping states to actions, PIDMs break down the problem into two subproblems: predicting what should happen next and inferring an appropriate action to go from the current state to the predicted future state. While PIDMs often outperform BC, it has not been clear why they work so well, motivating a closer look at the mechanisms behind their performance. In the paper, “When does predictive inverse dynamics outperform behavior cloning?” we show how this two-stage approach enables PIDMs to learn effective policies from far fewer demonstrations than BC. By grounding the selection process in a plausible future, PIDMs provide a clearer basis for choosing an action&nbsp;during inference. In practice, this can mean achieving comparable performance with as few as one-fifth the demonstrations required by BC, even when predictions are imperfect. Figure 1. BC vs. PIDM architectures.&nbsp;(Top) Behavior&nbsp;Cloning learns&nbsp;how to perform&nbsp;a direct mapping from the current state to an action. (Bottom)&nbsp;PIDMs add a state predictor that predicts future&nbsp;states. They&nbsp;then use an inverse dynamics model to predict the action&nbsp;required&nbsp;to move from the current state towards that future state. Both approaches share a common latent representation through a shared state encoder. How PIDMs rethink imitation PIDMs’ approach to imitation learning consists of two core elements: a model that forecasts plausible future states, and an inverse dynamics model (IDM) that predicts the action needed to move from the present state toward that future. Instead of asking, “What action would an expert take?” PIDMs effectively ask, “What would an expert try to achieve, and what action would lead to it?” This shift turns the information in the current observation (e.g., video frame) into a coherent sense of direction, reducing ambiguity about intent and making action prediction easier. video series On Second Thought A video series with Sinead Bovell built around the questions everyone’s asking about AI. With expert voices from across Microsoft, we break down the tension and promise of this rapidly changing technology, exploring what’s evolving and what’s possible. Explore the series Opens in a new tab Real-world validation in a 3D gameplay environment To evaluate PIDMs under realistic conditions, we trained agents on human gameplay demonstrations in a visually rich video game. These conditions include operating directly from raw video input, interacting with a complex 3D environment in real time at 30 frames per second, and handling visual artifacts and unpredictable system delays. The agents ran from beginning to end, taking video frames as input and continuously deciding which buttons to press and how to move the joysticks. Instead of relying on a hand-coded set of game variables and rules, the model worked directly from visual input, using past examples to predict what comes next and choosing actions that moved play in that direction. We ran all experiments on a cloud gaming platform, which introduced additional delays and visual distortions. Despite these challenges, the PIDM agents consistently matched human patterns of play and achieved high success rates across tasks, as shown in Video 1 below and Videos 2 and 3 in the appendix. Video 1. A player&nbsp;(left)&nbsp;and a PIDM agent&nbsp;(right)&nbsp;side by side playing the game&nbsp;Bleeding Edge.&nbsp;Both&nbsp;navigate the same trajectory,&nbsp;jumping over obstacles and engaging&nbsp;with&nbsp;nonplayer&nbsp;characters. Despite&nbsp;network delays, the&nbsp;agent closely matches the player&#8217;s timing and&nbsp;movement&nbsp;in real time. Why and when PIDMs outperform BC Of course, AI agents do not have access to future outcomes. They can only generate predictions based on available data, and those predictions are sometimes wrong. This creates a central trade‑off for PIDMs. On one hand, anticipating where the agent should be heading can clarify what action makes sense in the present. Knowing the intended direction helps narrow an otherwise ambiguous choice. On the other hand, inaccurate predictions can occasionally steer the model toward the wrong action. The key insight is that these effects are not symmetric. While prediction errors introduce some risk, reducing ambiguity in the present often matters more. Our theoretical analysis shows that even with imperfect predictions, PIDMs outperform BC as long as the prediction error remains modest. If future states were known perfectly, PIDMs would outperform BC outright. In practice, this means that clarifying intent often matters more than accurately predicting the future. That advantage is most evident in the situations where BC struggles: where human behavior varies and actions are driven by underlying goals rather than by what is immediately visible on the screen. BC requires many demonstrations because each example is noisy and open to multiple interpretations. PIDMs, by contrast, sharpen each demonstration by linking actions to the future states they aim to reach. As a result, PIDMs can learn effective action strategies from far fewer examples. Evaluation To test these ideas under realistic conditions, we designed a sequence of experiments that begins with a simple, interpretable 2D environment (Video 4 in the appendix) and culminates in a complex 3D video game. We trained both BC and PIDM on very small datasets, ranging from one to fifty demonstrations in the 2D environment and from five to thirty for the 3D video game. Across all tasks, PIDM reached high success rates with far fewer demonstrations than BC. In the 2D setting, BC needed two to five times more data to match PIDM’s performance (Figure 2). In the 3D game, BC needed 66% more data to achieve comparable results (Video 5 in the appendix). Figure 2. Performance gains in the 2D environment. As the number of training demonstrations increases, PIDM consistently achieves higher success rates than BC across all four tasks. Curves show mean performance, with shading indicating variability across 20 experiments for reproducibility. Takeaway: Intent matters in imitation learning The main message of our investigation is simple: imitation becomes easier when intent is made explicit. Predicting a plausible future, even an imperfect one, helps resolve ambiguity about which action makes sense right now, much like driving more confidently in the fog when the driver already knows where the road is headed. PIDM shifts imitation learning from pure copying toward goal-oriented action. This approach has limits. If predictions of future states become too unreliable, they can mislead the model about the intended next move. In those cases, the added uncertainty can outweigh the benefit of reduced ambiguity, causing PIDM to underperform BC. But when predictions are reasonably accurate, reframing action prediction as “How do I get there from here?” helps explain why learning from small, messy human datasets can be surprisingly effective. In settings where data is expensive and demonstrations are limited, that shift in perspective can make a meaningful difference. Appendix: Visualizations and results (videos) A player, a naïve action-replay baseline, and a PIDM agent playing Bleeding Edge Video&nbsp;2. (Left)&nbsp;The player completes the task under normal conditions. (Middle)&nbsp;The baseline replays the recorded actions at their original timestamps, which initially appears to work. Because the game runs on a cloud gaming platform, however, random network delays quickly push the replay&nbsp;out of sync, causing the trajectory to fail. (Right) Under the same conditions, the PIDM agent behaves differently. Instead of naively replaying actions, it continuously interprets visual input, predicts how the behavior is likely to unfold, and adapts its actions in real time. This allows it to correct delays, recover from deviations, and successfully reproduce the task in settings where naïve replay inevitably fails. A player and a PIDM agent&nbsp;performing a complex task in&nbsp;Bleeding Edge Video&nbsp;3.&nbsp;In this video, the task&nbsp;exhibits&nbsp;strong partial observability: correct behavior depends on whether a location is being visited for the first or second time. For example,&nbsp;in the first encounter, the agent proceeds straight up the ramp; on the second, it turns right toward the bridge. Similarly, it may jump over a box on the first pass but walk around it on the second. The PIDM agent reproduces this trajectory reliably, using coarse future guidance to select actions in the correct direction. Visualization of the 2D navigation environment Video&nbsp;4.&nbsp;These&nbsp;videos show ten demonstrations for each of four tasks: Four Room, Zigzag, Maze, and Multiroom. In all cases, the setup is the same: the character (blue box) moves through the environment and must reach a sequence of goals (red squares).&nbsp;The overlaid trajectories visualize the paths the player took; the models never see these paths. Instead, they observe only their character’s current location, the position of all goals, and whether each goal has already been reached. Because these demonstrations come from real players, no two paths are identical: players pause, take detours, or correct small mistakes along the way. That natural variability is exactly what the models must learn to handle. PIDM vs. BC in a 3D&nbsp;environment Video&nbsp;5. The PIDM agent achieves an 85% success rate with only fifteen demonstrations used in training. The BC agent struggles to stay on track and levels off around 60%.&nbsp;The contrast illustrates how differently the two approaches perform when training data is limited. Opens in a new tabThe post Rethinking imitation learning with Predictive Inverse Dynamics Models appeared first on Microsoft Research.",
+      "imageUrl": "https://www.microsoft.com/en-us/research/wp-content/uploads/2026/01/SmartReplay-TWLIFB-1200x627-1.jpg",
+      "tags": [
+        "Industry",
+        "Research"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源权威：官方/白名单",
+        "跨源重复：1 个来源",
+        "模型评分：7/10，理由：提出新型模仿学习框架，提升数据效率，具有显著技术影响力，属SOTA研究进展。",
+        "热度：0 / 评论 0"
+      ],
+      "score": 8.3,
+      "publishedAt": "2026-02-05T17:00:00+00:00",
+      "authors": [
+        "Pallavi Choudhury, Lukas Sch&auml;fer, Chris Lovett, Katja Hofmann, Sergio Valcarcel Macua"
+      ]
+    },
+    {
+      "id": "rss_4308052796",
+      "title": "家庭借助 ChatGPT 辅助癌症治疗决策",
+      "url": "https://openai.com/index/navigating-health-questions",
+      "type": "news",
+      "source": "OpenAI Blog",
+      "summary": "一个家庭在儿子面临关键癌症治疗决策时，**结合 ChatGPT 与医生专业意见**，更充分地理解治疗方案、副作用及预后信息；这体现了大语言模型作为医疗信息辅助工具的潜力——帮助患者家庭梳理复杂医学知识、准备问题清单，但必须强调其不能替代临床判断；公众在使用 AI 处理健康问题时，应始终以权威医疗建议为准，将 AI 用于知情沟通而非诊断。",
+      "fullText": "A family shares how ChatGPT helped them prepare for critical cancer treatment decisions for their son alongside expert guidance from his doctors.",
       "imageUrl": "",
       "tags": [
         "LLM"
@@ -616,285 +771,141 @@
       "signalReasons": [
         "来源权威：官方/白名单",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：VfL Wolfsburg将ChatGPT全面部署于俱乐部运营，展示AI在传统体育组织中的规模化落地能力，具有典型示范意义。",
+        "模型评分：6/10，理由：案例展示了AI在医疗决策中的辅助价值，虽具现实意义，但属于典型应用场景，尚未触及技术或行业范式变革。",
         "热度：0 / 评论 0"
       ],
-      "score": 9.4,
-      "publishedAt": "2026-02-04T00:00:00+00:00",
+      "score": 8.2,
+      "publishedAt": "2026-02-05T00:00:00+00:00",
       "authors": []
     },
     {
-      "id": "rss_9250664580",
-      "title": "NVIDIA Nemotron 将文档转为实时商业智能",
-      "url": "https://blogs.nvidia.com/blog/ai-agents-intelligent-document-processing/",
+      "id": "rss_3645555626",
+      "title": "EnCompass 框架让 AI Agent 自动回溯找最优解",
+      "url": "https://news.mit.edu/2026/helping-ai-agents-search-to-get-best-results-from-llms-0205",
       "type": "news",
-      "source": "NVIDIA Blog",
-      "summary": "**Nemotron Labs 推出基于 NVIDIA Nemotron 开源模型的智能文档处理方案**，利用 AI 代理与 RAG 技术自动解析 PDF、网页、表格等多模态文档中的图表、文本与结构信息，转化为可追溯、可操作的实时商业智能；该系统已在金融纠纷处理（Justt）、电子签约（DocuSign）和科研文献分析（Edison Scientific）等场景落地，显著提升高风险行业对非结构化数据的利用效率——企业可借此构建活知识库，普通员工能快速从海量文档中精准获取证据与洞察，减少手动整理并增强决策可信度。",
-      "fullText": "Editor’s note: This post is part of the Nemotron Labs blog series, which explores how the latest open models, datasets and training techniques help businesses build specialized AI systems and applications on NVIDIA platforms. Each post highlights practical ways to use an open stack to deliver value in production — from transparent research copilots to scalable AI agents. Businesses today face the challenge of uncovering valuable insights buried within a wide variety of documents — including reports, presentations, PDFs, web pages and spreadsheets. Often, teams piece together insights by manually reviewing files, copying data into spreadsheets, building dashboards and using basic search or template-based optical character recognition (OCR) tools that often miss important details in complex media. Intelligent document processing is an AI-powered workflow that automatically reads, understands and extracts insights from documents. It interprets rich formats inside those documents — including tables, charts, images and text — using AI agents and techniques like retrieval-augmented generation (RAG) to turn the multimodal content into insights that other multi-agent systems and people can easily use. With NVIDIA Nemotron open models and GPU-accelerated libraries, organizations can build AI-powered document intelligence systems for research, financial services, legal workflows and more. These open models, datasets and training recipes have powered strong results on leaderboards such as MTEB, MMTEB and ViDoRe V3, benchmarks for evaluating multilingual and multimodal retrieval models. Teams can choose from among the best models for tasks like search and question answering. How Document Processing Streamlines Business Intelligence Document intelligence systems that can pull meaning from complex layouts, scale to huge file libraries and show exactly where an answer came from are incredibly useful in high-stakes environments. These systems: Understand rich document content, moving beyond simple text scraping to capture information from charts, tables, figures and mixed-language pages and treating documents as a human would by recognizing structure, relationships and context​​. Handle large quantities of shifting data, ingesting and processing massive collections of documents in parallel, and keeping knowledge bases continuously up to date.​​ Find exactly what users need, helping AI agents pinpoint the most relevant passages, tables or paragraphs to a query so they can respond with precision and accuracy.​​ Show the evidence behind answers by providing citations to specific pages or charts so teams can gain transparency and auditability, which is critical in regulated industries.​​ The result is a shift from static document archives to living knowledge systems that directly power business intelligence, customer experiences and operational workflows. Document Intelligence at Work Intelligent document processing systems built on NVIDIA Nemotron RAG models, Nemotron Parse and accelerated computing are already reshaping how organizations across industries gain insights from their documents.​​ Justt: AI-Native Chargeback Management and Dispute Optimization In financial services, payment disputes create significant revenue loss and operational complexity for merchants, largely because the evidence needed to handle them lives in unstructured formats. Transaction logs, customer communications and policy documents are often fragmented across systems and difficult to process at scale, making dispute handling slow, manual and costly. Justt.ai provides an AI-driven platform that automates the full chargeback lifecycle at scale. The platform connects directly to payment service providers and merchant data sources to ingest transaction data, customer interactions and policies, then automatically assembles dispute-specific evidence that aligns with card network and issuer requirements. The platform’s AI-powered dispute optimization, powered by Nemotron Parse, applies predictive analytics to determine which chargebacks to fight or accept, and how to optimize each response for maximum net recovery. Leading hospitality operators like HEI Hotels &amp; Resorts use the platform to automate dispute handling across their properties, recapturing revenue while maintaining guest relationships. By pairing document-centric intelligence with decision automation, merchants can recapture a significant portion of revenue lost to illegitimate chargebacks while reducing manual review effort.​ Read about how Justt’s chargeback management tool autonomously processes financial data to handle disputes for merchants. Docusign: Scaling Agreement Intelligence Docusign is the global leader in Intelligent Agreement Management, handling millions of transactions every day for more than 1.8 million customers and over 1 billion users. Agreements are the foundation of every business, but the critical information they contain are often buried inside pages of documents. To surface the information, Docusign needed high-fidelity extraction of tables, text and metadata from complex documents like PDFs so organizations could understand and act on obligations, risks and opportunities faster. Docusign is evaluating Nemotron Parse for deeper contract understanding at scale. Running on NVIDIA GPUs, the model combines advanced AI with layout detection and OCR. The system can reliably interpret complex tables and reconstruct tables with required information. This reduces the need for manual corrections and helps ensure that even the most complex contracts are processed with the speed and accuracy their customers expect. With this foundation, Docusign will transform agreement repositories into structured data that powers contract search, analysis and AI-driven workflows — turning agreements into business assets that help organizations and their teams improve visibility, reduce risk and make faster decisions. Edison Scientific: Research Across Massive Literature Scale Edison Scientific’s Kosmos AI Scientist helps researchers navigate complex scientific landscapes to synthesize literature, identify connections and surface evidence.​ Edison needed a way to rapidly and accurately extract structured information from large volumes of PDFs, including equations, tables and figures that traditional information parsing methods often mishandle.​ By integrating the NVIDIA Nemotron Parse model into its PaperQA pipeline, Edison can decompose research papers, index key concepts and ground responses in specific passages, improving both throughput and answer quality for scientists.​​ This approach turns a sprawling research corpus into an interactive, queryable knowledge engine that accelerates hypothesis generation and literature review.​ The high efficiency of Nemotron Parse enables cost-efficient serving at scale, allowing Edison’s team to unlock the whole multimodal pipeline. Designing an Intelligent Document Processing Application With NVIDIA Technologies A robust, domain-specific document intelligence pipeline requires technologies that can handle data extraction, embedding and reranking, while keeping the data secure and compliant with regulations.​​ Extraction: Nemotron extraction and OCR models rapidly ingest multimodal PDFs, text, tables, graphs and images to convert them into structured, machine-readable content while preserving layout and semantics. Embedding: Nemotron embedding models convert passages, entities and visual elements into vector representations tuned for document retrieval, enabling semantically accurate search.​​ Reranking: Nemotron reranking models evaluate candidate passages to ensure the most relevant content is surfaced as context for large language models (LLMs), improving answer fidelity and reducing hallucinations.​​ Parsing: Nemotron Parse models decipher document semantics to extract text and tables with precise spatial grounding and correct reading flow. Overcoming layout variability, they turn unstructured documents into actionable data that enhances the accuracy of LLMs and agentic workflows. These capabilities are packaged as NVIDIA NIM microservices and foundation models that run efficiently on NVIDIA GPUs, allowing teams to scale from proof of concept to production while keeping sensitive data within their chosen cloud or data center environment. The most effective AI systems use a mix of frontier models and open source models like NVIDIA Nemotron, with an LLM router analyzing each task and automatically selecting the model best suited for it. This approach keeps performance strong while managing computing costs and improving efficiency. Get Started With NVIDIA Nemotron Access a step-by-step tutorial on how to build a document processing pipeline with RAG capabilities. Explore how Nemotron RAG can power specialized agents tailored for different industries.​ Plus, experiment with Nemotron RAG models and the NVIDIA NeMo Retriever open library, available on GitHub and Hugging Face, as well as Nemotron Parse on Hugging Face. Join the community of developers building with the NVIDIA Blueprint for Enterprise RAG — trusted by a dozen industry-leading AI Data Platform providers and available now on build.nvidia.com, GitHub and the NGC catalog. Stay up to date on agentic AI, NVIDIA Nemotron and more by subscribing to NVIDIA AI news, joining the community and following NVIDIA AI on LinkedIn, Instagram, X and Facebook. Explore self-paced video tutorials and livestreams.",
-      "imageUrl": "https://blogs.nvidia.com/wp-content/uploads/2026/02/nemotron-labs-featured.jpg",
+      "source": "MIT CSAIL News",
+      "summary": "MIT 与 Asari AI 联合推出 **EnCompass 框架**，通过自动回溯和并行尝试机制，让 AI agent 在调用大语言模型（LLM）出错时自主探索更优执行路径；该框架将搜索策略与工作流解耦，使开发者仅需添加少量注解即可实现复杂容错逻辑，在代码迁移等任务中减少 80% 相关编码量，并提升准确率 15–40%；这对普通开发者意味着能更高效构建鲁棒的 LLM 应用，尤其适用于代码转换、科研实验设计等高容错需求场景。",
+      "fullText": "Whether you’re a scientist brainstorming research ideas or a CEO hoping to automate a task in human resources or finance, you’ll find that artificial intelligence tools are becoming the assistants you didn’t know you needed. In particular,&nbsp;many professionals are tapping into the talents of semi-autonomous software systems called AI agents, which can call on AI at specific points to solve problems and complete tasks.AI agents are particularly effective when they use large language models (LLMs) because those systems are powerful, efficient, and adaptable. One way to program such technology is by describing in code what you want your system to do (the “workflow”), including when it should use an LLM. If you were a software company trying to revamp your old codebase to use a more modern programming language for better optimizations and safety, you might build a system that uses an LLM to translate the codebase one file at a time, testing each file as you go.But what happens when LLMs make mistakes? You’ll want the agent to backtrack to make another attempt, incorporating lessons it learned from previous mistakes. Coding this up can take as much effort as implementing the original agent; if your system for translating a codebase contained thousands of lines of code, then you’d be making thousands of lines of code changes or additions to support the logic for backtracking when LLMs make mistakes.&nbsp;To save programmers time and effort, researchers with MIT’s Computer Science and Artificial Intelligence Laboratory (CSAIL) and Asari AI have developed a framework called “EnCompass.”&nbsp;With EnCompass, you no longer have to make these changes yourself. Instead, when EnCompass runs your program, it automatically backtracks if LLMs make mistakes. EnCompass can also make clones of the program runtime to make multiple attempts in parallel in search of the best solution. In full generality, EnCompass searches over the different possible paths your agent could take as a result of the different possible outputs of all the LLM calls, looking for the path where the LLM finds the best solution.Then, all you have to do is to annotate the locations where you may want to backtrack or clone the program runtime, as well as record any information that may be useful to the strategy used to search over the different possible execution paths of your agent (the search strategy). You can then separately specify the search strategy — you could either use one that EnCompass provides out of the box or, if desired, implement your own custom search strategy.“With EnCompass, we’ve separated the search strategy from the underlying workflow of an AI agent,” says lead author Zhening Li ’25, MEng ’25, who is an MIT electrical engineering and computer science (EECS) PhD student, CSAIL researcher, and research consultant at Asari AI. “Our framework lets programmers easily experiment with different search strategies to find the one that makes the AI agent perform the best.”&nbsp;EnCompass was used for agents implemented as Python programs that call LLMs, where it demonstrated noticeable code savings. EnCompass reduced coding effort for implementing search by up to 80 percent across agents, such as an agent for translating code repositories and for discovering transformation rules of digital grids. In the future, EnCompass could enable agents to tackle large-scale tasks, including managing massive code libraries, designing and carrying out science experiments, and creating blueprints for rockets and other hardware.Branching outWhen programming your agent, you mark particular operations — such as calls to an LLM — where results may vary. These annotations are called “branchpoints.” If you imagine your agent program as generating a single plot line of a story, then adding branchpoints turns the story into a choose-your-own-adventure story game, where branchpoints are locations where the plot branches into multiple future plot lines.&nbsp;You can then specify the strategy that EnCompass uses to navigate that story game, in search of the best possible ending to the story. This can include launching parallel threads of execution or backtracking to a previous branchpoint when you get stuck in a dead end.Users can also plug-and-play a few common search strategies provided by EnCompass out of the box, or define their own custom strategy. For example, you could opt for Monte Carlo tree search, which builds a search tree by balancing exploration and exploitation, or beam search, which keeps the best few outputs from every step. EnCompass makes it easy to experiment with different approaches to find the best strategy to maximize the likelihood of successfully completing your task.The coding efficiency of EnCompassSo just how code-efficient is EnCompass for adding search to agent programs? According to researchers’ findings, the framework drastically cut down how much programmers needed to add to their agent programs to add search, helping them experiment with different strategies to find the one that performs the best.For example, the researchers applied EnCompass to an agent that translates a repository of code from the Java programming language, which is commonly used to program apps and enterprise software, to Python. They found that implementing search with EnCompass — mainly involving adding branchpoint annotations and annotations that record how well each step did — required 348 fewer lines of code (about 82 percent) than implementing it by hand. They also demonstrated how EnCompass enabled them to easily try out different search strategies, identifying the best strategy to be a two-level beam search algorithm, achieving an accuracy boost of 15 to 40 percent across five different repositories at a search budget of 16 times the LLM calls made by the agent without search.“As LLMs become a more integral part of everyday software, it becomes more important to understand how to efficiently build software that leverages their strengths and works around their limitations,” says co-author Armando Solar-Lezama, who is an MIT professor of EECS and CSAIL principal investigator. “EnCompass is an important step in that direction.”The researchers add that EnCompass targets agents where a program specifies the steps of the high-level workflow; the current iteration of their framework is less applicable to agents that are entirely controlled by an LLM. “In those agents, instead of having a program that specifies the steps and then using an LLM to carry out those steps, the LLM itself decides everything,” says Li. “There is no underlying programmatic workflow, so you can execute inference-time search on whatever the LLM invents on the fly. In this case, there’s less need for a tool like EnCompass that modifies how a program executes with search and backtracking.”Li and his colleagues plan to extend EnCompass to more general search frameworks for AI agents. They also plan to test their system on more complex tasks to refine it for real-world uses, including at companies. What’s more, they’re evaluating how well EnCompass helps agents work with humans on tasks like brainstorming hardware designs or translating much larger code libraries. For now, EnCompass is a powerful building block that enables humans to tinker with AI agents more easily, improving their performance.“EnCompass arrives at a timely moment, as AI-driven agents and search-based techniques are beginning to reshape workflows in software engineering,” says Carnegie Mellon University Professor Yiming Yang, who wasn’t involved in the research. “By cleanly separating an agent’s programming logic from its inference-time search strategy, the framework offers a principled way to explore how structured search can enhance code generation, translation, and analysis. This abstraction provides a solid foundation for more systematic and reliable search-driven approaches to software development.”&nbsp;&nbsp;Li and Solar-Lezama wrote the paper with two Asari AI researchers: Caltech Professor Yisong Yue, an advisor at the company; and senior author Stephan Zheng, who is the founder and CEO. Their work was supported by Asari AI.The team’s work was presented at the Conference on Neural Information Processing Systems (NeurIPS) in December.",
+      "imageUrl": "",
       "tags": [
+        "LLM",
         "Agent"
       ],
       "paperCategory": "",
       "signalReasons": [
         "来源权威：官方/白名单",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：NVIDIA博客揭示AI Agent如何将文档转化为实时商业智能，推动企业级AI应用落地，具备显著产业变革潜力。",
+        "模型评分：8/10，理由：提出高效AI代理搜索机制，提升LLM应用效能，对AI自动化领域有实用价值和广泛影响。",
         "热度：0 / 评论 0"
       ],
-      "score": 8.9,
-      "publishedAt": "2026-02-04T16:00:36+00:00",
+      "score": 7.4,
+      "publishedAt": "2026-02-05T21:30:00+00:00",
       "authors": [
-        "Moon Chung"
+        "Alex Shipps | MIT CSAIL"
       ]
-    },
-    {
-      "id": "rss_6478907325",
-      "title": "Gemini 月活用户超 7.5 亿，Google 加速 AI 消费端布局",
-      "url": "https://techcrunch.com/2026/02/04/googles-gemini-app-has-surpassed-750m-monthly-active-users/",
-      "type": "news",
-      "source": "TechCrunch AI",
-      "summary": "**Google 宣布 Gemini 应用月活用户突破 7.5 亿**，较上季度增长 1 亿，在与 ChatGPT（约 8.1 亿）和 Meta AI（近 5 亿）的竞争中加速追赶；这一增长由 Gemini 3 模型升级及免费+订阅双轨策略驱动，凸显大模型消费端普及速度——普通用户可通过手机应用免费使用先进 AI 功能，而新推出的 $7.99/月 Google AI Plus 计划将进一步降低高阶服务门槛，推动日常生产力工具向 AI 原生体验演进。",
-      "fullText": "Google’s Gemini app has surpassed 750M monthly active users | TechCrunch TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture More from TechCrunch Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Crunchboard Contact Us Image Credits: Jagmeet Singh / TechCrunch AI Google’s Gemini app has surpassed 750M monthly active users Lauren Forristal 2:53 PM PST · February 4, 2026 Google’s AI chatbot Gemini has surpassed 750 million monthly active users (MAUs), according to the company’s fourth-quarter 2025 earnings . This figure illustrates the rapid consumer adoption of Gemini, which has quickly become a prominent player in the AI space. Last quarter, Google reported 650 million monthly active users for Gemini, indicating substantial growth in a short period. In comparison, Meta AI has reported nearly 500 million monthly users. However, while Gemini is gaining traction, it still trails behind its biggest rival, ChatGPT, which is estimated to have around 810 million MAUs in late 2025. The recently revealed number comes on the heels of the launch of Gemini 3, which showcases the company’s most advanced model yet, providing responses that the company claims exhibit an unprecedented level of depth and nuance. CEO Sundar Pichai highlighted that the introduction of Gemini 3 in AI mode was a “positive driver” for the company’s growth and emphasized that continued investment and iteration will maintain this momentum. Google recently rolled out a more affordable plan, the Google AI Plus , priced at $7.99 per month. The plan is expected to drive further growth by appealing to budget-conscious consumers, although it was made available too recently to have any influence on the quarterly figures. “We are focused on a free tier and subscriptions and seeing great growth,” Philipp Schindler, Google’s chief business officer, said during the call to investors. Gemini’s growth is particularly notable given Alphabet’s overall financial performance. The company has surpassed $400 billion in annual revenue for the first time this quarter. Google attributes the achievement to the expansion of its AI division, which has seen increased demand. Recently, Google introduced the latest generation of its TPU AI accelerator chip, called Ironwood , to compete with Nvidia. Techcrunch event TechCrunch Founder Summit 2026: Tickets Live On June 23 in Boston , more than 1,100 founders come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Save up to $300 on your pass or save up to 30% with group tickets for teams of four or more. TechCrunch Founder Summit: Tickets Live On June 23 in Boston , more than 1,100 founders come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Save up to $300 on your pass or save up to 30% with group tickets for teams of four or more. Boston, MA | June 23, 2026 REGISTER NOW “The launch of Gemini 3 was a major milestone, and we have great momentum. Our first party models, like Gemini, now process over 10 billion tokens per minute via direct API use by our customers, and the Gemini App has grown to over 750 million monthly active users. Search saw more usage than ever before, with AI continuing to drive an expansionary moment,” Pichai stated in today’s release. Topics AI , Apps , google gemini Lauren Forristal Lauren covers media, streaming, apps and platforms at TechCrunch. You can contact or verify outreach from Lauren by emailing laurenf.techcrunch@gmail.com or via encrypted message at laurenforris22.25 on Signal. View Bio October 13-15 San Francisco, CA Tickets are live at the lowest rates of the year. Save up to $680 on your pass now. Meet investors. Discover your next portfolio company. Hear from 250+ tech leaders , dive into 200+ sessions , and explore 300+ startups building what’s next. Don’t miss these one-time savings. REGISTER NOW Most Popular Fintech CEO and Forbes 30 Under 30 alum has been charged for alleged fraud Lucas Ropek Notepad++ says Chinese government hackers hijacked its software updates for months Zack Whittaker Meet the new European unicorns of 2026 Anna Heim Nvidia CEO pushes back against report that his company’s $100B OpenAI investment has stalled Anthony Ha OpenClaw’s AI assistants are now building their own social network Anna Heim Elon Musk’s SpaceX, Tesla, and xAI in talks to merge, according to reports Amanda Silberling Kirsten Korosec Waymo robotaxi hits a child near an elementary school in Santa Monica Sean O'Kane Loading the next article Error loading the next article X LinkedIn Facebook Instagram youTube Mastodon Threads Bluesky TechCrunch Staff Contact Us Advertise Crunchboard Jobs Site Map Terms of Service Privacy Policy RSS Terms of Use Code of Conduct Tesla Earnings Zoox Moltbot Snap Specs Amazon Go Tech Layoffs ChatGPT © 2025 TechCrunch Media LLC.",
-      "imageUrl": "https://techcrunch.com/wp-content/uploads/2026/01/google-gemini-jagmeet-singh-techcrunch.jpg?resize=1200%2C630",
-      "tags": [
-        "LLM",
-        "Industry"
-      ],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：TechCrunch AI",
-        "跨源重复：1 个来源",
-        "模型评分：10/10，理由：Gemini用户突破7.5亿，是首个达到此规模的通用型AI应用，标志着AI从技术实验进入主流消费时代的历史性里程碑。",
-        "热度：0 / 评论 0"
-      ],
-      "score": 6.5,
-      "publishedAt": "2026-02-04T22:53:46+00:00",
-      "authors": [
-        "Lauren Forristal"
-      ]
-    },
-    {
-      "id": "rss_6799215741",
-      "title": "Positron融资2.3亿美元挑战英伟达AI芯片",
-      "url": "https://techcrunch.com/2026/02/04/exclusive-positron-raises-230m-series-b-to-take-on-nvidias-ai-chips/",
-      "type": "news",
-      "source": "TechCrunch AI",
-      "summary": "半导体初创公司Positron宣布完成2.3亿美元B轮融资，估值达10亿美元，由Arena Private Wealth、Jump Trading和Unless共同领投，卡塔尔投资局（QIA）参与战略投资；该公司计划加速部署其高能效AI推理芯片Atlas，并于2027年初推出下一代Asimov芯片，其性能对标英伟达H100但功耗不到三分之一。此举正值全球AI企业寻求降低对英伟达依赖之际，OpenAI等大客户已开始探索替代方案，而卡塔尔则借投资布局中东“主权AI”基础设施。对普通用户而言，更多高性能低功耗芯片的出现可能推动AI应用成本下降，尤其在视频处理与实时推理场景中带来更高效的服务。",
-      "fullText": "Exclusive: Positron raises $230M Series B to take on Nvidia's AI chips | TechCrunch TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture More from TechCrunch Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Crunchboard Contact Us Image Credits: Positron AI Exclusive: Positron raises $230M Series B to take on Nvidia’s AI chips Rebecca Bellan 12:18 AM PST · February 4, 2026 Semiconductor startup Positron has secured $230 million in Series B funding, TechCrunch has exclusively learned. The outfit plans to use the capital to speed up deployment of its high-speed memory chips, a critical component for the chips used for AI workloads, sources familiar with the matter told TechCrunch. The round, which brought Positron to a $1 billion valuation, was co-led by Arena Private Wealth, Jump Trading, and Unless, with strategic investment from Qatar Investment Authority (QIA), the country’s sovereign wealth fund, which has been increasingly focused on building out AI infrastructure, the sources said. The Reno-based startup’s Series B comes as hyperscalers and AI firms push to reduce their reliance on longstanding leader Nvidia. These firms include OpenAI, which, despite being one of Nvidia’s largest and most important customers, is reportedly unsatisfied with some of the firm’s latest AI chips and has been seeking alternatives since last year. Meanwhile, Qatar, through QIA, has been accelerating a broader push into so-called “sovereign” AI infrastructure — a priority repeatedly underscored at Web Summit Qatar in Doha this week. Several sources told TechCrunch the country views compute capacity as critical to staying competitive on the global economic stage, and is positioning itself as a leading AI services hub in the Middle East, fueling interest in startups like Positron. The strategy is already taking shape through major commitments, including a $20 billion AI infrastructure joint venture with Brookfield Asset Management that was announced in December. Positron’s fundraise brings the three-year-old startup’s total capital raised to just over $300 million. The startup previously raised $75 million last year from investors including Valor Equity Partners, Atreides Management, DFJ Growth, Flume Ventures, and Resilience Reserve. The company claims its first-generation chip, Atlas, manufactured in Arizona, can match the performance of Nvidia’s H100 GPUs for less than a third of the power. Positron is focused on inference — computing needed to run AI models for real-world applications — rather than training large language models, positioning the company well as demand surges for inference hardware as businesses increasingly shift focus from building large models to deploying them at scale. Techcrunch event TechCrunch Founder Summit 2026: Tickets Live On June 23 in Boston , more than 1,100 founders come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Save up to $300 on your pass or save up to 30% with group tickets for teams of four or more. TechCrunch Founder Summit: Tickets Live On June 23 in Boston , more than 1,100 founders come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Save up to $300 on your pass or save up to 30% with group tickets for teams of four or more. Boston, MA | June 23, 2026 REGISTER NOW With the funding, Positron aims to accelerate its roadmap to ship its next-generation Asimov silicon chip, targeting production in early 2027. Sources tell TechCrunch that beyond its memory capabilities, Positron’s chips also perform strongly in high-frequency and video-processing workloads. TechCrunch has reached out to Positron for more information. This article has been updated to include updates from Positron about co-lead investors and valuation. Correction: A previous version of this article misstated the date of QIA’s partnership with Brookfield. Topics AI , AI chips , Exclusive , Fundraising , positron , semiconductors , Startups Rebecca Bellan Senior Reporter Rebecca Bellan is a senior reporter at TechCrunch where she covers the business, policy, and emerging trends shaping artificial intelligence. Her work has also appeared in Forbes, Bloomberg, The Atlantic, The Daily Beast, and other publications. You can contact or verify outreach from Rebecca by emailing rebecca.bellan@techcrunch.com or via encrypted message at rebeccabellan.491 on Signal. View Bio October 13-15 San Francisco, CA Tickets are live at the lowest rates of the year. Save up to $680 on your pass now. Meet investors. Discover your next portfolio company. Hear from 250+ tech leaders , dive into 200+ sessions , and explore 300+ startups building what’s next. Don’t miss these one-time savings. REGISTER NOW Most Popular Fintech CEO and Forbes 30 Under 30 alum has been charged for alleged fraud Lucas Ropek Notepad++ says Chinese government hackers hijacked its software updates for months Zack Whittaker Meet the new European unicorns of 2026 Anna Heim Nvidia CEO pushes back against report that his company’s $100B OpenAI investment has stalled Anthony Ha OpenClaw’s AI assistants are now building their own social network Anna Heim Elon Musk’s SpaceX, Tesla, and xAI in talks to merge, according to reports Amanda Silberling Kirsten Korosec Waymo robotaxi hits a child near an elementary school in Santa Monica Sean O'Kane Loading the next article Error loading the next article X LinkedIn Facebook Instagram youTube Mastodon Threads Bluesky TechCrunch Staff Contact Us Advertise Crunchboard Jobs Site Map Terms of Service Privacy Policy RSS Terms of Use Code of Conduct Tesla Earnings Zoox Moltbot Snap Specs Amazon Go Tech Layoffs ChatGPT © 2025 TechCrunch Media LLC.",
-      "imageUrl": "https://techcrunch.com/wp-content/uploads/2026/02/positron.jpg?w=1200",
-      "tags": [],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：TechCrunch AI",
-        "跨源重复：1 个来源",
-        "模型评分：10/10，理由：Positron融资$230M挑战Nvidia芯片霸权，背后是全球算力多元化布局的战略动向，或将重塑AI硬件格局，具有历史性意义。",
-        "热度：0 / 评论 0"
-      ],
-      "score": 6.5,
-      "publishedAt": "2026-02-04T08:18:51+00:00",
-      "authors": [
-        "Rebecca Bellan"
-      ]
-    },
-    {
-      "id": "rss_1972251559",
-      "title": "Altman怒斥Anthropic超级碗广告“不诚实”",
-      "url": "https://www.theverge.com/news/874084/ai-chatgpt-claude-super-bowl-ads-openai-anthropic",
-      "type": "news",
-      "source": "The Verge AI",
-      "summary": "OpenAI CEO Sam Altman在X平台公开批评Anthropic在超级碗广告中对其广告策略的描绘“明显不诚实”，强调ChatGPT的广告测试仅面向免费用户且内容与回答完全隔离，不会影响模型输出；他同时指责Anthropic试图通过限制开发者使用其代码模型、主导AI使用规则来推行“威权式”控制，而OpenAI则致力于普惠AI与民主化决策。这场争论凸显了AI行业在商业模式与治理理念上的根本分歧：一方主张通过订阅制服务高净值用户，另一方则坚持免费访问以扩大AI普及。普通用户需关注不同平台的数据使用政策，并根据自身对广告容忍度与功能需求选择AI助手。",
-      "fullText": "Sam Altman responds to Anthropic’s ‘funny’ Super Bowl ads | The Verge Skip to main content The homepage The Verge The Verge logo. The Verge The Verge logo. Tech Reviews Science Entertainment AI Policy Hamburger Navigation Button The homepage The Verge The Verge logo. Hamburger Navigation Button Navigation Drawer The Verge The Verge logo. Login / Sign Up close Close Search Tech Expand Amazon Apple Facebook Google Microsoft Samsung Business See all tech Gadgets Expand Laptops Phones TVs Headphones Speakers Wearables See all gadgets Reviews Expand Smart Home Reviews Phone Reviews Tablet Reviews Headphone Reviews See all reviews AI Expand OpenAI Anthropic See all AI Verge Shopping Expand Buying Guides Deals Gift Guides See all shopping Policy Expand Antitrust Politics Law Security See all policy Science Expand Space Energy Environment Health See all science Entertainment Expand TV Shows Movies Audio See all entertainment Gaming Expand Xbox PlayStation Nintendo See all gaming Streaming Expand Disney HBO Netflix YouTube Creators See all streaming Transportation Expand Electric Cars Autonomous Cars Ride-sharing Scooters See all transportation Features Verge Video Expand TikTok YouTube Instagram Podcasts Expand Decoder The Vergecast Version History Newsletters Expand The Verge Daily Installer Verge Deals Notepad Optimizer Regulator The Stepback Archives Store Subscribe Facebook Threads Instagram Youtube RSS The Verge The Verge logo. Sam Altman responds to Anthropic’s ‘funny’ Super Bowl ads Comments Drawer Comments Loading comments Getting the conversation ready... News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI Business Close Business Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Business Sam Altman responds to Anthropic’s ‘funny’ Super Bowl ads The OpenAI boss said Anthropic’s portrayal of how ads impact ChatGPT is ‘clearly dishonest.’ The OpenAI boss said Anthropic’s portrayal of how ads impact ChatGPT is ‘clearly dishonest.’ by Richard Lawler Close Richard Lawler Senior News Editor Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Richard Lawler and Hayden Field Close Hayden Field Senior AI Reporter Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Hayden Field Feb 4, 2026, 9:03 PM UTC Link Share Gift Image: The Verge Sam Altman responded to Anthropic’s new Super Bowl ad in an X post on Wednesday, saying the OpenAI competitor’s campaign is “clearly dishonest,” and called it “on brand” for Anthropic to “doublespeak.” “We would obviously never run ads in the way Anthropic depicts them,” he wrote. “We are not stupid and we know our users would reject that.” You can read his statement in full, below. Anthropic, founded in 2021 by ex-OpenAI research executives who reportedly left over differences in opinions on AI safety and mission, doesn’t mention OpenAI or ChatGPT by name in its Super Bowl Sunday ad campaign. But in contrast to OpenAI’s January news that it would soon start testing ads , Anthropic says, “Our users won’t see ‘sponsored’ links adjacent to their conversations with Claude; nor will Claude’s responses be influenced by advertisers or include third-party product placements our users did not ask for.” OpenAI says its ad test will only appear for logged-in users on free or ChatGPT Go accounts, while maintaining that “Ads do not influence the answers ChatGPT gives you. Answers are optimized based on what’s most helpful to you. Ads are always separate and clearly labeled.” According to Altman, OpenAI’s Super Bowl ad is “about builders, and how anyone can now build anything.” Related Humans are infiltrating the social network for AI bots Get ready for the AI ad-pocalypse Sam Altman (X): First, the good part of the Anthropic ads: they are funny, and I laughed. But I wonder why Anthropic would go for something so clearly dishonest. Our most important principle for ads says that we won’t do exactly this; we would obviously never run ads in the way Anthropic depicts them. We are not stupid and we know our users would reject that. I guess it’s on brand for Anthropic doublespeak to use a deceptive ad to critique theoretical deceptive ads that aren’t real, but a Super Bowl ad is not where I would expect it. More importantly, we believe everyone deserves to use AI and are committed to free access, because we believe access creates agency. More Texans use ChatGPT for free than total people use Claude in the US, so we have a differently-shaped problem than they do. (If you want to pay for ChatGPT Plus or Pro, we don’t show you ads.) Anthropic serves an expensive product to rich people. We are glad they do that and we are doing that too, but we also feel strongly that we need to bring AI to billions of people who can’t pay for subscriptions. Maybe even more importantly: Anthropic wants to control what people do with AI—they block companies they don’t like from using their coding product (including us), they want to write the rules themselves for what people can and can’t use AI for, and now they also want to tell other companies what their business models can be. We are committed to broad, democratic decision making in addition to access. We are also committed to building the most resilient ecosystem for advanced AI. We care a great deal about safe, broadly beneficial AGI, and we know the only way to get there is to work with the world to prepare. One authoritarian company won’t get us there on their own, to say nothing of the other obvious risks. It is a dark path. As for our Super Bowl ad: it’s about builders, and how anyone can now build anything. We are enjoying watching so many people switch to Codex. There have now been 500,000 app downloads since launch on Monday, and we think builders are really going to love what’s coming in the next few weeks. I believe Codex is going to win. We will continue to work hard to make even more intelligence available for lower and lower prices to our users. This time belongs to the builders, not the people who want to control them. Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates. Richard Lawler Close Richard Lawler Senior News Editor Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Richard Lawler Hayden Field Close Hayden Field Senior AI Reporter Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Hayden Field AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI Anthropic Close Anthropic Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Anthropic Business Close Business Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Business News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News OpenAI Close OpenAI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All OpenAI Most Popular Most Popular Everyone is stealing TV Anthropic says ‘Claude will remain ad-free,’ unlike ChatGPT Aluminium: Why Google’s Android for PC launch may be messy and controversial I drove three Chinese cars — here’s why they would clean up in the US I didn’t expect to love Dyson’s PencilVac Fluffycones – but I did The Verge Daily A free daily digest of the news that matters most. Email (required) Sign Up By submitting your email, you agree to our Terms and Privacy Notice . This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. Advertiser Content From This is the title for the native ad More in News Overwatch: All the news about Blizzard’s hit hero shooter Ikea’s cheap new smart home gear is struggling to get connected OpenClaw’s AI ‘skill’ extensions are a security nightmare Google Cloud’s customer chief returns to Microsoft as head of security Google’s Pixel 10A will be revealed on February 18th Roblox calls its take on AI world models ‘real-time dreaming’ Overwatch: All the news about Blizzard’s hit hero shooter Verge Staff Two hours ago Ikea’s cheap new smart home gear is struggling to get connected Jennifer Pattison Tuohy 7:35 PM UTC OpenClaw’s AI ‘skill’ extensions are a security nightmare Emma Roth 7:03 PM UTC Google Cloud’s customer chief returns to Microsoft as head of security Tom Warren 5:27 PM UTC Google’s Pixel 10A will be revealed on February 18th Emma Roth 5:24 PM UTC Roblox calls its take on AI world models ‘real-time dreaming’ Jay Peters 5:00 PM UTC Advertiser Content From This is the title for the native ad Top Stories 1:30 PM UTC Everyone is stealing TV 5:30 PM UTC “I was detained by federal agents in Minneapolis” 5:30 PM UTC Apple TV details its 2026 streaming lineup with big list of announcements 3:00 PM UTC I drove three Chinese cars — here’s why they would clean up in the US 5:00 PM UTC Fallout’s season 2 finale left plenty unanswered as it expanded in scope 1:09 PM UTC Anthropic says ‘Claude will remain ad-free,’ unlike ChatGPT The Verge The Verge logo. Facebook Threads Instagram Youtube RSS Contact Tip Us Community Guidelines Archives About Ethics Statement How We Rate and Review Products Cookie Settings Terms of Use Privacy Notice Cookie Policy Licensing FAQ Accessibility Platform Status © 2026 Vox Media , LLC. All Rights Reserved",
-      "imageUrl": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/STK201_SAM_ALTMAN_CVIRGINIA_C.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
-      "tags": [
-        "Industry"
-      ],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：The Verge AI",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：Sam Altman公开回应竞争对手广告，反映头部AI公司间战略博弈，引发全球舆论关注，具重大行业影响。",
-        "热度：0 / 评论 0"
-      ],
-      "score": 6.4,
-      "publishedAt": "2026-02-04T21:03:05+00:00",
-      "authors": [
-        "Hayden Field"
-      ]
-    },
-    {
-      "id": "rss_4011405363",
-      "title": "沃伦质询谷歌Gemini内置结账的隐私风险",
-      "url": "https://www.theverge.com/news/873476/senator-elizabeth-warren-google-gemini-ai-shopping-privacy",
-      "type": "news",
-      "source": "The Verge AI",
-      "summary": "美国参议员伊丽莎白·沃伦致信谷歌CEO桑达尔·皮查伊，要求澄清Gemini AI内置结账功能如何保护用户隐私，担忧该功能可能使谷歌与零售伙伴（如Walmart、Target）结合搜索、聊天及购物数据，操纵消费者购买更高价商品；她特别质疑谷歌是否利用敏感信息推动“升级销售”，以及是否会优先展示合作商家产品。此举直指AI代理商业化中的核心风险——数据融合可能加剧行为操控。普通用户若使用Gemini购物，应留意推荐是否基于真实需求而非广告激励，并等待谷歌2月17日前的正式回应以评估透明度。",
-      "fullText": "Sen. Warren wants to know what Google Gemini’s built-in checkout means for user privacy | The Verge Skip to main content The homepage The Verge The Verge logo. The Verge The Verge logo. Tech Reviews Science Entertainment AI Policy Hamburger Navigation Button The homepage The Verge The Verge logo. Hamburger Navigation Button Navigation Drawer The Verge The Verge logo. Login / Sign Up close Close Search Tech Expand Amazon Apple Facebook Google Microsoft Samsung Business See all tech Gadgets Expand Laptops Phones TVs Headphones Speakers Wearables See all gadgets Reviews Expand Smart Home Reviews Phone Reviews Tablet Reviews Headphone Reviews See all reviews AI Expand OpenAI Anthropic See all AI Verge Shopping Expand Buying Guides Deals Gift Guides See all shopping Policy Expand Antitrust Politics Law Security See all policy Science Expand Space Energy Environment Health See all science Entertainment Expand TV Shows Movies Audio See all entertainment Gaming Expand Xbox PlayStation Nintendo See all gaming Streaming Expand Disney HBO Netflix YouTube Creators See all streaming Transportation Expand Electric Cars Autonomous Cars Ride-sharing Scooters See all transportation Features Verge Video Expand TikTok YouTube Instagram Podcasts Expand Decoder The Vergecast Version History Newsletters Expand The Verge Daily Installer Verge Deals Notepad Optimizer Regulator The Stepback Archives Store Subscribe Facebook Threads Instagram Youtube RSS The Verge The Verge logo. Sen. Warren wants to know what Google Gemini’s built-in checkout means for user privacy Comments Drawer Comments Loading comments Getting the conversation ready... News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI Policy Close Policy Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Policy Sen. Warren wants to know what Google Gemini’s built-in checkout means for user privacy Warren is asking Google for more details about the kinds of data it will send to retail partners — and how much. Warren is asking Google for more details about the kinds of data it will send to retail partners — and how much. by Emma Roth Close Emma Roth News Writer Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Emma Roth Feb 4, 2026, 12:00 PM UTC Link Share Gift Image: Cath Virginia / The Verge Emma Roth Close Emma Roth Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Emma Roth is a news writer who covers the streaming wars, consumer tech, crypto, social media, and much more. Previously, she was a writer and editor at MUO. Sen. Elizabeth Warren (D-MA) is pressing Google for more information about its plans to build a checkout feature into its Gemini AI chatbot. In a letter to Google CEO Sundar Pichai , Warren expresses concerns that the integration could allow Google and retailers “to exploit sensitive user data” or “manipulate consumers into spending more and paying higher prices.” Last month, Google announced that it will soon allow users to buy products directly within Gemini through the Universal Commerce Protocol (UCP), a standard it developed in partnership with Shopify, Target, Walmart, Wayfair, and Etsy. The UCP is supposed to make it easier for AI agents to communicate with retailers, but Warren wants to know just how much user information — and what kinds — Google plans on providing to retailers through this pipeline. Related I saw the future of retail, and it’s all AI Google escalates AI shopping war “Google already possesses unprecedented troves of user search and AI chat data, and such intimate data could be merged with both user data from other Google services and third-party retailer data to drive consumer behavior in an exploitative manner,” Warren writes, while also questioning whether Google will prioritize shopping results from retail partners over competitors. Warren adds that the company has already admitted that it will use “sensitive data to help retailers upsell consumers into buying a more ‘premium’ product.” The letter cites a reply from Google on X in which it clarified that retailers will be able to “show additional premium product options that people might be interested in.” In addition to a series of questions about user privacy, Warren is asking Google for information about how user data will affect pricing, as well as whether it will inform users when Gemini suggests a product “based on upselling objectives, advertising incentives, or sensitive user data.” Google has until February 17th to respond. Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates. Emma Roth Close Emma Roth News Writer Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Emma Roth AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI Google Close Google Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Google News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News Policy Close Policy Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Policy Politics Close Politics Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Politics Tech Close Tech Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Tech Most Popular Most Popular Everyone is stealing TV Anthropic says ‘Claude will remain ad-free,’ unlike ChatGPT Aluminium: Why Google’s Android for PC launch may be messy and controversial I drove three Chinese cars — here’s why they would clean up in the US I didn’t expect to love Dyson’s PencilVac Fluffycones – but I did The Verge Daily A free daily digest of the news that matters most. Email (required) Sign Up By submitting your email, you agree to our Terms and Privacy Notice . This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. Advertiser Content From This is the title for the native ad More in News Overwatch: All the news about Blizzard’s hit hero shooter Ikea’s cheap new smart home gear is struggling to get connected OpenClaw’s AI ‘skill’ extensions are a security nightmare Google Cloud’s customer chief returns to Microsoft as head of security Google’s Pixel 10A will be revealed on February 18th Roblox calls its take on AI world models ‘real-time dreaming’ Overwatch: All the news about Blizzard’s hit hero shooter Verge Staff Two hours ago Ikea’s cheap new smart home gear is struggling to get connected Jennifer Pattison Tuohy 7:35 PM UTC OpenClaw’s AI ‘skill’ extensions are a security nightmare Emma Roth 7:03 PM UTC Google Cloud’s customer chief returns to Microsoft as head of security Tom Warren 5:27 PM UTC Google’s Pixel 10A will be revealed on February 18th Emma Roth 5:24 PM UTC Roblox calls its take on AI world models ‘real-time dreaming’ Jay Peters 5:00 PM UTC Advertiser Content From This is the title for the native ad Top Stories 1:30 PM UTC Everyone is stealing TV 5:30 PM UTC “I was detained by federal agents in Minneapolis” 5:30 PM UTC Apple TV details its 2026 streaming lineup with big list of announcements 3:00 PM UTC I drove three Chinese cars — here’s why they would clean up in the US 5:00 PM UTC Fallout’s season 2 finale left plenty unanswered as it expanded in scope 1:09 PM UTC Anthropic says ‘Claude will remain ad-free,’ unlike ChatGPT The Verge The Verge logo. Facebook Threads Instagram Youtube RSS Contact Tip Us Community Guidelines Archives About Ethics Statement How We Rate and Review Products Cookie Settings Terms of Use Privacy Notice Cookie Policy Licensing FAQ Accessibility Platform Status © 2026 Vox Media , LLC. All Rights Reserved",
-      "imageUrl": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK255_Google_Gemini_B_474198.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
-      "tags": [
-        "LLM",
-        "Industry"
-      ],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：The Verge AI",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：美国参议员对Google Gemini内置结算功能的质询，凸显AI商业化中的隐私与监管博弈，可能推动全球AI政策走向。",
-        "热度：0 / 评论 0"
-      ],
-      "score": 5.9,
-      "publishedAt": "2026-02-04T12:00:00+00:00",
-      "authors": [
-        "Emma Roth"
-      ]
-    },
-    {
-      "id": "rss_2285564954",
-      "title": "ElevenLabs融资5亿美元，估值达110亿美元",
-      "url": "https://techcrunch.com/2026/02/04/elevenlabs-raises-500m-from-sequioia-at-a-11-billion-valuation/",
-      "type": "news",
-      "source": "TechCrunch AI",
-      "summary": "语音AI公司ElevenLabs宣布获红杉资本领投的5亿美元融资，估值飙升至110亿美元，较一年前增长超三倍；现有投资者a16z和Iconiq大幅加注，新进投资者包括Lightspeed等，资金将用于拓展印度、日本等国际市场，并从纯语音向音视频多模态AI代理延伸。该公司年经常性收入已达3.3亿美元，五个月内ARR从2亿增至3亿，显示企业对高质量合成语音需求激增。对内容创作者和开发者而言，这意味着更强大的工具可用于生成带语音的视频内容或构建能“说话、打字、行动”的智能体，但同时也需关注深度伪造带来的伦理挑战。",
-      "fullText": "ElevenLabs raises $500M from Sequoia at an $11 billion valuation | TechCrunch TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture More from TechCrunch Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Crunchboard Contact Us Image Credits: ElevenLabs Venture ElevenLabs raises $500M from Sequoia at an $11 billion valuation Ivan Mehta 7:33 AM PST · February 4, 2026 Voice AI company ElevenLabs said today it raised $500 million in a new funding round led by Sequoia Capital, which was an investor in the startup’s last secondary round through a tender . Sequoia partner Andrew Reed is joining the company’s board. The startup is now valued at $11 billion, more than three times its valuation in its last round in January 2025 . Earlier in the year, the Financial Times reported that the startup was looking to raise at that valuation. The company said that existing investor a16z quadrupled its investment amount, and Iconiq, which led the last round, tripled it. Some prior investors, like BroadLight, NFDG, Valor Capital, AMP Coalition, and Smash Capital, also joined the round. New investors for the funding included Lightspeed Venture Partners, Evantic Capital, and Bond. ElevenLabs said that it will disclose some investors later in February, which might be strategic partners. The company has raised over $781 million to date. It said that it will use the funding for research and product development, along with expansion in international markets like India, Japan, Singapore, Brazil, and Mexico. The company’s co-founder, Mati Staniszewski, indicated that ElevenLabs might work on agents beyond voice and incorporate video. In January, the company announced a partnership with LTX to produce audio-to-video content . “The intersection of models and products is critical – and our team has proven, time and again, how to translate research into real-world experiences. This funding helps us go beyond voice alone to transform how we interact with technology altogether. We plan to expand our Creative offering – helping creators combine our best-in-class audio with video and Agents – enabling businesses to build agents that can talk, type, and take action,” he said in a statement. The company has seen good growth momentum as it closed the year at $330 million ARR. In an interview with Bloomberg earlier this year, Staniszewski said that it took ElevenLabs five months to reach $200 million to $300 million in ARR. Voice AI model providers are an attractive target for investors and big tech companies. In January, rival Deepgram raised $130 million from AVP at a $1.3 billion valuation . Meanwhile, Google hired top talent from voice model company Hume AI , including CEO Alan Cowen. Topics AI , ElevenLabs , sequia capital , Startups , TC , Venture , voice AI Ivan Mehta Ivan covers global consumer tech developments at TechCrunch. He is based out of India and has previously worked at publications including Huffington Post and The Next Web. You can contact or verify outreach from Ivan by emailing im@ivanmehta.com or via encrypted message at ivan.42 on Signal. View Bio October 13-15 San Francisco, CA Tickets are live at the lowest rates of the year. Save up to $680 on your pass now. Meet investors. Discover your next portfolio company. Hear from 250+ tech leaders , dive into 200+ sessions , and explore 300+ startups building what’s next. Don’t miss these one-time savings. REGISTER NOW Most Popular Fintech CEO and Forbes 30 Under 30 alum has been charged for alleged fraud Lucas Ropek Notepad++ says Chinese government hackers hijacked its software updates for months Zack Whittaker Meet the new European unicorns of 2026 Anna Heim Nvidia CEO pushes back against report that his company’s $100B OpenAI investment has stalled Anthony Ha OpenClaw’s AI assistants are now building their own social network Anna Heim Elon Musk’s SpaceX, Tesla, and xAI in talks to merge, according to reports Amanda Silberling Kirsten Korosec Waymo robotaxi hits a child near an elementary school in Santa Monica Sean O'Kane Loading the next article Error loading the next article X LinkedIn Facebook Instagram youTube Mastodon Threads Bluesky TechCrunch Staff Contact Us Advertise Crunchboard Jobs Site Map Terms of Service Privacy Policy RSS Terms of Use Code of Conduct Tesla Earnings Zoox Moltbot Snap Specs Amazon Go Tech Layoffs ChatGPT © 2025 TechCrunch Media LLC.",
-      "imageUrl": "https://techcrunch.com/wp-content/uploads/2025/01/ElevenLabs-feat.jpg?resize=1200%2C630",
-      "tags": [],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：TechCrunch AI",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：ElevenLabs获$500M融资且估值达$11B，反映全球对语音AI赛道的高度认可，具有战略级产业影响与资本风向标意义。",
-        "热度：0 / 评论 0"
-      ],
-      "score": 5.4,
-      "publishedAt": "2026-02-04T15:33:58+00:00",
-      "authors": [
-        "Ivan Mehta"
-      ]
-    },
-    {
-      "id": "github_openai_skills",
-      "title": "openai/skills",
-      "url": "https://github.com/openai/skills",
-      "type": "news",
-      "source": "GitHub Trending",
-      "summary": "Skills Catalog for Codex，该事件带来新的技术/监管/产品变化，并将改变AI领域的将影响AI模型能力、成本或应用边界，同时意味着普通人可能在工具可用性、价格或隐私体验上感知变化。",
-      "fullText": "",
-      "imageUrl": "https://opengraph.githubassets.com/4cce169c829d29506cc8079f25ea65cb868fa0d31cbedd906918ea5dc00913dc/openai/skills",
-      "tags": [
-        "Industry"
-      ],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：GitHub Trending",
-        "跨源重复：1 个来源",
-        "模型评分：6/10，理由：OpenAI发布Codex技能目录，属平台生态建设，有一定实用性，但未带来技术范式变革。",
-        "热度：3636 / 评论 0"
-      ],
-      "score": 8.6,
-      "publishedAt": "2026-02-04T23:36:35.771620+00:00",
-      "authors": []
     }
   ],
   "stats": {
-    "total_papers_ingested": 482,
-    "total_news_ingested": 63,
-    "l1_papers_passed": 225,
-    "l1_news_passed": 51,
+    "total_papers_ingested": 302,
+    "total_news_ingested": 62,
+    "l1_papers_passed": 143,
+    "l1_news_passed": 47,
     "l2_papers_scored": 54,
     "l2_news_scored": 30,
     "l3_papers_selected": 18,
     "l3_news_selected": 11,
     "news_source_counts": {
-      "Hacker News": 30,
-      "TechCrunch AI": 13,
+      "Hacker News": 22,
+      "TechCrunch AI": 11,
       "GitHub Trending": 6,
+      "OpenAI Blog": 6,
       "The Verge AI": 6,
-      "OpenAI Blog": 2,
-      "Google AI Blog": 1,
+      "Google AI Blog": 3,
+      "Microsoft Research": 2,
+      "AWS Machine Learning Blog": 2,
       "NVIDIA Blog": 1,
       "Hugging Face Blog": 1,
       "MIT Tech Review AI": 1,
-      "AWS Machine Learning Blog": 1,
       "MIT CSAIL News": 1
     },
     "rss_source_counts": {
-      "TechCrunch AI": 13,
+      "TechCrunch AI": 11,
+      "OpenAI Blog": 6,
       "The Verge AI": 6,
-      "OpenAI Blog": 2,
-      "Google AI Blog": 1,
+      "Google AI Blog": 3,
+      "Microsoft Research": 2,
+      "AWS Machine Learning Blog": 2,
       "NVIDIA Blog": 1,
       "Hugging Face Blog": 1,
       "MIT Tech Review AI": 1,
-      "AWS Machine Learning Blog": 1,
       "MIT CSAIL News": 1
     },
     "news_title_source_counts": {
-      "voxtral transcribe 2": 1,
-      "claude code for infrastructure": 1,
-      "a real world benchmark for ai code review": 1,
-      "ai is killing b2b saas": 1,
-      "microsoft s copilot chatbot is running into problems": 1,
-      "rs sdk drive runescape with claude code": 1,
-      "tell hn another round of zendesk email spam": 1,
-      "claude is a space to think": 1,
-      "show hn interactive california budget by claude code": 1,
-      "show hn ghidra mcp server 110 tools for ai assisted reverse engineering": 1,
-      "technocracy 2 0": 1,
-      "epstein financed german ai researcher joscha bach": 1,
-      "professors are being watched we ve never seen this much surveillance": 1,
-      "i was just laid off by the washington post in the middle of a warzone": 1,
-      "broken proofs and broken provers": 1,
-      "pinterest ceo fires obstructionist employees who created tool to track layoffs": 1,
-      "show hn mmdr 1000x faster mermaid rendering in pure rust no browser": 1,
-      "jetbrains drops x11 for wayland as default in intellij based ides": 1,
-      "dhs hunts down 67 year old u s citizen who criticized them in email": 1,
-      "why this computer scientist says all cryptocurrency should die in a fire 2022": 1,
-      "ice urged to explain memo about collecting info on protesters": 1,
-      "speculative sampling explained": 1,
-      "many people have no mental imagery what s going on in their brains": 1,
-      "wayland by default in 2026 1 eap jetbrains": 1,
-      "workspace studio automate your work with gemini": 1,
-      "oracle to raise 50b as ai debt piles up": 1,
-      "ai needs to augment rather than replace humans or the workplace is doomed": 1,
-      "us gen x is definitely feeling the pressure": 1,
-      "time to gpt 2 down to 2 91 hours": 1,
-      "fastmail donates usd 10k to the perl and raku foundation": 1,
-      "thedotmack claude mem": 1,
+      "claude opus 4 6": 1,
+      "gpt 5 3 codex": 1,
+      "my ai adoption journey": 1,
+      "we tasked opus 4 6 using agent teams to build a c compiler": 1,
+      "orchestrate teams of claude code sessions": 1,
+      "don t rent the cloud own instead": 1,
+      "claude opus 4 6 extra usage promo": 1,
+      "ardour 9 0": 1,
+      "psychometric jailbreaks reveal internal conflict in frontier models": 1,
+      "opus 4 6 uncovers 500 zero day flaws in open source code": 1,
+      "advancing finance with claude opus 4 6": 1,
+      "top downloaded skill in clawhub contains malware": 1,
+      "why elixir is the best language for ai dashbit blog": 1,
+      "bitcoin drops below 67 000 as selloff heats up and pessimism grows about crypto": 1,
+      "ai is just the latest monoculture": 1,
+      "bmw s newest innovation is a logo shaped middle finger to right to repair": 1,
+      "battle testing lynx at allegro": 1,
+      "openai is hoppin mad about anthropic s new super bowl tv ads": 1,
+      "show hn cli tool to convert markdown to rich html clipboard content": 1,
+      "show hn an ai powered president simulator": 1,
+      "ask hn has your whole engineering team gone big into ai coding how s it going": 1,
+      "jeffrey epstein s money mingled with silicon valley startups": 1,
+      "bytedance ui tars desktop": 1,
       "openai skills": 1,
-      "openbmb chatdev": 1,
-      "canner wrenai": 1,
-      "pedramamini maestro": 1,
-      "microsoft qlib": 1,
-      "unlocking the codex harness how we built the app server": 1,
-      "vfl wolfsburg turns chatgpt into a club wide capability": 1,
-      "the latest ai news we announced in january": 1,
-      "nemotron labs how ai agents are turning documents into real time business intelligence": 1,
-      "google 8217 s annual revenue tops 400 billion for the first time": 1,
-      "sam altman responds to anthropic s funny super bowl ads": 1,
-      "openclaw 8217 s ai 8216 skill 8217 extensions are a security nightmare": 1,
-      "github adds claude and codex ai coding agents": 1,
-      "anthropic says claude will remain ad free unlike chatgpt": 1,
-      "sen warren wants to know what google gemini s built in checkout means for user privacy": 1,
-      "alphabet won t talk about the google apple ai deal even to investors": 1,
-      "google s gemini app has surpassed 750m monthly active users": 1,
-      "meet gizmo a tiktok for interactive vibe coded mini apps": 1,
-      "ai sre resolve ai confirms 125m raise unicorn valuation": 1,
-      "amazon to begin testing ai tools for film and tv production next month": 1,
-      "a16z just raised 1 7b for ai infrastructure here s where it s going": 1,
-      "what a16z is actually funding and what it s ignoring when it comes to ai infra": 1,
-      "tinder looks to ai to help fight swipe fatigue and dating app burnout": 1,
-      "roblox s 4d creation feature is now available in open beta": 1,
-      "elevenlabs raises 500m from sequoia at an 11 billion valuation": 1,
-      "alexa amazon s ai assistant is now available to everyone in the us": 1,
-      "accel doubles down on fibr ai as agents turn static websites into one to one experiences": 1,
-      "exclusive positron raises 230m series b to take on nvidia s ai chips": 1,
-      "nemotron colembed v2 raising the bar for multimodal retrieval with vidore v3 s top model": 1,
-      "from guardrails to governance a ceo s guide for securing agentic systems": 1,
-      "accelerating your marketing ideation with generative ai part 2 generate custom marketing images from historical references": 1,
-      "antonio torralba three mit alumni named 2025 acm fellows": 1
+      "thedotmack claude mem": 1,
+      "topoteretes cognee": 1,
+      "obra superpowers": 1,
+      "aquasecurity trivy": 1,
+      "gpt 5 lowers the cost of cell free protein synthesis": 1,
+      "introducing trusted access for cyber": 1,
+      "introducing openai frontier": 1,
+      "gpt 5 3 codex system card": 1,
+      "introducing gpt 5 3 codex": 1,
+      "navigating health questions with chatgpt": 1,
+      "natively adaptive interfaces a new framework for ai accessibility": 1,
+      "how google cloud is helping team usa elevate their tricks with ai": 1,
+      "watch our new gemini ad ahead of football s biggest weekend": 1,
+      "rethinking imitation learning with predictive inverse dynamics models": 1,
+      "paza introducing automatic speech recognition benchmarks and models for low resource languages": 1,
+      "geforce now celebrates six years of streaming with 24 games in february": 1,
+      "super bowl lx ads all ai everything": 1,
+      "claude has been having a moment can it keep it up": 1,
+      "anthropic debuts new model with hopes to corner the market beyond coding": 1,
+      "nvidia 8217 s rtx 50 series super refresh is delayed and the rtx 60 series might miss 2027": 1,
+      "reality is losing the deepfake war": 1,
+      "openai frontier is a single platform to control your ai agents": 1,
+      "reddit looks to ai search as its next big opportunity": 1,
+      "aws revenue continues to soar as cloud demand remains high": 1,
+      "amazon and google are winning the ai capex race but what s the prize": 1,
+      "openai launches new agentic coding model only minutes after anthropic drops its own": 1,
+      "elon musk is getting serious about orbital data centers": 1,
+      "openai launches a way for enterprises to build and manage ai agents": 1,
+      "anthropic releases opus 4 6 with new agent teams": 1,
+      "meta tests a stand alone app for its ai generated vibes videos": 1,
+      "fundamental raises 255m series a with a new take on big data analysis": 1,
+      "elevenlabs ceo voice is the next interface for ai": 1,
+      "sam altman got exceptionally testy over claude super bowl ads": 1,
+      "introducing sygra studio": 1,
+      "this is the most misunderstood graph in ai": 1,
+      "how associa transforms document classification with the genai idp accelerator and amazon bedrock": 1,
+      "a practical guide to amazon nova multimodal embeddings": 1,
+      "helping ai agents search to get the best results out of large language models": 1
     },
-    "total_papers_deduped": 482,
-    "total_news_deduped": 63,
-    "news_recent_filtered": 63
+    "total_papers_deduped": 302,
+    "total_news_deduped": 61,
+    "news_recent_filtered": 61
   }
 }

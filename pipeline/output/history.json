@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-05",
+    "papers_count": 18,
+    "news_count": 11,
+    "top_paper": "El Agente Estructural: An Artificially Intelligent Molecular Editor",
+    "top_news": "Anthropic发布Claude Opus 4.6：1M上下文、更强编码与自主任务能力"
+  },
+  {
     "date": "2026-02-04",
     "papers_count": 18,
     "news_count": 11,
