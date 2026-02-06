@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-06",
+    "papers_count": 18,
+    "news_count": 11,
+    "top_paper": "Artificial Intelligence as Strange Intelligence: Against Linear Models of Intelligence",
+    "top_news": "OpenAI公布AI本地化策略：兼顾全球模型与本地合规"
+  },
+  {
     "date": "2026-02-05",
     "papers_count": 18,
     "news_count": 11,
