@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-07",
+    "papers_count": 6,
+    "news_count": 11,
+    "top_paper": "MemSkill: Learning and Evolving Memory Skills for Self-Evolving Agents",
+    "top_news": "MiniCPM-o发布：手机端运行Gemini 2.5 Flash级多模态AI"
+  },
+  {
     "date": "2026-02-06",
     "papers_count": 18,
     "news_count": 11,
