@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-09",
+    "papers_count": 18,
+    "news_count": 11,
+    "top_paper": "NanoFLUX: Distillation-Driven Compression of Large Text-to-Image Generation Models for Mobile Devices",
+    "top_news": "OpenAI为美军部署定制版ChatGPT"
+  },
+  {
     "date": "2026-02-08",
     "papers_count": 18,
     "news_count": 11,

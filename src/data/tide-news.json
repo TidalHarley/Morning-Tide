@@ -1,420 +1,228 @@
 {
-  "date": "2026-02-08",
-  "generatedAt": "2026-02-08T23:45:33.610903",
-  "introduction": "今日AI领域在基础理论、安全治理与多模态应用三方面同步突破。研究者开始质疑线性智能观，同时揭示AI在学术、医疗、自动驾驶等关键场景中的系统性风险。\n• 多篇论文直指LLM在科研引用、数学推理和隐私保护中的深层缺陷；\n• 自动驾驶与机器人领域加速融合触觉、视觉与世界模型；\n• 纽约拟立法暂停新建数据中心，监管进入实操阶段；\n• 开源模型能力逼近闭源旗舰，本地化AI工具链快速成熟；\n• 超级碗广告战折射AI从技术话题转向大众文化符号。\n读者应关注AI可靠性与能耗的双重瓶颈，警惕“能力幻觉”下的部署风险，同时把握开源生态带来的开发新机会。",
-  "longformScript": "今天，AI领域呈现出一种微妙的张力：一边是技术能力在本地化、多模态和开源生态中快速下沉，普通人越来越能掌控自己的AI工具；另一边，关于可靠性、能耗与人类认知负担的反思，正从工程师社区蔓延到政策制定者和金融市场。这不是一个单点突破的日子，而是一场系统性校准的开始。\n\n先看工具层面的变化。Google刚刚开源了一个叫langextract的库，它能让大模型从杂乱文本里精准抽取出结构化信息，更重要的是，每一条结果都能回溯到原始段落，并通过可视化界面直观展示。这意味着，在金融合同审核或法律文书处理这类高风险场景中，用户不再需要盲目信任AI的输出——你可以点开看看它到底“读”了哪句话才得出这个结论。类似地，LocalGPT这个新项目则把整个AI助手装进一个27MB的本地程序里，支持持久记忆、任务队列，还能完全离线运行。它用Markdown管理知识，用SQLite做混合检索，既保护隐私，又保留智能。这些工具的共同点，是把“可审计”和“可控”放在了功能之前，而不是事后补救。\n\n与此同时，多模态能力正加速向终端设备迁移。OpenBMB发布的MiniCPM-o模型，宣称在手机上就能跑出接近Gemini 2.5 Flash的多模态性能，支持实时视频字幕、语音交互甚至直播问答。这不再是实验室里的演示，而是普通用户明天就能装进手机的应用。当AI不再依赖云端，延迟和隐私问题自然缓解，但这也对模型压缩、推理优化提出了更高要求。值得留意的是，这种“端侧智能”的成熟，可能比我们想象中更快地改变人机交互的日常形态——比如未来的视频通话，或许默认就带实时翻译和情绪识别，而你甚至意识不到背后有AI在工作。\n\n不过，技术越普及，安全就越不能掉以轻心。Pydantic团队推出的Monty解释器，用Rust重写了Python执行环境，专为安全运行LLM生成的代码而设计。它最小化攻击面，防止恶意脚本窃取凭证或破坏系统。另一个叫Matchlock的工具更进一步，用微虚拟机给AI Agent打造沙箱：网络默认关闭，密钥通过代理动态注入，每次运行都是干净环境。这些项目透露出一个信号：开发者已经意识到，让AI自主调用API或执行代码，本质上是在引入不可信输入。未来，安全或许不再是附加功能，而是AI系统的基础架构。\n\n但技术再完善，也绕不开人的因素。一位工程师最近撰文坦言，他越用AI反而越累。表面上看，AI帮他写代码、查文档、生成报告，效率似乎提升了；可实际上，任务量随之膨胀，上下文频繁切换，还要反复核对AI输出的准确性。更麻烦的是，模型行为不一致——今天能跑通的提示词，明天可能就失效。这种“认知税”正在悄悄侵蚀生产力。他的建议很实在：别把AI输出当成品，只当它是初稿；团队也该设立使用边界，比如限制AI能访问的数据范围，避免无休止的微调和验证循环。这提醒我们，所谓“提效”，如果没考虑人类审核者的可持续性，很可能只是把负担转嫁了。\n\n而在更宏观的层面，市场和监管正在给出冷静的反馈。纽约州正在审议两项法案：一是要求AI生成的新闻必须标注并由人类编辑审核，二是暂停新建数据中心三年，理由是电力消耗已推高居民电费。这不仅是对内容真实性的担忧，更是对基础设施承载力的警觉。与此同时，一项经济学研究发现，每当有重磅AI模型发布，长期债券收益率反而下降——说明投资者并不相信当前AI会带来爆发式增长。他们看到的，或许是生产力提升的缓慢曲线，或是潜在的社会成本。这种“市场不相信奇迹”的态度，或许比技术乐观主义更值得倾听。\n\n那么，作为普通用户或开发者，该怎么看待今天的这些变化？一方面，开源模型的能力确实在逼近闭源旗舰，像GLM 4.7和MiniMax M2.1已经能自主完成复杂的编程任务，有的侧重文档完备，有的追求成本效率。这意味着你不再需要依赖大厂API，也能构建高质量的AI应用。但另一方面，要警惕“能力幻觉”——模型能写出看似合理的代码或文章，不代表它理解背后的逻辑，更不代表它能在对抗性环境中做出策略性判断。正如一篇分析指出的，专家拥有“世界模型”，能预判他人如何解读自己的行为；而大模型终究是“词模型”，擅长模仿，却缺乏真正的社会性推理。\n\n今天的AI，正处在从炫技走向落地的关键阶段。工具变得更易用、更安全，但也暴露出更深的局限。与其追逐下一个“最强模型”，不如关注那些让AI真正可信、可持续、可负担的基础设施——无论是本地运行的框架、安全的执行环境，还是对人类认知负荷的尊重。技术终归是为人服务的，而人，需要喘息的空间。",
+  "date": "2026-02-09",
+  "generatedAt": "2026-02-09T23:51:56.887545",
+  "introduction": "今日AI领域在安全、部署与可信性三大维度同步突破。一方面，模型压缩、水印、异常检测等技术正加速AI落地；另一方面，政府与企业对AI的深度整合引发新的治理挑战。\n- 美国防部上线定制版ChatGPT，标志AI正式进入国家安全体系\n- Anthropic用Claude从零构建C编译器，展现AI系统级工程能力\n- 多篇论文聚焦LLM代理的安全隐患与运行时监控\n- OpenAI开始测试ChatGPT广告，商业化路径进一步清晰\n- AI手术事故与“AI裁员洗白”争议凸显技术滥用风险\n读者需警惕表面繁荣下的可靠性缺口：关注技术是否真正可验证、可控、可问责，而非仅看功能演示。",
+  "longformScript": "今天，AI世界正经历一场静默而深刻的分野：一边是技术能力向高安全、高专业场景加速渗透，另一边是商业化冲动与现实风险之间的张力日益凸显。从五角大楼到手术室，从编译器到广告位，AI不再只是实验室里的奇观，它正在真实世界的规则、责任与边界中艰难落地。\n\n先看一个标志性事件：OpenAI正式为美国国防部部署了定制版ChatGPT，接入名为GenAI.mil的政府专属平台。这不是普通用户能用的版本，而是一个经过严格隔离、权限管控和数据合规设计的封闭系统。军方人员未来可能用它来辅助情报分析、后勤调度甚至战略推演。这背后传递的信号很明确——生成式AI已经跨过“可用”的门槛，进入“可信”与“可控”的新阶段。政府不再满足于调用公共API，而是要求构建专属、可审计、可追溯的AI基础设施。这种趋势，很可能在金融、能源等关键行业快速复制。\n\n与此同时，另一条战线上的探索则更显技术野心。Anthropic最近用自家大模型Claude Opus 4.6，从零开始写了一个C语言编译器，叫CCC。听起来很酷，对吧？它确实能解析整个Linux内核的C代码，语法上没出错。但问题出在后端——生成的代码运行速度比GCC慢几万倍，链接时还爆出四万多处错误。原因很简单：AI擅长符号处理和模式匹配，但对寄存器分配、指令调度这些需要深度系统知识的优化环节，几乎无能为力。这个实验的价值不在于实用，而在于划清了当前AI的能力边界：它可以成为工程师的协作者，但远不能替代底层系统构建所需的工程直觉与经验积累。有趣的是，就在同一天，Pydantic团队发布了用Rust写的极简Python解释器“monty”，专为AI代理提供安全沙箱。这说明，业界已经在为“让AI安全执行代码”打地基了。\n\n而在应用层，AI代理正快速渗透专业领域。GitHub推出了Agentic Workflows，让AI自动完成代码审查、测试和部署；开源社区也涌现出像Dexter这样的金融研究代理，能自主抓取数据、生成分析报告；还有中文版的TradingAgents-CN，支持多智能体协同制定交易策略。这些工具的共同点是：不再只是回答问题，而是主动执行任务链。它们把LLM从“问答机”变成了“行动者”。但这也带来了新的隐患——当AI开始操作真实系统，哪怕是一个金融交易或一次代码合并，错误的代价就不再是几句废话，而是真金白银或系统崩溃。最近就有报告指出，AI辅助手术已出现失误案例，尽管细节未公开，但足以敲响警钟：在高风险场景中，AI的“辅助”必须配有透明的干预机制和事故追溯能力。\n\n商业化的脚步同样没有停歇。OpenAI今天开始在ChatGPT里测试广告，虽然承诺对话内容不共享给广告商，但会基于交互行为优化相关性。免费用户和Go订阅用户都可能看到。这标志着主流AI产品正式迈入变现阶段。有意思的是，Anthropic不久前在超级碗打出“Claude永不加广告”的标语，如今又传出接近200亿美元融资的消息，估值飙到3500亿。资本显然在押注“纯净体验”能换来长期信任。但普通用户得清醒：无论有没有广告，AI服务终归要赚钱。区别只在于，你是被当作用户，还是被当作产品。\n\n更值得警惕的，是一些企业正在滥用“AI”这个标签。多家美国公司被曝借“AI提升效率”之名，掩盖实际因过度扩张或利润压力导致的裁员。专家指出，目前AI真正能替代的岗位非常有限，Forrester预测到2030年也只有6%的美国岗位会被自动化取代。所谓“AI洗白”，本质上是用技术叙事转移对管理决策的问责。这对职场人是个提醒：与其担心被AI取代，不如聚焦那些需要判断、共情、跨域整合的复合能力——这些恰恰是当前AI最难以复制的部分。\n\n那么，面对这样一个既充满机会又暗藏陷阱的AI生态，我们该如何自处？关键或许在于转变期待：不要只看AI能“做什么”，而要追问它“如何做”、“谁负责”、“能否验证”。无论是军方的封闭部署，还是手术室的安全警报，都在指向同一个核心——可验证性、可控性和可问责性，才是AI真正落地的基石。功能演示再炫目，如果缺乏这些支撑，终究只是空中楼阁。\n\n今天的AI世界，正站在从“惊艳”走向“可靠”的十字路口。技术本身不会自动带来进步，只有当它被嵌入负责任的制度、透明的流程和清醒的认知中，才能真正服务于人，而不是反过来让人去适应它的缺陷与野心。",
   "audioUrl": "",
   "papers": [
     {
-      "id": "arxiv_2602_04986v1",
-      "title": "Artificial Intelligence as Strange Intelligence: Against Linear Models of Intelligence",
-      "url": "https://arxiv.org/abs/2602.04986v1",
+      "id": "arxiv_2602_06879v1",
+      "title": "NanoFLUX: Distillation-Driven Compression of Large Text-to-Image Generation Models for Mobile Devices",
+      "url": "https://arxiv.org/abs/2602.06879v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "该论文批判了人工智能进展的线性模型，提出“熟悉智能”与“奇异智能”概念，指出AI可能表现为在某些领域超人类、其他领域却远逊于人类的非线性能力组合；作者主张将通用智能理解为在广泛环境中达成多样目标的能力，而非可简化为单一指标的统一能力，并强调在评估AI时应预期其在看似简单任务上的失败，且单一任务（如IQ测试）的优异表现不能推断其具备广泛能力。",
+      "summary": "为缩小大型文本到图像生成模型与移动端部署之间的差距，研究者提出NanoFLUX——一个2.4B参数的流匹配模型，通过从17B参数的FLUX.1-Schnell模型蒸馏而来。其关键技术包括：对扩散Transformer进行剪枝以将模型从12B压缩至2B；引入基于ResNet的token下采样机制，在保持高分辨率处理的同时降低中间层计算延迟；以及利用去噪器早期视觉信号指导文本编码器蒸馏。实测表明，NanoFLUX可在移动设备上以约2.5秒生成512×512图像，首次验证了高质量端侧文生图的可行性。",
       "fullText": "",
       "imageUrl": "",
-      "tags": [],
-      "paperCategory": "General AI",
+      "tags": [
+        "Vision",
+        "Diffusion",
+        "RAG"
+      ],
+      "paperCategory": "Computer Vision",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：10/10，理由：挑战线性智能观，提出“陌生智能”概念，重构AI哲学基础，具有改变未来AI认知范式的里程碑意义。",
-        "热度：6 / 评论 0"
+        "模型评分：9/10，理由：NanoFLUX实现超小型文本到图像模型的高效压缩，突破移动端生成式AI瓶颈，有望推动AIGC在移动生态的普及，具战略意义。",
+        "热度：14 / 评论 0"
       ],
-      "score": 10.0,
-      "publishedAt": "2026-02-04T19:19:36+00:00",
+      "score": 9.0,
+      "publishedAt": "2026-02-06T17:05:56+00:00",
       "authors": [
-        "Kendra Chilson",
-        "Eric Schwitzgebel"
+        "Ruchika Chavhan",
+        "Malcolm Chadwick",
+        "Alberto Gil Couto Pimentel Ramos"
       ]
     },
     {
-      "id": "arxiv_2602_05877v1",
-      "title": "Agent2Agent Threats in Safety-Critical LLM Assistants: A Human-Centric Taxonomy",
-      "url": "https://arxiv.org/abs/2602.05877v1",
+      "id": "arxiv_2602_06547v1",
+      "title": "Malicious Agent Skills in the Wild: A Large-Scale Security Empirical Study",
+      "url": "https://arxiv.org/abs/2602.06547v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "针对车载LLM助手通过Agent-to-Agent（A2A）协议通信带来的新型安全威胁，该研究提出名为AgentHeLLM的威胁建模框架，首次在安全关键系统中严格分离资产识别与攻击路径分析；基于《世界人权宣言》构建以人类为中心的资产分类法，并通过图模型区分“污染路径”与“触发路径”，配套开发的开源工具AgentHeLLM Attack Path Generator可自动发现多阶段攻击链，为智能汽车等高风险场景提供可操作的安全设计方法。",
+      "summary": "针对LLM智能体通过第三方“技能”（含指令文件与可执行代码）扩展功能所引发的安全风险，研究者对两个社区注册表中的98,380个技能进行行为验证，构建首个标注恶意技能数据集，确认157个恶意样本含632个漏洞。这些攻击高度系统化：54.1%由单一攻击者通过模板化品牌仿冒实施，主要分为窃取凭证的“数据窃贼”和篡改决策的“智能体劫持者”两类。高级攻击普遍利用未公开的“影子功能”甚至平台自身的钩子系统与权限标志。该研究揭示当前技能分发生态缺乏有效审查，并已推动93.6%的恶意技能在30天内下架，同时开源数据集与分析管道以支持后续安全研究。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "LLM",
         "Agent",
         "Robotics",
-        "Industry"
+        "RAG"
       ],
       "paperCategory": "General AI",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：首次系统构建LLM助手在车载场景中的代理间威胁分类体系，直击自动驾驶安全核心痛点，具全球产业政策参考价值。",
-        "热度：13 / 评论 0"
+        "模型评分：9/10，理由：首次大规模实证研究恶意第三方代理技能，直接引发对LLM生态安全的全球关注，推动监管与防护机制建设。",
+        "热度：11 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-02-05T16:53:41+00:00",
+      "publishedAt": "2026-02-06T09:52:27+00:00",
       "authors": [
-        "Lukas Stappen",
-        "Ahmet Erkan Turan",
-        "Johann Hagerer"
+        "Yi Liu",
+        "Zhihao Chen",
+        "Yanjun Zhang"
       ]
     },
     {
-      "id": "arxiv_2602_05695v1",
-      "title": "Determining Energy Efficiency Sweet Spots in Production LLM Inference",
-      "url": "https://arxiv.org/abs/2602.05695v1",
+      "id": "arxiv_2602_06443v1",
+      "title": "TrajAD: Trajectory Anomaly Detection for Trustworthy LLM Agents",
+      "url": "https://arxiv.org/abs/2602.06443v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "研究发现大语言模型（LLM）推理的能效并非随输入/输出长度线性变化，而存在“能效甜点”：短至中等输入配合中等长度输出时效率最高；作者基于Transformer架构的计算与内存访问复杂度构建解析模型，在NVIDIA H100上对1B–9B参数的OPT、LLaMA、Gemma等主流模型进行验证，平均MAPE仅1.79%，表明生产系统可通过截断、摘要或自适应生成策略对齐该甜点，显著降低能耗。",
+      "summary": "为提升大语言模型（LLM）智能体的可信度，研究者提出轨迹异常检测（Trajectory Anomaly Detection）任务，强调需监控执行过程中的中间步骤而不仅依赖输入输出过滤。为此构建了TrajBench数据集，通过扰动-补全策略合成涵盖多样程序异常的轨迹，并发现通用LLM即使零样本提示也难以准确定位错误。基于此，团队开发了专用验证器TrajAD，通过细粒度过程监督训练，在异常定位精度上显著优于基线，证明构建可靠智能体需专门的过程监督机制而非仅依赖通用能力。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "LLM",
-        "Inference"
-      ],
-      "paperCategory": "General AI",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：揭示生产级LLM推理能效“甜点区”，为绿色AI提供关键决策依据，直接影响全球数据中心能耗战略。",
-        "热度：17 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-05T14:21:00+00:00",
-      "authors": [
-        "Hiari Pizzini Cavagna",
-        "Andrea Proia",
-        "Giacomo Madella"
-      ]
-    },
-    {
-      "id": "arxiv_2602_05287v1",
-      "title": "Position: Universal Time Series Foundation Models Rest on a Category Error",
-      "url": "https://arxiv.org/abs/2602.05287v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "该立场论文指出“通用时间序列基础模型”存在范畴错误，将结构容器误认为语义模态，因金融、流体动力学等领域的时间序列生成机制互不兼容，单体模型易退化为无法应对分布漂移的“通用滤波器”；作者提出“自回归盲界”理论极限，证明仅依赖历史数据的模型无法预测干预引发的机制突变，并倡导转向“因果控制智能体”范式——由外部上下文驱动专用求解器层级协作，同时呼吁以“漂移适应速度”替代“零样本准确率”作为新基准。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
+        "Vision",
         "Agent",
-        "RAG",
-        "Research",
         "Benchmark"
       ],
       "paperCategory": "General AI",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：批判性指出时间序列通用基础模型的根本逻辑错误，引发学界对AI范式重构的深刻反思，具有战略级影响力。",
-        "热度：11 / 评论 0"
+        "模型评分：9/10，理由：首次系统提出运行时轨迹异常检测框架，填补LLM代理可信性保障的关键空白，对AI安全治理和工业级部署具有战略意义。",
+        "热度：14 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-02-05T04:14:27+00:00",
+      "publishedAt": "2026-02-06T07:13:49+00:00",
       "authors": [
-        "Xilin Dai",
-        "Wanxu Cai",
-        "Zhijian Xu"
+        "Yibing Liu",
+        "Chong Zhang",
+        "Zhongyi Han"
       ]
     },
     {
-      "id": "arxiv_2602_05192v1",
-      "title": "First Proof",
-      "url": "https://arxiv.org/abs/2602.05192v1",
+      "id": "arxiv_2602_06446v1",
+      "title": "CORE: Comprehensive Ontological Relation Evaluation for Large Language Models",
+      "url": "https://arxiv.org/abs/2602.06446v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "该论文发布了一组由作者在真实研究中自然产生的十道未公开数学问题，用于评估当前AI系统解答研究级数学问题的能力；答案已知但暂时加密，旨在为AI数学推理能力提供客观、新颖的测试基准，避免因问题提前泄露导致模型过拟合。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Research"
-      ],
-      "paperCategory": "General AI",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：首次公开高阶数学研究问题并验证AI解题能力，可能引发对AI科研能力的全球性讨论，具有战略级影响力。",
-        "热度：5 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-05T01:37:14+00:00",
-      "authors": [
-        "Mohammed Abouzaid",
-        "Andrew J. Blumberg",
-        "Martin Hairer"
-      ]
-    },
-    {
-      "id": "arxiv_2602_05930v1",
-      "title": "Compound Deception in Elite Peer Review: A Failure Mode Taxonomy of 100 Fabricated Citations at NeurIPS 2025",
-      "url": "https://arxiv.org/abs/2602.05930v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "研究分析了NeurIPS 2025接收论文中100条由LLM生成的虚构引用，发现这些引用逃过了每篇3–5位专家评审的审查，出现在53篇论文中（约占1%）；作者提出五类失效模式分类法，揭示所有案例均呈现复合欺骗特征（如66%为完全虚构，常叠加63%的语义幻觉或29%的标识符劫持），形成逼真且可伪验证的引用，暴露当前同行评审缺乏有效引文核查机制，并建议强制实施投稿时的自动化引文验证以遏制学术文献中的虚假引用泛滥。",
+      "summary": "现有大语言模型（LLM）评估多关注语义关联判断，却忽视对“无关性”的识别能力。为此，研究者推出CORE基准，包含22.5万道跨74学科的多选题及203道经严格验证的通用领域问题（Cohen’s Kappa=1.0），均衡覆盖24类语义关系与无关对。人类在无关对上准确率达95.1%，而29个顶尖LLM整体准确率仅48.25–70.9%，在无关对上骤降至0–41.35%，且校准误差增加2–4倍，平均37.6%的样本出现“语义坍缩”——即强行生成虚假关联。该结果揭示LLM在区分真正无关信息方面存在系统性缺陷，凸显无关性推理是当前评估与安全的关键盲区。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "LLM",
-        "Research"
+        "Reasoning",
+        "Benchmark"
       ],
       "paperCategory": "General AI",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：揭示顶级会议中大规模AI伪造引用现象，暴露学术生态风险，将推动全球学术审查机制变革。",
-        "热度：14 / 评论 0"
+        "模型评分：9/10，理由：构建大规模本体关系评估基准CORE，精准衡量LLM语义理解能力，将重塑大模型推理评测标准，具备行业级影响力。",
+        "热度：10 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-02-05T17:43:35+00:00",
+      "publishedAt": "2026-02-06T07:16:33+00:00",
       "authors": [
-        "Samar Ansari"
+        "Satyam Dwivedi",
+        "Sanjukta Ghosh",
+        "Shivam Dwivedi"
       ]
     },
     {
-      "id": "arxiv_2602_05513v1",
-      "title": "DECO: Decoupled Multimodal Diffusion Transformer for Bimanual Dexterous Manipulation with a Plugin Tactile Adapter",
-      "url": "https://arxiv.org/abs/2602.05513v1",
+      "id": "arxiv_2602_06248v1",
+      "title": "REBEL: Hidden Knowledge Recovery via Evolutionary-Based Evaluation Loop",
+      "url": "https://arxiv.org/abs/2602.06248v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "该研究提出DECO框架，一种解耦多模态条件的扩散Transformer策略，用于双手机器人灵巧操作：图像与动作令牌通过联合自注意力交互，本体感知状态通过自适应层归一化注入，触觉信号则经交叉注意力融合，并采用轻量LoRA适配器高效微调预训练策略；配套发布的DECO-50数据集包含4个场景、28个子任务、超50小时、约500万帧和8000条成功轨迹，支持触觉感知的双手机器人学习。",
+      "summary": "当前大语言模型“机器遗忘”方法的有效性存疑，因其评估常依赖简单查询，无法探测残留知识是否可通过更复杂提示被提取。为此，研究者提出REBEL框架，通过进化式对抗提示生成主动探测“已遗忘”数据是否仍可恢复。实验显示，REBEL在TOFU和WMDP基准上分别以最高60%和93%的攻击成功率，成功从多种主流遗忘算法处理后的模型中复现敏感内容，证明现有方法仅提供表面保护。该工作揭示了遗忘评估的脆弱性，并开源代码以推动更鲁棒的遗忘技术发展。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
-        "Vision",
-        "Multimodal",
-        "Robotics",
-        "Diffusion"
+        "LLM",
+        "Audio",
+        "Open Source",
+        "Benchmark"
       ],
-      "paperCategory": "Robotics",
+      "paperCategory": "General AI",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：DECO框架实现双臂灵巧操作的解耦多模态扩散策略，结合触觉适配器，代表具身智能与机器人控制的重大进展。",
+        "模型评分：9/10，理由：提出进化式评估循环以验证大模型去记忆能力，直击LLM安全与合规核心痛点，具有战略级行业影响。",
+        "热度：10 / 评论 0"
+      ],
+      "score": 9.0,
+      "publishedAt": "2026-02-05T22:54:56+00:00",
+      "authors": [
+        "Patryk Rybak",
+        "Paweł Batorski",
+        "Paul Swoboda"
+      ]
+    },
+    {
+      "id": "arxiv_2602_06256v1",
+      "title": "Steering Safely or Off a Cliff? Rethinking Specificity and Robustness in Inference-Time Interventions",
+      "url": "https://arxiv.org/abs/2602.06256v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "推理时干预（model steering）虽能轻量控制大语言模型行为，但其特异性——即仅改变目标属性而不影响其他能力——尚未被系统评估。研究者提出包含通用性、控制性和鲁棒性三个维度的特异性评估框架，并在减少过度拒答和事实幻觉两个安全场景中测试。结果发现，尽管干预有效且基本维持通用与控制特异性，却普遍破坏鲁棒特异性：例如降低过度拒答的干预会显著增加模型对越狱攻击的脆弱性。这表明若不评估分布偏移下的稳定性，仅凭标准指标可能误判干预方法的安全性，从而危及实际部署。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Inference",
+        "Benchmark"
+      ],
+      "paperCategory": "General AI",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：系统性挑战推理时干预的精确性与鲁棒性，提出新评估范式，对可控AI部署具有深远战略意义。",
         "热度：15 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-02-05T10:13:34+00:00",
+      "publishedAt": "2026-02-05T23:14:05+00:00",
       "authors": [
-        "Xukun Li",
-        "Yu Sun",
-        "Lei Zhang"
+        "Navita Goyal",
+        "Hal Daumé"
       ]
     },
     {
-      "id": "arxiv_2602_05617v1",
-      "title": "Unified Sensor Simulation for Autonomous Driving",
-      "url": "https://arxiv.org/abs/2602.05617v1",
+      "id": "arxiv_2602_06871v1",
+      "title": "RFDM: Residual Flow Diffusion Model for Efficient Causal Video Editing",
+      "url": "https://arxiv.org/abs/2602.06871v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "该工作提出XSIM——一个面向自动驾驶的统一传感器仿真框架，通过扩展3DGUT splatting并引入专为滚动快门设计的通用建模，解决了LiDAR等球面相机在方位角边界因循环投影和时间不连续导致的粒子投影错误；框架采用相位建模机制处理高斯分布在方位边界处的时空与形状不连续，并引入双不透明度参数的3D高斯表示以对齐几何与颜色分布，在Waymo、Argoverse 2和PandaSet数据集上均达到SOTA性能，代码已开源。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "3D",
-        "Open Source"
-      ],
-      "paperCategory": "Computer Vision",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：XSIM统一传感器仿真框架为自动驾驶提供高保真、可扩展的模拟基础设施，直接影响L4/L5自动驾驶研发进程，具备全球产业级影响力。",
-        "热度：8 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-05T12:52:46+00:00",
-      "authors": [
-        "Nikolay Patakin",
-        "Arsenii Shirokov",
-        "Anton Konushin"
-      ]
-    },
-    {
-      "id": "arxiv_2602_05202v1",
-      "title": "GT-SVJ: Generative-Transformer-Based Self-Supervised Video Judge For Efficient Video Reward Modeling",
-      "url": "https://arxiv.org/abs/2602.05202v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "针对当前基于视觉-语言模型（VLM）的视频奖励建模难以捕捉细微时序动态的问题，研究者提出GT-SVJ——一种基于生成式Transformer的自监督视频评判模型，通过将视频生成模型重构为能量基模型（EBM），利用对比学习使模型对高质量视频赋予低能量、对退化视频赋予高能量；为避免模型依赖表面差异，作者设计了时序切片、特征交换和帧打乱等合成负样本策略，迫使模型学习有意义的时空特征；仅用3万条人工标注，GT-SVJ在GenAI-Bench和MonteBench上达到SOTA性能，标注量比现有VLM方法少6至65倍。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "LLM",
-        "Vision",
-        "Multimodal",
-        "Benchmark"
-      ],
-      "paperCategory": "Computer Vision",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：提出基于生成式Transformer的自监督视频奖励建模新范式，有望改变视频生成对齐人类偏好的技术路径。",
-        "热度：9 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-05T01:54:01+00:00",
-      "authors": [
-        "Shivanshu Shekhar",
-        "Uttaran Bhattacharya",
-        "Raghavendra Addanki"
-      ]
-    },
-    {
-      "id": "arxiv_2602_06001v1",
-      "title": "Visuo-Tactile World Models",
-      "url": "https://arxiv.org/abs/2602.06001v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "为提升机器人在接触密集任务中的物理推理能力，研究者提出多任务视觉-触觉世界模型（VT-WM），通过融合触觉感知弥补纯视觉模型在遮挡或模糊接触状态下的失效问题；该模型在想象中显著提升物体恒存性（+33%）和运动规律遵循度（+29%），并在真实机器人零样本实验中实现最高35%的成功率提升，尤其在多步骤接触任务中表现突出；此外，VT-WM能快速迁移到新任务，仅需少量演示即可实现可靠规划，展现出强大的下游适应性。",
+      "summary": "为实现高效、可变长度的文本驱动视频编辑，研究者提出残差流扩散模型（RFDM），将2D图像到图像（I2I）扩散模型因果地扩展至视频编辑。RFDM通过在时间步t以t-1步的预测为条件，并设计新的前向过程使模型聚焦于连续帧间的残差变化，从而利用视频时序冗余。该方法在全局/局部风格迁移与物体移除任务上超越I2I基线，媲美全时空3D视频模型，同时保持图像模型的计算开销且推理时间与视频长度无关。研究还提出新基准以更准确评估视频编辑性能。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "Vision",
-        "Robotics",
-        "Reasoning"
-      ],
-      "paperCategory": "Robotics",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：开创性地构建视觉-触觉世界模型，突破纯视觉感知局限，对机器人具身认知具有变革性意义。",
-        "热度：14 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-05T18:46:33+00:00",
-      "authors": [
-        "Carolina Higuera",
-        "Sergio Arnaud",
-        "Byron Boots"
-      ]
-    },
-    {
-      "id": "arxiv_2602_05013v1",
-      "title": "Untwisting RoPE: Frequency Control for Shared Attention in DiTs",
-      "url": "https://arxiv.org/abs/2602.05013v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "针对共享注意力机制中参考图像内容被意外复制而非仅提取风格的问题，研究者对旋转位置编码（RoPE）进行频域分析，发现其高频分量主导注意力计算，导致查询过度关注空间对齐的参考token；基于此，他们提出选择性调制RoPE频段的方法，在保持所有token共享注意力的前提下，抑制位置对齐偏差，使注意力聚焦于语义相似性；该方法在扩散Transformer架构中有效解耦风格迁移与内容复制，实现真正意义上的风格对齐生成。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Vision",
-        "Multimodal",
-        "Diffusion"
-      ],
-      "paperCategory": "Computer Vision",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：深入解析RoPE在DiT中的频率特性，为多模态生成模型的架构优化提供理论基础，可能影响下一代扩散模型设计。",
-        "热度：16 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-04T20:01:59+00:00",
-      "authors": [
-        "Aryan Mikaeili",
-        "Or Patashnik",
-        "Andrea Tagliasacchi"
-      ]
-    },
-    {
-      "id": "arxiv_2602_05375v1",
-      "title": "Erase at the Core: Representation Unlearning for Machine Unlearning",
-      "url": "https://arxiv.org/abs/2602.05375v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "针对现有机器遗忘方法仅在输出层实现“浅层遗忘”而中间表示仍保留敏感信息的问题，研究者提出“Erase at the Core”（EC）框架，通过在多个中间层引入辅助模块，结合对比遗忘损失与保留集上的深度监督，实现全网络层级的表征级遗忘；实验表明EC不仅达成有效的logit级遗忘，还显著降低各中间层与原始模型的表征相似度；该方法模型无关，可作为插件增强现有遗忘算法，在维持保留集性能的同时提升遗忘深度。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Vision"
-      ],
-      "paperCategory": "Computer Vision",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：提出机器遗忘的核心机制——表示去学习，直击AI合规与隐私保护痛点，对全球数据治理政策与技术标准产生深远影响。",
-        "热度：7 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-05T06:54:44+00:00",
-      "authors": [
-        "Jaewon Lee",
-        "Yongwoo Kim",
-        "Donghyun Kim"
-      ]
-    },
-    {
-      "id": "arxiv_2602_06038v1",
-      "title": "CommCP: Efficient Multi-Agent Coordination via LLM-Based Communication with Conformal Prediction",
-      "url": "https://arxiv.org/abs/2602.06038v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "为解决多机器人协作完成自然语言指令任务中的信息冗余与通信低效问题，研究者提出CommCP框架，将多智能体多任务具身问答（MM-EQA）形式化为完全合作场景，并采用基于大语言模型（LLM）的去中心化通信机制，结合保形预测（Conformal Prediction）校准消息置信度以减少接收端干扰；在新构建的逼真家庭场景MM-EQA基准上，CommCP显著提升任务成功率与探索效率，代码与数据集已开源。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "LLM",
-        "Agent",
-        "Robotics",
-        "Open Source"
-      ],
-      "paperCategory": "Robotics",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：提出基于共形预测的高效多机器人协作通信机制，推动复杂任务中自主协同系统的落地。",
-        "热度：13 / 评论 0"
-      ],
-      "score": 8.0,
-      "publishedAt": "2026-02-05T18:59:45+00:00",
-      "authors": [
-        "Xiaopan Zhang",
-        "Zejin Wang",
-        "Zhixu Li"
-      ]
-    },
-    {
-      "id": "arxiv_2602_05305v1",
-      "title": "FlashBlock: Attention Caching for Efficient Long-Context Block Diffusion",
-      "url": "https://arxiv.org/abs/2602.05305v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "针对长上下文块扩散生成中KV缓存重复计算导致的效率瓶颈，研究者发现块外注意力在扩散步间高度稳定，据此提出FlashBlock机制，通过缓存并复用块外部的稳定注意力输出，大幅减少注意力计算与缓存访问；该方法无需修改扩散过程，且可与稀疏注意力正交结合，在语言与视频扩散模型中实现最高1.44倍吞吐提升和1.6倍注意力耗时降低，同时几乎不影响生成质量。",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "LLM",
         "Diffusion",
-        "Inference",
-        "Open Source"
+        "3D",
+        "RAG"
       ],
       "paperCategory": "Computer Vision",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：提出FlashBlock注意力缓存机制，显著提升长上下文生成效率，对视频与长文本生成模型部署具有实际变革意义。",
-        "热度：12 / 评论 0"
+        "模型评分：9/10，理由：提出残差流扩散模型实现高效因果视频编辑，突破传统方法在长度与算力上的限制，可能重塑视频生成与编辑产业格局。",
+        "热度：11 / 评论 0"
       ],
-      "score": 8.0,
-      "publishedAt": "2026-02-05T04:57:21+00:00",
+      "score": 9.0,
+      "publishedAt": "2026-02-06T16:56:30+00:00",
       "authors": [
-        "Zhuokun Chen",
-        "Jianfei Cai",
-        "Bohan Zhuang"
+        "Mohammadreza Salehi",
+        "Mehdi Noroozi",
+        "Luca Morreale"
       ]
     },
     {
-      "id": "arxiv_2602_06032v1",
-      "title": "Splat and Distill: Augmenting Teachers with Feed-Forward 3D Reconstruction For 3D-Aware Distillation",
-      "url": "https://arxiv.org/abs/2602.06032v1",
+      "id": "arxiv_2602_06521v1",
+      "title": "DriveWorld-VLA: Unified Latent-Space World Modeling with Vision-Language-Action for Autonomous Driving",
+      "url": "https://arxiv.org/abs/2602.06521v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "为弥补2D视觉基础模型（VFM）缺乏3D感知能力的缺陷，研究者提出“Splat and Distill”框架，通过快速前馈3D重建增强教师模型：先将教师2D特征显式提升为3D高斯表示，再将其“溅射”到新视角生成多视图2D特征以监督学生模型；相比依赖逐场景优化的先前方法，该方案避免特征平均伪影，实现动态知识蒸馏；在深度估计、法线预测、多视图对应和语义分割等任务上，该方法显著提升3D感知能力与2D语义丰富度。",
+      "summary": "为统一自动驾驶中的视觉想象与动作规划，研究者提出DriveWorld-VLA框架，将视觉-语言-动作（VLA）与世界模型在隐空间深度融合。该方法使VLA规划器直接利用世界模型对场景演化的整体建模，并以隐状态作为核心决策依据，从而评估候选动作对未来场景的影响。整个世界建模在隐空间完成，支持动作条件下的可控特征级想象，避免昂贵的像素级推演。在NAVSIMv1/v2和nuScenes上的开环与闭环评估显示，DriveWorld-VLA达到SOTA性能（91.3 PDMS、86.8 EPDMS、0.16三秒平均碰撞率），显著减少对密集标注的依赖。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "Vision",
-        "3D",
+        "Multimodal",
         "RAG",
         "Open Source"
       ],
@@ -422,27 +230,174 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：提出Splat and Distill框架增强2D视觉基础模型的3D感知能力，对多模态与3D生成模型发展有显著推动作用，具备行业变革潜力。",
-        "热度：11 / 评论 0"
+        "模型评分：9/10，理由：融合视觉-语言-动作与世界模型构建统一框架，推动端到端自动驾驶向具身智能演进，代表当前自动驾驶前沿战略方向。",
+        "热度：13 / 评论 0"
       ],
-      "score": 8.0,
-      "publishedAt": "2026-02-05T18:59:05+00:00",
+      "score": 9.0,
+      "publishedAt": "2026-02-06T09:25:48+00:00",
       "authors": [
-        "David Shavin",
-        "Sagie Benaim"
+        "Feiyang jia",
+        "Lin Liu",
+        "Ziying Song"
       ]
     },
     {
-      "id": "arxiv_2602_05760v1",
-      "title": "Task-Oriented Robot-Human Handovers on Legged Manipulators",
-      "url": "https://arxiv.org/abs/2602.05760v1",
+      "id": "arxiv_2602_06122v1",
+      "title": "From Blurry to Believable: Enhancing Low-quality Talking Heads with 3D Generative Priors",
+      "url": "https://arxiv.org/abs/2602.06122v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "为实现面向任务的机器人-人类零样本手递手交接（TOH），研究者提出AFT-Handover框架，结合大语言模型（LLM）驱动的可供性推理与基于纹理的可供性迁移：给定新物体-任务对，系统从数据库检索代理样本，通过LLM建立部件级对应关系，并将可供性纹理映射至点云以实现特征迁移；实验显示该方法在多样任务-物体组合中提升交接成功率与泛化能力，用户研究中显著优于现有SOTA，有效减少人类接物后的重新抓握，并成功部署于足式操作机器人平台。",
+      "summary": "针对低质量视频或图像生成的3D说话头像常存在几何与纹理细节不足、动画不一致等问题，研究者提出SuperHead框架，通过动力学感知的3D反演机制，将预训练3D生成模型的先验知识注入到3D高斯泼溅（3DGS）表示中，并结合FLAME等参数化头部模型实现高质量动画；该方法利用稀疏的超分2D人脸渲染图与深度图联合监督，在保持身份一致性和时序连贯性的同时显著提升面部细节还原能力，实验表明其在动态表情下的视觉质量明显优于现有基线。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Vision",
+        "3D",
+        "RAG",
+        "Research"
+      ],
+      "paperCategory": "Computer Vision",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：提出SuperHead框架，通过3D生成先验增强低质量说话头像重建，推动虚拟人、元宇宙等领域的高质量内容生成，具备全球产业级影响。",
+        "热度：9 / 评论 0"
+      ],
+      "score": 9.0,
+      "publishedAt": "2026-02-05T19:00:50+00:00",
+      "authors": [
+        "Ding-Jiun Huang",
+        "Yuanhao Wang",
+        "Shao-Ji Yuan"
+      ]
+    },
+    {
+      "id": "arxiv_2602_06575v1",
+      "title": "Think Proprioceptively: Embodied Visual Reasoning for VLA Manipulation",
+      "url": "https://arxiv.org/abs/2602.06575v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "当前视觉-语言-动作（VLA）模型通常将本体感知（proprioception）作为后期条件信号，限制了机器人状态对指令理解和视觉注意力的引导作用；为此提出的ThinkProprio方法将本体状态编码为文本token并早期融合到任务指令中，使具身状态参与后续视觉推理与关键token选择，从而在CALVIN、LIBERO及真实世界操作任务中达到或超越强基线性能，同时减少超过50%的端到端推理延迟，并仅需保留约15%的视觉token即可维持完整性能。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Vision",
+        "Multimodal",
+        "Robotics",
+        "Inference"
+      ],
+      "paperCategory": "Robotics",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：首次将本体感知作为核心推理信号嵌入视觉语言动作模型，革新机器人决策范式，对具身智能发展具有战略意义。",
+        "热度：16 / 评论 0"
+      ],
+      "score": 9.0,
+      "publishedAt": "2026-02-06T10:16:22+00:00",
+      "authors": [
+        "Fangyuan Wang",
+        "Peng Zhou",
+        "Jiaming Qi"
+      ]
+    },
+    {
+      "id": "arxiv_2602_06533v1",
+      "title": "LogicSkills: A Structured Benchmark for Formal Reasoning in Large Language Models",
+      "url": "https://arxiv.org/abs/2602.06533v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "为厘清大语言模型在形式逻辑推理中的真实能力，研究者构建了LogicSkills基准，聚焦三项核心技能：将自然语言前提符号化为一阶逻辑、构造反模型以证伪结论、判断论证有效性；所有题目基于不含等词的二元一阶逻辑片段，采用英语和Carroll风格的虚构词语言双重表述，并经Z3求解器验证正确性与非平凡性；实验显示主流模型在有效性判断上表现良好，但在符号化和反模型构造上显著落后，表明其依赖表面模式而非真正的符号推理机制。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "LLM",
+        "RAG",
+        "Reasoning",
+        "Benchmark"
+      ],
+      "paperCategory": "General AI",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：构建结构化基准以评估LLM的逻辑推理能力，有助于推动大模型可信性研究，被广泛引用可能性高，具备行业级影响力。",
+        "热度：10 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-06T09:38:44+00:00",
+      "authors": [
+        "Brian Rabern",
+        "Philipp Mondorf",
+        "Barbara Plank"
+      ]
+    },
+    {
+      "id": "arxiv_2602_06676v1",
+      "title": "Can We Build a Monolithic Model for Fake Image Detection? SICA: Semantic-Induced Constrained Adaptation for Unified-Yet-Discriminative Artifact Feature Space Reconstruction",
+      "url": "https://arxiv.org/abs/2602.06676v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "针对单一模型在四类图像伪造检测子域中表现不佳的问题，研究发现其根源在于不同伪造类型产生的伪影特征具有内在异质性，导致统一特征空间坍塌；为此提出SICA（语义诱导约束自适应）方法，首次构建单体式伪造图像检测范式，利用高层语义作为结构先验，重建“统一而可区分”的伪影特征空间；在OpenMMSec数据集上的实验表明，SICA超越15种最先进方法，并以近正交方式实现目标特征空间重构，代码与数据集已开源。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Vision",
+        "Open Source"
+      ],
+      "paperCategory": "Computer Vision",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：提出统一的单模型假图像检测框架，突破现有集成方法局限，有望重塑数字取证与AI可信度评估体系，具备全球监管与产业影响。",
+        "热度：8 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-06T13:03:26+00:00",
+      "authors": [
+        "Bo Du",
+        "Xiaochen Ma",
+        "Xuekang Zhu"
+      ]
+    },
+    {
+      "id": "arxiv_2602_06343v1",
+      "title": "Uncertainty-Aware 4D Gaussian Splatting for Monocular Occluded Human Rendering",
+      "url": "https://arxiv.org/abs/2602.06343v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "单目视频中遮挡区域的人体重建常因缺失观测而严重退化，现有方法或引入生成模型导致时序闪烁，或依赖刚性几何假设难以泛化；U-4DGS框架将问题建模为异方差噪声下的最大后验估计，通过概率形变网络与双光栅化流水线生成像素级不确定性图，动态调制梯度以抑制不可靠观测的干扰，并结合置信度感知正则化防止无观测区域的几何漂移；在ZJU-MoCap和OcMotion数据集上，该方法在渲染保真度与时序鲁棒性方面均达到当前最优水平。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "3D",
+        "RAG",
+        "Research"
+      ],
+      "paperCategory": "Computer Vision",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：提出不确定性感知的4D高斯溅射方法，显著提升单目遮挡下人体动态渲染质量，对虚拟人与元宇宙有重要推动作用。",
+        "热度：10 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-06T03:14:37+00:00",
+      "authors": [
+        "Weiquan Wang",
+        "Feifei Shao",
+        "Lin Li"
+      ]
+    },
+    {
+      "id": "arxiv_2602_06572v1",
+      "title": "The Law of Task-Achieving Body Motion: Axiomatizing Success of Robot Manipulation Actions",
+      "url": "https://arxiv.org/abs/2602.06572v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "为确保机器人操作动作在语义、因果与物理层面均正确可行，研究者提出“任务达成身体运动定律”，通过任务-环境-本体（TEE）类定义语义数字孪生（SDT）状态，并基于限定物理模型将动作正确性分解为三个谓词：是否满足任务请求（SatisfiesRequest）、是否因果充分（Causes）、是否本体可行（CanPerform）；该公理化规范提供与实现无关的接口，支持动作合成、验证、失败归因、跨平台可行性评估及反事实推理，并在厨房环境中三种移动操作平台上成功验证了其对容器操作任务的有效性。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
         "Agent",
         "Robotics",
         "Reasoning"
@@ -451,178 +406,167 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：解决任务导向型人机交接的核心难题，推动具身智能在协作场景中的泛化能力，对服务机器人发展具有重要意义。",
-        "热度：14 / 评论 0"
+        "模型评分：8/10，理由：首次形式化机器人操作动作成功的公理体系，为具身智能提供理论基石，对机器人自主决策系统具有深远影响。",
+        "热度：12 / 评论 0"
       ],
       "score": 8.0,
-      "publishedAt": "2026-02-05T15:28:04+00:00",
+      "publishedAt": "2026-02-06T10:12:56+00:00",
       "authors": [
-        "Andreea Tulbure",
-        "Carmen Scheidemann",
-        "Elias Steiner"
+        "Malte Huerkamp",
+        "Jonas Dech",
+        "Michael Beetz"
       ]
     },
     {
-      "id": "arxiv_2602_05079v1",
-      "title": "Reinforcement Learning Enhancement Using Vector Semantic Representation and Symbolic Reasoning for Human-Centered Autonomous Emergency Braking",
-      "url": "https://arxiv.org/abs/2602.05079v1",
+      "id": "arxiv_2602_06504v1",
+      "title": "MultiGraspNet: A Multitask 3D Vision Model for Multi-gripper Robotic Grasping",
+      "url": "https://arxiv.org/abs/2602.06504v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "针对现有基于摄像头的深度强化学习方法缺乏高层场景上下文建模且依赖固定奖励函数的问题，该论文提出一种融合语义、空间与形状信息的神经符号特征表示，并引入软一阶逻辑（SFOL）奖励函数，通过从分割图中提取语义与空间谓词并结合语言规则动态生成奖励权重。在CARLA仿真环境中，该方法在不同交通密度和遮挡条件下显著提升了策略的鲁棒性与安全相关指标，表明将整体性表征与软推理机制融入强化学习可实现更符合人类价值观、更具情境感知能力的自动驾驶决策。",
+      "summary": "现有机器人抓取模型多局限于单一夹爪类型或依赖定制混合夹爪，泛化能力受限；MultiGraspNet提出首个支持平行夹爪与真空吸盘的多任务3D视觉模型，在统一框架下同步预测两类抓取位姿，通过共享早期特征并保留夹爪特异性精调模块，有效融合互补信息；模型在对齐后的GraspNet-1Billion与SuctionNet-1Billion数据集上训练，生成场景点抓取适宜性掩码；真实机器人实验表明，其在单臂多夹爪系统上对已见物体抓取成功率提升16%，对新物体提升32%，同时在平行夹爪任务中保持竞争力。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
-        "Reasoning",
-        "Research"
+        "Vision",
+        "Robotics",
+        "3D",
+        "RAG"
       ],
       "paperCategory": "Robotics",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：融合语义表示与符号推理增强强化学习，在自动驾驶安全系统中实现更高层次决策，具备重大行业变革潜力。",
-        "热度：11 / 评论 0"
+        "模型评分：8/10，理由：提出多夹持器协同的3D视觉模型，解决工业自动化中抓取系统的通用性难题，具备落地转化潜力和行业推广价值。",
+        "热度：12 / 评论 0"
       ],
       "score": 8.0,
-      "publishedAt": "2026-02-04T21:56:27+00:00",
+      "publishedAt": "2026-02-06T08:56:21+00:00",
       "authors": [
-        "Vinal Asodia",
-        "Iman Sharifi",
-        "Saber Fallah"
+        "Stephany Ortuno-Chanelo",
+        "Paolo Rabino",
+        "Enrico Civitelli"
       ]
     },
     {
-      "id": "arxiv_2602_05683v1",
-      "title": "From Vision to Decision: Neuromorphic Control for Autonomous Navigation and Tracking",
-      "url": "https://arxiv.org/abs/2602.05683v1",
+      "id": "arxiv_2602_06380v1",
+      "title": "A Consistency-Improved LiDAR-Inertial Bundle Adjustment",
+      "url": "https://arxiv.org/abs/2602.06380v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "为解决机器人导航中反应式控制与模型规划之间的割裂问题——尤其在目标对称导致决策僵局时——该研究提出一种精简的神经形态控制框架，将机载摄像头像素直接编码为动态神经群体输入，并通过环境几何诱导的分岔机制延迟决策直至临界点，从而打破对称性。受动物认知与意见动力学机制启发，该控制器以极低计算开销实现实时自主导航与跟踪，参数少且可解释，并已在仿真及四旋翼实验平台上验证有效性。",
+      "summary": "基于特征的LiDAR SLAM系统常因特征参数化与协方差估计不一致导致状态估计偏差；为此提出一种一致性增强的LiDAR-惯性束调整（BA）方法，采用球极投影表示平面与边缘特征并通过可观性分析验证其可积性，结合最大后验（MAP）优化与首估计雅可比（FEJ）技术以保持协方差准确性与系统可观性；该BA被集成至LiDAR-惯性里程计中，显著提升定位与建图的一致性与鲁棒性。",
       "fullText": "",
       "imageUrl": "",
       "tags": [
-        "Vision",
+        "Robotics",
+        "3D",
+        "RAG"
+      ],
+      "paperCategory": "Robotics",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：改进LiDAR-IMU捆绑调整的一致性问题，显著提升SLAM系统在复杂环境下的定位精度与鲁棒性，对自动驾驶与机器人导航具全局意义。",
+        "热度：13 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-06T04:28:12+00:00",
+      "authors": [
+        "Xinran Li",
+        "Shuaikang Zheng",
+        "Pengcheng Zheng"
+      ]
+    },
+    {
+      "id": "arxiv_2602_06341v1",
+      "title": "HiWET: Hierarchical World-Frame End-Effector Tracking for Long-Horizon Humanoid Loco-Manipulation",
+      "url": "https://arxiv.org/abs/2602.06341v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "该论文提出HiWET——一种用于人形机器人长时程移动操作的分层强化学习框架，通过将任务重新定义为世界坐标系下的末端执行器跟踪问题，解决了现有方法因本体坐标系指令导致的世界帧累积漂移问题；其高层策略联合优化末端精度与基座位置，低层策略在稳定性约束下执行子目标，并引入运动学流形先验（KMP）通过残差学习嵌入有效动作空间，显著降低探索维度并避免无效构型；仿真与消融实验表明HiWET在长时程世界帧任务中实现高精度稳定跟踪，且低层策略在物理人形机器人上成功实现零样本sim-to-real迁移，验证了显式世界帧推理与分层控制对复杂人形操作的有效性与可扩展性。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Robotics",
+        "Reasoning"
+      ],
+      "paperCategory": "Robotics",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：解决人形机器人长时程运动与操作中的世界坐标漂移问题，引入层级世界帧跟踪机制，对具身智能系统设计有重要推动作用。",
+        "热度：13 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-06T03:11:56+00:00",
+      "authors": [
+        "Zhanxiang Cao",
+        "Liyun Yan",
+        "Yang Zhang"
+      ]
+    },
+    {
+      "id": "arxiv_2602_06243v1",
+      "title": "A Dialogue-Based Human-Robot Interaction Protocol for Wheelchair and Robotic Arm Integrated Control",
+      "url": "https://arxiv.org/abs/2602.06243v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "该研究提出一种基于自然对话的人机交互协议，使轮椅与机械臂集成系统能通过类智能体对话理解用户意图并执行辅助任务；在包含清洁、饮水、喂食等五项任务的试点研究中，五名肢体障碍参与者普遍反馈对话交互比传统手动控制（操纵杆+游戏手柄）更直观且更欣赏机器人的自主性，表明该方法有望提升重度残障人士的独立生活能力。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Agent",
         "Robotics"
       ],
       "paperCategory": "Robotics",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：结合神经形态计算与决策控制，突破传统导航系统反应与规划之间的鸿沟，为边缘智能与自主系统提供新范式。",
+        "模型评分：8/10，理由：提出基于对话的轮椅与机械臂协同控制协议，显著提升残障用户交互自然性与意图理解能力，具备重大社会影响力与技术突破性。",
         "热度：8 / 评论 0"
       ],
       "score": 8.0,
-      "publishedAt": "2026-02-05T14:09:09+00:00",
+      "publishedAt": "2026-02-05T22:47:14+00:00",
       "authors": [
-        "Chuwei Wang",
-        "Eduardo Sebastián",
-        "Amanda Prorok"
+        "Guangping Liu",
+        "Nicholas Hawkins",
+        "Billy Madden"
       ]
     }
   ],
   "news": [
     {
-      "id": "github_google_langextract",
-      "title": "Google开源langextract：用LLM精准抽取文本并可视化溯源",
-      "url": "https://github.com/google/langextract",
+      "id": "rss_7049432042",
+      "title": "OpenAI为美军部署定制版ChatGPT",
+      "url": "https://openai.com/index/bringing-chatgpt-to-genaimil",
       "type": "news",
-      "source": "GitHub Trending",
-      "summary": "**Google开源的langextract库**利用大语言模型从非结构化文本中提取结构化信息，**支持精确溯源与交互式可视化**，解决了传统信息抽取工具难以追溯生成依据的问题；该工具对AI开发者和数据工程师而言，**降低了构建可信、可审计的文本解析流水线门槛**，普通人可通过其可视化界面直观验证AI提取结果的来源，从而在金融、法律或客服等场景中更安全地使用LLM处理敏感文档。",
-      "fullText": "",
-      "imageUrl": "https://opengraph.githubassets.com/b80965c1fd759d24b20241ab07f7737c1a0c8784c9ce318b445f62b4c99355f5/google/langextract",
+      "source": "OpenAI Blog",
+      "summary": "**OpenAI for Government**宣布在**GenAI.mil**平台部署定制版**ChatGPT**，为美国国防团队提供安全优先的生成式AI能力；此举标志着大模型正式进入军事级安全环境，凸显政府对可控AI基础设施的需求，也意味着军方人员未来可通过合规渠道使用先进AI辅助决策、情报分析或后勤规划，但普通公众无法访问该封闭系统。",
+      "fullText": "OpenAI for Government announces the deployment of a custom ChatGPT on GenAI.mil, bringing secure, safety-forward AI to U.S. defense teams.",
+      "imageUrl": "",
       "tags": [
         "LLM",
         "Industry"
       ],
       "paperCategory": "",
       "signalReasons": [
-        "来源：GitHub Trending",
+        "来源权威：官方/白名单",
         "跨源重复：1 个来源",
-        "模型评分：7/10，理由：由谷歌开源的结构化信息提取工具，结合LLM与溯源可视化，具有显著应用潜力和行业示范意义。",
-        "热度：24731 / 评论 0"
+        "模型评分：9/10，理由：OpenAI首次在美军专属平台部署定制化安全AI系统，具有重大战略意义和全球国防AI变革影响。",
+        "热度：0 / 评论 0"
       ],
-      "score": 8.7,
-      "publishedAt": "2026-02-08T23:39:33.200669+00:00",
+      "score": 10.0,
+      "publishedAt": "2026-02-09T11:00:00+00:00",
       "authors": []
     },
     {
-      "id": "github_OpenBMB_MiniCPM-o",
-      "title": "MiniCPM-o发布：手机端运行Gemini 2.5 Flash级多模态AI",
-      "url": "https://github.com/OpenBMB/MiniCPM-o",
-      "type": "news",
-      "source": "GitHub Trending",
-      "summary": "**OpenBMB发布的MiniCPM-o模型**号称达到Gemini 2.5 Flash级别性能，**支持视觉、语音及全双工多模态直播**，可在手机端实时运行；这一轻量级多模态大模型**显著降低了终端设备部署复杂AI应用的门槛**，普通用户无需依赖云端即可在移动端实现视频通话实时字幕、直播互动问答等场景，推动多模态AI从实验室走向日常手持设备。",
-      "fullText": "",
-      "imageUrl": "https://opengraph.githubassets.com/cca4cf2fd4227771031ae38afe00f47402308a08ce7110d1be4f39ed5c18d7ae/OpenBMB/MiniCPM-o",
-      "tags": [
-        "LLM",
-        "Vision",
-        "Multimodal",
-        "Audio"
-      ],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：GitHub Trending",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：在手机端实现类Gemini 2.5 Flash级别的多模态实时交互能力，是边缘AI落地的重要里程碑。",
-        "热度：23383 / 评论 0"
-      ],
-      "score": 7.8,
-      "publishedAt": "2026-02-08T23:39:36.629610+00:00",
-      "authors": []
-    },
-    {
-      "id": "github_pydantic_monty",
-      "title": "Pydantic推Rust版安全Python解释器Monty，专供AI使用",
-      "url": "https://github.com/pydantic/monty",
-      "type": "news",
-      "source": "GitHub Trending",
-      "summary": "**Pydantic团队推出Monty**——一个用Rust编写的极简、安全Python解释器，专为AI应用场景设计；它通过内存安全与最小化攻击面**解决AI系统中执行不可信代码的风险**，对开发者而言意味着可在沙箱中安全运行LLM生成的脚本，而普通用户未来可能受益于更可靠的AI编程助手，避免因恶意代码导致的数据泄露或系统崩溃。",
-      "fullText": "",
-      "imageUrl": "https://opengraph.githubassets.com/72cb4a131aac697de906e4c7ee66b902ee9467375561579c2d06437a8877a97e/pydantic/monty",
-      "tags": [],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：GitHub Trending",
-        "跨源重复：1 个来源",
-        "模型评分：7/10，理由：Pydantic/Monty作为用Rust实现的轻量级、安全的Python解释器，为AI系统提供可信执行环境，是提升AI安全性的重要基础设施进展。",
-        "热度：2689 / 评论 0"
-      ],
-      "score": 7.2,
-      "publishedAt": "2026-02-08T23:39:28.078876+00:00",
-      "authors": []
-    },
-    {
-      "id": "hn_46934404",
-      "title": "工程师亲述AI疲劳：为何越用AI越累？",
-      "url": "https://siddhantkhare.com/writing/ai-fatigue-is-real",
+      "id": "hn_46941603",
+      "title": "Claude自研C编译器性能远逊GCC",
+      "url": "https://harshanu.space/en/tech/ccc-vs-gcc/",
       "type": "news",
       "source": "Hacker News",
-      "summary": "**工程师Siddhant Khare撰文揭示“AI疲劳”现象**：尽管AI加速了单个任务，但工程师反而更疲惫，原因在于任务量膨胀、持续上下文切换、对AI输出的高强度审查以及模型非确定性带来的认知负担；该反思**戳破了“AI提效=减轻负担”的迷思**，指出行业忽视了人类作为最终审核者的可持续性问题，建议开发者聚焦底层基础设施而非追逐工具潮流，并呼吁团队建立约束性机制（如最小权限授权）以降低认知负荷，普通工程师可据此调整预期——将AI输出视为需重写的初稿而非成品。",
-      "fullText": "AI fatigue is real and nobody talks about it | Siddhant Khare Siddhant Khare Home Research Projects Writing Contact Book a call Back to writing Blog February 8, 2026 16 min read AI fatigue is real and nobody talks about it You're using AI to be more productive. So why are you more exhausted than ever? The paradox every engineer needs to confront. ai mental-health engineering personal I shipped more code last quarter than any quarter in my career. I also felt more drained than any quarter in my career. These two facts are not unrelated. I build AI agent infrastructure for a living. I'm one of the core maintainers of OpenFGA (CNCF Incubating), I built agentic-authz for agent authorization, I built Distill for context deduplication, I shipped MCP servers. I'm not someone who dabbles with AI on the side. I'm deep in it. I build the tools that other engineers use to make AI agents work in production. And yet, I hit a wall. The kind of exhaustion that no amount of tooling or workflow optimization could fix. If you're an engineer who uses AI daily - for design reviews, code generation, debugging, documentation, architecture decisions - and you've noticed that you're somehow more tired than before AI existed, this post is for you. You're not imagining it. You're not weak. You're experiencing something real that the industry is aggressively pretending doesn't exist. And if someone who builds agent infrastructure full-time can burn out on AI, it can happen to anyone. I want to talk about it honestly. Not the \"AI is amazing and here's my workflow\" version. The real version. The one where you stare at your screen at 11pm, surrounded by AI-generated code you still need to review, wondering why the tool that was supposed to save you time has consumed your entire day. The paradox nobody warned us about Here's the thing that broke my brain for a while: AI genuinely makes individual tasks faster. That's not a lie. What used to take me 3 hours now takes 45 minutes. Drafting a design doc, scaffolding a new service, writing test cases, researching an unfamiliar API. All faster. But my days got harder. Not easier. Harder. The reason is simple once you see it, but it took me months to figure out. When each task takes less time, you don't do fewer tasks. You do more tasks. Your capacity appears to expand, so the work expands to fill it. And then some. Your manager sees you shipping faster, so the expectations adjust. You see yourself shipping faster, so your own expectations adjust. The baseline moves. Before AI, I might spend a full day on one design problem. I'd sketch on paper, think in the shower, go for a walk, come back with clarity. The pace was slow but the cognitive load was manageable. One problem. One day. Deep focus. Now? I might touch six different problems in a day. Each one \"only takes an hour with AI.\" But context-switching between six problems is brutally expensive for the human brain. The AI doesn't get tired between problems. I do. This is the paradox: AI reduces the cost of production but increases the cost of coordination, review, and decision-making. And those costs fall entirely on the human. You became a reviewer and you didn't sign up for it Before AI, my job was: think about a problem, write code, test it, ship it. I was the creator. The maker. That's what drew most of us to engineering in the first place - the act of building. After AI, my job increasingly became: prompt, wait, read output, evaluate output, decide if output is correct, decide if output is safe, decide if output matches the architecture, fix the parts that don't, re-prompt, repeat. I became a reviewer. A judge. A quality inspector on an assembly line that never stops. This is a fundamentally different kind of work. Creating is energizing. Reviewing is draining. There's research on this - the psychological difference between generative tasks and evaluative tasks. Generative work gives you flow states. Evaluative work gives you decision fatigue. I noticed it first during a week where I was using AI heavily for a new microservice. By Wednesday, I couldn't make simple decisions anymore. What should this function be named? I didn't care. Where should this config live? I didn't care. My brain was full. Not from writing code - from judging code. Hundreds of small judgments, all day, every day. The cruel irony is that AI-generated code requires more careful review than human-written code. When a colleague writes code, I know their patterns, their strengths, their blind spots. I can skim the parts I trust and focus on the parts I don't. With AI, every line is suspect. The code looks confident. It compiles. It might even pass tests. But it could be subtly wrong in ways that only surface in production, under load, at 3am. So you read every line. And reading code you didn't write, that was generated by a system that doesn't understand your codebase's history or your team's conventions, is exhausting work. This is also why I think agent security and authorization matter so much. If we can't review everything AI produces - and we can't, not at scale - then we need systems that constrain what agents can do in the first place. Least-privilege access, scoped tokens, audit trails. The less you have to worry about \"did the AI do something dangerous,\" the more cognitive budget you have for the work that actually matters. This isn't just a security problem. It's a human sustainability problem. The nondeterminism problem Engineers are trained on determinism. Same input, same output. That's the contract. That's what makes debugging possible. That's what makes reasoning about systems possible. AI broke that contract. I had a prompt that worked perfectly on Monday. Generated clean, well-structured code for an API endpoint. I used the same prompt on Tuesday for a similar endpoint. The output was structurally different, used a different error handling pattern, and introduced a dependency I didn't ask for. Why? No reason. Or rather, no reason I can access. There's no stack trace for \"the model decided to go a different direction today.\" There's no log that says \"temperature sampling chose path B instead of path A.\" It just... happened differently. For someone whose entire career is built on \"if it broke, I can find out why,\" this is deeply unsettling. Not in a dramatic way. In a slow, grinding, background-anxiety way. You can never fully trust the output. You can never fully relax. Every interaction requires vigilance. I tried to fight this. I version-controlled my prompts. I built elaborate system messages. I created templates. Some of it helped. None of it solved the fundamental problem: you are collaborating with a probabilistic system, and your brain is wired for deterministic ones. That mismatch is a constant, low-grade source of stress. This frustration is actually what led me to build Distill - deterministic context deduplication for LLMs. No LLM calls, no embeddings, no probabilistic heuristics. Pure algorithms that clean your context in ~12ms. I wanted at least one part of the AI pipeline to be something I could reason about, debug, and trust. If the model's output is going to be nondeterministic, the least I can do is make sure the input is clean and predictable. The engineers I've talked to who handle this best are the ones who've made peace with it. They treat AI output like a first draft from a smart but unreliable intern. They expect to rewrite 30% of it. They budget time for that rewriting. They don't get frustrated when the output is wrong because they never expected it to be right. They expected it to be useful. There's a difference. The FOMO treadmill Take a breath and try to keep up with just the last few months. Claude Code ships sub-agents, then skills, then an Agent SDK, then Claude Cowork. OpenAI launches Codex CLI, then GPT-5.3-Codex - a model that literally helped code itself. New coding agents announce background mode with hundreds of concurrent autonomous sessions. Google drops Gemini CLI. GitHub adds an MCP Registry. Acquisitions happen weekly. Amazon Q Developer gets agentic upgrades. CrewAI, AutoGen, LangGraph, MetaGPT - pick your agent framework, there's a new one every week. Google announces A2A (Agent-to-Agent protocol) to compete with Anthropic's MCP. OpenAI ships its own Swarm framework. Kimi K2.5 drops with agent swarm architecture orchestrating 100 parallel agents. \"Vibe coding\" becomes a thing. OpenClaw launches a skills marketplace and within one week, researchers find 400+ malicious agent skills uploaded to ClawHub. And somewhere in the middle of all this, someone on LinkedIn posts \"if you're not using AI agents with sub-agent orchestration in 2026, you're already obsolete.\" That's not a year. That's a few months. And I'm leaving stuff out. I fell into this trap hard. I was spending weekends evaluating new tools. Reading every changelog. Watching every demo. Trying to stay at the frontier because I was terrified of falling behind. Here's what that actually looked like: I'd spend Saturday afternoon setting up a new AI coding tool. By Sunday I'd have a basic workflow. By the following Wednesday, someone would post about a different tool that was \"way better.\" I'd feel a pang of anxiety. By the next weekend, I'd be setting up the new thing. The old thing would sit unused. One coding assistant to the next to the next and back to the first one. Each migration cost me a weekend and gave me maybe a 5% improvement that I couldn't even measure properly. Multiply this by every category - coding assistants, chat interfaces, agent frameworks, multi-agent orchestration platforms, MCP servers, context management tools, prompt libraries, swarm architectures, skills marketplaces - and you get a person who is perpetually learning new tools and never getting deep with any of them. The Hacker News front page alone is enough to give you whiplash. One day it's \"Show HN: Autonomous Research Swarm\" and the next it's \"Ask HN: How will AI swarms coordinate?\" Nobody knows. Everyone's building anyway. The worst part is the knowledge decay. I spent two weeks building a sophisticated prompt engineering workflow in early 2025. Carefully crafted system prompts, few-shot examples, chain-of-thought templates. It worked well. Three months later, the model updated, the prompting best practices shifted, and half my templates produced worse results than a simple one-liner. Those two weeks were gone. Not invested. Spent. The same thing happened with my MCP server setup - I built five custom servers (Dev.to publisher, Apple Notes integration, Python and TypeScript sandboxes, more), then the protocol evolved, then the MCP Registry launched on GitHub and suddenly there were thousands of pre-built ones. Some of my custom work became redundant overnight. The agent framework churn is even worse. I watched teams go from LangChain to CrewAI to AutoGen to custom orchestration in the span of a year. Each migration meant rewriting integrations, relearning APIs, rebuilding workflows. The people who waited and did nothing often ended up in a better position than the people who adopted early and had to migrate twice. I've since adopted a different approach. Instead of chasing every new tool, I go deep on the infrastructure layer underneath them. Tools come and go. The problems they solve don't. Context efficiency, agent authorization, audit trails, runtime security - these are durable problems regardless of which framework is trending this month. That's why I built agentic-authz on OpenFGA instead of tying it to any specific agent framework. That's why Distill works at the context level, not the prompt level. Build on the layer that doesn't churn. I still track the landscape closely - you have to when you're building infrastructure for it. But I track it to understand where the ecosystem is going, not to adopt every new thing. There's a difference between being informed and being reactive. The \"just one more prompt\" trap This one is insidi",
-      "imageUrl": "https://siddhantkhare.com/blog/ai-fatigue-is-real/1.png",
-      "tags": [],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：Hacker News",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：深入探讨AI疲劳这一关键人机协同痛点，揭示技术过载对工程师心理与生产力的真实影响，引发行业对可持续AI工作流的反思，具有广泛共鸣与战略意义。",
-        "热度：382 / 评论 276"
-      ],
-      "score": 6.86,
-      "publishedAt": "2026-02-08T14:19:32+00:00",
-      "authors": [
-        "sidk24"
-      ]
-    },
-    {
-      "id": "hn_46930391",
-      "title": "LocalGPT发布：Rust编写、本地运行、带持久记忆的AI助手",
-      "url": "https://github.com/localgpt-app/localgpt",
-      "type": "news",
-      "source": "Hacker News",
-      "summary": "**LocalGPT是一个用Rust编写的本地优先AI助手**，提供持久化记忆（基于Markdown文件）、自主任务队列和约27MB的单二进制部署，支持CLI、Web及桌面GUI，兼容OpenClaw生态；该项目**回应了用户对数据隐私与离线可用性的迫切需求**，使普通用户能在完全掌控数据的前提下使用AI进行知识管理与自动化，开发者则可借助其SQLite全文与向量混合检索架构快速构建本地智能应用。",
-      "fullText": "GitHub - localgpt-app/localgpt Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage code changes APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities Code security Secure your code as you build Secret protection Stop leaks before they start EXPLORE Why GitHub Documentation Blog Changelog Marketplace View all features Solutions BY COMPANY SIZE Enterprises Small and medium teams Startups Nonprofits BY USE CASE App Modernization DevSecOps DevOps CI/CD View all use cases BY INDUSTRY Healthcare Financial services Manufacturing Government View all industries View all solutions Resources EXPLORE BY TOPIC AI Software Development DevOps Security View all topics EXPLORE BY TYPE Customer stories Events & webinars Ebooks & reports Business insights GitHub Skills SUPPORT & SERVICES Documentation Customer support Community forum Trust center Partners Open Source COMMUNITY GitHub Sponsors Fund open source developers PROGRAMS Security Lab Maintainer Community Accelerator Archive Program REPOSITORIES Topics Trending Collections Enterprise ENTERPRISE SOLUTIONS Enterprise platform AI-powered developer platform AVAILABLE ADD-ONS GitHub Advanced Security Enterprise-grade security features Copilot for Business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Pricing Search or jump to... Search code, repositories, users, issues, pull requests... Search Clear Search syntax tips Provide feedback We read every piece of feedback, and take your input very seriously. Include my email address so I can be contacted Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Name Query To see all available qualifiers, see our documentation . Cancel Create saved search Sign in Sign up Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert localgpt-app / localgpt Public Notifications You must be signed in to change notification settings Fork 38 Star 637 License Apache-2.0 license 637 stars 38 forks Branches Tags Activity Star Notifications You must be signed in to change notification settings Code Issues 8 Pull requests 1 Actions Projects 0 Security 0 Insights Additional navigation options Code Issues Pull requests Actions Projects Security Insights localgpt-app/localgpt main Branches Tags Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 93 Commits 93 Commits .claude/ commands .claude/ commands .github/ workflows .github/ workflows docs docs src src ui ui .gitignore .gitignore CHANGELOG.md CHANGELOG.md CLAUDE.md CLAUDE.md Cargo.lock Cargo.lock Cargo.toml Cargo.toml LICENSE LICENSE README.md README.md config.example.toml config.example.toml deny.toml deny.toml View all files Repository files navigation README Apache-2.0 license LocalGPT A local device focused AI assistant built in Rust — persistent memory, autonomous tasks, ~27MB binary. Inspired by and compatible with OpenClaw. cargo install localgpt Why LocalGPT? Single binary — no Node.js, Docker, or Python required Local device focused — runs entirely on your machine, your memory data stays yours Persistent memory — markdown-based knowledge store with full-text and semantic search Autonomous heartbeat — delegate tasks and let it work in the background Multiple interfaces — CLI, web UI, desktop GUI Multiple LLM providers — Anthropic (Claude), OpenAI, Ollama OpenClaw compatible — works with SOUL, MEMORY, HEARTBEAT markdown files and skills format Install # Full install (includes desktop GUI) cargo install localgpt # Headless (no desktop GUI — for servers, Docker, CI) cargo install localgpt --no-default-features Quick Start # Initialize configuration localgpt config init # Start interactive chat localgpt chat # Ask a single question localgpt ask \" What is the meaning of life? \" # Run as a daemon with heartbeat, HTTP API and web ui localgpt daemon start How It Works LocalGPT uses plain markdown files as its memory: ~/.localgpt/workspace/ ├── MEMORY.md # Long-term knowledge (auto-loaded each session) ├── HEARTBEAT.md # Autonomous task queue ├── SOUL.md # Personality and behavioral guidance └── knowledge/ # Structured knowledge bank (optional) ├── finance/ ├── legal/ └── tech/ Files are indexed with SQLite FTS5 for fast keyword search, and sqlite-vec for semantic search with local embeddings Configuration Stored at ~/.localgpt/config.toml : [ agent ] default_model = \" claude-cli/opus \" [ providers . anthropic ] api_key = \" ${ANTHROPIC_API_KEY} \" [ heartbeat ] enabled = true interval = \" 30m \" active_hours = { start = \" 09:00 \" , end = \" 22:00 \" } [ memory ] workspace = \" ~/.localgpt/workspace \" CLI Commands # Chat localgpt chat # Interactive chat localgpt chat --session < id > # Resume session localgpt ask \" question \" # Single question # Daemon localgpt daemon start # Start background daemon localgpt daemon stop # Stop daemon localgpt daemon status # Show status localgpt daemon heartbeat # Run one heartbeat cycle # Memory localgpt memory search \" query \" # Search memory localgpt memory reindex # Reindex files localgpt memory stats # Show statistics # Config localgpt config init # Create default config localgpt config show # Show current config HTTP API When the daemon is running: Endpoint Description GET /health Health check GET /api/status Server status POST /api/chat Chat with the assistant GET /api/memory/search?q=<query> Search memory GET /api/memory/stats Memory statistics Blog Why I Built LocalGPT in 4 Nights — the full story with commit-by-commit breakdown. Built With Rust, Tokio, Axum, SQLite (FTS5 + sqlite-vec), fastembed, eframe Contributors Stargazers License Apache-2.0 About No description, website, or topics provided. Resources Readme License Apache-2.0 license Uh oh! There was an error while loading. Please reload this page . Activity Custom properties Stars 637 stars Watchers 3 watching Forks 38 forks Report repository Releases 2 tags Packages 0 No packages published Contributors 4 Uh oh! There was an error while loading. Please reload this page . Languages Rust 93.2% JavaScript 4.0% CSS 2.0% HTML 0.8% Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy Security Status Community Docs Contact Manage cookies Do not share my personal information You can’t perform that action at this time.",
-      "imageUrl": "https://opengraph.githubassets.com/1711b8cf74536468a50546178b00974c2524e7576e8dba435d899521278b9c07/localgpt-app/localgpt",
+      "summary": "Anthropic利用Claude Opus 4.6从零构建了名为CCC（Claude’s C Compiler）的C编译器，虽能无错误编译Linux内核全部C文件，却因链接阶段产生超4万处重定位错误而失败；在SQLite基准测试中，CCC生成的代码功能正确但运行速度比GCC慢数百至数十万倍，主因是缺乏寄存器分配等关键优化，导致大量变量溢出至内存；该实验揭示AI可完成编译器前端开发，但后端优化与链接器等底层系统工程仍需深厚专业知识，对开发者而言，当前AI生成的编译器尚不具备实用价值，仅具研究意义。",
+      "fullText": "CCC vs GCC - Harshanu Harshanu Tech Blog About Tags Top Post Deutsch February 8, 2026 CCC vs GCC Posted on February 8, 2026 • 15 minutes • 3024 words Introduction Anthropic recently published a blog post about building a C compiler entirely with Claude . They called it CCC (Claude’s C Compiler) and claimed it could compile the Linux kernel. 100% of the code was written by Claude Opus 4.6, a human only guided the process by writing test cases. That sounded interesting enough to test the claim and benchmark CCC against the industry standard GCC. The source code of CCC is available at claudes-c-compiler . It is written entirely in Rust, targeting x86-64, i686, AArch64 and RISC-V 64. The frontend, SSA-based IR, optimizer, code generator, peephole optimizers, assembler, linker and DWARF debug info generation are all implemented from scratch with zero compiler-specific dependencies. That is a lot of work for an AI to do. What is a Compiler, Assembler and Linker? Before we jump into the comparison, it helps to understand what happens when you compile a C program. There are four stages involved. Image credit: The four stages of the gcc compiler Preprocessor : Handles #include , #define and other directives. It takes the source code and produces expanded source code. Compiler : Takes the preprocessed source code and translates it into assembly language. This is where the real heavy lifting happens, understanding the C language, type checking, optimizations, register allocation and so on. Assembler : Converts the assembly language into machine code (object files). It has to know the exact instruction encoding for the target CPU architecture. Linker : Takes one or more object files and combines them into a single executable. It resolves references between files, sets up memory layout and produces the final binary. Why Compilers Are Beasts Writing a programming language is hard (prior vibe coding). Writing a compiler is on another level entirely. A programming language defines the rules. A compiler has to understand those rules, translate them into machine instructions, optimize the output for speed and size, handle edge cases across different CPU architectures and produce correct code every single time. GCC has been in development since 1987. That is close to 40 years of work by thousands of contributors. It supports dozens of architectures, hundreds of optimization passes and millions of edge cases that have been discovered and fixed over the decades. The optimization passes alone (register allocation, function inlining, loop unrolling, vectorization, dead code elimination, constant propagation) represent years of PhD-level research. This is one of the reasons why it’s ubiquitous. This is why CCC being able to compile real C code at all is noteworthy. But it also explains why the output quality is far from what GCC produces. Building a compiler that parses C correctly is one thing. Building one that produces fast and efficient machine code is a completely different challenge. Why the Compiler Is the “Easy” Part Ironically, among the four stages, the compiler (translation to assembly) is the most approachable one for an AI to build. It is mostly about pattern matching and rule application: take C constructs and map them to assembly patterns. The assembler is harder than it looks. It needs to know the exact binary encoding of every instruction for the target architecture. x86-64 alone has thousands of instruction variants with complex encoding rules (REX prefixes, ModR/M bytes, SIB bytes, displacement sizes). Getting even one bit wrong means the CPU will do something completely unexpected. The linker is arguably the hardest. It has to handle relocations, symbol resolution across multiple object files, different section types, position-independent code, thread-local storage, dynamic linking and format-specific details of ELF binaries. The Linux kernel linker script alone is hundreds of lines of layout directives that the linker must get exactly right. Why SQLite and Not the Linux Kernel? The Linux kernel is one of the most complex C codebases in the world. It has millions of lines of code, uses GCC-specific extensions, inline assembly, linker scripts and countless tricks that push the compiler to its limits. It is not a good first test for a new compiler. SQLite, on the other hand, is distributed as a single amalgamation file (one big .c file). It is standard C, well-tested and self-contained. If your compiler can handle SQLite, it can handle a lot. If it cannot handle SQLite correctly, there is no point testing anything bigger. That is why I tested both. SQLite tells us about correctness and runtime performance. The kernel tells us about scale and compatibility. Test Setup VMs 2x Debian-based VMs on Proxmox hypervisor, each on a separate physical node, 6 vCPU, 16 GB RAM, 100 GB disk (NVMe) GCC GCC 14.2.0 (Debian 14.2.0-19) CCC Claude’s C Compiler, built from source with --features gcc_m16 Kernel Linux 6.9 (x86_64 defconfig) SQLite SQLite 3.46.0 amalgamation Monitoring /usr/bin/time -v , custom system metrics logger (CPU%, RSS every 5s) CCC was built with the gcc_m16 Cargo feature, which delegates 16-bit real-mode boot code ( -m16 flag) to GCC. This is needed because CCC’s i686 backend produces code too large for the 32KB real-mode limit. The x86_64 C code is compiled entirely by CCC. A ccc_wrapper.sh script routes .S assembly files to GCC (CCC does not process assembly) and all .c files to CCC. Methodology Compilers are usually measured on below scenarios. Hence, tests are also designed around them. Time to compile code Size of compiled code Speed of compiled code Memory usage of compiled code Bugs and probability of seg faulting Fair Comparison Principles Same hardware – identical VM specs for both compilers Same source code – identical kernel config, identical SQLite amalgamation Both run to completion – no tests killed prematurely CCC gets help where needed – gcc_m16 feature for boot code, wrapper for assembly files Same benchmark script – benchmark_sqlite.sh runs identically on both VMs SQLite Benchmark Design The benchmark was designed to be CPU-bound: No VACUUM (I/O-dominated, unfair to slower code) No correlated subqueries (O(n^2) queries were replaced with GROUP BY) 42 SQL operations across 10 phases: INSERT, aggregate, sort, index, JOIN, subquery, UPDATE/DELETE, group-by, cross-table join, cleanup 100,000 row primary table, 10,000 row secondary table Results Summary Metric GCC CCC Ratio Kernel Build Time 73.2 min 42.5 min (couldn’t finish building binary) – Kernel Build Result SUCCESS Link failed – Kernel Peak RSS 831 MB 1,952 MB 2.3x SQLite Compile (-O0 vs -O0) 64.6s 87.0s 1.3x slower SQLite Binary Size 1.55 MB / 1.40 MB 4.27 MB / 4.27 MB 2.7-3.0x SQLite Runtime (-O0) 10.3s 2h06m 737x SQLite Runtime (-O2) 6.1s 2h06m 1,242x Compiler Memory 272 MB 1,616 MB 5.9x Crash Tests 5/5 pass 5/5 pass – The fair comparison is CCC vs GCC at -O0 (no optimization): CCC takes 87s vs GCC’s 65s – CCC is 1.3x slower. The “5x faster” number only appears because GCC is doing 7 minutes of optimization work that CCC simply skips. Linux Kernel 6.9 Compilation Results Metric GCC CCC Wall Clock Time 73.2 min 42.5 min (just compilation of .c files) User CPU Time 379.7 min 192.3 min (failed after .c file compilation) Peak RSS 831 MB 1,952 MB C Files Compiled 2,844 2,844 Compiler Errors 0 0 Linker Errors 0 40,784 Build Result vmlinux produced Link failed What Happened CCC compiled every single C source file in the Linux 6.9 kernel without a single compiler error (0 errors, 96 warnings). This is genuinely impressive for a compiler built entirely by an AI. However, the build failed at the linker stage with around 40,784 undefined reference errors. The errors follow two patterns: __jump_table relocations – CCC generates incorrect relocation entries for kernel jump labels (used for static keys/tracepoints) __ksymtab references – CCC produces malformed symbol table entries for kernel module exports These are linker-visible bugs in CCC’s relocation/symbol generation, not C language compilation bugs. This is a good example of why the linker is the hardest part. The compiler did its job fine, but the generated relocations were not quite right for the kernel’s complex linker script. SQLite 3.46 Benchmark Compilation Metric GCC -O0 GCC -O2 CCC Time 64.6s 7m23s 1m27s (just -O0) Peak RSS 272 MB 370 MB 1,616 MB Binary Size 1.55 MB 1.40 MB 4.27 MB CCC -O0 and -O2 produce byte-identical binaries (4,374,024 bytes). CCC has 15 SSA optimization passes, but they all run at every optimization level. There is no tiered optimization – the -O flag is accepted but completely ignored. Why This Matters for the “-O2” Comparison When you ask GCC to compile with -O2 , it performs dozens of extra optimization passes: Instruction selection: choosing the best x86 instructions Register allocation: fitting variables into CPU registers so they do not spill to slow memory Loop unrolling: duplicating loop bodies to reduce branch overhead Function inlining: embedding small functions directly into their callers Dead code elimination: removing unreachable code paths Vectorization: using SIMD instructions (SSE/AVX) to process multiple values at once GCC’s -O2 spends 7 minutes doing this work, and the payoff is clear: the resulting binary runs 1.7x faster (6.1s vs 10.3s). CCC does none of this at any optimization level. Comparing “CCC compile time vs GCC -O2 compile time” is like comparing a printer that only prints in black-and-white vs one that does full color. The black-and-white printer is faster, but it isn’t doing the same job. Runtime Performance Metric GCC -O0 GCC -O2 CCC Total Runtime 10.3s 6.1s 2h 06m User CPU 9.68s 5.46s 7,518s Peak RSS 7.4 MB 7.0 MB 9.6 MB CCC-compiled SQLite is functionally correct – it produces the same query results as GCC-compiled SQLite. All 5 crash/edge-case tests passed. But it is very slow. Crash and Correctness Tests No failures observed during these tests: NULL handling Large BLOB (1MB) Recursive CTE (Fibonacci) Unicode strings Integer overflow Per-Query Analysis The per-query breakdown shows that CCC’s slowdown is not uniform. Simple queries are only 1-7x slower, but complex operations involving nested loops blow up: Query Operation GCC -O0 CCC Slowdown Q18 WHERE a NOT IN (SELECT a FROM test2) 0.047s 7,432s 158,129x Q38 Cross-table JOIN + GROUP BY 0.002s 52.5s 26,235x Q19 WHERE a IN (SELECT a FROM test2) 0.020s 15.5s 777x Q16 INNER JOIN ON (count) 0.003s 1.06s 354x Q21 UPDATE … WHERE d < 50 0.016s 1.31s 82x Q03 GROUP BY d ORDER BY COUNT(*) DESC 1.218s 8.39s 6.9x Q01 INSERT 100K rows 0.065s 0.113s 1.7x Q42 DROP TABLE 0.051s 0.057s 1.1x The pattern is clear: operations that involve nested iteration (subqueries, JOINs) are orders of magnitude slower, while simple sequential operations are only slightly slower. Root Cause Analysis – Why CCC Code is Slow 1. Register Spilling Modern CPUs have a small set of fast storage locations called registers. A good compiler tries to keep frequently used variables in these registers. When there are more variables than registers, the compiler “spills” them to the stack (regular RAM), which is much slower. CCC’s biggest performance problem is excessive register spilling. SQLite’s core execution engine sqlite3VdbeExec is a single function with 100+ local variables and a massive switch statement. CCC does not have good register allocation, so it spills almost all variables to the stack. GCC -O0 (383 lines, uses stack but efficiently): movl -8 ( %rbp ) , %eax ; load loop counter cmpl -36 ( %rbp ) , %eax ; compare against n jl .L6 ; branch movl ( %rax ) , %edx ; load a [ i ] directly cmpl %eax, %edx ; compare in registers CCC (1,189 lines – 3.1x more code): movq -0x1580 ( %rbp ) , %rax ; load from deep stack offset movq %rax, -0x2ae8 ( %rbp ) ; store to another deep stack offset movq -0x1588 ( %rbp ) , %rax ; load next value movq %rax, -0x2af0 ( %rbp ) ; store to next offset ;",
+      "imageUrl": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*YummodV7MDImgo0ywwmxlA.png",
       "tags": [
         "LLM"
       ],
@@ -630,24 +574,24 @@
       "signalReasons": [
         "来源：Hacker News",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：LocalGPT 实现本地运行、带持久记忆的Rust AI助手，推动隐私优先型AI应用发展，符合去中心化与安全计算趋势。",
-        "热度：311 / 评论 146"
+        "模型评分：9/10，理由：Anthropic用Claude Opus 4.6完全自主构建C编译器CCC并成功编译Linux内核，是AI在系统级软件开发中的重大突破，具有全球产业影响力和战略意义。",
+        "热度：333 / 评论 340"
       ],
-      "score": 6.29,
-      "publishedAt": "2026-02-08T01:26:38+00:00",
+      "score": 7.06,
+      "publishedAt": "2026-02-09T04:30:38+00:00",
       "authors": [
-        "yi_wang"
+        "unchar1"
       ]
     },
     {
-      "id": "rss_6111474705",
-      "title": "超级碗AI广告大战：Svedka首推AI生成片，Anthropic隔空叫板OpenAI",
-      "url": "https://techcrunch.com/2026/02/08/super-bowl-60-ai-ads-svedka-anthropic-brands-commercials/",
+      "id": "rss_1667469170",
+      "title": "Anthropic冲刺200亿美元融资",
+      "url": "https://techcrunch.com/2026/02/09/anthropic-closes-in-on-20b-round/",
       "type": "news",
       "source": "TechCrunch AI",
-      "summary": "**2026年超级碗广告密集押注AI**：Svedka推出首个主要由AI生成的全国广告，Anthropic借广告嘲讽OpenAI将引入广告并引发创始人隔空互怼，Meta、Amazon、Google等则分别展示AI眼镜、Alexa+和图像生成模型；这场营销盛宴**标志着AI从技术工具升级为消费品牌核心叙事元素**，不仅加剧公众对创意岗位替代的担忧，也让普通观众直面AI商业化边界争议——用户需警惕免费AI服务背后的广告变现逻辑，并关注如Claude等承诺无广告的产品选项。",
-      "fullText": "From Svedka to Anthropic, brands make bold plays with AI in Super Bowl ads | TechCrunch TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture More from TechCrunch Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Crunchboard Contact Us Image Credits: Svedka Media & Entertainment From Svedka to Anthropic, brands make bold plays with AI in Super Bowl ads Lauren Forristal 8:18 AM PST · February 8, 2026 Following last year’s trend of showcasing AI in multimillion-dollar ad spots, the 2026 Super Bowl advertisements took it a step further by leveraging AI both to create the commercials and to promote the latest AI products. Love it or hate it, the technology has become a star in its own right, alongside the latest movie trailers and snack brands. Let’s explore the biggest moments from this year’s Big Game ads, which featured everything from robots and AI glasses to a touch of drama involving tech founders. Svedka Vodka brand Svedka went with what it touts as the first “primarily” AI-generated national Super Bowl spot. The 30-second ad, titled “Shake Your Bots Off,” features the company’s robot character, Fembot, and her new companion, Brobot, dancing their circuits off at a human party. According to Svedka’s parent company, Sazerac, it took roughly four months to reconstruct the Fembot and train the AI to mimic facial expressions and body movements, The Wall Street Journal reported . However, the vodka brand noted that certain aspects were still handled by humans, such as developing the storyline. ​The company partnered with AI company Silverside to create the Super Bowl spot, according to ADWEEK . Silverside AI is the same team behind recent AI-generated Coca-Cola commercials that sparked controversy . ​It’s a bold move to debut AI-generated content during the Super Bowl, an event known for star-studded, high-production ads. The heavy reliance on AI is polarizing, fueling debates over whether AI will replace creative jobs. Techcrunch event TechCrunch Founder Summit 2026: Tickets Live On June 23 in Boston , more than 1,100 founders come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Save up to $300 on your pass or save up to 30% with group tickets for teams of four or more. TechCrunch Founder Summit: Tickets Live On June 23 in Boston , more than 1,100 founders come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Save up to $300 on your pass or save up to 30% with group tickets for teams of four or more. Boston, MA | June 23, 2026 REGISTER NOW Either way, Svedka definitely got people talking. Anthropic Anthropic’s ad wasn’t just about selling its Claude chatbot; it was about throwing shade. The commercial took a jab at OpenAI’s plan to introduce ads to ChatGPT , with a tagline: “Ads are coming to AI. But not to Claude.” Rather than focus solely on Claude’s features, it poked fun at the idea of your helpful AI assistant suddenly turning into a hype man for “Step Boost Maxx” insoles, for example. It wasn’t a standard product pitch, and it escalated into an online feud . OpenAI’s Sam Altman fired back on social media, calling the ad “clearly dishonest.” So while we didn’t get any more Kendrick vs. Drake rap beef this time around, maybe we did get our own AI, nerdy version of it . Meta Meta spotlighted its Oakley-branded AI glasses , designed for sports, workouts, and adventures, including extreme scenarios such as chasing down a departing plane. The ad showcased thrill-seekers, from skydivers to mountain bikers, using the glasses to capture epic moments. Famous faces like IShowSpeed and filmmaker Spike Lee made appearances, demonstrating capabilities like filming a basketball dunk in slow motion, posting hands-free to Instagram, and other advanced features. The tech giant also featured its wearable AI tech in last year’s Super Bowl ad to spark consumer interest, with stars like Chris Pratt, Chris Hemsworth, and Kris Jenner showing off Ray-Ban Meta glasses. Amazon Amazon’s ad took a cheeky (and slightly unsettling) approach, starring Chris Hemsworth in a satirical “AI is out to get me” storyline. The commercial exaggerates common fears about AI, with Hemsworth humorously accusing Alexa+ of plotting against him. Scenes included Alexa+ closing the garage door on his head and shutting the pool cover while he swam, each mishap escalating in absurdity. Beyond the dark comedy, the ad introduced the new Alexa+, showcasing its enhanced intelligence and capabilities, ranging from managing smart home devices to planning vacations. Alexa+ had been available in early access for over a year and officially launched to all U.S. users on Wednesday. Ring Ring’s commercial spotlighted its “Search Party” feature , which leverages AI and a community network to reunite lost pets with their owners. The ad followed a young girl searching for her dog Milo, illustrating how users can upload a pet’s photo to the app, where AI works to identify matches and taps into nearby cameras and the broader Ring user community to help track down missing furry family members. Ring recently announced that anyone can now use Search Party, even without owning a Ring security camera. According to the company, the feature has already helped reunite more than one lost dog with its owner every day. Google Google’s ad showcased the Nano Banana Pro , its newest image-generation model. The commercial followed a mother and son as they used AI to envision and design their new home, uploading photos of bare rooms and turning them into personalized spaces with just a few prompts. Ramp Ramp scored big by getting Brian Baumgartner — the actor who played Kevin in “The Office” — for its Super Bowl commercial. In the spot, Baumgartner uses Ramp’s AI-powered spend management platform to “multiply” himself, effortlessly tackling a mountain of work. The ad highlights how Ramp’s all-in-one solution helps teams focus on the most important tasks through smart automation. And, as a playful nod to his TV persona, Baumgartner is seen carrying a pot of chili in the ad, referencing Kevin’s legendary scene where he brings his cherished recipe for his co-workers to try, only to disastrously spill the entire pot on the floor. Rippling Rippling, the cloud-based workforce management platform, went all in on its first-ever Super Bowl ad . The company tapped comedian Tim Robinson in a spot about onboarding an alien monster, poking fun at HR headaches and the promise of AI automation. Hims & Hers Health company Hims & Hers used its Super Bowl spot to address disparities in healthcare access. The ad cleverly references the lengths the wealthy go to for health and longevity, even appearing to poke fun at Jeff Bezos’ Blue Origin spaceflight in 2021 and Bryan Johnson’s expensive anti-aging routines . In recent years, the company launched an AI-powered “MedMatch” tool to deliver more personalized treatment recommendations, especially for mental health and wellness. Wix Website builder Wix spotlighted its new AI-powered Wix Harmony platform, promising website creation as easy as chatting with a friend. Unveiled in January, the flagship platform combines AI-driven creation and “vibe coding” with full visual editing and customization. Wix’s biggest competitor, Squarespace, also has a Super Bowl ad this year. Squarespace’s ad has a more cinematic approach starring Emma Stone and directed by Yorgos Lanthimos. This post was initially published on February 6, 2026. Topics Adtech , AI , Anthropic , Football , Media & Entertainment , super bowl Lauren Forristal Lauren covers media, streaming, apps and platforms at TechCrunch. You can contact or verify outreach from Lauren by emailing laurenf.techcrunch@gmail.com or via encrypted message at laurenforris22.25 on Signal. View Bio October 13-15 San Francisco, CA Tickets are live at the lowest rates of the year. Save up to $680 on your pass now. Meet investors. Discover your next portfolio company. Hear from 250+ tech leaders , dive into 200+ sessions , and explore 300+ startups building what’s next. Don’t miss these one-time savings. REGISTER NOW Most Popular Amazon’s ‘Melania’ documentary stumbles in second weekend Anthony Ha Crypto.com places $70M bet on AI.com domain ahead of Super Bowl Connie Loizos Okay, I’m slightly less mad about that ‘Magnificent Ambersons’ AI project Anthony Ha TechCrunch Mobility: Is $16B enough to build a profitable robotaxi business? Kirsten Korosec San Francisco’s pro-billionaire march draws dozens Anthony Ha From Svedka to Anthropic, brands make bold plays with AI in Super Bowl ads Lauren Forristal India has changed its startup rules for deep tech Jagmeet Singh Loading the next article Error loading the next article X LinkedIn Facebook Instagram youTube Mastodon Threads Bluesky TechCrunch Staff Contact Us Advertise Crunchboard Jobs Site Map Terms of Service Privacy Policy RSS Terms of Use Code of Conduct Epstein Kindle Scribe Reddit TikTok GPT-4o Tech Layoffs ChatGPT © 2025 TechCrunch Media LLC.",
-      "imageUrl": "https://techcrunch.com/wp-content/uploads/2026/02/svedkasuperbowl2026.png?w=1200",
+      "summary": "**Anthropic**正接近完成**200亿美元**融资，估值达**3500亿美元**，距其上一轮130亿美元融资仅五个月；巨额资金主要来自**Nvidia**和**Microsoft**等战略伙伴，旨在应对前沿AI实验室间的激烈竞争及高昂算力成本；公司近期推出的编码智能体和法律/商业研究模型已引发行业震动，此轮融资或加速其商业化进程，普通开发者可关注其API能力升级，但超高估值也反映资本对AGI竞赛的押注风险。",
+      "fullText": "Anthropic closes in on $20B round | TechCrunch TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture More from TechCrunch Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Crunchboard Contact Us Image Credits: Jakub Porzycki/NurPhoto / Getty Images Fundraising Anthropic closes in on $20B round Tim Fernholz 9:37 AM PST · February 9, 2026 Anthropic is in the final stages of raising $20 billion in new capital at a valuation of $350 billion, Bloomberg reports , with investor demand leading the company to raise twice the funding it set out to obtain. The company raised $13 billion in equity funding just five months ago , but intense competition between frontier labs and the ongoing cost of compute has made it eager to raise as quickly as possible. Firms expected to participate in the round include Altimeter Capital Management, Sequoia Capital, Lightspeed Venture Partners, Menlo Ventures, Coatue Management, Iconiq Capital, and Singapore’s sovereign wealth fund, but the bulk of the funding is said to come from the company’s strategic partners Nvidia and Microsoft. Anthropic is building on recent successes, most notably the deployment of its coding agents, which have software engineers raving about increased coding productivity. Last week, the company’s release of new models focused on legal and business research rattled the share prices of publicly traded data firms as investors worried about the ability of AI to disrupt their businesses. Anthropic’s rival, OpenAI, is reportedly assembling a new $100 billion fundraising round, and both companies are thought to be preparing IPOs ahead of a blockbuster summer in the markets, with xAI, recently acquired by SpaceX , also tapping public equity as part of the rocket maker’s IPO. Topics AI , Anthropic , Fundraising , Microsoft , nvidia , OpenAI , xAI Tim Fernholz View Bio October 13-15 San Francisco, CA Tickets are live at the lowest rates of the year. Save up to $680 on your pass now. Meet investors. Discover your next portfolio company. Hear from 250+ tech leaders , dive into 200+ sessions , and explore 300+ startups building what’s next. Don’t miss these one-time savings. REGISTER NOW Most Popular An AI startup founder says he’s planning a ‘March for Billionaires’ in protest of California’s wealth tax Lucas Ropek Senator, who has repeatedly warned about secret US government surveillance, sounds new alarm over ‘CIA activities’ Zack Whittaker The backlash over OpenAI’s decision to retire GPT-4o shows how dangerous AI companions can be Amanda Silberling OpenAI launches new agentic coding model only minutes after Anthropic drops its own Lucas Ropek Anthropic releases Opus 4.6 with new ‘agent teams’ Lucas Ropek Sam Altman got exceptionally testy over Claude Super Bowl ads Julie Bort Homeland Security is trying to force tech companies to hand over data about Trump critics Zack Whittaker Loading the next article Error loading the next article X LinkedIn Facebook Instagram youTube Mastodon Threads Bluesky TechCrunch Staff Contact Us Advertise Crunchboard Jobs Site Map Terms of Service Privacy Policy RSS Terms of Use Code of Conduct Epstein Kindle Scribe Reddit TikTok GPT-4o Tech Layoffs ChatGPT © 2025 TechCrunch Media LLC.",
+      "imageUrl": "https://techcrunch.com/wp-content/uploads/2026/01/GettyImages-2252871842.jpg?w=1024",
       "tags": [
         "Industry"
       ],
@@ -655,203 +599,293 @@
       "signalReasons": [
         "来源：TechCrunch AI",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：Super Bowl广告全面采用AI生成与推广，标志着AI已深度融入主流品牌传播体系，具有行业变革意义。",
+        "模型评分：10/10，理由：Anthropic接近200亿美元融资，创AI公司融资纪录，标志着全球AI资本格局历史性转折",
         "热度：0 / 评论 0"
       ],
-      "score": 5.8,
-      "publishedAt": "2026-02-08T16:18:16+00:00",
+      "score": 7.0,
+      "publishedAt": "2026-02-09T17:37:23+00:00",
       "authors": [
-        "Lauren Forristal"
+        "Tim Fernholz"
       ]
     },
     {
-      "id": "rss_9595639839",
-      "title": "纽约拟推两项法案：AI生成新闻强制标注，新建数据中心暂停三年",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/875501/new-york-is-considering-two-bills-to-rein-in-the-ai-industry",
+      "id": "rss_8316662611",
+      "title": "OpenAI今日起在ChatGPT测试广告",
+      "url": "https://www.theverge.com/news/875724/openai-chatgpt-ads-test-launch",
       "type": "news",
       "source": "The Verge AI",
-      "summary": "纽约州议会正审议两项旨在规范AI产业的法案：《纽约公平人工智能新闻法案》（NY FAIR News Act）要求所有由生成式AI“实质性创作”的新闻内容必须标注免责声明，并须经具备编辑控制权的人类审核后方可发布，同时禁止AI接触信源等机密信息；另一项法案S9144则拟对新建数据中心实施为期三年的许可暂停，以应对电力需求激增导致居民和企业电费飙升的问题。这两项提案凸显了地方政府在AI内容透明度与基础设施可持续性方面的双重监管意图，若通过将直接影响媒体机构使用AI的方式，并可能延缓大型科技公司在纽约部署算力的计划，普通用户未来或将在新闻来源可信度和本地能源成本上感受到政策变化。",
-      "fullText": "New York is considering two bills to rein in the AI industry | The Verge Skip to main content The homepage The Verge The Verge logo. The Verge The Verge logo. Tech Reviews Science Entertainment AI Policy Hamburger Navigation Button The homepage The Verge The Verge logo. Hamburger Navigation Button Navigation Drawer The Verge The Verge logo. Login / Sign Up close Close Search Tech Expand Amazon Apple Facebook Google Microsoft Samsung Business See all tech Gadgets Expand Laptops Phones TVs Headphones Speakers Wearables See all gadgets Reviews Expand Smart Home Reviews Phone Reviews Tablet Reviews Headphone Reviews See all reviews AI Expand OpenAI Anthropic See all AI Verge Shopping Expand Buying Guides Deals Gift Guides See all shopping Policy Expand Antitrust Politics Law Security See all policy Science Expand Space Energy Environment Health See all science Entertainment Expand TV Shows Movies Audio See all entertainment Gaming Expand Xbox PlayStation Nintendo See all gaming Streaming Expand Disney HBO Netflix YouTube Creators See all streaming Transportation Expand Electric Cars Autonomous Cars Ride-sharing Scooters See all transportation Features Verge Video Expand TikTok YouTube Instagram Podcasts Expand Decoder The Vergecast Version History Newsletters Expand The Verge Daily Installer Verge Deals Notepad Optimizer Regulator The Stepback Archives Store Verge Product Updates Subscribe Facebook Threads Instagram Youtube RSS The Verge The Verge logo. New York is considering two bills to rein in the AI industry Comments Drawer Comments Loading comments Getting the conversation ready... AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News Policy Close Policy Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Policy New York is considering two bills to rein in the AI industry One requires labels on AI-generated “news” and the other puts a pause on new data center construction. One requires labels on AI-generated “news” and the other puts a pause on new data center construction. by Terrence O'Brien Close Terrence O'Brien Weekend Editor Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Terrence O'Brien Feb 8, 2026, 9:04 PM UTC Link Share Gift AI data centers are becoming a bipartisan concern. Image: Microsoft Terrence O'Brien Close Terrence O'Brien Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Terrence O'Brien is the Verge’s weekend editor. He has over 18 years of experience, including 10 years as managing editor at Engadget. New York’s state legislature is set to consider a pair of bills that would require labels on AI-generated content and would put a three-year pause on new data center construction . The New York Fundamental Artificial Intelligence Requirements in News Act ( NY FAIR News Act , for short) would require that any news “substantially composed, authored, or created through the use of generative artificial intelligence” carry a disclaimer. It would also require that any content created using AI be reviewed and approved by a human with “editorial control” before being published. Beyond that, the bill requires organizations to disclose to newsroom employees how and when AI is being used. And it would call for safeguards that prevent confidential information, especially about sources, from being accessed by AI. Meanwhile, S9144 “imposes a moratorium on the issuance of permits for new data centers” for at least three years. The bill cites rising electric and gas rates for residential, commercial, and industrial customers. National Grid New York says that requests for “large load” connections have tripled in just one year, with at least 10 gigawatts of demand expected to be added in the next five years. There are already over 130 data centers in New York, according to Data Center Map . The state just approved a 9-percent rate increase for Con Edison customers over the next three years, and electric bills are soaring around the country as datacenters put strain on the grid. Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates. Terrence O'Brien Close Terrence O'Brien Weekend Editor Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Terrence O'Brien AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News Policy Close Policy Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Policy Tech Close Tech Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Tech Most Popular Most Popular I went back to Linux and it was a mistake Anker’s new charger with a screen would feel less gimmicky if it did more How the men in the Epstein files defeated #MeToo How I Built the Star Trek control panel of my dreams This is the Trump Phone The Verge Daily A free daily digest of the news that matters most. Email (required) Sign Up By submitting your email, you agree to our Terms and Privacy Notice . This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. Advertiser Content From This is the title for the native ad More in AI Apple might let you use ChatGPT from CarPlay What happens when Waymo runs into a tornado? Or an elephant? How Epstein became a tech influencer How the men in the Epstein files defeated #MeToo Anthropic debuts new model with hopes to corner the market beyond coding Claude has been having a moment — can it keep it up? Apple might let you use ChatGPT from CarPlay Stevie Bonifield Feb 6 What happens when Waymo runs into a tornado? Or an elephant? Andrew J. Hawkins Feb 6 How Epstein became a tech influencer David Pierce Feb 6 How the men in the Epstein files defeated #MeToo Elizabeth Lopatto Feb 6 Anthropic debuts new model with hopes to corner the market beyond coding Hayden Field Feb 5 Claude has been having a moment — can it keep it up? Hayden Field Feb 5 Advertiser Content From This is the title for the native ad Top Stories 2:00 PM UTC Section 230 turns 30 as it faces its biggest tests yet 3:00 PM UTC How I Built the Star Trek control panel of my dreams 5:30 PM UTC You need to listen to the new Mandy, Indiana record: URGH 1:00 PM UTC Netflix’s Warner Bros. merger puts rival streamers in survival mode 1:00 PM UTC Digital car keys are getting more sophisticated Feb 7 I went back to Linux and it was a mistake The Verge The Verge logo. Facebook Threads Instagram Youtube RSS Contact Tip Us Community Guidelines Archives About Ethics Statement How We Rate and Review Products Cookie Settings Terms of Use Privacy Notice Cookie Policy Licensing FAQ Accessibility Platform Status © 2026 Vox Media , LLC. All Rights Reserved",
-      "imageUrl": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/OMB-Datacenter-Hero-9_18_25.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
-      "tags": [],
+      "summary": "**OpenAI**今日开始在**ChatGPT**中测试“清晰标注”的广告，广告将出现在聊天窗口下方独立区域，面向免费用户及Go订阅用户；公司强调对话内容对广告商保密，但广告会基于用户交互“优化相关性”，并预计广告长期贡献不足半数营收；此举标志主流AI产品开启商业化变现，用户需注意区分广告与AI生成内容，而Anthropic此前借超级碗广告宣称“Claude永不加广告”形成鲜明对比，可能影响用户对AI助手的信任选择。",
+      "fullText": "OpenAI will reportedly start testing ads in ChatGPT today | The Verge Skip to main content The homepage The Verge The Verge logo. The Verge The Verge logo. Tech Reviews Science Entertainment AI Policy Hamburger Navigation Button The homepage The Verge The Verge logo. Hamburger Navigation Button Navigation Drawer The Verge The Verge logo. Login / Sign Up close Close Search Tech Expand Amazon Apple Facebook Google Microsoft Samsung Business See all tech Gadgets Expand Laptops Phones TVs Headphones Speakers Wearables See all gadgets Reviews Expand Smart Home Reviews Phone Reviews Tablet Reviews Headphone Reviews See all reviews AI Expand OpenAI Anthropic See all AI Verge Shopping Expand Buying Guides Deals Gift Guides See all shopping Policy Expand Antitrust Politics Law Security See all policy Science Expand Space Energy Environment Health See all science Entertainment Expand TV Shows Movies Audio See all entertainment Gaming Expand Xbox PlayStation Nintendo See all gaming Streaming Expand Disney HBO Netflix YouTube Creators See all streaming Transportation Expand Electric Cars Autonomous Cars Ride-sharing Scooters See all transportation Features Verge Video Expand TikTok YouTube Instagram Podcasts Expand Decoder The Vergecast Version History Newsletters Expand The Verge Daily Installer Verge Deals Notepad Optimizer Regulator The Stepback Archives Store Verge Product Updates Subscribe Facebook Threads Instagram Youtube RSS The Verge The Verge logo. OpenAI will reportedly start testing ads in ChatGPT today Comments Drawer Comments Loading comments Getting the conversation ready... News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI Tech Close Tech Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Tech OpenAI will reportedly start testing ads in ChatGPT today The ads will appear in a separate area beneath your chat. The ads will appear in a separate area beneath your chat. by Emma Roth Close Emma Roth News Writer Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Emma Roth Feb 9, 2026, 2:45 PM UTC Link Share Gift Image: The Verge Emma Roth Close Emma Roth Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Emma Roth is a news writer who covers the streaming wars, consumer tech, crypto, social media, and much more. Previously, she was a writer and editor at MUO. OpenAI plans to start testing ads in ChatGPT today, according to a report from CNBC . The “clearly labeled” ads will appear in a separate area beneath your chat, OpenAI announced last month . A source close to the situation tells CNBC that OpenAI “expects ads to make up less than half of its revenue long term.” Last week, Anthropic showed off a Super Bowl commercial poking fun at OpenAI, saying “ads are coming to AI,” but not to its AI chatbot Claude. The version of the ad that aired during the game was a little less direct after OpenAI CEO Sam Altman called the campaign “clearly dishonest.” OpenAI will show ads to logged-in users who use the app for free or subscribe to its cheaper Go subscription. The company says it will “keep your conversations with ChatGPT private from advertisers,” but notes that the ads will still be “optimized based on what’s most helpful to you.” Advertisers won’t have an impact on ChatGPT’s answers, according to OpenAI. In an internal memo seen by CNBC, Altman tells employees that OpenAI plans to launch an updated chat model this week, coming just days after the company released a more advanced version of its AI coding agent , Codex. Altman also reportedly said that ChatGPT is “back to exceeding 10% monthly growth.” OpenAI last reported having 800 million weekly users last October. Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates. Emma Roth Close Emma Roth News Writer Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Emma Roth AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News OpenAI Close OpenAI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All OpenAI Tech Close Tech Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Tech Most Popular Most Popular Discord will require a face scan or ID for full access next month Netflix’s Warner Bros. merger puts rival streamers in survival mode This whistle fights fascists AI-generated ads dropped the ball at this year’s Super Bowl How I Built the Star Trek control panel of my dreams The Verge Daily A free daily digest of the news that matters most. Email (required) Sign Up By submitting your email, you agree to our Terms and Privacy Notice . This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. Advertiser Content From This is the title for the native ad More in News Ferrari’s first EV will have an interior designed by Jony Ive Leaked specs for Sony’s next flagship wireless earbuds reveal ANC upgrades Linux 6.19 arrives with a teaser for Linux 7.0 YouTube TV’s sports-focused package will cost $64.99 / month Discord will require a face scan or ID for full access next month PlayStation’s next big games showcase is on February 12th Ferrari’s first EV will have an interior designed by Jony Ive Andrew J. Hawkins 5:45 PM UTC Leaked specs for Sony’s next flagship wireless earbuds reveal ANC upgrades Andrew Liszewski 4:05 PM UTC Linux 6.19 arrives with a teaser for Linux 7.0 Stevie Bonifield 3:58 PM UTC YouTube TV’s sports-focused package will cost $64.99 / month Emma Roth 3:27 PM UTC Discord will require a face scan or ID for full access next month Stevie Bonifield 2:01 PM UTC PlayStation’s next big games showcase is on February 12th Andrew Webster 1:50 PM UTC Advertiser Content From This is the title for the native ad Top Stories 11:00 AM UTC This whistle fights fascists 2:01 PM UTC Discord will require a face scan or ID for full access next month 5:59 PM UTC AI-generated ads dropped the ball at this year’s Super Bowl 5:45 PM UTC Ferrari’s first EV will have an interior designed by Jony Ive 3:00 PM UTC Siemens CEO Roland Busch’s mission to automate everything ﻿ Video 1:30 PM UTC Animal Crossing started life as a dungeon crawler The Verge The Verge logo. Facebook Threads Instagram Youtube RSS Contact Tip Us Community Guidelines Archives About Ethics Statement How We Rate and Review Products Cookie Settings Terms of Use Privacy Notice Cookie Policy Licensing FAQ Accessibility Platform Status © 2026 Vox Media , LLC. All Rights Reserved",
+      "imageUrl": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK155_OPEN_AI_2025_CVirgiia_C.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "tags": [
+        "LLM",
+        "Industry"
+      ],
       "paperCategory": "",
       "signalReasons": [
         "来源：The Verge AI",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：纽约拟立法要求AI内容标注并暂停数据中心建设，代表全球首个重大监管行动，具有深远政策影响。",
+        "模型评分：8/10，理由：OpenAI测试ChatGPT广告是其商业化关键一步，影响全球AI产品商业模式",
         "热度：0 / 评论 0"
       ],
-      "score": 5.4,
-      "publishedAt": "2026-02-08T21:04:53+00:00",
+      "score": 5.8,
+      "publishedAt": "2026-02-09T14:45:41+00:00",
       "authors": [
-        "Terrence O’Brien"
+        "Emma Roth"
       ]
     },
     {
-      "id": "hn_46932343",
-      "title": "Matchlock – Secures AI agent workloads with a Linux-based sandbox",
-      "url": "https://github.com/jingkaihe/matchlock",
+      "id": "hn_46944753",
+      "title": "AI辅助手术现失误报告引安全警报",
+      "url": "https://www.reuters.com/investigations/ai-enters-operating-room-reports-arise-botched-surgeries-misidentified-body-2026-02-09/",
       "type": "news",
       "source": "Hacker News",
-      "summary": "Matchlock 是一个开源 CLI 工具，通过基于 Linux 的轻量级微虚拟机（microVM）为 AI Agent 提供安全沙箱环境，其核心机制包括默认网络封锁、仅允许指定主机通信、通过中间人代理（MITM）在 API 调用时动态注入密钥（真实密钥永不进入虚拟机），并采用写时复制文件系统确保每次运行环境隔离且可丢弃。该工具支持从 OCI 镜像启动完整 Linux 环境，兼容 Linux（KVM）和 macOS（Apple Silicon），并提供 Go/Python SDK 供程序化调用。Matchlock 的重要性在于解决了当前 AI Agent 执行任意代码时带来的安全风险——如凭证泄露或恶意操作——为开发者在本地或服务器上安全运行不可信 AI 任务提供了实用方案，尤其适用于需调用敏感 API 的自动化场景。",
-      "fullText": "GitHub - jingkaihe/matchlock: Matchlock secures AI agent workloads with a Linux-based sandbox. Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage code changes APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities Code security Secure your code as you build Secret protection Stop leaks before they start EXPLORE Why GitHub Documentation Blog Changelog Marketplace View all features Solutions BY COMPANY SIZE Enterprises Small and medium teams Startups Nonprofits BY USE CASE App Modernization DevSecOps DevOps CI/CD View all use cases BY INDUSTRY Healthcare Financial services Manufacturing Government View all industries View all solutions Resources EXPLORE BY TOPIC AI Software Development DevOps Security View all topics EXPLORE BY TYPE Customer stories Events & webinars Ebooks & reports Business insights GitHub Skills SUPPORT & SERVICES Documentation Customer support Community forum Trust center Partners Open Source COMMUNITY GitHub Sponsors Fund open source developers PROGRAMS Security Lab Maintainer Community Accelerator Archive Program REPOSITORIES Topics Trending Collections Enterprise ENTERPRISE SOLUTIONS Enterprise platform AI-powered developer platform AVAILABLE ADD-ONS GitHub Advanced Security Enterprise-grade security features Copilot for Business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Pricing Search or jump to... Search code, repositories, users, issues, pull requests... Search Clear Search syntax tips Provide feedback We read every piece of feedback, and take your input very seriously. Include my email address so I can be contacted Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Name Query To see all available qualifiers, see our documentation . Cancel Create saved search Sign in Sign up Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert jingkaihe / matchlock Public Notifications You must be signed in to change notification settings Fork 4 Star 244 Matchlock secures AI agent workloads with a Linux-based sandbox. License MIT license 244 stars 4 forks Branches Tags Activity Star Notifications You must be signed in to change notification settings Code Issues 5 Pull requests 0 Actions Projects 0 Security 0 Insights Additional navigation options Code Issues Pull requests Actions Projects Security Insights jingkaihe/matchlock main Branches Tags Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 141 Commits 141 Commits .github/ workflows .github/ workflows adrs adrs cmd cmd examples examples guest/ kernel guest/ kernel pkg pkg scripts scripts sdk/ python sdk/ python tests/ acceptance tests/ acceptance .gitignore .gitignore .golangci.yml .golangci.yml AGENTS.md AGENTS.md LICENSE LICENSE README.md README.md VERSION.txt VERSION.txt go.mod go.mod go.sum go.sum matchlock.entitlements matchlock.entitlements mise.toml mise.toml View all files Repository files navigation README MIT license Matchlock Matchlock is a CLI tool for running AI agents in ephemeral microVMs - with network allowlisting, secret injection via MITM proxy, and everything else blocked by default. Your secrets never enter the VM. Why Matchlock? AI agents need to run code, but giving them unrestricted access to your machine is a risk. Matchlock lets you hand an agent a full Linux environment that boots in under a second - isolated, disposable, and locked down by default. When your agent calls an API the real credentials are injected in-flight by the host. The sandbox only ever sees a placeholder. The network is sealed by default and nothing gets out unless you say so. Even if the agent is tricked into running something malicious your keys don't leak and there's nowhere for data to go. Inside the agent gets a full Linux environment to do whatever it needs. It can install packages and write files and make a mess. Outside your machine doesn't feel a thing. Every sandbox runs on its own copy-on-write filesystem that vanishes when you're done. Same CLI and same behaviour whether you're on a Linux server or a MacBook. Quick Start System Requirements Linux with KVM support macOS on Apple Silicon Install brew tap jingkaihe/essentials brew install matchlock Usage # Basic matchlock run --image alpine:latest cat /etc/os-release matchlock run --image alpine:latest -it sh # Network allowlist matchlock run --image python:3.12-alpine \\ --allow-host \" api.openai.com \" python agent.py # Secret injection (never enters the VM) export ANTHROPIC_API_KEY=sk-xxx matchlock run --image python:3.12-alpine \\ --secret ANTHROPIC_API_KEY@api.anthropic.com python call_api.py # Long-lived sandboxes matchlock run --image alpine:latest --rm=false # prints VM ID matchlock exec vm-abc12345 -it sh # attach to it # Lifecycle matchlock list | kill | rm | prune # Build from Dockerfile (uses BuildKit-in-VM) matchlock build -f Dockerfile -t myapp:latest . # Pre-build rootfs from registry image (caches for faster startup) matchlock build alpine:latest # Image management matchlock image ls # List all images matchlock image rm myapp:latest # Remove a local image docker save myapp:latest | matchlock image import myapp:latest # Import from tarball SDK Matchlock also ships with Go and Python SDKs for embedding sandboxes directly in your application. Allows you to programmatically launch VMs, exec commands, stream output and write files. Go package main import ( \"fmt\" \"os\" \"github.com/jingkaihe/matchlock/pkg/sdk\" ) func main () { client , _ := sdk . NewClient ( sdk . DefaultConfig ()) defer client . Close () sandbox := sdk . New ( \"alpine:latest\" ). AllowHost ( \"dl-cdn.alpinelinux.org\" , \"api.anthropic.com\" ). AddSecret ( \"ANTHROPIC_API_KEY\" , os . Getenv ( \"ANTHROPIC_API_KEY\" ), \"api.anthropic.com\" ) client . Launch ( sandbox ) client . Exec ( \"apk add --no-cache curl\" ) // The VM only ever sees a placeholder - the real key never enters the sandbox result , _ := client . Exec ( \"echo $ANTHROPIC_API_KEY\" ) fmt . Print ( result . Stdout ) // prints \"SANDBOX_SECRET_a1b2c3d4...\" curlCmd := `curl -s --no-buffer https://api.anthropic.com/v1/messages \\ -H \"content-type: application/json\" \\ -H \"x-api-key: $ANTHROPIC_API_KEY\" \\ -H \"anthropic-version: 2023-06-01\" \\ -d '{\"model\":\"claude-haiku-4-5-20251001\",\"max_tokens\":1024,\"stream\":true, \"messages\":[{\"role\":\"user\",\"content\":\"Explain TCP to me\"}]}'` client . ExecStream ( curlCmd , os . Stdout , os . Stderr ) } Python ( PyPI ) pip install matchlock # or uv add matchlock import os import sys from matchlock import Client , Config , Sandbox sandbox = ( Sandbox ( \"alpine:latest\" ) . allow_host ( \"dl-cdn.alpinelinux.org\" , \"api.anthropic.com\" ) . add_secret ( \"ANTHROPIC_API_KEY\" , os . environ [ \"ANTHROPIC_API_KEY\" ], \"api.anthropic.com\" ) ) curl_cmd = \"\"\"curl -s --no-buffer https://api.anthropic.com/v1/messages \\ -H \"content-type: application/json\" \\ -H \"x-api-key: $ANTHROPIC_API_KEY\" \\ -H \"anthropic-version: 2023-06-01\" \\ -d '{\"model\":\"claude-haiku-4-5-20251001\",\"max_tokens\":1024,\"stream\":true, \"messages\":[{\"role\":\"user\",\"content\":\"Explain TCP/IP.\"}]}'\"\"\" with Client ( Config ()) as client : client . launch ( sandbox ) client . exec ( \"apk add --no-cache curl\" ) client . exec_stream ( curl_cmd , stdout = sys . stdout , stderr = sys . stderr ) See full examples in examples/go and examples/python . Architecture graph LR subgraph Host CLI[\"Matchlock CLI\"] Policy[\"Policy Engine\"] Proxy[\"Transparent Proxy + TLS MITM\"] VFS[\"VFS Server\"] CLI --> Policy CLI --> Proxy Policy --> Proxy end subgraph VM[\"Micro-VM (Firecracker / Virtualization.framework)\"] Agent[\"Guest Agent\"] FUSE[\"/workspace (FUSE)\"] Image[\"Any OCI Image (Alpine, Ubuntu, etc.)\"] Agent --- Image FUSE --- Image end Proxy -- \"vsock :5000\" --> Agent VFS -- \"vsock :5001\" --> FUSE Loading Network Modes Platform Mode Mechanism Linux Transparent proxy nftables DNAT on ports 80/443 macOS NAT (default) Virtualization.framework built-in NAT macOS Interception (with --allow-host / --secret ) gVisor userspace TCP/IP at L4 Docs See AGENTS.md for the full developer reference. License MIT About Matchlock secures AI agent workloads with a Linux-based sandbox. Resources Readme License MIT license Uh oh! There was an error while loading. Please reload this page . Activity Stars 244 stars Watchers 2 watching Forks 4 forks Report repository Releases 7 v0.1.7 Latest Feb 8, 2026 + 6 releases Packages 0 No packages published Contributors 2 jingkaihe Jingkai He kodelet Languages Go 87.5% Python 10.4% Shell 1.6% Dockerfile 0.5% Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy Security Status Community Docs Contact Manage cookies Do not share my personal information You can’t perform that action at this time.",
-      "imageUrl": "https://opengraph.githubassets.com/9edd5834c0adcb32a48f2a1da07d809909c4770f496fe618ca19e6b7be58c2b4/jingkaihe/matchlock",
+      "summary": "有报告指出，随着AI系统进入手术室辅助操作，已出现多起由AI介入导致的手术失误事件；尽管具体案例细节未披露，但该现象警示医疗AI的临床部署需更严格的安全验证，对患者而言，接受AI辅助手术时应主动询问技术参与程度及应急预案，而监管机构亟需建立针对手术机器人的实时监控与事故追溯机制。",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源：Hacker News",
+        "跨源重复：1 个来源",
+        "模型评分：7/10，理由：揭示AI在医疗场景中的实际风险，推动行业对AI辅助手术的监管与伦理反思。",
+        "热度：52 / 评论 16"
+      ],
+      "score": 3.62,
+      "publishedAt": "2026-02-09T12:57:35+00:00",
+      "authors": [
+        "nis0s"
+      ]
+    },
+    {
+      "id": "hn_46949417",
+      "title": "美企被曝借AI名义掩盖真实裁员原因",
+      "url": "https://www.theguardian.com/us-news/2026/feb/08/ai-washing-job-losses-artificial-intelligence",
+      "type": "news",
+      "source": "Hacker News",
+      "summary": "多家美国企业被指借“AI洗白”（AI washing）将裁员归咎于人工智能，实则主因是疫情期过度招聘、关税压力或利润最大化；例如Amazon和HP高管称AI提升效率故裁撤岗位，但专家指出当前AI仅能替代少数工种（如客服），Forrester预测2030年前仅6%美国岗位会被自动化；普通员工应警惕企业以技术名义掩盖成本削减，而求职者需聚焦AI难以替代的复合型技能，政策制定者则需加强裁员真实原因的披露监管。",
+      "fullText": "US companies accused of ‘AI washing’ in citing artificial intelligence for job losses | US news | The Guardian Skip to main content Skip to navigation Close dialogue 1 / 1 Next image Previous image Toggle caption Skip to navigation Print subscriptions Newsletters Sign in US US edition UK edition Australia edition Europe edition International edition The Guardian - Back to home The Guardian News Opinion Sport Culture Lifestyle Show more Hide expanded menu News View all News US news US politics World news Climate crisis Middle East Ukraine US immigration Soccer Business Environment Tech Science Newsletters The Filter Wellness Opinion View all Opinion The Guardian view Columnists Letters Opinion videos Cartoons Sport View all Sport Soccer NFL Tennis MLB MLS NBA WNBA NHL F1 Golf Culture View all Culture Film Books Music Art & design TV & radio Stage Classical Games Lifestyle View all Lifestyle The Filter Wellness Fashion Food Recipes Love & sex Home & garden Health & fitness Family Travel Money Search input google-search Search Support us Print subscriptions Newsletters Download the app Search jobs Digital Archive Guardian Licensing Live events About Us The Guardian app Video Podcasts Pictures Inside the Guardian Guardian Weekly Crosswords Wordiply Corrections Tips Search input google-search Search Search jobs Digital Archive Guardian Licensing Live events About Us US news US politics World Climate crisis Middle East Ukraine US immigration Soccer Business Environment Tech Science Newsletters The Filter Wellness The Amazon headquarters in Seattle, Washington. Amazon’s laid off 16,000 workers in January in a move its vice-president linked to AI. Photograph: Bloomberg/Getty Images View image in fullscreen The Amazon headquarters in Seattle, Washington. Amazon’s laid off 16,000 workers in January in a move its vice-president linked to AI. Photograph: Bloomberg/Getty Images US news US companies accused of ‘AI washing’ in citing artificial intelligence for job losses While AI is having an impact on the workplace, experts suggest tariffs, overhiring during the pandemic and simply maximising profits may be bigger factors Eric Berger Sun 8 Feb 2026 11.00 EST Last modified on Mon 9 Feb 2026 03.11 EST Share O ver the last year, US corporate leaders have often explained layoffs by saying the positions were no longer needed because artificial intelligence had made their companies more efficient, replacing humans with computers. But some economists and technology analysts have expressed skepticism about such justifications and instead think that such workforce cuts are driven by factors like the impact of tariffs, overhiring during the Covid-19 pandemic and perhaps simple maximising of profits. In short, the CEOs are allegedly engaged in “AI-washing”. “You can say, ‘We are integrating the newest technology into our business processes, so we are very much a technological frontrunner, and we have to let go of these people,’” said Fabian Stephany, a departmental research lecturer at the Oxford Internet Institute. In 2025, AI was cited as a reason for more than 54,000 layoffs, according to a December report from the consulting firm Challenger, Gray & Christmas . In January, Amazon alone laid off 16,000 workers after making 14,000 reductions in October. Beth Galetti, senior vice-president of people experience and technology at Amazon, explained in an October memo that they were trimming staff because “AI is the most transformative technology we’ve seen since the internet, and it’s enabling companies to innovate much faster than ever before. “We’re convinced that we need to be organized more leanly,” Galetti added. The Hewlett-Packard CEO, Enrique Lores, also said in a November earnings call that the company would use AI to “improve customer satisfaction and boost productivity”, which means the company could cut 6,000 people in the “next years”. In April, Luis von Ahn, CEO of the language-learning app company Duolingo, announced that the venture would “gradually stop using contractors to do work that AI can handle”. But the reason for such layoffs is often actually financial, according to a January report from the market research firm Forrester. The company projects that only 6% of US jobs will be automated by 2030. Companies could use AI to replace people working in call centers and technical writing, but they don’t yet have apps that can replace most occupations and probably won’t soon, said JP Gownder, a Forrester vice-president and principal analyst. “A lot of companies are making a big mistake because their CEO, who isn’t very deep into the weeds of AI, is saying, ‘Well, let’s go ahead and lay off 20 to 30% of our employees and we will backfill them with AI,’” Gownder said. “If you do not have a mature, deployed-AI application ready to do the job … it could take you 18 to 24 months to replace that person with AI – if it even works.” But there are benefits to attributing layoffs to AI even if that is not the case. For example, the Challenger report stated that tariffs were cited as the reasons for fewer than 8,000 layoffs, a fraction of the number attributed to AI. “Most economists would tell you that that was implausible,” said Martha Gimbel, executive director and co-founder of the Budget Lab at Yale University. “ChatGPT was only released three years ago … It is not the case that a new technology develops and the workforce adjusts immediately. That is just not how it works.” After a news report stated that Amazon planned to display how much Donald Trump’s tariffs increased product pricing, the White House described it as a “hostile and political act”. An Amazon spokesperson then said, “This was never approved and is not going to happen.” “You have seen a real hesitance among some parts of corporate America to say anything negative about the economic impacts of the Trump administration because they feel that there will be consequences,” Gimbel said. “By saying that the layoffs are due to new efficiencies created by AI, you avoid that potential pushback.” Get in touch Contact us about this story The best public interest journalism relies on first-hand accounts from people in the know. If you have something to share on this subject, you can contact us confidentially using the following methods: Secure Messaging in the Guardian app The Guardian app has a tool to send tips about stories. Messages are end to end encrypted and concealed within the routine activity that every Guardian mobile app performs. This prevents an observer from knowing that you are communicating with us at all, let alone what is being said. If you don’t already have the Guardian app, download it ( iOS / Android ) and go to the menu. Select ‘Secure Messaging’. SecureDrop If you can safely use the tor network without being observed or monitored you can send messages and documents to the Guardian via our SecureDrop platform. Our guide at theguardian.com/tips lists several ways to contact us securely, and discusses the pros and cons of each. Show more CEOs could also be blaming layoffs on AI advancements when they actually just overhired during the pandemic, Gownder said. “That was driven by low interest rates. That was driven by talent wars. That was driven by some dynamics that are not in place any more,” he said. Still, there are instances where CEOs linked layoffs to AI where that is more likely to be the legitimate reason, the economists said. For example, Marc Benioff, CEO of the cloud-based software company Salesforce, said during an interview on the podcast The Logan Bartlett Show that he reduced his customer staff from 9,000 to 5,000 because he now uses AI agents. “I need less heads,” he said. Stephany said that was plausible. “The work that has been described – particularly online and customer support – is, in terms of tasks and required skills, relatively close to what current AI systems can perform,” Stephany said. Women in tech and finance at higher risk from AI job losses, report says Read more But that does not mean the public should just accept Benioff’s claim, the AI researchers said. “I think CEO statements are possibly the worst way to figure out how technological change is affecting the labor market,” Gimbel said. “That is not to say that CEOs are lying … It’s to say that there’s incentive effects in what gets covered.” Not long after Amazon’s vice-president linked the October layoffs to AI, the CEO, Andy Jassy, backpedaled . He said they were “not really financially driven, and it’s not even really AI-driven, not right now. It really is culture.” And months after the Duolingo CEO stated that the company would be “AI first” and only add to its headcount “if a team cannot automate more of their work”, he told the New York Times that the company had never laid off full-time employees and did not plan to. “From the beginning, we’ve had contractors that we use for temporary tasks, and our contractor force has gone up and down depending on needs,” he said. An employee laid off by Amazon in October described herself as a “heavy user of AI”. “There were certain tools that I built specifically for my team’s use, as well as some of our customer teams to use,” said the former principal program manager, whose last day at Amazon was in January and asked not to be identified to protect her privacy because she has not yet received severance pay. She does not think that AI is why she was terminated but instead “maybe aided the ability to have a more junior person do some of the work”. After an employee told her, “Bring me up to speed on the stuff you were working on. We’re going to assign this to one of these new people,” it became clear “that this work wasn’t going to stop but that they were going to get someone who was paid far less to do that work”, she said. She added: “I was laid off to save the cost of human labor.” Explore more on these topics US news AI (artificial intelligence) Amazon Hewlett-Packard features Share Reuse this content Most viewed Most viewed US news US politics World Climate crisis Middle East Ukraine US immigration Soccer Business Environment Tech Science Newsletters The Filter Wellness News Opinion Sport Culture Lifestyle Original reporting and incisive analysis, direct from the Guardian every morning Sign up for our email About us Help Complaints & corrections Contact us Tip us off SecureDrop Privacy policy Cookie policy Tax strategy Terms & conditions All topics All writers Newsletters Digital newspaper archive Bluesky Facebook Instagram LinkedIn Threads TikTok YouTube Advertise with us Guardian Labs Search jobs Work with us Accessibility settings Back to top © 2026 Guardian News & Media Limited or its affiliated companies. All rights reserved. (dcr)",
+      "imageUrl": "https://i.guim.co.uk/img/media/85e2732c6d1cf108caa674d9ddeba2afbea35f6b/333_0_3333_2667/master/3333.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=806b16b088d9a7526c09043715c4df06",
+      "tags": [],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源：Hacker News",
+        "跨源重复：1 个来源",
+        "模型评分：7/10，理由：揭露企业将裁员归因于AI的舆论操作，触及AI对劳动力市场的深层影响，引发广泛关注。",
+        "热度：29 / 评论 2"
+      ],
+      "score": 3.43,
+      "publishedAt": "2026-02-09T19:04:59+00:00",
+      "authors": [
+        "billybuckwheat"
+      ]
+    },
+    {
+      "id": "github_pydantic_monty",
+      "title": "Pydantic 推出 Rust 编写的极简安全 Python 解释器 monty",
+      "url": "https://github.com/pydantic/monty",
+      "type": "news",
+      "source": "GitHub Trending",
+      "summary": "Pydantic 团队推出 **monty**——一个用 Rust 编写的极简、安全的 Python 解释器，专为 AI 应用设计，旨在提供受限但可靠的代码执行环境；该工具对构建可信任的 AI 代理系统具有基础性意义，普通开发者可将其用于需要沙箱化 Python 执行的场景，如插件系统或用户自定义逻辑。",
+      "fullText": "",
+      "imageUrl": "https://opengraph.githubassets.com/0dc8860fa80f435d1a3518d04deec0a039c70a1ba370dc6669d99f3310cf6e90/pydantic/monty",
+      "tags": [],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源：GitHub Trending",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：Monty是用Rust实现的轻量级、安全的Python解释器，专为AI设计，具有显著的技术创新和开源生态影响力。",
+        "热度：3906 / 评论 0"
+      ],
+      "score": 7.8,
+      "publishedAt": "2026-02-09T23:45:16.446524+00:00",
+      "authors": []
+    },
+    {
+      "id": "github_virattt_dexter",
+      "title": "开源项目 Dexter：面向深度金融研究的自主 AI 代理",
+      "url": "https://github.com/virattt/dexter",
+      "type": "news",
+      "source": "GitHub Trending",
+      "summary": "**virattt/dexter** 是一个面向深度金融研究的自主 AI 代理，能自动执行数据收集、分析与洞察生成等复杂任务；其重要性在于将 LLM 代理能力聚焦于高专业度的金融领域，为机构或个人投资者提供自动化研究工具，普通用户可借助此类代理降低专业金融分析门槛。",
+      "fullText": "",
+      "imageUrl": "https://private-user-images.githubusercontent.com/901795/538828744-3bcc3a7f-b68a-4f5e-8735-9d22196ff76e.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzA2ODEwMTQsIm5iZiI6MTc3MDY4MDcxNCwicGF0aCI6Ii85MDE3OTUvNTM4ODI4NzQ0LTNiY2MzYTdmLWI2OGEtNGY1ZS04NzM1LTlkMjIxOTZmZjc2ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMjA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDIwOVQyMzQ1MTRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wN2I2NTljMzA3ZGM0Y2UyODAxZDFiYTYzNGMzZDVmMzllZmMxMTIxYmMxMjk2ZjY3OTQyODdkYWRjODE0MjhlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.QTJLc5jjzuG5-OwTplp7hRA4bMDLASnNKZ8PbyzcNB8",
       "tags": [
+        "Agent",
+        "Research"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源：GitHub Trending",
+        "跨源重复：1 个来源",
+        "模型评分：7/10，理由：dexter是面向深度金融研究的自主智能体，具备实用价值和行业应用潜力，符合主流AI Agent发展趋势。",
+        "热度：13512 / 评论 0"
+      ],
+      "score": 7.2,
+      "publishedAt": "2026-02-09T23:45:14.544374+00:00",
+      "authors": []
+    },
+    {
+      "id": "github_hsliuping_TradingAgents-CN",
+      "title": "TradingAgents-CN 发布：支持中文的多智能体金融交易框架",
+      "url": "https://github.com/hsliuping/TradingAgents-CN",
+      "type": "news",
+      "source": "GitHub Trending",
+      "summary": "**TradingAgents-CN** 是基于多智能体 LLM 架构的中文金融交易框架，作为 TradingAgents 的中文增强版，支持本地化金融语境下的策略生成与协同决策；该项目填补了中文金融 AI 代理生态的空白，对国内量化爱好者和开发者而言，提供了可直接部署的多智能体交易实验平台。",
+      "fullText": "",
+      "imageUrl": "https://opengraph.githubassets.com/1513e988e0f9d42810c43ed1d4063e53f4c550ca655f4cded0f3e3eb01c28458/hsliuping/TradingAgents-CN",
+      "tags": [
+        "LLM",
         "Agent"
       ],
       "paperCategory": "",
       "signalReasons": [
-        "来源：Hacker News",
+        "来源：GitHub Trending",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：Matchlock 提出基于Linux沙箱保护AI代理工作负载的新方案，直击AI安全核心痛点，具备显著行业实用价值与潜在规模化部署前景。",
-        "热度：133 / 评论 57"
+        "模型评分：7/10，理由：基于多智能体LLM的中文金融交易框架，体现本土化AI应用创新，对金融科技领域有实际推动作用。",
+        "热度：16175 / 评论 0"
       ],
-      "score": 4.86,
-      "publishedAt": "2026-02-08T08:07:55+00:00",
-      "authors": [
-        "jingkai_he"
-      ]
+      "score": 7.2,
+      "publishedAt": "2026-02-09T23:45:18.603456+00:00",
+      "authors": []
     },
     {
-      "id": "hn_46936920",
-      "title": "Experts Have World Models. LLMs Have Word Models",
-      "url": "https://www.latent.space/p/adversarial-reasoning",
+      "id": "github_github_gh-aw",
+      "title": "GitHub 推出 Agentic Workflows，用 AI 代理自动化开发流程",
+      "url": "https://github.com/github/gh-aw",
       "type": "news",
-      "source": "Hacker News",
-      "summary": "本文指出当前大语言模型（LLMs）本质上是“词模型”（word models），擅长基于统计模式生成合理文本，但缺乏专家所具备的“世界模型”（world models）——即在多智能体环境中模拟他人意图、隐藏信息、激励机制及策略反馈的能力。作者以职场沟通、法律谈判和扑克博弈为例，说明专家能预判对方如何解读自身行为并据此调整策略，而 LLMs 因训练目标聚焦于单次输出的合理性（如 RLHF 偏好礼貌、合作），无法感知自身正被对手建模，因而行为可预测且易被利用。文章强调，即使提升模型“智能”，若缺乏在对抗性环境中通过真实交互学习适应性策略的训练闭环，LLMs 仍难以胜任需要理论心智（theory of mind）和反制能力的高阶任务，这揭示了当前 AI 在复杂社会性推理上的根本局限。",
-      "fullText": "Experts Have World Models. LLMs Have Word Models. Subscribe Sign in Experts Have World Models. LLMs Have Word Models. From Next token prediction to Next state prediction Ankit Maloo Feb 07, 2026 59 4 6 Share Tickets for AIE Miami and AIE Europe are on sale now! We’ll all be there. Swyx here: we put a call out for Staff Researchers and Guest Writers and Ankit’s submission immediately stood out. As we discussed on the Yi Tay 2 episode , there are 3 kinds of World Models conversations today: The first and most common are 3D video world models like Fei Fei Li’s Marble and General Intuition ’s upcoming model, Google’s Genie 3 and Waymo’s World Model , 2) the Meta school of thought comprising JEPA, V-JEPA, EchoJEPA and Code World Models pursuing Platonic representation by learning projections on a common latent space. This essay covers the third kind that is now an obvious reasoning frontier: AI capable of multiagent world models that can accurately track theory of mind, anticipate reactions, and reveal/mine for information, particularly in adversarial situations. In benchmarks, both DeepMind and ARC-AGI and Code Clash are modeling these as games, but solving adversarial reasoning is very much serious business and calls out why the age of scaling is flipping back to the age of research. Enjoy! Ask a trial lawyer if AI could replace her and she won’t even look up from her brief. No. Ask a startup founder who’s never practiced law and he’ll tell you it’s already happening. They’re both looking at the same output. And honestly, the founder has a point. The brief reads like a brief. The contract looks like what a contract would look like. The code runs. If you put it next to the expert’s work, most people would struggle to tell the difference. So what is the expert seeing that everyone else isn’t? Vulnerabilities . They know exactly how an adversary will exploit the document the moment it lands on their desk. People try to explain this disconnect away. Sometimes they blame bad prompting, sometimes they assume models being more intelligent would be able to do the job. I would wager that intelligence is the wrong axis to look at. It’s about simulation depth. Let’s take an illustrative example about approaching people: A simple Slack Message You’re three weeks into a new job. You need the lead designer to review your mockups, but she’s notoriously overloaded. You ask ChatGPT to draft a Slack message. The AI writes: “Hi Priya, when you have a moment, could you please take a look at my files and share any feedback? I’d really appreciate your perspective. No rush at all. whenever it fits your schedule. Thanks!” Your friend who works in finance reads: “This is perfect. Polite, not pushy, respects her time. Send it.” Your coworker who’s been there three years reads: “Don’t send that. Priya sees ‘no rush, whenever works’ and mentally files it as not urgent. It sinks below fifteen other messages with actual deadlines. She’s not ignoring you. She’s triaging, and you just told her to deprioritize you. Also, ‘please take a look’ is vague. She doesn’t know if this is 10 minutes or 2 hours. Vague asks feel risky. She’ll avoid it. Try: ‘Hey Priya, could I grab 15 mins before Friday? Blocked on the onboarding mockups. I’m stuck on the nav pattern. Don’t want to build the wrong thing.’ Specific problem, bounded time, clear stakes. That gets a response.” The finance friend evaluated the text in isolation. The coworker ran a simulation: Priya’s workload, her triage heuristics, what ambiguity costs, how “no rush” gets interpreted under pressure. That’s the difference. The email is evaluated by the recipient’s triage algorithm. Adversarial Models in real world The finance friend and the LLM made the same mistake: they evaluated the text without modelling the world it would land in. The experienced coworker evaluated it as a move landing in an environment full of agents with their own models and incentives. This is the core difference. In business, geopolitics, finance etc, the environment fights back. Static analysis fails because the other side has self-interests and knowledge you don’t have. Pattern matching breaks when patterns shift in response to your actions. You have to simulate: Other agents’ likely reactions (triage heuristics, emotional state). Their hidden incentives and constraints (deadlines, politics). How your action updates their model of you (does “no rush” mean “I’m nice” or “I’m unimportant”?). Quant trading makes this measurable: act on a signal, others detect it, the edge decays, someone front-runs you, then someone fakes your signals to take even more money from you. The market is literally other agents modeling you back. That’s why static pattern-matching breaks: the pattern shifts specifically because you acted on it. Once other agents are in the loop, two things start to matter: (1) they can adapt, and (2) they have private information and private incentives. The hidden state is what turns a problem from ‘just compute the best move’ into ‘manage beliefs and avoid being exploitable.’ The cleanest way to see this: compare perfect-information games with imperfect-information ones. Perfect Information Games: When You Don’t Need a Theory of Mind Chess has two players, perfect information, and symmetric rules. Every piece is visible. Every legal move is known. There’s no hidden state, no private information, no bluffing. You don’t need a detailed model of your opponent’s mind 1 as a requirement. Yes it helps, but you need only calculate: given this board, what is the best move assuming optimal play? Your best move does not change based on who your opponent is. Board state is board state. Same goes with Go. AlphaGo or AlphaZero didn’t need to model human cognition. It needed to see the current state and calculate the optimal path better than any human could. The game’s homogeneity made this tractable. Both players operate under identical rules, see identical information, and optimize for the same objective. Self-play generates training signals because playing yourself is structurally equivalent to playing anyone. When the Other Side Has Hidden State Now, consider poker - it has the same structure on the surface. Two players, defined rules, clear objectives. But one fundamental difference: information asymmetry. You don’t know your opponent’s cards, they don’t know yours. Now, the game is no longer about calculating the optimal move from a shared state. It’s about modeling who they are, what they know, what they think you know, and what they’re doing with that asymmetry. Bluffing exists because information is private. Reading a bluff exists because you’re modeling their model of you. The game becomes recursive: I think they think I’m weak, so they’ll bet, so I should trap. Editor: we’re coming back into familiar territory and it may be a good time to revisit our conversation with Noam Brown on AI for imperfect information vs game-theory-optimal poker games, and what that tells us for his multi-agent work: Scaling Test Time Compute to Multi-Agent Civilizations: Noam Brown June 19, 2025 Every breakthrough in AI has been led by a core scaling insight — Moore’s Law gave way to Huang’s Law (silicon), Kaplan et al gave way to Hoffman et al (data), AlexNet kicked off the deep-learning an… Read full story Pluribus: Adversarial Robustness When Meta released Pluribus , Noam Brown made the architecture explicit: “Regardless of which hand Pluribus is actually holding, it will first calculate how it would act with every possible hand, being careful to balance its strategy across all the hands so as to remain unpredictable to the opponent.” Pluribus was specifically modeled so that it’s impossible to read. It calculated how it would act with every possible hand, then balanced its strategy so opponents couldn’t extract information from its behavior. Human opponents tried to model the causality (”it’s betting big, it must have a strong hand”), but Pluribus played balanced frequencies that made those “reads” statistically irrelevant. The point of the strategy was to deny its opponents consistent information. That’s the benchmark you’re implicitly holding experts to in real life: not “does this sound good,” but “is this move robust once the other side starts adapting?” The LLM Failure Mode: They’re Graded on Artifacts, Not on Reactions LLMs are optimized to produce a completion that a human rater approves of in isolation. RLHF (and similar human preference tuning) pushes models toward being helpful, polite, balanced, and cooperative, qualities that score well in one-shot evaluations. That’s great for lots of tasks. But it’s a bad default in adversarial settings because it systematically under-weights second-order effects: how the counterparty will interpret your message, what it signals about your leverage, and how they’ll update their strategy after reading it. The core mismatch is the training signal compared to humans. Domain experts get trained by the environment : if your argument is predictable, it gets countered; if your concession leaks weakness, it gets exploited; if your email invites delay, it gets delayed. LLMs mostly learn from descriptions of those dynamics (text) and from static preference judgments about outputs 2 . Not from repeatedly taking actions in an environment where other agents adapt and punish predictability. 3 Hence, the model learns to imitate “what a reasonable person would say,” not to optimize “what survives contact with a self-interested opponent?” The obvious fix: prompt the model to be adversarial. Tell it to optimize for advantage, anticipate counters, hold firm. This helps. But it doesn’t solve the deeper problem. Being Modeled Pluribus cracked what current LLMs don’t: when you’re in an adversarial environment, your opponent is watching you and updating and you have to account for that in order to win. A human negotiator notices when the counterparty is probing . They test your reaction to an aggressive anchor. They float a deadline to see if you flinch. They ask casual questions to gauge your alternatives. Each probe updates their model of you, and they adjust accordingly. A skilled negotiator sees the probing and recalibrates. They give misleading signals. They react unexpectedly to throw off the read. The game is recursive: I’m modeling their model of me, and adjusting to corrupt it. An LLM given an “aggressive negotiator” prompt will execute that strategy consistently. Which means a human can probe, identify the pattern, and exploit its predictability. The LLM doesn’t observe that it’s being tested. It doesn’t notice the counterparty is running experiments 4 . It can’t recalibrate because it doesn’t know there’s anything to recalibrate to. This is the asymmetry. LLMs are readable. The cooperative bias is detectable. The prompting strategy is consistent. And unlike Pluribus, they don’t adjust based on being observed. Humans can model the LLM. The LLM can’t model being modeled. That gap is exploitable 5 , and no amount of “think strategically” prompting fixes it because the model doesn’t know what the adversary has already learned about it. Why “More Intelligence” Isn’t the Fix The natural response is: surely smarter models will figure this out. Just scale everything up ? More compute on more data on more parameters in pre-train, better reasoning traces 6 in post-train, longer chains of thought at test-time. But, more raw IQ doesn’t fix the missing training loop even for professionals. To behave adversarially robust by default, the model has to reliably do four things: Detect that the situation is strategic (even when it’s framed as polite/cooperative) Identify the relevant agents and what each is optimizing Simulate how those agents interpret signals and adapt after your move Choose an action that remains good across plausible reactions—not just the most reasonable-sounding completion Steps 2–4 are possible with good prompting as in the example above. Step 1 is th",
-      "imageUrl": "https://substackcdn.com/image/fetch/$s_!2ITs!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc6651e22-efa5-4500-ba6e-34fa98c17941_1600x909.png",
+      "source": "GitHub Trending",
+      "summary": "GitHub 推出 **gh-aw（Agentic Workflows）**，旨在通过 AI 代理自动化软件开发工作流，如代码审查、测试与部署；这一举措标志着 GitHub 从协作平台向智能代理基础设施演进，开发者可借此构建更自主的 CI/CD 流程，提升工程效率并减少重复性人工干预。",
+      "fullText": "",
+      "imageUrl": "https://opengraph.githubassets.com/bbc591f9daaf3b7c26bb40d73a82c18f0b3ee21b3ea8212b4d7b291d46fc4984/github/gh-aw",
       "tags": [
-        "LLM"
+        "Agent",
+        "Open Source"
       ],
       "paperCategory": "",
       "signalReasons": [
-        "来源：Hacker News",
+        "来源：GitHub Trending",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：提出“世界模型”与“词模型”的根本区分，直指当前LLM局限，推动多智能体推理与理论心智建模的研究方向，具备引领未来AI发展的战略意义。",
-        "热度：41 / 评论 73"
+        "模型评分：6/10，理由：GitHub Agentic Workflows是自动化工作流工具，有一定实用性，但属于常规工具类项目，影响力有限。",
+        "热度：882 / 评论 0"
       ],
-      "score": 4.73,
-      "publishedAt": "2026-02-08T18:13:48+00:00",
-      "authors": [
-        "aaronng91"
-      ]
+      "score": 6.6,
+      "publishedAt": "2026-02-09T23:45:22.133607+00:00",
+      "authors": []
     },
     {
-      "id": "hn_46934906",
-      "title": "Do Markets Believe in Transformative AI?",
-      "url": "https://marginalrevolution.com/marginalrevolution/2025/09/do-markets-believe-in-transformative-ai.html",
+      "id": "rss_8505236726",
+      "title": "Databricks CEO：AI 将让 SaaS 变得“隐形”，而非消亡",
+      "url": "https://techcrunch.com/2026/02/09/databricks-ceo-says-saas-isnt-dead-but-ai-will-soon-make-it-irrelevant/",
       "type": "news",
-      "source": "Hacker News",
-      "summary": "一项 NBER 工作论文分析了 2023–2024 年主要 AI 模型发布期间美国长期债券收益率的变化，发现国债、TIPS 和公司债收益率在事件后显著且持续地下降，表明金融市场并未将 AI 视为即将带来高速增长的“变革性技术”。研究通过消费资产定价模型解释，这种收益率下降对应着市场对长期消费增长预期的下调，或对极端结果（如存在性风险或后稀缺经济）发生概率的降低，而非源于增长不确定性增加。该结果挑战了“AI 将大幅提升生产力”的主流叙事，暗示投资者更倾向于认为当前 AI 进展尚未构成足以改变宏观基本面的突破，这对评估 AI 实际经济影响和资产配置具有重要参考价值。",
-      "fullText": "Do Markets Believe in Transformative AI? - Marginal REVOLUTION Toggle navigation About Marginal Revolution Categories Date Archives Our Books Our Textbook: Modern Principles of Economics Marginal Revolution University Search Search Thank-you! You've been successfully added to the Marginal Revolution email subscription list. Do Markets Believe in Transformative AI? by Tyler Cowen September 15, 2025 at 2:16 pm in Economics Web/Tech No: Economic theory predicts that transformative technologies may influence interest rates by changing growth expectations, increasing uncertainty about growth, or raising concerns about existential risk. Examining US bond yields around major AI model releases in 2023-4, we find economically large and statistically significant movements concentrated at longer maturities. The median and mean yield responses across releases in our sample are negative: long-term Treasury, TIPS, and corporate yields fall and remain lower for weeks. Viewed through the lens of a simple, representative agent consumption-based asset pricing model, these declines correspond to downward revisions in expected consumption growth and/or a reduction in the perceived probability of extreme outcomes such as existential risk or arrival of a post-scarcity economy. By contrast, changes in consumption growth uncertainty do not appear to drive our results. That is from a new NBER working paper by Isaiah Andrews and Maryam Farboodi. 28 Comments Facebook Twitter RSS Feed print Comments Sort by Top Sort by Recent Sort by Controversial Comments for this post are closed Marginal Revolution University See Courses Learn more about Mercatus Center Fellowships Learn More Subscribe via Email Enter your email address to subscribe to updates. Email Address Subscribe RSS Feed Contact Us Alex Tabarrok Email Alex Follow @atabarrok Tyler Cowen Email Tyler Follow @tylercowen Webmaster Report an issue Blogs We Like Interesting People & Sites Our Web Pages Alex Tabarrok's Home Page Alex's TED talk, how ideas trump crises Conversations with Tyler FDAReview.org Tyler Cowen's Personal Web Page Tyler's ethnic dining guide Apply to Emergent Ventures Books Modern Principles of Economics Tyler Cowen & Alexander Tabarrok Marginal Revolution 2026 About Marginal Revolution Categories Date Archives Our Books Our Textbook: Modern Principles of Economics Marginal Revolution University Facebook Twitter RSS Feed Marginal Revolution University See Courses Search Search Privacy Policy Marginal Revolution 2026",
-      "imageUrl": "https://marginalrevolution.com/wp-content/uploads/2024/03/MRU-Updated-Graphic.png",
+      "source": "TechCrunch AI",
+      "summary": "Databricks CEO Ali Ghodsi 指出，AI 不会立即取代 SaaS 系统，但将通过自然语言界面（如其 Genie 产品）使传统 SaaS 应用“隐形化”，削弱用户对特定 UI 的依赖，从而瓦解现有 SaaS 巨头的核心护城河；这一趋势意味着企业软件竞争焦点正从功能模块转向 AI 原生交互与代理兼容性，普通用户未来将无需学习复杂软件操作，而开发者需优先构建支持 AI 代理的数据基础设施（如 Databricks 新推的 Lakebase）以应对新一代竞争。",
+      "fullText": "Databricks CEO says SaaS isn't dead, but AI will soon make it irrelevant | TechCrunch TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture More from TechCrunch Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Crunchboard Contact Us Image Credits: Databricks Startups Databricks CEO says SaaS isn’t dead, but AI will soon make it irrelevant Julie Bort 1:14 PM PST · February 9, 2026 On Monday, Databricks announced it reached a $5.4 billion revenue run rate, growing 65% year-over-year, of which more than $1.4 billion was from its AI products. Co-founder and CEO Ali Ghodsi wanted to share these growth numbers because there’s so much talk about how AI is going to kill the SaaS business, he told TechCrunch. “Everybody’s like, ‘Oh, it’s SaaS. What’s going to happen to all these companies? What’s AI going to do with all these companies?’ For us, it’s just increasing the usage,” he said. To be sure, he also wants to distance Databricks from the SaaS label, given that private markets value it as an AI company. Databricks on Monday also officially closed on its massive, previously announced $5 billion raise at a $134 billion valuation , and nabbed a $2 billion loan facility as well. But the company is straddling both worlds. Databricks is still best known as a cloud data warehouse provider. A data warehouse is where enterprises store massive amounts of data to analyze for business insights. Ghodsi called out, in particular, one AI product that’s driving usage of its data warehouse: its LLM user interface named Genie. Genie is an example of how a SaaS business can replace its user interface with natural language. For instance, he uses it to ask why warehouse usage and revenue spike on particular days. Just a few years ago, such a request required writing queries in a specific technical language, or having a special report programmed. Today, any product with an LLM interface can be used by anyone, Ghodsi noted. Genie is one reason for the company’s usage growth numbers, he said. The threat of AI to SaaS isn’t, as one AI VC jokingly tweeted , that enterprises will rip out their SaaS “systems of record” to replace them with vibe-coded homegrown versions. Systems of record store critical business data, whether it’s on sales, customer support, or finance. “Why would you move your system of record? You know, it’s hard to move it,” Ghodsi said. The model makers aren’t offering databases to store that data and become systems of record anyway. Instead, they hope to replace the user interface with natural language for human use, or APIs or other plug-ins for AI agents. So the threat to SaaS businesses, Ghodsi says, is that people no longer spend their careers becoming masters of a particular product: Salesforce specialists, or ServiceNow, or SAP. Once the interface is just language, the products become invisible, like plumbing. “Millions of people around the world got trained on those user interfaces. And so that was the biggest moat that those businesses have,” Ghodsi warned. SaaS companies that embrace the new LLM interface could grow, as Databricks is doing. But it also opens up possibilities for AI-native competitors to offer alternatives that work better with AI and agents. That’s why Databricks created its Lakebase database designed for agents. He’s seeing early traction. “In its eight months that we’ve had it in the market, it’s done twice as much revenue as our data warehouse had when it was eight months old. Okay, obviously, that’s like comparing toddlers,” Ghodsi says. “But this is a toddler that’s twice as big.” Meanwhile, now that Databricks has closed on its massive funding round, Ghodsi tells us that the company is not immediately working on another raise, nor prepping for an IPO. “Now is not a great time to go public,” Ghodsi said. “I just wanted to be really well capitalized” should the markets go “south” again as they did in the 2022 downturn, when interest rates rose sharply after years of near-zero rates. A thick bank account “protects us, gives us many, many years of runway,” he added. Topics AI , ali ghodsi , Databricks , Enterprise , SaaS , Startups Julie Bort Venture Editor Julie Bort is the Startups/Venture Desk editor for TechCrunch. You can contact or verify outreach from Julie by emailing julie.bort@techcrunch.com or via @Julie188 on X. View Bio October 13-15 San Francisco, CA Tickets are live at the lowest rates of the year. Save up to $680 on your pass now. Meet investors. Discover your next portfolio company. Hear from 250+ tech leaders , dive into 200+ sessions , and explore 300+ startups building what’s next. Don’t miss these one-time savings. REGISTER NOW Most Popular An AI startup founder says he’s planning a ‘March for Billionaires’ in protest of California’s wealth tax Lucas Ropek Senator, who has repeatedly warned about secret US government surveillance, sounds new alarm over ‘CIA activities’ Zack Whittaker The backlash over OpenAI’s decision to retire GPT-4o shows how dangerous AI companions can be Amanda Silberling OpenAI launches new agentic coding model only minutes after Anthropic drops its own Lucas Ropek Anthropic releases Opus 4.6 with new ‘agent teams’ Lucas Ropek Sam Altman got exceptionally testy over Claude Super Bowl ads Julie Bort Homeland Security is trying to force tech companies to hand over data about Trump critics Zack Whittaker Loading the next article Error loading the next article X LinkedIn Facebook Instagram youTube Mastodon Threads Bluesky TechCrunch Staff Contact Us Advertise Crunchboard Jobs Site Map Terms of Service Privacy Policy RSS Terms of Use Code of Conduct Epstein Kindle Scribe Reddit TikTok GPT-4o Tech Layoffs ChatGPT © 2025 TechCrunch Media LLC.",
+      "imageUrl": "https://techcrunch.com/wp-content/uploads/2025/01/Databricks_042221_Ali_Ghodsi_236.jpg?resize=1200%2C630",
       "tags": [],
       "paperCategory": "",
       "signalReasons": [
-        "来源：Hacker News",
+        "来源：TechCrunch AI",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：Tyler Cowen通过债券市场数据实证分析AI对经济预期的影响，首次将AI变革与宏观金融指标关联，具有重大战略意义。",
-        "热度：21 / 评论 12"
+        "模型评分：9/10，理由：Databricks CEO预言SaaS被AI重构，直指未来软件范式变革，具有战略级行业影响",
+        "热度：0 / 评论 0"
       ],
-      "score": 4.57,
-      "publishedAt": "2026-02-08T15:13:00+00:00",
+      "score": 5.4,
+      "publishedAt": "2026-02-09T21:14:50+00:00",
       "authors": [
-        "surprisetalk"
-      ]
-    },
-    {
-      "id": "hn_46932204",
-      "title": "GLM 4.7 与 MiniMax M2.1 对比：开源模型已能自主完成复杂编程任务",
-      "url": "https://blog.kilo.ai/p/open-weight-models-are-getting-serious",
-      "type": "news",
-      "source": "Hacker News",
-      "summary": "新发布的开源权重模型 GLM 4.7（z.AI）与 MiniMax M2.1 在 Kilo Code 的复杂编码测试中均成功自主实现了一个包含 20 项功能的 CLI 任务运行器（taskflow），涵盖依赖解析、并行执行、缓存、信号处理等，全程无需人工干预。GLM 4.7 生成了更详尽的架构文档（741 行，含 Mermaid 图）、模块化代码（18 文件）和完整 README，但成本较高；MiniMax M2.1 以一半成本（约 $0.15）交付功能等效的实现（9 文件，使用 commander.js 库），但无文档。两者均展现出强 Agentic 能力，如 MiniMax 能自主调试库兼容性问题。该对比表明，开源模型在复杂编程任务上已接近闭源前沿模型水平，开发者可根据成本与工程偏好（文档完整性 vs. 简洁性）选择，显著降低高质量 AI 编程的使用门槛。",
-      "fullText": "Open-Weight Models Are Getting Serious: GLM 4.7 vs MiniMax M2.1 Kilo Blog Subscribe Sign in Open-Weight Models Are Getting Serious: GLM 4.7 vs MiniMax M2.1 Darko Jan 08, 2026 19 7 1 Share Two new open-weight models dropped in December, claiming strong agentic coding capabilities: GLM 4.7 from z.AI and MiniMax M2.1 . We ran both through a multi-phase coding test in Kilo Code to see how they handle real implementation work. TL;DR: Both models successfully built a fully functional CLI task runner in one go, implementing all 20 specified features including dependency management, parallel execution, and caching. GLM 4.7 produced more comprehensive planning and documentation. MiniMax M2.1 delivered the same functional result at half the cost. Why Open-Weight Models Matter Open-weight models are becoming really good. A year ago, if you wanted to do serious coding work with AI, you were limited to expensive frontier models like Claude or GPT . Now, models like GLM 4.7 and MiniMax M2.1 can successfully handle complex agentic coding workflows autonomously for long durations and produce working code. This matters for cost efficiency and also opens up more options for developers. For example, MiniMax M2.1 cost us $0.15 for a task that would cost several dollars with frontier models. As these models improve, the gap between “affordable” and “best” keeps shrinking. We wanted to test this with a practical benchmark: give each model a complex coding task that requires planning, multi-file creation, and sustained execution over many minutes. The kind of task where you walk away and come back to see finished, production-ready code. Building a CLI Task Runner We designed a single, in-depth task: build a CLI tool called “taskflow” that runs commands defined in a YAML config file with dependency management. Think of this as a lightweight version of GitHub Actions where you define a workflow in YAML and run it on your own infrastructure after you commit your code. The requirements included 20 features across five categories: Core Execution: YAML parsing, topological sort, cycle detection, parallel execution, skip on failure Task Config: Per-task env vars, working directory, config defaults, conditional execution Output: Colored logs with timing, log files, real-time streaming, verbose/quiet modes CLI: --dry-run, --filter, --max-parallel, SIGINT handling Advanced: Input file caching, before/after hooks, retry logic, timeouts Here’s a sample config file: This is a realistic CLI tool that would take a senior developer at least a day or two to build properly. It requires understanding dependency graphs, process spawning, file hashing, signal handling, and stream management. Two-Phase Testing We ran the test in two phases to evaluate both planning and implementation abilities. Phase 1: Architect Mode We gave each model the full requirements and asked for a detailed implementation plan using the Kilo Code Architecture mode. This tests their ability to design before coding. A good plan should include file structure, type definitions, algorithms for dependency resolution, and how each feature will be implemented. Phase 2: Code Mode After each model produced its plan, we told it to implement the plan using the Kilo Code Code mode. This tests whether they can follow through on their own design and produce working code. Both models ran uninterrupted for the entire task. MiniMax M2.1 ran for 14 minutes without stopping. GLM 4.7 completed in 10 minutes . Neither required human intervention or course correction . Performance Summary Phase 1 Results: Planning The planning phase revealed significant differences in how each model approaches architecture. GLM 4.7’s Plan GLM 4.7 produced a 741-line architecture document with three Mermaid diagrams showing execution flow, parallel batching strategy, and module relationships. The plan included: A nested directory structure with 18 files across 8 directories Complete TypeScript interfaces for all types Explicit mention of Kahn’s algorithm for topological sort with pseudocode A 26-step implementation roadmap Security considerations (command injection risks) Performance notes (spawn vs exec tradeoffs) GLM 4.7 Architecture Plan Output For example, here’s how GLM 4.7 documented its cache strategy: The plan also included the exact cache JSON format: MiniMax M2.1’s Plan MiniMax M2.1’s plan was significantly shorter at only 284 lines with two Mermaid diagrams. It covered all the same concepts but with less detail: A flat directory structure with 9 files Complete TypeScript interfaces Mentioned Kahn’s algorithm by name (no pseudocode) Module descriptions without step-by-step implementation roadmap MiniMax M2.1 Architecture Plan Output MiniMax M2.1’s cache description: Both plans are technically correct and cover all requirements. GLM 4.7’s plan reads like internal documentation you’d hand to a new team member. MiniMax M2.1’s plan is a working specification, which is much, much shorter, but still gets the job done. Plan Scoring (50 points) We scored plans on nine criteria: The 6-point gap only reflects depth of documentation rather than technical correctness. Both plans would enable a developer to build the tool. Phase 2 Results: Implementation Both models successfully implemented all 20 requirements. The code compiles, runs, and handles the test cases correctly without any major issues or errors. Core Features (20 points) Both implementations include: Working topological sort with cycle detection: GLM 4.7’s implementation (Kahn’s algorithm): MiniMax M2.1’s implementation follows the same algorithm with nearly identical logic. Parallel execution with concurrency limits: GLM 4.7 uses a dynamic approach where it starts new tasks as slots become available: MiniMax M2.1 uses batch-based execution where tasks are grouped by dependency level: Both approaches work. GLM 4.7’s is more responsive to individual task completion. MiniMax M2.1’s is simpler to understand. Implementation Scoring We scored implementations on the same 20 requirements: Both models achieved full marks on implementation. Every feature works as specified. Code Quality Differences While both implementations are functional, they differ in structure and style. Architecture GLM 4.7 created a deeply modular structure: GLM 4.7 Code Structure MiniMax M2.1 created a flat structure: MiniMax M2.1 Code Structure Neither is wrong. GLM 4.7’s structure is easier to extend and test in isolation. MiniMax M2.1’s structure is easier to navigate and understand initially. Error Handling GLM 4.7 created custom error classes: MiniMax M2.1 used standard Error objects with descriptive messages: Retry Logic GLM 4.7 implemented exponential backoff: MiniMax M2.1 retries immediately without delay. Hashing GLM 4.7 uses MD5. MiniMax M2.1 uses SHA256. For cache invalidation purposes, both work fine. SHA256 is technically more collision-resistant. CLI Parsing GLM 4.7 implemented argument parsing manually: MiniMax M2.1 used commander.js: GLM 4.7’s approach has no external dependency. MiniMax M2.1’s approach is more maintainable and handles edge cases automatically. Documentation GLM 4.7 generated a 363-line README.md with installation instructions, configuration reference, CLI options, multiple examples, and exit code documentation. GLM 4.7 README Output MiniMax M2.1 generated no README. Agentic Capabilities Both models demonstrated genuine agentic behavior. After finishing the implementation, each model tested its own work by running the CLI with Bash and verified the output. GLM 4.7 reached a working state faster with fewer issues. It produced 1,850 lines across 18 files in 10 minutes, then ran through its test cases without hitting major problems. MiniMax M2.1 took longer because it ran into issues during self-testing. The Commander.js library wasn’t parsing CLI flags correctly. Instead of giving up or asking for help, MiniMax tested the library inline using Node to figure out what was wrong. Once it understood the issue, it went back and fixed the CLI code. This debugging loop happened without any human intervention. Cost Analysis At the time of our testing, MiniMax M2.1 cost us $0.15 for this task, half as much as GLM 4.7. Since then, MiniMax M2.1 has become free to use in Kilo Code for a limited time. Both models are significantly cheaper than frontier models. Running this same task with Claude Opus 4.5 or OpenAI GPT 5.2 would cost several dollars or more. The 6-point score difference comes entirely from planning documentation, not implementation quality. For teams optimizing on cost, MiniMax M2.1 produces working code at half the price. For teams that value comprehensive documentation and modular architecture, GLM 4.7 may be worth the premium. Tradeoffs Based on our testing, GLM 4.7 is better if you want comprehensive documentation and modular architecture out of the box. It generated a full README, detailed error classes, and organized code across 18 well-separated files. The tradeoff is higher cost and some arguably over-engineered patterns like manual CLI parsing when a library would do. MiniMax M2.1 is better if you prefer simpler code and lower cost. Its 9-file structure is easier to navigate, and it used established libraries like Commander.js instead of rolling its own. The tradeoff is no documentation. You’ll need to add a README and inline comments yourself. Both codebases would pass code review with minor adjustments. Neither is production-ready without human review, but that’s expected for any AI-generated code. It’s worth noting that both models can be steered with more specific prompts . What we’re observing here is just the default behavior inside the Kilo Code harness. If you wanted MiniMax to generate documentation or GLM to use fewer files, you could prompt for that explicitly. The final conclusion Overall, we’re impressed with the performance of both models. For practical coding work, either one delivers functional code. GLM 4.7 requires less hand-holding and produces more complete output. MiniMax M2.1 achieves the same functional result at half the cost, and is currently free to use in Kilo Code for a limited time . A year ago, neither of these models existed. Now they can run for long durations autonomously, debug their own issues, and produce working projects. Open-weight models are catching up to frontier models and getting better with each release. 19 7 1 Share Discussion about this post Comments Restacks OpenAI Jan 16 Could you provide the complete prompt? I'd like to test it with other models. Thanks! Reply Share Sector 575 Jan 13 Exactly 💯 👍 Reply Share 1 reply 5 more comments... Top Latest Discussions No posts Ready for more? Subscribe © 2026 Kilo Code Inc. · Privacy ∙ Terms ∙ Collection notice Start your Substack Get the app Substack is the home for great culture",
-      "imageUrl": "https://substackcdn.com/image/fetch/$s_!B7sj!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9f0183ca-2174-404e-b84d-6a2810081c6e_1666x1216.png",
-      "tags": [],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：Hacker News",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：GLM 4.7与MiniMax M2.1在开放权重模型上实现高性能自主编码，标志着开源模型在复杂工程任务上的重大突破，正在重塑AI开发成本与可及性格局。",
-        "热度：14 / 评论 0"
-      ],
-      "score": 3.91,
-      "publishedAt": "2026-02-08T07:41:47+00:00",
-      "authors": [
-        "ms7892"
+        "Julie Bort"
       ]
     }
   ],
   "stats": {
-    "total_papers_ingested": 363,
-    "total_news_ingested": 45,
-    "l1_papers_passed": 148,
-    "l1_news_passed": 29,
-    "l2_papers_scored": 48,
-    "l2_news_scored": 20,
+    "total_papers_ingested": 261,
+    "total_news_ingested": 57,
+    "l1_papers_passed": 107,
+    "l1_news_passed": 43,
+    "l2_papers_scored": 53,
+    "l2_news_scored": 21,
     "l3_papers_selected": 18,
     "l3_news_selected": 11,
     "news_source_counts": {
-      "Hacker News": 32,
+      "Hacker News": 23,
       "GitHub Trending": 8,
-      "TechCrunch AI": 3,
-      "The Verge AI": 2
+      "TechCrunch AI": 7,
+      "The Verge AI": 6,
+      "AWS Machine Learning Blog": 5,
+      "Alibaba DAMO Academy (GitHub)": 3,
+      "OpenAI Blog": 2,
+      "MIT Tech Review AI": 2,
+      "Hugging Face Blog": 1
     },
     "rss_source_counts": {
-      "TechCrunch AI": 3,
-      "The Verge AI": 2
+      "TechCrunch AI": 7,
+      "The Verge AI": 6,
+      "AWS Machine Learning Blog": 5,
+      "Alibaba DAMO Academy (GitHub)": 3,
+      "OpenAI Blog": 2,
+      "MIT Tech Review AI": 2,
+      "Hugging Face Blog": 1
     },
     "news_title_source_counts": {
-      "shifts in u s social media use 2020 2024 decline fragmentation polarization 2025": 1,
-      "apple xnu clutch scheduler": 1,
-      "roundcube webmail svg feimage bypasses image blocking to track email opens": 1,
-      "rfc 3092 etymology of foo 2001": 1,
-      "credentials for linux bringing passkeys to the linux desktop": 1,
-      "let s compile quake like it s 1997": 1,
-      "reverse engineering raiders of the lost ark for the atari 2600": 1,
-      "matchlock secures ai agent workloads with a linux based sandbox": 1,
-      "the little red dots observed by webb were direct collapse black holes": 1,
-      "slop terrifies me": 1,
-      "show hn localgpt a local first ai assistant in rust with persistent memory": 1,
-      "do markets believe in transformative ai": 1,
-      "donotnotify is now open source": 1,
-      "apple container 0 9 0": 1,
-      "stop using face id": 1,
-      "attention media social media": 1,
-      "arcan explained a browser for different webs": 1,
-      "show hn fine tuned qwen2 5 7b on 100 films for probabilistic story graphs": 1,
-      "llms as language compilers lessons from fortran for the future of coding": 1,
-      "ccc claude s c compiler on compiler explorer": 1,
-      "ai fatigue is real and nobody talks about it": 1,
-      "substack confirms data breach affects users email addresses and phone numbers": 1,
-      "experts have world models llms have word models": 1,
-      "the scriptovision super micro script video titler is almost a home computer": 1,
-      "startup founder behind san francisco pro billionaire rally": 1,
-      "uber held liable ordered to pay 8 5m in driver rape suit": 1,
-      "canada better the 28th eu member than the 51st us state": 1,
-      "federal statement on jeffrey epstein s death dated day before he was found dead": 1,
-      "open weight models are getting serious glm 4 7 vs minimax m2 1": 1,
-      "waymo admits that its autopilot is often just guys from the philippines": 1,
-      "pentagon cutting ties w woke harvard ending military training fellowships": 1,
-      "any chess position with 8 pieces on board and one pair of pawns has been solved": 1,
+      "why is the sky blue": 1,
+      "hard braking events as indicators of road segment crash risk": 1,
+      "super bowl ad for ring cameras touted ai surveillance network": 1,
+      "github is down again": 1,
+      "mit living wage calculator": 1,
+      "humans peak in midlife a combined cognitive and personality trait perspective": 1,
+      "testing ads in chatgpt": 2,
+      "offpunk 3 0": 1,
+      "eddie bauer venerable outdoor apparel retailer declares bankruptcy": 1,
+      "is ai the paperclip": 1,
+      "matrix messaging gaining ground in government it": 1,
+      "as ai enters the operating room reports arise of botched surgeries": 1,
+      "us companies accused of ai washing re job losses": 1,
+      "show hn ported the 1999 game bugdom to the browser and added a bunch of mods": 1,
+      "ultrarunners in secondhand trainers": 1,
+      "ai doesn t reduce work it intensifies it": 1,
+      "tsmc to make advanced ai semiconductors in japan": 1,
+      "big tech groups race to fund unprecedented 660b ai spending spree": 1,
+      "containers cloud blockchain ai all the same old bs says veteran red hatter": 1,
+      "claude s c compiler vs gcc": 1,
+      "san francisco s pro billionaire march draws dozens": 1,
+      "hong kong pro democracy tycoon jimmy lai gets 20 years jail": 1,
+      "microsoft outlook thinks microsoft azure emails are spam": 1,
       "keygraphhq shannon": 1,
-      "pydantic monty": 1,
-      "openai skills": 1,
       "virattt dexter": 1,
-      "google langextract": 1,
-      "obra superpowers": 1,
-      "openbmb minicpm o": 1,
+      "pydantic monty": 1,
+      "hsliuping tradingagents cn": 1,
       "iofficeai aionui": 1,
+      "github gh aw": 1,
+      "shubhamsaboo awesome llm apps": 1,
+      "openai skills": 1,
+      "bringing chatgpt to genai mil": 1,
+      "chatgpt 8217 s cheapest options now show you ads": 1,
+      "ai generated ads dropped the ball at this year 8217 s super bowl": 1,
+      "siemens ceo roland busch s mission to automate everything": 1,
+      "openai will reportedly start testing ads in chatgpt today": 1,
+      "openai s supposedly leaked super bowl ad with ear buds and a shiny orb was a hoax": 1,
       "super bowl lx ads all ai everything": 1,
-      "new york is considering two bills to rein in the ai industry": 1,
-      "crypto com places 70m bet on ai com domain ahead of super bowl": 1,
-      "okay i m slightly less mad about that magnificent ambersons ai project": 1,
-      "from svedka to anthropic brands make bold plays with ai in super bowl ads": 1
+      "databricks ceo says saas isn t dead but ai will soon make it irrelevant": 1,
+      "anthropic s india expansion collides with a local company that already had the name": 1,
+      "chatgpt rolls out ads": 1,
+      "workday ceo eschenbach departs with co founder aneel bhusri returning as ceo": 1,
+      "anthropic closes in on 20b round": 1,
+      "ex googlers are building infrastructure to help companies understand their video data": 1,
+      "call for speakers techcrunch founder summit 2026": 1,
+      "transformers js v4 preview now available on npm": 1,
+      "why the moltbook frenzy was like pok mon": 1,
+      "making ai work mit technology review s new ai newsletter is here": 1,
+      "automated reasoning checks rewriting chatbot reference implementation": 1,
+      "scale llm fine tuning with hugging face and amazon sagemaker ai": 1,
+      "new relic transforms productivity with generative ai on aws": 1,
+      "accelerate agentic application development with a full stack starter template for amazon bedrock agentcore": 1,
+      "agent to agent collaboration using amazon nova 2 lite and amazon nova act for multi agent systems": 1,
+      "alibaba damo academy added lkhl to alibaba damo academy rynnscale": 1,
+      "alibaba damo academy added hbhalpha to alibaba damo academy rynnbrain github io": 1,
+      "alibaba damo academy added rh dang to alibaba damo academy rynnbrain": 1
     },
-    "total_papers_deduped": 363,
-    "total_news_deduped": 45,
-    "news_recent_filtered": 45
+    "total_papers_deduped": 261,
+    "total_news_deduped": 56,
+    "news_recent_filtered": 56
   }
 }
