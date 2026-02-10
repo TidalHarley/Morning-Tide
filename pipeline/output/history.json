@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-10",
+    "papers_count": 6,
+    "news_count": 11,
+    "top_paper": "Anchored Decoding: Provably Reducing Copyright Risk for Any Language Model",
+    "top_news": "Meta与Google被控“设计成瘾”诱导儿童，美标志性诉讼开审"
+  },
+  {
     "date": "2026-02-09",
     "papers_count": 18,
     "news_count": 11,
