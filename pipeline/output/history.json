@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-11",
+    "papers_count": 18,
+    "news_count": 11,
+    "top_paper": "NavDreamer: Video Models as Zero-Shot 3D Navigators",
+    "top_news": "Harness工程：在智能体优先时代重新定义Codex使用方式"
+  },
+  {
     "date": "2026-02-10",
     "papers_count": 6,
     "news_count": 11,
