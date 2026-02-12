@@ -540,6 +540,13 @@ class Config(BaseModel):
     public_history_path: str = "public/history.json"
     feedback_path: str = "pipeline/output/feedback.json"
 
+    # 每日简报长图配置
+    briefing_enabled: bool = _get_bool_env("AI_TIDES_BRIEFING_ENABLED", True)
+    briefing_output_dir: str = "public/briefings"
+    briefing_max_news: int = 4
+    briefing_width: int = 1080
+    briefing_site_url: str = os.getenv("AI_TIDES_SITE_URL", "")
+
 
 # 全局配置实例
 config = Config()

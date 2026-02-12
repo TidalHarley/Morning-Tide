@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Play, Pause, ChevronUp, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Chapter {
   title: string;
@@ -23,16 +24,23 @@ export function AudioDock({
   isPlaying,
   onPlayPause,
   isEnabled = true,
-  title = "Daily Briefing",
+  title,
   duration = "07:32",
   progress = 0,
-  chapters = [
-    { title: "News", timestamp: "00:00" },
-    { title: "Releases", timestamp: "02:45" },
-    { title: "Papers", timestamp: "05:20" },
-  ],
+  chapters,
 }: AudioDockProps) {
+  const { t } = useLanguage();
   const [isExpanded, setIsExpanded] = useState(false);
+  const defaultTitle = t.audioDock.dailyBriefing;
+  const effectiveTitle = title || defaultTitle;
+  const effectiveChapters =
+    chapters && chapters.length > 0
+      ? chapters
+      : [
+          { title: t.audioDock.news, timestamp: "00:00" },
+          { title: t.audioDock.releases, timestamp: "02:45" },
+          { title: t.audioDock.papers, timestamp: "05:20" },
+        ];
 
   // Generate waveform bars
   const waveformBars = Array.from({ length: 20 }, (_, i) => ({
@@ -62,10 +70,10 @@ export function AudioDock({
                   className="border-b border-foreground/[0.06] px-5 py-3"
                 >
                   <div className="font-mono text-[10px] uppercase tracking-wider text-muted-40 mb-2">
-                    Chapters
+                    {t.audioDock.chapters}
                   </div>
                   <div className="space-y-1.5">
-                    {chapters.map((chapter, index) => (
+                    {effectiveChapters.map((chapter, index) => (
                       <button
                         key={index}
                         className="flex w-full items-center justify-between text-sm transition-colors hover:text-foreground"
@@ -126,7 +134,7 @@ export function AudioDock({
 
               {/* Title & Duration */}
               <div className="flex flex-col">
-                <span className="text-sm font-medium text-foreground/80">{title}</span>
+                <span className="text-sm font-medium text-foreground/80">{effectiveTitle}</span>
                 <span className="font-mono text-xs tabular-nums text-muted-40">{duration}</span>
               </div>
 

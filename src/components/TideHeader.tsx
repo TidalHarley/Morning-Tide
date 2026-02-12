@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Sunrise, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface TideHeaderProps {
   variant?: "hero" | "light";
@@ -9,6 +10,7 @@ interface TideHeaderProps {
 export function TideHeader({ variant = "hero" }: TideHeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const { theme, setTheme, resolvedTheme } = useTheme();
+  const { language, setLanguage, t } = useLanguage();
   const isDark = (resolvedTheme || theme) === "dark";
 
   useEffect(() => {
@@ -56,27 +58,68 @@ export function TideHeader({ variant = "hero" }: TideHeaderProps) {
                   showBackground ? "text-muted-foreground" : "text-white/70"
                 }`}
               >
-                Created by @ TidalHarley
+                {t.header.createdBy}
               </span>
             </div>
           </a>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {["Home", "News", "Papers", "About"].map((item) => (
+            {[
+              { id: "home", label: t.header.home },
+              { id: "news", label: t.header.news },
+              { id: "papers", label: t.header.papers },
+              { id: "about", label: t.header.about },
+            ].map((item) => (
               <a
-                key={item}
-                href={item === "Home" ? "/" : `#${item.toLowerCase()}`}
+                key={item.id}
+                href={item.id === "home" ? "/" : `#${item.id}`}
                 className={`nav-link ${
                   showBackground ? "nav-link-light" : "nav-link-hero"
                 }`}
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </nav>
 
           <div className="flex items-center gap-3">
+            <div
+              className={`hidden md:flex items-center rounded-lg border px-1 py-1 ${
+                showBackground ? "border-border" : "border-white/30"
+              }`}
+            >
+              <button
+                type="button"
+                onClick={() => setLanguage("zh")}
+                className={`px-2 py-1 text-xs rounded ${
+                  language === "zh"
+                    ? showBackground
+                      ? "bg-secondary text-foreground"
+                      : "bg-white/20 text-white"
+                    : showBackground
+                    ? "text-muted-foreground hover:text-foreground"
+                    : "text-white/70 hover:text-white"
+                }`}
+              >
+                中文
+              </button>
+              <button
+                type="button"
+                onClick={() => setLanguage("en")}
+                className={`px-2 py-1 text-xs rounded ${
+                  language === "en"
+                    ? showBackground
+                      ? "bg-secondary text-foreground"
+                      : "bg-white/20 text-white"
+                    : showBackground
+                    ? "text-muted-foreground hover:text-foreground"
+                    : "text-white/70 hover:text-white"
+                }`}
+              >
+                EN
+              </button>
+            </div>
             <button
               type="button"
               onClick={() => setTheme(isDark ? "light" : "dark")}
@@ -85,8 +128,8 @@ export function TideHeader({ variant = "hero" }: TideHeaderProps) {
                   ? "text-foreground hover:bg-secondary"
                   : "text-white hover:bg-white/10"
               }`}
-              aria-label={isDark ? "切换为亮色" : "切换为暗色"}
-              title={isDark ? "切换为亮色" : "切换为暗色"}
+              aria-label={isDark ? t.header.switchLight : t.header.switchDark}
+              title={isDark ? t.header.switchLight : t.header.switchDark}
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>

@@ -21,3 +21,7 @@ fastapi>=0.110.0
 uvicorn>=0.27.0
 sentence-transformers>=2.7.0
 numpy>=1.26.0
+
+# Daily Briefing Image Generation
+jinja2>=3.1.0
+playwright>=1.40.0

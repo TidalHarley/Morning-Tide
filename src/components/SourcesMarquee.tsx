@@ -1,3 +1,5 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+
 type SourceItem = {
   name: string;
   domain: string;
@@ -47,15 +49,17 @@ const SOURCES: SourceItem[] = [
 ];
 
 const LOGO_SIZE = 36;
+const FALLBACK_ICON = "placeholder.svg";
 
 export function SourcesMarquee() {
+  const { t } = useLanguage();
   const loop = [...SOURCES, ...SOURCES];
 
   return (
     <section className="sources-marquee-section">
       <div className="sources-marquee-header">
-        <span className="sources-marquee-title">Trusted sources we scan daily</span>
-        <span className="sources-marquee-subtitle">Official labs · arXiv · Hugging Face · RSS · HN · GitHub</span>
+        <span className="sources-marquee-title">{t.sources.title}</span>
+        <span className="sources-marquee-subtitle">{t.sources.subtitle}</span>
       </div>
       <div className="sources-marquee">
         <div className="sources-marquee-track">
@@ -71,6 +75,12 @@ export function SourcesMarquee() {
                   height={LOGO_SIZE}
                   loading="lazy"
                   alt={source.name}
+                  onError={(e) => {
+                    const currentSrc = e.currentTarget.getAttribute("src") || "";
+                    if (!currentSrc.endsWith("placeholder.svg")) {
+                      e.currentTarget.src = FALLBACK_ICON;
+                    }
+                  }}
                 />
               </div>
               <span className="sources-marquee-label">{source.name}</span>

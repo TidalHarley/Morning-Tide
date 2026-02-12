@@ -50,9 +50,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r pipeline/requirements.txt
 
+      # 3.5 安装 Playwright 浏览器（用于每日简报长图截图）
+      - name: 🎨 Install Playwright Browsers
+        run: playwright install chromium --with-deps
+
       # 4. 创建输出目录
       - name: 📁 Create Output Directory
-        run: mkdir -p pipeline/output
+        run: mkdir -p pipeline/output public/briefings
 
       # 5. 运行 Pipeline
       - name: 🌊 Run AI Tides Pipeline
@@ -71,6 +75,7 @@ jobs:
           path: |
             pipeline/output/*.md
             pipeline/output/*.json
+            pipeline/output/*.png
           retention-days: 30
 
       # 7. 提交更新的数据文件到仓库
@@ -85,6 +90,7 @@ jobs:
           else
             git add src/data/tide-news.json
             git add pipeline/output/
+            git add public/briefings/ || true
             git commit -m "🌊 Daily AI Tides Update - $(date +'%Y-%m-%d')"
             git push
           fi

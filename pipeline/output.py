@@ -78,10 +78,21 @@ class OutputGenerator:
         # 引用/热度
         reasons.append(f"热度：{item.score} / 评论 {item.comments_count}")
         return reasons
+
+    def _safe_image_url(self, url: str) -> str:
+        value = (url or "").strip()
+        if value.lower().startswith(("http://", "https://")):
+            return value
+        if value.startswith("/"):
+            return value
+        return ""
     
     def generate_markdown(self, report: DailyReport) -> str:
         """生成 Markdown 格式报告"""
         
+        intro_zh = report.introduction_zh or report.introduction
+        longform_zh = report.longform_script_zh or report.longform_script
+
         md = f"""# 🌊 AI Tides Daily Report
 ## {report.date}
 
@@ -91,13 +102,13 @@ class OutputGenerator:
 
 ## 📝 今日综述
 
-{report.introduction}
+{intro_zh}
 
 ---
 
 ## 🎙️ 播客长文稿
 
-{report.longform_script or "（未生成）"}
+{longform_zh or "（未生成）"}
 
 ---
 
@@ -107,7 +118,7 @@ class OutputGenerator:
         
         for i, paper in enumerate(report.papers, 1):
             tags = self._format_tags(paper.tags)
-            summary = paper.summary_zh or paper.abstract[:150] + "..."
+            summary = paper.summary_zh or ((paper.abstract[:150] + "...") if paper.abstract else (paper.title_zh or paper.title))
             authors = ", ".join(paper.authors[:3]) if paper.authors else "Unknown"
             display_title = paper.title_zh or paper.title
             
@@ -215,16 +226,23 @@ class OutputGenerator:
         """生成前端所需的 JSON 数据"""
         
         def item_to_dict(item: ContentItem) -> dict:
-            display_title = item.title_zh or item.title
+            title_zh = item.title_zh or item.title
+            title_en = item.title_en or item.title
+            summary_zh = item.summary_zh or (item.abstract[:200] if item.abstract else item.title)
+            summary_en = item.summary_en or (item.abstract[:200] if item.abstract else item.title)
             return {
                 "id": item.id,
-                "title": display_title,
+                "title": title_zh,
+                "titleZh": title_zh,
+                "titleEn": title_en,
                 "url": item.url,
                 "type": item.content_type.value,
                 "source": item.source_name,
-                "summary": item.summary_zh or (item.abstract[:200] if item.abstract else item.title),
+                "summary": summary_zh,
+                "summaryZh": summary_zh,
+                "summaryEn": summary_en,
                 "fullText": item.full_text or "",
-                "imageUrl": item.image_url or "",
+                "imageUrl": self._safe_image_url(item.image_url),
                 "tags": item.tags,
                 "paperCategory": item.paper_category or "",
                 "signalReasons": self._build_signal_reasons(item, report.stats),
@@ -236,8 +254,12 @@ class OutputGenerator:
         return {
             "date": report.date,
             "generatedAt": report.generated_at.isoformat(),
-            "introduction": report.introduction,
-            "longformScript": report.longform_script or "",
+            "introduction": report.introduction_zh or report.introduction,
+            "introductionZh": report.introduction_zh or report.introduction,
+            "introductionEn": report.introduction_en or report.introduction,
+            "longformScript": report.longform_script_zh or report.longform_script or "",
+            "longformScriptZh": report.longform_script_zh or report.longform_script or "",
+            "longformScriptEn": report.longform_script_en or "",
             "audioUrl": report.audio_url or "",
             "papers": [item_to_dict(p) for p in report.papers],
             "news": [item_to_dict(n) for n in report.news],
@@ -264,7 +286,7 @@ class OutputGenerator:
         logger.info(f"[Output] 新闻来源统计已保存: {sources_path}")
         
         # 生成播客音频（可选）
-        audio_text = report.longform_script or report.introduction
+        audio_text = report.longform_script_zh or report.longform_script or report.introduction_zh or report.introduction
         audio_text = rewrite_audio_text(audio_text)
         audio_url = generate_daily_audio(audio_text, report.date)
         if audio_url:
@@ -331,9 +353,20 @@ class OutputGenerator:
                 json.dump(history, f, ensure_ascii=False, indent=2)
             logger.info(f"[Output] Public history 已更新: {public_history_path}")
         
-        return {
+        output_paths = {
             "markdown_path": md_path,
             "json_path": json_path,
             "frontend_path": frontend_path if os.path.exists(frontend_dir) else None,
             "news_sources_path": sources_path,
         }
+
+        # 生成每日简报长图（中/英双语 PNG）
+        if config.briefing_enabled:
+            try:
+                from .briefing import generate_briefing_images
+                briefing_paths = generate_briefing_images(report)
+                output_paths.update(briefing_paths)
+            except Exception as e:
+                logger.warning(f"[Briefing] 简报图片生成失败（不影响其他输出）: {e}")
+
+        return output_paths

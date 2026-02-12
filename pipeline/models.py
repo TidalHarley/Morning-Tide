@@ -28,6 +28,7 @@ class ContentItem(BaseModel):
     id: str
     title: str
     title_zh: Optional[str] = None  # 新闻可用的中文标题
+    title_en: Optional[str] = None  # 英文标题（L3 输出或原文）
     url: str
     content_type: ContentType
     source_type: SourceType
@@ -56,6 +57,7 @@ class ContentItem(BaseModel):
     
     # L3 AI 生成内容
     summary_zh: Optional[str] = None  # 中文摘要
+    summary_en: Optional[str] = None  # 英文摘要
     tags: List[str] = Field(default_factory=list)
     paper_category: Optional[str] = None  # 论文分类（用于前端分区）
 
@@ -64,8 +66,12 @@ class DailyReport(BaseModel):
     """每日报告模型"""
     date: str
     generated_at: datetime
-    introduction: str  # 每日综述
-    longform_script: Optional[str] = None  # 长文稿（用于播客）
+    introduction: str  # 默认展示综述（兼容字段，当前为中文）
+    introduction_zh: Optional[str] = None
+    introduction_en: Optional[str] = None
+    longform_script: Optional[str] = None  # 默认长文稿（兼容字段，当前为中文）
+    longform_script_zh: Optional[str] = None
+    longform_script_en: Optional[str] = None
     audio_url: Optional[str] = None  # 播客音频 URL
     
     # 入选内容

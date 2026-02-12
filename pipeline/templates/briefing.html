@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Morning Tide — Daily Briefing  (Luxe Editorial Edition)
+   Ornamental · Image-rich · Magazine elegance
+   ============================================================ */
+
+*, *::before, *::after {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+html, body {
+  width: 1080px;
+  background: #F4F0EA;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans SC', -apple-system, sans-serif;
+  color: #2D2D3A;
+}
+
+/* === Canvas === */
+.canvas {
+  position: relative;
+  width: 1080px;
+  background: linear-gradient(180deg, #FBF9F5 0%, #F7F3ED 35%, #F3EEE6 70%, #EFE9E0 100%);
+  overflow: hidden;
+}
+
+/* Warm ambient glow */
+.glow-top {
+  position: absolute;
+  top: -180px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(200, 149, 108, 0.07) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+
+/* Subtle linen texture overlay */
+.texture {
+  position: absolute; inset: 0; z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h1v1H0zM20 20h1v1h-1z' fill='%23000' fill-opacity='.012'/%3E%3C/svg%3E");
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+
+/* ===== Outer ornamental border ===== */
+.ornament-frame {
+  position: absolute;
+  top: 20px; left: 20px; right: 20px; bottom: 20px;
+  border: 1px solid rgba(180, 155, 120, 0.18);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Corner decorations */
+.corner { position: absolute; width: 28px; height: 28px; z-index: 3; }
+.corner svg { width: 100%; height: 100%; }
+.corner-tl { top: 12px; left: 12px; }
+.corner-tr { top: 12px; right: 12px; transform: scaleX(-1); }
+.corner-bl { bottom: 12px; left: 12px; transform: scaleY(-1); }
+.corner-br { bottom: 12px; right: 12px; transform: scale(-1, -1); }
+
+/* === Top accent ribbon === */
+.accent-bar {
+  width: 100%; height: 5px;
+  background: linear-gradient(90deg, #B8956E 0%, #D4AD7C 20%, #E8C89A 50%, #D4AD7C 80%, #B8956E 100%);
+  position: relative; z-index: 2;
+}
+
+/* ===== Content ===== */
+.content {
+  position: relative; z-index: 1;
+  padding: 52px 64px 44px;
+}
+
+/* === Header === */
+.header {
+  text-align: center;
+  margin-bottom: 0;
+  padding: 0 20px;
+}
+
+/* Ornamental flourish above title */
+.header-ornament {
+  text-align: center;
+  font-size: 18px;
+  color: #C4A676;
+  letter-spacing: 0.4em;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+.brand-name {
+  font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+  font-weight: 700;
+  font-size: 56px;
+  letter-spacing: 0.02em;
+  color: #1A1A2E;
+  line-height: 1.15;
+  font-style: italic;
+}
+
+.header-rule-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px auto;
+  max-width: 380px;
+}
+
+.header-rule-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C8A87A, transparent);
+}
+
+.header-rule-diamond {
+  width: 7px; height: 7px;
+  background: #C8A87A;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.brand-sub {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #8A7A68;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.date-line {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12.5px;
+  color: #A09888;
+  margin-top: 6px;
+  letter-spacing: 0.04em;
+}
+
+/* === Ornamental dividers === */
+.divider-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 28px 0;
+}
+
+.divider-ornament-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #D0C4B4 30%, #D0C4B4 70%, transparent 100%);
+}
+
+.divider-ornament-icon {
+  font-size: 12px;
+  color: #C4A676;
+  line-height: 1;
+}
+
+.divider-simple {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #DDD4C6 30%, #DDD4C6 70%, transparent);
+  margin: 24px 0;
+}
+
+/* === Introduction === */
+.introduction {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #5A5268;
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* === Section label === */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.section-label-line {
+  flex: 1; height: 1px;
+  background: linear-gradient(90deg, transparent, #D0C4B4);
+}
+
+.section-label-line:last-child {
+  background: linear-gradient(90deg, #D0C4B4, transparent);
+}
+
+.section-label-text {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8A7A68;
+  white-space: nowrap;
+}
+
+/* === News Cards === */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Card base */
+.news-card {
+  display: flex;
+  background: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 1px 2px rgba(0,0,0,0.03),
+    0 4px 16px rgba(0,0,0,0.04);
+  border: 1px solid rgba(180, 155, 120, 0.1);
+}
+
+/* Hero card */
+.news-card-hero {
+  flex-direction: column;
+  box-shadow:
+    0 2px 8px rgba(0,0,0,0.05),
+    0 12px 32px rgba(0,0,0,0.05);
+  border: 1px solid rgba(180, 155, 120, 0.15);
+}
+
+.news-card-hero .card-image-wrap {
+  width: 100%; height: 320px;
+}
+
+.news-card-hero .card-content {
+  padding: 26px 30px 24px;
+}
+
+.news-card-hero .card-title {
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.news-card-hero .card-summary {
+  font-size: 14.5px;
+  -webkit-line-clamp: 4;
+}
+
+/* Regular card */
+.news-card-regular {
+  flex-direction: row;
+}
+
+.news-card-regular .card-image-wrap {
+  width: 252px; min-width: 252px;
+  min-height: 175px;
+}
+
+.news-card-regular .card-content {
+  flex: 1;
+  padding: 20px 24px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image wrapper */
+.card-image-wrap {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #E8E2DA 0%, #DDD6CC 100%);
+}
+
+.card-image {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Badge on image */
+.card-badge {
+  position: absolute;
+  top: 12px; left: 12px;
+  width: 38px; height: 38px;
+  border-radius: 9px;
+  background: rgba(26, 26, 46, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700; font-size: 14px;
+  color: #FFFFFF;
+}
+
+.news-card-hero .card-badge {
+  width: 46px; height: 46px;
+  border-radius: 11px;
+  font-size: 17px;
+}
+
+/* Source chip */
+.card-source-chip {
+  position: absolute;
+  bottom: 10px; right: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-size: 11px; font-weight: 600;
+  color: #4A4A5A;
+}
+
+/* Content */
+.card-title {
+  font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1A1A2E;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-summary {
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: #5A5A6E;
+  margin-bottom: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+/* Meta row */
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  height: 22px; padding: 0 10px;
+  border-radius: 11px;
+  font-size: 11px; font-weight: 500;
+}
+
+.tag:nth-child(1) { background: #EEF3FF; color: #4A7AE8; }
+.tag:nth-child(2) { background: #F2EFFE; color: #7C5AE8; }
+.tag:nth-child(3) { background: #ECFDF5; color: #2AAA8A; }
+
+.card-time {
+  font-size: 11px;
+  color: #A8A8B8;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+/* === Footer === */
+.footer {
+  text-align: center;
+  padding-top: 6px;
+}
+
+.footer-brand {
+  font-family: 'Playfair Display', 'Noto Serif SC', serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #B09A7A;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.footer-tagline {
+  font-size: 11px;
+  color: #B8B0A4;
+  letter-spacing: 0.04em;
+}
+
+/* === Bottom accent === */
+.accent-bar-bottom {
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg, #B8956E 0%, #D4AD7C 20%, #E8C89A 50%, #D4AD7C 80%, #B8956E 100%);
+  position: relative; z-index: 2;
+}
+
+/* === Side ornamental strips (left & right) === */
+.side-strip {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 18px;
+  z-index: 1;
+  pointer-events: none;
+}
+.side-strip-left {
+  left: 0;
+  background: linear-gradient(90deg, rgba(200,168,122,0.05), transparent);
+}
+.side-strip-right {
+  right: 0;
+  background: linear-gradient(270deg, rgba(200,168,122,0.05), transparent);
+}
+
+/* Repeating diamond pattern on sides */
+.side-strip::after {
+  content: '';
+  position: absolute;
+  top: 80px; bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(200, 168, 122, 0.14) 0px,
+    rgba(200, 168, 122, 0.14) 3px,
+    transparent 3px,
+    transparent 18px
+  );
+}
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="texture"></div>
+  <div class="glow-top"></div>
+  <div class="side-strip side-strip-left"></div>
+  <div class="side-strip side-strip-right"></div>
+
+  <!-- Corner ornaments -->
+  <div class="corner corner-tl"><svg viewBox="0 0 28 28" fill="none"><path d="M2 28V2h26" stroke="rgba(180,155,120,0.3)" stroke-width="1.2"/><path d="M7 14V7h7" stroke="rgba(180,155,120,0.2)" stroke-width="0.8"/></svg></div>
+  <div class="corner corner-tr"><svg viewBox="0 0 28 28" fill="none"><path d="M2 28V2h26" stroke="rgba(180,155,120,0.3)" stroke-width="1.2"/><path d="M7 14V7h7" stroke="rgba(180,155,120,0.2)" stroke-width="0.8"/></svg></div>
+  <div class="corner corner-bl"><svg viewBox="0 0 28 28" fill="none"><path d="M2 28V2h26" stroke="rgba(180,155,120,0.3)" stroke-width="1.2"/><path d="M7 14V7h7" stroke="rgba(180,155,120,0.2)" stroke-width="0.8"/></svg></div>
+  <div class="corner corner-br"><svg viewBox="0 0 28 28" fill="none"><path d="M2 28V2h26" stroke="rgba(180,155,120,0.3)" stroke-width="1.2"/><path d="M7 14V7h7" stroke="rgba(180,155,120,0.2)" stroke-width="0.8"/></svg></div>
+
+  <div class="ornament-frame"></div>
+  <div class="accent-bar"></div>
+
+  <div class="content">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="header-ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+      <div class="brand-name">Morning Tide</div>
+      <div class="header-rule-wrap">
+        <span class="header-rule-line"></span>
+        <span class="header-rule-diamond"></span>
+        <span class="header-rule-line"></span>
+      </div>
+      <div class="brand-sub">{{ subtitle }}</div>
+      <div class="date-line">{{ date_full }}</div>
+    </div>
+
+    <!-- Ornamental divider -->
+    <div class="divider-ornament">
+      <span class="divider-ornament-line"></span>
+      <span class="divider-ornament-icon">◆</span>
+      <span class="divider-ornament-line"></span>
+    </div>
+
+    <!-- Introduction -->
+    {% if introduction %}
+    <div class="introduction">"{{ introduction }}"</div>
+    <div class="divider-ornament">
+      <span class="divider-ornament-line"></span>
+      <span class="divider-ornament-icon">◇</span>
+      <span class="divider-ornament-line"></span>
+    </div>
+    {% endif %}
+
+    <!-- Section Label -->
+    <div class="section-label">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">{{ top_stories_label }}</span>
+      <span class="section-label-line"></span>
+    </div>
+
+    <!-- News Cards -->
+    <div class="news-list">
+      {% for item in news %}
+      <div class="news-card {% if loop.first %}news-card-hero{% else %}news-card-regular{% endif %}">
+        <div class="card-image-wrap">
+          {% if item.image %}
+          <img class="card-image" src="{{ item.image }}" alt="" loading="eager" onerror="this.style.display='none'">
+          {% endif %}
+          <div class="card-badge">{{ "%02d" | format(loop.index) }}</div>
+          <div class="card-source-chip">{{ item.source }}</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">{{ item.title }}</div>
+          <div class="card-summary">{{ item.summary }}</div>
+          <div class="card-meta">
+            {% for tag in item.tags[:3] %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+            {% if item.time %}
+            <span class="card-time">{{ item.time }}</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Bottom ornamental divider -->
+    <div class="divider-ornament">
+      <span class="divider-ornament-line"></span>
+      <span class="divider-ornament-icon">◆</span>
+      <span class="divider-ornament-line"></span>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-brand">Morning Tide</div>
+      <div class="footer-tagline">{{ powered_by }}</div>
+    </div>
+
+  </div>
+  <div class="accent-bar-bottom"></div>
+</div>
+</body>
+</html>

@@ -6,13 +6,18 @@ import { NewsSection } from "@/components/NewsSection";
 import { PapersSection } from "@/components/PapersSection";
 import { TideFooter } from "@/components/TideFooter";
 import { AudioDock } from "@/components/AudioDock";
+import { useLanguage } from "@/contexts/LanguageContext";
 import tideData from "@/data/tide-news.json";
 
 type PipelineItem = {
   id: string;
   title: string;
+  titleZh?: string;
+  titleEn?: string;
   url?: string;
   summary?: string;
+  summaryZh?: string;
+  summaryEn?: string;
   tags?: string[];
   source?: string;
   publishedAt?: string | null;
@@ -25,10 +30,19 @@ type TideData = {
   meta?: { tideState?: "rising" | "calm" };
   papers?: PipelineItem[];
   news?: PipelineItem[];
+  introduction?: string;
+  introductionZh?: string;
+  introductionEn?: string;
+  longformScript?: string;
+  longformScriptZh?: string;
+  longformScriptEn?: string;
   audioUrl?: string;
 };
 
 const Index = () => {
+  const { language, t } = useLanguage();
+  const baseUrl = import.meta.env.BASE_URL || "/";
+  const withBase = (path: string) => `${baseUrl}${path.replace(/^\/+/, "")}`;
   const [audioVisible, setAudioVisible] = useState(false);
   const [audioPlaying, setAudioPlaying] = useState(false);
   const [audioProgress, setAudioProgress] = useState(0);
@@ -42,15 +56,34 @@ const Index = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const data = (reportData ?? (tideData as TideData)) as TideData;
-  const pipelinePapers = useMemo(() => data.papers || [], [data.papers]);
-  const pipelineNews = useMemo(() => data.news || [], [data.news]);
+  const mapLocalizedItem = (item: PipelineItem): PipelineItem => {
+    const title =
+      language === "zh"
+        ? item.titleZh || item.title || item.titleEn || ""
+        : item.titleEn || item.title || item.titleZh || "";
+    const summary =
+      language === "zh"
+        ? item.summaryZh || item.summary || item.summaryEn || ""
+        : item.summaryEn || item.summary || item.summaryZh || "";
+    return { ...item, title, summary };
+  };
+
+  const pipelinePapers = useMemo(
+    () => (data.papers || []).map(mapLocalizedItem),
+    [data.papers, language]
+  );
+  const pipelineNews = useMemo(
+    () => (data.news || []).map(mapLocalizedItem),
+    [data.news, language]
+  );
+
   const audioUrl = (data as { audioUrl?: string }).audioUrl || "";
 
   // Load history
   useEffect(() => {
     const loadHistory = async () => {
       try {
-        const response = await fetch("/history.json");
+        const response = await fetch(withBase("history.json"));
         if (!response.ok) return;
         const history = (await response.json()) as { date: string }[];
         const dates = history.map((item) => item.date);
@@ -70,7 +103,7 @@ const Index = () => {
     if (!selectedDate) return;
     const loadReport = async () => {
       try {
-        const response = await fetch(`/reports/report_${selectedDate}.json`);
+        const response = await fetch(withBase(`reports/report_${selectedDate}.json`));
         if (!response.ok) return;
         const report = (await response.json()) as TideData;
         setReportData(report);
@@ -215,7 +248,7 @@ const Index = () => {
         <div className="bg-background border-b border-border sticky top-16 md:top-20 z-40">
           <div className="container mx-auto px-4 md:px-6 py-3">
             <div className="flex items-center justify-end gap-3">
-              <span className="text-sm text-muted-foreground">View archive:</span>
+              <span className="text-sm text-muted-foreground">{t.index.viewArchive}</span>
               <select
                 value={selectedDate}
                 onChange={(e) => setSelectedDate(e.target.value)}
@@ -257,6 +290,24 @@ const Index = () => {
         progress={audioProgress}
         duration={formatDuration(audioDuration)}
         isEnabled={Boolean(audioUrl)}
+        title={
+          language === "zh"
+            ? "每日简报"
+            : "Daily Briefing"
+        }
+        chapters={
+          language === "zh"
+            ? [
+                { title: "新闻", timestamp: "00:00" },
+                { title: "发布", timestamp: "02:45" },
+                { title: "论文", timestamp: "05:20" },
+              ]
+            : [
+                { title: "News", timestamp: "00:00" },
+                { title: "Releases", timestamp: "02:45" },
+                { title: "Papers", timestamp: "05:20" },
+              ]
+        }
       />
     </div>
   );

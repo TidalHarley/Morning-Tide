@@ -1,6 +1,8 @@
 import { Waves } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function TideFooter() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -18,32 +20,32 @@ export function TideFooter() {
               </span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Your daily source for AI news, research, and insights. Updated every morning at 7:00 AM.
+              {t.footer.desc}
             </p>
           </div>
 
           {/* Navigate Column */}
           <div>
-            <h4 className="footer-heading">Navigate</h4>
+            <h4 className="footer-heading">{t.footer.navigate}</h4>
             <ul className="space-y-3">
               <li>
                 <a href="/" className="footer-link text-sm">
-                  Home
+                  {t.footer.home}
                 </a>
               </li>
               <li>
                 <a href="#news" className="footer-link text-sm">
-                  Today&apos;s News
+                  {t.footer.todaysNews}
                 </a>
               </li>
               <li>
                 <a href="#papers" className="footer-link text-sm">
-                  Research Papers
+                  {t.footer.researchPapers}
                 </a>
               </li>
               <li>
                 <a href="#briefing" className="footer-link text-sm">
-                  Audio Briefings
+                  {t.footer.audioBriefings}
                 </a>
               </li>
             </ul>
@@ -51,9 +53,9 @@ export function TideFooter() {
 
           {/* Stay Updated Column */}
           <div>
-            <h4 className="footer-heading">Stay Updated</h4>
+            <h4 className="footer-heading">{t.footer.stayUpdated}</h4>
             <p className="text-slate-400 text-sm mb-4">
-              Get our daily digest delivered to your inbox.
+              {t.footer.stayUpdatedDesc}
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-4 mt-6">
@@ -98,7 +100,7 @@ export function TideFooter() {
         <div className="pt-8 border-t border-slate-800">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-slate-500 text-sm">
-              © {currentYear} Morning Tide. All rights reserved.
+              © {currentYear} Morning Tide. {t.footer.rights}
             </p>
             <div className="flex items-center gap-4">
               <a

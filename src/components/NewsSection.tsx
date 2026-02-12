@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { ChevronLeft, ChevronRight, ExternalLink, Play, ChevronDown, ChevronUp } from "lucide-react";
 import { InlineEmphasis } from "./InlineEmphasis";
 import { SummaryTooltip } from "./SummaryTooltip";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface NewsItem {
   id: string;
@@ -31,23 +32,42 @@ const CATEGORY_COLORS: Record<string, string> = {
   default: "category-tag-gray",
 };
 
-const FALLBACK_IMAGE = "/placeholder.svg";
+const BASE_URL = import.meta.env.BASE_URL || "/";
+const FALLBACK_IMAGE = `${BASE_URL}placeholder.svg`;
 const PLACEHOLDER_IMAGES = [FALLBACK_IMAGE];
 
-function getTimeAgo(publishedAt?: string | null): string {
-  if (!publishedAt) return "Today";
+function resolveImageSrc(rawUrl?: string): string {
+  const value = (rawUrl || "").trim();
+  if (!value) return FALLBACK_IMAGE;
+  if (value.startsWith("data:") || value.startsWith("javascript:")) return FALLBACK_IMAGE;
+  if (value.startsWith("http://") || value.startsWith("https://")) return value;
+  if (value.startsWith("/")) return `${BASE_URL}${value.replace(/^\/+/, "")}`;
+  return FALLBACK_IMAGE;
+}
+
+function getTimeAgo(
+  publishedAt: string | null | undefined,
+  labels: {
+    today: string;
+    justNow: string;
+    yesterday: string;
+    hoursAgo: string;
+    daysAgo: string;
+  }
+): string {
+  if (!publishedAt) return labels.today;
   const date = new Date(publishedAt);
-  if (isNaN(date.getTime())) return "Today";
+  if (isNaN(date.getTime())) return labels.today;
   
   const now = new Date();
   const diffMs = now.getTime() - date.getTime();
   const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
   
-  if (diffHours < 1) return "Just now";
-  if (diffHours < 24) return `${diffHours}h ago`;
+  if (diffHours < 1) return labels.justNow;
+  if (diffHours < 24) return `${diffHours}${labels.hoursAgo}`;
   const diffDays = Math.floor(diffHours / 24);
-  if (diffDays === 1) return "Yesterday";
-  return `${diffDays}d ago`;
+  if (diffDays === 1) return labels.yesterday;
+  return `${diffDays}${labels.daysAgo}`;
 }
 
 function getCategoryColor(category: string): string {
@@ -55,6 +75,7 @@ function getCategoryColor(category: string): string {
 }
 
 export function NewsSection({ news, onPlayAudio, audioAvailable = true }: NewsSectionProps) {
+  const { t } = useLanguage();
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [briefingExpanded, setBriefingExpanded] = useState(false);
@@ -128,8 +149,9 @@ export function NewsSection({ news, onPlayAudio, audioAvailable = true }: NewsSe
 
   const currentNews = displayNews[activeIndex];
   const category = currentNews?.tags?.[0] || currentNews?.source || "AI Research";
-  const imageUrl =
-    currentNews?.imageUrl || PLACEHOLDER_IMAGES[activeIndex % PLACEHOLDER_IMAGES.length];
+  const imageUrl = resolveImageSrc(
+    currentNews?.imageUrl || PLACEHOLDER_IMAGES[activeIndex % PLACEHOLDER_IMAGES.length]
+  );
 
   return (
     <section id="news" className="py-16 bg-background" ref={sectionRef}>
@@ -140,14 +162,14 @@ export function NewsSection({ news, onPlayAudio, audioAvailable = true }: NewsSe
             {/* Section Header */}
             <div className="flex items-center justify-between mb-8 animate-fade-in-up">
               <h2 className="text-2xl md:text-3xl font-display font-semibold">
-                Headline News
+                {t.newsSection.headlineNews}
               </h2>
               <div className="flex items-center gap-2">
                 <button
                   onClick={prevSlide}
                   disabled={displayNews.length <= 1}
                   className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-secondary transition-colors"
-                  aria-label="Previous slide"
+                  aria-label={t.newsSection.previousSlide}
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
@@ -155,7 +177,7 @@ export function NewsSection({ news, onPlayAudio, audioAvailable = true }: NewsSe
                   onClick={nextSlide}
                   disabled={displayNews.length <= 1}
                   className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-secondary transition-colors"
-                  aria-label="Next slide"
+                  aria-label={t.newsSection.nextSlide}
                 >
                   <ChevronRight className="w-5 h-5" />
                 </button>
@@ -168,11 +190,13 @@ export function NewsSection({ news, onPlayAudio, audioAvailable = true }: NewsSe
               <div className="news-card-image relative">
                 <img
                   src={imageUrl}
-                  alt={currentNews?.title || "News image"}
+                  alt={currentNews?.title || t.newsSection.newsImage}
                   className="w-full h-full object-cover object-center bg-muted"
                   onError={(e) => {
-                    e.currentTarget.onerror = null;
-                    e.currentTarget.src = FALLBACK_IMAGE;
+                    const currentSrc = e.currentTarget.getAttribute("src") || "";
+                    if (!currentSrc.endsWith("placeholder.svg")) {
+                      e.currentTarget.src = FALLBACK_IMAGE;
+                    }
                   }}
                 />
                 <div className="absolute top-4 left-4">
@@ -185,9 +209,17 @@ export function NewsSection({ news, onPlayAudio, audioAvailable = true }: NewsSe
               {/* Content */}
               <div className="p-6">
                 <div className="flex items-center gap-3 text-sm text-muted-foreground mb-3">
-                  <span className="font-medium">{currentNews?.source || "Editorial"}</span>
+                  <span className="font-medium">{currentNews?.source || t.newsSection.editorial}</span>
                   <span className="text-border">•</span>
-                  <span>{getTimeAgo(currentNews?.publishedAt)}</span>
+                  <span>
+                    {getTimeAgo(currentNews?.publishedAt, {
+                      today: t.newsSection.today,
+                      justNow: t.newsSection.justNow,
+                      yesterday: t.newsSection.yesterday,
+                      hoursAgo: t.newsSection.hoursAgo,
+                      daysAgo: t.newsSection.daysAgo,
+                    })}
+                  </span>
                 </div>
 
                 <h3 className="text-xl md:text-2xl font-semibold leading-tight mb-4">
@@ -208,7 +240,7 @@ export function NewsSection({ news, onPlayAudio, audioAvailable = true }: NewsSe
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
                 >
-                  Read full article
+                  {t.newsSection.readFullArticle}
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
@@ -232,7 +264,7 @@ export function NewsSection({ news, onPlayAudio, audioAvailable = true }: NewsSe
             <div className="briefing-card animate-slide-in-right delay-200 sticky top-24">
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-semibold">Daily Briefing</h3>
+                <h3 className="text-lg font-semibold">{t.newsSection.dailyBriefing}</h3>
                 <span className="text-sm text-muted-foreground">15 min</span>
               </div>
 
@@ -245,13 +277,13 @@ export function NewsSection({ news, onPlayAudio, audioAvailable = true }: NewsSe
                 <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
                   <Play className="w-5 h-5 fill-current ml-0.5" />
                 </div>
-                <span>{audioAvailable ? "Play Audio Summary" : "Coming Soon"}</span>
+                <span>{audioAvailable ? t.newsSection.playAudioSummary : t.newsSection.comingSoon}</span>
               </button>
 
               {/* Top Story */}
               {news[0] && (
                 <div className="mb-5">
-                  <h4 className="text-sm font-semibold mb-2">Top Story</h4>
+                  <h4 className="text-sm font-semibold mb-2">{t.newsSection.topStory}</h4>
                   <SummaryTooltip text={news[0].summary || news[0].title} tooltipClassName="summary-tooltip-compact">
                     <p className="text-sm text-muted-foreground leading-relaxed line-clamp-4">
                       {news[0].summary || news[0].title}
@@ -263,7 +295,7 @@ export function NewsSection({ news, onPlayAudio, audioAvailable = true }: NewsSe
               {/* Industry Movement */}
               {news[1] && (
                 <div className="mb-5">
-                  <h4 className="text-sm font-semibold mb-2">Industry Movement</h4>
+                  <h4 className="text-sm font-semibold mb-2">{t.newsSection.industryMovement}</h4>
                   <SummaryTooltip text={news[1].summary || news[1].title} tooltipClassName="summary-tooltip-compact">
                     <p className="text-sm text-muted-foreground leading-relaxed line-clamp-4">
                       {news[1].summary || news[1].title}
@@ -277,7 +309,11 @@ export function NewsSection({ news, onPlayAudio, audioAvailable = true }: NewsSe
                 onClick={() => setBriefingExpanded(!briefingExpanded)}
                 className="flex items-center gap-2 text-sm text-primary font-medium hover:gap-3 transition-all w-full justify-center"
               >
-                <span>{briefingExpanded ? "Collapse" : "Expand Full Transcription"}</span>
+                <span>
+                  {briefingExpanded
+                    ? t.newsSection.collapse
+                    : t.newsSection.expandFullTranscription}
+                </span>
                 {briefingExpanded ? (
                   <ChevronUp className="w-4 h-4" />
                 ) : (
@@ -308,7 +344,7 @@ export function NewsSection({ news, onPlayAudio, audioAvailable = true }: NewsSe
               {/* Footer */}
               <div className="mt-6 pt-4 border-t border-border">
                 <p className="text-xs text-muted-foreground text-center">
-                  Updated daily at 7:00 AM EST
+                  {t.newsSection.updatedDaily}
                 </p>
               </div>
             </div>
@@ -320,7 +356,9 @@ export function NewsSection({ news, onPlayAudio, audioAvailable = true }: NewsSe
           {/* Everything beyond the top-2 headlines should be shown here */}
           {news.slice(2).map((item, index) => {
             const itemCategory = item.tags?.[0] || item.source || "News";
-            const itemImage = item.imageUrl || PLACEHOLDER_IMAGES[(index + 2) % PLACEHOLDER_IMAGES.length];
+            const itemImage = resolveImageSrc(
+              item.imageUrl || PLACEHOLDER_IMAGES[(index + 2) % PLACEHOLDER_IMAGES.length]
+            );
             
             return (
               <a
@@ -337,8 +375,10 @@ export function NewsSection({ news, onPlayAudio, audioAvailable = true }: NewsSe
                     alt={item.title}
                     className="w-full h-full object-cover object-center bg-muted"
                     onError={(e) => {
-                      e.currentTarget.onerror = null;
-                      e.currentTarget.src = FALLBACK_IMAGE;
+                      const currentSrc = e.currentTarget.getAttribute("src") || "";
+                      if (!currentSrc.endsWith("placeholder.svg")) {
+                        e.currentTarget.src = FALLBACK_IMAGE;
+                      }
                     }}
                   />
                   <div className="absolute top-3 left-3">

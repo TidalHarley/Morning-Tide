@@ -11,7 +11,7 @@ from urllib3.util.retry import Retry
 import feedparser
 from datetime import datetime, timedelta, timezone
 from typing import List, Optional
-from urllib.parse import urlparse, urljoin, parse_qsl, urlencode, urlunparse
+from urllib.parse import urlparse, urljoin, parse_qsl, urlencode, urlunparse, quote_plus
 import time
 import re
 import html as _html
@@ -655,11 +655,22 @@ def _search_image_candidates(query: str) -> List[str]:
         )
         response.raise_for_status()
         html = response.text[:300000]
-        # Bing image results embed JSON in the "m" attribute; extract murl.
-        for match in re.finditer(r'murl\\":\\"(.*?)\\"', html):
-            url = _html.unescape(match.group(1)).strip()
-            if url:
-                candidates.append(url)
+        # Bing image results embed JSON in the "m" attribute; support multiple escaping variants.
+        bing_patterns = [
+            r'murl\\":\\"(.*?)\\"',
+            r'"murl":"(.*?)"',
+            r"'murl':'(.*?)'",
+        ]
+        for pattern in bing_patterns:
+            for match in re.finditer(pattern, html, re.IGNORECASE):
+                raw = (match.group(1) or "").strip()
+                if not raw:
+                    continue
+                # Decode common escaped sequences in embedded JSON payload.
+                raw = raw.replace("\\/", "/").replace("\\u002f", "/")
+                raw = _html.unescape(raw).strip()
+                if raw:
+                    candidates.append(raw)
         # Fallback: grab img tags
         if not candidates:
             for match in re.finditer(r'<img[^>]+src=["\']([^"\']+)["\']', html, re.IGNORECASE):
@@ -799,15 +810,72 @@ def _extract_search_keywords(title: str) -> str:
 
 def _search_image_for_news(title: str, source_name: str = "") -> Optional[str]:
     """图片搜索，只返回验证通过的图片"""
-    query = f"{title} {source_name}".strip()
-    candidates = _search_image_candidates(query)
-    for c in candidates[:12]:
-        if _looks_like_bad_image(c):
+    queries: List[str] = []
+    primary = f"{title} {source_name}".strip()
+    if primary:
+        queries.append(primary)
+    if title:
+        queries.append(title.strip())
+    keywords = _extract_search_keywords(title or "")
+    if keywords:
+        queries.append(f"{keywords} ai news".strip())
+
+    # De-dup queries while preserving order
+    dedup_queries: List[str] = []
+    seen_q = set()
+    for q in queries:
+        if not q or q in seen_q:
             continue
-        # 必须验证通过才返回
-        if _validate_remote_image(c):
-            return c
+        seen_q.add(q)
+        dedup_queries.append(q)
+
+    for q in dedup_queries[:3]:
+        candidates = _search_image_candidates(q)
+        # Strict pass first
+        for c in candidates[:16]:
+            if _looks_like_bad_image(c):
+                continue
+            if _validate_remote_image(c):
+                return c
+
+        # Lenient pass: some CDNs do not provide full headers/size but still render in browser.
+        for c in candidates[:20]:
+            if _looks_like_bad_image(c):
+                continue
+            try:
+                session = _get_image_session()
+                r = session.head(
+                    c,
+                    headers={"User-Agent": config.reddit_user_agent},
+                    timeout=2.5,
+                    allow_redirects=True,
+                    verify=config.requests_verify_ssl,
+                )
+                if r.status_code < 400:
+                    ctype = (r.headers.get("content-type") or "").lower()
+                    if "image" in ctype:
+                        return c
+            except Exception:
+                continue
     return None
+
+
+def _build_semantic_fallback_candidates(title: str, source_name: str = "") -> List[str]:
+    """
+    构造语义化兜底图片 URL（基于关键词）：
+    - Unsplash Source：按关键词返回摄影图
+    - Pollinations：按提示词生成 AI 相关图
+    """
+    keywords = _extract_search_keywords(title or "")
+    parts = [p.strip() for p in [keywords, source_name, "AI technology"] if p and p.strip()]
+    prompt = " ".join(parts[:4]).strip() or "AI technology news"
+    encoded = quote_plus(prompt)
+    seed = quote_plus((keywords or title or "ai-news")[:64].strip() or "ai-news")
+
+    return [
+        f"https://source.unsplash.com/1600x900/?{encoded}",
+        f"https://image.pollinations.ai/prompt/{encoded}?width=1600&height=900&seed={seed}&nologo=true",
+    ]
 
 
 def _fetch_og_image(url: str) -> Optional[str]:
@@ -1061,8 +1129,15 @@ def _resolve_image_url(
                     _mark_image_used(fallback)
                     return fallback
 
-    # 绝不返回占位符 - 返回空字符串，让前端用 CSS 处理
-    return ""
+    # 第四轮：语义化兜底图（关键词生成/检索），尽量避免无语义占位图。
+    if title:
+        for semantic_url in _build_semantic_fallback_candidates(title, source_name):
+            if semantic_url and not _is_duplicate_image_for_origin(semantic_url, url):
+                _mark_image_used(semantic_url)
+                return semantic_url
+
+    # 最终兜底：返回静态占位图，确保前端不会出现空图位。
+    return (config.image_placeholder_url or "/placeholder.svg").strip()
 
 def _is_whitelist_url(url: str) -> bool:
     if not url:

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { ChevronRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface TideHeroProps {
   onViewNews?: () => void;
@@ -8,6 +9,7 @@ interface TideHeroProps {
 
 export function TideHero({ onViewNews, onViewPapers }: TideHeroProps) {
   const heroRef = useRef<HTMLElement>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const hero = heroRef.current;
@@ -62,12 +64,12 @@ export function TideHero({ onViewNews, onViewPapers }: TideHeroProps) {
 
         {/* Subtitle */}
         <p className="animate-fade-in-up delay-200 max-w-2xl text-lg sm:text-xl md:text-2xl text-white/90 font-light mb-4">
-          The AI morning brief—top news, key papers, and audio in minutes.
+          {t.hero.subtitle}
         </p>
 
         {/* Tagline */}
         <p className="animate-fade-in-up delay-300 text-base sm:text-lg text-white/70 mb-10">
-          Ride the tide. Start ahead.
+          {t.hero.tagline}
         </p>
 
         {/* CTA Buttons */}
@@ -76,14 +78,14 @@ export function TideHero({ onViewNews, onViewPapers }: TideHeroProps) {
             onClick={onViewNews}
             className="btn-outline flex items-center gap-2 group"
           >
-            <span>View Today&apos;s News</span>
+            <span>{t.hero.viewNews}</span>
             <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </button>
           <button
             onClick={onViewPapers}
             className="btn-primary"
           >
-            Latest Research
+            {t.hero.latestResearch}
           </button>
         </div>
       </div>
@@ -91,7 +93,7 @@ export function TideHero({ onViewNews, onViewPapers }: TideHeroProps) {
       {/* Scroll Indicator */}
       <div className="animate-fade-in-up delay-600 absolute bottom-8 left-1/2 -translate-x-1/2">
         <div className="flex flex-col items-center gap-2 text-white/50">
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
+          <span className="text-xs uppercase tracking-widest">{t.hero.scroll}</span>
           <div className="w-6 h-10 rounded-full border-2 border-white/30 flex justify-center pt-2">
             <div className="w-1 h-2 bg-white/50 rounded-full animate-bounce" />
           </div>

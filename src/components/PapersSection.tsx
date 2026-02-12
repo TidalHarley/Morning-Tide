@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ExternalLink, Calendar, User } from "lucide-react";
 import { SummaryTooltip } from "./SummaryTooltip";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Paper {
   id?: string;
@@ -52,11 +53,15 @@ function getPaperCategory(paper: Paper): string {
   return "General AI";
 }
 
-function formatDate(dateStr?: string | null): string {
+function formatDate(dateStr: string | null | undefined, language: "zh" | "en"): string {
   if (!dateStr) return "";
   const date = new Date(dateStr);
   if (isNaN(date.getTime())) return "";
-  return date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+  return date.toLocaleDateString(language === "zh" ? "zh-CN" : "en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
 }
 
 function getUrl(paper: Paper): string {
@@ -66,6 +71,7 @@ function getUrl(paper: Paper): string {
 }
 
 export function PapersSection({ papers }: PapersSectionProps) {
+  const { language, t } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const grouped = useMemo(() => {
     const groups: Record<string, Paper[]> = {};
@@ -134,10 +140,10 @@ export function PapersSection({ papers }: PapersSectionProps) {
         {/* Section Header */}
         <div className="text-center mb-12 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-display font-semibold mb-4">
-            Featured AI Research
+            {t.papersSection.featuredResearch}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Curated selection of the latest breakthroughs in artificial intelligence and machine learning
+            {t.papersSection.featuredDesc}
           </p>
         </div>
 
@@ -169,8 +175,8 @@ export function PapersSection({ papers }: PapersSectionProps) {
             const category = getPaperCategory(paper);
             const authors = Array.isArray(paper.authors) 
               ? paper.authors.join(", ") 
-              : paper.authors || "Research Team";
-            const date = formatDate(paper.publishedAt);
+              : paper.authors || t.papersSection.researchTeam;
+            const date = formatDate(paper.publishedAt, language);
             
             return (
               <div
@@ -217,7 +223,7 @@ export function PapersSection({ papers }: PapersSectionProps) {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm text-primary font-medium hover:gap-3 transition-all ml-auto"
                   >
-                    Read Paper
+                    {t.papersSection.readPaper}
                     <ExternalLink className="w-4 h-4" />
                   </a>
                 </div>
@@ -233,7 +239,7 @@ export function PapersSection({ papers }: PapersSectionProps) {
               href="#all-papers"
               className="btn-outline inline-flex items-center gap-2"
             >
-              View All Research
+              {t.papersSection.viewAllResearch}
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>

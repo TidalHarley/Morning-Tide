@@ -166,7 +166,8 @@ class Refiner:
 {{
   "selected_paper_ids": ["id1", "id2", ...],
   "selected_news_ids": ["id1", "id2", ...],
-  "daily_introduction": "中文, 总分结构, 文字自然不用AI腔,尽量像新闻记者一样: 第1段宏观概览(2~3句讲清楚发展的意义和基本评价); 第2段为3~5条分点(短句式); 第3段为读者理解建议(2~3句, 说明如何把握今天的变化/风险/机会)。整体控制在180~260字, 避免空泛套话和模板化用语。"
+  "daily_introduction_zh": "中文综述，180~260字，新闻记者语气，不空泛",
+  "daily_introduction_en": "English introduction, 120-180 words, concise and natural"
 }}"""
         
         return prompt
@@ -231,7 +232,7 @@ class Refiner:
 正文(节选): {full_text if full_text else "无"}
 ---"""
         
-        prompt = f"""你是一位顶级 AI 科技编辑，请为以下 {len(items)} 条内容生成高质量中文摘要与新闻标题。
+        prompt = f"""你是一位顶级 AI 科技编辑，请为以下 {len(items)} 条内容生成高质量中英双语摘要与新闻标题。
 
 {items_text}
 
@@ -259,25 +260,69 @@ class Refiner:
 ## 输出格式
 - 返回严格的 JSON 格式：
 [
-  {{"id": "内容ID", "summary": "中文摘要", "title_zh": "新闻标题(仅新闻)"}},
+  {{
+    "id": "内容ID",
+    "summary_zh": "中文摘要",
+    "summary_en": "English summary",
+    "title_zh": "新闻标题(仅新闻)",
+    "title_en": "English headline (news only)"
+  }},
   ...
 ]"""
         
         return prompt
 
-    def _build_longform_prompt(self, news_items: List[ContentItem], introduction: str) -> str:
+    def _build_longform_prompt(
+        self, news_items: List[ContentItem], introduction: str, language: str = "zh"
+    ) -> str:
         """构建播客长文稿 prompt（基于当日全部新闻）"""
         items_text = ""
         for i, item in enumerate(news_items, 1):
-            summary = item.summary_zh or item.abstract or item.title
-            items_text += f"""
-[{i}] 标题: {item.title_zh or item.title}
+            if language == "en":
+                summary = item.summary_en or item.abstract or item.title
+                title = item.title_en or item.title
+                items_text += f"""
+[{i}] Title: {title}
+Source: {item.source_name}
+Summary: {summary}
+URL: {item.url}
+---"""
+            else:
+                summary = item.summary_zh or item.abstract or item.title
+                title = item.title_zh or item.title
+                items_text += f"""
+[{i}] 标题: {title}
 来源: {item.source_name}
 摘要: {summary}
 链接: {item.url}
 ---"""
 
-        prompt = f"""你是一位资深 AI 科技播客的主编，请基于以下新闻素材生成一篇“可直接用于音频播客”的中文长文稿。
+        if language == "en":
+            return f"""You are the editor-in-chief of an AI tech podcast. Based on the news below, write an English long-form script that can be directly read as an audio briefing.
+
+## Goals
+1. Help listeners understand today's key AI developments in 5-8 minutes.
+2. Keep a natural editorial tone, concise and professional.
+3. Organize ideas into coherent paragraphs, not bullet dumps.
+
+## Structure
+1) Opening (1 paragraph): today's macro trend.
+2) Main body (3-5 paragraphs): each paragraph covers a major theme with representative examples.
+3) Insights & advice (1 paragraph): what to watch next, risks, opportunities.
+4) Closing (1 paragraph): brief wrap-up.
+
+## Existing introduction (reference only)
+{introduction or "(none)"}
+
+## News material
+{items_text}
+
+## Constraints
+- 900-1300 words in English.
+- Avoid generic filler and repetitive AI phrases.
+- Output only the final script body, no extra notes."""
+
+        return f"""你是一位资深 AI 科技播客的主编，请基于以下新闻素材生成一篇“可直接用于音频播客”的中文长文稿。
 
 ## 写作目标
 1. 让听众在 5~8 分钟内清楚理解今天 AI 领域发生了什么。
@@ -303,8 +348,6 @@ class Refiner:
 - 适当加入过渡句，让段落衔接自然。
 
 请直接输出文稿正文，不要加标题或额外说明。"""
-
-        return prompt
 
     def _is_valid_news_summary(self, summary: str) -> bool:
         if not summary:
@@ -368,7 +411,7 @@ class Refiner:
         self,
         papers: List[ContentItem],
         news: List[ContentItem]
-    ) -> Tuple[List[ContentItem], List[ContentItem], str]:
+    ) -> Tuple[List[ContentItem], List[ContentItem], str, str]:
         """备用选择方案（无 API 时使用）"""
         
         # 直接按 L2 分数取 Top N（满足前端展示需求）
@@ -380,12 +423,16 @@ class Refiner:
         paper_titles = [p.title[:30] for p in selected_papers[:3]]
         news_titles = [n.title[:30] for n in selected_news[:3]]
         
-        introduction = (
+        introduction_zh = (
             f"今日 AI 动态：论文方面关注 {', '.join(paper_titles)} 等研究；"
             f"行业新闻涵盖 {', '.join(news_titles)} 等内容。"
         )
-        
-        return selected_papers, selected_news, introduction
+        introduction_en = (
+            f"Today's AI highlights: key papers include {', '.join(paper_titles)}; "
+            f"industry news covers {', '.join(news_titles)}."
+        )
+
+        return selected_papers, selected_news, introduction_zh, introduction_en
     
     def _fallback_summary(self, item: ContentItem) -> str:
         """备用摘要生成"""
@@ -403,6 +450,19 @@ class Refiner:
             f"主要内容：{summary}；"
             f"关键点：{item.title[:60]}；"
             f"为什么重要：这是近期 AI 领域值得关注的进展。"
+        )
+
+    def _fallback_summary_en(self, item: ContentItem) -> str:
+        if item.content_type == ContentType.NEWS:
+            about = (item.abstract or item.title or "")[:120]
+            return (
+                f"{about}. This matters because it may reshape AI capability, cost, "
+                "or deployment choices, and can affect how end users use AI tools."
+            )
+        summary = (item.abstract[:150] + "...") if item.abstract else item.title
+        return (
+            f"Main point: {summary}. Key takeaway: {item.title[:80]}. "
+            "Why it matters: this is a notable AI development to track."
         )
     
     def run(
@@ -423,8 +483,10 @@ class Refiner:
 
         selected_papers = []
         selected_news = []
-        introduction = ""
-        longform_script = ""
+        introduction_zh = ""
+        introduction_en = ""
+        longform_script_zh = ""
+        longform_script_en = ""
         
         if self.client:
             # Step 0: 论文分类已在 L2 完成（按 arXiv 类别），此处仅兜底
@@ -438,12 +500,20 @@ class Refiner:
                 selection_data = self._parse_json(selection_response)
             except Exception:
                 logger.error("[L3] 选择阶段失败，使用备用选择")
-                selected_papers, selected_news, introduction = self._fallback_selection(
+                selected_papers, selected_news, introduction_zh, introduction_en = self._fallback_selection(
                     papers_l3, news_l3
                 )
             else:
                 selected_news_ids = set(selection_data.get("selected_news_ids", []))
-                introduction = selection_data.get("daily_introduction", "")
+                introduction_zh = (
+                    selection_data.get("daily_introduction_zh")
+                    or selection_data.get("daily_introduction")
+                    or ""
+                )
+                introduction_en = (
+                    selection_data.get("daily_introduction_en")
+                    or ""
+                )
                 
                 # 论文：L3 按类别优中选优（每类 6 篇）
                 selected_papers = self._select_papers_by_category(papers_l3, set())
@@ -457,8 +527,10 @@ class Refiner:
             # Step 2: 生成中文摘要（分批）
             all_selected = selected_papers + selected_news
             if all_selected:
-                summary_map = {}
-                title_map = {}
+                summary_map_zh = {}
+                summary_map_en = {}
+                title_map_zh = {}
+                title_map_en = {}
                 batches = self._chunk_items(all_selected, config.l3_summary_batch_size)
                 for batch in batches:
                     try:
@@ -469,16 +541,30 @@ class Refiner:
                         )
                         summaries_data = self._parse_json(summary_response)
                         if isinstance(summaries_data, list):
-                            summary_map.update(
+                            summary_map_zh.update(
                                 {
-                                    s.get("id"): s.get("summary")
+                                    s.get("id"): s.get("summary_zh") or s.get("summary")
                                     for s in summaries_data
                                     if isinstance(s, dict)
                                 }
                             )
-                            title_map.update(
+                            summary_map_en.update(
+                                {
+                                    s.get("id"): s.get("summary_en")
+                                    for s in summaries_data
+                                    if isinstance(s, dict)
+                                }
+                            )
+                            title_map_zh.update(
                                 {
                                     s.get("id"): s.get("title_zh")
+                                    for s in summaries_data
+                                    if isinstance(s, dict)
+                                }
+                            )
+                            title_map_en.update(
+                                {
+                                    s.get("id"): s.get("title_en")
                                     for s in summaries_data
                                     if isinstance(s, dict)
                                 }
@@ -486,56 +572,78 @@ class Refiner:
                     except Exception:
                         logger.error("[L3] 摘要批次失败，已回退该批次")
                         for item in batch:
-                            if item.content_type == ContentType.NEWS:
-                                summary_map.setdefault(item.id, "")
-                            else:
-                                summary_map.setdefault(item.id, self._fallback_summary(item))
+                            summary_map_zh.setdefault(item.id, self._fallback_summary(item))
+                            summary_map_en.setdefault(item.id, self._fallback_summary_en(item))
                 
                 for item in all_selected:
-                    summary = summary_map.get(item.id)
-                    if not summary:
-                        if item.content_type == ContentType.NEWS:
-                            summary = ""
-                        else:
-                            summary = self._fallback_summary(item)
-                    item.summary_zh = summary
-                    title_zh = title_map.get(item.id)
+                    summary_zh = summary_map_zh.get(item.id) or self._fallback_summary(item)
+                    summary_en = summary_map_en.get(item.id) or self._fallback_summary_en(item)
+                    item.summary_zh = summary_zh
+                    item.summary_en = summary_en
+                    title_zh = title_map_zh.get(item.id)
+                    title_en = title_map_en.get(item.id)
                     if (
                         item.content_type == ContentType.NEWS
                         and isinstance(title_zh, str)
                         and title_zh.strip()
                     ):
                         item.title_zh = title_zh.strip()
+                    if (
+                        item.content_type == ContentType.NEWS
+                        and isinstance(title_en, str)
+                        and title_en.strip()
+                    ):
+                        item.title_en = title_en.strip()
             
             if selected_news:
                 for news_item in selected_news:
                     if not self._is_valid_news_summary(news_item.summary_zh or ""):
                         news_item.summary_zh = self._fallback_summary(news_item)
+                    if not self._is_valid_news_summary(news_item.summary_en or ""):
+                        news_item.summary_en = self._fallback_summary_en(news_item)
                     if not (news_item.title_zh or "").strip():
                         news_item.title_zh = news_item.title
+                    if not (news_item.title_en or "").strip():
+                        news_item.title_en = news_item.title
 
             # Step 2.5: 生成播客长文稿（基于当日新闻）
             if selected_news:
                 try:
-                    longform_prompt = self._build_longform_prompt(selected_news, introduction)
-                    longform_response = self._call_model(longform_prompt, tag="longform")
-                    longform_script = (longform_response or "").strip()
+                    longform_prompt_zh = self._build_longform_prompt(
+                        selected_news, introduction_zh, language="zh"
+                    )
+                    longform_script_zh = (
+                        self._call_model(longform_prompt_zh, tag="longform_zh") or ""
+                    ).strip()
+
+                    longform_prompt_en = self._build_longform_prompt(
+                        selected_news, introduction_en or introduction_zh, language="en"
+                    )
+                    longform_script_en = (
+                        self._call_model(longform_prompt_en, tag="longform_en") or ""
+                    ).strip()
                 except Exception:
                     logger.error("[L3] 长文稿生成失败，使用简化文稿")
-                    longform_script = introduction or "今日 AI 领域有多条重要进展，建议关注核心发布与趋势变化。"
+                    longform_script_zh = introduction_zh or "今日 AI 领域有多条重要进展，建议关注核心发布与趋势变化。"
+                    longform_script_en = introduction_en or "Today's AI landscape includes several important developments worth tracking."
         else:
             # 无 API 时使用备用方案
-            selected_papers, selected_news, introduction = self._fallback_selection(
+            selected_papers, selected_news, introduction_zh, introduction_en = self._fallback_selection(
                 papers_l3, news_l3
             )
             for paper in selected_papers:
                 paper.l3_selected = True
                 paper.summary_zh = self._fallback_summary(paper)
+                paper.summary_en = self._fallback_summary_en(paper)
             
             for news_item in selected_news:
                 news_item.l3_selected = True
                 news_item.summary_zh = self._fallback_summary(news_item)
-            longform_script = introduction
+                news_item.summary_en = self._fallback_summary_en(news_item)
+                news_item.title_zh = news_item.title_zh or news_item.title
+                news_item.title_en = news_item.title_en or news_item.title
+            longform_script_zh = introduction_zh
+            longform_script_en = introduction_en
         
         # Step 3: 自动打标签
         for item in selected_papers + selected_news:
@@ -546,8 +654,12 @@ class Refiner:
         report = DailyReport(
             date=today.strftime("%Y-%m-%d"),
             generated_at=today,
-            introduction=introduction or "今日 AI 领域动态汇总。",
-            longform_script=longform_script or "",
+            introduction=introduction_zh or "今日 AI 领域动态汇总。",
+            introduction_zh=introduction_zh or "今日 AI 领域动态汇总。",
+            introduction_en=introduction_en or "Today's AI developments at a glance.",
+            longform_script=longform_script_zh or "",
+            longform_script_zh=longform_script_zh or "",
+            longform_script_en=longform_script_en or "",
             papers=selected_papers,
             news=selected_news,
             stats={
