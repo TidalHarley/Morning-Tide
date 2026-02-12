@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-12",
+    "papers_count": 18,
+    "news_count": 11,
+    "top_paper": "Control Reinforcement Learning: Token-Level Mechanistic Analysis via Learned SAE Feature Steering",
+    "top_news": "Anthropic承诺承担数据中心推高电价的全部成本"
+  },
+  {
     "date": "2026-02-13",
     "papers_count": 18,
     "news_count": 11,
