@@ -1,17 +1,17 @@
 [
   {
+    "date": "2026-02-13",
+    "papers_count": 18,
+    "news_count": 11,
+    "top_paper": "From Atoms to Trees: Building a Structured Feature Forest with Hierarchical Sparse Autoencoders",
+    "top_news": "OpenAI推ChatGPT Lockdown Mode防御提示注入攻击"
+  },
+  {
     "date": "2026-02-12",
     "papers_count": 18,
     "news_count": 11,
     "top_paper": "Control Reinforcement Learning: Token-Level Mechanistic Analysis via Learned SAE Feature Steering",
     "top_news": "Anthropic 融资300亿美元，估值达3800亿，Claude企业应用爆发"
-  },
-  {
-    "date": "2026-02-13",
-    "papers_count": 18,
-    "news_count": 11,
-    "top_paper": "Control Reinforcement Learning: Token-Level Mechanistic Analysis via Learned SAE Feature Steering",
-    "top_news": "Anthropic承诺承担数据中心推高居民电价的成本"
   },
   {
     "date": "2026-02-11",
