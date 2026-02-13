@@ -12,9 +12,7 @@ Live site: https://tidalharley.github.io/Morning-Tide/
   <img src="./output.png" alt="TidalMorning Teasor" width="85%" />
 </p>
 
-<p align="center">
-  <img src="./frontpage.png" alt="TidalMorning front page" width="92%" />
-</p>
+
 
 
 
