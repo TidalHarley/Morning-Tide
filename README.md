@@ -9,7 +9,7 @@ Updated daily (UTC+8 (China Standard Time) at **07:00**)
 Live site: https://tidalharley.github.io/Morning-Tide/
 
 <p align="center">
-  <img src="./teasor.png" alt="TidalMorning Teasor" width="85%" />
+  <img src="./output.png" alt="TidalMorning Teasor" width="85%" />
 </p>
 
 <p align="center">
