@@ -8,7 +8,7 @@
 在线访问: https://tidalharley.github.io/Morning-Tide/
 
 <p align="center">
-  <img src="./teasor.png" alt="TidalMorning 首页预览" width="92%" />
+  <img src="./output.png" alt="TidalMorning 首页预览" width="92%" />
 </p>
 
 
