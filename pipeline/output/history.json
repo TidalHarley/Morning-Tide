@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-14",
+    "papers_count": 18,
+    "news_count": 11,
+    "top_paper": "Benchmark Health Index: A Systematic Framework for Benchmarking the Benchmarks of LLMs",
+    "top_news": "字节跳动发布Seed2.0大模型，突破复杂现实任务执行能力"
+  },
+  {
     "date": "2026-02-13",
     "papers_count": 18,
     "news_count": 11,
