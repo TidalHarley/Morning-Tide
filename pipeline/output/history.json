@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-15",
+    "papers_count": 6,
+    "news_count": 11,
+    "top_paper": "RISE: Self-Improving Robot Policy with Compositional World Model",
+    "top_news": "OpenClaw founder Peter Steinberger is joining OpenAI"
+  },
+  {
     "date": "2026-02-14",
     "papers_count": 18,
     "news_count": 11,
