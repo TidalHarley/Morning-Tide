@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-16",
+    "papers_count": 18,
+    "news_count": 11,
+    "top_paper": "BrowseComp-$V^3$: A Visual, Vertical, and Verifiable Benchmark for Multimodal Browsing Agents",
+    "top_news": "NVIDIA Blackwell Ultra 推出：AI代理推理成本降35倍"
+  },
+  {
     "date": "2026-02-15",
     "papers_count": 6,
     "news_count": 11,
