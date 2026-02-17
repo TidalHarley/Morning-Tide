@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-17",
+    "papers_count": 18,
+    "news_count": 11,
+    "top_paper": "First Proof",
+    "top_news": "Claude Sonnet 4.6"
+  },
+  {
     "date": "2026-02-16",
     "papers_count": 18,
     "news_count": 11,
