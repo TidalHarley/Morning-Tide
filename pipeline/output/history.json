@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-18",
+    "papers_count": 18,
+    "news_count": 11,
+    "top_paper": "EAA: Automating materials characterization with vision language model agents",
+    "top_news": "微软Project Silica实现万年玻璃存储，成本大降"
+  },
+  {
     "date": "2026-02-17",
     "papers_count": 18,
     "news_count": 11,
