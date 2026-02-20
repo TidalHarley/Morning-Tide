@@ -49,7 +49,10 @@ class OutputGenerator:
         if not domain:
             return False
         for wl_domain in config.whitelist_domains:
-            if wl_domain in domain:
+            normalized = (wl_domain or "").strip().lower()
+            if not normalized:
+                continue
+            if domain == normalized or domain.endswith(f".{normalized}"):
                 return True
         return False
 

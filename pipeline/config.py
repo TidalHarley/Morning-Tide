@@ -261,36 +261,19 @@ class Config(BaseModel):
 ]
     
     # 白名单域名 - 直通 L3
+    # 仅保留“明确 AI 官方域名”，避免泛公司/高校域名误放行非 AI 新闻。
     whitelist_domains: List[str] = [
-    # --- Top industry AI labs (official domains) ---
-    "openai.com",          # OpenAI :contentReference[oaicite:0]{index=0}
-    "anthropic.com",       # Anthropic :contentReference[oaicite:1]{index=1}
-    "claude.ai",           # Anthropic Claude product site :contentReference[oaicite:2]{index=2}
-    "deepmind.google",     # Google DeepMind :contentReference[oaicite:3]{index=3}
-    "google.com",          # Google Research / Gemini / etc.
-    "research.google",     # Google Research (often used)
-    "ai.google",           # Google AI (often used)
-
-    "microsoft.com",       # Microsoft Research :contentReference[oaicite:4]{index=4}
-
-    "ai.meta.com",         # Meta AI (official research portal)
-    "meta.com",
-    "nvidia.com",          # NVIDIA Research
-    "amazon.science",      # Amazon Science
-    "apple.com",           # Apple ML Research (publishes papers/blog)
-    "ibm.com",             # IBM Research
-    "intel.com",           # Intel Labs
-    "samsung.com",         # Samsung Research
-    "huawei.com",          # Huawei research portals
-    "noahlab.ai",          # Huawei Noah's Ark Lab
-    "damo.alibaba.com",    # DAMO Academy
-    "bytedance.com",       # ByteDance research portals
-
-    # --- Top academic AI labs (selected, high-signal) ---
-    "mit.edu",             # MIT CSAIL etc.
-    "stanford.edu",        # Stanford AI Lab etc.
-    "berkeley.edu",        # BAIR etc.
-    "cmu.edu"             # CMU (Robotics Institute / ML)
+    "openai.com",
+    "anthropic.com",
+    "claude.ai",
+    "deepmind.google",
+    "ai.google",
+    "ai.meta.com",
+    "mistral.ai",
+    "x.ai",
+    "huggingface.co",
+    "noahlab.ai",
+    "damo.alibaba.com",
 ]
     
     # ===== L1 噪音过滤配置 =====
@@ -370,6 +353,10 @@ class Config(BaseModel):
 
     # Hacker News 相关性过滤（避免 HN Top Stories 混入非 AI 新闻）
     # 仅用于 HN 入库前的“强相关”关键词判定；白名单域名仍然直通。
+    hackernews_story_endpoints: List[str] = ["topstories"]
+    hackernews_story_per_source: int = 120
+    hackernews_story_max_candidates: int = 200
+    hackernews_ingest_min_score: int = 10
     hackernews_keywords: List[str] = [
         "ai", "artificial intelligence",
         "llm", "large language model",
@@ -383,6 +370,14 @@ class Config(BaseModel):
         "transformer", "vision-language", "multimodal",
         "machine learning", "ml",
     ]
+    hackernews_strong_keywords: List[str] = [
+        "artificial intelligence", "llm", "large language model",
+        "gpt", "chatgpt", "openai", "anthropic", "claude",
+        "gemini", "deepmind", "mistral", "llama",
+        "stable diffusion", "diffusion", "dall-e", "sora",
+        "transformer", "multimodal", "machine learning",
+    ]
+    hackernews_min_keyword_hits: int = 2
     
     # 过滤数量配置
     l2_papers_limit: int = 40

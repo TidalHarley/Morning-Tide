@@ -31,6 +31,34 @@ _BAD_IMAGE_HOSTS: set = set()
 _USED_IMAGE_URLS: dict = {}
 
 
+def _compile_hn_keyword_patterns(keywords: List[str]) -> List[tuple]:
+    """将 HN 关键词编译为整词匹配模式，降低子串误命中。"""
+    patterns: List[tuple] = []
+    for raw in keywords or []:
+        kw = (raw or "").strip().lower()
+        if not kw:
+            continue
+        escaped = re.escape(kw)
+        if re.search(r"[a-z0-9]", kw):
+            # 使用字母数字边界，避免 ai 命中 paid / ml 命中 html
+            pattern = re.compile(rf"(?<![a-z0-9]){escaped}(?![a-z0-9])", re.IGNORECASE)
+        else:
+            pattern = re.compile(escaped, re.IGNORECASE)
+        patterns.append((kw, pattern))
+    return patterns
+
+
+def _match_hn_keywords(text: str, compiled_patterns: List[tuple]) -> set:
+    matched = set()
+    haystack = (text or "").lower()
+    if not haystack:
+        return matched
+    for kw, pattern in compiled_patterns:
+        if pattern.search(haystack):
+            matched.add(kw)
+    return matched
+
+
 def _normalize_image_url(image_url: str, base_url: str) -> str:
     image_url = _html.unescape((image_url or "").strip())
     if not image_url:
@@ -1144,7 +1172,10 @@ def _is_whitelist_url(url: str) -> bool:
         return False
     domain = urlparse(url).netloc.lower()
     for wl_domain in config.whitelist_domains:
-        if wl_domain in domain:
+        normalized = (wl_domain or "").strip().lower()
+        if not normalized:
+            continue
+        if domain == normalized or domain.endswith(f".{normalized}"):
             return True
     return False
 
@@ -1158,16 +1189,45 @@ def fetch_hackernews() -> List[ContentItem]:
     news_items = []
     
     try:
-        # 获取 Top Stories IDs
-        top_url = "https://hacker-news.firebaseio.com/v0/topstories.json"
         session = _get_session()
-        response = session.get(top_url, timeout=60, verify=config.requests_verify_ssl)
-        response.raise_for_status()
-        story_ids = response.json()[:200]  # 获取前200条
-        
-        logger.info(f"[HackerNews] 获取到 {len(story_ids)} 个故事 ID")
+        story_ids: List[int] = []
+        seen_story_ids = set()
+        endpoints = config.hackernews_story_endpoints or ["topstories"]
+        per_source_limit = max(1, int(config.hackernews_story_per_source))
+        max_candidates = max(1, int(config.hackernews_story_max_candidates))
+
+        for endpoint in endpoints:
+            source = (endpoint or "").strip().lower()
+            if not source:
+                continue
+            list_url = f"https://hacker-news.firebaseio.com/v0/{source}.json"
+            try:
+                response = session.get(list_url, timeout=60, verify=config.requests_verify_ssl)
+                response.raise_for_status()
+                ids = response.json()[:per_source_limit]
+            except Exception as exc:
+                logger.warning(f"[HackerNews] 拉取 {source} 失败: {exc}")
+                continue
+
+            for sid in ids:
+                if sid in seen_story_ids:
+                    continue
+                seen_story_ids.add(sid)
+                story_ids.append(sid)
+                if len(story_ids) >= max_candidates:
+                    break
+            if len(story_ids) >= max_candidates:
+                break
+
+        logger.info(
+            f"[HackerNews] 候选池: {len(story_ids)} 条, 来源={','.join(endpoints)}"
+        )
         
         cutoff = datetime.now(timezone.utc) - timedelta(hours=config.hours_lookback)
+        compiled_hn_keywords = _compile_hn_keyword_patterns(config.hackernews_keywords or [])
+        strong_hn_keywords = {k.lower() for k in (config.hackernews_strong_keywords or [])}
+        min_hn_hits = max(1, int(config.hackernews_min_keyword_hits))
+        ingest_min_score = max(config.min_hn_score, int(config.hackernews_ingest_min_score))
         
         # 批量获取故事详情
         for story_id in story_ids:
@@ -1198,15 +1258,19 @@ def fetch_hackernews() -> List[ContentItem]:
 
                 # 热度 & 相关性过滤：避免 HN Top Stories 混入非 AI 新闻
                 score = int(item.get("score", 0) or 0)
-                if score < config.min_hn_score and not is_whitelist:
+                if score < ingest_min_score and not is_whitelist:
                     continue
-                text = f"{item.get('title', '')} {url}".lower()
-                hn_keywords = [k.lower() for k in (config.hackernews_keywords or [])]
-                if hn_keywords and (not is_whitelist) and (not any(k in text for k in hn_keywords)):
+                title = item.get("title", "") or ""
+                body_text = item.get("text", "") or ""
+                # 仅使用标题+正文做相关性判断，避免 URL 子串干扰。
+                match_text = f"{title} {body_text}".strip()
+                matched_keywords = _match_hn_keywords(match_text, compiled_hn_keywords)
+                strong_hits = matched_keywords & strong_hn_keywords
+                if (not is_whitelist) and (len(matched_keywords) < min_hn_hits) and (not strong_hits):
                     continue
                 
                 image_url = _resolve_image_url(
-                    title=item.get("title", ""),
+                    title=title,
                     url=url,
                     source_name="Hacker News",
                 )

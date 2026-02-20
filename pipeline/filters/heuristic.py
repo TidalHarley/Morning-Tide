@@ -255,9 +255,12 @@ class HeuristicFilter:
             # 遍历配置中的白名单域名列表
             # config.whitelist_domains 包含: ["openai.com", "anthropic.com", ...]
             for wl_domain in config.whitelist_domains:
-                # 使用 "in" 进行子串匹配，支持子域名
-                # 例如: "blog.openai.com" 会匹配 "openai.com"
-                if wl_domain in domain:
+                normalized = (wl_domain or "").strip().lower()
+                if not normalized:
+                    continue
+                # 精确域名或子域后缀匹配（避免子串误命中）
+                # 例如: "blog.openai.com" 匹配 "openai.com"
+                if domain == normalized or domain.endswith(f".{normalized}"):
                     return True
         
         # 不匹配任何白名单条件，返回 False
