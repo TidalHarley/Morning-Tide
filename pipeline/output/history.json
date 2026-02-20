@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-20",
+    "papers_count": 18,
+    "news_count": 11,
+    "top_paper": "EA-Swin: An Embedding-Agnostic Swin Transformer for AI-Generated Video Detection",
+    "top_news": "Google Research 发布时间序列基础模型 TimesFM"
+  },
+  {
     "date": "2026-02-19",
     "papers_count": 18,
     "news_count": 11,
