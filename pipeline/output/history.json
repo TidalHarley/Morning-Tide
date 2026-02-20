@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-19",
+    "papers_count": 18,
+    "news_count": 11,
+    "top_paper": "Retrieval Collapses When AI Pollutes the Web",
+    "top_news": "Advancing independent research on AI alignment"
+  },
+  {
     "date": "2026-02-18",
     "papers_count": 18,
     "news_count": 11,
