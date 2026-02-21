@@ -1,14 +1,76 @@
 {
-  "date": "2026-02-20",
-  "generatedAt": "2026-02-20T23:48:00.127412",
-  "introduction": "今日AI领域迎来多项关键突破：谷歌发布时序基础模型TimesFM，显著提升预测能力；OpenAI首次公开其在高难度数学证明挑战中的尝试，展现前沿推理水平。论文方面，EA-Swin为Sora等生成视频提供高效检测方案，M2F实现大规模数学文献自动形式化，AutoNumerics构建PDE无关的多智能体科学计算框架。安全研究揭示AI代理在工具调用中的新型风险，而医疗AI则通过颈动脉超声精准识别血管损伤。此外，印度AI生态获巨额投资，但AI硬件落地与能源消耗问题也引发关注。",
-  "introductionZh": "今日AI领域迎来多项关键突破：谷歌发布时序基础模型TimesFM，显著提升预测能力；OpenAI首次公开其在高难度数学证明挑战中的尝试，展现前沿推理水平。论文方面，EA-Swin为Sora等生成视频提供高效检测方案，M2F实现大规模数学文献自动形式化，AutoNumerics构建PDE无关的多智能体科学计算框架。安全研究揭示AI代理在工具调用中的新型风险，而医疗AI则通过颈动脉超声精准识别血管损伤。此外，印度AI生态获巨额投资，但AI硬件落地与能源消耗问题也引发关注。",
-  "introductionEn": "Today’s AI breakthroughs span foundational models, safety, and real-world impact. Google released TimesFM, a time-series foundation model for forecasting; OpenAI shared its first attempts at expert-level mathematical proofs. Key papers include EA-Swin for detecting Sora-like AI videos, M2F for large-scale math formalization, and AutoNumerics for PDE-agnostic scientific computing. New research exposes critical gaps in agent safety during tool use, while medical AI demonstrates life-saving potential via carotid ultrasound analysis. Meanwhile, major investments flow into India’s AI ecosystem, even as hardware rollouts and energy demands raise sustainability concerns.",
-  "longformScript": "今天，AI 领域的进展呈现出一种微妙的张力：一边是模型能力、工具生态和应用场景的快速扩张，另一边则是对能源消耗、安全边界和隐私风险的持续拷问。从基础模型到终端硬件，从开源协作到政策博弈，技术正在加速落地，但代价与责任也愈发清晰。\n\n首先，大模型的能力边界正在被系统性地拓展。Google 今天发布了 TimesFM，一个专为时间序列预测设计的基础模型。这听起来可能有些抽象，但它意味着未来无论是天气预报、电网负荷，还是电商库存需求，都可能由一个统一的 AI 架构来预测——不再需要为每个场景单独训练模型。与此同时，Google 的 Gemini 3.1 Pro 也在专业任务榜单上刷新纪录，尤其在多步推理和复杂工作流处理上表现突出。这些进展共同指向一个趋势：大模型正从“能聊天”转向“能干活”，成为真正嵌入业务流程的智能代理。而 OpenAI 也在探索更硬核的领域——他们首次公开了参与 First Proof 数学挑战的尝试，虽然尚未完全解决专家级定理，但这种将形式化推理作为测试场的做法，为评估 AI 的科研潜力提供了新标尺。\n\n如果说模型是大脑，那么工具和基础设施就是手脚。今天，多个项目正在让 AI 智能体变得更“能干”。Composio 发布了一个支持上千种工具集成的开发平台，开发者可以像搭积木一样，把日历、邮件、数据库甚至支付接口接入 AI 代理，让它真正执行用户指令。Databricks 则推出了专为编码智能体设计的开发工具包，帮助企业快速构建能自主写代码、调试和部署的 AI 工程师。更值得关注的是，llama.cpp 的创始团队正式加入 Hugging Face，承诺保持项目完全开源，并与 Transformers 库深度整合。这意味着本地运行大模型将变得更简单、更高效——你未来或许能在笔记本上流畅运行一个私有、低延迟的 AI 助手，而无需依赖云端。Hugging Face 还联合 Unsloth 推出了免费微调服务，用更少显存、更快的速度训练小模型，进一步降低定制化 AI 的门槛。\n\n然而，能力越强，风险也越具体。一个名为 Pentagi 的开源项目展示了 AI 在网络安全领域的双刃剑效应：它是一个完全自主的渗透测试智能体，能自动探测系统漏洞。这对企业防御是利好，但也意味着攻击者可能用类似技术发起更复杂的自动化攻击。更隐蔽的风险来自工具调用本身——当 AI 代理被赋予操作真实世界 API 的权限时，如何确保它不会误操作、越权访问，甚至被恶意诱导？这不仅是技术问题，更是系统设计哲学的问题。与此同时，OpenAI 被曝计划在 2027 年推出带摄像头的 ChatGPT 智能音箱，不仅能识别桌面物品，还集成面部识别用于支付。这无疑会带来更自然的人机交互，但也将语音、视觉、身份、支付等敏感数据全部汇聚到一个设备上，隐私保护的挑战前所未有。\n\n而所有这些计算密集型进展的背后，还有一个常被忽视的现实：能源与环境成本。就在今天，有报道指出，美国可能废除针对燃煤电厂汞排放的严格限制，而这一政策变动恰逢 AI 数据中心用电需求激增。AI 训练和推理的能耗早已不是秘密，但当算力扩张遇上化石能源回潮，问题就从“效率优化”升级为“公共健康风险”。燃煤电厂是美国汞污染的主要来源，而汞对儿童神经发育的危害已被充分证实。技术狂奔的同时，如果能源结构不向清洁化转型，我们可能在用下一代的健康为今天的智能买单。\n\n面对这样的图景，普通用户或许不必深究模型架构或工具链细节，但值得保持一种清醒：AI 正在从“功能”走向“代理”，从“响应”走向“行动”。这意味着它能为你做的事越来越多，但你也需要更主动地思考——哪些数据愿意交出？哪些权限可以授予？哪些便利值得以环境为代价？对开发者而言，机会在于利用日益成熟的开源生态快速构建垂直应用，但也要警惕“工具丰富”不等于“系统可靠”，安全与可解释性必须前置。而对整个社会来说，技术演进不能脱离制度约束，尤其是在能源、隐私和安全这些底层议题上。\n\n今天的 AI 世界，既令人兴奋，也令人警醒。它不再是实验室里的概念，而是正在重塑我们工作、生活甚至呼吸的空气。理解它的进展，不只是为了跟上潮流，更是为了在变革中守住底线。",
-  "longformScriptZh": "今天，AI 领域的进展呈现出一种微妙的张力：一边是模型能力、工具生态和应用场景的快速扩张，另一边则是对能源消耗、安全边界和隐私风险的持续拷问。从基础模型到终端硬件，从开源协作到政策博弈，技术正在加速落地，但代价与责任也愈发清晰。\n\n首先，大模型的能力边界正在被系统性地拓展。Google 今天发布了 TimesFM，一个专为时间序列预测设计的基础模型。这听起来可能有些抽象，但它意味着未来无论是天气预报、电网负荷，还是电商库存需求，都可能由一个统一的 AI 架构来预测——不再需要为每个场景单独训练模型。与此同时，Google 的 Gemini 3.1 Pro 也在专业任务榜单上刷新纪录，尤其在多步推理和复杂工作流处理上表现突出。这些进展共同指向一个趋势：大模型正从“能聊天”转向“能干活”，成为真正嵌入业务流程的智能代理。而 OpenAI 也在探索更硬核的领域——他们首次公开了参与 First Proof 数学挑战的尝试，虽然尚未完全解决专家级定理，但这种将形式化推理作为测试场的做法，为评估 AI 的科研潜力提供了新标尺。\n\n如果说模型是大脑，那么工具和基础设施就是手脚。今天，多个项目正在让 AI 智能体变得更“能干”。Composio 发布了一个支持上千种工具集成的开发平台，开发者可以像搭积木一样，把日历、邮件、数据库甚至支付接口接入 AI 代理，让它真正执行用户指令。Databricks 则推出了专为编码智能体设计的开发工具包，帮助企业快速构建能自主写代码、调试和部署的 AI 工程师。更值得关注的是，llama.cpp 的创始团队正式加入 Hugging Face，承诺保持项目完全开源，并与 Transformers 库深度整合。这意味着本地运行大模型将变得更简单、更高效——你未来或许能在笔记本上流畅运行一个私有、低延迟的 AI 助手，而无需依赖云端。Hugging Face 还联合 Unsloth 推出了免费微调服务，用更少显存、更快的速度训练小模型，进一步降低定制化 AI 的门槛。\n\n然而，能力越强，风险也越具体。一个名为 Pentagi 的开源项目展示了 AI 在网络安全领域的双刃剑效应：它是一个完全自主的渗透测试智能体，能自动探测系统漏洞。这对企业防御是利好，但也意味着攻击者可能用类似技术发起更复杂的自动化攻击。更隐蔽的风险来自工具调用本身——当 AI 代理被赋予操作真实世界 API 的权限时，如何确保它不会误操作、越权访问，甚至被恶意诱导？这不仅是技术问题，更是系统设计哲学的问题。与此同时，OpenAI 被曝计划在 2027 年推出带摄像头的 ChatGPT 智能音箱，不仅能识别桌面物品，还集成面部识别用于支付。这无疑会带来更自然的人机交互，但也将语音、视觉、身份、支付等敏感数据全部汇聚到一个设备上，隐私保护的挑战前所未有。\n\n而所有这些计算密集型进展的背后，还有一个常被忽视的现实：能源与环境成本。就在今天，有报道指出，美国可能废除针对燃煤电厂汞排放的严格限制，而这一政策变动恰逢 AI 数据中心用电需求激增。AI 训练和推理的能耗早已不是秘密，但当算力扩张遇上化石能源回潮，问题就从“效率优化”升级为“公共健康风险”。燃煤电厂是美国汞污染的主要来源，而汞对儿童神经发育的危害已被充分证实。技术狂奔的同时，如果能源结构不向清洁化转型，我们可能在用下一代的健康为今天的智能买单。\n\n面对这样的图景，普通用户或许不必深究模型架构或工具链细节，但值得保持一种清醒：AI 正在从“功能”走向“代理”，从“响应”走向“行动”。这意味着它能为你做的事越来越多，但你也需要更主动地思考——哪些数据愿意交出？哪些权限可以授予？哪些便利值得以环境为代价？对开发者而言，机会在于利用日益成熟的开源生态快速构建垂直应用，但也要警惕“工具丰富”不等于“系统可靠”，安全与可解释性必须前置。而对整个社会来说，技术演进不能脱离制度约束，尤其是在能源、隐私和安全这些底层议题上。\n\n今天的 AI 世界，既令人兴奋，也令人警醒。它不再是实验室里的概念，而是正在重塑我们工作、生活甚至呼吸的空气。理解它的进展，不只是为了跟上潮流，更是为了在变革中守住底线。",
-  "longformScriptEn": "Today’s AI landscape is defined by a powerful convergence: foundational models are maturing, autonomous agents are gaining real-world utility, and the infrastructure to run them—both in the cloud and on our personal devices—is rapidly democratizing. But this acceleration comes with trade-offs. As AI systems grow more capable, they also demand more energy, raise new safety questions, and blur the lines between software and physical interfaces. In just the past week, we’ve seen breakthroughs that could reshape everything from mathematical research to home security—and policy decisions that threaten to undermine the environmental sustainability of this very progress.\n\nLet’s start with forecasting. Google Research has unveiled TimesFM, a true foundation model for time series data. Unlike traditional forecasting tools that require task-specific tuning, TimesFM is pretrained on vast historical datasets and can generalize across domains—whether predicting energy demand, retail inventory needs, or traffic patterns. What makes this significant isn’t just its accuracy, but its accessibility: developers can already tap into it via API, and soon, everyday applications—from weather apps to supply chain dashboards—could embed far more reliable predictions without building custom models from scratch. This marks a shift toward “forecasting as a service,” powered by large-scale pretraining rather than narrow statistical methods.\n\nMeanwhile, the push to bring powerful AI onto personal devices is accelerating. The team behind llama.cpp—the lightweight engine that lets you run LLMs on a laptop or even a smartphone—has officially joined Hugging Face. Crucially, the project remains open-source and community-driven, but now with sustainable backing and tighter integration into Hugging Face’s Transformers library. Paired with a new free fine-tuning program from Hugging Face and Unsloth—which slashes training time and memory use by up to 60%—this creates a compelling pipeline: developers can now customize small models quickly, then deploy them locally with minimal friction. The result? Truly private, low-latency AI assistants that don’t rely on constant cloud connectivity, putting personalized intelligence directly in users’ hands.\n\nOn the frontier of reasoning, OpenAI has taken a bold step into formal mathematics. Its model recently submitted proof attempts for the First Proof challenge—a set of unsolved, expert-level math problems designed to test genuine theorem-proving ability. While these submissions aren’t yet correct or complete, they represent a critical benchmark: for the first time, we can empirically measure how close AI is to replicating the kind of abstract, deductive reasoning that underpins scientific discovery. This isn’t about chatbots solving homework; it’s about laying groundwork for future AI collaborators in fields like physics or cryptography, where logical rigor is non-negotiable.\n\nAt the same time, AI agents are becoming more action-oriented. Composio has launched a platform integrating over 1,000 real-world tools—from Slack and GitHub to financial APIs—into a unified framework for agent development. Combined with specialized toolkits like Databricks’ new AI Dev Kit for coding agents or Pentagi’s autonomous penetration testing system, we’re seeing a move away from “chatty” assistants toward agents that *do* things: secure networks, write production code, manage workflows. Even Google’s new Gemini 3.1 Pro, which just topped professional task benchmarks, demonstrates how multi-step reasoning is enabling agents to handle complex, real-world assignments—like legal document analysis or technical troubleshooting—with unprecedented fidelity.\n\nBut this momentum isn’t without friction. OpenAI’s rumored entry into hardware—a $200–$300 smart speaker with a camera and facial recognition for payments—signals a strategic pivot toward ambient, multimodal AI in the home. While convenient, such devices amplify longstanding privacy concerns, especially when combined with always-on sensing and identity verification. More urgently, the environmental cost of AI’s growth is coming into sharp focus. Just as data centers consume record amounts of electricity to power these models, the Trump administration has rolled back key emissions regulations on coal plants—repealing the Mercury and Air Toxics Standards that protected communities from neurotoxic pollutants. With coal still responsible for half of U.S. mercury emissions, this deregulation directly pits AI’s energy hunger against public health, particularly for children in vulnerable areas. It’s a stark reminder that technological progress cannot be decoupled from its societal and ecological footprint.\n\nSo what should you watch next? Keep an eye on the tension between agent capability and safety—especially as tools like Pentagi and Composio lower the barrier to deploying autonomous systems. Misuse or unintended behavior in high-stakes domains like cybersecurity or finance could have cascading consequences. On the upside, the open ecosystem around local AI (thanks to Hugging Face, Unsloth, and llama.cpp) is creating unprecedented opportunities for developers to build tailored, privacy-preserving applications without corporate gatekeeping. And while hardware plays like OpenAI’s speaker may dominate headlines, the real revolution might be quieter: models running efficiently on your own device, trained on your data, acting only on your behalf.\n\nIn sum, this week underscores a pivotal moment: AI is transitioning from impressive demos to embedded infrastructure. Whether it’s forecasting supply chains, proving theorems, or securing networks, the technology is becoming operational. But with that operationalization comes responsibility—not just in how we design these systems, but in how we power them and who gets to shape their future. The choices we make now, both as builders and citizens, will determine whether this wave of innovation lifts all boats—or leaves some behind in its wake.",
+  "date": "2026-02-21",
+  "generatedAt": "2026-02-21T23:46:45.801438",
+  "introduction": "今日AI领域聚焦两大趋势：一是基础模型能力边界与安全性的深度审视，如揭示语音大模型本质等同于ASR+LLM级联、工具调用安全无法从文本安全推导等关键发现；二是AI向高价值垂直场景加速渗透，涵盖科学计算自动化、AI原生粒子加速器、医学影像诊断及金融推荐等。新闻方面，Anthropic推出终端内代码智能体Claude Code，显著提升开发者效率；同时，Google高管警示纯LLM封装类创业公司生存危机，预示行业进入价值深水区。",
+  "introductionZh": "今日AI领域聚焦两大趋势：一是基础模型能力边界与安全性的深度审视，如揭示语音大模型本质等同于ASR+LLM级联、工具调用安全无法从文本安全推导等关键发现；二是AI向高价值垂直场景加速渗透，涵盖科学计算自动化、AI原生粒子加速器、医学影像诊断及金融推荐等。新闻方面，Anthropic推出终端内代码智能体Claude Code，显著提升开发者效率；同时，Google高管警示纯LLM封装类创业公司生存危机，预示行业进入价值深水区。",
+  "introductionEn": "Today’s AI advances spotlight two critical directions: first, rigorous scrutiny of foundation model capabilities and safety—revealing that speech LLMs often behave like simple ASR→LLM pipelines and that tool-call safety doesn’t transfer from text safety. Second, AI’s rapid integration into high-impact domains, including autonomous scientific computing, AI-native particle accelerators, medical diagnostics, and finance. In news, Anthropic launched Claude Code, an agentic terminal tool boosting developer productivity, while a Google VP warned that undifferentiated LLM-wrapper startups face existential threats as the industry matures.",
+  "longformScript": "今天AI领域呈现出一种微妙的张力：一边是工具能力快速逼近工程实用门槛，另一边是对技术本质与行业泡沫的冷静反思。开发者手里的AI代理越来越能干，但创业者的生存空间却在急剧收窄；模型规模和本地部署效率双双突破，可基础能力的结构性缺陷也愈发清晰。这不是一个狂飙突进的日子，而是一个分水岭式的清醒时刻。\n\n先看开发者工具链的进化。Anthropic推出的Claude Code，已经不只是在终端里回答“怎么写这个函数”，而是能直接理解你的整个代码库，用自然语言指令帮你执行Git操作、解释复杂模块，甚至重构逻辑。这标志着AI正从问答助手转向具备上下文感知的工程协作者。几乎同时，开源社区也涌现出多个互补性项目：比如GitNexus，能在浏览器里直接生成你上传仓库的知识图谱，无需联网或后端，靠Graph RAG快速理清大型项目的依赖关系；还有Superpowers提出的AI代理开发框架，试图把规划、工具调用和记忆这些模块标准化，让智能体开发从“炫技demo”走向可维护的产品。这些进展共同指向一个趋势——AI不再只是附加功能，而是正在嵌入软件开发的核心工作流，降低认知负荷，让非专家也能参与复杂工程。\n\n但工具越强大，对使用者的要求反而越精细。前LLVM作者Chris Lattner最近分析了Anthropic用AI构建的C编译器，发现它能复现几十年积累下来的工程范式，比如LLVM风格的中间表示和多后端架构，说明AI已能胜任大型系统实现。然而，它在处理真实世界的头文件、宏展开等边缘场景时依然脆弱，更关键的是——它没有创新，只是高效地“重演”人类已有的共识。这提醒我们：AI擅长执行既定抽象，却不具备真正的架构想象力。未来的工程师或许要花更少时间写样板代码，但必须花更多精力定义问题边界、设计系统骨架，并对AI输出保持审慎验证。\n\n与此同时，行业生态正在经历残酷筛选。Google全球初创企业负责人Darren Mowry直言，两类公司恐怕撑不过今年：一类是简单封装GPT或Gemini API的“LLM包装器”，另一类是把几个模型拼在一起的“AI聚合器”。它们缺乏技术纵深，利润薄如纸，同质化严重。这番警告并非危言耸听——当基础模型能力趋于平台化，价值必然向垂直场景和自有知识产权迁移。有趣的是，这种收缩与扩张并存：印度初创Sarvam推出自研105B大模型的聊天应用Indus，直面OpenAI在当地的亿级用户竞争；而网络安全领域则出现了Pentagi这样的全自主渗透测试系统，能自动执行红队任务。这些案例说明，活下来的机会不在“调用API”，而在解决特定领域的高价值问题，哪怕是在游戏这样强调人文性的行业——微软新任游戏CEO明确拒绝用“AI垃圾内容”填充产品，强调AI应增强而非替代人类创意。\n\n当然，技术乐观背后总有隐忧。斯坦福等机构刚发布了一份关于大语言模型推理失败的系统性综述，把问题拆解得很清楚：有些缺陷源于模型架构本身，比如形式逻辑和常识一致性难以兼顾；有些则是应用场景带来的局限，比如医疗或金融中的微小输入扰动可能导致灾难性输出；还有些属于鲁棒性问题，看似合理的提示词稍作改动就让模型彻底迷失。这份研究的价值不在于唱衰，而在于提供了一个结构化框架，帮我们识别哪些任务可以放心交给AI，哪些必须保留人工校验。尤其当AI开始接管Git操作、渗透测试甚至编译器构建这类高风险任务时，理解其失败模式比盲目信任更重要。\n\n那么，作为普通开发者、创业者或技术决策者，该怎么看待今天的局面？首先，别再幻想靠“换个UI+调个API”就能做出差异化产品——市场正在奖励那些深入行业痛点、构建专属数据闭环或优化底层工程效率的团队。其次，拥抱AI代理的同时，要建立“人机协作”的新工作流：让AI处理重复性编码、知识梳理和自动化测试，但由人类把控架构设计、伦理边界和异常处理。最后，本地部署能力的提升（比如单张3090跑70B模型）意味着你不必完全依赖云服务，但也要清醒认识到，硬件解放不等于智能解放——模型本身的推理缺陷不会因为跑在你自己的机器上就消失。\n\n今天的AI世界，既不像某些宣传那样无所不能，也不像悲观者说的停滞不前。它正在脱去概念外衣，进入一个更务实、也更艰难的阶段：工具越来越趁手，但用好它们需要更深的专业判断；机会依然存在，但只留给愿意沉到具体问题里的人。",
+  "longformScriptZh": "今天AI领域呈现出一种微妙的张力：一边是工具能力快速逼近工程实用门槛，另一边是对技术本质与行业泡沫的冷静反思。开发者手里的AI代理越来越能干，但创业者的生存空间却在急剧收窄；模型规模和本地部署效率双双突破，可基础能力的结构性缺陷也愈发清晰。这不是一个狂飙突进的日子，而是一个分水岭式的清醒时刻。\n\n先看开发者工具链的进化。Anthropic推出的Claude Code，已经不只是在终端里回答“怎么写这个函数”，而是能直接理解你的整个代码库，用自然语言指令帮你执行Git操作、解释复杂模块，甚至重构逻辑。这标志着AI正从问答助手转向具备上下文感知的工程协作者。几乎同时，开源社区也涌现出多个互补性项目：比如GitNexus，能在浏览器里直接生成你上传仓库的知识图谱，无需联网或后端，靠Graph RAG快速理清大型项目的依赖关系；还有Superpowers提出的AI代理开发框架，试图把规划、工具调用和记忆这些模块标准化，让智能体开发从“炫技demo”走向可维护的产品。这些进展共同指向一个趋势——AI不再只是附加功能，而是正在嵌入软件开发的核心工作流，降低认知负荷，让非专家也能参与复杂工程。\n\n但工具越强大，对使用者的要求反而越精细。前LLVM作者Chris Lattner最近分析了Anthropic用AI构建的C编译器，发现它能复现几十年积累下来的工程范式，比如LLVM风格的中间表示和多后端架构，说明AI已能胜任大型系统实现。然而，它在处理真实世界的头文件、宏展开等边缘场景时依然脆弱，更关键的是——它没有创新，只是高效地“重演”人类已有的共识。这提醒我们：AI擅长执行既定抽象，却不具备真正的架构想象力。未来的工程师或许要花更少时间写样板代码，但必须花更多精力定义问题边界、设计系统骨架，并对AI输出保持审慎验证。\n\n与此同时，行业生态正在经历残酷筛选。Google全球初创企业负责人Darren Mowry直言，两类公司恐怕撑不过今年：一类是简单封装GPT或Gemini API的“LLM包装器”，另一类是把几个模型拼在一起的“AI聚合器”。它们缺乏技术纵深，利润薄如纸，同质化严重。这番警告并非危言耸听——当基础模型能力趋于平台化，价值必然向垂直场景和自有知识产权迁移。有趣的是，这种收缩与扩张并存：印度初创Sarvam推出自研105B大模型的聊天应用Indus，直面OpenAI在当地的亿级用户竞争；而网络安全领域则出现了Pentagi这样的全自主渗透测试系统，能自动执行红队任务。这些案例说明，活下来的机会不在“调用API”，而在解决特定领域的高价值问题，哪怕是在游戏这样强调人文性的行业——微软新任游戏CEO明确拒绝用“AI垃圾内容”填充产品，强调AI应增强而非替代人类创意。\n\n当然，技术乐观背后总有隐忧。斯坦福等机构刚发布了一份关于大语言模型推理失败的系统性综述，把问题拆解得很清楚：有些缺陷源于模型架构本身，比如形式逻辑和常识一致性难以兼顾；有些则是应用场景带来的局限，比如医疗或金融中的微小输入扰动可能导致灾难性输出；还有些属于鲁棒性问题，看似合理的提示词稍作改动就让模型彻底迷失。这份研究的价值不在于唱衰，而在于提供了一个结构化框架，帮我们识别哪些任务可以放心交给AI，哪些必须保留人工校验。尤其当AI开始接管Git操作、渗透测试甚至编译器构建这类高风险任务时，理解其失败模式比盲目信任更重要。\n\n那么，作为普通开发者、创业者或技术决策者，该怎么看待今天的局面？首先，别再幻想靠“换个UI+调个API”就能做出差异化产品——市场正在奖励那些深入行业痛点、构建专属数据闭环或优化底层工程效率的团队。其次，拥抱AI代理的同时，要建立“人机协作”的新工作流：让AI处理重复性编码、知识梳理和自动化测试，但由人类把控架构设计、伦理边界和异常处理。最后，本地部署能力的提升（比如单张3090跑70B模型）意味着你不必完全依赖云服务，但也要清醒认识到，硬件解放不等于智能解放——模型本身的推理缺陷不会因为跑在你自己的机器上就消失。\n\n今天的AI世界，既不像某些宣传那样无所不能，也不像悲观者说的停滞不前。它正在脱去概念外衣，进入一个更务实、也更艰难的阶段：工具越来越趁手，但用好它们需要更深的专业判断；机会依然存在，但只留给愿意沉到具体问题里的人。",
+  "longformScriptEn": "Today’s AI landscape is defined by a pivotal tension: the rapid expansion of agentic capabilities colliding with growing scrutiny over what these systems can—and cannot—reliably do. On one hand, we’re seeing AI move beyond passive assistance into active execution, from coding terminals to cybersecurity and scientific workflows. On the other, researchers and industry leaders are sounding alarms about the limits of current models, the fragility of reasoning, and the unsustainable business models built on thin layers atop foundation models. This duality—ambition versus accountability—is shaping the next phase of the AI era.\n\nNowhere is this more evident than in software development, where agentic tools are transforming how engineers work. Anthropic’s newly launched Claude Code operates directly in the terminal, interpreting natural language commands to explain code, debug issues, and automate Git workflows. It’s not just another chatbot—it’s an active participant in the development lifecycle, lowering barriers for junior developers and accelerating routine tasks for seasoned teams. Similarly, GitNexus offers a browser-based knowledge graph that maps entire codebases using Graph RAG, all without sending code to the cloud. And for those building agents themselves, the open-source Superpowers framework provides a structured methodology to integrate planning, memory, and tool use into production-grade systems. Together, these tools signal a shift from AI as a copilot to AI as a collaborator—but one that still requires human oversight, as Chris Lattner’s analysis of the Claude C Compiler reminds us. While the compiler successfully replicates decades of engineering consensus, it stumbles on novel abstractions and complex system headers, underscoring that AI excels at implementation, not invention.\n\nBeyond coding, agentic AI is making inroads into high-stakes professional domains. The open-source project Pentagi demonstrates fully autonomous penetration testing—an AI agent that can identify vulnerabilities, chain exploits, and simulate attacker behavior without human intervention. This could democratize access to advanced security assessments, especially for smaller organizations lacking dedicated red teams. Yet it also raises urgent ethical questions: how do we prevent misuse when offensive capabilities become widely accessible? The answer likely lies in responsible deployment norms and technical safeguards, but the industry is still playing catch-up. Meanwhile, Microsoft’s new Gaming CEO, Asha Sharma, has drawn a clear line in the sand against “endless AI slop,” vowing to prioritize human-crafted games even as AI enhances asset creation or gameplay mechanics. Her stance reflects a broader cultural reckoning: as AI scales content production, quality and artistic intent must not be sacrificed for speed or volume.\n\nAt the same time, the market is undergoing a painful but necessary consolidation. Google VP Darren Mowry has issued a stark warning: startups that merely wrap existing LLMs with a custom UI or route queries across multiple models face existential risk. With margins thin and differentiation scarce, these “API resellers” are unlikely to survive as the generative AI market matures. The path forward demands either deep vertical specialization—like Sarvam’s India-focused Indus chat app, powered by a 105-billion-parameter model fine-tuned for local languages—or horizontal innovation in infrastructure and tooling. Sarvam’s bet is strategic: with over 100 million weekly ChatGPT users in India alone, building sovereign AI infrastructure isn’t just commercially viable—it’s geopolitically significant. But even homegrown models must contend with fundamental limitations in reasoning, as highlighted by a new Stanford-led survey that systematically categorizes LLM failures. From formal logic gaps to brittleness under minor input perturbations, these weaknesses persist across models and hint that scaling alone won’t solve core reliability issues.\n\nSo what should you watch next? First, monitor how agentic systems evolve from isolated demos to integrated, auditable workflows—especially in regulated fields like healthcare or finance. Second, expect increased pressure on startups to demonstrate defensible moats, whether through proprietary data, unique architectures, or domain-specific validation. Third, keep an eye on hardware-software co-design breakthroughs: the fact that Llama 3.1 70B can now run on a single RTX 3090 via the ntransformer engine means massive models are no longer confined to data centers. This democratization of inference could reshape developer adoption, privacy expectations, and even the economics of model deployment. But remember: accessibility doesn’t equal reliability. As reasoning failures persist, the most valuable AI systems will be those that transparently acknowledge their limits while augmenting human judgment—not replacing it.\n\nIn sum, today’s AI developments reveal a field at an inflection point. The era of novelty-driven experimentation is giving way to one of engineering rigor, ethical responsibility, and sustainable value creation. Whether you’re a developer, founder, or end user, the message is clear: the future belongs not to those who simply deploy the latest model, but to those who thoughtfully integrate AI into workflows where it truly enhances—without eroding—human agency, creativity, and trust.",
   "audioUrl": "",
   "papers": [
+    {
+      "id": "arxiv_2602_17607v1",
+      "title": "AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing",
+      "titleZh": "AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing",
+      "titleEn": "AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing",
+      "url": "https://arxiv.org/abs/2602.17607v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "主要内容：PDEs are central to scientific and engineering modeling, yet designing accurate numerical solvers typically requires sub...；关键点：AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeli；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryZh": "主要内容：PDEs are central to scientific and engineering modeling, yet designing accurate numerical solvers typically requires sub...；关键点：AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeli；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryEn": "Main point: PDEs are central to scientific and engineering modeling, yet designing accurate numerical solvers typically requires substantial mathematical expertis.... Key takeaway: AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Co. Why it matters: this is a notable AI development to track.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Agent"
+      ],
+      "paperCategory": "General AI",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：10/10，理由：AutoNumerics实现无偏微分方程求解的全自主多智能体流程，突破科学计算自动化瓶颈，有望重塑科研范式，属历史性突破。",
+        "热度：8 / 评论 0"
+      ],
+      "score": 10.0,
+      "publishedAt": "2026-02-19T18:31:52+00:00",
+      "authors": [
+        "Jianda Du",
+        "Youran Sun",
+        "Haizhao Yang"
+      ]
+    },
+    {
+      "id": "arxiv_2602_17598v1",
+      "title": "The Cascade Equivalence Hypothesis: When Do Speech LLMs Behave Like ASR$\\rightarrow$LLM Pipelines?",
+      "titleZh": "The Cascade Equivalence Hypothesis: When Do Speech LLMs Behave Like ASR$\\rightarrow$LLM Pipelines?",
+      "titleEn": "The Cascade Equivalence Hypothesis: When Do Speech LLMs Behave Like ASR$\\rightarrow$LLM Pipelines?",
+      "url": "https://arxiv.org/abs/2602.17598v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "主要内容：Current speech LLMs largely perform implicit ASR: on tasks solvable from a transcript, they are behaviorally and mechani...；关键点：The Cascade Equivalence Hypothesis: When Do Speech LLMs Beha；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryZh": "主要内容：Current speech LLMs largely perform implicit ASR: on tasks solvable from a transcript, they are behaviorally and mechani...；关键点：The Cascade Equivalence Hypothesis: When Do Speech LLMs Beha；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryEn": "Main point: Current speech LLMs largely perform implicit ASR: on tasks solvable from a transcript, they are behaviorally and mechanistically equivalent to simple .... Key takeaway: The Cascade Equivalence Hypothesis: When Do Speech LLMs Behave Like ASR$\\rightar. Why it matters: this is a notable AI development to track.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Audio"
+      ],
+      "paperCategory": "General AI",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：10/10，理由：揭示语音LLM与ASR→LLM流水线行为等价性，颠覆对语音模型运作机制的理解，具有里程碑级理论突破意义。",
+        "热度：8 / 评论 0"
+      ],
+      "score": 10.0,
+      "publishedAt": "2026-02-19T18:22:39+00:00",
+      "authors": [
+        "Jayadev Billa"
+      ]
+    },
     {
       "id": "arxiv_2602_17260v1",
       "title": "EA-Swin: An Embedding-Agnostic Swin Transformer for AI-Generated Video Detection",
@@ -17,9 +79,9 @@
       "url": "https://arxiv.org/abs/2602.17260v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "针对当前AI生成视频（如Sora2、Veo3）日益逼真导致传统检测方法失效的问题，研究者提出EA-Swin——一种嵌入无关的Swin Transformer模型，通过因子化窗口注意力机制直接在预训练视频嵌入上建模时空依赖，兼容通用ViT风格编码器；同时构建包含13万视频的EA-Video基准数据集，涵盖多种商用与开源生成器并设置未见生成器划分以评估泛化能力。实验表明，EA-Swin在主流生成器上达到0.97–0.99准确率，较现有最先进方法（通常0.8–0.9）提升5–20%，且在跨分布场景下保持强泛化性，为AI生成视频检测提供了可扩展且鲁棒的解决方案。",
-      "summaryZh": "针对当前AI生成视频（如Sora2、Veo3）日益逼真导致传统检测方法失效的问题，研究者提出EA-Swin——一种嵌入无关的Swin Transformer模型，通过因子化窗口注意力机制直接在预训练视频嵌入上建模时空依赖，兼容通用ViT风格编码器；同时构建包含13万视频的EA-Video基准数据集，涵盖多种商用与开源生成器并设置未见生成器划分以评估泛化能力。实验表明，EA-Swin在主流生成器上达到0.97–0.99准确率，较现有最先进方法（通常0.8–0.9）提升5–20%，且在跨分布场景下保持强泛化性，为AI生成视频检测提供了可扩展且鲁棒的解决方案。",
-      "summaryEn": "To address the limitations of existing detectors against highly realistic AI-generated videos from systems like Sora2 and Veo3, researchers propose EA-Swin—an Embedding-Agnostic Swin Transformer that models spatiotemporal dependencies directly on pretrained video embeddings via a factorized windowed attention mechanism, compatible with generic ViT-style encoders. They also introduce EA-Video, a benchmark dataset of 130K videos integrating new and curated samples across diverse commercial and open-source generators, including unseen-generator splits for rigorous cross-distribution evaluation. Experiments show EA-Swin achieves 0.97–0.99 accuracy across major generators—outperforming prior state-of-the-art methods (typically 0.8–0.9) by 5–20%—while maintaining strong generalization to unseen distributions, offering a scalable and robust solution for modern AI-generated video detection.",
+      "summary": "主要内容：Recent advances in foundation video generators such as Sora2, Veo3, and other commercial systems have produced highly re...；关键点：EA-Swin: An Embedding-Agnostic Swin Transformer for AI-Gener；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryZh": "主要内容：Recent advances in foundation video generators such as Sora2, Veo3, and other commercial systems have produced highly re...；关键点：EA-Swin: An Embedding-Agnostic Swin Transformer for AI-Gener；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryEn": "Main point: Recent advances in foundation video generators such as Sora2, Veo3, and other commercial systems have produced highly realistic synthetic videos, expo.... Key takeaway: EA-Swin: An Embedding-Agnostic Swin Transformer for AI-Generated Video Detection. Why it matters: this is a notable AI development to track.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -31,7 +93,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：10/10，理由：针对Sora等生成视频的检测难题提出嵌入无关的新型检测框架，是应对深度伪造泛滥的关键技术突破，可能重塑数字内容监管格局。",
+        "模型评分：10/10，理由：针对Sora等生成视频的检测难题，提出嵌入无关的新型检测框架，是应对深度伪造泛滥的关键技术突破，具备历史性影响。",
         "热度：14 / 评论 0"
       ],
       "score": 10.0,
@@ -43,37 +105,67 @@
       ]
     },
     {
-      "id": "arxiv_2602_17217v1",
-      "title": "Continual learning and refinement of causal models through dynamic predicate invention",
-      "titleZh": "Continual learning and refinement of causal models through dynamic predicate invention",
-      "titleEn": "Continual learning and refinement of causal models through dynamic predicate invention",
-      "url": "https://arxiv.org/abs/2602.17217v1",
+      "id": "arxiv_2602_16943v1",
+      "title": "Mind the GAP: Text Safety Does Not Transfer to Tool-Call Safety in LLM Agents",
+      "titleZh": "Mind the GAP: Text Safety Does Not Transfer to Tool-Call Safety in LLM Agents",
+      "titleEn": "Mind the GAP: Text Safety Does Not Transfer to Tool-Call Safety in LLM Agents",
+      "url": "https://arxiv.org/abs/2602.16943v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "为克服传统世界模型在样本效率、可解释性和可扩展性方面的不足，研究者提出一种基于动态谓词发明的在线符号因果建模框架，将连续学习与修复融入智能体决策循环，利用元解释学习（Meta-Interpretive Learning）自动发现语义清晰且可复用的抽象概念，构建解耦的高质量概念层次。该方法在具有复杂关系动态的环境中实现高效推理，避免了命题方法的组合爆炸问题，样本效率比PPO神经网络基线高出数个数量级，显著提升了智能体对环境逻辑结构的理解能力。",
-      "summaryZh": "为克服传统世界模型在样本效率、可解释性和可扩展性方面的不足，研究者提出一种基于动态谓词发明的在线符号因果建模框架，将连续学习与修复融入智能体决策循环，利用元解释学习（Meta-Interpretive Learning）自动发现语义清晰且可复用的抽象概念，构建解耦的高质量概念层次。该方法在具有复杂关系动态的环境中实现高效推理，避免了命题方法的组合爆炸问题，样本效率比PPO神经网络基线高出数个数量级，显著提升了智能体对环境逻辑结构的理解能力。",
-      "summaryEn": "To overcome the sample inefficiency, lack of transparency, and poor scalability of standard world models, researchers propose an online symbolic causal modeling framework that integrates continuous learning and repair into the agent’s decision loop using Meta-Interpretive Learning and dynamic predicate invention to discover semantically meaningful, reusable abstractions and build a hierarchy of disentangled, high-quality concepts. Their lifted inference approach scales to domains with complex relational dynamics—avoiding the combinatorial explosion of propositional methods—and achieves sample efficiency orders of magnitude higher than the PPO neural-network baseline, significantly enhancing agents’ ability to internalize environmental logic.",
+      "summary": "主要内容：Large language models deployed as agents increasingly interact with external systems through tool calls--actions with re...；关键点：Mind the GAP: Text Safety Does Not Transfer to Tool-Call Saf；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryZh": "主要内容：Large language models deployed as agents increasingly interact with external systems through tool calls--actions with re...；关键点：Mind the GAP: Text Safety Does Not Transfer to Tool-Call Saf；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryEn": "Main point: Large language models deployed as agents increasingly interact with external systems through tool calls--actions with real-world consequences that tex.... Key takeaway: Mind the GAP: Text Safety Does Not Transfer to Tool-Call Safety in LLM Agents. Why it matters: this is a notable AI development to track.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
+        "LLM",
         "Agent",
-        "Inference",
         "RAG",
-        "Industry"
+        "Benchmark"
       ],
       "paperCategory": "General AI",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：提出动态谓词发明机制实现因果模型持续学习，是迈向可解释、可演化智能体的关键一步，具备战略级影响力。",
-        "热度：12 / 评论 0"
+        "模型评分：9/10，理由：揭示大模型文本安全与工具调用安全之间的关键鸿沟，直击AI代理落地的核心风险点，将推动全球AI安全评估标准的重构。",
+        "热度：22 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-02-19T10:08:31+00:00",
+      "publishedAt": "2026-02-18T23:17:15+00:00",
       "authors": [
-        "Enrique Crespo-Fernandez",
-        "Oliver Ray",
-        "Telmo de Menezes e Silva Filho"
+        "Arnold Cartagena",
+        "Ariane Teixeira"
+      ]
+    },
+    {
+      "id": "arxiv_2602_17602v1",
+      "title": "MolHIT: Advancing Molecular-Graph Generation with Hierarchical Discrete Diffusion Models",
+      "titleZh": "MolHIT: Advancing Molecular-Graph Generation with Hierarchical Discrete Diffusion Models",
+      "titleEn": "MolHIT: Advancing Molecular-Graph Generation with Hierarchical Discrete Diffusion Models",
+      "url": "https://arxiv.org/abs/2602.17602v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "主要内容：Molecular generation with diffusion models has emerged as a promising direction for AI-driven drug discovery and materia...；关键点：MolHIT: Advancing Molecular-Graph Generation with Hierarchic；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryZh": "主要内容：Molecular generation with diffusion models has emerged as a promising direction for AI-driven drug discovery and materia...；关键点：MolHIT: Advancing Molecular-Graph Generation with Hierarchic；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryEn": "Main point: Molecular generation with diffusion models has emerged as a promising direction for AI-driven drug discovery and materials science. While graph diffus.... Key takeaway: MolHIT: Advancing Molecular-Graph Generation with Hierarchical Discrete Diffusio. Why it matters: this is a notable AI development to track.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Diffusion"
+      ],
+      "paperCategory": "General AI",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：在分子图生成中引入分层离散扩散模型，显著提升化学有效性，有望加速药物发现进程，具备跨行业变革潜力。",
+        "热度：9 / 评论 0"
+      ],
+      "score": 9.0,
+      "publishedAt": "2026-02-19T18:27:11+00:00",
+      "authors": [
+        "Hojung Jung",
+        "Rodrigo Hormazabal",
+        "Jaehyeong Jo"
       ]
     },
     {
@@ -84,9 +176,9 @@
       "url": "https://arxiv.org/abs/2602.17016v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "为实现数学文献的大规模自动化形式化，研究者提出M2F（Math-to-Formal）——首个支持端到端项目级自动形式化的智能体框架，专用于Lean语言。该框架分两阶段工作：先通过依赖排序和声明骨架修复完成语句编译（允许证明占位符），再通过目标条件局部编辑闭合证明空洞，并全程将验证器纳入反馈循环以确保每步修改有效。在约三周内，M2F成功将479页实分析与凸分析教材转化为153,853行完整Lean代码，形式化速度远超专家人工所需数月甚至数年；在FATE-H基准上达到96%证明成功率（强基线为80%），首次证明大规模数学文献自动形式化已切实可行。",
-      "summaryZh": "为实现数学文献的大规模自动化形式化，研究者提出M2F（Math-to-Formal）——首个支持端到端项目级自动形式化的智能体框架，专用于Lean语言。该框架分两阶段工作：先通过依赖排序和声明骨架修复完成语句编译（允许证明占位符），再通过目标条件局部编辑闭合证明空洞，并全程将验证器纳入反馈循环以确保每步修改有效。在约三周内，M2F成功将479页实分析与凸分析教材转化为153,853行完整Lean代码，形式化速度远超专家人工所需数月甚至数年；在FATE-H基准上达到96%证明成功率（强基线为80%），首次证明大规模数学文献自动形式化已切实可行。",
-      "summaryEn": "To enable large-scale automated formalization of mathematical literature, researchers present M2F (Math-to-Formal)—the first agentic framework for end-to-end, project-scale autoformalization in Lean. Operating in two stages, M2F first compiles statements by splitting documents into atomic blocks, ordering them via inferred dependencies, and repairing declaration skeletons until the project compiles (allowing proof placeholders); it then closes proof holes using goal-conditioned local edits under fixed signatures. Crucially, the verifier remains in the loop throughout, accepting only edits confirmed by toolchain feedback. In approximately three weeks, M2F converted 479 pages of real and convex analysis textbooks into a 153,853-line Lean library—achieving what would typically require months or years of expert effort—and attained 96% proof success on FATE-H versus 80% for a strong baseline, demonstrating that practical, large-scale autoformalization is now within reach.",
+      "summary": "主要内容：Automated formalization of mathematics enables mechanical verification but remains limited to isolated theorems and shor...；关键点：M2F: Automated Formalization of Mathematical Literature at S；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryZh": "主要内容：Automated formalization of mathematics enables mechanical verification but remains limited to isolated theorems and shor...；关键点：M2F: Automated Formalization of Mathematical Literature at S；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryEn": "Main point: Automated formalization of mathematics enables mechanical verification but remains limited to isolated theorems and short snippets. Scaling to textboo.... Key takeaway: M2F: Automated Formalization of Mathematical Literature at Scale. Why it matters: this is a notable AI development to track.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -98,7 +190,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：实现数学文献规模化形式化，突破自动化验证瓶颈，有望重塑学术研究可信性与知识可计算性，具备战略级影响力。",
+        "模型评分：9/10，理由：首次实现数学文献大规模自动化形式化，突破现有工具局限，推动可验证AI与数学研究深度融合，具有战略意义。",
         "热度：9 / 评论 0"
       ],
       "score": 9.0,
@@ -117,9 +209,9 @@
       "url": "https://arxiv.org/abs/2602.17017v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "微软Dynamics 365 Sales推出的Sales Research Agent能连接企业实时CRM数据，理解复杂数据库结构，并生成文本与图表形式的决策就绪洞察；为量化其性能，团队同步开发了Sales Research Bench基准，从文本与图表的接地性、相关性、可解释性、模式准确性等八个客户加权维度评估系统。在2025年10月19日对定制企业架构的200题测试中，该智能体以13分优势超越Claude Sonnet 4.5、24.1分领先ChatGPT-5（满分100），为企业用户提供了一种可重复、透明的AI销售分析工具比较标准。",
-      "summaryZh": "微软Dynamics 365 Sales推出的Sales Research Agent能连接企业实时CRM数据，理解复杂数据库结构，并生成文本与图表形式的决策就绪洞察；为量化其性能，团队同步开发了Sales Research Bench基准，从文本与图表的接地性、相关性、可解释性、模式准确性等八个客户加权维度评估系统。在2025年10月19日对定制企业架构的200题测试中，该智能体以13分优势超越Claude Sonnet 4.5、24.1分领先ChatGPT-5（满分100），为企业用户提供了一种可重复、透明的AI销售分析工具比较标准。",
-      "summaryEn": "Microsoft’s Dynamics 365 Sales introduces the Sales Research Agent—an AI system that connects to live CRM data, reasons over complex schemas, and delivers decision-ready insights via text and charts. To objectively evaluate its quality, the team developed the Sales Research Bench, a purpose-built benchmark scoring systems across eight customer-weighted dimensions: text and chart groundedness, relevance, explainability, schema accuracy, and chart quality. In a 200-question evaluation on a customized enterprise schema on October 19, 2025, the agent outperformed Claude Sonnet 4.5 by 13 points and ChatGPT-5 by 24.1 points on a 100-point composite score, providing enterprises with a transparent, repeatable method to compare AI-powered sales analytics solutions.",
+      "summary": "主要内容：Enterprises increasingly need AI systems that can answer sales-leader questions over live, customized CRM data, but most...；关键点：Sales Research Agent and Sales Research Bench；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryZh": "主要内容：Enterprises increasingly need AI systems that can answer sales-leader questions over live, customized CRM data, but most...；关键点：Sales Research Agent and Sales Research Bench；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryEn": "Main point: Enterprises increasingly need AI systems that can answer sales-leader questions over live, customized CRM data, but most available models do not expos.... Key takeaway: Sales Research Agent and Sales Research Bench. Why it matters: this is a notable AI development to track.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -132,109 +224,13 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：微软发布企业级销售研究代理及基准，标志着AI深度嵌入CRM生态，推动企业智能化转型，具备全球产业级示范效应。",
+        "模型评分：9/10，理由：微软发布首个企业级销售研究AI系统并配套基准测试，标志着AI深度融入企业CRM生态，具备全球商业落地示范效应。",
         "热度：11 / 评论 0"
       ],
       "score": 9.0,
       "publishedAt": "2025-12-01T19:44:04+00:00",
       "authors": [
         "Deepanjan Bhol"
-      ]
-    },
-    {
-      "id": "arxiv_2602_17607v1",
-      "title": "AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing",
-      "titleZh": "AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing",
-      "titleEn": "AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing",
-      "url": "https://arxiv.org/abs/2602.17607v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "针对偏微分方程（PDE）数值求解依赖专家经验且神经网络方法可解释性差的问题，研究者提出AutoNumerics——一个无需预设PDE类型的多智能体自主管道，能直接从自然语言描述出发，自动设计、实现、调试并验证经典数值格式的求解器。该框架采用由粗到精的执行策略与残差自验证机制，生成透明、基于传统数值分析的解法。在24个经典及真实PDE问题上的实验表明，AutoNumerics在精度上媲美或优于现有神经与大模型基线，并能根据PDE结构特性正确选择数值方案，为科学计算提供了一种可解释、低门槛的自动化范式。",
-      "summaryZh": "针对偏微分方程（PDE）数值求解依赖专家经验且神经网络方法可解释性差的问题，研究者提出AutoNumerics——一个无需预设PDE类型的多智能体自主管道，能直接从自然语言描述出发，自动设计、实现、调试并验证经典数值格式的求解器。该框架采用由粗到精的执行策略与残差自验证机制，生成透明、基于传统数值分析的解法。在24个经典及真实PDE问题上的实验表明，AutoNumerics在精度上媲美或优于现有神经与大模型基线，并能根据PDE结构特性正确选择数值方案，为科学计算提供了一种可解释、低门槛的自动化范式。",
-      "summaryEn": "Addressing the reliance on expert knowledge in PDE solver design and the poor interpretability of neural approaches, researchers introduce AutoNumerics—a multi-agent, PDE-agnostic pipeline that autonomously designs, implements, debugs, and verifies classical numerical solvers directly from natural language descriptions. Unlike black-box neural solvers, AutoNumerics generates transparent, numerically grounded methods using a coarse-to-fine execution strategy and a residual-based self-verification mechanism. Experiments on 24 canonical and real-world PDE problems show it achieves competitive or superior accuracy compared to neural and LLM-based baselines and correctly selects numerical schemes based on PDE structural properties, establishing an interpretable, accessible paradigm for automated scientific computing.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "LLM",
-        "Agent"
-      ],
-      "paperCategory": "General AI",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：构建无偏PDE求解的多智能体自动流水线，突破科学计算领域专家依赖瓶颈，可能重塑工程仿真与科研范式。",
-        "热度：8 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-19T18:31:52+00:00",
-      "authors": [
-        "Jianda Du",
-        "Youran Sun",
-        "Haizhao Yang"
-      ]
-    },
-    {
-      "id": "arxiv_2602_17598v1",
-      "title": "The Cascade Equivalence Hypothesis: When Do Speech LLMs Behave Like ASR$\\rightarrow$LLM Pipelines?",
-      "titleZh": "The Cascade Equivalence Hypothesis: When Do Speech LLMs Behave Like ASR$\\rightarrow$LLM Pipelines?",
-      "titleEn": "The Cascade Equivalence Hypothesis: When Do Speech LLMs Behave Like ASR$\\rightarrow$LLM Pipelines?",
-      "url": "https://arxiv.org/abs/2602.17598v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "研究发现，当前多数语音大模型（如Ultravox）在可从转录文本解决的任务上，其行为与Whisper→LLM级联管道几乎等效：通过匹配主干模型控制变量实验，Ultravox与对应级联系统的Cohen’s κ达0.93；隐藏层中可检测到显式文本表征，且擦除该表征会使两类架构性能均崩溃至接近零。仅Qwen2-Audio表现出真实差异，表明级联等效性取决于架构而非普遍规律。这意味着多数部署中的语音大模型实质是昂贵的级联系统，在噪声环境下表现更差——干净条件下最多7.6%的优势在0 dB信噪比时完全逆转。",
-      "summaryZh": "研究发现，当前多数语音大模型（如Ultravox）在可从转录文本解决的任务上，其行为与Whisper→LLM级联管道几乎等效：通过匹配主干模型控制变量实验，Ultravox与对应级联系统的Cohen’s κ达0.93；隐藏层中可检测到显式文本表征，且擦除该表征会使两类架构性能均崩溃至接近零。仅Qwen2-Audio表现出真实差异，表明级联等效性取决于架构而非普遍规律。这意味着多数部署中的语音大模型实质是昂贵的级联系统，在噪声环境下表现更差——干净条件下最多7.6%的优势在0 dB信噪比时完全逆转。",
-      "summaryEn": "A study reveals that most current speech LLMs (e.g., Ultravox) behave nearly identically to simple Whisper→LLM cascade pipelines on tasks solvable from transcripts: matched-backbone experiments show Ultravox is statistically indistinguishable from its cascade counterpart (κ=0.93), logit lens uncovers literal text emerging in hidden states, and erasing these representations collapses accuracy to near-zero in both architectures. Only Qwen2-Audio genuinely diverges, indicating cascade equivalence is architecture-dependent, not universal. This implies most deployed speech LLMs are effectively expensive cascades—and under noise, worse ones, as their clean-condition advantage (up to 7.6%) reverses at 0 dB SNR.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "LLM",
-        "Audio"
-      ],
-      "paperCategory": "General AI",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：揭示语音大模型与ASR+LLM流水线行为等价性，深刻影响模型设计与评估范式，具备战略级行业洞察力。",
-        "热度：8 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-19T18:22:39+00:00",
-      "authors": [
-        "Jayadev Billa"
-      ]
-    },
-    {
-      "id": "arxiv_2602_17345v1",
-      "title": "What Breaks Embodied AI Security:LLM Vulnerabilities, CPS Flaws,or Something Else?",
-      "titleZh": "What Breaks Embodied AI Security:LLM Vulnerabilities, CPS Flaws,or Something Else?",
-      "titleEn": "What Breaks Embodied AI Security:LLM Vulnerabilities, CPS Flaws,or Something Else?",
-      "url": "https://arxiv.org/abs/2602.17345v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "针对具身AI（如自动驾驶汽车、服务机器人）在现实部署中面临的安全挑战，该综述指出，仅从大语言模型漏洞或传统信息物理系统（CPS）缺陷角度分析是不足的；真正关键的风险源于“具身引发的系统级不匹配”：语言层面的语义正确性无法保证物理安全（因忽略几何、动力学与接触约束）；相同动作在不同物理状态下因非线性动态产生迥异结果；感知-决策-行动环路中的微小误差会放大传播；局部安全决策随时间累积可能导致全局不安全。因此，保障具身AI安全需超越组件级防御，转向对物理风险、不确定性与故障传播的系统级建模。",
-      "summaryZh": "针对具身AI（如自动驾驶汽车、服务机器人）在现实部署中面临的安全挑战，该综述指出，仅从大语言模型漏洞或传统信息物理系统（CPS）缺陷角度分析是不足的；真正关键的风险源于“具身引发的系统级不匹配”：语言层面的语义正确性无法保证物理安全（因忽略几何、动力学与接触约束）；相同动作在不同物理状态下因非线性动态产生迥异结果；感知-决策-行动环路中的微小误差会放大传播；局部安全决策随时间累积可能导致全局不安全。因此，保障具身AI安全需超越组件级防御，转向对物理风险、不确定性与故障传播的系统级建模。",
-      "summaryEn": "This survey argues that analyzing embodied AI security solely through LLM vulnerabilities or traditional Cyber-Physical System (CPS) flaws is insufficient. Instead, a critical class of failures stems from embodiment-induced system-level mismatches: semantic correctness does not guarantee physical safety (as language reasoning abstracts away geometry, dynamics, and contact); identical actions yield divergent outcomes due to nonlinear dynamics and state uncertainty; small errors amplify across tightly coupled perception-decision-action loops; and locally safe decisions can accumulate into globally unsafe behavior over time. Securing embodied AI thus requires moving beyond component-level defenses toward system-level reasoning about physical risk, uncertainty, and failure propagation.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "LLM",
-        "Agent",
-        "Robotics",
-        "Reasoning"
-      ],
-      "paperCategory": "General AI",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：系统性分析具身AI安全瓶颈，涵盖LLM与物理系统双重风险，推动全球对智能体安全标准的讨论，影响深远。",
-        "热度：14 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-19T13:29:00+00:00",
-      "authors": [
-        "Boyang Ma",
-        "Hechuan Guo",
-        "Peizhuo Lv"
       ]
     },
     {
@@ -245,9 +241,9 @@
       "url": "https://arxiv.org/abs/2602.17168v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "针对多模态对比学习模型中的后门攻击难以兼顾隐蔽性与持久性的问题，研究者提出BadCLIP++框架：通过语义融合QR微触发器将不可感知图案嵌入任务相关区域以维持干净数据统计特性，并结合目标对齐子集选择增强低投毒率下的攻击信号；为提升持久性，采用半径收缩与质心对齐稳定触发嵌入，并通过曲率控制与弹性权重巩固使模型参数驻留在抗微调的宽平坦损失盆地中。理论分析首次证明，在信任区域内干净微调与后门目标的梯度方向一致，攻击成功率衰减存在非增上界。实验显示，仅0.3%投毒率下，BadCLIP++在数字攻击中达成99.99%成功率（超基线11.4点），在19种防御下仍保持>99.90%成功率且干净准确率下降<0.8%，并在物理攻击中取得65.03%成功率，对水印移除防御亦具鲁棒性。",
-      "summaryZh": "针对多模态对比学习模型中的后门攻击难以兼顾隐蔽性与持久性的问题，研究者提出BadCLIP++框架：通过语义融合QR微触发器将不可感知图案嵌入任务相关区域以维持干净数据统计特性，并结合目标对齐子集选择增强低投毒率下的攻击信号；为提升持久性，采用半径收缩与质心对齐稳定触发嵌入，并通过曲率控制与弹性权重巩固使模型参数驻留在抗微调的宽平坦损失盆地中。理论分析首次证明，在信任区域内干净微调与后门目标的梯度方向一致，攻击成功率衰减存在非增上界。实验显示，仅0.3%投毒率下，BadCLIP++在数字攻击中达成99.99%成功率（超基线11.4点），在19种防御下仍保持>99.90%成功率且干净准确率下降<0.8%，并在物理攻击中取得65.03%成功率，对水印移除防御亦具鲁棒性。",
-      "summaryEn": "To address the dual challenges of stealthiness and persistence in backdoor attacks against multimodal contrastive learning models, researchers propose BadCLIP++. For stealth, it embeds imperceptible semantic-fusion QR micro-triggers near task-relevant regions to preserve clean-data statistics and uses target-aligned subset selection to strengthen signals at low poisoning rates. For persistence, it stabilizes trigger embeddings via radius shrinkage and centroid alignment, and model parameters through curvature control and elastic weight consolidation—keeping solutions in a wide, low-curvature loss basin resistant to fine-tuning. The work provides the first theoretical analysis showing co-directional gradients between clean fine-tuning and backdoor objectives within a trust region, yielding a non-increasing upper bound on attack degradation. Experiments show BadCLIP++ achieves 99.99% attack success rate (ASR) with only 0.3% poisoning—surpassing baselines by 11.4 points—maintains >99.90% ASR across 19 defenses with <0.8% clean accuracy drop, attains 65.03% success in physical attacks, and resists watermark removal defenses.",
+      "summary": "主要内容：Research on backdoor attacks against multimodal contrastive learning models faces two key challenges: stealthiness and p...；关键点：BadCLIP++: Stealthy and Persistent Backdoors in Multimodal C；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryZh": "主要内容：Research on backdoor attacks against multimodal contrastive learning models faces two key challenges: stealthiness and p...；关键点：BadCLIP++: Stealthy and Persistent Backdoors in Multimodal C；为什么重要：这是近期 AI 领域值得关注的进展。",
+      "summaryEn": "Main point: Research on backdoor attacks against multimodal contrastive learning models faces two key challenges: stealthiness and persistence. Existing methods o.... Key takeaway: BadCLIP++: Stealthy and Persistent Backdoors in Multimodal Contrastive Learning. Why it matters: this is a notable AI development to track.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -260,7 +256,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：揭示多模态对比学习中的隐蔽后门攻击新范式，直接威胁AI系统安全，引发全球对生成内容可信性的深度反思，推动安全标准升级。",
+        "模型评分：9/10，理由：揭示多模态对比学习中的隐蔽后门攻击，直击AI安全核心风险，对全球AI可信化建设具有战略意义。",
         "热度：16 / 评论 0"
       ],
       "score": 9.0,
@@ -272,35 +268,36 @@
       ]
     },
     {
-      "id": "arxiv_2602_17601v1",
-      "title": "Graph Neural Model Predictive Control for High-Dimensional Systems",
-      "titleZh": "Graph Neural Model Predictive Control for High-Dimensional Systems",
-      "titleEn": "Graph Neural Model Predictive Control for High-Dimensional Systems",
-      "url": "https://arxiv.org/abs/2602.17601v1",
+      "id": "arxiv_2602_17200v1",
+      "title": "GASS: Geometry-Aware Spherical Sampling for Disentangled Diversity Enhancement in Text-to-Image Generation",
+      "titleZh": "GASS: Geometry-Aware Spherical Sampling for Disentangled Diversity Enhancement in Text-to-Image Generation",
+      "titleEn": "GASS: Geometry-Aware Spherical Sampling for Disentangled Diversity Enhancement in Text-to-Image Generation",
+      "url": "https://arxiv.org/abs/2602.17200v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "主要内容：The control of high-dimensional systems, such as soft robots, requires models that faithfully capture complex dynamics w...；关键点：Graph Neural Model Predictive Control for High-Dimensional S；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryZh": "主要内容：The control of high-dimensional systems, such as soft robots, requires models that faithfully capture complex dynamics w...；关键点：Graph Neural Model Predictive Control for High-Dimensional S；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryEn": "Main point: The control of high-dimensional systems, such as soft robots, requires models that faithfully capture complex dynamics while remaining computationally.... Key takeaway: Graph Neural Model Predictive Control for High-Dimensional Systems. Why it matters: this is a notable AI development to track.",
+      "summary": "针对文本到图像生成模型多样性不足的问题，研究提出几何感知球面采样（GASS）方法，通过在CLIP嵌入空间中将多样性分解为与提示相关和无关的两个正交方向——分别对应语义变化和背景等无关变化——并沿这两个轴扩展生成轨迹的几何投影，从而实现解耦的多样性增强；在多种冻结T2I骨干模型（包括U-Net、DiT及扩散与流模型）上的实验表明，该方法在几乎不损害图像保真度和语义对齐的前提下显著提升生成多样性。",
+      "summaryZh": "针对文本到图像生成模型多样性不足的问题，研究提出几何感知球面采样（GASS）方法，通过在CLIP嵌入空间中将多样性分解为与提示相关和无关的两个正交方向——分别对应语义变化和背景等无关变化——并沿这两个轴扩展生成轨迹的几何投影，从而实现解耦的多样性增强；在多种冻结T2I骨干模型（包括U-Net、DiT及扩散与流模型）上的实验表明，该方法在几乎不损害图像保真度和语义对齐的前提下显著提升生成多样性。",
+      "summaryEn": "To address the limited diversity in text-to-image (T2I) generation, this work proposes Geometry-Aware Spherical Sampling (GASS), which decomposes diversity in CLIP embedding space into two orthogonal directions: one aligned with the text prompt (semantic variation) and another capturing prompt-independent factors (e.g., backgrounds). By expanding the geometric projection spread of generated embeddings along both axes during sampling, GASS enables disentangled diversity enhancement. Experiments across frozen T2I backbones—including U-Net, DiT, diffusion, and flow models—show significant diversity gains with minimal impact on image fidelity or semantic alignment.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
-        "Robotics",
-        "RAG"
+        "Vision",
+        "Diffusion",
+        "Benchmark"
       ],
-      "paperCategory": "Robotics",
+      "paperCategory": "Computer Vision",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：将图神经网络与模型预测控制结合，为高维系统（如软体机器人）提供高效可扩展的控制框架，具备推动先进机器人系统落地的战略意义。",
-        "热度：8 / 评论 0"
+        "模型评分：9/10，理由：通过几何感知采样显著提升文本到图像生成多样性，直击当前主流模型核心缺陷，具备产业变革潜力。",
+        "热度：9 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-02-19T18:26:42+00:00",
+      "publishedAt": "2026-02-19T09:41:32+00:00",
       "authors": [
-        "Patrick Benito Eberhard",
-        "Luis Pabon",
-        "Daniele Gammelli"
+        "Ye Zhu",
+        "Kaleb S. Newman",
+        "Johannes F. Lutzeyer"
       ]
     },
     {
@@ -311,9 +308,9 @@
       "url": "https://arxiv.org/abs/2602.16872v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "主要内容：Optical Character Recognition (OCR) is a fundamental task for digitizing information, serving as a critical bridge betwe...；关键点：DODO: Discrete OCR Diffusion Models；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryZh": "主要内容：Optical Character Recognition (OCR) is a fundamental task for digitizing information, serving as a critical bridge betwe...；关键点：DODO: Discrete OCR Diffusion Models；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryEn": "Main point: Optical Character Recognition (OCR) is a fundamental task for digitizing information, serving as a critical bridge between visual data and textual und.... Key takeaway: DODO: Discrete OCR Diffusion Models. Why it matters: this is a notable AI development to track.",
+      "summary": "针对光学字符识别（OCR）任务中自回归解码速度慢的问题，研究提出DODO模型，首次将块状离散扩散机制引入视觉语言模型，通过分块并行生成缓解全局扩散中的同步错误，在保持接近最先进准确率的同时实现最高3倍的推理加速，有效释放了扩散模型在确定性序列生成任务中的潜力。",
+      "summaryZh": "针对光学字符识别（OCR）任务中自回归解码速度慢的问题，研究提出DODO模型，首次将块状离散扩散机制引入视觉语言模型，通过分块并行生成缓解全局扩散中的同步错误，在保持接近最先进准确率的同时实现最高3倍的推理加速，有效释放了扩散模型在确定性序列生成任务中的潜力。",
+      "summaryEn": "Addressing the computational inefficiency of autoregressive decoding in Optical Character Recognition (OCR), this work introduces DODO—the first Vision-Language Model (VLM) to employ block discrete diffusion for OCR. By decomposing text generation into parallelizable blocks, DODO mitigates synchronization errors inherent in global diffusion approaches. The method achieves near state-of-the-art accuracy while accelerating inference by up to 3× compared to autoregressive baselines, unlocking the potential of diffusion models for highly deterministic sequence tasks like OCR.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -326,7 +323,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：提出离散OCR扩散模型，突破传统自回归解码瓶颈，有望重塑文档理解与信息提取范式，对通用视觉语言模型发展具有战略影响。",
+        "模型评分：9/10，理由：DODO首次将扩散模型应用于离散OCR任务，打破传统自回归范式，有望重塑文档智能处理架构，具备重大产业影响潜力。",
         "热度：16 / 评论 0"
       ],
       "score": 9.0,
@@ -338,37 +335,34 @@
       ]
     },
     {
-      "id": "arxiv_2602_17124v1",
-      "title": "3D Scene Rendering with Multimodal Gaussian Splatting",
-      "titleZh": "3D Scene Rendering with Multimodal Gaussian Splatting",
-      "titleEn": "3D Scene Rendering with Multimodal Gaussian Splatting",
-      "url": "https://arxiv.org/abs/2602.17124v1",
+      "id": "arxiv_2602_17321v1",
+      "title": "The Sound of Death: Deep Learning Reveals Vascular Damage from Carotid Ultrasound",
+      "titleZh": "The Sound of Death: Deep Learning Reveals Vascular Damage from Carotid Ultrasound",
+      "titleEn": "The Sound of Death: Deep Learning Reveals Vascular Damage from Carotid Ultrasound",
+      "url": "https://arxiv.org/abs/2602.17321v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "主要内容：3D scene reconstruction and rendering are core tasks in computer vision, with applications spanning industrial monitorin...；关键点：3D Scene Rendering with Multimodal Gaussian Splatting；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryZh": "主要内容：3D scene reconstruction and rendering are core tasks in computer vision, with applications spanning industrial monitorin...；关键点：3D Scene Rendering with Multimodal Gaussian Splatting；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryEn": "Main point: 3D scene reconstruction and rendering are core tasks in computer vision, with applications spanning industrial monitoring, robotics, and autonomous dr.... Key takeaway: 3D Scene Rendering with Multimodal Gaussian Splatting. Why it matters: this is a notable AI development to track.",
+      "summary": "研究开发了一种深度学习框架，仅利用常规颈动脉超声视频即可提取血管损伤（VD）的临床可解释表征，以高血压作为弱标签训练模型；该模型识别出的高VD风险个体在心肌梗死、心脏性死亡和全因死亡率上显著升高，预测性能媲美或优于传统SCORE2风险模型，且依赖的特征聚焦于血管形态与周围组织特性，为无创、低成本、无需实验室检测的大规模心血管风险筛查提供了新工具。",
+      "summaryZh": "研究开发了一种深度学习框架，仅利用常规颈动脉超声视频即可提取血管损伤（VD）的临床可解释表征，以高血压作为弱标签训练模型；该模型识别出的高VD风险个体在心肌梗死、心脏性死亡和全因死亡率上显著升高，预测性能媲美或优于传统SCORE2风险模型，且依赖的特征聚焦于血管形态与周围组织特性，为无创、低成本、无需实验室检测的大规模心血管风险筛查提供了新工具。",
+      "summaryEn": "This study presents a deep learning framework that extracts clinically interpretable representations of vascular damage (VD) from routine carotid ultrasound videos using hypertension as a weak proxy label. The model identifies high VD as a strong predictor of myocardial infarction, cardiac death, and all-cause mortality—matching or outperforming conventional risk scores like SCORE2. Explainable AI reveals reliance on vessel morphology and perivascular tissue characteristics, demonstrating that standard ultrasound contains untapped prognostic value and enabling scalable, non-invasive cardiovascular risk assessment without lab tests or complex clinical inputs.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
-        "Vision",
-        "Multimodal",
-        "Robotics",
-        "3D"
+        "Vision"
       ],
       "paperCategory": "Computer Vision",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：将多模态高斯点云渲染推向新高度，为工业监控、自动驾驶等关键领域提供高效高保真3D重建方案，具备显著产业转化潜力。",
-        "热度：13 / 评论 0"
+        "模型评分：9/10，理由：利用深度学习从颈动脉超声中识别血管损伤，为心血管疾病早期筛查提供新范式，具有全球公共卫生影响力。",
+        "热度：10 / 评论 0"
       ],
-      "score": 8.0,
-      "publishedAt": "2026-02-19T06:49:53+00:00",
+      "score": 9.0,
+      "publishedAt": "2026-02-19T12:37:48+00:00",
       "authors": [
-        "Chi-Shiang Gau",
-        "Konstantinos D. Polyzos",
-        "Athanasios Bacharis"
+        "Christoph Balada",
+        "Aida Romano-Martinez",
+        "Payal Varshney"
       ]
     },
     {
@@ -379,9 +373,9 @@
       "url": "https://arxiv.org/abs/2602.17196v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "主要内容：Multimodal large language models (MLLMs) incur substantial inference cost due to the processing of hundreds of visual to...；关键点：EntropyPrune: Matrix Entropy Guided Visual Token Pruning for；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryZh": "主要内容：Multimodal large language models (MLLMs) incur substantial inference cost due to the processing of hundreds of visual to...；关键点：EntropyPrune: Matrix Entropy Guided Visual Token Pruning for；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryEn": "Main point: Multimodal large language models (MLLMs) incur substantial inference cost due to the processing of hundreds of visual tokens per image. Although token.... Key takeaway: EntropyPrune: Matrix Entropy Guided Visual Token Pruning for Multimodal Large La. Why it matters: this is a notable AI development to track.",
+      "summary": "为降低多模态大语言模型（MLLMs）的推理成本，研究提出EntropyPrune方法，基于视觉token表示矩阵的熵值识别“熵坍缩层”作为剪枝时机，并通过谱等价性加速计算，实现无需注意力图的高效冗余token剪枝；在LLaVA-1.5-7B上减少68.2% FLOPs的同时保留96.0%原始性能，且可泛化至高分辨率与视频模型，显著提升MLLM推理效率。",
+      "summaryZh": "为降低多模态大语言模型（MLLMs）的推理成本，研究提出EntropyPrune方法，基于视觉token表示矩阵的熵值识别“熵坍缩层”作为剪枝时机，并通过谱等价性加速计算，实现无需注意力图的高效冗余token剪枝；在LLaVA-1.5-7B上减少68.2% FLOPs的同时保留96.0%原始性能，且可泛化至高分辨率与视频模型，显著提升MLLM推理效率。",
+      "summaryEn": "To reduce inference costs in Multimodal Large Language Models (MLLMs), this work introduces EntropyPrune—a matrix-entropy-guided visual token pruning framework that identifies an 'Entropy Collapse Layer' (ECL) where information content sharply drops, providing a principled pruning stage. By leveraging spectral equivalence of dual Gram matrices, it avoids attention maps and achieves up to 64× theoretical speedup in entropy computation. On LLaVA-1.5-7B, EntropyPrune cuts FLOPs by 68.2% while retaining 96.0% of original performance and generalizes effectively to high-resolution and video-based MLLMs.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -394,7 +388,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：提出基于矩阵熵的视觉令牌剪枝方法，有效降低多模态大模型推理开销，对边缘设备部署和实时应用具有重要推动作用。",
+        "模型评分：8/10，理由：基于矩阵熵的视觉令牌剪枝方法显著降低多模态大模型推理成本，为实际部署提供关键技术支撑。",
         "热度：17 / 评论 0"
       ],
       "score": 8.0,
@@ -406,72 +400,6 @@
       ]
     },
     {
-      "id": "arxiv_2602_17182v1",
-      "title": "NRGS-SLAM: Monocular Non-Rigid SLAM for Endoscopy via Deformation-Aware 3D Gaussian Splatting",
-      "titleZh": "NRGS-SLAM: Monocular Non-Rigid SLAM for Endoscopy via Deformation-Aware 3D Gaussian Splatting",
-      "titleEn": "NRGS-SLAM: Monocular Non-Rigid SLAM for Endoscopy via Deformation-Aware 3D Gaussian Splatting",
-      "url": "https://arxiv.org/abs/2602.17182v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "主要内容：Visual simultaneous localization and mapping (V-SLAM) is a fundamental capability for autonomous perception and navigati...；关键点：NRGS-SLAM: Monocular Non-Rigid SLAM for Endoscopy via Deform；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryZh": "主要内容：Visual simultaneous localization and mapping (V-SLAM) is a fundamental capability for autonomous perception and navigati...；关键点：NRGS-SLAM: Monocular Non-Rigid SLAM for Endoscopy via Deform；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryEn": "Main point: Visual simultaneous localization and mapping (V-SLAM) is a fundamental capability for autonomous perception and navigation. However, endoscopic scenes.... Key takeaway: NRGS-SLAM: Monocular Non-Rigid SLAM for Endoscopy via Deformation-Aware 3D Gauss. Why it matters: this is a notable AI development to track.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Vision",
-        "3D",
-        "Research"
-      ],
-      "paperCategory": "Computer Vision",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：解决内窥镜场景下非刚性SLAM的核心难题，结合变形感知的3D高斯溅射，对医疗机器人与精准手术导航具有变革性意义。",
-        "热度：10 / 评论 0"
-      ],
-      "score": 8.0,
-      "publishedAt": "2026-02-19T09:03:47+00:00",
-      "authors": [
-        "Jiwei Shan",
-        "Zeyu Cai",
-        "Yirui Li"
-      ]
-    },
-    {
-      "id": "arxiv_2602_16764v1",
-      "title": "Machine Learning Argument of Latitude Error Model for LEO Satellite Orbit and Covariance Correction",
-      "titleZh": "Machine Learning Argument of Latitude Error Model for LEO Satellite Orbit and Covariance Correction",
-      "titleEn": "Machine Learning Argument of Latitude Error Model for LEO Satellite Orbit and Covariance Correction",
-      "url": "https://arxiv.org/abs/2602.16764v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "主要内容：Low Earth orbit (LEO) satellites are leveraged to support new position, navigation, and timing (PNT) service alternative...；关键点：Machine Learning Argument of Latitude Error Model for LEO Sa；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryZh": "主要内容：Low Earth orbit (LEO) satellites are leveraged to support new position, navigation, and timing (PNT) service alternative...；关键点：Machine Learning Argument of Latitude Error Model for LEO Sa；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryEn": "Main point: Low Earth orbit (LEO) satellites are leveraged to support new position, navigation, and timing (PNT) service alternatives to GNSS. These alternatives .... Key takeaway: Machine Learning Argument of Latitude Error Model for LEO Satellite Orbit and Co. Why it matters: this is a notable AI development to track.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "3D",
-        "RAG",
-        "Open Source"
-      ],
-      "paperCategory": "Robotics",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：面向LEO卫星轨道误差建模与协方差修正，对下一代非GNSS导航系统（如星链PNT）有关键支撑作用，影响全球定位基础设施演进。",
-        "热度：9 / 评论 0"
-      ],
-      "score": 8.0,
-      "publishedAt": "2026-02-18T17:23:14+00:00",
-      "authors": [
-        "Alex Moody",
-        "Penina Axelrad",
-        "Rebecca Russell"
-      ]
-    },
-    {
       "id": "arxiv_2602_16870v1",
       "title": "Boreas Road Trip: A Multi-Sensor Autonomous Driving Dataset on Challenging Roads",
       "titleZh": "Boreas Road Trip: A Multi-Sensor Autonomous Driving Dataset on Challenging Roads",
@@ -479,9 +407,9 @@
       "url": "https://arxiv.org/abs/2602.16870v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "主要内容：The Boreas Road Trip (Boreas-RT) dataset extends the multi-season Boreas dataset to new and diverse locations that pose ...；关键点：Boreas Road Trip: A Multi-Sensor Autonomous Driving Dataset ；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryZh": "主要内容：The Boreas Road Trip (Boreas-RT) dataset extends the multi-season Boreas dataset to new and diverse locations that pose ...；关键点：Boreas Road Trip: A Multi-Sensor Autonomous Driving Dataset ；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryEn": "Main point: The Boreas Road Trip (Boreas-RT) dataset extends the multi-season Boreas dataset to new and diverse locations that pose challenges for modern autonomo.... Key takeaway: Boreas Road Trip: A Multi-Sensor Autonomous Driving Dataset on Challenging Roads. Why it matters: this is a notable AI development to track.",
+      "summary": "Boreas Road Trip（Boreas-RT）数据集扩展了原有Boreas多季节数据集，新增643公里、覆盖9条真实复杂路线的60段驾驶序列，配备多传感器融合平台（包括FMCW激光雷达、Doppler雷达、高分辨率相机等）和厘米级GNSS-INS真值，提供精确标定与开源开发套件；基准测试显示现有里程计与定位算法在简单场景过拟合，在Boreas-RT挑战性路线上性能显著下降，凸显该数据集对评估多模态自动驾驶系统鲁棒性的价值。",
+      "summaryZh": "Boreas Road Trip（Boreas-RT）数据集扩展了原有Boreas多季节数据集，新增643公里、覆盖9条真实复杂路线的60段驾驶序列，配备多传感器融合平台（包括FMCW激光雷达、Doppler雷达、高分辨率相机等）和厘米级GNSS-INS真值，提供精确标定与开源开发套件；基准测试显示现有里程计与定位算法在简单场景过拟合，在Boreas-RT挑战性路线上性能显著下降，凸显该数据集对评估多模态自动驾驶系统鲁棒性的价值。",
+      "summaryEn": "The Boreas Road Trip (Boreas-RT) dataset extends the multi-season Boreas collection with 60 sequences spanning 643 km across 9 challenging real-world routes, each traversed multiple times under varying traffic and weather conditions. It features a rich sensor suite—including an Aeva FMCW Doppler lidar, Navtech 360° radar, 5MP camera, and Velodyne Alpha Prime lidar—with centimeter-level Applanix GNSS-INS ground truth, precise calibrations, and an open-source devkit. Benchmark results reveal that state-of-the-art odometry and localization methods degrade significantly on Boreas-RT, exposing overfitting to simple environments and establishing the dataset as a rigorous testbed for multimodal autonomous driving algorithms.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -491,7 +419,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：发布大规模多传感器自动驾驶数据集Boreas-RT，覆盖复杂道路场景，将显著推动自动驾驶算法在极端条件下的训练与评估。",
+        "模型评分：8/10，理由：Boreas Road Trip 数据集覆盖复杂多季节道路场景，填补自动驾驶在极端环境下的数据空白，对全球智能驾驶研发具有显著推动作用。",
         "热度：10 / 评论 0"
       ],
       "score": 8.0,
@@ -503,6 +431,38 @@
       ]
     },
     {
+      "id": "arxiv_2602_17601v1",
+      "title": "Graph Neural Model Predictive Control for High-Dimensional Systems",
+      "titleZh": "Graph Neural Model Predictive Control for High-Dimensional Systems",
+      "titleEn": "Graph Neural Model Predictive Control for High-Dimensional Systems",
+      "url": "https://arxiv.org/abs/2602.17601v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "研究提出一种结合图神经网络（GNN）动力学模型与结构感知模型预测控制（MPC）的框架，通过将高维系统建模为局部交互图并采用线性复杂度的压缩算法消除状态变量，实现实时控制；在软体机器人主干上的实验表明，该方法可在100Hz下闭环控制千节点系统，硬件跟踪精度达亚厘米级，较基线提升63.6%，并成功实现全身避障。",
+      "summaryZh": "研究提出一种结合图神经网络（GNN）动力学模型与结构感知模型预测控制（MPC）的框架，通过将高维系统建模为局部交互图并采用线性复杂度的压缩算法消除状态变量，实现实时控制；在软体机器人主干上的实验表明，该方法可在100Hz下闭环控制千节点系统，硬件跟踪精度达亚厘米级，较基线提升63.6%，并成功实现全身避障。",
+      "summaryEn": "This work presents a Graph Neural Network (GNN)-based Model Predictive Control (MPC) framework for real-time control of high-dimensional systems like soft robots. By modeling the system as a graph with localized interactions and employing a tailored condensing algorithm that eliminates state variables with linear complexity, the approach leverages GPU parallelization for efficiency. Validated on a physical soft robotic trunk, it achieves closed-loop control at 100 Hz for systems with up to 1,000 nodes, demonstrates sub-centimeter hardware tracking accuracy—outperforming baselines by 63.6%—and enables full-body obstacle avoidance.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Robotics",
+        "RAG"
+      ],
+      "paperCategory": "Robotics",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：将图神经网络与模型预测控制结合，为软体机器人等高维系统提供高效可控的建模方案，是控制理论与AI融合的关键进展。",
+        "热度：8 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-19T18:26:42+00:00",
+      "authors": [
+        "Patrick Benito Eberhard",
+        "Luis Pabon",
+        "Daniele Gammelli"
+      ]
+    },
+    {
       "id": "arxiv_2602_16825v1",
       "title": "RRT$^η$: Sampling-based Motion Planning and Control from STL Specifications using Arithmetic-Geometric Mean Robustness",
       "titleZh": "RRT$^η$: Sampling-based Motion Planning and Control from STL Specifications using Arithmetic-Geometric Mean Robustness",
@@ -510,9 +470,9 @@
       "url": "https://arxiv.org/abs/2602.16825v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "主要内容：Sampling-based motion planning has emerged as a powerful approach for robotics, enabling exploration of complex, high-di...；关键点：RRT$^η$: Sampling-based Motion Planning and Control from STL；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryZh": "主要内容：Sampling-based motion planning has emerged as a powerful approach for robotics, enabling exploration of complex, high-di...；关键点：RRT$^η$: Sampling-based Motion Planning and Control from STL；为什么重要：这是近期 AI 领域值得关注的进展。",
-      "summaryEn": "Main point: Sampling-based motion planning has emerged as a powerful approach for robotics, enabling exploration of complex, high-dimensional configuration spaces.... Key takeaway: RRT$^η$: Sampling-based Motion Planning and Control from STL Specifications usin. Why it matters: this is a notable AI development to track.",
+      "summary": "为克服传统基于信号时序逻辑（STL）的运动规划中min-max鲁棒性导致的非光滑优化问题，研究提出RRT$^η$框架，引入算术-几何平均（AGM）鲁棒性度量以平滑评估所有时间点和子公式的满足程度，并结合增量监控算法与基于满足优先逻辑的方向向量，在保持RRT*概率完备性的同时提升多约束场景下的规划效率；在双积分器、单轮车和7自由度机械臂上的实验验证了其优越性能。",
+      "summaryZh": "为克服传统基于信号时序逻辑（STL）的运动规划中min-max鲁棒性导致的非光滑优化问题，研究提出RRT$^η$框架，引入算术-几何平均（AGM）鲁棒性度量以平滑评估所有时间点和子公式的满足程度，并结合增量监控算法与基于满足优先逻辑的方向向量，在保持RRT*概率完备性的同时提升多约束场景下的规划效率；在双积分器、单轮车和7自由度机械臂上的实验验证了其优越性能。",
+      "summaryEn": "To overcome the non-smooth optimization landscapes caused by min-max robustness in Signal Temporal Logic (STL)-based motion planning, this work proposes RRT$^η$, a sampling-based framework that integrates Arithmetic-Geometric Mean (AGM) robustness to evaluate satisfaction across all time points and subformulae. It introduces AGM robustness interval semantics for partial trajectories, an efficient incremental monitoring algorithm, and Direction of Increasing Satisfaction vectors guided by Fulfillment Priority Logic (FPL). Maintaining the probabilistic completeness and asymptotic optimality of RRT*, RRT$^η$ demonstrates superior performance in multi-constraint scenarios on a double integrator, unicycle robot, and 7-DOF arm.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -525,7 +485,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：基于算术-几何平均鲁棒性改进采样运动规划，使形式化任务指令在复杂环境中更可靠执行，推动可信自主机器人系统发展。",
+        "模型评分：8/10，理由：提出基于算术-几何平均鲁棒性的采样运动规划方法，显著提升形式化任务下机器人系统的安全性与可解释性，推动可信自主系统发展。",
         "热度：15 / 评论 0"
       ],
       "score": 8.0,
@@ -544,9 +504,9 @@
       "url": "https://arxiv.org/abs/2602.16898v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "MALLVi 是一个基于多智能体架构的闭环机器人操作框架，利用大语言模型（LLM）与视觉语言模型（VLM）协同实现自然语言指令到原子动作的生成，并通过环境反馈动态调整执行流程；其核心由 Decomposer、Localizer、Thinker 和 Reflector 四个专用智能体分别处理任务分解、目标定位、推理规划与错误恢复，Reflector 还能选择性重激活相关智能体以避免全局重规划；在仿真与真实环境中，该方法显著提升了零样本操作任务的成功率与泛化能力。",
-      "summaryZh": "MALLVi 是一个基于多智能体架构的闭环机器人操作框架，利用大语言模型（LLM）与视觉语言模型（VLM）协同实现自然语言指令到原子动作的生成，并通过环境反馈动态调整执行流程；其核心由 Decomposer、Localizer、Thinker 和 Reflector 四个专用智能体分别处理任务分解、目标定位、推理规划与错误恢复，Reflector 还能选择性重激活相关智能体以避免全局重规划；在仿真与真实环境中，该方法显著提升了零样本操作任务的成功率与泛化能力。",
-      "summaryEn": "MALLVi is a multi-agent, closed-loop robotic manipulation framework that leverages large language models (LLMs) and vision-language models (VLMs) to translate natural language instructions into executable atomic actions, with environmental feedback dynamically guiding execution. It coordinates four specialized agents—Decomposer, Localizer, Thinker, and Reflector—to handle task decomposition, object localization, reasoning, and error recovery, where the Reflector enables targeted recovery by reactivating only relevant agents instead of full replanning. Experiments in simulation and real-world settings demonstrate significantly improved generalization and success rates on zero-shot manipulation tasks.",
+      "summary": "针对现有大语言模型驱动的机器人操作缺乏环境反馈、难以应对动态变化的问题，研究提出MALLVI多智能体框架，通过协调Decomposer、Localizer、Thinker和Reflector四个专用智能体，在接收自然语言指令与环境图像后生成原子动作，并由视觉语言模型评估执行结果以决定是否重试或继续，实现闭环反馈；Reflector支持针对性错误恢复而无需全局重规划，在仿真与真实环境中显著提升零样本操作任务的成功率与泛化能力。",
+      "summaryZh": "针对现有大语言模型驱动的机器人操作缺乏环境反馈、难以应对动态变化的问题，研究提出MALLVI多智能体框架，通过协调Decomposer、Localizer、Thinker和Reflector四个专用智能体，在接收自然语言指令与环境图像后生成原子动作，并由视觉语言模型评估执行结果以决定是否重试或继续，实现闭环反馈；Reflector支持针对性错误恢复而无需全局重规划，在仿真与真实环境中显著提升零样本操作任务的成功率与泛化能力。",
+      "summaryEn": "Addressing the fragility of open-loop LLM-based robotic manipulation in dynamic environments, this work introduces MALLVI—a Multi-Agent Large Language and Vision framework that enables closed-loop, feedback-driven manipulation. Given a natural language instruction and an environment image, MALLVI coordinates specialized agents (Decomposer, Localizer, Thinker, Reflector—and optionally Descriptor) to generate executable atomic actions. A Vision-Language Model (VLM) evaluates post-execution feedback to decide whether to retry or proceed. The Reflector enables targeted error recovery by reactivating only relevant agents, avoiding full replanning. Experiments in simulation and real-world settings show improved generalization and higher success rates in zero-shot manipulation tasks.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -559,7 +519,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：7/10，理由：提出多智能体框架用于通用机器人操作，结合LLM与环境反馈，具备显著技术突破性，对AI+ robotics 领域有实际推动作用。",
+        "模型评分：7/10，理由：提出多智能体框架用于通用机器人操作，结合LLM与环境反馈，具备显著技术突破潜力，可能推动机器人智能化落地。",
         "热度：20 / 评论 0"
       ],
       "score": 7.0,
@@ -578,9 +538,9 @@
       "url": "https://arxiv.org/abs/2602.17407v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "该研究验证了基于相控阵蓝牙的低成本惯性导航系统在GNSS拒止环境（如仓库物流或无人机着陆）中的可行性，通过因子图优化融合蓝牙角度测量、距离或气压数据，在多旋翼无人机实飞实验中评估了不同鲁棒估计策略的性能，结果表明尽管商用现成组件带来更高噪声和较短作用距离，但合理设计的因子图仍可有效提升导航精度。",
-      "summaryZh": "该研究验证了基于相控阵蓝牙的低成本惯性导航系统在GNSS拒止环境（如仓库物流或无人机着陆）中的可行性，通过因子图优化融合蓝牙角度测量、距离或气压数据，在多旋翼无人机实飞实验中评估了不同鲁棒估计策略的性能，结果表明尽管商用现成组件带来更高噪声和较短作用距离，但合理设计的因子图仍可有效提升导航精度。",
-      "summaryEn": "This paper experimentally validates a low-cost inertial navigation system aided by phased-array Bluetooth in GNSS-denied scenarios such as warehouse logistics or drone landings. Using factor graph optimization, it fuses Bluetooth angular measurements with range or barometric pressure data and evaluates robust estimation strategies on real multirotor drone flight data. Results show that despite noisier measurements and limited range from commercial off-the-shelf components, well-designed factor graph estimators can still significantly enhance navigation accuracy.",
+      "summary": "该论文提出一种基于因子图优化的蓝牙相控阵辅助惯性导航方法，并通过多旋翼无人机飞行实验验证其在GNSS拒止环境（如仓库物流、无人机着陆和自动对接）中的有效性；研究比较了不同鲁棒估计策略在融合蓝牙角度测量、距离或气压数据时的性能，表明商用现成组件虽成本低、易部署，但测量噪声大、作用距离短，需依赖优化算法提升导航精度。",
+      "summaryZh": "该论文提出一种基于因子图优化的蓝牙相控阵辅助惯性导航方法，并通过多旋翼无人机飞行实验验证其在GNSS拒止环境（如仓库物流、无人机着陆和自动对接）中的有效性；研究比较了不同鲁棒估计策略在融合蓝牙角度测量、距离或气压数据时的性能，表明商用现成组件虽成本低、易部署，但测量噪声大、作用距离短，需依赖优化算法提升导航精度。",
+      "summaryEn": "This paper presents a factor graph optimization-based inertial navigation system aided by phased-array Bluetooth, experimentally validated using multirotor drone flights in GNSS-denied scenarios such as warehouse logistics, drone landings, and autonomous docking. It compares robust estimation strategies when fusing Bluetooth angular measurements with range or barometric pressure data, showing that while commercial-off-the-shelf components offer low-cost deployment, their high measurement noise and limited range necessitate advanced optimization for accurate navigation.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
@@ -590,7 +550,7 @@
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：7/10，理由：利用蓝牙相控阵实现低成本惯性导航，在仓储物流、无人机等场景具实际部署价值，是边缘智能与定位融合的重要进展。",
+        "模型评分：7/10，理由：结合相控阵蓝牙与因子图实现低成本高精度惯性导航，适用于仓储、无人机等关键场景，具备工程落地潜力和产业推广价值。",
         "热度：6 / 评论 0"
       ],
       "score": 7.0,
@@ -600,103 +560,111 @@
         "Torleiv H. Bryne",
         "Kristoffer Gryte"
       ]
+    },
+    {
+      "id": "arxiv_2602_17421v1",
+      "title": "3D-printed Soft Optical sensor with a Lens (SOLen) for light guidance in mechanosensing",
+      "titleZh": "3D-printed Soft Optical sensor with a Lens (SOLen) for light guidance in mechanosensing",
+      "titleEn": "3D-printed Soft Optical sensor with a Lens (SOLen) for light guidance in mechanosensing",
+      "url": "https://arxiv.org/abs/2602.17421v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "研究提出一种名为SOLen的3D打印软体光学传感器，通过在Y型波导前端集成打印透镜，利用形变引起的透镜旋转与焦点位移，将光功率重新分配至两支路以生成差分信号，从而同时编码运动方向与幅度；团队改良丙烯酸聚氨酯树脂以提升柔顺性与透光率，并通过单层光学表征获取波长相关的折射率用于透镜设计，最终实现亚毫米级打印精度和可重复的分支选择性信号切换，为单材料一体化软体机器人传感提供可迁移的材料-光学工作流。",
+      "summaryZh": "研究提出一种名为SOLen的3D打印软体光学传感器，通过在Y型波导前端集成打印透镜，利用形变引起的透镜旋转与焦点位移，将光功率重新分配至两支路以生成差分信号，从而同时编码运动方向与幅度；团队改良丙烯酸聚氨酯树脂以提升柔顺性与透光率，并通过单层光学表征获取波长相关的折射率用于透镜设计，最终实现亚毫米级打印精度和可重复的分支选择性信号切换，为单材料一体化软体机器人传感提供可迁移的材料-光学工作流。",
+      "summaryEn": "The paper introduces SOLen, a 3D-printed soft optical sensor featuring an integrated printed lens at the input of a Y-shaped waveguide. Deformation-induced lens rotation and focal-spot translation redistribute optical power between two branches, generating a differential output that encodes both motion direction and amplitude. By modifying acrylate polyurethane resin with lauryl acrylate for improved compliance and transmittance, and using single-layer characterization to derive wavelength-dependent refractive index, the team designed and printed a lens with sub-millimeter fidelity. Reproducible branch-selective signal switching was demonstrated, establishing a transferable material-to-optics workflow for monolithic soft robotic sensing.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Robotics",
+        "3D"
+      ],
+      "paperCategory": "Robotics",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：7/10，理由：3D打印集成光学传感结构（SOLen）实现单材料一体化制造，推动软体机器人感知与制造融合，具有跨学科创新价值。",
+        "热度：9 / 评论 0"
+      ],
+      "score": 7.0,
+      "publishedAt": "2026-02-19T14:54:00+00:00",
+      "authors": [
+        "Diana Cafiso",
+        "Petr Trunin",
+        "Carolina Gay"
+      ]
     }
   ],
   "news": [
     {
-      "id": "github_google-research_timesfm",
-      "title": "Google Research 发布时间序列基础模型 TimesFM",
-      "titleZh": "Google Research 发布时间序列基础模型 TimesFM",
-      "titleEn": "Google Research Launches TimesFM, a Foundation Model for Time Series Forecasting",
-      "url": "https://github.com/google-research/timesfm",
+      "id": "github_anthropics_claude-code",
+      "title": "Anthropic推终端AI编程代理Claude Code，支持自然语言操控Git与代码理解",
+      "titleZh": "Anthropic推终端AI编程代理Claude Code，支持自然语言操控Git与代码理解",
+      "titleEn": "Anthropic Launches Claude Code: An Agentic Terminal Tool for Natural Language Coding and Git Automation",
+      "url": "https://github.com/anthropics/claude-code",
       "type": "news",
       "source": "GitHub Trending",
-      "summary": "**Google Research 发布了 TimesFM（Time Series Foundation Model）**，这是一个预训练的时间序列基础模型，专为通用时间序列预测任务设计；该模型的重要性在于将大模型范式引入时序领域，有望提升金融、能源、供应链等场景的预测能力；对开发者而言，可通过公开接口快速集成先进预测功能，普通用户未来可能受益于更精准的天气、交通或需求预测服务。",
-      "summaryZh": "**Google Research 发布了 TimesFM（Time Series Foundation Model）**，这是一个预训练的时间序列基础模型，专为通用时间序列预测任务设计；该模型的重要性在于将大模型范式引入时序领域，有望提升金融、能源、供应链等场景的预测能力；对开发者而言，可通过公开接口快速集成先进预测功能，普通用户未来可能受益于更精准的天气、交通或需求预测服务。",
-      "summaryEn": "Google Research has released TimesFM (Time Series Foundation Model), a pretrained foundation model designed for general-purpose time series forecasting. Its significance lies in bringing the large-model paradigm to time series analysis, potentially enhancing prediction accuracy in finance, energy, and supply chain applications. Developers can integrate its capabilities via public APIs, while end users may eventually benefit from more accurate forecasts in areas like weather, traffic, or demand planning.",
+      "summary": "Anthropic推出终端内AI编程代理工具Claude Code，它能理解用户代码库，通过自然语言指令执行日常编码任务、解释复杂逻辑并管理Git工作流；这一工具显著降低开发者的认知负担，使非专业程序员也能高效参与软件开发，标志着AI从辅助问答向自主执行工程任务的重要演进，普通开发者可立即在命令行中试用以加速本地项目迭代。",
+      "summaryZh": "Anthropic推出终端内AI编程代理工具Claude Code，它能理解用户代码库，通过自然语言指令执行日常编码任务、解释复杂逻辑并管理Git工作流；这一工具显著降低开发者的认知负担，使非专业程序员也能高效参与软件开发，标志着AI从辅助问答向自主执行工程任务的重要演进，普通开发者可立即在命令行中试用以加速本地项目迭代。",
+      "summaryEn": "Anthropic has launched Claude Code, an agentic coding tool that operates directly in the terminal, understands your codebase, and accelerates development by executing routine tasks, explaining complex code, and managing Git workflows via natural language commands. This marks a shift from passive AI assistance to active engineering agency, lowering the barrier for non-experts to contribute meaningfully to software projects. Developers can immediately integrate it into their local workflow to speed up coding and debugging.",
       "fullText": "",
-      "imageUrl": "https://opengraph.githubassets.com/5e58b122f68d398c344a61705a184c4cb2a30691870e2a3ddbce6ee1bf342cba/google-research/timesfm",
+      "imageUrl": "https://opengraph.githubassets.com/aebe0604fae6796efadf8dbb40e71b73a55fb0b6a9dd8764ccccf351847620ae/anthropics/claude-code",
       "tags": [
-        "Industry",
-        "Research"
+        "LLM",
+        "Agent",
+        "Industry"
       ],
       "paperCategory": "",
       "signalReasons": [
         "来源：GitHub Trending",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：Google Research推出的Time Series Foundation Model是时间序列预测领域的里程碑式进展，具备全球产业级影响力。",
-        "热度：8835 / 评论 0"
+        "模型评分：8/10，理由：Anthropic发布官方终端级AI编码代理，推动开发者工作流变革，具主流产品影响力。",
+        "热度：68388 / 评论 0"
       ],
-      "score": 9.9,
-      "publishedAt": "2026-02-20T23:36:16.847762+00:00",
+      "score": 9.8,
+      "publishedAt": "2026-02-21T23:31:48.311500+00:00",
       "authors": []
     },
     {
-      "id": "rss_0725894001",
-      "title": "llama.cpp 创始团队加入 Hugging Face 共推本地 AI",
-      "titleZh": "llama.cpp 创始团队加入 Hugging Face 共推本地 AI",
-      "titleEn": "llama.cpp Creators Join Hugging Face to Advance Local AI",
-      "url": "https://huggingface.co/blog/ggml-joins-hf",
+      "id": "rss_5820916125",
+      "title": "Google高管预警：LLM包装器与AI聚合器初创恐难存活",
+      "titleZh": "Google高管预警：LLM包装器与AI聚合器初创恐难存活",
+      "titleEn": "Google VP Warns LLM Wrappers and AI Aggregators May Not Survive Market Shakeout",
+      "url": "https://techcrunch.com/2026/02/21/google-vp-warns-that-two-types-of-ai-startups-may-not-survive/",
       "type": "news",
-      "source": "Hugging Face Blog",
-      "summary": "**GGML 团队（llama.cpp 创始者）正式加入 Hugging Face**，旨在长期推动本地 AI 生态发展；此举确保 llama.cpp 项目维持 100% 开源与社区自治，同时获得可持续资源支持，并将与 Transformers 库深度集成以实现“一键部署”新模型；对 AI 领域而言，这强化了本地推理基础设施的开放性；普通用户未来将更容易在手机、笔记本等设备上运行高效、私有的 AI 模型。",
-      "summaryZh": "**GGML 团队（llama.cpp 创始者）正式加入 Hugging Face**，旨在长期推动本地 AI 生态发展；此举确保 llama.cpp 项目维持 100% 开源与社区自治，同时获得可持续资源支持，并将与 Transformers 库深度集成以实现“一键部署”新模型；对 AI 领域而言，这强化了本地推理基础设施的开放性；普通用户未来将更容易在手机、笔记本等设备上运行高效、私有的 AI 模型。",
-      "summaryEn": "The GGML team, creators of llama.cpp, has officially joined Hugging Face to ensure the long-term advancement of local AI. The project remains fully open-source and community-driven, with full technical autonomy, while gaining sustainable resources and deeper integration with the Transformers library to enable near “one-click” deployment of new models. This move strengthens the open infrastructure for on-device inference, making it easier for everyday users to run efficient, private AI models on phones, laptops, and other personal devices.",
-      "fullText": "GGML and llama.cpp join HF to ensure the long-term progress of Local AI Hugging Face Models Datasets Spaces Community Docs Enterprise Pricing Log In Sign Up Back to Articles GGML and llama.cpp join HF to ensure the long-term progress of Local AI Published February 20, 2026 Update on GitHub Upvote 159 +153 Georgi Gerganov ggerganov Follow Xuan-Son Nguyen ngxson Follow Aleksander Grygier allozaur Follow Lysandre lysandre Follow Victor Mustar victor Follow Julien Chaumond julien-c Follow What will change for llama.cpp, the open source project and the community? Technical focus Our long term vision We are super happy to announce that GGML, creators of Llama.cpp, are joining HF in order to keep future AI open. 🔥 Georgi Gerganov and team are joining HF with the goal of scaling and supporting the community behind ggml and llama.cpp as Local AI continues to make exponential progress in the coming years. We've been working with Georgi and team for quite some time (we even have awesome core contributors to llama.cpp like Son and Alek in the team already) so this has been a very natural process. llama.cpp is the fundamental building block for local inference, and transformers is the fundamental building block for model definition, so this is basically a match made in heaven. ❤️ What will change for llama.cpp, the open source project and the community? Not much – Georgi and team still dedicate 100% of their time maintaining llama.cpp and have full autonomy and leadership on the technical directions and the community. HF is providing the project with long-term sustainable resources, improving the chances of the project to grow and thrive. The project will continue to be 100% open-source and community driven as it is now. Technical focus llama.cpp is the fundamental building block for local inference, and transformers is the fundamental building block for definition of models and architectures, so we’ll work on making sure it’s as seamless as possible in the future (almost “single-click”) to ship new models in llama.cpp from the transformers library ‘source of truth’ for model definitions. Additionally, we will improve packaging and user experience of ggml-based software. As we enter the phase in which local inference becomes a meaningful and competitive alternative to cloud inference, it is crucial to improve and simplify the way in which casual users deploy and access local models. We will work towards making llama.cpp ubiquitous and readily available everywhere. Our long term vision Our shared goal is to provide the community with the building blocks to make open-source superintelligence accessible to the world over the coming years. We will achieve this together with the growing Local AI community, as we continue to build the ultimate inference stack that runs as efficiently as possible on our devices. More Articles from our Blog llm fine-tuning open-source Codex is Open Sourcing AI models 72 December 11, 2025 llm fine-tuning open-source Hot We Got Claude to Fine-Tune an Open Source LLM 597 December 4, 2025 Community Bright8192 about 8 hours ago Big congrats to GGML and Hugging Face! Great news for the Local AI community. Excited to see llama.cpp grow stronger and make local AI easier for everyone! See translation Reply Room64 about 7 hours ago LLama.cpp is the best AI project by far, super reactive to bug solve, very competent team, love you guys, you desserve it See translation Reply Xenova about 7 hours ago Our shared goal is to provide the community with the building blocks to make open-source superintelligence accessible to the world over the coming years. See translation 🔥 9 9 + Reply Trilogix1 about 4 hours ago Hugging Face smart moves never ending. Are you guys using AI for advice? I wonder which of 2 million AI models you are using 😄 See translation Reply joshnur about 4 hours ago Great news. Serving with llama.cpp using HF-hosted models, including unsloth's on AMD Strix Halo and OpenCode here. See translation Reply raphaelamorim about 3 hours ago • edited about 3 hours ago Congrats to both teams. Well deserved. Wonderful news for wonderful teams and community. See translation Reply iyanello about 3 hours ago Congratulations to Georgi Gerganov and team! So happy for you guys, this is huge success! See translation Reply Tugay31 about 1 hour ago Great news. congrats to GGML and HF. . always LocalAI. See translation Reply Edit Preview Upload images, audio, and videos by dragging in the text input, pasting, or clicking here . Tap or paste here to upload images Comment · Sign up or log in to comment Upvote 159 +147 System theme Company TOS Privacy About Careers Website Models Datasets Spaces Pricing Docs",
-      "imageUrl": "https://huggingface.co/blog/assets/ggml-joins-hf/ggml-joins-hf.png",
+      "source": "TechCrunch AI",
+      "summary": "Google全球初创企业负责人Darren Mowry警告，仅靠封装现有大模型（如GPT、Gemini）的“LLM包装器”和聚合多个模型的“AI聚合器”两类初创公司正面临生存危机，因缺乏深度技术壁垒、利润微薄且同质化严重；他指出可持续的AI创业需构建垂直领域专用能力或横向差异化护城河，此判断预示行业从概念炒作转向价值深耕，普通创业者应避免简单调用API的轻资产模式，转而聚焦真实问题解决与自有知识产权积累。",
+      "summaryZh": "Google全球初创企业负责人Darren Mowry警告，仅靠封装现有大模型（如GPT、Gemini）的“LLM包装器”和聚合多个模型的“AI聚合器”两类初创公司正面临生存危机，因缺乏深度技术壁垒、利润微薄且同质化严重；他指出可持续的AI创业需构建垂直领域专用能力或横向差异化护城河，此判断预示行业从概念炒作转向价值深耕，普通创业者应避免简单调用API的轻资产模式，转而聚焦真实问题解决与自有知识产权积累。",
+      "summaryEn": "Darren Mowry, Google’s global head of startups across Cloud, DeepMind, and Alphabet, warns that LLM wrappers—startups merely layering a UI on top of models like GPT or Gemini—and AI aggregators routing queries across multiple models face existential threats due to thin margins, lack of differentiation, and diminishing market patience. He stresses that viable AI ventures must build deep technical moats, either through vertical specialization or horizontal innovation. This signals a maturation of the generative AI market, urging founders to move beyond API reselling toward proprietary value creation.",
+      "fullText": "Google VP warns that two types of AI startups may not survive | TechCrunch –:–:–:– Save up to $680 on your pass with Super Early Bird rates. REGISTER NOW . Save up to $680 on your Disrupt 2026 pass. Ends February 27. REGISTER NOW . Close TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture More from TechCrunch Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Crunchboard Contact Us AI Google VP warns that two types of AI startups may not survive Rebecca Bellan 8:00 AM PST · February 21, 2026 Loading the player… The generative AI boom minted a startup a minute. But as the dust starts to settle, two once-hot business models are looking more like cautionary tales: LLM wrappers and AI aggregators. Darren Mowry, who leads Google’s global startup organization across Cloud, DeepMind, and Alphabet, says startups with these hooks have their “check engine light” on. LLM wrappers are essentially startups that wrap existing large language models, like Claude, GPT, or Gemini, with a product or UX layer to solve a specific problem. An example would be a startup that uses AI to helps students study . “If you’re really just counting on the back end model to do all the work and you’re almost white-labeling that model, the industry doesn’t have a lot of patience for that anymore,” Mowry said on this week’s episode of Equity . Wrapping “very thin intellectual property wrapped around Gemini or GPT-5” signals you’re not differentiating yourself, Mowry says. “You’ve got to have deep, wide moats that are either horizontally differentiated or something really specific to a vertical market” for a startup to “progress and grow,” he said. Examples of the deep moat LLM wrapper type include Cursor, a GPT-powered coding assistant, or Harvey AI, a legal AI assistant. Techcrunch event Save up to $300 or 30% to TechCrunch Founder Summit 1,000+ founders and investors come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately. Offer ends March 13. Save up to $300 or 30% to TechCrunch Founder Summit 1,000+ founders and investors come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Offer ends March 13. Boston, MA | June 9, 2026 REGISTER NOW In other words, startups can no longer expect to slap a UI on top of a GPT and get traction on their product, like they could, perhaps, in mid-2024 when OpenAI launched its ChatGPT store . The challenge now is to build sustainable product value. AI aggregators are a subset of wrappers — they’re startups that aggregate multiple LLMs into one interface or API layer to route queries across models and give users access to multiple models. These companies typically provide an orchestration layer that includes monitoring, governance, or eval tooling. Think: AI search startup Perplexity or developer platform OpenRouter, which provides access to multiple AI models via a single API. While many of these platforms have gained ground, Mowry’s words are clear to incoming startups: “Stay out of the aggregator business.” Generally speaking, aggregators aren’t seeing much growth or progression these days because, he says, users want “some intellectual property built in” to ensure they’re routed to the right model at the right time based on their needs — not because of behind-the-scenes compute or access constraints. Mowry has been in the cloud game for decades, cutting his teeth at AWS and Microsoft before setting up shop at Google Cloud, and he’s seen how this plays out. He said the situation today mirrors the early days of cloud computing in the late 2000s/early 2010s as Amazon’s cloud business started taking off. At that time, a crop of startups sprang up to resell AWS infrastructure, marketing themselves as easier entry points that provided tooling, billing consolidation, and support. But when Amazon built its own enterprise tools and customers learned to manage cloud services directly, most of those startups were squeezed out. The only survivors were the ones who added real services, like security, migration, or DevOps consulting. AI aggregators today face similar margin pressure as model providers expand into enterprise features themselves, potentially sidelining middlemen. For his part, Mowry is bullish on vibe coding and developer platforms, which had a record-breaking year in 2025 with startups like Replit, Lovable, and Cursor (all Google Cloud customers, per Mowry) attracting major investment and customer traction. Mowry also expects strong growth in direct-to-consumer tech, in companies that put some of these powerful AI tools into the hands of customers. He pointed to the opportunity for film and TV students to use Google’s AI video generator Veo to bring stories to life. Beyond AI, Mowry also thinks biotech and climate tech are having a moment — both in terms of venture investment going into the two industries and the “incredible amounts of data” startups can access to create real value “in ways we would never have been able to before.” Topics AI , AI startups , Darren Mowry , Equity , google cloud , llm aggregator , llm wrapper , Startups Rebecca Bellan Senior Reporter Rebecca Bellan is a senior reporter at TechCrunch where she covers the business, policy, and emerging trends shaping artificial intelligence. Her work has also appeared in Forbes, Bloomberg, The Atlantic, The Daily Beast, and other publications. You can contact or verify outreach from Rebecca by emailing rebecca.bellan@techcrunch.com or via encrypted message at rebeccabellan.491 on Signal. View Bio October 13-15 San Francisco, CA Save up to $680 on your pass before February 27. Meet investors. Discover your next portfolio company. Hear from 250+ tech leaders , dive into 200+ sessions , and explore 300+ startups building what’s next. Don’t miss these one-time savings. REGISTER NOW Most Popular Great news for xAI: Grok is now pretty good at answering questions about Baldur’s Gate Russell Brandom FBI says ATM ‘jackpotting’ attacks are on the rise, and netting hackers millions in stolen cash Zack Whittaker Meta’s own research found parental supervision doesn’t really help curb teens’ compulsive social media use Sarah Perez How Ricursive Intelligence raised $335M at a $4B valuation in 4 months Julie Bort After all the hype, some AI experts don’t think OpenClaw is all that exciting Amanda Silberling OpenClaw creator Peter Steinberger joins OpenAI Anthony Ha The great computer science exodus (and where students are going instead) Connie Loizos Loading the next article Error loading the next article X LinkedIn Facebook Instagram youTube Mastodon Threads Bluesky TechCrunch Staff Contact Us Advertise Crunchboard Jobs Site Map Terms of Service Privacy Policy RSS Terms of Use Code of Conduct OpenClaw AI Memory Anthropic WordPress Cohere Tech Layoffs ChatGPT © 2025 TechCrunch Media LLC.",
+      "imageUrl": "https://techcrunch.com/wp-content/uploads/2026/02/Darren-Mowry-headshot.png?resize=1200%2C630",
       "tags": [
-        "LLM"
+        "LLM",
+        "Industry"
       ],
       "paperCategory": "",
       "signalReasons": [
-        "来源权威：官方/白名单",
+        "来源：TechCrunch AI",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：GGML 与 llama.cpp 加入 Hugging Face 是推动本地化 AI 可持续发展的关键举措，强化了开源生态，对全球 AI 自主可控格局产生深远影响，符合战略性突破标准。",
+        "模型评分：9/10，理由：Google VP预警两类AI初创模式将被淘汰，直指当前行业泡沫与竞争格局演变，具备全球产业级战略影响",
         "热度：0 / 评论 0"
       ],
-      "score": 9.0,
-      "publishedAt": "2026-02-20T00:00:00+00:00",
-      "authors": []
-    },
-    {
-      "id": "rss_6763406561",
-      "title": "AI 模型首次提交 First Proof 数学挑战证明尝试",
-      "titleZh": "AI 模型首次提交 First Proof 数学挑战证明尝试",
-      "titleEn": "AI Model Submits First Proof Attempts in Expert-Level Math Challenge",
-      "url": "https://openai.com/index/first-proof-submissions",
-      "type": "news",
-      "source": "OpenAI Blog",
-      "summary": "**研究团队公开了其 AI 模型参与 First Proof 数学挑战的证明尝试**，该挑战聚焦专家级数学问题，旨在测试模型的研究级推理能力；这一举措为评估当前 AI 在形式化数学推理上的边界提供了实证基准；对科研社区而言，有助于推动自动定理证明技术发展；普通用户虽不直接使用，但长期看可能促进更可靠的 AI 助手在科学发现中的应用。",
-      "summaryZh": "**研究团队公开了其 AI 模型参与 First Proof 数学挑战的证明尝试**，该挑战聚焦专家级数学问题，旨在测试模型的研究级推理能力；这一举措为评估当前 AI 在形式化数学推理上的边界提供了实证基准；对科研社区而言，有助于推动自动定理证明技术发展；普通用户虽不直接使用，但长期看可能促进更可靠的 AI 助手在科学发现中的应用。",
-      "summaryEn": "A research team has released its AI model’s proof attempts for the First Proof math challenge, which tests research-grade reasoning on expert-level mathematical problems. This provides an empirical benchmark for evaluating the current limits of AI in formal mathematical reasoning. For the scientific community, it advances progress in automated theorem proving; while not directly impacting end users now, it may eventually enable more reliable AI assistants in scientific discovery.",
-      "fullText": "We share our AI model’s proof attempts for the First Proof math challenge, testing research-grade reasoning on expert-level problems.",
-      "imageUrl": "https://tse1.mm.bing.net/th?q=Openai&w=1200&h=630&c=7&rs=1&p=0&o=5&pid=1.7&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1",
-      "tags": [
-        "Reasoning",
-        "Research"
-      ],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源权威：官方/白名单",
-        "跨源重复：1 个来源",
-        "模型评分：7/10，理由：OpenAI 公布其模型在 First Proof 数学挑战中的推理尝试，展示了 AI 在专家级逻辑推理上的进步，具有研究价值和行业参考意义，属 relevant 但未达战略高度。",
-        "热度：0 / 评论 0"
-      ],
-      "score": 8.8,
-      "publishedAt": "2026-02-20T14:30:00+00:00",
-      "authors": []
+      "score": 5.9,
+      "publishedAt": "2026-02-21T16:00:00+00:00",
+      "authors": [
+        "Rebecca Bellan"
+      ]
     },
     {
       "id": "github_vxcontrol_pentagi",
-      "title": "Pentagi：全自主 AI 渗透测试智能体系统发布",
-      "titleZh": "Pentagi：全自主 AI 渗透测试智能体系统发布",
-      "titleEn": "Pentagi: Fully Autonomous AI Agents for Penetration Testing Released",
+      "title": "Pentagi发布全自主AI渗透测试系统，可自动执行复杂红队任务",
+      "titleZh": "Pentagi发布全自主AI渗透测试系统，可自动执行复杂红队任务",
+      "titleEn": "Pentagi Unveils Fully Autonomous AI Agents for Complex Penetration Testing",
       "url": "https://github.com/vxcontrol/pentagi",
       "type": "news",
       "source": "GitHub Trending",
-      "summary": "**Pentagi 是一个完全自主的 AI 智能体系统，专为执行复杂渗透测试任务而设计**；其重要性在于将自动化安全测试推向更高自主水平，减少人工干预；对网络安全领域而言，可加速漏洞发现并提升红队效率；安全研究人员和企业可利用该开源工具增强系统防御能力，普通用户则间接受益于更健壮的数字基础设施。",
-      "summaryZh": "**Pentagi 是一个完全自主的 AI 智能体系统，专为执行复杂渗透测试任务而设计**；其重要性在于将自动化安全测试推向更高自主水平，减少人工干预；对网络安全领域而言，可加速漏洞发现并提升红队效率；安全研究人员和企业可利用该开源工具增强系统防御能力，普通用户则间接受益于更健壮的数字基础设施。",
-      "summaryEn": "Pentagi is a fully autonomous AI agent system designed to perform complex penetration testing tasks. Its significance lies in advancing automated security testing toward higher autonomy, reducing manual effort. For the cybersecurity field, it accelerates vulnerability discovery and enhances red team efficiency. Security researchers and organizations can leverage this open-source tool to strengthen defenses, indirectly benefiting end users through more resilient digital infrastructure.",
+      "summary": "开源项目Pentagi发布全自主AI渗透测试系统，能自动执行复杂网络安全评估任务；该工具代表AI代理在高风险专业领域的落地突破，有望提升红队效率并降低安全测试门槛，普通安全从业者可将其用于自动化漏洞探测，但同时也引发对AI滥用风险的伦理关注。",
+      "summaryZh": "开源项目Pentagi发布全自主AI渗透测试系统，能自动执行复杂网络安全评估任务；该工具代表AI代理在高风险专业领域的落地突破，有望提升红队效率并降低安全测试门槛，普通安全从业者可将其用于自动化漏洞探测，但同时也引发对AI滥用风险的伦理关注。",
+      "summaryEn": "The open-source project Pentagi introduces a fully autonomous AI agent system capable of performing complex penetration testing tasks. This represents a significant step in deploying agentic AI in high-stakes professional domains, potentially democratizing advanced security assessments while raising ethical concerns about misuse. Security practitioners can leverage it for automated vulnerability discovery, though responsible deployment remains critical.",
       "fullText": "",
       "imageUrl": "https://repository-images.githubusercontent.com/913030762/c8502908-380f-4897-aaba-87cfa16d67b4",
       "tags": [
@@ -706,78 +674,55 @@
       "signalReasons": [
         "来源：GitHub Trending",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：全自主AI代理系统完成复杂渗透测试任务，代表AI Agent在安全领域的重大突破，具备行业变革潜力。",
-        "热度：3795 / 评论 0"
+        "模型评分：7/10，理由：首个全自主AI渗透测试代理系统，推动AI在网络安全领域的应用边界，具备显著技术突破。",
+        "热度：5493 / 评论 0"
       ],
-      "score": 7.8,
-      "publishedAt": "2026-02-20T23:36:08.557884+00:00",
+      "score": 7.2,
+      "publishedAt": "2026-02-21T23:31:43.938428+00:00",
       "authors": []
     },
     {
-      "id": "github_ComposioHQ_composio",
-      "title": "Composio 发布支持千级工具的 AI 智能体开发平台",
-      "titleZh": "Composio 发布支持千级工具的 AI 智能体开发平台",
-      "titleEn": "Composio Launches AI Agent Platform with 1,000+ Integrated Tools",
-      "url": "https://github.com/ComposioHQ/composio",
+      "id": "github_abhigyanpatwari_GitNexus",
+      "title": "GitNexus上线：浏览器内生成代码知识图谱，内置Graph RAG代理",
+      "titleZh": "GitNexus上线：浏览器内生成代码知识图谱，内置Graph RAG代理",
+      "titleEn": "GitNexus Launches: Browser-Based Code Knowledge Graph with Built-in Graph RAG Agent",
+      "url": "https://github.com/abhigyanpatwari/GitNexus",
       "type": "news",
       "source": "GitHub Trending",
-      "summary": "**Composio 提供超 1000 种工具集成、工具搜索、上下文管理、认证及沙盒工作台**，帮助开发者构建能将用户意图转化为具体行动的 AI 智能体；其重要性在于解决了智能体开发中的工具碎片化与集成复杂性问题；对 AI 领域而言，降低了构建多功能智能体的门槛；开发者可快速接入真实世界 API，普通用户未来将体验到更强大、可操作的 AI 助手。",
-      "summaryZh": "**Composio 提供超 1000 种工具集成、工具搜索、上下文管理、认证及沙盒工作台**，帮助开发者构建能将用户意图转化为具体行动的 AI 智能体；其重要性在于解决了智能体开发中的工具碎片化与集成复杂性问题；对 AI 领域而言，降低了构建多功能智能体的门槛；开发者可快速接入真实世界 API，普通用户未来将体验到更强大、可操作的 AI 助手。",
-      "summaryEn": "Composio offers over 1,000 integrated tools, tool search, context management, authentication, and a sandboxed workbench to help developers build AI agents that turn user intent into actionable outcomes. It addresses the fragmentation and complexity of tool integration in agent development, lowering the barrier to creating capable, multi-functional AI agents. Developers can rapidly connect to real-world APIs, enabling end users to interact with more powerful and actionable AI assistants in the future.",
+      "summary": "GitNexus是一款完全运行于浏览器端的零服务器代码智能引擎，用户上传GitHub仓库或ZIP文件后，即可自动生成交互式知识图谱并内置Graph RAG代理用于代码探索；该工具无需后端依赖，保护代码隐私的同时提升大型项目理解效率，普通开发者可立即用于快速掌握陌生代码库结构与逻辑关系。",
+      "summaryZh": "GitNexus是一款完全运行于浏览器端的零服务器代码智能引擎，用户上传GitHub仓库或ZIP文件后，即可自动生成交互式知识图谱并内置Graph RAG代理用于代码探索；该工具无需后端依赖，保护代码隐私的同时提升大型项目理解效率，普通开发者可立即用于快速掌握陌生代码库结构与逻辑关系。",
+      "summaryEn": "GitNexus is a zero-server, client-side code intelligence engine that runs entirely in the browser: users drop in a GitHub repo or ZIP file and instantly get an interactive knowledge graph powered by a built-in Graph RAG agent for code exploration. Requiring no backend, it preserves code privacy while accelerating comprehension of large codebases—enabling developers to quickly map dependencies and logic flows in unfamiliar projects.",
       "fullText": "",
-      "imageUrl": "https://opengraph.githubassets.com/7bea0e49bdc3a876139315220ecc5bd8e5ed1548292dd993f05b3d26fc372a1a/ComposioHQ/composio",
+      "imageUrl": "https://opengraph.githubassets.com/b5088c8bf16fd060f7200e3fbf671c3de7522f5b748ae6c10637c60ae5f69fac/abhigyanpatwari/GitNexus",
       "tags": [
-        "Agent"
+        "Agent",
+        "RAG",
+        "Open Source"
       ],
       "paperCategory": "",
       "signalReasons": [
         "来源：GitHub Trending",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：Composio整合工具链、上下文管理与沙箱环境，显著降低构建AI Agent门槛，推动Agent生态发展，具备广泛行业应用前景。",
-        "热度：27008 / 评论 0"
+        "模型评分：6/10，理由：浏览器端代码知识图谱引擎，提升开发效率，有一定实用性但尚属工具类创新。",
+        "热度：1025 / 评论 0"
       ],
-      "score": 7.8,
-      "publishedAt": "2026-02-20T23:36:20.556480+00:00",
-      "authors": []
-    },
-    {
-      "id": "rss_0151227448",
-      "title": "Hugging Face 联合 Unsloth 推出免费 LLM 微调服务",
-      "titleZh": "Hugging Face 联合 Unsloth 推出免费 LLM 微调服务",
-      "titleEn": "Hugging Face and Unsloth Offer Free LLM Fine-Tuning with Accelerated Training",
-      "url": "https://huggingface.co/blog/unsloth-jobs",
-      "type": "news",
-      "source": "Hugging Face Blog",
-      "summary": "**Hugging Face 与 Unsloth 联合推出免费 LLM 微调计划**，用户可通过 Hugging Face Jobs 使用 Unsloth 技术以约 2 倍速度和 60% 更少显存训练小模型（如 LFM2.5-1.2B-Instruct），并获赠免费算力额度；此举大幅降低高质量微调门槛，推动小模型在端侧部署；开发者可快速迭代定制模型，普通用户未来能在手机或电脑上运行个性化、低延迟的本地 AI 应用。",
-      "summaryZh": "**Hugging Face 与 Unsloth 联合推出免费 LLM 微调计划**，用户可通过 Hugging Face Jobs 使用 Unsloth 技术以约 2 倍速度和 60% 更少显存训练小模型（如 LFM2.5-1.2B-Instruct），并获赠免费算力额度；此举大幅降低高质量微调门槛，推动小模型在端侧部署；开发者可快速迭代定制模型，普通用户未来能在手机或电脑上运行个性化、低延迟的本地 AI 应用。",
-      "summaryEn": "Hugging Face and Unsloth have launched a free LLM fine-tuning program, offering users free credits to train small models like LFM2.5-1.2B-Instruct on Hugging Face Jobs using Unsloth’s technology—which delivers ~2x faster training and ~60% less VRAM usage. This significantly lowers the barrier to high-quality fine-tuning and accelerates on-device deployment. Developers can rapidly iterate custom models, while everyday users will eventually run personalized, low-latency AI applications directly on phones or laptops.",
-      "fullText": "Train AI models with Unsloth and Hugging Face Jobs for FREE Hugging Face Models Datasets Spaces Community Docs Enterprise Pricing Log In Sign Up Back to Articles Train AI models with Unsloth and Hugging Face Jobs for FREE Published February 20, 2026 Update on GitHub Upvote 45 +39 ben burtenshaw burtenshaw Follow Daniel (Unsloth) danielhanchen Follow unsloth Michael Han shimmyshimmer Follow unsloth Maxime Labonne mlabonne Follow LiquidAI Daniel van Strien davanstrien Follow shaun smith evalstate Follow You will need Run the Job Installing the Skill Claude Code Codex Anything else Quick Start How It Works Example Training Script Tips for Working with Coding Agents Resources This blog post covers how to use Unsloth and Hugging Face Jobs for fast LLM fine-tuning (specifically LiquidAI/LFM2.5-1.2B-Instruct ) through coding agents like Claude Code and Codex. Unsloth provides ~2x faster training and ~60% less VRAM usage compared to standard methods, so training small models can cost just a few dollars. Why a small model? Small language models like LFM2.5-1.2B-Instruct are ideal candidates for fine-tuning. They are cheap to train, fast to iterate on, and increasingly competitive with much larger models on focused tasks. LFM2.5-1.2B-Instruct runs under 1GB of memory and is optimized for on-device deployment, so what you fine-tune can be served on CPUs, phones, and laptops. You will need We are giving away free credits to fine-tune models on Hugging Face Jobs. Join the Unsloth Jobs Explorers organization to claim your free credits and one-month Pro subscription. A Hugging Face account (required for HF Jobs) Billing setup (for verification, you can monitor your usage and manage your billing in your billing page ). A Hugging Face token with write permissions (optional) A coding agent ( Open Code , Claude Code , or Codex ) Run the Job If you want to train a model using HF Jobs and Unsloth, you can simply use the hf jobs CLI to submit a job. First, you need to install the hf CLI. You can do this by running the following command: # mac or linux curl -LsSf https://hf.co/cli/install.sh | bash Next you can run the following command to submit a job: hf jobs uv run https://huggingface.co/datasets/unsloth/jobs/resolve/main/sft-lfm2.5.py \\ --flavor a10g-small \\ --secrets HF_TOKEN \\ -- timeout 4h \\ --dataset mlabonne/FineTome-100k \\ --num-epochs 1 \\ --eval-split 0.2 \\ --output-repo your-username/lfm-finetuned Check out the training script and Hugging Face Jobs documentation for more details. Installing the Skill Hugging Face model training skill lowers barrier of entry to train a model by simply prompting. First, install the skill with your coding agent. Claude Code Claude Code discovers skills through its plugin system , so we need to install the Hugging Face skills first. To do so: Add the marketplace: /plugin marketplace add huggingface/skills Browse available skills in the Discover tab: /plugin Install the model trainer skill: /plugin install hugging-face-model-trainer@huggingface-skills For more details, see the documentation on using the hub with skills or the Claude Code Skills docs . Codex Codex discovers skills through AGENTS.md files and .agents/skills/ directories. Install individual skills with $skill-installer : $skill-installer install https://github.com/huggingface/skills/tree/main/skills/hugging-face-model-trainer For more details, see the Codex Skills docs and the AGENTS.md guide . Anything else A generic install method is simply to clone the skills repository and copy the skill to your agent's skills directory. git clone https://github.com/huggingface/skills.git mkdir -p ~/.agents/skills && cp -R skills/skills/hugging-face-model-trainer ~/.agents/skills/ Quick Start Once the skill is installed, ask your coding agent to train a model: Train LiquidAI/LFM2.5-1.2B-Instruct on mlabonne/FineTome-100k using Unsloth on HF Jobs The agent will generate a training script based on an example in the skill , submit the training to HF Jobs, and provide a monitoring link via Trackio. How It Works Training jobs run on Hugging Face Jobs , fully managed cloud GPUs. The agent: Generates a UV script with inline dependencies Submits it to HF Jobs via the hf CLI Reports the job ID and monitoring URL Pushes the trained model to your Hugging Face Hub repository Example Training Script The skill generates scripts like this based on the example in the skill . # /// script # dependencies = [\"unsloth\", \"trl>=0.12.0\", \"datasets\", \"trackio\"] # /// from unsloth import FastLanguageModel from trl import SFTTrainer, SFTConfig from datasets import load_dataset model, tokenizer = FastLanguageModel.from_pretrained( \"LiquidAI/LFM2.5-1.2B-Instruct\" , load_in_4bit= True , max_seq_length= 2048 , ) model = FastLanguageModel.get_peft_model( model, r= 16 , lora_alpha= 32 , lora_dropout= 0 , target_modules=[ \"q_proj\" , \"k_proj\" , \"v_proj\" , \"out_proj\" , \"in_proj\" , \"w1\" , \"w2\" , \"w3\" , ], ) dataset = load_dataset( \"trl-lib/Capybara\" , split= \"train\" ) trainer = SFTTrainer( model=model, tokenizer=tokenizer, train_dataset=dataset, args=SFTConfig( output_dir= \"./output\" , push_to_hub= True , hub_model_id= \"username/my-model\" , per_device_train_batch_size= 4 , gradient_accumulation_steps= 4 , num_train_epochs= 1 , learning_rate= 2e-4 , report_to= \"trackio\" , ), ) trainer.train() trainer.push_to_hub() Model Size Recommended GPU Approx Cost/hr <1B params t4-small ~$0.40 1-3B params t4-medium ~$0.60 3-7B params a10g-small ~$1.00 7-13B params a10g-large ~$3.00 For a full overview of Hugging Face Spaces pricing, check out the guide here . Tips for Working with Coding Agents Be specific about the model and dataset to use, and include Hub IDs (for example, Qwen/Qwen2.5-0.5B and trl-lib/Capybara ). Agents will search for and validate those combinations. Mention Unsloth explicitly if you want it used. Otherwise, the agent will choose a framework based on the model and budget. Ask for cost estimates before launching large jobs. Request Trackio monitoring for real-time loss curves. Check job status by asking the agent to inspect logs after submission. Resources Hugging Face Skills Repository Free credits for Unsloth Jobs Explorers Unsloth Tutorial on Hugging Face Jobs Example Unsloth Jobs scripts More Articles from our Blog llm fine-tuning open-source Codex is Open Sourcing AI models 72 December 11, 2025 llm fine-tuning open-source Hot We Got Claude to Fine-Tune an Open Source LLM 597 December 4, 2025 Community ApertureQA about 11 hours ago • edited about 11 hours ago postingonediting Reply ApertureQA about 11 hours ago See translation Reply ApertureQA about 11 hours ago See translation Reply Edit Preview Upload images, audio, and videos by dragging in the text input, pasting, or clicking here . Tap or paste here to upload images Comment · Sign up or log in to comment Upvote 45 +33 System theme Company TOS Privacy About Careers Website Models Datasets Spaces Pricing Docs",
-      "imageUrl": "https://huggingface.co/blog/assets/unsloth-jobs/thumbnail.png",
-      "tags": [],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源权威：官方/白名单",
-        "跨源重复：1 个来源",
-        "模型评分：7/10，理由：Unsloth 与 Hugging Face 合作提供免费高效微调服务，显著降低小模型训练门槛，推动开发者生态发展，属于实用性强、具广泛影响力的行业进展。",
-        "热度：0 / 评论 0"
-      ],
-      "score": 7.8,
-      "publishedAt": "2026-02-20T00:00:00+00:00",
+      "score": 6.6,
+      "publishedAt": "2026-02-21T23:31:45.750016+00:00",
       "authors": []
     },
     {
       "id": "github_obra_superpowers",
-      "title": "obra/superpowers",
-      "titleZh": "obra/superpowers",
-      "titleEn": "obra/superpowers",
+      "title": "Superpowers发布可落地的AI代理技能框架与开发方法论",
+      "titleZh": "Superpowers发布可落地的AI代理技能框架与开发方法论",
+      "titleEn": "Superpowers Releases Practical Agentic Skills Framework and Development Methodology",
       "url": "https://github.com/obra/superpowers",
       "type": "news",
       "source": "GitHub Trending",
-      "summary": "obra/superpowers 是一个面向智能体（agentic）的技能框架与软件开发方法论，旨在提升 AI 驱动系统的工程化能力，其核心价值在于将抽象的智能体能力转化为可复用、可组合的开发模块，为构建复杂 AI 应用提供结构化路径。",
-      "summaryZh": "obra/superpowers 是一个面向智能体（agentic）的技能框架与软件开发方法论，旨在提升 AI 驱动系统的工程化能力，其核心价值在于将抽象的智能体能力转化为可复用、可组合的开发模块，为构建复杂 AI 应用提供结构化路径。",
-      "summaryEn": "obra/superpowers is an agentic skills framework and software development methodology designed to enhance the engineering of AI-driven systems by translating abstract agent capabilities into reusable, composable development modules, offering a structured approach for building complex AI applications.",
+      "summary": "Superpowers提出一种可落地的AI代理技能框架与软件开发方法论，旨在系统化构建具备复合能力的智能体；该框架为开发者提供结构化路径以整合规划、工具调用与记忆等模块，推动AI工程从原型演示走向可靠产品化，普通技术团队可借鉴其方法提升自主代理系统的稳定性与可维护性。",
+      "summaryZh": "Superpowers提出一种可落地的AI代理技能框架与软件开发方法论，旨在系统化构建具备复合能力的智能体；该框架为开发者提供结构化路径以整合规划、工具调用与记忆等模块，推动AI工程从原型演示走向可靠产品化，普通技术团队可借鉴其方法提升自主代理系统的稳定性与可维护性。",
+      "summaryEn": "Superpowers introduces an actionable agentic skills framework and software development methodology designed to systematically build AI agents with composite capabilities. It offers developers a structured approach to integrating planning, tool use, and memory modules, bridging the gap between experimental demos and production-grade systems. Engineering teams can adopt this methodology to enhance the reliability and maintainability of autonomous agents.",
       "fullText": "",
-      "imageUrl": "https://opengraph.githubassets.com/3ac95a0b4da1047cd02967b7b7374e230820dacc0dc5e54dd2c9e45ad918f0d0/obra/superpowers",
+      "imageUrl": "https://opengraph.githubassets.com/4ca41f86fc5f001c05f301c15b40cb65af448dd16d3070a8a8056c1a8e03c257/obra/superpowers",
       "tags": [
         "Agent"
       ],
@@ -785,192 +730,202 @@
       "signalReasons": [
         "来源：GitHub Trending",
         "跨源重复：1 个来源",
-        "模型评分：7/10，理由：提出面向软件开发的智能体技能框架，具有构建可执行AI Agent的方法论价值，对开发者生态具实用意义。",
-        "热度：56209 / 评论 0"
-      ],
-      "score": 7.2,
-      "publishedAt": "2026-02-20T23:36:11.998375+00:00",
-      "authors": []
-    },
-    {
-      "id": "rss_5905994954",
-      "title": "OpenAI 首款硬件曝光：带摄像头的 ChatGPT 智能音箱",
-      "titleZh": "OpenAI 首款硬件曝光：带摄像头的 ChatGPT 智能音箱",
-      "titleEn": "OpenAI’s First Hardware: A ChatGPT-Powered Smart Speaker with Camera",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/882077/openai-chatgpt-smart-speaker-camera-glasses-lamp",
-      "type": "news",
-      "source": "The Verge AI",
-      "summary": "**OpenAI 计划于 2027 年 3 月后推出首款硬件产品——一款售价约 200 至 300 美元的带摄像头智能音箱**，该设备能识别附近桌面上的物品和周围对话，并集成类似 Face ID 的面部识别系统用于支付；此举标志着 OpenAI 正式从纯软件公司向 AI 物理交互入口拓展，可能重塑家庭智能设备生态，普通用户未来或可通过语音与视觉指令直接调用 ChatGPT 能力完成日常任务，但需关注隐私与数据安全风险。",
-      "summaryZh": "**OpenAI 计划于 2027 年 3 月后推出首款硬件产品——一款售价约 200 至 300 美元的带摄像头智能音箱**，该设备能识别附近桌面上的物品和周围对话，并集成类似 Face ID 的面部识别系统用于支付；此举标志着 OpenAI 正式从纯软件公司向 AI 物理交互入口拓展，可能重塑家庭智能设备生态，普通用户未来或可通过语音与视觉指令直接调用 ChatGPT 能力完成日常任务，但需关注隐私与数据安全风险。",
-      "summaryEn": "OpenAI plans to launch its first hardware product—a smart speaker with a camera priced between $200 and $300—no earlier than March 2027; the device will recognize nearby objects and conversations and feature Face ID-like facial recognition for payments, marking OpenAI’s strategic move from pure software into physical AI interfaces that could redefine home smart ecosystems, enabling users to interact with ChatGPT via voice and vision while raising important privacy considerations.",
-      "fullText": "OpenAI’s first ChatGPT gadget could be a smart speaker with a camera | The Verge Skip to main content The homepage The Verge The Verge logo. The Verge The Verge logo. Tech Reviews Science Entertainment AI Policy Hamburger Navigation Button The homepage The Verge The Verge logo. Hamburger Navigation Button Navigation Drawer The Verge The Verge logo. Login / Sign Up close Close Search Tech Expand Amazon Apple Facebook Google Microsoft Samsung Business See all tech Reviews Expand Smart Home Reviews Phone Reviews Tablet Reviews Headphone Reviews See all reviews Science Expand Space Energy Environment Health See all science Entertainment Expand TV Shows Movies Audio See all entertainment AI Expand OpenAI Anthropic See all AI Policy Expand Antitrust Politics Law Security See all policy Gadgets Expand Laptops Phones TVs Headphones Speakers Wearables See all gadgets Verge Shopping Expand Buying Guides Deals Gift Guides See all shopping Gaming Expand Xbox PlayStation Nintendo See all gaming Streaming Expand Disney HBO Netflix YouTube Creators See all streaming Transportation Expand Electric Cars Autonomous Cars Ride-sharing Scooters See all transportation Features Verge Video Expand TikTok YouTube Instagram Podcasts Expand Decoder The Vergecast Version History Newsletters Archives Store Verge Product Updates Subscribe Facebook Threads Instagram Youtube RSS The Verge The Verge logo. OpenAI’s first ChatGPT gadget could be a smart speaker with a camera Comments Drawer Comments Loading comments Getting the conversation ready... AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI Gadgets Close Gadgets Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Gadgets News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News OpenAI’s first ChatGPT gadget could be a smart speaker with a camera The company might be developing smart glasses and a smart lamp, too. The company might be developing smart glasses and a smart lamp, too. by Jay Peters Close Jay Peters Senior Reporter Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Jay Peters Feb 20, 2026, 4:52 PM UTC Link Share Gift Image: The Verge Jay Peters Close Jay Peters Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Jay Peters is a senior reporter covering technology, gaming, and more. He joined The Verge in 2019 after nearly two years at Techmeme. OpenAI’s first hardware release will be a smart speaker with a camera that will probably cost between $200 and $300, according to The Information . The device will be able to recognize things like “items on a nearby table or conversations people are having in the vicinity,” The Information says, and it will have a Face ID-like facial recognition system so that people can purchase things. OpenAI acquired Jony Ive’s hardware company last May in a deal worth nearly $6.5 billion. Details about their hardware products have been trickling out since then, including that the first device won’t be a wearable and that it won’t be released to customers earlier than March 2027 . Other hardware companies are making a big push into AI gadgets, too — including Apple, Ive’s former employer, which is reportedly making its own smart glasses, an AI-powered pendant, and AirPods with cameras. In addition to the smart speaker, OpenAI is “possibly” working on smart glasses and a smart lamp, The Information reports. (Apple may also be working on a smart lamp .) But OpenAI’s glasses might not hit mass production until 2028, and while OpenAI has made prototypes of gadgets like the smart lamp, The Information says it’s “unclear” if they’ll be released and that OpenAI’s devices plans are in early stages. Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates. Jay Peters Close Jay Peters Senior Reporter Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Jay Peters AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI Gadgets Close Gadgets Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Gadgets News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News OpenAI Close OpenAI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All OpenAI Speakers Close Speakers Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Speakers Tech Close Tech Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Tech Most Popular Most Popular The RAM shortage is coming for everything you care about A $10K+ bounty is waiting for anyone who can unplug Ring doorbells from Amazon’s cloud Xbox chief Phil Spencer is leaving Microsoft Read new Microsoft gaming CEO Asha Sharma’s memo on the future of Xbox Meta’s VR metaverse is ditching VR The Verge Daily A free daily digest of the news that matters most. Email (required) Sign Up By submitting your email, you agree to our Terms and Privacy Notice . This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. Advertiser Content From This is the title for the native ad More in AI Trump is making coal plants even dirtier as AI demands more energy Amazon blames human employees for an AI coding agent’s mistake The Pitt has a sharp take on AI The AI security nightmare is here and it looks suspiciously like lobster The speech police came for Colbert Play Money no longer matters to AI’s top talent Trump is making coal plants even dirtier as AI demands more energy Justine Calma 8:18 PM UTC Amazon blames human employees for an AI coding agent’s mistake Robert Hart 4:52 PM UTC The Pitt has a sharp take on AI Charles Pulliam-Moore Feb 19 The AI security nightmare is here and it looks suspiciously like lobster Robert Hart Feb 19 The speech police came for Colbert David Pierce Feb 19 Play Money no longer matters to AI’s top talent Nilay Patel Feb 19 Advertiser Content From This is the title for the native ad Top Stories Two hours ago Xbox chief Phil Spencer is leaving Microsoft 4:15 PM UTC Prediction markets want to eat the news Two hours ago SCOTUS rules Trump’s tariffs are illegal — but the fight is far from over 6:17 PM UTC Trump Mobile is just Liberty Mobile in gold foil 3:00 PM UTC The latest skincare fad is rubbing salmon sperm on your face 11:00 AM UTC Will Stancil is agitating in Minneapolis The Verge The Verge logo. Facebook Threads Instagram Youtube RSS Contact Tip Us Community Guidelines Archives About Ethics Statement How We Rate and Review Products Cookie Settings Terms of Use Privacy Notice Cookie Policy Licensing FAQ Accessibility Platform Status © 2026 Vox Media , LLC. All Rights Reserved",
-      "imageUrl": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/STK155_OPEN_AI_4_CVirginia_A.png?quality=90&strip=all&crop=0%2C10.742221417566%2C100%2C78.515557164868&w=1200",
-      "tags": [
-        "LLM",
-        "Industry"
-      ],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：The Verge AI",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：OpenAI首款硬件产品可能为带摄像头的智能音箱，标志着其从纯软件向端侧AI设备的战略跃迁，具有深远行业影响。",
-        "热度：0 / 评论 0"
-      ],
-      "score": 6.4,
-      "publishedAt": "2026-02-20T16:52:03+00:00",
-      "authors": [
-        "Jay Peters"
-      ]
-    },
-    {
-      "id": "rss_4356582031",
-      "title": "特朗普废除燃煤电厂排污限制，AI 耗电激增加剧污染风险",
-      "titleZh": "特朗普废除燃煤电厂排污限制，AI 耗电激增加剧污染风险",
-      "titleEn": "Trump Rolls Back Coal Plant Emission Rules as AI Energy Demand Soars",
-      "url": "https://www.theverge.com/science/882288/trump-ai-data-center-power-plant-pollution-mercury-mats",
-      "type": "news",
-      "source": "The Verge AI",
-      "summary": "**特朗普政府废除了拜登时期针对燃煤电厂汞及其他有毒污染物的《汞和空气毒物标准》（MATS）**，此举恰逢美国因新建 AI 数据中心而电力需求激增，可能导致燃煤电厂排放反弹；由于燃煤电厂贡献了美国约一半的汞排放（一种可致儿童神经发育损伤的神经毒素），该政策逆转不仅加剧公共健康风险，也凸显 AI 算力扩张与能源环境政策之间的深层矛盾，普通民众应关注本地空气质量变化并支持清洁能源转型。",
-      "summaryZh": "**特朗普政府废除了拜登时期针对燃煤电厂汞及其他有毒污染物的《汞和空气毒物标准》（MATS）**，此举恰逢美国因新建 AI 数据中心而电力需求激增，可能导致燃煤电厂排放反弹；由于燃煤电厂贡献了美国约一半的汞排放（一种可致儿童神经发育损伤的神经毒素），该政策逆转不仅加剧公共健康风险，也凸显 AI 算力扩张与能源环境政策之间的深层矛盾，普通民众应关注本地空气质量变化并支持清洁能源转型。",
-      "summaryEn": "The Trump administration has repealed the Biden-era Mercury and Air Toxics Standards (MATS), which regulated toxic emissions from coal-fired power plants—just as U.S. electricity demand surges due to new AI data centers; since coal plants account for roughly half of U.S. mercury emissions—a neurotoxin linked to birth defects and cognitive impairments in children—this deregulation heightens public health risks and exposes the tension between AI’s energy appetite and environmental safeguards, urging citizens to monitor local air quality and advocate for cleaner energy alternatives.",
-      "fullText": "Kingston Fossil Plant, a 1.4-gigawatt coal-fired power plant located in Roane County, just outside Kingston, Tennessee on the shore of Watts Bar Lake. | Photo: Getty Images The Trump administration just tossed out Biden-era restrictions on mercury and other toxic pollutants from power plants. It's repealing Mercury and Air Toxics Standards (MATS) just as electricity demand in the US ticks up with the buildout of new AI data centers. Those standards are particularly impactful when it comes to pollution from coal plants responsible for around half of mercury emissions in the US. Mercury is a neurotoxin; high exposure has been linked to birth defects and learning disabilities in children. Exposure can also impact the kidneys and nervous system. Trump's deregulation spree aims to make it easier to quickly constr … Read the full story at The Verge.",
-      "imageUrl": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/gettyimages-1140674387.jpg?quality=90&strip=all&crop=0%2C8.6662992559934%2C100%2C82.667401488013&w=1200",
-      "tags": [],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：The Verge AI",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：特朗普政府撤销AI数据中心关键环保标准，反映全球能源政策与AI扩张之间的深层矛盾，具有重大战略与政策影响力。",
-        "热度：0 / 评论 0"
-      ],
-      "score": 5.9,
-      "publishedAt": "2026-02-20T20:18:34+00:00",
-      "authors": [
-        "Justine Calma"
-      ]
-    },
-    {
-      "id": "github_databricks-solutions_ai-dev-kit",
-      "title": "databricks-solutions/ai-dev-kit",
-      "titleZh": "databricks-solutions/ai-dev-kit",
-      "titleEn": "databricks-solutions/ai-dev-kit",
-      "url": "https://github.com/databricks-solutions/ai-dev-kit",
-      "type": "news",
-      "source": "GitHub Trending",
-      "summary": "Databricks 推出由现场工程团队开发的 AI 开发工具包（ai-dev-kit），专为构建编码智能体（coding agents）设计，提供标准化组件与最佳实践，帮助开发者在 Databricks 平台上高效构建、测试和部署具备自主编程能力的 AI 代理，加速企业级 AI 工程落地。",
-      "summaryZh": "Databricks 推出由现场工程团队开发的 AI 开发工具包（ai-dev-kit），专为构建编码智能体（coding agents）设计，提供标准化组件与最佳实践，帮助开发者在 Databricks 平台上高效构建、测试和部署具备自主编程能力的 AI 代理，加速企业级 AI 工程落地。",
-      "summaryEn": "Databricks has released an AI Development Kit (ai-dev-kit) by its Field Engineering team, specifically designed for building coding agents; it offers standardized components and best practices to help developers efficiently construct, test, and deploy autonomous programming-capable AI agents on the Databricks platform, accelerating enterprise AI engineering adoption.",
-      "fullText": "",
-      "imageUrl": "https://tse3.mm.bing.net/th/id/OIP.6MTAE9GcLykQZBRIwF9jYgAAAA?w=1200&h=630&c=7&r=0&o=5&pid=1.7",
-      "tags": [
-        "Agent"
-      ],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：GitHub Trending",
-        "跨源重复：1 个来源",
-        "模型评分：6/10，理由：Databricks AI开发工具包为编码代理提供支持，属于实用型工程工具，有一定行业相关性但非颠覆性创新。",
-        "热度：535 / 评论 0"
+        "模型评分：6/10，理由：提出AI代理技能框架，对开发方法论有启发意义，但尚未形成广泛生态影响。",
+        "热度：56969 / 评论 0"
       ],
       "score": 6.6,
-      "publishedAt": "2026-02-20T23:36:18.351006+00:00",
+      "publishedAt": "2026-02-21T23:31:47.039738+00:00",
       "authors": []
     },
     {
-      "id": "rss_6314636106",
-      "title": "Gemini 3.1 Pro 登顶专业任务榜单，Google 再推强大多模态模型",
-      "titleZh": "Gemini 3.1 Pro 登顶专业任务榜单，Google 再推强大多模态模型",
-      "titleEn": "Google’s Gemini 3.1 Pro Tops Professional Task Benchmarks with New Capabilities",
-      "url": "https://techcrunch.com/2026/02/19/googles-new-gemini-pro-model-has-record-benchmark-scores-again/",
+      "id": "rss_9446477749",
+      "title": "微软新任游戏CEO誓言拒斥“AI垃圾内容”，坚守游戏人文内核",
+      "titleZh": "微软新任游戏CEO誓言拒斥“AI垃圾内容”，坚守游戏人文内核",
+      "titleEn": "Microsoft’s New Gaming CEO Vows No ‘Endless AI Slop,’ Prioritizes Human-Crafted Games",
+      "url": "https://techcrunch.com/2026/02/21/microsofts-new-gaming-ceo-vows-not-to-flood-the-ecosystem-with-endless-ai-slop/",
       "type": "news",
       "source": "TechCrunch AI",
-      "summary": "**Google 发布 Gemini 3.1 Pro 预览版，在多项权威基准测试中创下新高**，包括专为评估 AI 执行专业任务能力设计的 APEX-Agents 榜单；该模型显著超越前代 Gemini 3，展现出更强的多步推理与知识工作处理能力，标志着大模型正快速向“能干活的智能体”演进，开发者可借此构建更复杂的自动化工作流，普通用户未来将体验到更精准、上下文感知更强的 AI 助手服务。",
-      "summaryZh": "**Google 发布 Gemini 3.1 Pro 预览版，在多项权威基准测试中创下新高**，包括专为评估 AI 执行专业任务能力设计的 APEX-Agents 榜单；该模型显著超越前代 Gemini 3，展现出更强的多步推理与知识工作处理能力，标志着大模型正快速向“能干活的智能体”演进，开发者可借此构建更复杂的自动化工作流，普通用户未来将体验到更精准、上下文感知更强的 AI 助手服务。",
-      "summaryEn": "Google has released a preview of Gemini 3.1 Pro, which achieves record scores on key benchmarks—including the APEX-Agents leaderboard that evaluates AI performance on real professional tasks—demonstrating significant improvements over Gemini 3 in multi-step reasoning and knowledge work; this advancement accelerates the shift toward capable AI agents, enabling developers to build sophisticated automation workflows and promising end users more accurate, context-aware AI assistance.",
-      "fullText": "Google's new Gemini Pro model has record benchmark scores — again | TechCrunch –:–:–:– Save up to $680 on your pass with Super Early Bird rates. REGISTER NOW . Save up to $680 on your Disrupt 2026 pass. Ends February 27. REGISTER NOW . Close TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture More from TechCrunch Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Crunchboard Contact Us In Brief Posted: 4:55 PM PST · February 19, 2026 Image Credits: Jagmeet Singh / TechCrunch Lucas Ropek Google’s new Gemini Pro model has record benchmark scores — again On Thursday, Google released the newest version of Gemini Pro, its powerful LLM. The model, 3.1, is currently available as a preview and will be generally released soon, the company said. Google’s new model may be one of the most powerful LLMs yet. Onlookers have noted that Gemini 3.1 Pro appears to be a big step up from its predecessor, Gemini 3 — which, upon its release in November, was already considered a highly capable AI tool. On Thursday, Google also shared statistics from independent benchmarks — such as one called Humanity’s Last Exam — that showed it performing significantly better than its previous version. Gemini 3.1 Pro was also praised by Brendan Foody, the CEO of AI startup Mercor, whose benchmarking system, APEX, is designed to measure how well new AI models perform real professional tasks. “Gemini 3.1 Pro is now at the top of the APEX-Agents leaderboard,” Foody said in a social media post , adding that the model’s impressive results show “how quickly agents are improving at real knowledge work.” The release comes as the AI model wars are heating up , and tech companies continue to release increasingly powerful LLMs designed for agentic work and multi-step reasoning. Other major names — including OpenAI and Anthropic — have recently released new models as well. Techcrunch event Save up to $300 or 30% to TechCrunch Founder Summit 1,000+ founders and investors come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately. Offer ends March 13. Save up to $300 or 30% to TechCrunch Founder Summit 1,000+ founders and investors come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Offer ends March 13. Boston, MA | June 9, 2026 REGISTER NOW Topics AI , AI , Gemini Pro 3.1 , Google , In Brief , Mercor , TC October 13-15 San Francisco, CA Save up to $680 on your pass before February 27. Meet investors. Discover your next portfolio company. Hear from 250+ tech leaders , dive into 200+ sessions , and explore 300+ startups building what’s next. Don’t miss these one-time savings. REGISTER NOW Newsletters See More Subscribe for the industry’s biggest tech news TechCrunch Daily News Every weekday and Sunday, you can get the best of TechCrunch’s coverage. TechCrunch Mobility TechCrunch Mobility is your destination for transportation news and insight. Startups Weekly Startups are the core of TechCrunch, so get our best coverage delivered weekly. StrictlyVC Provides movers and shakers with the info they need to start their day. No newsletters selected. Subscribe By submitting your email, you agree to our Terms and Privacy Notice . Related AI Great news for xAI: Grok is now pretty good at answering questions about Baldur’s Gate Russell Brandom 5 hours ago AI All the important news from the ongoing India AI Impact Summit Ivan Mehta 1 day ago AI OpenAI, Reliance partner to add AI search to JioHotstar Jagmeet Singh 1 day ago Latest in AI Startups The creator economy’s ad revenue problem and India’s AI ambitions Theresa Loconsolo 37 minutes ago Startups Why creators are ditching ad revenue for chocolate bars and fintech acquisitions Theresa Loconsolo Anthony Ha Rebecca Bellan Kirsten Korosec 1 hour ago In Brief Anthropic-funded group backs candidate attacked by rival AI super PAC Rebecca Bellan 3 hours ago X LinkedIn Facebook Instagram youTube Mastodon Threads Bluesky TechCrunch Staff Contact Us Advertise Crunchboard Jobs Site Map Terms of Service Privacy Policy RSS Terms of Use Code of Conduct OpenClaw AI Memory Anthropic WordPress Cohere Tech Layoffs ChatGPT © 2025 TechCrunch Media LLC.",
-      "imageUrl": "https://techcrunch.com/wp-content/uploads/2026/01/google-gemini-jagmeet-singh-techcrunch.jpg?resize=1200%2C630",
+      "summary": "微软新任游戏CEO Asha Sharma在内部备忘录中明确承诺不会用“无灵魂的AI垃圾内容”充斥游戏生态，强调游戏始终是人类创作的艺术，尽管公司将探索AI驱动的新玩法与商业模式；此举回应了业界对AI生成内容泛滥的担忧，为玩家保障内容质量，也引导开发者聚焦AI增强而非替代人工创意，普通玩家可期待更具匠心且AI辅助的游戏体验而非廉价填充物。",
+      "summaryZh": "微软新任游戏CEO Asha Sharma在内部备忘录中明确承诺不会用“无灵魂的AI垃圾内容”充斥游戏生态，强调游戏始终是人类创作的艺术，尽管公司将探索AI驱动的新玩法与商业模式；此举回应了业界对AI生成内容泛滥的担忧，为玩家保障内容质量，也引导开发者聚焦AI增强而非替代人工创意，普通玩家可期待更具匠心且AI辅助的游戏体验而非廉价填充物。",
+      "summaryEn": "Microsoft’s new Gaming CEO Asha Sharma pledged in an internal memo not to flood the ecosystem with 'soulless AI slop,' affirming that games remain human-crafted art even as Microsoft explores AI-driven business models and gameplay innovations. This stance addresses growing industry concerns over low-quality AI-generated content, assuring players of curated experiences while guiding developers to use AI as a creative enhancer—not a replacement. Gamers can thus expect thoughtfully designed titles where AI augments, rather than dilutes, artistic intent.",
+      "fullText": "Microsoft’s new gaming CEO vows not to flood the ecosystem with ‘endless AI slop’ | TechCrunch –:–:–:– Save up to $680 on your pass with Super Early Bird rates. REGISTER NOW . Save up to $680 on your Disrupt 2026 pass. Ends February 27. REGISTER NOW . Close TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture More from TechCrunch Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Crunchboard Contact Us In Brief Posted: 9:41 AM PST · February 21, 2026 Image Credits: Tomohiro Ohsumi / Getty Images Anthony Ha Microsoft’s new gaming CEO vows not to flood the ecosystem with ‘endless AI slop’ Microsoft announced a major gaming shakeup on Friday, with Microsoft Gaming CEO Phil Spencer departing the company, along with Xbox President Sarah Bond. Spencer will be replaced by former Instacart and Meta executive Asha Sharma. With Sharma’s most recent role as the president of Microsoft’s CoreAI product, these moves suggest that Microsoft might be doubling down on bringing AI into video games. The company had already been experimenting with ways to combine AI and gaming, for example developing an AI gaming companion and releasing a buggy, AI-generated level from “Quake II.” Indeed, in an internal memo published by The Verge , Sharma wrote that Microsoft “will invent new business models and new ways to play” and said that “monetization and AI” will both “evolve and influence this future.” At the same time, she said that the company “will not chase short-term efficiency or flood our ecosystem with soulless AI slop.” “Games are and always will be art, crafted by humans, and created with the most innovative technology provided by us,” Sharma added. That’s just one of three “commitments” Sharma made in her memo. The others involve building “great games beloved by players” and prioritizing Xbox. Topics AI , asha sharma , Media & Entertainment , Microsoft October 13-15 San Francisco, CA Save up to $680 on your pass before February 27. Meet investors. Discover your next portfolio company. Hear from 250+ tech leaders , dive into 200+ sessions , and explore 300+ startups building what’s next. Don’t miss these one-time savings. REGISTER NOW Newsletters See More Subscribe for the industry’s biggest tech news TechCrunch Daily News Every weekday and Sunday, you can get the best of TechCrunch’s coverage. TechCrunch Mobility TechCrunch Mobility is your destination for transportation news and insight. Startups Weekly Startups are the core of TechCrunch, so get our best coverage delivered weekly. StrictlyVC Provides movers and shakers with the info they need to start their day. No newsletters selected. Subscribe By submitting your email, you agree to our Terms and Privacy Notice . Related AI Sam Altman would like remind you that humans use a lot of energy, too Anthony Ha 2 hours ago AI Google VP warns that two types of AI startups may not survive Rebecca Bellan 7 hours ago AI India’s Sarvam launches Indus AI chat app as competition heats up Jagmeet Singh 22 hours ago Latest in Media & Entertainment Media & Entertainment Wikipedia blacklists Archive.today after alleged DDoS attack Anthony Ha 3 hours ago In Brief Microsoft’s new gaming CEO vows not to flood the ecosystem with ‘endless AI slop’ Anthony Ha 6 hours ago TechCrunch Disrupt 2026 7 days until ticket prices rise for TechCrunch Disrupt 2026 TechCrunch Events 8 hours ago X LinkedIn Facebook Instagram youTube Mastodon Threads Bluesky TechCrunch Staff Contact Us Advertise Crunchboard Jobs Site Map Terms of Service Privacy Policy RSS Terms of Use Code of Conduct OpenClaw AI Memory Anthropic WordPress Cohere Tech Layoffs ChatGPT © 2025 TechCrunch Media LLC.",
+      "imageUrl": "https://techcrunch.com/wp-content/uploads/2024/10/GettyImages-2174641784.jpg?resize=1200%2C630",
       "tags": [
-        "LLM",
-        "Industry",
-        "Benchmark"
+        "Vision",
+        "Industry"
       ],
       "paperCategory": "",
       "signalReasons": [
         "来源：TechCrunch AI",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：Gemini 3.1 Pro在基准测试中再次刷新纪录，体现Google在大模型性能上的持续领先，对全球AI技术演进和产业应用具有重大战略影响。",
+        "模型评分：8/10，理由：微软新游戏CEO明确抵制低质AI内容，预示行业对AI滥用的治理转向，具有重大战略信号意义，影响未来生态发展",
         "热度：0 / 评论 0"
       ],
-      "score": 5.9,
-      "publishedAt": "2026-02-20T00:55:22+00:00",
+      "score": 5.3,
+      "publishedAt": "2026-02-21T17:41:27+00:00",
       "authors": [
-        "Lucas Ropek"
+        "Anthony Ha"
+      ]
+    },
+    {
+      "id": "hn_47100468",
+      "title": "Chris Lattner深度解析Claude C Compiler：AI已能构建编译器，但尚未能创新",
+      "titleZh": "Chris Lattner深度解析Claude C Compiler：AI已能构建编译器，但尚未能创新",
+      "titleEn": "Chris Lattner Dissects Claude C Compiler: AI Can Build Compilers But Not Yet Invent Them",
+      "url": "https://www.modular.com/blog/the-claude-c-compiler-what-it-reveals-about-the-future-of-software",
+      "type": "news",
+      "source": "Hacker News",
+      "summary": "前LLVM作者Chris Lattner深入分析Anthropic发布的Claude C Compiler（CCC），指出该AI系统虽未发明新架构，但成功复现了数十年编译器工程的共识设计，如LLVM风格的中间表示和多后端支持，标志着AI已能参与大型系统工程；其局限在于过度优化测试用例、缺乏对系统头文件等复杂场景的泛化能力，揭示当前AI擅长实现既有抽象而非创新；这对开发者意味着需更聚焦架构设计与文档，而普通工程师可借AI自动化重复性编码任务，但必须强化对系统整体性的把控。",
+      "summaryZh": "前LLVM作者Chris Lattner深入分析Anthropic发布的Claude C Compiler（CCC），指出该AI系统虽未发明新架构，但成功复现了数十年编译器工程的共识设计，如LLVM风格的中间表示和多后端支持，标志着AI已能参与大型系统工程；其局限在于过度优化测试用例、缺乏对系统头文件等复杂场景的泛化能力，揭示当前AI擅长实现既有抽象而非创新；这对开发者意味着需更聚焦架构设计与文档，而普通工程师可借AI自动化重复性编码任务，但必须强化对系统整体性的把控。",
+      "summaryEn": "Former LLVM creator Chris Lattner analyzes Anthropic’s Claude C Compiler (CCC), noting that while it introduces no novel architecture, it successfully reproduces decades of compiler engineering consensus—including an LLVM-style intermediate representation and multi-architecture backends—marking AI’s entry into large-scale system engineering. Its limitations, such as overfitting to test suites and poor handling of complex system headers, reveal that current AI excels at implementing known abstractions but struggles with open-ended generalization. This shift demands engineers prioritize architectural design and documentation, while enabling teams to automate repetitive coding tasks—provided they maintain rigorous oversight of system coherence.",
+      "fullText": "Modular: The Claude C Compiler: What It Reveals About the Future of Software Modular acquires BentoML to deliver production AI in the cloud! - Read more Back Product Resources Customers Docs Blog Company Request Demo Get started MODULAR PLATFORM MAX Framework GenAI native modeling & serving Mojo Language The best GPU & CPU performance Mammoth Scale intelligently to any cluster DEPLOYMENT OPTIONS Deployment Modular cloud Editions All the ways you can use Modular Docs Get up and running. Fast. Models 500+ supported open models Tutorials Build amazing things Recipes Step-by-step guides GPU Puzzles Learn GPU Programming Community Build the future of AI together About Build AI for anyone, anywhere. Careers We’re currently hiring! Culture What we believe Contact Us Request a demo Get started close February 18, 2026 The Claude C Compiler: What It Reveals About the Future of Software Chris Lattner Engineering Compilers occupy a special place in computer science. They're a canonical course in computer science education. Building one is a rite of passage. It forces you to confront how software actually works, by examining languages, abstractions, hardware, and the boundary between human intent and machine execution. Compilers once helped humans speak to machines. Now machines are beginning to help humans build compilers. I’ve spent a large part of my career working on compilers and programming languages, so when Anthropic announced the Claude C Compiler (CCC), I paid close attention. My basic take is simple: this is real progress, a milestone for the industry. We’re not in the end of times, but this also isn’t just hype, so take a deep breath, everyone. AI building a C compiler is not truly revolutionary, but it does reveal how far AI coding has progressed and where it may be heading next. Before diving in, here are my main take-aways: AI has moved beyond writing small snippets of code and is beginning to participate in engineering large systems. AI is crossing from local code generation into global engineering participation: CCC maintains architecture across subsystems, not just functions. CCC has an “LLVM-like” design (as expected): training on decades of compiler engineering produces compiler architectures shaped by that history. Our legal apparatus frequently lags behind technology progress, and AI is pushing legal boundaries. Is proprietary software cooked? Good software depends on judgment, communication, and clear abstraction. AI has amplified this. AI coding is automation of implementation, so design and stewardship become more important. Manual rewrites and translation work are becoming AI-native tasks, automating a large category of engineering effort. AI, used right, should produce better software, provided humans actually spend more energy on architecture, design, and innovation. Architecture documentation has become infrastructure as AI systems amplify well-structured knowledge while punishing undocumented systems. The implications for engineering teams are real and immediate. At the end, I share how I'm translating these insights into concrete expectations for my team at Modular. What are Compilers? Why do they matter as an AI Benchmark? To understand why the Claude C Compiler matters, we must first understand why compilers themselves are such a revealing test of intelligence, whether human or artificial. A compiler sits at the intersection of multiple difficult domains at once: formal language design, large-scale software architecture, deep performance constraints, and unforgiving correctness requirements. Most applications can tolerate bugs, compilers cannot. A single incorrect transformation can silently produce wrong programs, disrupting the productivity of countless users. Every layer must maintain strict invariants while cooperating with every other layer. Historically, this is why compilers became a rite of passage in computer science education . They force engineers to think across abstraction layers: turning text into structure, structure into meaning, meaning into optimized machine behavior. From my previous piece on LLVM compiler design. That process mirrors something deeper, which is the process of translating human intent into precise execution, which is why compilers are a uniquely interesting benchmark for AI system integration. Earlier generations of AI coding tools were impressive at local tasks, such as writing functions, generating scripts, or filling in missing pieces of code. Those tasks test pattern recognition and short-term reasoning. The Claude C Compiler is a milestone, showing progress at a different level. It shows an AI system maintaining coherence across an entire engineering system that can coordinate multiple subsystems, preserve architectural structure, iterate toward correctness over time, and operate within a complex feedback loop of tests and failures. AI is beginning to move from code completion toward engineering participation . However, the deeper reason compilers align unusually well with modern AI systems is that compiler engineers build architectures that are highly legible and structured. Compilers have layered abstractions, consistent naming conventions, composable passes, and deterministic feedback (“it works” or “it doesn’t” - there is a clear success criteria). These properties make compilers unusually learnable for both humans and machine learning systems trained on large amounts of source code. Seen this way, CCC is validation of decades of software engineering practice. The abstractions developed by compiler engineers turned out to be structured enough that machines can now reason within them. That is a remarkable milestone. However, it also hints at an important limitation. Looking Inside the Claude C Compiler One of the most interesting aspects of the Claude C Compiler is that Anthropic released the full source history . Unlike many AI demonstrations, this is an engineering artifact that anyone can inspect, not simply a polished result or benchmark score. The entire repository, including commit history, design documents , and future plans , is available. That means we can actually study how the system approached building a compiler. I spent some time doing exactly that. The first major commit effectively “one-shots” the basic architecture of the system. From the start, CCC follows a classic compiler structure. Major subsystems all have pretty amazing design docs too, including: a frontend handling preprocessing , parsing , and semantic analysis (common to all compilers) an intermediate representation and optimizations that are directly inspired by LLVM and a backend responsible for code generation , with 4 architectures ( x86-32 , x86-64 , RISC-V , and AArch64 ) The design choices throughout the repository consistently reflect well-established compiler practice - things taught in a university class and widely used by existing compilers like LLVM and GCC. The intermediate representation includes concepts that will look immediately familiar to LLVM developers, including instructions like GetElementPtr , basic block “ terminators ” and Mem2Reg . It appears to have strong knowledge of widely-used compiler design techniques . E xample subsystem compiler architecture LLVM and GCC code are clearly part of the training set - Claude effectively translated large swaths of them into Rust for CCC. The design docs show detailed knowledge of both systems, as well as considered takes on its implementation approach . Some have criticized CCC for learning from this prior art, but I find that ridiculous - I certainly learned from GCC when building Clang! Pushpendre Rastogi wrote a great blog post about CCC and agent scaling laws , showing how iterative agent workflows gradually expanded implementation and test coverage: Code archaeology timeline, by Pushpendre Rastogi (included with permission) Taken together, CCC looks less like an experimental research compiler and more like a competent textbook implementation, the sort of system a strong undergraduate team might build early in a project before years of refinement. That alone is remarkable. What did the Claude C Compiler get wrong? The most revealing parts of CCC are its mistakes. Several design choices suggest optimization toward passing tests rather than building general abstractions like a human would. A few examples: The code generator is “toy” and the optimizer reparses assembly text instead of using an IR, and the code generators are poorly factored. The parser appears to have poor error recovery / usability and have some incorrect corner cases . It appears that CCC doesn’t parse system headers (which are much more gnarly to deal with than application code) so it hard codes in things it needs for its tests. This last issue is the big problem that indicates CCC won’t be able to generalize well beyond its test-suite, which appears to be confirmed by its bug tracker . These flaws are informative rather than surprising, suggesting that current AI systems excel at assembling known techniques and optimizing toward measurable success criteria, while struggling with the open-ended generalization required for production-quality systems. And that observation leads directly to the deeper question: what does this tell us about AI coding itself? What the Claude C Compiler Reveals About AI Coding The most interesting lesson from the Claude C Compiler is not that AI can build a compiler. It’s how it built one. CCC didn’t invent a new architecture or explore an unfamiliar design space. Instead, it reproduced something strikingly close to the accumulated consensus of decades of compiler engineering: structurally correct, familiar, and grounded in well-understood techniques. Modern LLMs are extraordinarily powerful distribution followers. They learn patterns across vast bodies of existing work and generate solutions near the center of that collective experience. When trained on decades of compilers shaped by GCC, LLVM, and academic literature, it is entirely natural that the result reflects that lineage. This phenomenon closely aligns with Richard Sutton’s Bitter Lesson , where scalable methods rediscover broadly successful structures . An analogy helps. Training on English literature allows a model to produce Shakespearean prose: not because literature stopped evolving in the 1600s. Instead, it’s because Shakespeare occupies a dense region of the training distribution. Models learn what has been widely written and reinforced. The same dynamic appears here in compiler design (of all things, rawr! 🐉). Every course of human knowledge, absorbed at scale - but who writes the next curriculum? CCC shows that AI systems can internalize the textbook knowledge of a field and apply it coherently at scale. AI can now reliably operate within established engineering practice. This is a genuine milestone that removes much of the drudgery of repetition and allows engineers to start closer to the state of the art. But it also highlights an important limitation of this work: Implementing known abstractions is not the same as inventing new ones. I see nothing novel in this implementation. Historically, progress in compilers did not come from assembling standard components quickly. It came from conceptual leaps, e.g. new intermediate representations, new optimization models, new ways of structuring programs and hardware interaction. It came from getting groups of people to work together, which required inspiring and motivating engineers in new ways. Current AI coding systems excel when success criteria are clear and verifiable: compile the program, pass the tests, improve performance. In these environments, iterative refinement works extremely well: red/green TDD works ! Innovation is different. When inventing a new abstraction, success is not yet measurable. There is no test suite for an idea that does not exist, and good design is hard to quantify. AI coding is therefore best understood as another step forwar",
+      "imageUrl": "https://cdn.prod.website-files.com/68c9c3107effc2ea46e1a82c/6996624ca950e0f8926d6f86_Option05.png",
+      "tags": [
+        "LLM"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源：Hacker News",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：Chris Lattner深度解析Claude C编译器，揭示AI驱动软件工程的未来趋势，具有战略级行业影响。",
+        "热度：35 / 评论 3"
+      ],
+      "score": 4.68,
+      "publishedAt": "2026-02-21T13:05:42+00:00",
+      "authors": [
+        "de_aztec"
+      ]
+    },
+    {
+      "id": "rss_4427305432",
+      "title": "Sarvam推Indus聊天App，携105B大模型迎战OpenAI与Anthropic",
+      "titleZh": "Sarvam推Indus聊天App，携105B大模型迎战OpenAI与Anthropic",
+      "titleEn": "Sarvam Launches Indus Chat App with 105B Model to Challenge OpenAI and Anthropic in India",
+      "url": "https://techcrunch.com/2026/02/20/indias-sarvam-launches-indus-ai-chat-app-as-competition-heats-up/",
+      "type": "news",
+      "source": "TechCrunch AI",
+      "summary": "印度AI初创公司Sarvam推出面向本土市场的Indus聊天应用，搭载其自研的1050亿参数大模型Sarvam 105B，支持文本与语音交互，并已在iOS、Android和网页端开启Beta测试；此举旨在应对OpenAI、Anthropic等国际巨头在印度的快速扩张——仅ChatGPT在印周活用户已超1亿；Indus目前限印度用户使用，且存在无法单独删除聊天记录、推理功能不可关闭等限制，但标志着印度正加速构建自主AI基础设施，普通用户可提前体验本地化语言支持的AI服务，同时为国产替代提供早期反馈渠道。",
+      "summaryZh": "印度AI初创公司Sarvam推出面向本土市场的Indus聊天应用，搭载其自研的1050亿参数大模型Sarvam 105B，支持文本与语音交互，并已在iOS、Android和网页端开启Beta测试；此举旨在应对OpenAI、Anthropic等国际巨头在印度的快速扩张——仅ChatGPT在印周活用户已超1亿；Indus目前限印度用户使用，且存在无法单独删除聊天记录、推理功能不可关闭等限制，但标志着印度正加速构建自主AI基础设施，普通用户可提前体验本地化语言支持的AI服务，同时为国产替代提供早期反馈渠道。",
+      "summaryEn": "Indian AI startup Sarvam has launched its Indus chat app in beta on iOS, Android, and web, powered by its homegrown 105-billion-parameter Sarvam 105B model, offering text and voice interaction tailored for local languages. The move counters rapid expansion by global players like OpenAI and Anthropic—ChatGPT alone reports over 100 million weekly active users in India. Currently limited to Indian users and featuring constraints like no per-chat deletion or toggleable reasoning mode, Indus represents a strategic step toward domestic AI infrastructure. It enables early adopters to experience localized AI services and provide feedback crucial for building India-centric alternatives.",
+      "fullText": "India's Sarvam launches Indus AI chat app as competition heats up | TechCrunch –:–:–:– Save up to $680 on your pass with Super Early Bird rates. REGISTER NOW . Save up to $680 on your Disrupt 2026 pass. Ends February 27. REGISTER NOW . Close TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Microsoft Privacy Robotics Security Social Space Startups TikTok Transportation Venture More from TechCrunch Staff Events Startup Battlefield StrictlyVC Newsletters Podcasts Videos Partner Content TechCrunch Brand Studio Crunchboard Contact Us Image Credits: Jagmeet Singh / TechCrunch AI India’s Sarvam launches Indus AI chat app as competition heats up Jagmeet Singh 5:00 PM PST · February 20, 2026 Sarvam , an Indian AI startup focused on building models for local languages and users, on Friday launched its Indus chat app for web and mobile users, entering a fast-growing market dominated by global players including OpenAI, Anthropic, and Google. The launch comes as India has become a key battleground for generative AI adoption. Recently, OpenAI CEO Sam Altman said ChatGPT has more than 100 million weekly active users in India, while Anthropic said India accounts for 5.8% of total Claude usage , second only to the U.S. Indus serves as a chat interface for its newly announced Sarvam 105B model, the company’s 105-billion-parameter large language model. The app’s launch comes two days after Bengaluru-based Sarvam unveiled its 105B and 30B models at the India AI Impact Summit in New Delhi earlier this week. At the summit, the startup also outlined enterprise initiatives and hardware plans and announced partnerships with companies including HMD to bring AI to Nokia feature phones and Bosch for AI-enabled automotive applications. Currently available in beta on iOS , Android , and the web , the Indus app allows users to type or speak queries and receive responses in text and audio. Users can sign in using their phone number, Google or Microsoft account, or Apple ID, though the service appears to be limited to India for now. Image Credits: Jagmeet Singh / TechCrunch The app currently comes with some limitations. Users cannot delete their chat history without deleting their account, and there is no option to turn off the app’s reasoning feature, which can sometimes slow response times. Sarvam has also warned that access may be restricted as it gradually expands its compute capacity. “We’re gradually rolling out Indus on a limited compute capacity, so you may hit a waitlist at first. We will expand access over time,” Sarvam co-founder Pratyush Kumar wrote on X, adding that the company is seeking feedback from users. Founded in 2023, Sarvam has raised $41 million to date from investors, including Lightspeed Venture Partners, Peak XV Partners, and Khosla Ventures as it builds large language models tailored for India. Techcrunch event Save up to $300 or 30% to TechCrunch Founder Summit 1,000+ founders and investors come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately. Offer ends March 13. Save up to $300 or 30% to TechCrunch Founder Summit 1,000+ founders and investors come together at TechCrunch Founder Summit 2026 for a full day focused on growth, execution, and real-world scaling. Learn from founders and investors who have shaped the industry. Connect with peers navigating similar growth stages. Walk away with tactics you can apply immediately Offer ends March 13. Boston, MA | June 9, 2026 REGISTER NOW Sarvam is one of a small but growing group of Indian startups attempting to build domestic alternatives to global artificial intelligence platforms as India seeks greater control over its AI infrastructure. Topics AI , Apps , chat apps , India , Indus app , Sarvam , Sarvam 105B , Sarvam AI , Startups Jagmeet Singh Reporter Jagmeet covers startups, tech policy-related updates, and all other major tech-centric developments from India for TechCrunch. He previously worked as a principal correspondent at NDTV. You can contact or verify outreach from Jagmeet by emailing mail@journalistjagmeet.com . View Bio October 13-15 San Francisco, CA Save up to $680 on your pass before February 27. Meet investors. Discover your next portfolio company. Hear from 250+ tech leaders , dive into 200+ sessions , and explore 300+ startups building what’s next. Don’t miss these one-time savings. REGISTER NOW Most Popular Great news for xAI: Grok is now pretty good at answering questions about Baldur’s Gate Russell Brandom FBI says ATM ‘jackpotting’ attacks are on the rise, and netting hackers millions in stolen cash Zack Whittaker Meta’s own research found parental supervision doesn’t really help curb teens’ compulsive social media use Sarah Perez How Ricursive Intelligence raised $335M at a $4B valuation in 4 months Julie Bort After all the hype, some AI experts don’t think OpenClaw is all that exciting Amanda Silberling OpenClaw creator Peter Steinberger joins OpenAI Anthony Ha The great computer science exodus (and where students are going instead) Connie Loizos Loading the next article Error loading the next article X LinkedIn Facebook Instagram youTube Mastodon Threads Bluesky TechCrunch Staff Contact Us Advertise Crunchboard Jobs Site Map Terms of Service Privacy Policy RSS Terms of Use Code of Conduct OpenClaw AI Memory Anthropic WordPress Cohere Tech Layoffs ChatGPT © 2025 TechCrunch Media LLC.",
+      "imageUrl": "https://techcrunch.com/wp-content/uploads/2026/02/sarvam-indus-chat-app-jagmeet-singh-techcrunch.jpg?resize=1200%2C630",
+      "tags": [],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源：TechCrunch AI",
+        "跨源重复：1 个来源",
+        "模型评分：7/10，理由：印度本土AI公司推出多语言聊天应用，体现全球AI竞争多元化，尤其在南亚市场具实用价值与区域影响力",
+        "热度：0 / 评论 0"
+      ],
+      "score": 4.2,
+      "publishedAt": "2026-02-21T01:00:00+00:00",
+      "authors": [
+        "Jagmeet Singh"
+      ]
+    },
+    {
+      "id": "hn_47104667",
+      "title": "Llama 3.1 70B可在单张RTX 3090运行，NVMe直通技术绕过CPU瓶颈",
+      "titleZh": "Llama 3.1 70B可在单张RTX 3090运行，NVMe直通技术绕过CPU瓶颈",
+      "titleEn": "Llama 3.1 70B Runs on Single RTX 3090 Using NVMe-to-GPU Bypass",
+      "url": "https://github.com/xaskasdf/ntransformer",
+      "type": "news",
+      "source": "Hacker News",
+      "summary": "开发者xaskasdf开源C++/CUDA推理引擎ntransformer，通过三级自适应缓存（VRAM+RAM+NVMe）和NVMe直通技术绕过CPU，在单张RTX 3090（24GB显存）上运行Llama 3.1 70B模型，实现0.2 token/s的推理速度，较传统mmap方案提速33倍；该引擎支持GGUF量化格式、零依赖（无需PyTorch或cuBLAS），并利用双缓冲流水线重叠NVMe读取、PCIe数据传输与GPU计算，使消费级硬件也能运行超大规模模型，普通用户只需Linux系统、RTX 3090及NVMe SSD即可尝试，为本地部署70B级模型提供可行路径。",
+      "summaryZh": "开发者xaskasdf开源C++/CUDA推理引擎ntransformer，通过三级自适应缓存（VRAM+RAM+NVMe）和NVMe直通技术绕过CPU，在单张RTX 3090（24GB显存）上运行Llama 3.1 70B模型，实现0.2 token/s的推理速度，较传统mmap方案提速33倍；该引擎支持GGUF量化格式、零依赖（无需PyTorch或cuBLAS），并利用双缓冲流水线重叠NVMe读取、PCIe数据传输与GPU计算，使消费级硬件也能运行超大规模模型，普通用户只需Linux系统、RTX 3090及NVMe SSD即可尝试，为本地部署70B级模型提供可行路径。",
+      "summaryEn": "Developer xaskasdf open-sourced ntransformer, a high-efficiency C++/CUDA LLM inference engine that runs Llama 3.1 70B on a single RTX 3090 (24GB VRAM) using three-tier adaptive caching (VRAM + RAM + NVMe) and CPU-bypassing NVMe direct I/O, achieving 0.2 tokens/s—33× faster than mmap-based streaming. Supporting GGUF quantization formats without PyTorch or cuBLAS dependencies, it overlaps NVMe reads, PCIe transfers, and GPU compute via double-buffered pipelining. This makes 70B-model inference feasible on consumer hardware: users with Linux, an RTX 3090, and an NVMe SSD can locally deploy massive models previously restricted to data centers.",
+      "fullText": "GitHub - xaskasdf/ntransformer: High-efficiency LLM inference engine in C++/CUDA. Run Llama 70B on RTX 3090. Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage code changes APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities Code security Secure your code as you build Secret protection Stop leaks before they start EXPLORE Why GitHub Documentation Blog Changelog Marketplace View all features Solutions BY COMPANY SIZE Enterprises Small and medium teams Startups Nonprofits BY USE CASE App Modernization DevSecOps DevOps CI/CD View all use cases BY INDUSTRY Healthcare Financial services Manufacturing Government View all industries View all solutions Resources EXPLORE BY TOPIC AI Software Development DevOps Security View all topics EXPLORE BY TYPE Customer stories Events & webinars Ebooks & reports Business insights GitHub Skills SUPPORT & SERVICES Documentation Customer support Community forum Trust center Partners Open Source COMMUNITY GitHub Sponsors Fund open source developers PROGRAMS Security Lab Maintainer Community Accelerator Archive Program REPOSITORIES Topics Trending Collections Enterprise ENTERPRISE SOLUTIONS Enterprise platform AI-powered developer platform AVAILABLE ADD-ONS GitHub Advanced Security Enterprise-grade security features Copilot for Business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Pricing Search or jump to... Search code, repositories, users, issues, pull requests... Search Clear Search syntax tips Provide feedback We read every piece of feedback, and take your input very seriously. Include my email address so I can be contacted Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Name Query To see all available qualifiers, see our documentation . Cancel Create saved search Sign in Sign up Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert xaskasdf / ntransformer Public Notifications You must be signed in to change notification settings Fork 0 Star 9 High-efficiency LLM inference engine in C++/CUDA. Run Llama 70B on RTX 3090. 9 stars 0 forks Branches Tags Activity Star Notifications You must be signed in to change notification settings Code Issues 0 Pull requests 0 Actions Projects 0 Security 0 Insights Additional navigation options Code Issues Pull requests Actions Projects Security Insights xaskasdf/ntransformer main Branches Tags Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 17 Commits 17 Commits docs docs include include scripts scripts src src tests tests .gitignore .gitignore CLAUDE.md CLAUDE.md CMakeLists.txt CMakeLists.txt DEVELOPMENT.md DEVELOPMENT.md GPU_NVME_DIRECT_INTEGRATION.md GPU_NVME_DIRECT_INTEGRATION.md README.md README.md View all files Repository files navigation README NTransformer High-efficiency C++/CUDA LLM inference engine. Runs Llama 70B on a single RTX 3090 (24GB VRAM) by streaming model layers through GPU memory via PCIe, with optional NVMe direct I/O that bypasses the CPU entirely. Key Results Model Mode Decode VRAM Notes Llama 3.1 8B Q8_0 Resident 48.9 tok/s 10.0 GB All layers in VRAM Llama 3.1 8B Q8_0 Tiered (auto) 48.8 tok/s 10.3 GB 32/32 layers auto-promoted to VRAM Llama 3.1 70B Q6_K Streaming (mmap) 0.006 tok/s 7.3 GB Page cache thrashing (53 GB > 48 GB RAM) Llama 3.1 70B Q6_K Tiered (auto) 0.2 tok/s 23.1 GB 29 VRAM + 51 RAM + 0 NVMe 3-tier adaptive caching auto-sizes from hardware: VRAM-resident layers (zero I/O) + pinned RAM (H2D only) + NVMe/mmap fallback. Achieves 33x speedup over mmap baseline for 70B on consumer hardware (RTX 3090 + 48 GB RAM). Bottleneck is PCIe H2D bandwidth at Gen3 x8 (~6.5 GB/s). With Gen4 x16 (B550/X570), tier B layers would be compute-bound, yielding ~0.5 tok/s. Features Zero external dependencies beyond CUDA Toolkit (no PyTorch, no cuBLAS) GGUF model format with Q4_0, Q8_0, Q4_K_M, Q6_K, F16, F32 quantization 3-Tier Adaptive Caching : auto-sized VRAM resident + pinned RAM + NVMe/mmap tiers SLEP streaming : double-buffered layer pipeline overlaps NVMe reads, PCIe DMA, and GPU compute gpu-nvme-direct backend : userspace NVMe driver reads model weights directly to pinned GPU-accessible memory Four data paths (auto-selected): VRAM resident > pinned RAM H2D > mmap pinned > CPU worker memcpy Llama architecture: RoPE, GQA, SwiGLU, RMSNorm, KV cache Requirements Linux (tested on Ubuntu, kernel 6.17+) CUDA Toolkit 13.1 gcc-14 / g++-14 NVIDIA GPU with Compute Capability 8.0+ (RTX 3090 tested) CMake 3.24+ (Optional) NVMe SSD on separate PCIe slot + gpu-nvme-direct library Quick Start # Build mkdir build && cd build cmake .. -DCMAKE_BUILD_TYPE=Release \\ -DCMAKE_C_COMPILER=gcc-14 \\ -DCMAKE_CXX_COMPILER=g++-14 \\ -DCMAKE_CUDA_COMPILER=/usr/local/cuda-13.1/bin/nvcc cmake --build . -j # Run (resident mode — model fits in VRAM) ./ntransformer -m /path/to/llama-8b-q8_0.gguf -p \" Hello \" -n 128 # Run (streaming mode — model larger than VRAM) ./ntransformer -m /path/to/llama-70b-q6_k.gguf -p \" Hello \" -n 32 --streaming # Chat mode ./ntransformer -m /path/to/model.gguf --chat # Benchmark ./ntransformer -m /path/to/model.gguf --benchmark -n 64 NVMe Direct Streaming For models that don't fit in VRAM, the NVMe backend eliminates the CPU from the data path: NVMe SSD → (DMA) → Pinned Staging → (PCIe H2D) → GPU Buffers → Compute Setup # Build with NVMe support (requires gpu-nvme-direct library) cmake .. -DCMAKE_BUILD_TYPE=Release -DUSE_GPUNVME=ON \\ -DCMAKE_C_COMPILER=gcc-14 -DCMAKE_CXX_COMPILER=g++-14 \\ -DCMAKE_CUDA_COMPILER=/usr/local/cuda-13.1/bin/nvcc cmake --build . -j # Write GGUF model to NVMe raw device sudo ./scripts/restore_nvme.sh # ensure kernel driver is bound sudo dd if=model.gguf of=/dev/nvme0n1 bs=1M oflag=direct status=progress # Bind NVMe to VFIO for userspace access sudo ./scripts/setup_nvme.sh # loads VFIO, forces D0, enables BusMaster # Run with NVMe backend sudo GPUNVME_PCI_BDF=0000:01:00.0 GPUNVME_GGUF_LBA=0 \\ ./build/ntransformer -m /path/to/model.gguf -p \" Hello \" -n 32 --streaming # Restore NVMe to kernel driver when done sudo ./scripts/restore_nvme.sh How It Works The GGUF model file is written to raw NVMe blocks via dd setup_nvme.sh binds the NVMe to VFIO, forces PCIe D0 power state, enables BusMaster gpu-nvme-direct initializes the NVMe controller from userspace (admin queues, I/O queues) During inference, each layer (~670 MB for 70B Q6_K) is read via 670 NVMe commands in ~202 ms Data lands in CUDA pinned staging memory, then async DMA to GPU compute buffers Pipeline overlaps NVMe reads, H2D DMA, and GPU compute across double buffers Architecture src/ ├── core/ # Tensor, allocator, GPU device management ├── cuda/ # CUDA kernels: GEMV, RMSNorm, RoPE, SwiGLU, softmax ├── memory/ # SLEP layer streaming engine (NVMe + mmap backends) ├── model/ # Transformer: config, GGUF loader, attention, FFN, norms ├── inference/ # Tokenizer, sampler, engine ├── utils/ # Timer, logger ├── main.cpp # CLI entry point scripts/ ├── setup_nvme.sh # Bind NVMe to VFIO, configure for gpu-nvme-direct ├── restore_nvme.sh # Restore NVMe to kernel driver tests/ # Unit tests (tensor, GEMM kernels, NVMe layer loader) 3-Tier Adaptive Caching forward_tiered() — hybrid pipeline: Tier A (VRAM resident, layers 0..28): GPU Compute: [layer 0][layer 1]...[layer 28] (zero I/O, weights permanent) Tier B (pinned RAM, layers 29..79, double-buffered): H2D DMA: [L29→gpu0][L30→gpu1][L31→gpu0]... (async from pinned RAM) GPU Compute: [ ][layer 29][layer 30]... (overlapped with H2D) Tier C (NVMe/mmap fallback, if needed): NVMe/memcpy: [read L→stg0][read L→stg1]... H2D DMA: [ ][stg0→gpu0 ]... GPU Compute: [ ][ ][layer]... Tier sizes auto-computed from cudaMemGetInfo() + /proc/meminfo MemAvailable. Quantization Formats Format Bits/Weight Block Size Supported Q4_0 4.5 32 Yes Q8_0 8.5 32 Yes Q4_K_M 4.5 256 Yes Q6_K 6.6 256 Yes F16 16 1 Yes F32 32 1 Yes Phase Roadmap Phase 1 - Foundation (complete): Llama 8B Q8_0, custom CUDA kernels, 48.9 tok/s Phase 2 - SLEP Streaming (complete): 70B on single GPU, 3-tier caching, 33x speedup Phase 3 - Advanced Quantization: RotateKV (INT2 KV-cache), adaptive per-layer precision Phase 4 - Novel Architectures: MLA, Mamba/SSM, speculative decoding Phase 5 - Polish: optimization, benchmarks, public C API License BSD-2-Clause About High-efficiency LLM inference engine in C++/CUDA. Run Llama 70B on RTX 3090. Resources Readme Uh oh! There was an error while loading. Please reload this page . Activity Stars 9 stars Watchers 0 watching Forks 0 forks Report repository Releases No releases published Packages 0 No packages published Languages C++ 60.8% Cuda 33.8% Shell 3.0% CMake 2.1% C 0.3% Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy Security Status Community Docs Contact Manage cookies Do not share my personal information You can’t perform that action at this time.",
+      "imageUrl": "https://opengraph.githubassets.com/1bb2887af7600bfb6fc4a9b4349f827cdaed318a3dfd74b0c0255d5e217cd10c/xaskasdf/ntransformer",
+      "tags": [
+        "LLM"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源：Hacker News",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：实现70B模型在单张RTX 3090上高效推理，突破硬件限制，具备显著技术影响力和实用价值。",
+        "热度：26 / 评论 3"
+      ],
+      "score": 4.01,
+      "publishedAt": "2026-02-21T20:57:30+00:00",
+      "authors": [
+        "xaskasdf"
+      ]
+    },
+    {
+      "id": "hn_47098839",
+      "title": "Large Language Model Reasoning Failures",
+      "titleZh": "Large Language Model Reasoning Failures",
+      "titleEn": "Large Language Model Reasoning Failures",
+      "url": "https://arxiv.org/abs/2602.06176",
+      "type": "news",
+      "source": "Hacker News",
+      "summary": "斯坦福等机构研究者发布首份关于大语言模型（LLM）推理失败的系统性综述，提出将推理分为具身与非具身两类（后者再分直觉式与逻辑式），并将失败归为三类：源于LLM架构本质的全局性缺陷、特定应用场景下的局限，以及因微小输入扰动导致的鲁棒性问题；论文分析了各类失败的成因与缓解策略，强调当前LLM在形式逻辑、常识一致性及跨任务泛化方面仍存在根本性弱点，该框架为未来提升模型可靠性提供了结构化研究路径，并配套开源了相关文献集合以促进社区协作。",
+      "summaryZh": "斯坦福等机构研究者发布首份关于大语言模型（LLM）推理失败的系统性综述，提出将推理分为具身与非具身两类（后者再分直觉式与逻辑式），并将失败归为三类：源于LLM架构本质的全局性缺陷、特定应用场景下的局限，以及因微小输入扰动导致的鲁棒性问题；论文分析了各类失败的成因与缓解策略，强调当前LLM在形式逻辑、常识一致性及跨任务泛化方面仍存在根本性弱点，该框架为未来提升模型可靠性提供了结构化研究路径，并配套开源了相关文献集合以促进社区协作。",
+      "summaryEn": "Researchers from Stanford and other institutions present the first comprehensive survey on Large Language Model (LLM) reasoning failures, introducing a novel taxonomy that divides reasoning into embodied and non-embodied types (the latter split into informal/intuitive and formal/logical). They classify failures into three categories: fundamental architectural flaws affecting broad downstream tasks, application-specific limitations, and robustness issues triggered by minor input variations. The paper analyzes root causes and mitigation strategies, highlighting persistent weaknesses in formal logic, commonsense consistency, and cross-task generalization. This structured framework guides future work toward more reliable reasoning systems and is accompanied by an open-source repository of relevant research.",
+      "fullText": "[2602.06176] Large Language Model Reasoning Failures Skip to main content We gratefully acknowledge support from the Simons Foundation, member institutions , and all contributors. Donate > cs > arXiv:2602.06176 Help | Advanced Search All fields Title Author Abstract Comments Journal reference ACM classification MSC classification Report number arXiv identifier DOI ORCID arXiv author ID Help pages Full text Search open search GO open navigation menu quick links Login Help Pages About Computer Science > Artificial Intelligence arXiv:2602.06176 (cs) [Submitted on 5 Feb 2026] Title: Large Language Model Reasoning Failures Authors: Peiyang Song , Pengrui Han , Noah Goodman View a PDF of the paper titled Large Language Model Reasoning Failures, by Peiyang Song and 2 other authors View PDF HTML (experimental) Abstract: Large Language Models (LLMs) have exhibited remarkable reasoning capabilities, achieving impressive results across a wide range of tasks. Despite these advances, significant reasoning failures persist, occurring even in seemingly simple scenarios. To systematically understand and address these shortcomings, we present the first comprehensive survey dedicated to reasoning failures in LLMs. We introduce a novel categorization framework that distinguishes reasoning into embodied and non-embodied types, with the latter further subdivided into informal (intuitive) and formal (logical) reasoning. In parallel, we classify reasoning failures along a complementary axis into three types: fundamental failures intrinsic to LLM architectures that broadly affect downstream tasks; application-specific limitations that manifest in particular domains; and robustness issues characterized by inconsistent performance across minor variations. For each reasoning failure, we provide a clear definition, analyze existing studies, explore root causes, and present mitigation strategies. By unifying fragmented research efforts, our survey provides a structured perspective on systemic weaknesses in LLM reasoning, offering valuable insights and guiding future research towards building stronger, more reliable, and robust reasoning capabilities. We additionally release a comprehensive collection of research works on LLM reasoning failures, as a GitHub repository at this https URL , to provide an easy entry point to this area. Comments: Repository: this https URL . Published at TMLR 2026 with Survey Certification Subjects: Artificial Intelligence (cs.AI) ; Computation and Language (cs.CL); Machine Learning (cs.LG) Cite as: arXiv:2602.06176 [cs.AI] (or arXiv:2602.06176v1 [cs.AI] for this version) https://doi.org/10.48550/arXiv.2602.06176 Focus to learn more arXiv-issued DOI via DataCite (pending registration) Submission history From: Peiyang Song [ view email ] [v1] Thu, 5 Feb 2026 20:29:26 UTC (7,063 KB) Full-text links: Access Paper: View a PDF of the paper titled Large Language Model Reasoning Failures, by Peiyang Song and 2 other authors View PDF HTML (experimental) TeX Source view license Current browse context: cs.AI < prev | next > new | recent | 2026-02 Change to browse by: cs cs.CL cs.LG References & Citations NASA ADS Google Scholar Semantic Scholar export BibTeX citation Loading... BibTeX formatted citation × loading... Data provided by: Bookmark Bibliographic Tools Bibliographic and Citation Tools Bibliographic Explorer Toggle Bibliographic Explorer ( What is the Explorer? ) Connected Papers Toggle Connected Papers ( What is Connected Papers? ) Litmaps Toggle Litmaps ( What is Litmaps? ) scite.ai Toggle scite Smart Citations ( What are Smart Citations? ) Code, Data, Media Code, Data and Media Associated with this Article alphaXiv Toggle alphaXiv ( What is alphaXiv? ) Links to Code Toggle CatalyzeX Code Finder for Papers ( What is CatalyzeX? ) DagsHub Toggle DagsHub ( What is DagsHub? ) GotitPub Toggle Gotit.pub ( What is GotitPub? ) Huggingface Toggle Hugging Face ( What is Huggingface? ) Links to Code Toggle Papers with Code ( What is Papers with Code? ) ScienceCast Toggle ScienceCast ( What is ScienceCast? ) Demos Demos Replicate Toggle Replicate ( What is Replicate? ) Spaces Toggle Hugging Face Spaces ( What is Spaces? ) Spaces Toggle TXYZ.AI ( What is TXYZ.AI? ) Related Papers Recommenders and Search Tools Link to Influence Flower Influence Flower ( What are Influence Flowers? ) Core recommender toggle CORE Recommender ( What is CORE? ) Author Venue Institution Topic About arXivLabs arXivLabs: experimental projects with community collaborators arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website. Both individuals and organizations that work with arXivLabs have embraced and accepted our values of openness, community, excellence, and user data privacy. arXiv is committed to these values and only works with partners that adhere to them. Have an idea for a project that will add value for arXiv's community? Learn more about arXivLabs . Which authors of this paper are endorsers? | Disable MathJax ( What is MathJax? ) About Help contact arXiv Click here to contact arXiv Contact subscribe to arXiv mailings Click here to subscribe Subscribe Copyright Privacy Policy Web Accessibility Assistance arXiv Operational Status",
+      "imageUrl": "https://tse1.mm.bing.net/th?q=Large+Language+Models+Examples&w=1200&h=630&c=7&rs=1&p=0&o=5&pid=1.7&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1",
+      "tags": [
+        "LLM",
+        "Reasoning"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源：Hacker News",
+        "跨源重复：1 个来源",
+        "模型评分：7/10，理由：系统性分析LLM推理失败问题，为提升模型可靠性提供关键研究基础，属重要学术进展。",
+        "热度：33 / 评论 72"
+      ],
+      "score": 3.46,
+      "publishedAt": "2026-02-21T08:56:00+00:00",
+      "authors": [
+        "T-A"
       ]
     }
   ],
   "stats": {
     "total_papers_ingested": 258,
-    "total_news_ingested": 34,
+    "total_news_ingested": 20,
     "l1_papers_passed": 121,
-    "l1_news_passed": 27,
+    "l1_news_passed": 17,
     "l2_papers_scored": 50,
-    "l2_news_scored": 20,
+    "l2_news_scored": 10,
     "l3_papers_selected": 18,
-    "l3_news_selected": 11,
+    "l3_news_selected": 10,
     "news_source_counts": {
-      "TechCrunch AI": 14,
       "GitHub Trending": 8,
-      "Hacker News": 3,
-      "The Verge AI": 3,
-      "AWS Machine Learning Blog": 3,
-      "Hugging Face Blog": 2,
-      "OpenAI Blog": 1
+      "TechCrunch AI": 6,
+      "Hacker News": 5,
+      "The Verge AI": 1
     },
     "rss_source_counts": {
-      "TechCrunch AI": 14,
-      "The Verge AI": 3,
-      "AWS Machine Learning Blog": 3,
-      "Hugging Face Blog": 2,
-      "OpenAI Blog": 1
+      "TechCrunch AI": 6,
+      "The Verge AI": 1
     },
     "news_title_source_counts": {
-      "making frontier cybersecurity capabilities available to defenders": 1,
-      "consistency diffusion language models up to 14x faster no quality loss": 1,
-      "nvidia and openai abandon unfinished 100b deal in favour of 30b investment": 1,
+      "why is claude an electron app": 1,
+      "show hn llama 3 1 70b on a single rtx 3090 via nvme to gpu bypassing the cpu": 1,
+      "claws are now a new layer on top of llm agents": 1,
+      "large language model reasoning failures": 1,
+      "chris lattner claude c compiler": 1,
       "vxcontrol pentagi": 1,
-      "hailtododongo pyrite64": 1,
+      "abhigyanpatwari gitnexus": 1,
       "obra superpowers": 1,
-      "aquasecurity trivy": 1,
-      "posthog posthog": 1,
-      "google research timesfm": 1,
-      "databricks solutions ai dev kit": 1,
-      "composiohq composio": 1,
-      "our first proof submissions": 1,
-      "trump is making coal plants even dirtier as ai demands more energy": 1,
-      "amazon blames human employees for an ai coding agent 8217 s mistake": 1,
-      "openai 8217 s first chatgpt gadget could be a smart speaker with a camera": 1,
-      "the creator economy s ad revenue problem and india s ai ambitions": 1,
-      "why creators are ditching ad revenue for chocolate bars and fintech acquisitions": 1,
-      "anthropic funded group backs candidate attacked by rival ai super pac": 1,
-      "inscope nabs 14 5m to solve the pain of financial reporting": 1,
-      "great news for xai grok is now pretty good at answering questions about baldur s gate": 1,
-      "toy story 5 takes aim at creepy ai toys i m always listening": 1,
-      "ai s promise to indie filmmakers faster cheaper lonelier": 1,
-      "peak xv raises 1 3b doubles down on ai as global vc rivalry in india heats up": 1,
-      "techcrunch disrupt 2026 super early bird rates end in 1 week": 1,
-      "openai says 18 to 24 year olds account for nearly 50 of chatgpt usage in india": 1,
-      "uae s g42 teams up with cerebras to deploy 8 exaflops of compute in india": 1,
-      "general catalyst commits 5b to india over five years": 1,
-      "google s new gemini pro model has record benchmark scores again": 1,
-      "nvidia deepens early stage push into india s ai startup ecosystem": 1,
-      "ggml and llama cpp join hf to ensure the long term progress of local ai": 1,
-      "train ai models with unsloth and hugging face jobs for free": 1,
-      "amazon sagemaker ai in 2025 a year in review part 1 flexible training plans and improvements to price performance for inference workloads": 1,
-      "amazon sagemaker ai in 2025 a year in review part 2 improved observability and enhanced features for sagemaker ai model customization and hosting": 1,
-      "integrate external tools with amazon quick agents using model context protocol mcp": 1
+      "anthropics claude code": 1,
+      "ggml org ggml": 1,
+      "handsonllm hands on large language models": 1,
+      "richardatct claude code telegram": 1,
+      "cloudflare agents": 1,
+      "suspect in tumbler ridge school shooting described violent scenarios to chatgpt": 1,
+      "sam altman would like remind you that humans use a lot of energy too": 1,
+      "microsoft s new gaming ceo vows not to flood the ecosystem with endless ai slop": 1,
+      "google vp warns that two types of ai startups may not survive": 1,
+      "openai debated calling police about suspected canadian shooter s chats": 1,
+      "7 days until ticket prices rise for techcrunch disrupt 2026": 1,
+      "india s sarvam launches indus ai chat app as competition heats up": 1
     },
     "total_papers_deduped": 258,
-    "total_news_deduped": 34,
-    "news_recent_filtered": 34
+    "total_news_deduped": 20,
+    "news_recent_filtered": 20
   }
 }

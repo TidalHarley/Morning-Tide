@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-21",
+    "papers_count": 18,
+    "news_count": 10,
+    "top_paper": "AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing",
+    "top_news": "Anthropic推终端AI编程代理Claude Code，支持自然语言操控Git与代码理解"
+  },
+  {
     "date": "2026-02-20",
     "papers_count": 18,
     "news_count": 11,
