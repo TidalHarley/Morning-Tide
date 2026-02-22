@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-22",
+    "papers_count": 18,
+    "news_count": 7,
+    "top_paper": "The Cascade Equivalence Hypothesis: When Do Speech LLMs Behave Like ASR$\\rightarrow$LLM Pipelines?",
+    "top_news": "Anthropic 推出终端智能编码工具 Claude Code"
+  },
+  {
     "date": "2026-02-21",
     "papers_count": 18,
     "news_count": 10,
