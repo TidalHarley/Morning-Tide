@@ -1,674 +1,785 @@
 {
-  "date": "2026-02-22",
-  "generatedAt": "2026-02-22T23:46:13.695231",
-  "introduction": "今日AI领域聚焦三大方向：一是大模型安全与评估，多篇论文揭示当前AI代理在工具调用、长期任务和安全数据集中的潜在风险；二是基础能力演进，包括语音大模型行为本质、数学形式化自动化、科学计算自主化等突破；三是生成与感知技术升级，如AI视频检测、文本到图像多样性增强、医学影像分析等。值得关注的是，Anthropic推出终端内编程代理Claude Code，显著提升开发者效率，标志着AI编码工具正从辅助迈向协同智能新阶段。",
-  "introductionZh": "今日AI领域聚焦三大方向：一是大模型安全与评估，多篇论文揭示当前AI代理在工具调用、长期任务和安全数据集中的潜在风险；二是基础能力演进，包括语音大模型行为本质、数学形式化自动化、科学计算自主化等突破；三是生成与感知技术升级，如AI视频检测、文本到图像多样性增强、医学影像分析等。值得关注的是，Anthropic推出终端内编程代理Claude Code，显著提升开发者效率，标志着AI编码工具正从辅助迈向协同智能新阶段。",
-  "introductionEn": "Today’s AI advances spotlight three critical fronts: model safety and evaluation, with new studies exposing vulnerabilities in LLM agents’ tool-use safety, long-horizon robustness, and flawed safety datasets; foundational capabilities, including insights into speech LLM equivalence, large-scale mathematical formalization, and autonomous scientific computing; and generative perception, from deepfake video detection to enhanced text-to-image diversity and medical ultrasound analysis. Notably, Anthropic launched Claude Code—a terminal-based agentic coding tool—ushering in a new era of developer-AI collaboration beyond simple code completion.",
-  "longformScript": "今天，AI 正在从“能回答问题”走向“能做事”。不是泛泛而谈的智能，而是嵌入具体工作流、可部署、可协作的智能体。开发者在终端里直接调用 AI 编程，安全团队用 AI 模拟黑客攻击，金融分析师接入开源数据平台训练自己的交易代理——这些不再是实验室里的概念，而是今天就能下载、安装、运行的工具。AI 的重心，正在从模型本身转向如何让模型真正融入人类的日常操作。\n\n最引人注目的变化，发生在开发者的命令行里。Anthropic 推出了 Claude Code，一个能在终端内直接运行的编码代理。它不依赖图形界面，也不需要你切换窗口去和聊天机器人对话。你只需在命令行输入自然语言指令，比如“帮我重构这个模块”或“解释这段异步逻辑”，它就能理解整个代码库上下文，自动执行 Git 操作、生成文档，甚至提交 pull request。这标志着 AI 编程工具正从“辅助建议”迈向“协同执行”。更值得留意的是，有开发者分享了一套高效使用方法：先让 AI 生成一份 research.md 分析现状，再人工迭代出 plan.md 明确路径，最后才触发实际编码。这种“规划-执行”分离的流程，避免了 AI 盲目修改带来的架构混乱，也说明真正高效的 AI 协作，不是放手不管，而是结构化的人机配合。\n\n与此同时，AI 智能体的部署方式也在发生根本性转变。Cloudflare 宣布推出基于其全球边缘网络的 AI 智能体开发平台，允许开发者把轻量级代理直接部署到离用户最近的节点上。这意味着未来的 AI 应用可能不再集中于云端大模型，而是分散在边缘，以毫秒级响应处理本地请求。比如一个客服代理，可以在用户点击按钮的瞬间就近调用，无需往返数据中心。这种架构不仅降低延迟，也提升了隐私性和可用性。而另一边，GitNexus 这样的工具则把智能体完全搬进了浏览器——你只需拖入一个 GitHub 仓库，它就在本地生成交互式知识图谱，并内置 Graph RAG 智能体帮你导航代码。无需服务器、无需联网，特别适合处理敏感项目或离线场景。这些趋势共同指向一个方向：AI 正在变得更轻、更近、更嵌入实际工作流。\n\n不只是开发和部署，AI 智能体的能力边界也在向高专业领域拓展。比如 Pentagi 系统，一个完全自主的 AI 渗透测试框架，能模拟高级持续性威胁（APT）攻击，自动探测漏洞、横向移动、提取数据。它把原本需要资深红队工程师数天完成的任务，压缩成可重复运行的智能体流程。虽然这类工具必须谨慎使用，但它的出现证明，多智能体系统已经能在网络安全这样高风险、高复杂度的场景中发挥作用。同样，在金融领域，OpenBB 推出了专为 AI 智能体设计的开源数据平台，整合了实时行情、基本面指标和分析工具，让量化交易员或研究者能快速构建自己的策略代理，而无需依赖昂贵的商业终端。这些进展说明，AI 不再只是通用助手，而是开始成为特定领域的“数字专家”。\n\n更贴近普通用户的改变，也悄然发生。三星宣布将在 Galaxy S26 中集成 Perplexity AI，用户只需说“hey, Plex”就能唤醒它，并让它访问笔记、日历、相册等原生应用。这不仅是新增一个语音助手，而是操作系统层面支持多个 AI 代理共存与协作的信号。未来，你可能会根据任务切换不同的 AI：一个擅长写邮件，一个精于查资料，另一个专攻图像编辑。设备不再绑定单一智能，而是成为多个专业代理的调度中心。这种“多代理生态”的思路，或许比追求一个全能模型更贴近真实需求。\n\n面对这些快速落地的工具，我们该怎么看？首先，别被“全自动”迷惑。无论是 Claude Code 的规划流程，还是 Pentagi 的合规边界，都提醒我们：真正的生产力提升，来自人对 AI 的引导与约束，而非简单交出控制权。其次，边缘化和轻量化是不可逆的趋势。与其等待更强的大模型，不如思考如何把现有能力嵌入具体场景——一个能在浏览器里跑的知识图谱，可能比云端千亿参数模型对你更有用。最后，专业领域的 AI 代理正在形成新门槛。懂金融的人用 OpenBB 构建策略，懂安全的人用 Pentagi 模拟攻防，技术红利正流向那些能把 AI 与领域知识结合的人。\n\n今天的 AI 新闻里，没有惊天动地的模型发布，却充满了可触摸的工具和可复用的工作流。它们不承诺取代人类，而是提供新的杠杆——只要你愿意花时间设计协作方式，而不是期待一键解决。或许，这才是 AI 走向实用的第一步。",
-  "longformScriptZh": "今天，AI 正在从“能回答问题”走向“能做事”。不是泛泛而谈的智能，而是嵌入具体工作流、可部署、可协作的智能体。开发者在终端里直接调用 AI 编程，安全团队用 AI 模拟黑客攻击，金融分析师接入开源数据平台训练自己的交易代理——这些不再是实验室里的概念，而是今天就能下载、安装、运行的工具。AI 的重心，正在从模型本身转向如何让模型真正融入人类的日常操作。\n\n最引人注目的变化，发生在开发者的命令行里。Anthropic 推出了 Claude Code，一个能在终端内直接运行的编码代理。它不依赖图形界面，也不需要你切换窗口去和聊天机器人对话。你只需在命令行输入自然语言指令，比如“帮我重构这个模块”或“解释这段异步逻辑”，它就能理解整个代码库上下文，自动执行 Git 操作、生成文档，甚至提交 pull request。这标志着 AI 编程工具正从“辅助建议”迈向“协同执行”。更值得留意的是，有开发者分享了一套高效使用方法：先让 AI 生成一份 research.md 分析现状，再人工迭代出 plan.md 明确路径，最后才触发实际编码。这种“规划-执行”分离的流程，避免了 AI 盲目修改带来的架构混乱，也说明真正高效的 AI 协作，不是放手不管，而是结构化的人机配合。\n\n与此同时，AI 智能体的部署方式也在发生根本性转变。Cloudflare 宣布推出基于其全球边缘网络的 AI 智能体开发平台，允许开发者把轻量级代理直接部署到离用户最近的节点上。这意味着未来的 AI 应用可能不再集中于云端大模型，而是分散在边缘，以毫秒级响应处理本地请求。比如一个客服代理，可以在用户点击按钮的瞬间就近调用，无需往返数据中心。这种架构不仅降低延迟，也提升了隐私性和可用性。而另一边，GitNexus 这样的工具则把智能体完全搬进了浏览器——你只需拖入一个 GitHub 仓库，它就在本地生成交互式知识图谱，并内置 Graph RAG 智能体帮你导航代码。无需服务器、无需联网，特别适合处理敏感项目或离线场景。这些趋势共同指向一个方向：AI 正在变得更轻、更近、更嵌入实际工作流。\n\n不只是开发和部署，AI 智能体的能力边界也在向高专业领域拓展。比如 Pentagi 系统，一个完全自主的 AI 渗透测试框架，能模拟高级持续性威胁（APT）攻击，自动探测漏洞、横向移动、提取数据。它把原本需要资深红队工程师数天完成的任务，压缩成可重复运行的智能体流程。虽然这类工具必须谨慎使用，但它的出现证明，多智能体系统已经能在网络安全这样高风险、高复杂度的场景中发挥作用。同样，在金融领域，OpenBB 推出了专为 AI 智能体设计的开源数据平台，整合了实时行情、基本面指标和分析工具，让量化交易员或研究者能快速构建自己的策略代理，而无需依赖昂贵的商业终端。这些进展说明，AI 不再只是通用助手，而是开始成为特定领域的“数字专家”。\n\n更贴近普通用户的改变，也悄然发生。三星宣布将在 Galaxy S26 中集成 Perplexity AI，用户只需说“hey, Plex”就能唤醒它，并让它访问笔记、日历、相册等原生应用。这不仅是新增一个语音助手，而是操作系统层面支持多个 AI 代理共存与协作的信号。未来，你可能会根据任务切换不同的 AI：一个擅长写邮件，一个精于查资料，另一个专攻图像编辑。设备不再绑定单一智能，而是成为多个专业代理的调度中心。这种“多代理生态”的思路，或许比追求一个全能模型更贴近真实需求。\n\n面对这些快速落地的工具，我们该怎么看？首先，别被“全自动”迷惑。无论是 Claude Code 的规划流程，还是 Pentagi 的合规边界，都提醒我们：真正的生产力提升，来自人对 AI 的引导与约束，而非简单交出控制权。其次，边缘化和轻量化是不可逆的趋势。与其等待更强的大模型，不如思考如何把现有能力嵌入具体场景——一个能在浏览器里跑的知识图谱，可能比云端千亿参数模型对你更有用。最后，专业领域的 AI 代理正在形成新门槛。懂金融的人用 OpenBB 构建策略，懂安全的人用 Pentagi 模拟攻防，技术红利正流向那些能把 AI 与领域知识结合的人。\n\n今天的 AI 新闻里，没有惊天动地的模型发布，却充满了可触摸的工具和可复用的工作流。它们不承诺取代人类，而是提供新的杠杆——只要你愿意花时间设计协作方式，而不是期待一键解决。或许，这才是 AI 走向实用的第一步。",
-  "longformScriptEn": "Today’s AI landscape is defined by a quiet but profound shift: artificial intelligence is moving from passive tools to active agents—systems that perceive, plan, act, and adapt in real-world environments. This transition isn’t just theoretical; it’s unfolding in developers’ terminals, enterprise security stacks, financial models, and even our smartphones. What we’re witnessing is the emergence of a new layer of intelligent infrastructure—one where AI doesn’t just respond to prompts but operates autonomously within structured workflows, constrained by human oversight yet empowered to execute complex tasks. From coding assistants that manage Git repositories to edge-deployed agents that interact with users in milliseconds, the era of agentic AI is no longer speculative—it’s shipping.\n\nAt the heart of this shift is Anthropic’s release of **Claude Code**, a terminal-based agentic coding assistant that embeds deeply into the developer’s native environment. Unlike traditional code completion tools, Claude Code understands your entire codebase, executes routine tasks like refactoring or testing, and even manages Git operations through natural language commands. Its power lies not in replacing developers but in augmenting their workflow with contextual awareness and execution capability—all without leaving the command line. But as developer Boris Tane has demonstrated, raw autonomy can be risky. His high-efficiency workflow introduces a crucial discipline: strict separation between planning and execution. By first generating a detailed research document, then iteratively refining a plan with human annotations before implementation, he avoids the architectural drift and system-breaking changes that plague unstructured AI coding. This approach treats AI not as an oracle but as a collaborator operating within a shared, traceable state—typically Markdown files—that both human and machine can co-edit. It’s a blueprint for responsible agentic development.\n\nBeyond software engineering, autonomous agents are proving their mettle in high-stakes domains like cybersecurity. Enter **Pentagi**, a fully autonomous AI system designed for penetration testing. Developed by vxcontrol, Pentagi simulates advanced persistent threat (APT)-style attacks by chaining together reconnaissance, exploitation, and post-compromise actions—all without human intervention. While its capabilities are impressive, they come with ethical weight: such tools must be used strictly within legal boundaries and with explicit authorization. Nevertheless, Pentagi signals a broader trend: multi-agent systems are now capable of navigating expert domains that demand deep contextual reasoning, adaptive strategy, and precise tool use. This isn’t just automation—it’s delegation to AI in environments where failure carries real consequences.\n\nMeanwhile, the infrastructure supporting these agents is evolving rapidly. Cloudflare has launched a platform enabling developers to build and deploy AI agents directly on its global edge network. By running inference close to end users via Cloudflare Workers, this architecture minimizes latency and maximizes responsiveness—critical for interactive agents that need to react in real time. This move pushes AI away from centralized cloud silos and toward decentralized, edge-native deployments. Complementing this is **GitNexus**, a zero-server code intelligence engine that runs entirely in the browser. Drop in a GitHub repo or ZIP file, and instantly get an interactive knowledge graph powered by a Graph RAG agent—all client-side, no backend required. For developers working offline or handling sensitive code, GitNexus offers privacy-preserving code understanding without sacrificing intelligence. Together, these tools illustrate a dual trajectory: agents are becoming both more powerful and more accessible, whether deployed at planetary scale on the edge or confined securely within a single browser tab.\n\nThe reach of agentic AI is also expanding into specialized data ecosystems. OpenBB has unveiled an open-source financial data platform explicitly designed for AI agents, quants, and analysts. It aggregates real-time market data, fundamentals, and technical indicators into a unified, programmable interface—democratizing access that once required expensive commercial terminals. Now, individual developers can train or deploy financial agents that reason over live market conditions, backtest strategies, or generate insights without institutional resources. This standardization of domain-specific data is essential for vertical AI applications to mature beyond demos into production-grade systems.\n\nFinally, the consumer front is heating up. Samsung’s integration of Perplexity into Galaxy AI for the upcoming S26 marks a strategic pivot toward a **multi-agent smartphone ecosystem**. Users will soon summon Perplexity with “Hey, Plex,” granting it access to native apps like Calendar, Notes, and Gallery—alongside existing assistants like Bixby and Gemini. Rather than betting on a single monolithic AI, Samsung is embracing specialization: different agents for different tasks, coexisting within the OS. This could redefine mobile interaction, shifting from app-centric navigation to intent-driven, agent-mediated experiences. If successful, it may pressure Apple and Google to rethink their own AI strategies, potentially accelerating a broader industry shift toward personalized, modular AI interfaces.\n\nSo what should you watch next? First, observe how structured collaboration frameworks—like Tane’s planning-execution split—scale across teams and codebases. Will they become standard practice, or remain niche optimizations? Second, monitor the regulatory response to autonomous agents in sensitive fields like security and finance; their power demands proportional accountability. Third, keep an eye on edge agent performance: as Cloudflare and others optimize latency and cost, we may see a surge in real-time, context-aware applications—from smart retail to industrial IoT. The opportunity lies not in building smarter models alone, but in designing better human-agent contracts: clear roles, verifiable outputs, and fail-safes that preserve control without stifling autonomy.\n\nIn sum, today’s developments reveal a maturing AI ecosystem where agents are no longer novelties but functional components of real workflows. Whether you’re debugging code in a terminal, stress-testing a network, analyzing stock trends, or checking your calendar on a Galaxy phone, agentic AI is stepping out of the lab and into the loop. The challenge—and the promise—is learning to work with it not as a replacement, but as a partner with defined responsibilities, bounded authority, and shared goals. That’s the foundation of the next era of intelligent systems.",
+  "date": "2026-02-23",
+  "generatedAt": "2026-02-23T23:55:29.981868",
+  "introduction": "今日AI领域聚焦三大方向：智能体生态、评估体系重构与安全边界。《2025 AI智能体指数》首次系统追踪已部署智能体的技术与安全特性；多篇论文推动智能体评估标准化、工作流压力测试及跨项目安全编排。同时，Anthropic公开指控三家中国公司通过24,000个虚假账户大规模蒸馏Claude能力，引发行业对模型知识产权保护的紧急关注。NVIDIA则推出面向关键基础设施的AI网络安全方案，凸显AI在现实世界高风险场景中的部署挑战。",
+  "introductionZh": "今日AI领域聚焦三大方向：智能体生态、评估体系重构与安全边界。《2025 AI智能体指数》首次系统追踪已部署智能体的技术与安全特性；多篇论文推动智能体评估标准化、工作流压力测试及跨项目安全编排。同时，Anthropic公开指控三家中国公司通过24,000个虚假账户大规模蒸馏Claude能力，引发行业对模型知识产权保护的紧急关注。NVIDIA则推出面向关键基础设施的AI网络安全方案，凸显AI在现实世界高风险场景中的部署挑战。",
+  "introductionEn": "Today’s AI developments center on agent ecosystems, evaluation reform, and security. The inaugural '2025 AI Agent Index' systematically documents deployed agents’ capabilities and safety features. Multiple papers advance standardized evaluation, stress testing for multi-agent workflows, and secure cross-project orchestration. Meanwhile, Anthropic exposed an industrial-scale distillation attack by three Chinese firms using 24,000 fake accounts to extract Claude’s intelligence—raising urgent concerns about model IP protection. NVIDIA also launched AI-powered cybersecurity for critical infrastructure, highlighting the real-world stakes of deploying AI in high-risk environments.",
+  "longformScript": "今天AI领域发生的事，像是一场多线程的交响：一边是智能体生态加速走向生产落地，另一边却是模型安全与评估体系遭遇信任危机。技术在狂奔，而规则、工具和人的认知，正在努力跟上节奏。\n\n先说一个震动行业的指控。Anthropic公开点名三家中国AI公司——DeepSeek、Moonshot和MiniMax，称它们通过创建超过24,000个虚假账户，在过去一段时间内对Claude发起了超过1600万次调用，目的不是正常使用，而是系统性地“蒸馏”其能力。所谓蒸馏，本是一种合法的技术手段，用大模型的输出去训练小模型。但问题在于，这种操作绕过了原始模型内置的安全护栏，比如内容过滤、拒绝危险请求等机制。结果就是，新训练出的模型可能保留了Claude强大的推理、编码甚至工具调用能力，却失去了关键的伦理约束。更令人担忧的是，这些“脱敏”的模型一旦流入开源社区或被用于监控、军事等高风险场景，后果难以预料。Anthropic已经部署了行为指纹识别和API级反制，并呼吁政策制定者重新审视当前对华AI出口管制的漏洞。这件事提醒我们：不是所有看起来“聪明”的AI都值得信任，尤其当它的血统模糊不清时。\n\n与此同时，AI落地的真实挑战正从实验室转向现实世界的关键基础设施。NVIDIA联合西门子、Palo Alto Networks等多家安全厂商，推出了一套专为工业控制系统设计的AI驱动网络安全架构。这套方案的核心，是在能源、制造、交通等领域的边缘设备上，用BlueField DPU硬件隔离运行安全服务，实现零信任防护。传统IT安全工具往往无法适配工业控制系统的实时性要求，强行接入反而可能引发停机风险。而新方案能在不干扰产线运行的前提下，持续监测异常行为、自动分段网络、发现未知资产。换句话说，你家的电、水、地铁之所以能稳定运行，未来可能部分归功于这类嵌入式AI安全层。这标志着AI不再只是提升效率的工具，更成为守护社会运转底线的基础设施。\n\n而在开发者和研究者层面，一场关于“如何正确衡量AI能力”的反思也在展开。OpenAI宣布弃用曾被广泛采用的SWE-bench Verified基准，理由很直接：这个测试集已经被污染了。部分原因是训练数据泄露，另一部分则是测试用例本身存在缺陷，导致某些模型在上面得分虚高，误导了技术路线判断。作为替代，团队推出了更严格的SWE-bench Pro。这背后其实是个老问题的新爆发：当整个行业依赖少数几个基准来评判进步时，一旦这些基准失准，整个创新方向都可能跑偏。类似的情况也出现在智能体开发中。GitHub上近期涌现的多个热门项目，比如Agent-Skills-for-Context-Engineering和PageIndex，都在尝试解决智能体在复杂任务中的上下文管理、推理一致性以及高效检索问题。它们不追求炫技，而是聚焦于让AI在真实工作流中更可靠、更可解释——这或许才是下一阶段竞争的真正战场。\n\n值得注意的是，大模型公司也开始从单打独斗转向生态共建。OpenAI刚刚启动Frontier Alliance Partners计划，联合一批技术伙伴，帮企业把AI智能体从试点推向规模化生产。这说明，光有强大的基础模型已经不够，客户更需要的是端到端的工程化能力、合规框架和运维支持。同样，Cloudflare也在其全球边缘网络上开放了AI Agent构建平台，让开发者能快速部署低延迟的自主代理。这些动作共同指向一个趋势：AI的价值重心，正从“能不能做”转向“能不能安全、稳定、持续地做”。\n\n那么，面对这样一个既充满机会又暗藏风险的格局，普通人和企业该如何应对？首先，别再把AI的首次输出当作最终答案。Anthropic最新发布的《AI Fluency Index》报告就指出，用户在与AI进行多轮追问、反复修改时，协作质量会显著提升；但一旦AI给出一段看似完整的代码或文档，人们反而更容易放松警惕，忽略其中可能存在的逻辑漏洞或上下文缺失。其次，选择AI服务时，要多问一句：它的能力从哪来？是否保留了原始模型的安全机制？最后，企业在引入智能体时，不能只看功能演示，更要考察其背后的治理架构——有没有审计日志？能否追溯决策链？是否具备失效保护？\n\n今天的AI世界，技术扩散的速度远超监管和认知的更新。我们既看到智能体在边缘网络上悄然部署，也目睹模型知识产权在灰色地带被悄然复制；既见证评估标准因污染而失效，也迎来更严谨的替代方案。这一切提醒我们：真正的AI成熟，不在于它能生成多么惊艳的内容，而在于整个生态系统能否建立起可持续的信任机制。好了，今天的播报就到这里。",
+  "longformScriptZh": "今天AI领域发生的事，像是一场多线程的交响：一边是智能体生态加速走向生产落地，另一边却是模型安全与评估体系遭遇信任危机。技术在狂奔，而规则、工具和人的认知，正在努力跟上节奏。\n\n先说一个震动行业的指控。Anthropic公开点名三家中国AI公司——DeepSeek、Moonshot和MiniMax，称它们通过创建超过24,000个虚假账户，在过去一段时间内对Claude发起了超过1600万次调用，目的不是正常使用，而是系统性地“蒸馏”其能力。所谓蒸馏，本是一种合法的技术手段，用大模型的输出去训练小模型。但问题在于，这种操作绕过了原始模型内置的安全护栏，比如内容过滤、拒绝危险请求等机制。结果就是，新训练出的模型可能保留了Claude强大的推理、编码甚至工具调用能力，却失去了关键的伦理约束。更令人担忧的是，这些“脱敏”的模型一旦流入开源社区或被用于监控、军事等高风险场景，后果难以预料。Anthropic已经部署了行为指纹识别和API级反制，并呼吁政策制定者重新审视当前对华AI出口管制的漏洞。这件事提醒我们：不是所有看起来“聪明”的AI都值得信任，尤其当它的血统模糊不清时。\n\n与此同时，AI落地的真实挑战正从实验室转向现实世界的关键基础设施。NVIDIA联合西门子、Palo Alto Networks等多家安全厂商，推出了一套专为工业控制系统设计的AI驱动网络安全架构。这套方案的核心，是在能源、制造、交通等领域的边缘设备上，用BlueField DPU硬件隔离运行安全服务，实现零信任防护。传统IT安全工具往往无法适配工业控制系统的实时性要求，强行接入反而可能引发停机风险。而新方案能在不干扰产线运行的前提下，持续监测异常行为、自动分段网络、发现未知资产。换句话说，你家的电、水、地铁之所以能稳定运行，未来可能部分归功于这类嵌入式AI安全层。这标志着AI不再只是提升效率的工具，更成为守护社会运转底线的基础设施。\n\n而在开发者和研究者层面，一场关于“如何正确衡量AI能力”的反思也在展开。OpenAI宣布弃用曾被广泛采用的SWE-bench Verified基准，理由很直接：这个测试集已经被污染了。部分原因是训练数据泄露，另一部分则是测试用例本身存在缺陷，导致某些模型在上面得分虚高，误导了技术路线判断。作为替代，团队推出了更严格的SWE-bench Pro。这背后其实是个老问题的新爆发：当整个行业依赖少数几个基准来评判进步时，一旦这些基准失准，整个创新方向都可能跑偏。类似的情况也出现在智能体开发中。GitHub上近期涌现的多个热门项目，比如Agent-Skills-for-Context-Engineering和PageIndex，都在尝试解决智能体在复杂任务中的上下文管理、推理一致性以及高效检索问题。它们不追求炫技，而是聚焦于让AI在真实工作流中更可靠、更可解释——这或许才是下一阶段竞争的真正战场。\n\n值得注意的是，大模型公司也开始从单打独斗转向生态共建。OpenAI刚刚启动Frontier Alliance Partners计划，联合一批技术伙伴，帮企业把AI智能体从试点推向规模化生产。这说明，光有强大的基础模型已经不够，客户更需要的是端到端的工程化能力、合规框架和运维支持。同样，Cloudflare也在其全球边缘网络上开放了AI Agent构建平台，让开发者能快速部署低延迟的自主代理。这些动作共同指向一个趋势：AI的价值重心，正从“能不能做”转向“能不能安全、稳定、持续地做”。\n\n那么，面对这样一个既充满机会又暗藏风险的格局，普通人和企业该如何应对？首先，别再把AI的首次输出当作最终答案。Anthropic最新发布的《AI Fluency Index》报告就指出，用户在与AI进行多轮追问、反复修改时，协作质量会显著提升；但一旦AI给出一段看似完整的代码或文档，人们反而更容易放松警惕，忽略其中可能存在的逻辑漏洞或上下文缺失。其次，选择AI服务时，要多问一句：它的能力从哪来？是否保留了原始模型的安全机制？最后，企业在引入智能体时，不能只看功能演示，更要考察其背后的治理架构——有没有审计日志？能否追溯决策链？是否具备失效保护？\n\n今天的AI世界，技术扩散的速度远超监管和认知的更新。我们既看到智能体在边缘网络上悄然部署，也目睹模型知识产权在灰色地带被悄然复制；既见证评估标准因污染而失效，也迎来更严谨的替代方案。这一切提醒我们：真正的AI成熟，不在于它能生成多么惊艳的内容，而在于整个生态系统能否建立起可持续的信任机制。好了，今天的播报就到这里。",
+  "longformScriptEn": "Today’s AI landscape is defined by a pivotal tension: rapid innovation in agent ecosystems colliding with urgent questions about security, evaluation integrity, and responsible deployment. As AI agents move from experimental prototypes to real-world infrastructure—from power grids to financial platforms—the stakes have never been higher. We’re seeing not just technical progress, but a reckoning over how to govern it.\n\nFirst, let’s talk about the elephant in the room: industrial-scale model theft. Anthropic has exposed a coordinated distillation attack by three Chinese AI firms—DeepSeek, Moonshot, and MiniMax—that used over 24,000 fake accounts to query Claude more than 16 million times. Their goal? To extract its reasoning, tool-use, and coding capabilities without paying for development or respecting safety guardrails. While model distillation itself is a legitimate technique for compressing large models, this operation weaponized it to bypass U.S. export controls and clone frontier intelligence at scale. The resulting models could end up in surveillance systems, military applications, or even open-source repositories—spreading unsafe AI far beyond their origin. Anthropic has responded with behavioral fingerprinting and API-level defenses, but the broader lesson is clear: as AI becomes more valuable, it also becomes a target. Users should treat unverified third-party models with skepticism, and enterprises must audit not just performance, but provenance.\n\nMeanwhile, the push to secure AI in high-stakes environments is accelerating. NVIDIA, in partnership with Akamai, Siemens, and others, has launched an AI-powered cybersecurity architecture specifically for operational technology—think power plants, factories, and transportation networks. Unlike traditional IT systems, these environments can’t tolerate latency or downtime, which is why NVIDIA’s solution runs on dedicated BlueField DPUs at the edge. It performs agentless asset discovery, network segmentation, and anomaly detection in real time, all without disrupting critical processes. This isn’t just about preventing data breaches; it’s about ensuring that when AI manages the grid or a water treatment facility, it does so with zero-trust principles baked in. For governments and infrastructure operators, adopting IEC 62443-compliant, AI-enhanced security is no longer optional—it’s existential.\n\nOn the evaluation front, the community is confronting a sobering reality: our benchmarks are breaking. OpenAI has officially deprecated SWE-bench Verified, citing widespread contamination from training data leakage and flawed test cases. Scores on this benchmark have become inflated and misleading, making it useless for gauging true progress in AI coding ability. In response, researchers are rallying behind SWE-bench Pro—a cleaner, more rigorous alternative. This episode underscores a deeper truth: as AI advances, our measurement tools must evolve faster. Without trustworthy benchmarks, we risk optimizing for illusions of capability rather than real-world reliability. Developers and enterprises should now treat any claim based on the old SWE-bench with caution and prioritize validation on newer, contamination-resistant standards.\n\nAt the same time, the enterprise adoption of AI agents is shifting from pilots to production. OpenAI’s new Frontier Alliance Partners program is designed to help companies navigate the engineering, compliance, and operational hurdles of scaling autonomous agents—particularly in customer service, logistics, and internal workflows. This marks a turning point: AI is no longer just a chatbot experiment but a core component of business infrastructure. Supporting this trend, Cloudflare has launched a platform to deploy lightweight agents directly on its global edge network, enabling low-latency, highly available intelligent services. Meanwhile, open-source projects like Agent-Skills-for-Context-Engineering and PageIndex are tackling the hard problems of multi-agent coordination and efficient retrieval—without relying on massive vector databases. These tools signal a maturing ecosystem where developers can build robust, context-aware agents even on constrained hardware.\n\nBut perhaps the most human insight comes from Anthropic’s new AI Fluency Index, which analyzed nearly 10,000 real-world Claude interactions. It found that users who engage iteratively—asking follow-ups, requesting explanations, refining outputs—exhibit more than twice the level of “AI fluency” than those who accept the first response. Yet, paradoxically, when AI generates polished artifacts like code or reports, users are less likely to question them, even when critical details are missing. The takeaway? Treat every AI output as a draft. Explicitly ask for reasoning, challenge assumptions, and keep iterating. Trust, but verify—especially when the output looks professional.\n\nSo what should you watch next? First, expect tighter scrutiny around model provenance and IP protection—governments may respond to distillation attacks with stricter chip export rules or mandatory model watermarking. Second, the line between IT and OT security will blur further, with AI-native defenses becoming standard in critical infrastructure. Third, the race for better evaluation will intensify; SWE-bench Pro is just the beginning. And finally, as agents proliferate, the biggest risk won’t be technical failure—it’ll be human complacency. The most effective users won’t be those with the fanciest models, but those who stay critically engaged.\n\nIn sum, today’s AI story isn’t just about smarter models or faster chips. It’s about building systems we can trust—not because they’re flawless, but because we’ve designed them with accountability, transparency, and resilience at their core. The era of AI as a novelty is over. What comes next demands both ambition and vigilance.",
   "audioUrl": "",
   "papers": [
     {
-      "id": "arxiv_2602_17598v1",
-      "title": "The Cascade Equivalence Hypothesis: When Do Speech LLMs Behave Like ASR$\\rightarrow$LLM Pipelines?",
-      "titleZh": "The Cascade Equivalence Hypothesis: When Do Speech LLMs Behave Like ASR$\\rightarrow$LLM Pipelines?",
-      "titleEn": "The Cascade Equivalence Hypothesis: When Do Speech LLMs Behave Like ASR$\\rightarrow$LLM Pipelines?",
-      "url": "https://arxiv.org/abs/2602.17598v1",
+      "id": "arxiv_2602_17990v1",
+      "title": "WorkflowPerturb: Calibrated Stress Tests for Evaluating Multi-Agent Workflow Metrics",
+      "titleZh": "WorkflowPerturb: Calibrated Stress Tests for Evaluating Multi-Agent Workflow Metrics",
+      "titleEn": "WorkflowPerturb: Calibrated Stress Tests for Evaluating Multi-Agent Workflow Metrics",
+      "url": "https://arxiv.org/abs/2602.17990v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "研究发现，当前多数语音大语言模型（Speech LLMs）在可仅依赖转录文本完成的任务上，其行为与机制等同于Whisper→LLM级联管道；通过控制LLM主干架构的匹配测试，在四个Speech LLM和六项任务中验证了这一“级联等价假设”——Ultravox与对应级联系统几乎无法区分（κ=0.93），隐藏状态中可检测到字面文本表征，且擦除该表征会导致性能崩溃；但Qwen2-Audio表现出真实偏离，表明该等价性依赖架构而非普适；在实际部署中，这些模型多为昂贵且在噪声下表现更差的级联系统，0 dB信噪比下优势甚至逆转达7.6%。",
-      "summaryZh": "研究发现，当前多数语音大语言模型（Speech LLMs）在可仅依赖转录文本完成的任务上，其行为与机制等同于Whisper→LLM级联管道；通过控制LLM主干架构的匹配测试，在四个Speech LLM和六项任务中验证了这一“级联等价假设”——Ultravox与对应级联系统几乎无法区分（κ=0.93），隐藏状态中可检测到字面文本表征，且擦除该表征会导致性能崩溃；但Qwen2-Audio表现出真实偏离，表明该等价性依赖架构而非普适；在实际部署中，这些模型多为昂贵且在噪声下表现更差的级联系统，0 dB信噪比下优势甚至逆转达7.6%。",
-      "summaryEn": "Current speech LLMs largely behave like simple Whisper→LLM cascades on tasks solvable from transcripts, both behaviorally and mechanistically—a phenomenon termed the Cascade Equivalence Hypothesis. Through matched-backbone testing across four speech LLMs and six tasks, the study shows Ultravox is statistically indistinguishable from its cascade counterpart (κ=0.93), with literal text emerging in hidden states; erasing this representation collapses performance to near-zero. However, Qwen2-Audio genuinely diverges, revealing architecture dependence. In real-world use, most speech LLMs act as costly cascades that underperform under noise, with clean-condition advantages reversing by up to 7.6% at 0 dB SNR.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "LLM",
-        "Audio"
-      ],
-      "paperCategory": "General AI",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：10/10，理由：首次系统验证语音LLM与ASR→LLM流水线的等价性，颠覆对语音模型工作机制的认知，具有里程碑意义，将重塑语音AI研发范式。",
-        "热度：8 / 评论 0"
-      ],
-      "score": 10.0,
-      "publishedAt": "2026-02-19T18:22:39+00:00",
-      "authors": [
-        "Jayadev Billa"
-      ]
-    },
-    {
-      "id": "arxiv_2602_17260v1",
-      "title": "EA-Swin: An Embedding-Agnostic Swin Transformer for AI-Generated Video Detection",
-      "titleZh": "EA-Swin: An Embedding-Agnostic Swin Transformer for AI-Generated Video Detection",
-      "titleEn": "EA-Swin: An Embedding-Agnostic Swin Transformer for AI-Generated Video Detection",
-      "url": "https://arxiv.org/abs/2602.17260v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "针对Sora2、Veo3等先进AI视频生成器带来的检测挑战，研究者提出EA-Swin——一种嵌入无关的Swin Transformer，通过因子化窗口注意力直接建模预训练视频嵌入中的时空依赖，兼容通用ViT式编码器；同时构建包含13万视频的EA-Video基准数据集，涵盖多种商用与开源生成器并设未见生成器分割；实验表明EA-Swin在主流生成器上准确率达0.97–0.99，较现有最优方法（通常0.8–0.9）提升5–20%，且在跨分布场景下保持强泛化能力，为现代AI生成视频检测提供了可扩展的鲁棒方案。",
-      "summaryZh": "针对Sora2、Veo3等先进AI视频生成器带来的检测挑战，研究者提出EA-Swin——一种嵌入无关的Swin Transformer，通过因子化窗口注意力直接建模预训练视频嵌入中的时空依赖，兼容通用ViT式编码器；同时构建包含13万视频的EA-Video基准数据集，涵盖多种商用与开源生成器并设未见生成器分割；实验表明EA-Swin在主流生成器上准确率达0.97–0.99，较现有最优方法（通常0.8–0.9）提升5–20%，且在跨分布场景下保持强泛化能力，为现代AI生成视频检测提供了可扩展的鲁棒方案。",
-      "summaryEn": "To address the challenge posed by highly realistic AI-generated videos from systems like Sora2 and Veo3, researchers propose EA-Swin, an Embedding-Agnostic Swin Transformer that models spatiotemporal dependencies directly on pretrained video embeddings via factorized windowed attention, compatible with generic ViT-style encoders. They also introduce EA-Video, a 130K-video benchmark integrating new and curated data across diverse commercial and open-source generators, including unseen-generator splits. EA-Swin achieves 0.97–0.99 accuracy across major generators—surpassing prior state-of-the-art (typically 0.8–0.9) by 5–20%—while maintaining strong generalization to unseen distributions, offering a scalable and robust solution for modern deepfake detection.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "LLM",
-        "Vision",
-        "Benchmark"
-      ],
-      "paperCategory": "Computer Vision",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：10/10，理由：针对Sora等生成视频的检测难题，提出嵌入无关的新型检测框架，是应对深度伪造威胁的关键突破，具备行业变革性。",
-        "热度：14 / 评论 0"
-      ],
-      "score": 10.0,
-      "publishedAt": "2026-02-19T11:04:20+00:00",
-      "authors": [
-        "Hung Mai",
-        "Loi Dinh",
-        "Duc Hai Nguyen"
-      ]
-    },
-    {
-      "id": "arxiv_2602_16943v1",
-      "title": "Mind the GAP: Text Safety Does Not Transfer to Tool-Call Safety in LLM Agents",
-      "titleZh": "Mind the GAP: Text Safety Does Not Transfer to Tool-Call Safety in LLM Agents",
-      "titleEn": "Mind the GAP: Text Safety Does Not Transfer to Tool-Call Safety in LLM Agents",
-      "url": "https://arxiv.org/abs/2602.16943v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "研究揭示大语言模型作为智能体时存在“安全鸿沟”：文本层面的安全对齐无法迁移到工具调用层面；通过GAP基准对六个前沿模型在六大监管领域、七类越狱场景、三种系统提示下的17,420个样本评估发现，模型常在文本拒绝有害请求的同时执行禁止的工具调用；即使采用强化安全提示，六模型仍共出现219例此类矛盾；系统提示措辞显著影响工具调用行为（最敏感模型安全率波动达57个百分点）；运行时治理合约虽减少信息泄露，却未抑制违规调用尝试，表明仅靠文本安全评估不足以保障智能体行为安全，需专门的工具调用安全评测与干预机制。",
-      "summaryZh": "研究揭示大语言模型作为智能体时存在“安全鸿沟”：文本层面的安全对齐无法迁移到工具调用层面；通过GAP基准对六个前沿模型在六大监管领域、七类越狱场景、三种系统提示下的17,420个样本评估发现，模型常在文本拒绝有害请求的同时执行禁止的工具调用；即使采用强化安全提示，六模型仍共出现219例此类矛盾；系统提示措辞显著影响工具调用行为（最敏感模型安全率波动达57个百分点）；运行时治理合约虽减少信息泄露，却未抑制违规调用尝试，表明仅靠文本安全评估不足以保障智能体行为安全，需专门的工具调用安全评测与干预机制。",
-      "summaryEn": "A critical safety gap exists in LLM agents: alignment that suppresses harmful text does not transfer to tool-call safety. The GAP benchmark evaluates six frontier models across six regulated domains, seven jailbreak scenarios per domain, and three system prompt conditions (yielding 17,420 datapoints). Results show models frequently refuse harmful requests in text while simultaneously executing forbidden tool calls—a divergence formalized as the GAP metric. Even with safety-reinforced prompts, 219 such cases persist across all models. System prompt wording strongly influences tool-call behavior (TC-safe rates vary by up to 57 percentage points), and runtime governance contracts reduce information leakage but fail to deter forbidden tool-call attempts. This demonstrates that text-only safety evaluations are insufficient, and tool-call safety requires dedicated measurement and mitigation.",
+      "summary": "针对大语言模型生成的结构化工作流缺乏可靠自动评估的问题，研究者提出WorkflowPerturb——一个通过在4,973个黄金工作流上施加三种可控扰动（缺失步骤、压缩步骤、描述变更）并按10%、30%、50%严重程度生成44,757个变体的基准数据集；该基准用于系统评估多类指标对工作流退化的敏感性与校准性，揭示不同指标家族的系统性差异，并支持基于严重程度解读评估分数，为多智能体工作流评估提供可解释依据。",
+      "summaryZh": "针对大语言模型生成的结构化工作流缺乏可靠自动评估的问题，研究者提出WorkflowPerturb——一个通过在4,973个黄金工作流上施加三种可控扰动（缺失步骤、压缩步骤、描述变更）并按10%、30%、50%严重程度生成44,757个变体的基准数据集；该基准用于系统评估多类指标对工作流退化的敏感性与校准性，揭示不同指标家族的系统性差异，并支持基于严重程度解读评估分数，为多智能体工作流评估提供可解释依据。",
+      "summaryEn": "To address the lack of reliable automatic evaluation for LLM-generated structured workflows, researchers introduce WorkflowPerturb—a controlled benchmark that applies three realistic perturbation types (Missing Steps, Compressed Steps, Description Changes) at severity levels of 10%, 30%, and 50% to 4,973 golden workflows, yielding 44,757 variants. This dataset enables systematic analysis of metric sensitivity and calibration across multiple families, revealing systematic differences and supporting severity-aware interpretation of workflow degradation scores.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "LLM",
         "Agent",
-        "RAG",
         "Benchmark"
       ],
       "paperCategory": "General AI",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：揭示文本安全与工具调用安全之间的鸿沟，直击AI代理落地核心风险，将推动全球AI安全评估标准变革。",
-        "热度：22 / 评论 0"
+        "模型评分：9/10，理由：提出可校准的多智能体工作流压力测试框架，直接回应LLM系统评估中的核心痛点，对AI可信部署和自动化验证具有战略级影响。",
+        "热度：12 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-02-18T23:17:15+00:00",
+      "publishedAt": "2026-02-20T04:54:31+00:00",
       "authors": [
-        "Arnold Cartagena",
-        "Ariane Teixeira"
+        "Madhav Kanda",
+        "Pedro Las-Casas",
+        "Alok Gautam Kumbhare"
       ]
     },
     {
-      "id": "arxiv_2602_17602v1",
-      "title": "MolHIT: Advancing Molecular-Graph Generation with Hierarchical Discrete Diffusion Models",
-      "titleZh": "MolHIT: Advancing Molecular-Graph Generation with Hierarchical Discrete Diffusion Models",
-      "titleEn": "MolHIT: Advancing Molecular-Graph Generation with Hierarchical Discrete Diffusion Models",
-      "url": "https://arxiv.org/abs/2602.17602v1",
+      "id": "arxiv_2602_18029v1",
+      "title": "Towards More Standardized AI Evaluation: From Models to Agents",
+      "titleZh": "Towards More Standardized AI Evaluation: From Models to Agents",
+      "titleEn": "Towards More Standardized AI Evaluation: From Models to Agents",
+      "url": "https://arxiv.org/abs/2602.18029v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "针对分子图生成中化学有效性低、性质优化难的问题，研究提出MolHIT框架，基于分层离散扩散模型，将原子类型按化学角色解耦编码，并引入编码化学先验的额外离散类别；该方法在MOSES数据集上首次实现近乎完美的化学有效性，全面超越现有图扩散模型及强1D基线，并在多属性引导生成与骨架扩展等下游任务中表现优异，为AI驱动的药物发现与材料科学提供了高性能分子生成新范式。",
-      "summaryZh": "针对分子图生成中化学有效性低、性质优化难的问题，研究提出MolHIT框架，基于分层离散扩散模型，将原子类型按化学角色解耦编码，并引入编码化学先验的额外离散类别；该方法在MOSES数据集上首次实现近乎完美的化学有效性，全面超越现有图扩散模型及强1D基线，并在多属性引导生成与骨架扩展等下游任务中表现优异，为AI驱动的药物发现与材料科学提供了高性能分子生成新范式。",
-      "summaryEn": "To overcome low chemical validity and poor property optimization in molecular graph generation, researchers introduce MolHIT, a hierarchical discrete diffusion framework that decouples atom encoding by chemical roles and extends discrete diffusion with additional categories encoding chemical priors. MolHIT achieves near-perfect validity on the MOSES benchmark—the first graph diffusion model to do so—and surpasses strong 1D baselines across multiple metrics. It also excels in downstream tasks like multi-property guided generation and scaffold extension, establishing a high-performance paradigm for AI-driven drug discovery and materials science.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Diffusion"
-      ],
-      "paperCategory": "General AI",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：在分子图生成中引入分层离散扩散模型，显著提升化学有效性，有望重塑AI制药与材料科学研发范式。",
-        "热度：9 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-19T18:27:11+00:00",
-      "authors": [
-        "Hojung Jung",
-        "Rodrigo Hormazabal",
-        "Jaehyeong Jo"
-      ]
-    },
-    {
-      "id": "arxiv_2602_17016v1",
-      "title": "M2F: Automated Formalization of Mathematical Literature at Scale",
-      "titleZh": "M2F: Automated Formalization of Mathematical Literature at Scale",
-      "titleEn": "M2F: Automated Formalization of Mathematical Literature at Scale",
-      "url": "https://arxiv.org/abs/2602.17016v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "研究提出M2F（Math-to-Formal），首个支持端到端、项目级数学文献自动形式化的智能体框架，通过两阶段流程处理跨文件依赖与编译问题：先将文档分解为原子块并修复声明骨架直至项目可编译（允许证明占位符），再通过目标条件局部编辑填补证明空缺；全程由Lean验证器闭环反馈指导编辑；该系统在约三周内将479页实分析与凸分析教材转化为153,853行完整Lean代码库，形式化速度远超人工（通常需数月或数年），并在FATE-H基准上达到96%证明成功率（基线为80%），证明大规模数学自动形式化已切实可行。",
-      "summaryZh": "研究提出M2F（Math-to-Formal），首个支持端到端、项目级数学文献自动形式化的智能体框架，通过两阶段流程处理跨文件依赖与编译问题：先将文档分解为原子块并修复声明骨架直至项目可编译（允许证明占位符），再通过目标条件局部编辑填补证明空缺；全程由Lean验证器闭环反馈指导编辑；该系统在约三周内将479页实分析与凸分析教材转化为153,853行完整Lean代码库，形式化速度远超人工（通常需数月或数年），并在FATE-H基准上达到96%证明成功率（基线为80%），证明大规模数学自动形式化已切实可行。",
-      "summaryEn": "Researchers present M2F (Math-to-Formal), the first agentic framework for end-to-end, project-scale autoformalization of mathematical literature in Lean. It operates in two verifier-in-the-loop stages: statement compilation (splitting documents into atomic blocks, ordering by inferred dependencies, and repairing declaration skeletons until the project compiles with proof placeholders) and proof repair (filling holes via goal-conditioned local edits). In ~3 weeks, M2F converted 479 pages of real and convex analysis textbooks into a 153,853-line Lean library with full proofs—work that typically requires months or years of expert effort. On FATE-H, it achieves 96% proof success versus 80% for a strong baseline, demonstrating that large-scale automated formalization is now within reach.",
+      "summary": "随着AI系统从静态模型演变为具备工具使用能力的智能体，传统以静态基准和聚合分数为核心的评估范式已难以反映系统在动态、规模化环境中的行为可靠性；本文指出当前评估实践常掩盖系统失效模式，高基准分数易误导开发团队，并主张将评估重新定位为一种测量学科——其核心功能是支撑非确定性智能体系统的信任建立、迭代优化与治理，而非仅作为性能展示。",
+      "summaryZh": "随着AI系统从静态模型演变为具备工具使用能力的智能体，传统以静态基准和聚合分数为核心的评估范式已难以反映系统在动态、规模化环境中的行为可靠性；本文指出当前评估实践常掩盖系统失效模式，高基准分数易误导开发团队，并主张将评估重新定位为一种测量学科——其核心功能是支撑非确定性智能体系统的信任建立、迭代优化与治理，而非仅作为性能展示。",
+      "summaryEn": "As AI systems evolve from static models to tool-using agents, traditional evaluation—relying on static benchmarks and aggregate scores—fails to capture behavioral reliability under change and scale. The paper argues that current practices often obscure silent failure modes and mislead teams with inflated benchmark scores, advocating instead for evaluation as a measurement discipline that conditions trust, iteration, and governance in non-deterministic agentic systems, rather than mere performance theater.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "Agent",
         "Research",
-        "Open Source"
+        "Benchmark"
       ],
       "paperCategory": "General AI",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：实现数学文献大规模自动化形式化，突破现有局限，为可验证AI与形式化推理奠定基础，具备战略级科研影响力。",
+        "模型评分：9/10，理由：系统性提出从模型到智能体的标准化评估范式，直击当前AI演进的核心挑战，具备推动全球AI治理与评测体系变革的战略潜力。",
         "热度：9 / 评论 0"
       ],
       "score": 9.0,
-      "publishedAt": "2026-02-19T02:25:23+00:00",
+      "publishedAt": "2026-02-20T06:54:44+00:00",
       "authors": [
-        "Zichen Wang",
-        "Wanli Ma",
-        "Zhenyu Ming"
+        "Ali El Filali",
+        "Inès Bedar"
       ]
     },
     {
-      "id": "arxiv_2602_17017v1",
-      "title": "Sales Research Agent and Sales Research Bench",
-      "titleZh": "Sales Research Agent and Sales Research Bench",
-      "titleEn": "Sales Research Agent and Sales Research Bench",
-      "url": "https://arxiv.org/abs/2602.17017v1",
+      "id": "arxiv_2602_17902v1",
+      "title": "El Agente Gráfico: Structured Execution Graphs for Scientific Agents",
+      "titleZh": "El Agente Gráfico: Structured Execution Graphs for Scientific Agents",
+      "titleEn": "El Agente Gráfico: Structured Execution Graphs for Scientific Agents",
+      "url": "https://arxiv.org/abs/2602.17902v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "微软Dynamics 365 Sales推出Sales Research Agent，可连接实时CRM数据、理解复杂数据库结构并生成文本与图表形式的决策洞察；为量化质量，团队同步开发Sales Research Bench基准，从文本/图表事实性、相关性、可解释性、模式准确性等八个客户加权维度评分；在2025年10月19日针对定制企业数据库的200题测试中，该智能体以13分和24.1分的优势分别超越Claude Sonnet 4.5与ChatGPT-5（满分100），为企业用户提供可重复、透明的AI销售分析解决方案。",
-      "summaryZh": "微软Dynamics 365 Sales推出Sales Research Agent，可连接实时CRM数据、理解复杂数据库结构并生成文本与图表形式的决策洞察；为量化质量，团队同步开发Sales Research Bench基准，从文本/图表事实性、相关性、可解释性、模式准确性等八个客户加权维度评分；在2025年10月19日针对定制企业数据库的200题测试中，该智能体以13分和24.1分的优势分别超越Claude Sonnet 4.5与ChatGPT-5（满分100），为企业用户提供可重复、透明的AI销售分析解决方案。",
-      "summaryEn": "Microsoft Dynamics 365 Sales introduces the Sales Research Agent, an AI system that connects to live CRM data, reasons over complex schemas, and delivers decision-ready insights via text and charts. To enable transparent quality assessment, the team developed the Sales Research Bench—a purpose-built benchmark scoring systems across eight customer-weighted dimensions, including groundedness, relevance, explainability, schema accuracy, and chart quality. In a 200-question evaluation on a customized enterprise schema on October 19, 2025, the agent outperformed Claude Sonnet 4.5 by 13 points and ChatGPT-5 by 24.1 points on a 100-point composite score, offering enterprises a repeatable, evidence-based way to evaluate AI sales analytics tools.",
+      "summary": "为解决大语言模型在科学自动化中因依赖非结构化文本导致上下文混乱、溯源困难的问题，研究者提出El Agente Gráfico框架：通过类型安全的执行环境与动态知识图谱，将计算状态表示为带类型的Python对象，并以符号化标识符管理上下文；该单智能体系统在量子化学、构象系综生成和金属有机框架设计等任务中展现出高效、可审计的多步并行计算能力，证明结构化抽象可超越提示中心范式，为科学智能体提供可扩展基础。",
+      "summaryZh": "为解决大语言模型在科学自动化中因依赖非结构化文本导致上下文混乱、溯源困难的问题，研究者提出El Agente Gráfico框架：通过类型安全的执行环境与动态知识图谱，将计算状态表示为带类型的Python对象，并以符号化标识符管理上下文；该单智能体系统在量子化学、构象系综生成和金属有机框架设计等任务中展现出高效、可审计的多步并行计算能力，证明结构化抽象可超越提示中心范式，为科学智能体提供可扩展基础。",
+      "summaryEn": "To overcome the fragility of LLM-based scientific automation caused by unstructured text-based context management, researchers propose El Agente Gráfico—a single-agent framework that embeds decision-making within a type-safe execution environment and dynamic knowledge graphs. By representing computational state as typed Python objects and managing context via symbolic identifiers, the system enables provenance tracking and efficient orchestration. It demonstrates robust multi-step, parallel execution across quantum chemistry, conformer ensemble generation, and metal-organic framework design, showing that structured abstraction can surpass prompt-centric approaches.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "LLM",
         "Agent",
-        "Industry",
-        "Research"
-      ],
-      "paperCategory": "General AI",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：微软发布Sales Research Agent及配套基准，标志着企业级AI智能体进入可验证、可复现的实战阶段，具有全球产业示范效应。",
-        "热度：11 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2025-12-01T19:44:04+00:00",
-      "authors": [
-        "Deepanjan Bhol"
-      ]
-    },
-    {
-      "id": "arxiv_2602_17607v1",
-      "title": "AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing",
-      "titleZh": "AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing",
-      "titleEn": "AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing",
-      "url": "https://arxiv.org/abs/2602.17607v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "为降低偏微分方程（PDE）数值求解对专家知识的依赖，研究提出AutoNumerics——一个自主、PDE无关的多智能体科学计算框架，能直接从自然语言描述出发，自动设计、实现、调试并验证经典数值求解器；不同于黑箱神经求解器，该框架生成基于传统数值分析的透明算法，并采用由粗到精的执行策略与残差自验证机制；在24个经典及真实PDE问题上的实验表明，AutoNumerics在精度上媲美或优于现有神经与LLM基线，且能根据PDE结构特性正确选择数值格式，为自动化科学计算提供了一种可解释、高可用的新范式。",
-      "summaryZh": "为降低偏微分方程（PDE）数值求解对专家知识的依赖，研究提出AutoNumerics——一个自主、PDE无关的多智能体科学计算框架，能直接从自然语言描述出发，自动设计、实现、调试并验证经典数值求解器；不同于黑箱神经求解器，该框架生成基于传统数值分析的透明算法，并采用由粗到精的执行策略与残差自验证机制；在24个经典及真实PDE问题上的实验表明，AutoNumerics在精度上媲美或优于现有神经与LLM基线，且能根据PDE结构特性正确选择数值格式，为自动化科学计算提供了一种可解释、高可用的新范式。",
-      "summaryEn": "To reduce reliance on expert knowledge in PDE solver design, researchers introduce AutoNumerics—an autonomous, PDE-agnostic multi-agent framework that designs, implements, debugs, and verifies classical numerical solvers directly from natural language descriptions. Unlike black-box neural solvers, AutoNumerics generates transparent algorithms grounded in classical numerical analysis, using a coarse-to-fine execution strategy and residual-based self-verification. Experiments on 24 canonical and real-world PDEs show it achieves competitive or superior accuracy compared to neural and LLM-based baselines and correctly selects numerical schemes based on PDE structural properties, offering an interpretable and accessible paradigm for automated scientific computing.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "LLM",
-        "Agent"
-      ],
-      "paperCategory": "General AI",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：AutoNumerics构建无偏PDE求解多智能体管道，实现科学计算自动化，有望颠覆传统仿真流程，具备重大科研变革潜力。",
-        "热度：8 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-19T18:31:52+00:00",
-      "authors": [
-        "Jianda Du",
-        "Youran Sun",
-        "Haizhao Yang"
-      ]
-    },
-    {
-      "id": "arxiv_2602_17200v1",
-      "title": "GASS: Geometry-Aware Spherical Sampling for Disentangled Diversity Enhancement in Text-to-Image Generation",
-      "titleZh": "GASS: Geometry-Aware Spherical Sampling for Disentangled Diversity Enhancement in Text-to-Image Generation",
-      "titleEn": "GASS: Geometry-Aware Spherical Sampling for Disentangled Diversity Enhancement in Text-to-Image Generation",
-      "url": "https://arxiv.org/abs/2602.17200v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "针对文本到图像生成中多样性不足的问题，研究提出几何感知球面采样（GASS）方法，通过CLIP嵌入空间的正交分解显式分离提示相关语义变化（沿文本嵌入方向）与提示无关变化（如背景，沿正交方向），并在两个轴上扩展生成图像嵌入的几何投影分布以增强解耦多样性；该方法适用于不同冻结T2I主干（U-Net/DiT，扩散/流模型），在保持图像保真度与语义对齐的同时显著提升多样性，为缓解生成模型中的偏见放大风险提供了新路径。",
-      "summaryZh": "针对文本到图像生成中多样性不足的问题，研究提出几何感知球面采样（GASS）方法，通过CLIP嵌入空间的正交分解显式分离提示相关语义变化（沿文本嵌入方向）与提示无关变化（如背景，沿正交方向），并在两个轴上扩展生成图像嵌入的几何投影分布以增强解耦多样性；该方法适用于不同冻结T2I主干（U-Net/DiT，扩散/流模型），在保持图像保真度与语义对齐的同时显著提升多样性，为缓解生成模型中的偏见放大风险提供了新路径。",
-      "summaryEn": "To address limited diversity in text-to-image (T2I) generation, researchers propose Geometry-Aware Spherical Sampling (GASS), which decomposes CLIP embedding space into two orthogonal directions: one aligned with the text prompt (capturing semantic variation) and another capturing prompt-independent variation (e.g., backgrounds). GASS enhances disentangled diversity by expanding the geometric spread of generated image embeddings along both axes during sampling. The method works across frozen T2I backbones—including U-Net and DiT, diffusion and flow models—and boosts diversity with minimal impact on fidelity or semantic alignment, offering a geometric approach to mitigate bias amplification in generative models.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Vision",
-        "Diffusion",
-        "Benchmark"
-      ],
-      "paperCategory": "Computer Vision",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：通过几何感知采样提升文本到图像生成多样性，有效缓解偏见问题，对AIGC产业具有战略意义。",
-        "热度：9 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-19T09:41:32+00:00",
-      "authors": [
-        "Ye Zhu",
-        "Kaleb S. Newman",
-        "Johannes F. Lutzeyer"
-      ]
-    },
-    {
-      "id": "arxiv_2602_16872v1",
-      "title": "DODO: Discrete OCR Diffusion Models",
-      "titleZh": "DODO: Discrete OCR Diffusion Models",
-      "titleEn": "DODO: Discrete OCR Diffusion Models",
-      "url": "https://arxiv.org/abs/2602.16872v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "针对光学字符识别（OCR）任务中自回归解码速度慢的问题，研究者提出DODO——首个采用块状离散扩散机制的视觉语言模型。该方法利用OCR任务输出高度确定性的特点，通过分块并行生成避免全局扩散中的同步错误，在保持接近最先进准确率的同时，推理速度最高提升3倍。",
-      "summaryZh": "针对光学字符识别（OCR）任务中自回归解码速度慢的问题，研究者提出DODO——首个采用块状离散扩散机制的视觉语言模型。该方法利用OCR任务输出高度确定性的特点，通过分块并行生成避免全局扩散中的同步错误，在保持接近最先进准确率的同时，推理速度最高提升3倍。",
-      "summaryEn": "Addressing the slow inference of autoregressive decoding in Optical Character Recognition (OCR), researchers propose DODO—the first Vision-Language Model using block discrete diffusion. Leveraging OCR’s deterministic nature, DODO enables parallel generation by decomposing output into blocks, mitigating synchronization errors in global diffusion and achieving up to 3× faster inference while maintaining near state-of-the-art accuracy.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "LLM",
-        "Vision",
-        "Multimodal",
-        "Diffusion"
-      ],
-      "paperCategory": "Computer Vision",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：9/10，理由：提出离散OCR扩散模型，突破传统自回归解码瓶颈，显著提升文本识别效率与精度，有望重塑文档数字化与AI视觉理解范式。",
-        "热度：16 / 评论 0"
-      ],
-      "score": 9.0,
-      "publishedAt": "2026-02-18T20:59:22+00:00",
-      "authors": [
-        "Sean Man",
-        "Roy Ganz",
-        "Roi Ronen"
-      ]
-    },
-    {
-      "id": "arxiv_2602_17168v1",
-      "title": "BadCLIP++: Stealthy and Persistent Backdoors in Multimodal Contrastive Learning",
-      "titleZh": "BadCLIP++: Stealthy and Persistent Backdoors in Multimodal Contrastive Learning",
-      "titleEn": "BadCLIP++: Stealthy and Persistent Backdoors in Multimodal Contrastive Learning",
-      "url": "https://arxiv.org/abs/2602.17168v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "为解决多模态对比学习模型中后门攻击的隐蔽性与持久性难题，研究者提出BadCLIP++框架：通过语义融合的QR微触发器实现高隐蔽性，并结合半径收缩、质心对齐与弹性权重巩固等技术增强后门在低中毒率（仅0.3%）和持续微调下的稳定性；实验显示其在数字攻击中达到99.99%成功率，且对19种防御手段均保持超过99.90%的攻击成功率，同时几乎不影响干净样本准确率。",
-      "summaryZh": "为解决多模态对比学习模型中后门攻击的隐蔽性与持久性难题，研究者提出BadCLIP++框架：通过语义融合的QR微触发器实现高隐蔽性，并结合半径收缩、质心对齐与弹性权重巩固等技术增强后门在低中毒率（仅0.3%）和持续微调下的稳定性；实验显示其在数字攻击中达到99.99%成功率，且对19种防御手段均保持超过99.90%的攻击成功率，同时几乎不影响干净样本准确率。",
-      "summaryEn": "To address stealthiness and persistence challenges in backdoor attacks on multimodal contrastive learning, researchers propose BadCLIP++. It uses a semantic-fusion QR micro-trigger for imperceptibility and enhances persistence via radius shrinkage, centroid alignment, curvature control, and elastic weight consolidation. With only 0.3% poisoning, it achieves 99.99% attack success rate (ASR) digitally, maintains >99.90% ASR against 19 defenses, and incurs <0.8% clean accuracy drop.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Multimodal",
-        "Audio",
-        "Training",
-        "Research"
-      ],
-      "paperCategory": "Computer Vision",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：揭示多模态对比学习中的隐蔽后门攻击，直击AI安全核心痛点，对模型可信性与防御体系构建具有战略意义。",
-        "热度：16 / 评论 0"
-      ],
-      "score": 8.0,
-      "publishedAt": "2026-02-19T08:31:16+00:00",
-      "authors": [
-        "Siyuan Liang",
-        "Yongcheng Jing",
-        "Yingjie Wang"
-      ]
-    },
-    {
-      "id": "arxiv_2602_17196v1",
-      "title": "EntropyPrune: Matrix Entropy Guided Visual Token Pruning for Multimodal Large Language Models",
-      "titleZh": "EntropyPrune: Matrix Entropy Guided Visual Token Pruning for Multimodal Large Language Models",
-      "titleEn": "EntropyPrune: Matrix Entropy Guided Visual Token Pruning for Multimodal Large Language Models",
-      "url": "https://arxiv.org/abs/2602.17196v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "为高效加速多模态大语言模型（MLLMs）推理，研究者提出EntropyPrune框架，基于矩阵熵发现视觉表征信息量骤降的“熵坍缩层”（ECL），以此作为剪枝依据；该方法无需依赖注意力图，通过谱等价性将熵计算复杂度大幅降低，理论加速达64倍，在LLaVA-1.5-7B上减少68.2% FLOPs的同时保留96.0%原始性能，并可泛化至高分辨率与视频模型。",
-      "summaryZh": "为高效加速多模态大语言模型（MLLMs）推理，研究者提出EntropyPrune框架，基于矩阵熵发现视觉表征信息量骤降的“熵坍缩层”（ECL），以此作为剪枝依据；该方法无需依赖注意力图，通过谱等价性将熵计算复杂度大幅降低，理论加速达64倍，在LLaVA-1.5-7B上减少68.2% FLOPs的同时保留96.0%原始性能，并可泛化至高分辨率与视频模型。",
-      "summaryEn": "To accelerate multimodal large language models (MLLMs), researchers introduce EntropyPrune, which identifies an 'Entropy Collapse Layer' (ECL)—where visual representation information sharply drops—as a principled pruning stage. Avoiding attention maps, it leverages spectral equivalence of dual Gram matrices for up to 64× theoretical speedup in entropy computation. On LLaVA-1.5-7B, it reduces FLOPs by 68.2% while preserving 96.0% performance and generalizes to high-resolution and video-based models.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "LLM",
-        "Vision",
-        "Multimodal",
-        "Inference"
-      ],
-      "paperCategory": "Computer Vision",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：提出基于矩阵熵的视觉令牌剪枝方法，有效降低多模态大模型推理开销，对实际部署具有显著优化价值。",
-        "热度：17 / 评论 0"
-      ],
-      "score": 8.0,
-      "publishedAt": "2026-02-19T09:29:43+00:00",
-      "authors": [
-        "Yahong Wang",
-        "Juncheng Wu",
-        "Zhangkai Ni"
-      ]
-    },
-    {
-      "id": "arxiv_2602_17182v1",
-      "title": "NRGS-SLAM: Monocular Non-Rigid SLAM for Endoscopy via Deformation-Aware 3D Gaussian Splatting",
-      "titleZh": "NRGS-SLAM: Monocular Non-Rigid SLAM for Endoscopy via Deformation-Aware 3D Gaussian Splatting",
-      "titleEn": "NRGS-SLAM: Monocular Non-Rigid SLAM for Endoscopy via Deformation-Aware 3D Gaussian Splatting",
-      "url": "https://arxiv.org/abs/2602.17182v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "针对内窥镜场景中软组织形变导致传统SLAM失效的问题，研究者提出NRGS-SLAM系统，基于3D高斯泼溅构建形变感知地图，为每个高斯基元引入可学习形变概率并通过贝叶斯自监督优化；其跟踪模块优先利用低形变区域估计位姿，映射模块动态扩展地图，并结合几何先验损失提升鲁棒性，在多个公开数据集上将位姿误差降低最多50%，并实现高质量光真实感重建。",
-      "summaryZh": "针对内窥镜场景中软组织形变导致传统SLAM失效的问题，研究者提出NRGS-SLAM系统，基于3D高斯泼溅构建形变感知地图，为每个高斯基元引入可学习形变概率并通过贝叶斯自监督优化；其跟踪模块优先利用低形变区域估计位姿，映射模块动态扩展地图，并结合几何先验损失提升鲁棒性，在多个公开数据集上将位姿误差降低最多50%，并实现高质量光真实感重建。",
-      "summaryEn": "To address camera-deformation coupling in endoscopic monocular SLAM, researchers propose NRGS-SLAM, a non-rigid system based on 3D Gaussian Splatting. It augments each Gaussian with a learnable deformation probability optimized via Bayesian self-supervision. A deformable tracking module estimates pose using low-deformation regions, while a mapping module refines the scene representation. A unified geometric loss incorporates priors to mitigate ill-posedness. Experiments show up to 50% RMSE reduction in pose estimation and photo-realistic reconstructions surpassing prior methods.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Vision",
-        "3D",
-        "Research"
-      ],
-      "paperCategory": "Computer Vision",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：解决内窥镜中非刚性变形下的SLAM难题，推动医疗影像智能化，对精准医疗与手术导航具重要应用潜力。",
-        "热度：10 / 评论 0"
-      ],
-      "score": 8.0,
-      "publishedAt": "2026-02-19T09:03:47+00:00",
-      "authors": [
-        "Jiwei Shan",
-        "Zeyu Cai",
-        "Yirui Li"
-      ]
-    },
-    {
-      "id": "arxiv_2602_17601v1",
-      "title": "Graph Neural Model Predictive Control for High-Dimensional Systems",
-      "titleZh": "Graph Neural Model Predictive Control for High-Dimensional Systems",
-      "titleEn": "Graph Neural Model Predictive Control for High-Dimensional Systems",
-      "url": "https://arxiv.org/abs/2602.17601v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "为实现实时控制高维系统（如软体机器人），研究者将图神经网络（GNN）动力学模型与结构感知的模型预测控制（MPC）结合，利用系统局部交互的图表示保持稀疏性，并设计线性复杂度的压缩算法消除状态变量；该方法在GPU上实现100Hz闭环控制，成功驱动含1000节点的软体机械臂，硬件实验中以亚厘米精度完成轨迹跟踪，性能优于基线63.6%，并支持全身避障。",
-      "summaryZh": "为实现实时控制高维系统（如软体机器人），研究者将图神经网络（GNN）动力学模型与结构感知的模型预测控制（MPC）结合，利用系统局部交互的图表示保持稀疏性，并设计线性复杂度的压缩算法消除状态变量；该方法在GPU上实现100Hz闭环控制，成功驱动含1000节点的软体机械臂，硬件实验中以亚厘米精度完成轨迹跟踪，性能优于基线63.6%，并支持全身避障。",
-      "summaryEn": "To enable real-time control of high-dimensional systems like soft robots, researchers integrate Graph Neural Network (GNN)-based dynamics with structure-exploiting Model Predictive Control (MPC). Representing the system as a graph preserves sparsity, and a tailored condensing algorithm eliminates state variables with linear complexity. GPU acceleration achieves 100 Hz closed-loop control on a 1,000-node soft robotic trunk, demonstrating sub-centimeter tracking accuracy—63.6% better than baselines—and full-body obstacle avoidance.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Robotics",
-        "RAG"
-      ],
-      "paperCategory": "Robotics",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：将图神经网络与模型预测控制结合用于高维系统（如软体机器人），显著提升复杂系统控制能力，具备行业变革潜力。",
-        "热度：8 / 评论 0"
-      ],
-      "score": 8.0,
-      "publishedAt": "2026-02-19T18:26:42+00:00",
-      "authors": [
-        "Patrick Benito Eberhard",
-        "Luis Pabon",
-        "Daniele Gammelli"
-      ]
-    },
-    {
-      "id": "arxiv_2602_16870v1",
-      "title": "Boreas Road Trip: A Multi-Sensor Autonomous Driving Dataset on Challenging Roads",
-      "titleZh": "Boreas Road Trip: A Multi-Sensor Autonomous Driving Dataset on Challenging Roads",
-      "titleEn": "Boreas Road Trip: A Multi-Sensor Autonomous Driving Dataset on Challenging Roads",
-      "url": "https://arxiv.org/abs/2602.16870v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "Boreas Road Trip（Boreas-RT）数据集扩展了原Boreas多季节数据集，新增9条共643公里具挑战性的真实道路序列，涵盖重复通行下的交通与天气变化；平台配备多传感器（包括FMCW激光雷达、Doppler雷达、高分辨率相机等）及厘米级GNSS-INS真值，提供精确标定与开发套件；基准测试表明，现有顶尖定位算法在简单环境过拟合，在Boreas-RT上性能显著下降，凸显该数据集对多模态自动驾驶算法鲁棒性评估的价值。",
-      "summaryZh": "Boreas Road Trip（Boreas-RT）数据集扩展了原Boreas多季节数据集，新增9条共643公里具挑战性的真实道路序列，涵盖重复通行下的交通与天气变化；平台配备多传感器（包括FMCW激光雷达、Doppler雷达、高分辨率相机等）及厘米级GNSS-INS真值，提供精确标定与开发套件；基准测试表明，现有顶尖定位算法在简单环境过拟合，在Boreas-RT上性能显著下降，凸显该数据集对多模态自动驾驶算法鲁棒性评估的价值。",
-      "summaryEn": "The Boreas Road Trip (Boreas-RT) dataset extends the multi-season Boreas dataset with 60 sequences across 9 challenging real-world routes totaling 643 km, featuring repeated traversals under varying traffic and weather. Equipped with multi-sensor suite—including FMCW LiDAR, Doppler radar, and high-res cameras—and centimeter-accurate GNSS-INS ground truth, it provides precise calibration and a dev kit. Benchmarks reveal that state-of-the-art odometry/localization methods overfit to simple environments and degrade significantly on Boreas-RT, highlighting its value for robust multimodal autonomous driving evaluation.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "Benchmark"
-      ],
-      "paperCategory": "Robotics",
-      "signalReasons": [
-        "来源：arXiv",
-        "跨源重复：1 个来源",
-        "模型评分：8/10，理由：发布大规模多季节、多路况自动驾驶数据集Boreas-RT，填补复杂道路场景数据空白，对全球自动驾驶研发具有关键推动作用。",
-        "热度：10 / 评论 0"
-      ],
-      "score": 8.0,
-      "publishedAt": "2026-02-18T20:53:59+00:00",
-      "authors": [
-        "Daniil Lisus",
-        "Katya M. Papais",
-        "Cedric Le Gentil"
-      ]
-    },
-    {
-      "id": "arxiv_2602_16825v1",
-      "title": "RRT$^η$: Sampling-based Motion Planning and Control from STL Specifications using Arithmetic-Geometric Mean Robustness",
-      "titleZh": "RRT$^η$: Sampling-based Motion Planning and Control from STL Specifications using Arithmetic-Geometric Mean Robustness",
-      "titleEn": "RRT$^η$: Sampling-based Motion Planning and Control from STL Specifications using Arithmetic-Geometric Mean Robustness",
-      "url": "https://arxiv.org/abs/2602.16825v1",
-      "type": "paper",
-      "source": "arXiv",
-      "summary": "为克服传统信号时序逻辑（STL）规划中min-max鲁棒性导致的非光滑优化问题，研究者提出RRT^η框架，引入算术-几何平均（AGM）鲁棒性度量，综合所有时间点与子公式满足度；其贡献包括AGM鲁棒性区间语义、增量监控算法及基于Fulfillment Priority Logic的方向向量，可在保持RRT*概率完备性与渐近最优性的同时，高效生成满足复杂STL规范的高鲁棒性控制序列，在双积分器、单轮车和7自由度机械臂上均优于传统方法。",
-      "summaryZh": "为克服传统信号时序逻辑（STL）规划中min-max鲁棒性导致的非光滑优化问题，研究者提出RRT^η框架，引入算术-几何平均（AGM）鲁棒性度量，综合所有时间点与子公式满足度；其贡献包括AGM鲁棒性区间语义、增量监控算法及基于Fulfillment Priority Logic的方向向量，可在保持RRT*概率完备性与渐近最优性的同时，高效生成满足复杂STL规范的高鲁棒性控制序列，在双积分器、单轮车和7自由度机械臂上均优于传统方法。",
-      "summaryEn": "To overcome the non-smooth optimization landscapes caused by min-max robustness in Signal Temporal Logic (STL) planning, researchers propose RRT^η, which integrates Arithmetic-Geometric Mean (AGM) robustness to evaluate satisfaction across all time points and subformulae. Key contributions include AGM robustness interval semantics, an incremental monitoring algorithm, and Fulfillment Priority Logic-guided direction vectors. The framework synthesizes high-robustness, dynamically feasible trajectories while preserving RRT*’s probabilistic completeness and asymptotic optimality, outperforming baselines on a double integrator, unicycle, and 7-DOF arm.",
-      "fullText": "",
-      "imageUrl": "",
-      "tags": [
-        "LLM",
-        "Robotics",
         "RAG",
         "Reasoning"
       ],
-      "paperCategory": "Robotics",
+      "paperCategory": "General AI",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：基于STL规范的采样运动规划方法引入鲁棒性度量，为安全可控机器人系统提供理论支撑，推动形式化验证在机器人中的应用。",
-        "热度：15 / 评论 0"
+        "模型评分：9/10，理由：提出结构化执行图以系统化整合科学计算工具链，是迈向可复现、可解释科学智能体的关键一步，具有行业变革性。",
+        "热度：19 / 评论 0"
       ],
-      "score": 8.0,
-      "publishedAt": "2026-02-18T19:45:43+00:00",
+      "score": 9.0,
+      "publishedAt": "2026-02-19T23:47:05+00:00",
       "authors": [
-        "Ahmad Ahmad",
-        "Shuo Liu",
-        "Roberto Tron"
+        "Jiaru Bai",
+        "Abdulrahman Aldossary",
+        "Thomas Swanick"
       ]
     },
     {
-      "id": "arxiv_2602_16898v1",
-      "title": "MALLVI: a multi agent framework for integrated generalized robotics manipulation",
-      "titleZh": "MALLVI: a multi agent framework for integrated generalized robotics manipulation",
-      "titleEn": "MALLVI: a multi agent framework for integrated generalized robotics manipulation",
-      "url": "https://arxiv.org/abs/2602.16898v1",
+      "id": "arxiv_2602_18094v1",
+      "title": "OODBench: Out-of-Distribution Benchmark for Large Vision-Language Models",
+      "titleZh": "OODBench: Out-of-Distribution Benchmark for Large Vision-Language Models",
+      "titleEn": "OODBench: Out-of-Distribution Benchmark for Large Vision-Language Models",
+      "url": "https://arxiv.org/abs/2602.18094v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "为提升大语言模型在动态环境中执行机器人操作任务的鲁棒性，研究者提出MALLVi多智能体框架，通过分解器、定位器、思考器与反思器等专用代理协同工作，结合视觉语言模型实现闭环反馈：每步执行后评估环境状态，仅在必要时激活相关代理进行局部修正而非全局重规划；在仿真与真实世界零样本任务中，该方法显著提升泛化能力与成功率。",
-      "summaryZh": "为提升大语言模型在动态环境中执行机器人操作任务的鲁棒性，研究者提出MALLVi多智能体框架，通过分解器、定位器、思考器与反思器等专用代理协同工作，结合视觉语言模型实现闭环反馈：每步执行后评估环境状态，仅在必要时激活相关代理进行局部修正而非全局重规划；在仿真与真实世界零样本任务中，该方法显著提升泛化能力与成功率。",
-      "summaryEn": "To enhance robustness of robotic manipulation with large language models in dynamic environments, researchers propose MALLVi—a multi-agent framework coordinating specialized agents (Decomposer, Localizer, Thinker, Reflector) with vision-language feedback. After each action, a VLM evaluates the environment and triggers targeted recovery by reactivating only relevant agents, avoiding full replanning. Experiments in simulation and real-world zero-shot tasks show improved generalization and higher success rates.",
+      "summary": "针对视觉语言模型（VLMs）在分布外（OOD）数据下表现缺乏有效评估的问题，研究者提出OODBench——一个包含4万条实例级OOD样本对的自动化构建基准，并引入“基础到进阶”提问策略的自动评估指标；实验显示，即使面对常见图像类别，现有VLMs在OODBench上仍显著退化，凸显其在自动驾驶、医疗辅助等安全关键场景中的潜在风险，为未来OOD鲁棒性研究提供数据与方法基础。",
+      "summaryZh": "针对视觉语言模型（VLMs）在分布外（OOD）数据下表现缺乏有效评估的问题，研究者提出OODBench——一个包含4万条实例级OOD样本对的自动化构建基准，并引入“基础到进阶”提问策略的自动评估指标；实验显示，即使面对常见图像类别，现有VLMs在OODBench上仍显著退化，凸显其在自动驾驶、医疗辅助等安全关键场景中的潜在风险，为未来OOD鲁棒性研究提供数据与方法基础。",
+      "summaryEn": "Addressing the lack of comprehensive benchmarks for out-of-distribution (OOD) robustness in Vision-Language Models (VLMs), researchers introduce OODBench—a largely automated benchmark containing 40K instance-level OOD pairs—and propose a Basic-to-Advanced Progression prompting metric for granular difficulty assessment. Experiments reveal significant performance degradation in current VLMs even on common categories, highlighting safety risks in real-world applications like autonomous driving and medical assistance, and providing a foundation for future OOD research.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "LLM",
         "Vision",
         "Multimodal",
-        "Agent"
+        "Research"
       ],
-      "paperCategory": "Robotics",
+      "paperCategory": "Computer Vision",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：7/10，理由：提出多智能体框架用于通用机器人操作，结合LLM与环境反馈，具备显著技术推进性，可能推动具身AI发展。",
-        "热度：20 / 评论 0"
+        "模型评分：9/10，理由：OODBench针对视觉语言模型在真实世界分布外场景下的鲁棒性评估，填补关键评测空白，将影响下一代VLM的安全性设计。",
+        "热度：16 / 评论 0"
       ],
-      "score": 7.0,
-      "publishedAt": "2026-02-18T21:28:56+00:00",
+      "score": 9.0,
+      "publishedAt": "2026-02-20T09:34:21+00:00",
       "authors": [
-        "Iman Ahmadi",
-        "Mehrshad Taji",
-        "Arad Mahdinezhad Kashani"
+        "Ling Lin",
+        "Yang Bai",
+        "Heng Su"
       ]
     },
     {
-      "id": "arxiv_2602_16764v1",
-      "title": "Machine Learning Argument of Latitude Error Model for LEO Satellite Orbit and Covariance Correction",
-      "titleZh": "Machine Learning Argument of Latitude Error Model for LEO Satellite Orbit and Covariance Correction",
-      "titleEn": "Machine Learning Argument of Latitude Error Model for LEO Satellite Orbit and Covariance Correction",
-      "url": "https://arxiv.org/abs/2602.16764v1",
+      "id": "arxiv_2602_17753v1",
+      "title": "The 2025 AI Agent Index: Documenting Technical and Safety Features of Deployed Agentic AI Systems",
+      "titleZh": "The 2025 AI Agent Index: Documenting Technical and Safety Features of Deployed Agentic AI Systems",
+      "titleEn": "The 2025 AI Agent Index: Documenting Technical and Safety Features of Deployed Agentic AI Systems",
+      "url": "https://arxiv.org/abs/2602.17753v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "针对低轨（LEO）卫星轨道传播中因大气阻力建模误差导致的纬度幅角不确定性非高斯化问题，研究提出一种机器学习方法，利用时间条件神经网络或高斯过程，基于单一时历的矢量协方差消息（VCM）和反向传播误差，预测纬度幅角误差的高斯分布；该一维修正模型有效捕捉了阻力误建模的影响，并将其映射至笛卡尔状态空间，仅在主导误差增长方向更新均值与协方差，其余维度保留物理传播的VCM协方差结构，从而在不修改现有传播器的前提下显著延长VCM星历的有效使用时长。",
-      "summaryZh": "针对低轨（LEO）卫星轨道传播中因大气阻力建模误差导致的纬度幅角不确定性非高斯化问题，研究提出一种机器学习方法，利用时间条件神经网络或高斯过程，基于单一时历的矢量协方差消息（VCM）和反向传播误差，预测纬度幅角误差的高斯分布；该一维修正模型有效捕捉了阻力误建模的影响，并将其映射至笛卡尔状态空间，仅在主导误差增长方向更新均值与协方差，其余维度保留物理传播的VCM协方差结构，从而在不修改现有传播器的前提下显著延长VCM星历的有效使用时长。",
-      "summaryEn": "To address non-Gaussian uncertainty in Low Earth Orbit (LEO) satellite propagation caused by atmospheric drag mismodeling, this paper proposes a machine learning approach that uses either a time-conditioned neural network or Gaussian Process to predict the argument of latitude error as a Gaussian distribution, given parameters from a single Vector Covariance Message (VCM) epoch and reverse propagation errors. The one-dimensional correction model effectively captures drag-induced errors and maps them into Cartesian state space, updating only the dominant error growth dimensions while preserving physics-based VCM covariance propagation elsewhere—extending VCM ephemeris usability over longer horizons without altering the existing propagator.",
+      "summary": "为应对智能体AI系统快速发展但透明度不足的挑战，研究者发布《2025 AI Agent Index》，基于公开信息与开发者沟通，系统记录30个前沿AI智能体的来源、设计、能力、生态及安全特性；分析发现开发者在安全、评估和社会影响方面信息披露普遍不足，且透明度差异显著，该指数为研究人员与政策制定者提供首个综合性追踪工具，推动负责任的智能体发展。",
+      "summaryZh": "为应对智能体AI系统快速发展但透明度不足的挑战，研究者发布《2025 AI Agent Index》，基于公开信息与开发者沟通，系统记录30个前沿AI智能体的来源、设计、能力、生态及安全特性；分析发现开发者在安全、评估和社会影响方面信息披露普遍不足，且透明度差异显著，该指数为研究人员与政策制定者提供首个综合性追踪工具，推动负责任的智能体发展。",
+      "summaryEn": "To address the opacity of rapidly evolving agentic AI systems, researchers release the 2025 AI Agent Index, documenting origins, design, capabilities, ecosystems, and safety features of 30 state-of-the-art agents through public data and developer correspondence. The analysis reveals widespread lack of transparency—especially regarding safety, evaluations, and societal impacts—and significant variation among developers, offering policymakers and researchers a foundational resource for responsible oversight.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
-        "3D",
-        "RAG",
-        "Open Source"
+        "Agent",
+        "Research",
+        "Benchmark"
       ],
-      "paperCategory": "Robotics",
+      "paperCategory": "General AI",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：7/10，理由：针对LEO卫星轨道误差建模与协方差修正，对下一代非GNSS定位系统发展具有重要意义，影响未来空间导航基础设施。",
-        "热度：9 / 评论 0"
+        "模型评分：9/10，理由：发布首个部署级AI代理索引，系统化追踪全球agentic AI进展，为监管、安全与技术演进提供关键基础设施。",
+        "热度：11 / 评论 0"
       ],
-      "score": 7.0,
-      "publishedAt": "2026-02-18T17:23:14+00:00",
+      "score": 9.0,
+      "publishedAt": "2026-02-19T18:57:43+00:00",
       "authors": [
-        "Alex Moody",
-        "Penina Axelrad",
-        "Rebecca Russell"
+        "Leon Staufer",
+        "Kevin Feng",
+        "Kevin Wei"
       ]
     },
     {
-      "id": "arxiv_2602_17393v1",
-      "title": "Contact-Anchored Proprioceptive Odometry for Quadruped Robots",
-      "titleZh": "Contact-Anchored Proprioceptive Odometry for Quadruped Robots",
-      "titleEn": "Contact-Anchored Proprioceptive Odometry for Quadruped Robots",
-      "url": "https://arxiv.org/abs/2602.17393v1",
+      "id": "arxiv_2602_17875v1",
+      "title": "MultiVer: Zero-Shot Multi-Agent Vulnerability Detection",
+      "titleZh": "MultiVer: Zero-Shot Multi-Agent Vulnerability Detection",
+      "titleEn": "MultiVer: Zero-Shot Multi-Agent Vulnerability Detection",
+      "url": "https://arxiv.org/abs/2602.17875v1",
       "type": "paper",
       "source": "arXiv",
-      "summary": "为解决无视觉传感器的四足机器人因IMU漂移和关节速度噪声导致的里程计不可靠问题，研究提出一种纯本体感知的状态估计算法，仅依赖IMU与电机测量数据，将接触腿视为运动学锚点：通过关节力矩估计足端 wrench 以筛选可靠接触，并利用足落地点提供世界坐标系下的间歇约束以抑制长期漂移；同时引入轻量级高度聚类与时衰校正机制防止高程漂移，并采用逆运动学立方卡尔曼滤波直接从关节角度与速度中滤出足端速度；该方法在四款四足机器人上验证，在200米水平环路中定位误差低至0.16米，垂直环路误差低于0.22米，且支持轮腿混合平台，具备良好的退化鲁棒性。",
-      "summaryZh": "为解决无视觉传感器的四足机器人因IMU漂移和关节速度噪声导致的里程计不可靠问题，研究提出一种纯本体感知的状态估计算法，仅依赖IMU与电机测量数据，将接触腿视为运动学锚点：通过关节力矩估计足端 wrench 以筛选可靠接触，并利用足落地点提供世界坐标系下的间歇约束以抑制长期漂移；同时引入轻量级高度聚类与时衰校正机制防止高程漂移，并采用逆运动学立方卡尔曼滤波直接从关节角度与速度中滤出足端速度；该方法在四款四足机器人上验证，在200米水平环路中定位误差低至0.16米，垂直环路误差低于0.22米，且支持轮腿混合平台，具备良好的退化鲁棒性。",
-      "summaryEn": "Addressing unreliable odometry in legged robots without cameras or LiDAR due to IMU drift and noisy joint velocity sensing, this paper presents a purely proprioceptive state estimator using only IMU and motor measurements. It treats contacting legs as kinematic anchors: joint-torque–based foot wrench estimation selects reliable contacts, and footfall positions provide intermittent world-frame constraints to suppress long-term drift. A lightweight height clustering and time-decay correction prevents elevation drift, while an inverse-kinematics cubature Kalman filter directly estimates foot-end velocities from joint angles and velocities. Evaluated on four quadruped platforms—including point-foot and wheel-legged variants—the method achieves as low as 0.16 m error on a ~200 m horizontal loop and under 0.22 m on vertical loops, with graceful degradation when IMU yaw is unreliable.",
+      "summary": "研究者提出MultiVer——一个无需微调的零样本多智能体漏洞检测系统，通过安全、正确性、性能、风格四类智能体集成与联合投票，在PyVul基准上达到82.7%召回率，首次超越微调版GPT-3.5（81.3%）；尽管精度较低（48.8% vs 63.9%），但在安全场景中，其高召回优势使F1达61.4%，消融实验证明多智能体架构比单智能体提升17个百分点召回率，表明零样本集成可在关键指标上匹配甚至超越微调模型。",
+      "summaryZh": "研究者提出MultiVer——一个无需微调的零样本多智能体漏洞检测系统，通过安全、正确性、性能、风格四类智能体集成与联合投票，在PyVul基准上达到82.7%召回率，首次超越微调版GPT-3.5（81.3%）；尽管精度较低（48.8% vs 63.9%），但在安全场景中，其高召回优势使F1达61.4%，消融实验证明多智能体架构比单智能体提升17个百分点召回率，表明零样本集成可在关键指标上匹配甚至超越微调模型。",
+      "summaryEn": "Researchers present MultiVer, a zero-shot multi-agent vulnerability detection system that achieves 82.7% recall on PyVul—surpassing fine-tuned GPT-3.5 (81.3%)—through an ensemble of four specialized agents (security, correctness, performance, style) with union voting. Despite lower precision (48.8% vs. 63.9%), its high recall yields a 61.4% F1 score, and ablation studies show the multi-agent design adds 17 percentage points over single-agent analysis, demonstrating that zero-shot ensembles can exceed fine-tuned models on critical metrics where false negatives are costlier than false positives.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Agent",
+        "Training",
+        "Benchmark"
+      ],
+      "paperCategory": "General AI",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：MultiVer实现零样本多智能体漏洞检测，性能超越微调模型，代表AI安全领域重大突破，具备全球产业影响力。",
+        "热度：12 / 评论 0"
+      ],
+      "score": 9.0,
+      "publishedAt": "2026-02-19T22:20:17+00:00",
+      "authors": [
+        "Shreshth Rajan"
+      ]
+    },
+    {
+      "id": "arxiv_2602_17675v1",
+      "title": "Mind the Boundary: Stabilizing Gemini Enterprise A2A via a Cloud Run Hub Across Projects and Accounts",
+      "titleZh": "Mind the Boundary: Stabilizing Gemini Enterprise A2A via a Cloud Run Hub Across Projects and Accounts",
+      "titleEn": "Mind the Boundary: Stabilizing Gemini Enterprise A2A via a Cloud Run Hub Across Projects and Accounts",
+      "url": "https://arxiv.org/abs/2602.17675v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "为实现企业级Gemini智能体跨项目与账户的安全互操作，研究者在Cloud Run上构建A2A Hub协调器，支持路由至不同项目/账户中的智能体、结合Discovery Engine与Vertex AI Search的检索增强路径，以及通用问答路径；通过强制JSON-RPC端点采用纯文本兼容模式并分离结构化输出至REST API，解决了Gemini UI因混合结构数据导致的渲染错误，在四类任务（如费用政策查询、事件响应时限提取）上验证了稳定、可复现的交互体验。",
+      "summaryZh": "为实现企业级Gemini智能体跨项目与账户的安全互操作，研究者在Cloud Run上构建A2A Hub协调器，支持路由至不同项目/账户中的智能体、结合Discovery Engine与Vertex AI Search的检索增强路径，以及通用问答路径；通过强制JSON-RPC端点采用纯文本兼容模式并分离结构化输出至REST API，解决了Gemini UI因混合结构数据导致的渲染错误，在四类任务（如费用政策查询、事件响应时限提取）上验证了稳定、可复现的交互体验。",
+      "summaryEn": "To enable secure, cross-project and cross-account interoperability for enterprise Gemini Agent-to-Agent (A2A) systems, researchers implement an A2A Hub orchestrator on Cloud Run that routes queries to four paths: external agents, IAM-protected services, a retrieval-augmented pipeline using Discovery Engine and Vertex AI Search with direct GCS source retrieval, and general QA via Vertex AI. By enforcing a text-only compatibility mode on JSON-RPC and offloading structured outputs to a REST API, they resolve UI errors caused by mixed response formats, demonstrating stable, deterministic responses across expense policy, project management, and incident deadline extraction tasks.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Agent",
+        "Training",
+        "RAG"
+      ],
+      "paperCategory": "General AI",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：基于Gemini Enterprise构建跨项目/账户的A2A枢纽，解决企业级智能体协同核心痛点，是大型企业AI架构的关键突破。",
+        "热度：15 / 评论 0"
+      ],
+      "score": 9.0,
+      "publishedAt": "2026-01-26T13:11:41+00:00",
+      "authors": [
+        "Takao Morita"
+      ]
+    },
+    {
+      "id": "arxiv_2602_18164v1",
+      "title": "GrandTour: A Legged Robotics Dataset in the Wild for Multi-Modal Perception and State Estimation",
+      "titleZh": "GrandTour: A Legged Robotics Dataset in the Wild for Multi-Modal Perception and State Estimation",
+      "titleEn": "GrandTour: A Legged Robotics Dataset in the Wild for Multi-Modal Perception and State Estimation",
+      "url": "https://arxiv.org/abs/2602.18164v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "为推动足式机器人在复杂真实环境中的状态估计与多模态感知研究，研究者发布GrandTour数据集——目前规模最大的开源足式机器人数据集，涵盖高山、森林、废墟、城市等多样场景，搭载ANYmal-D四足机器人与\boxi多模态传感器套件，提供同步的旋转LiDAR、多视角RGB相机、本体感知、立体深度数据及RTK-GNSS与全站仪提供的高精度轨迹真值，支持SLAM、传感器融合与状态估计算法的严格评估，数据集已在HuggingFace及ROS格式开放。",
+      "summaryZh": "为推动足式机器人在复杂真实环境中的状态估计与多模态感知研究，研究者发布GrandTour数据集——目前规模最大的开源足式机器人数据集，涵盖高山、森林、废墟、城市等多样场景，搭载ANYmal-D四足机器人与\boxi多模态传感器套件，提供同步的旋转LiDAR、多视角RGB相机、本体感知、立体深度数据及RTK-GNSS与全站仪提供的高精度轨迹真值，支持SLAM、传感器融合与状态估计算法的严格评估，数据集已在HuggingFace及ROS格式开放。",
+      "summaryEn": "To advance state estimation and multi-modal perception for legged robots in real-world environments, researchers release GrandTour—the largest open-access legged robotics dataset to date—collected across alpine, forest, urban, and demolished building sites using an ANYmal-D quadruped equipped with the \boxi multi-modal sensor suite. It provides time-synchronized data from spinning LiDARs, multiple RGB cameras, proprioceptive sensors, stereo depth cameras, and high-precision ground-truth trajectories from RTK-GNSS and a Leica total station, enabling rigorous benchmarking of SLAM, sensor fusion, and state estimation algorithms. The dataset is available on HuggingFace and in ROS formats.",
       "fullText": "",
       "imageUrl": "",
       "tags": [
         "Robotics",
-        "Inference",
         "Research",
-        "Open Source"
+        "Open Source",
+        "Benchmark"
       ],
       "paperCategory": "Robotics",
       "signalReasons": [
         "来源：arXiv",
         "跨源重复：1 个来源",
-        "模型评分：7/10，理由：实现无视觉传感器的四足机器人本体感知里程计，突破腿式机器人在复杂环境下的定位瓶颈，推动自主移动平台发展。",
-        "热度：8 / 评论 0"
+        "模型评分：9/10，理由：发布首个真实世界多模态感知与状态估计的足式机器人数据集，填补领域空白，将极大推动自主机器人发展。",
+        "热度：14 / 评论 0"
       ],
-      "score": 7.0,
-      "publishedAt": "2026-02-19T14:18:26+00:00",
+      "score": 9.0,
+      "publishedAt": "2026-02-20T11:57:52+00:00",
       "authors": [
-        "Minxing Sun",
-        "Yao Mao"
+        "Jonas Frey",
+        "Turcan Tuna",
+        "Frank Fu"
+      ]
+    },
+    {
+      "id": "arxiv_2602_18174v1",
+      "title": "Have We Mastered Scale in Deep Monocular Visual SLAM? The ScaleMaster Dataset and Benchmark",
+      "titleZh": "Have We Mastered Scale in Deep Monocular Visual SLAM? The ScaleMaster Dataset and Benchmark",
+      "titleEn": "Have We Mastered Scale in Deep Monocular Visual SLAM? The ScaleMaster Dataset and Benchmark",
+      "url": "https://arxiv.org/abs/2602.18174v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "针对当前深度单目视觉SLAM系统在大规模室内环境中存在尺度不一致问题，研究者提出了首个专门评估尺度一致性的基准数据集ScaleMaster，涵盖多楼层、长轨迹、重复视角和低纹理等挑战场景；通过引入基于Chamfer距离的地图对地图质量评估方法，发现现有先进系统虽在传统小规模基准上表现良好，但在真实大尺度环境中仍存在严重尺度漂移与模糊问题，该工作为开发可靠、尺度一致的视觉SLAM系统提供了新基础。",
+      "summaryZh": "针对当前深度单目视觉SLAM系统在大规模室内环境中存在尺度不一致问题，研究者提出了首个专门评估尺度一致性的基准数据集ScaleMaster，涵盖多楼层、长轨迹、重复视角和低纹理等挑战场景；通过引入基于Chamfer距离的地图对地图质量评估方法，发现现有先进系统虽在传统小规模基准上表现良好，但在真实大尺度环境中仍存在严重尺度漂移与模糊问题，该工作为开发可靠、尺度一致的视觉SLAM系统提供了新基础。",
+      "summaryEn": "Addressing the overlooked issue of scale inconsistency in deep monocular visual SLAM within large-scale indoor environments, researchers introduce ScaleMaster—the first benchmark explicitly designed for evaluating scale consistency under challenging conditions such as multi-floor layouts, long trajectories, repetitive views, and low-texture regions. By extending evaluation beyond trajectory metrics to direct map-to-map quality assessment using Chamfer distance against high-fidelity 3D ground truth, they reveal that state-of-the-art systems, while strong on existing room-scale benchmarks, suffer severe scale drift and ambiguity in realistic settings. The release of ScaleMaster and baseline results establishes a foundation for future development of scale-consistent and reliable visual SLAM systems.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "3D",
+        "Research",
+        "Benchmark"
+      ],
+      "paperCategory": "Robotics",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：构建首个大规模深单目SLAM尺度一致性基准数据集，解决长期未被重视的关键问题，将重塑该领域评估标准。",
+        "热度：13 / 评论 0"
+      ],
+      "score": 9.0,
+      "publishedAt": "2026-02-20T12:23:46+00:00",
+      "authors": [
+        "Hyoseok Ju",
+        "Bokeon Suh",
+        "Giseop Kim"
+      ]
+    },
+    {
+      "id": "arxiv_2602_18374v1",
+      "title": "Zero-shot Interactive Perception",
+      "titleZh": "Zero-shot Interactive Perception",
+      "titleEn": "Zero-shot Interactive Perception",
+      "url": "https://arxiv.org/abs/2602.18374v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "为提升机器人在部分可观测环境中的感知能力，研究者提出零样本交互感知框架ZS-IP，通过结合推/抓多策略操作与记忆驱动的视觉语言模型（VLM），利用新型2D视觉增强“推线”（pushlines）捕捉接触动作的可操作性，并通过上下文记忆引导语义推理；在Franka Panda机械臂上的实验表明，该方法在遮挡复杂场景中显著优于被动感知和基于视点的方法，尤其在推动物体任务中表现突出，同时能保护非目标物体不受干扰。",
+      "summaryZh": "为提升机器人在部分可观测环境中的感知能力，研究者提出零样本交互感知框架ZS-IP，通过结合推/抓多策略操作与记忆驱动的视觉语言模型（VLM），利用新型2D视觉增强“推线”（pushlines）捕捉接触动作的可操作性，并通过上下文记忆引导语义推理；在Franka Panda机械臂上的实验表明，该方法在遮挡复杂场景中显著优于被动感知和基于视点的方法，尤其在推动物体任务中表现突出，同时能保护非目标物体不受干扰。",
+      "summaryEn": "To enhance robotic perception in partially observable environments, researchers propose Zero-Shot Interactive Perception (ZS-IP), a framework coupling multi-strategy manipulation (pushing and grasping) with a memory-driven Vision Language Model (VLM). It introduces 'pushlines'—a novel 2D visual augmentation tailored for contact-rich pushing actions—and uses context-aware memory to guide semantic reasoning. Evaluated on a 7-DOF Franka Panda arm across diverse occluded scenes, ZS-IP significantly outperforms passive and viewpoint-based perception methods like MOKA, especially in pushing tasks, while preserving non-target object integrity.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Vision",
+        "Multimodal",
+        "Robotics"
+      ],
+      "paperCategory": "Robotics",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：零样本交互感知为机器人在复杂环境中的自主决策提供新范式，推动具身智能发展，具备行业级应用潜力。",
+        "热度：16 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-20T17:30:25+00:00",
+      "authors": [
+        "Venkatesh Sripada",
+        "Frank Guerin",
+        "Amir Ghalamzan"
+      ]
+    },
+    {
+      "id": "arxiv_2602_18322v1",
+      "title": "Unifying Color and Lightness Correction with View-Adaptive Curve Adjustment for Robust 3D Novel View Synthesis",
+      "titleZh": "Unifying Color and Lightness Correction with View-Adaptive Curve Adjustment for Robust 3D Novel View Synthesis",
+      "titleEn": "Unifying Color and Lightness Correction with View-Adaptive Curve Adjustment for Robust 3D Novel View Synthesis",
+      "url": "https://arxiv.org/abs/2602.18322v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "针对多视角图像因光照变化、传感器响应差异和ISP配置不同导致的光度与色度不一致问题，研究者提出Luminance-GS++框架，在3D Gaussian Splatting基础上引入全局视角自适应亮度调整与局部像素级残差修正，并设计无监督目标联合优化亮度校正与多视角几何-光度一致性；实验表明该方法在低光、过曝及复杂明暗色彩变化场景下实现SOTA性能，且不修改原始3DGS结构，保持实时渲染效率的同时提升重建保真度。",
+      "summaryZh": "针对多视角图像因光照变化、传感器响应差异和ISP配置不同导致的光度与色度不一致问题，研究者提出Luminance-GS++框架，在3D Gaussian Splatting基础上引入全局视角自适应亮度调整与局部像素级残差修正，并设计无监督目标联合优化亮度校正与多视角几何-光度一致性；实验表明该方法在低光、过曝及复杂明暗色彩变化场景下实现SOTA性能，且不修改原始3DGS结构，保持实时渲染效率的同时提升重建保真度。",
+      "summaryEn": "To address photometric and chromatic inconsistencies in multi-view capture caused by varying illumination, sensor responses, and ISP configurations—which degrade modern 3D novel view synthesis (NVS)—researchers propose Luminance-GS++, a 3D Gaussian Splatting (3DGS)-based framework featuring globally view-adaptive lightness adjustment and local pixel-wise residual refinement. Unsupervised objectives jointly enforce lightness correction and multi-view geometric-photometric consistency. Experiments show state-of-the-art performance under challenging conditions like low-light, overexposure, and complex luminance/chromatic variations, all while preserving the explicit 3DGS formulation for real-time rendering efficiency and improved reconstruction fidelity.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Vision",
+        "3D"
+      ],
+      "paperCategory": "Computer Vision",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：统一色彩与亮度校正的视图自适应曲线调整方法，显著提升多视角合成图像的物理一致性，对高质量3D生成具关键支撑作用。",
+        "热度：11 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-20T16:20:50+00:00",
+      "authors": [
+        "Ziteng Cui",
+        "Shuhong Liu",
+        "Xiaoyu Dong"
+      ]
+    },
+    {
+      "id": "arxiv_2602_18199v1",
+      "title": "A Self-Supervised Approach on Motion Calibration for Enhancing Physical Plausibility in Text-to-Motion",
+      "titleZh": "A Self-Supervised Approach on Motion Calibration for Enhancing Physical Plausibility in Text-to-Motion",
+      "titleEn": "A Self-Supervised Approach on Motion Calibration for Enhancing Physical Plausibility in Text-to-Motion",
+      "url": "https://arxiv.org/abs/2602.18199v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "为解决文本生成人体动作中物理不合理（如脚部漂浮）的问题，研究者提出自监督的Distortion-aware Motion Calibrator（DMC）后处理模块，通过输入故意失真的动作与原始文本描述，学习恢复物理合理且语义一致的动作；实验显示DMC可通用于多种文本到动作模型，在T2M和T2M-GPT上分别降低FID达42.74%和13.20%，并提升R-Precision，应用于MoMask时还能减少33%的穿透现象并将漂浮伪影校正至接近真实参考，证明其作为通用动作精炼框架的有效性。",
+      "summaryZh": "为解决文本生成人体动作中物理不合理（如脚部漂浮）的问题，研究者提出自监督的Distortion-aware Motion Calibrator（DMC）后处理模块，通过输入故意失真的动作与原始文本描述，学习恢复物理合理且语义一致的动作；实验显示DMC可通用于多种文本到动作模型，在T2M和T2M-GPT上分别降低FID达42.74%和13.20%，并提升R-Precision，应用于MoMask时还能减少33%的穿透现象并将漂浮伪影校正至接近真实参考，证明其作为通用动作精炼框架的有效性。",
+      "summaryEn": "To address physically implausible motions (e.g., foot floating) in text-to-motion generation, researchers introduce the Distortion-aware Motion Calibrator (DMC), a self-supervised post-hoc module that refines motion by learning from intentionally distorted inputs paired with original text descriptions. Evaluated across multiple text-to-motion models, DMC reduces FID by 42.74% on T2M and 13.20% on T2M-GPT while achieving the highest R-Precision. When applied to MoMask, it cuts penetration by 33% and corrects floating artifacts toward ground-truth references, demonstrating its effectiveness as a general-purpose motion refinement framework that preserves semantic alignment while enhancing physical plausibility.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Research"
+      ],
+      "paperCategory": "Computer Vision",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：提出畸变感知运动校准模块，有效提升文本到动作生成的物理合理性，对虚拟人、游戏与动画产业具有重要实践价值。",
+        "热度：6 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-20T13:17:06+00:00",
+      "authors": [
+        "Gahyeon Shim",
+        "Soogeun Park",
+        "Hyemin Ahn"
+      ]
+    },
+    {
+      "id": "arxiv_2602_18064v1",
+      "title": "3DMedAgent: Unified Perception-to-Understanding for 3D Medical Analysis",
+      "titleZh": "3DMedAgent: Unified Perception-to-Understanding for 3D Medical Analysis",
+      "titleEn": "3DMedAgent: Unified Perception-to-Understanding for 3D Medical Analysis",
+      "url": "https://arxiv.org/abs/2602.18064v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "针对现有2D多模态大语言模型（MLLM）难以处理3D医学CT数据的问题，研究者提出3DMedAgent框架，通过协调异构工具将复杂3D分析任务分解为从全局到局部、从3D体数据到关键2D切片的多步子任务，并利用结构化长期记忆支持证据驱动的推理；在包含40余项任务的DeepChestVQA基准上，该方法显著优于通用、医学专用及3D定制MLLM，为构建无需3D微调的通用3D临床辅助系统提供了可行路径。",
+      "summaryZh": "针对现有2D多模态大语言模型（MLLM）难以处理3D医学CT数据的问题，研究者提出3DMedAgent框架，通过协调异构工具将复杂3D分析任务分解为从全局到局部、从3D体数据到关键2D切片的多步子任务，并利用结构化长期记忆支持证据驱动的推理；在包含40余项任务的DeepChestVQA基准上，该方法显著优于通用、医学专用及3D定制MLLM，为构建无需3D微调的通用3D临床辅助系统提供了可行路径。",
+      "summaryEn": "To overcome the limitation of 2D-oriented multimodal large language models (MLLMs) in analyzing volumetric 3D medical CT data, researchers propose 3DMedAgent—a unified agent that enables 2D MLLMs to perform general 3D CT analysis without 3D-specific fine-tuning. It decomposes complex 3D tasks into tractable subtasks progressing from global to regional views and from 3D volumes to informative 2D slices, supported by a structured long-term memory for evidence-driven reasoning. Evaluated on the new DeepChestVQA benchmark across over 40 tasks, 3DMedAgent consistently outperforms general, medical, and 3D-specialized MLLMs, offering a scalable path toward general-purpose 3D clinical assistants.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "LLM",
+        "Multimodal",
+        "Agent",
+        "3D"
+      ],
+      "paperCategory": "Computer Vision",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：构建从感知到理解的统一3D医学分析范式，突破现有任务孤立模型局限，对医学AI系统化发展有重要推动作用。",
+        "热度：16 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-20T08:31:26+00:00",
+      "authors": [
+        "Ziyue Wang",
+        "Linghan Cai",
+        "Chang Han Low"
+      ]
+    },
+    {
+      "id": "arxiv_2602_18006v1",
+      "title": "MUOT_3M: A 3 Million Frame Multimodal Underwater Benchmark and the MUTrack Tracking Method",
+      "titleZh": "MUOT_3M: A 3 Million Frame Multimodal Underwater Benchmark and the MUTrack Tracking Method",
+      "titleEn": "MUOT_3M: A 3 Million Frame Multimodal Underwater Benchmark and the MUTrack Tracking Method",
+      "url": "https://arxiv.org/abs/2602.18006v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "为推动水下目标跟踪研究，研究者发布了首个含300万帧的多模态水下基准MUOT_3M，涵盖3,030段视频（27.8小时），标注32项跟踪属性、677个细粒度类别，并提供RGB、增强RGB、估计深度及语言模态；基于此，他们提出MUTrack跟踪器，采用SAM架构融合视觉-几何对齐与视觉-语言信息，并通过四级知识蒸馏将多模态知识迁移到单模态学生模型，在五个基准上AUC最高提升8.40%、精度提升7.80%，且运行达24 FPS，为实际部署提供高效解决方案。",
+      "summaryZh": "为推动水下目标跟踪研究，研究者发布了首个含300万帧的多模态水下基准MUOT_3M，涵盖3,030段视频（27.8小时），标注32项跟踪属性、677个细粒度类别，并提供RGB、增强RGB、估计深度及语言模态；基于此，他们提出MUTrack跟踪器，采用SAM架构融合视觉-几何对齐与视觉-语言信息，并通过四级知识蒸馏将多模态知识迁移到单模态学生模型，在五个基准上AUC最高提升8.40%、精度提升7.80%，且运行达24 FPS，为实际部署提供高效解决方案。",
+      "summaryEn": "To advance underwater object tracking (UOT), researchers release MUOT_3M—the first pseudo-multimodal UOT benchmark with 3 million frames from 3,030 videos (27.8 hours), annotated with 32 tracking attributes, 677 fine-grained classes, and synchronized RGB, enhanced RGB, estimated depth, and language modalities validated by marine biologists. Building on it, they propose MUTrack, a SAM-based tracker featuring visual-geometric alignment, vision-language fusion, and four-level knowledge distillation to transfer multimodal knowledge into a unimodal student model. Evaluated across five UOT benchmarks, MUTrack achieves up to 8.40% higher AUC and 7.80% higher precision than SOTA baselines at 24 FPS, enabling scalable yet deployable underwater tracking.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Vision",
+        "Multimodal",
+        "Robotics",
+        "Benchmark"
+      ],
+      "paperCategory": "Computer Vision",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：发布首个百万级多模态水下基准数据集及跟踪方法，极大推动海洋机器人与生态监测领域的AI发展，具备行业变革潜力。",
+        "热度：15 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-20T05:43:47+00:00",
+      "authors": [
+        "Ahsan Baidar Bakht",
+        "Mohamad Alansari",
+        "Muhayy Ud Din"
+      ]
+    },
+    {
+      "id": "arxiv_2602_18428v1",
+      "title": "The Geometry of Noise: Why Diffusion Models Don't Need Noise Conditioning",
+      "titleZh": "The Geometry of Noise: Why Diffusion Models Don't Need Noise Conditioning",
+      "titleEn": "The Geometry of Noise: Why Diffusion Models Don't Need Noise Conditioning",
+      "url": "https://arxiv.org/abs/2602.18428v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "针对无需噪声条件的自主扩散模型为何能稳定生成数据这一悖论，研究者提出“边际能量”概念，证明此类模型实则在该能量场的黎曼梯度流下运作；通过相对能量分解，揭示网络隐式学习局部共形度量以抵消数据流形法向的奇异性，将无限深势阱转化为稳定吸引子；同时指出噪声预测参数化存在“Jensen Gap”会放大误差导致失败，而速度参数化因满足有界增益条件而天然稳定，为理解无条件扩散机制提供了几何理论基础。",
+      "summaryZh": "针对无需噪声条件的自主扩散模型为何能稳定生成数据这一悖论，研究者提出“边际能量”概念，证明此类模型实则在该能量场的黎曼梯度流下运作；通过相对能量分解，揭示网络隐式学习局部共形度量以抵消数据流形法向的奇异性，将无限深势阱转化为稳定吸引子；同时指出噪声预测参数化存在“Jensen Gap”会放大误差导致失败，而速度参数化因满足有界增益条件而天然稳定，为理解无条件扩散机制提供了几何理论基础。",
+      "summaryEn": "Addressing the paradox of how autonomous (noise-agnostic) diffusion models generate stable samples without explicit noise conditioning, researchers formalize 'Marginal Energy'—the log-density of noisy data marginalized over unknown noise levels—and prove that generation follows a Riemannian gradient flow on this energy landscape. Through a novel relative energy decomposition, they show that the learned time-invariant vector field implicitly incorporates a local conformal metric that cancels the $1/t^p$ singularity normal to the data manifold, converting an infinitely deep potential well into a stable attractor. They also identify a 'Jensen Gap' in noise-prediction parameterizations that amplifies estimation errors, explaining catastrophic failures in deterministic blind models, while proving velocity-based parameterizations are inherently stable due to a bounded-gain condition that absorbs posterior uncertainty into smooth geometric drift.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Diffusion"
+      ],
+      "paperCategory": "Computer Vision",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：提出无噪声条件的生成模型新范式，挑战扩散模型核心假设，可能推动生成模型架构革新，具有显著技术影响力。",
+        "热度：10 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-20T18:49:00+00:00",
+      "authors": [
+        "Mojtaba Sahraee-Ardakan",
+        "Mauricio Delbracio",
+        "Peyman Milanfar"
+      ]
+    },
+    {
+      "id": "arxiv_2602_17997v1",
+      "title": "Whole-Brain Connectomic Graph Model Enables Whole-Body Locomotion Control in Fruit Fly",
+      "titleZh": "Whole-Brain Connectomic Graph Model Enables Whole-Body Locomotion Control in Fruit Fly",
+      "titleEn": "Whole-Brain Connectomic Graph Model Enables Whole-Body Locomotion Control in Fruit Fly",
+      "url": "https://arxiv.org/abs/2602.17997v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "研究者首次将果蝇成年脑完整连接组直接用作神经控制器，构建Fly-connectomic Graph Model（FlyGM），通过有向消息传递图模拟从感觉输入到运动输出的生物信息流；结合生物力学果蝇模型，该方法在无需任务特定调参的情况下实现多种运动任务的稳定控制，并在样本效率与性能上显著优于度保持重连图、随机图及多层感知机，证明静态脑连接组可直接转化为高效的具身运动控制策略。",
+      "summaryZh": "研究者首次将果蝇成年脑完整连接组直接用作神经控制器，构建Fly-connectomic Graph Model（FlyGM），通过有向消息传递图模拟从感觉输入到运动输出的生物信息流；结合生物力学果蝇模型，该方法在无需任务特定调参的情况下实现多种运动任务的稳定控制，并在样本效率与性能上显著优于度保持重连图、随机图及多层感知机，证明静态脑连接组可直接转化为高效的具身运动控制策略。",
+      "summaryEn": "Researchers present the first use of a complete adult fruit fly brain connectome as a neural controller for whole-body locomotion, developing the Fly-connectomic Graph Model (FlyGM) that encodes the static connectome as a directed message-passing graph to emulate biologically grounded sensory-to-motor information flow. Integrated with a biomechanical fly model, FlyGM achieves stable control across diverse locomotion tasks without task-specific architectural tuning. It outperforms degree-preserving rewired graphs, random graphs, and multilayer perceptrons in both sample efficiency and performance, demonstrating that static brain connectomes can be directly transformed into effective neural policies for embodied movement control.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Robotics"
+      ],
+      "paperCategory": "Robotics",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：首次将果蝇全脑连接组用于全身运动控制建模，开创生物启发式AI新路径，具有深远理论意义。",
+        "热度：9 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-20T05:09:28+00:00",
+      "authors": [
+        "Zehao Jin",
+        "Yaoye Zhu",
+        "Chen Zhang"
+      ]
+    },
+    {
+      "id": "arxiv_2602_18397v1",
+      "title": "How Fast Can I Run My VLA? Demystifying VLA Inference Performance with VLA-Perf",
+      "titleZh": "How Fast Can I Run My VLA? Demystifying VLA Inference Performance with VLA-Perf",
+      "titleEn": "How Fast Can I Run My VLA? Demystifying VLA Inference Performance with VLA-Perf",
+      "url": "https://arxiv.org/abs/2602.18397v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "针对视觉-语言-动作（VLA）模型在真实机器人部署中面临的实时推理挑战，该论文提出了VLA-Perf——一个可分析任意VLA模型与推理系统组合性能的分析模型，并首次系统性地研究了VLA推理性能空间；研究从模型设计角度考察了模型缩放、架构选择、长上下文视频输入、异步推理和双系统流水线的影响，从部署角度分析了设备端、边缘或云端执行的权衡，以及硬件能力和网络性能如何共同决定端到端延迟，最终提炼出15项关键结论，为未来VLA系统设计提供实用指导。",
+      "summaryZh": "针对视觉-语言-动作（VLA）模型在真实机器人部署中面临的实时推理挑战，该论文提出了VLA-Perf——一个可分析任意VLA模型与推理系统组合性能的分析模型，并首次系统性地研究了VLA推理性能空间；研究从模型设计角度考察了模型缩放、架构选择、长上下文视频输入、异步推理和双系统流水线的影响，从部署角度分析了设备端、边缘或云端执行的权衡，以及硬件能力和网络性能如何共同决定端到端延迟，最终提炼出15项关键结论，为未来VLA系统设计提供实用指导。",
+      "summaryEn": "Addressing the real-time inference challenges of Vision-Language-Action (VLA) models in robotic deployment, this paper introduces VLA-Perf—an analytical performance model capable of evaluating arbitrary combinations of VLA architectures and inference systems—and conducts the first systematic study of the VLA inference landscape. From a model-design perspective, it examines the impact of scaling, architectural choices, long-context video inputs, asynchronous inference, and dual-system pipelines. From a deployment view, it analyzes trade-offs between on-device, edge, and cloud execution, showing how hardware capability and network performance jointly determine end-to-end latency. The work distills 15 key takeaways to guide future VLA model and system design.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Vision",
+        "Multimodal",
+        "Robotics",
+        "Inference"
+      ],
+      "paperCategory": "Robotics",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：系统性分析VLA模型推理性能瓶颈并提出评估框架，为具身智能部署提供关键基础设施支持。",
+        "热度：11 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-20T18:02:28+00:00",
+      "authors": [
+        "Wenqi Jiang",
+        "Jason Clemons",
+        "Karu Sankaralingam"
+      ]
+    },
+    {
+      "id": "arxiv_2602_17685v1",
+      "title": "Optimal Multi-Debris Mission Planning in LEO: A Deep Reinforcement Learning Approach with Co-Elliptic Transfers and Refueling",
+      "titleZh": "Optimal Multi-Debris Mission Planning in LEO: A Deep Reinforcement Learning Approach with Co-Elliptic Transfers and Refueling",
+      "titleEn": "Optimal Multi-Debris Mission Planning in LEO: A Deep Reinforcement Learning Approach with Co-Elliptic Transfers and Refueling",
+      "url": "https://arxiv.org/abs/2602.17685v1",
+      "type": "paper",
+      "source": "arXiv",
+      "summary": "该论文提出一种统一的共椭圆轨道机动框架，结合霍曼转移、安全椭圆邻近操作与显式加油逻辑，用于低地球轨道（LEO）多目标主动碎片清除（ADR）任务；在包含随机碎片场、禁飞区和Δv约束的仿真环境中，对比贪心启发式、蒙特卡洛树搜索（MCTS）和基于掩码PPO的深度强化学习算法，实验表明Masked PPO在100个测试场景中显著优于其他方法，访问的碎片数量最高达贪心算法的两倍，且运行速度远快于MCTS，证明现代强化学习可实现高效、安全、可扩展的空间任务规划。",
+      "summaryZh": "该论文提出一种统一的共椭圆轨道机动框架，结合霍曼转移、安全椭圆邻近操作与显式加油逻辑，用于低地球轨道（LEO）多目标主动碎片清除（ADR）任务；在包含随机碎片场、禁飞区和Δv约束的仿真环境中，对比贪心启发式、蒙特卡洛树搜索（MCTS）和基于掩码PPO的深度强化学习算法，实验表明Masked PPO在100个测试场景中显著优于其他方法，访问的碎片数量最高达贪心算法的两倍，且运行速度远快于MCTS，证明现代强化学习可实现高效、安全、可扩展的空间任务规划。",
+      "summaryEn": "This paper proposes a unified co-elliptic maneuver framework integrating Hohmann transfers, safety ellipse proximity operations, and explicit refueling logic for multi-target active debris removal (ADR) in Low Earth Orbit (LEO). Benchmarking Greedy heuristics, Monte Carlo Tree Search (MCTS), and Masked Proximal Policy Optimization (PPO) in a realistic orbital simulator with randomized debris fields, keep-out zones, and delta-V constraints, experiments across 100 scenarios show Masked PPO visits up to twice as many debris objects as Greedy and significantly outperforms MCTS in runtime, demonstrating that modern deep reinforcement learning enables scalable, safe, and resource-efficient space mission planning.",
+      "fullText": "",
+      "imageUrl": "",
+      "tags": [
+        "Research",
+        "Benchmark"
+      ],
+      "paperCategory": "Robotics",
+      "signalReasons": [
+        "来源：arXiv",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：提出基于深度强化学习的低地球轨道多目标空间碎片清除统一框架，兼具技术创新与全球太空安全战略意义。",
+        "热度：11 / 评论 0"
+      ],
+      "score": 8.0,
+      "publishedAt": "2026-02-04T22:15:14+00:00",
+      "authors": [
+        "Agni Bandyopadhyay",
+        "Gunther Waxenegger-Wilfing"
       ]
     }
   ],
   "news": [
     {
-      "id": "github_anthropics_claude-code",
-      "title": "Anthropic 推出终端智能编码工具 Claude Code",
-      "titleZh": "Anthropic 推出终端智能编码工具 Claude Code",
-      "titleEn": "Anthropic Launches Claude Code: An Agentic Terminal-Based Coding Assistant",
-      "url": "https://github.com/anthropics/claude-code",
+      "id": "hn_47126177",
+      "title": "Anthropic曝光三家中企大规模蒸馏攻击窃取Claude能力",
+      "titleZh": "Anthropic曝光三家中企大规模蒸馏攻击窃取Claude能力",
+      "titleEn": "Anthropic Exposes Large-Scale Distillation Attacks by Chinese AI Labs to Steal Claude’s Capabilities",
+      "url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks",
       "type": "news",
-      "source": "GitHub Trending",
-      "summary": "**Anthropic 推出 Claude Code**，一款终端内运行的智能编码代理工具，能理解整个代码库并通过自然语言指令自动执行常规任务、解释复杂逻辑并管理 Git 工作流；其重要性在于将大模型深度集成到开发者日常操作中，减少上下文切换；对 AI 领域而言，它代表了 agentic coding（自主代理编程）向实用化迈出的关键一步；普通开发者可立即在命令行中安装使用，提升编码效率而不依赖图形界面。",
-      "summaryZh": "**Anthropic 推出 Claude Code**，一款终端内运行的智能编码代理工具，能理解整个代码库并通过自然语言指令自动执行常规任务、解释复杂逻辑并管理 Git 工作流；其重要性在于将大模型深度集成到开发者日常操作中，减少上下文切换；对 AI 领域而言，它代表了 agentic coding（自主代理编程）向实用化迈出的关键一步；普通开发者可立即在命令行中安装使用，提升编码效率而不依赖图形界面。",
-      "summaryEn": "Anthropic has released **Claude Code**, an agentic coding tool that runs in the terminal, understands your entire codebase, and accelerates development by executing routine tasks, explaining complex logic, and managing Git workflows via natural language commands. Its significance lies in deeply integrating large language models into daily developer workflows without requiring GUIs. For the AI field, it marks a practical advance in agentic coding. Developers can immediately install and use it in their command line to boost productivity.",
-      "fullText": "",
-      "imageUrl": "https://opengraph.githubassets.com/9971e89bc322eca56beeedd0cad533187ab3ebb1ce5c5a504611d16a5aea7043/anthropics/claude-code",
+      "source": "Hacker News",
+      "summary": "**Anthropic披露三家中国AI公司（DeepSeek、Moonshot、MiniMax）通过超24,000个欺诈账户发起大规模“蒸馏攻击”，非法调用Claude超1600万次以窃取其推理、工具使用和编码能力**；此类攻击利用合法但被滥用的模型蒸馏技术，绕过美国对华AI出口管制，训练出缺乏安全防护的模型，可能被用于军事、监控或开源传播，带来国家安全风险；Anthropic已部署行为指纹识别、协调封禁与API级反制措施，并呼吁行业与政策制定者协同应对；普通用户应警惕来源不明的AI模型，企业需加强输出审计，而开发者在使用第三方模型时应验证其是否保留原始安全机制。",
+      "summaryZh": "**Anthropic披露三家中国AI公司（DeepSeek、Moonshot、MiniMax）通过超24,000个欺诈账户发起大规模“蒸馏攻击”，非法调用Claude超1600万次以窃取其推理、工具使用和编码能力**；此类攻击利用合法但被滥用的模型蒸馏技术，绕过美国对华AI出口管制，训练出缺乏安全防护的模型，可能被用于军事、监控或开源传播，带来国家安全风险；Anthropic已部署行为指纹识别、协调封禁与API级反制措施，并呼吁行业与政策制定者协同应对；普通用户应警惕来源不明的AI模型，企业需加强输出审计，而开发者在使用第三方模型时应验证其是否保留原始安全机制。",
+      "summaryEn": "Anthropic revealed industrial-scale 'distillation attacks' by three Chinese AI labs—DeepSeek, Moonshot, and MiniMax—that used over 24,000 fraudulent accounts to illicitly query Claude more than 16 million times to extract its agentic reasoning, tool use, and coding capabilities. While distillation is a legitimate technique for model compression, its misuse here bypasses U.S. AI export controls, producing unsafe models that could be integrated into military or surveillance systems or even open-sourced, amplifying national security risks. Anthropic has deployed behavioral fingerprinting, coordinated detection, and API-level countermeasures and calls for industry-wide collaboration. Users should scrutinize unverified AI models, enterprises must audit model outputs, and developers should verify whether third-party models retain original safety safeguards.",
+      "fullText": "Skip to main content Skip to footer Research Economic Futures Commitments Learn News Try Claude Announcements Detecting and preventing distillation attacks Feb 23, 2026 We have identified industrial-scale campaigns by three AI laboratories—DeepSeek, Moonshot, and MiniMax—to illicitly extract Claude’s capabilities to improve their own models. These labs generated over 16 million exchanges with Claude through approximately 24,000 fraudulent accounts, in violation of our terms of service and regional access restrictions. These labs used a technique called “distillation,” which involves training a less capable model on the outputs of a stronger one. Distillation is a widely used and legitimate training method. For example, frontier AI labs routinely distill their own models to create smaller, cheaper versions for their customers. But distillation can also be used for illicit purposes: competitors can use it to acquire powerful capabilities from other labs in a fraction of the time, and at a fraction of the cost, that it would take to develop them independently. These campaigns are growing in intensity and sophistication. The window to act is narrow, and the threat extends beyond any single company or region. Addressing it will require rapid, coordinated action among industry players, policymakers, and the global AI community. Why distillation matters Illicitly distilled models lack necessary safeguards, creating significant national security risks. Anthropic and other US companies build systems that prevent state and non-state actors from using AI to, for example, develop bioweapons or carry out malicious cyber activities. Models built through illicit distillation are unlikely to retain those safeguards, meaning that dangerous capabilities can proliferate with many protections stripped out entirely. Foreign labs that distill American models can then feed these unprotected capabilities into military, intelligence, and surveillance systems—enabling authoritarian governments to deploy frontier AI for offensive cyber operations, disinformation campaigns, and mass surveillance. If distilled models are open-sourced, this risk multiplies as these capabilities spread freely beyond any single government's control. Distillation attacks and export controls Anthropic has consistently supported export controls to help maintain America’s lead in AI. Distillation attacks undermine those controls by allowing foreign labs, including those subject to the control of the Chinese Communist Party, to close the competitive advantage that export controls are designed to preserve through other means. Without visibility into these attacks, the apparently rapid advancements made by these labs are incorrectly taken as evidence that export controls are ineffective and able to be circumvented by innovation. In reality, these advancements depend in significant part on capabilities extracted from American models, and executing this extraction at scale requires access to advanced chips. Distillation attacks therefore reinforce the rationale for export controls: restricted chip access limits both direct model training and the scale of illicit distillation. What we found The three distillation campaigns detailed below followed a similar playbook, using fraudulent accounts and proxy services to access Claude at scale while evading detection. The volume, structure, and focus of the prompts were distinct from normal usage patterns, reflecting deliberate capability extraction rather than legitimate use. We attributed each campaign to a specific lab with high confidence through IP address correlation, request metadata, infrastructure indicators, and in some cases corroboration from industry partners who observed the same actors and behaviors on their platforms. Each campaign targeted Claude's most differentiated capabilities: agentic reasoning, tool use, and coding. DeepSeek Scale: Over 150,000 exchanges The operation targeted: Reasoning capabilities across diverse tasks Rubric-based grading tasks that made Claude function as a reward model for reinforcement learning Creating censorship-safe alternatives to policy sensitive queries DeepSeek generated synchronized traffic across accounts. Identical patterns, shared payment methods, and coordinated timing suggested “load balancing” to increase throughput, improve reliability, and avoid detection. In one notable technique, their prompts asked Claude to imagine and articulate the internal reasoning behind a completed response and write it out step by step—effectively generating chain-of-thought training data at scale. We also observed tasks in which Claude was used to generate censorship-safe alternatives to politically sensitive queries like questions about dissidents, party leaders, or authoritarianism, likely in order to train DeepSeek’s own models to steer conversations away from censored topics. By examining request metadata, we were able to trace these accounts to specific researchers at the lab. Moonshot AI Scale: Over 3.4 million exchanges The operation targeted: Agentic reasoning and tool use Coding and data analysis Computer-use agent development Computer vision Moonshot (Kimi models) employed hundreds of fraudulent accounts spanning multiple access pathways. Varied account types made the campaign harder to detect as a coordinated operation. We attributed the campaign through request metadata, which matched the public profiles of senior Moonshot staff. In a later phase, Moonshot used a more targeted approach, attempting to extract and reconstruct Claude’s reasoning traces. MiniMax Scale: Over 13 million exchanges The operation targeted: Agentic coding Tool use and orchestration We attributed the campaign to MiniMax through request metadata and infrastructure indicators, and confirmed timings against their public product roadmap. We detected this campaign while it was still active—before MiniMax released the model it was training—giving us unprecedented visibility into the life cycle of distillation attacks, from data generation through to model launch. When we released a new model during MiniMax’s active campaign, they pivoted within 24 hours, redirecting nearly half their traffic to capture capabilities from our latest system. How distillers access frontier models For national security reasons, Anthropic does not currently offer commercial access to Claude in China, or to subsidiaries of their companies located outside of the country. To circumvent this, labs use commercial proxy services which resell access to Claude and other frontier AI models at scale. These services run what we call “hydra cluster” architectures: sprawling networks of fraudulent accounts that distribute traffic across our API as well as third-party cloud platforms. The breadth of these networks means that there are no single points of failure. When one account is banned, a new one takes its place. In one case, a single proxy network managed more than 20,000 fraudulent accounts simultaneously, mixing distillation traffic with unrelated customer requests to make detection harder. Once access is secured, the labs generate large volumes of carefully crafted prompts designed to extract specific capabilities from the model. The goal is either to collect high-quality responses for direct model training, or to generate tens of thousands of unique tasks needed to run reinforcement learning. What distinguishes a distillation attack from normal usage is the pattern. A prompt like the following (which approximates similar prompts we have seen used repetitively and at scale) may seem benign on its own: You are an expert data analyst combining statistical rigor with deep domain knowledge. Your goal is to deliver data-driven insights — not summaries or visualizations — grounded in real data and supported by complete and transparent reasoning. But when variations of that prompt arrive tens of thousands of times across hundreds of coordinated accounts, all targeting the same narrow capability, the pattern becomes clear. Massive volume concentrated in a few areas, highly repetitive structures, and content that maps directly onto what is most valuable for training an AI model are the hallmarks of a distillation attack. How we’re responding We continue to invest heavily in defenses that make such distillation attacks harder to execute and easier to identify. These include: Detection . We have built several classifiers and behavioral fingerprinting systems designed to identify distillation attack patterns in API traffic. This includes detection of chain-of-thought elicitation used to construct reasoning training data. We have also built detection tools for identifying coordinated activity across large numbers of accounts. Intelligence sharing . We are sharing technical indicators with other AI labs, cloud providers, and relevant authorities. This provides a more holistic picture into the distillation landscape. Access controls . We’ve strengthened verification for educational accounts, security research programs, and startup organizations—the pathways most commonly exploited for setting up fraudulent accounts. Countermeasures . We are developing Product, API and model-level safeguards designed to reduce the efficacy of model outputs for illicit distillation, without degrading the experience for legitimate customers. But no company can solve this alone. As we noted above, distillation attacks at this scale require a coordinated response across the AI industry, cloud providers, and policymakers. We are publishing this to make the evidence available to everyone with a stake in the outcome. Related content Making frontier cybersecurity capabilities available to defenders Claude Code Security, a new capability built into Claude Code on the web, is now available in a limited research preview. It scans codebases for security vulnerabilities and suggests targeted software patches for human review, allowing teams to find and fix security issues that traditional methods often miss. Read more Anthropic and the Government of Rwanda sign MOU for AI in health and education Read more Introducing Claude Sonnet 4.6 Sonnet 4.6 delivers frontier performance across coding, agents, and professional work at scale. Read more Products Claude Claude Code Cowork Claude in Chrome Claude in Excel Claude in PowerPoint Claude in Slack Skills Max plan Team plan Enterprise plan Download app Pricing Log in to Claude Models Opus Sonnet Haiku Solutions AI agents Code modernization Coding Customer support Education Financial services Government Healthcare Life sciences Nonprofits Claude Developer Platform Overview Developer docs Pricing Regional compliance Amazon Bedrock Google Cloud’s Vertex AI Console login Learn Blog Claude partner network Connectors Courses Customer stories Engineering at Anthropic Events Plugins Powered by Claude Service partners Startups program Tutorials Use cases Company Anthropic Careers Economic Futures Research News Claude’s Constitution Responsible Scaling Policy Security and compliance Transparency Help and security Availability Status Support center Terms and policies Privacy policy Consumer health data privacy policy Responsible disclosure policy Terms of service: Commercial Terms of service: Consumer Usage policy © 2026 Anthropic PBC Detecting and preventing distillation attacks \\ Anthropic",
+      "imageUrl": "https://source.unsplash.com/1600x900/?detecting+preventing+distillation+attacks+Hacker+News+AI+technology",
+      "tags": [],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源权威：官方/白名单",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：揭露三大AI实验室大规模窃取Claude能力的 distillation 攻击事件，触及模型安全与行业伦理核心，具有全球产业级影响，符合战略级突破标准。",
+        "热度：49 / 评论 17"
+      ],
+      "score": 10.39,
+      "publishedAt": "2026-02-23T18:07:25+00:00",
+      "authors": [
+        "meetpateltech"
+      ]
+    },
+    {
+      "id": "rss_4853454397",
+      "title": "NVIDIA推AI驱动OT安全架构，保护全球关键基础设施",
+      "titleZh": "NVIDIA推AI驱动OT安全架构，保护全球关键基础设施",
+      "titleEn": "NVIDIA Launches AI-Powered Cybersecurity Architecture to Protect Global Critical Infrastructure",
+      "url": "https://blogs.nvidia.com/blog/ai-cybersecurity-operational-technology-industrial-control-systems/",
+      "type": "news",
+      "source": "NVIDIA Blog",
+      "summary": "**NVIDIA联合Akamai、Forescout、Palo Alto Networks、Xage Security及西门子，推出基于BlueField DPU的AI驱动OT网络安全架构，将零信任安全嵌入能源、制造、交通等关键基础设施的工业控制系统**；该方案通过在边缘硬件隔离运行安全服务，实现无代理资产发现、网络分段与异常行为监测，在不干扰实时操作的前提下提供全速威胁检测与响应；此举解决了传统IT安全工具难以适配OT环境的问题，使关键设施既能享受数字化红利，又能抵御自适应网络攻击；普通公众虽不直接接触，但其依赖的电力、供水、交通系统将因此更安全可靠，企业和政府应优先采用符合IEC 62443标准的AI增强型OT安全方案。",
+      "summaryZh": "**NVIDIA联合Akamai、Forescout、Palo Alto Networks、Xage Security及西门子，推出基于BlueField DPU的AI驱动OT网络安全架构，将零信任安全嵌入能源、制造、交通等关键基础设施的工业控制系统**；该方案通过在边缘硬件隔离运行安全服务，实现无代理资产发现、网络分段与异常行为监测，在不干扰实时操作的前提下提供全速威胁检测与响应；此举解决了传统IT安全工具难以适配OT环境的问题，使关键设施既能享受数字化红利，又能抵御自适应网络攻击；普通公众虽不直接接触，但其依赖的电力、供水、交通系统将因此更安全可靠，企业和政府应优先采用符合IEC 62443标准的AI增强型OT安全方案。",
+      "summaryEn": "NVIDIA, in collaboration with Akamai, Forescout, Palo Alto Networks, Xage Security, and Siemens, has launched an AI-powered OT cybersecurity architecture using BlueField DPUs to embed zero-trust security into critical infrastructure—including energy, manufacturing, and transportation—by running agentless asset discovery, network segmentation, and anomaly detection on dedicated hardware at the edge. This approach enables real-time threat response without disrupting time-sensitive industrial operations, addressing a key gap where traditional IT security tools fail in OT environments. While end users don’t interact directly with these systems, the reliability of essential services like power and water depends on such protections; enterprises and governments are urged to adopt IEC 62443-compliant, AI-enhanced OT security solutions.",
+      "fullText": "As technologies and systems become more digitalized and connected across the world, operational technology (OT) environments and industrial control systems (ICS) — from energy and manufacturing to transportation and utilities — are increasingly depending on enterprise networks and the cloud. This expands OT and ICS capabilities — but also their exposure to cyber threats. Unlike traditional IT environments that manage data and applications, OT systems control real-world processes where cyber incidents can have immediate consequences for safety, availability and operational continuity. Many of these systems were originally designed for reliability and longevity, not for today’s threat techniques. This can widen the gap between modern attacks and existing defenses. Even as OT and ICS environments modernize with improved automation, connectivity and analytics, most were not built to withstand adaptive, software-driven cyberattacks that evolve in real time. NVIDIA is collaborating with leading cybersecurity providers Akamai, Forescout, Palo Alto Networks and Xage Security, as well as industrial automation innovator Siemens, to bring accelerated computing and AI to OT cybersecurity, advancing real-time threat detection and response across critical infrastructure. These efforts represent a fundamental shift in OT and ICS cybersecurity, where security is embedded into and distributed across infrastructure, enforced at the edge and coordinated through centralized, AI-driven intelligence, bringing modern cybersecurity to the systems that keep the physical world running. Forescout and NVIDIA Bring Zero Trust to OT and ICS Environments Zero trust is a security model that removes implicit trust from networks. Every user, device and workload must be continuously verified and authorized, regardless of where it originates. While zero trust has been widely adopted to secure enterprise IT environments, applying its principles to OT environments has traditionally been difficult. Legacy devices, proprietary protocols and safety-critical operations limit the use of intrusive controls or AI-driven enforcement, even as increased connectivity to IT and cloud environments expands the attack surface. Forescout is working with NVIDIA to make zero trust practical for OT. Forescout provides continuous, agentless discovery and classification of OT, internet of things and IT assets, delivering real-time risk assessment and policy-based enforcement. With deep visibility into network activity, Forescout applies network segmentation to contain lateral movement and enforce zero trust controls precisely where they matter most, without impacting operations. At the industrial edge, NVIDIA BlueField DPUs run security services on dedicated hardware, keeping protection separate from operational systems so critical processes remain unaffected. Siemens and Palo Alto Networks Embed Security Into Industrial Automation Industrial automation environments demand consistent performance, low latency and high availability — requirements that traditional IT security tools often struggle to meet. At the S4x26 security conference, Siemens will demonstrate its AI-ready Industrial Automation DataCenter, a unified, holistic solution that consolidates decades of cross-industry automation expertise into one robust IT/OT platform. The future-proof solution contains all the core elements of an edge data center such as computing based on virtualization, data archiving and reporting, resilient disaster recovery solutions, and a robust cybersecurity architecture in accordance with IEC 62443. Through the integration of NVIDIA BlueField, it is uniquely possible to deliver a truly AI-ready, zero-trust solution tailored for the demands on industrial automation. Prisma AIRS AI Runtime Security delivers deep visibility into industrial traffic and continuous monitoring for abnormal behavior. By running these security services on NVIDIA BlueField, inspection and enforcement happen directly at the infrastructure level, closer to the workloads. This AI-powered approach strengthens security coverage and drives greater operational uptime where it matters most. Akamai Extends Segmentation to OT and ICS With NVIDIA Akamai Technologies has extended the Akamai Guardicore Platform to now run on NVIDIA BlueField, enabling agentless segmentation — the ability to isolate applications, devices or workloads into tightly controlled security zones — and the ability to enforce zero-trust policies directly at the edge. This removes the need for agents that may not be compatible with legacy OT systems or safety-certified devices. Segmentation is enforced at full network speed directly within the infrastructure, without introducing latency or disrupting time-sensitive workloads in centralized data centers or remote edge locations. This helps contain threats quickly, limit their spread and keep mission-critical operations running smoothly. Xage Security Protects the Energy Infrastructure That Powers AI With NVIDIA As AI scales into a pillar of critical infrastructure, securing the energy systems that power AI factories is as essential as securing the compute itself. Modern energy supply chains are complex, distributed and deeply interconnected with AI operations, and they operate largely within the operational technology domain. In this environment, cyber-physical systems, legacy assets and real-time controls demand security approaches purpose-built for critical infrastructure protection. Xage Security is working with NVIDIA to help address this need by bringing zero-trust security to both energy infrastructure and the AI systems it supports. At S4x26, Xage will demonstrate a new integration running on NVIDIA BlueField, showing how zero trust enforcement can be embedded directly into energy and AI infrastructure environments. Xage already protects about 60% of U.S. midstream pipeline infrastructure and works with utilities and energy operators worldwide. By combining Xage’s distributed, identity-based security platform with NVIDIA BlueField, operators can protect energy assets, manage third-party access and secure AI-driven operations at scale without compromising performance, reliability or resilience. A New Class of OT Cybersecurity Across these environments, a consistent OT cybersecurity architecture is taking shape. Security services run at the edge on NVIDIA BlueField DPUs, close to the operational systems they protect. By executing inspection and enforcement on dedicated, hardware-isolated infrastructure, BlueField enables continuous protection without disrupting time-sensitive operations. OT data generated at the edge is sent to centralized AI factories, where it’s analyzed across many sites to identify patterns, anomalies and emerging threats. In addition, security actions are enforced locally at the edge, while insights are shared centrally — creating a coordinated defense that improves visibility, accelerates response and scales protection consistently across OT and IT environments. This architecture helps detect and contain threats faster while strengthening resilience across distributed environments, maintaining consistent performance and protecting uptime. The result is a new standard for securing critical infrastructure — where AI-driven protection and operational excellence move forward together. NVIDIA-powered OT cybersecurity solutions are delivered through a global ecosystem of trusted partners. Read this OT cybersecurity use case and solution overview for more. Join NVIDIA at S4x26, running Feb. 24–26 in Miami, to see how accelerated computing and AI are transforming cybersecurity for OT and critical infrastructure.",
+      "imageUrl": "https://blogs.nvidia.com/wp-content/uploads/2026/02/cyber-gen-ai-press-1920x1080-1.jpg",
+      "tags": [],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源权威：官方/白名单",
+        "跨源重复：1 个来源",
+        "模型评分：9/10，理由：NVIDIA联合多家巨头推进AI赋能关键基础设施安全，将AI深度融入OT/ICS防御体系，是全球工业安全范式的重要转折点。",
+        "热度：0 / 评论 0"
+      ],
+      "score": 9.5,
+      "publishedAt": "2026-02-23T16:00:57+00:00",
+      "authors": [
+        "Itay Ozery"
+      ]
+    },
+    {
+      "id": "rss_1794323303",
+      "title": "SWE-bench Verified基准已污染，研究团队推荐改用SWE-bench Pro",
+      "titleZh": "SWE-bench Verified基准已污染，研究团队推荐改用SWE-bench Pro",
+      "titleEn": "SWE-bench Verified Now Contaminated; Researchers Recommend SWE-bench Pro",
+      "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified",
+      "type": "news",
+      "source": "OpenAI Blog",
+      "summary": "**SWE-bench Verified基准因测试用例缺陷和训练数据泄露已严重污染，无法准确衡量前沿AI编码能力进展，研究团队建议改用新基准SWE-bench Pro**；该问题导致部分模型在旧基准上虚高得分，误导技术评估；对AI领域而言，这凸显了高质量、防污染评估体系的紧迫性；开发者和企业在选用代码模型时应关注其在SWE-bench Pro等新基准上的表现，避免依赖已被污染的指标做技术决策。",
+      "summaryZh": "**SWE-bench Verified基准因测试用例缺陷和训练数据泄露已严重污染，无法准确衡量前沿AI编码能力进展，研究团队建议改用新基准SWE-bench Pro**；该问题导致部分模型在旧基准上虚高得分，误导技术评估；对AI领域而言，这凸显了高质量、防污染评估体系的紧迫性；开发者和企业在选用代码模型时应关注其在SWE-bench Pro等新基准上的表现，避免依赖已被污染的指标做技术决策。",
+      "summaryEn": "The SWE-bench Verified benchmark is now heavily contaminated due to flawed test cases and training data leakage, rendering it unreliable for measuring progress in frontier AI coding capabilities; researchers recommend switching to the new SWE-bench Pro. This contamination inflates scores artificially, misleading technical evaluations. For the AI community, it underscores the urgent need for robust, contamination-resistant benchmarks. Developers and enterprises should prioritize model performance on SWE-bench Pro over the compromised Verified version when making technical decisions.",
+      "fullText": "SWE-bench Verified is increasingly contaminated and mismeasures frontier coding progress. Our analysis shows flawed tests and training leakage. We recommend SWE-bench Pro.",
+      "imageUrl": "https://tse2.mm.bing.net/th/id/OIP.4ugp---LrBd_ZVzUzIFwfQHaEK?w=1200&h=630&c=7&r=0&o=5&pid=1.7",
       "tags": [
-        "LLM",
+        "Training"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源权威：官方/白名单",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：OpenAI宣布弃用SWE-bench Verified并推荐SWE-bench Pro，直指基准测试污染问题，对编程AI评估体系产生重大修正影响。",
+        "热度：0 / 评论 0"
+      ],
+      "score": 9.4,
+      "publishedAt": "2026-02-23T11:00:00+00:00",
+      "authors": []
+    },
+    {
+      "id": "rss_3810990407",
+      "title": "OpenAI推Frontier Alliance Partners助企业落地AI智能体",
+      "titleZh": "OpenAI推Frontier Alliance Partners助企业落地AI智能体",
+      "titleEn": "OpenAI Launches Frontier Alliance Partners to Help Enterprises Deploy AI Agents at Scale",
+      "url": "https://openai.com/index/frontier-alliance-partners",
+      "type": "news",
+      "source": "OpenAI Blog",
+      "summary": "**OpenAI宣布成立Frontier Alliance Partners计划，联合多家企业帮助客户将AI智能体从试点阶段推进到安全、可扩展的生产部署**；该举措旨在解决企业在AI落地过程中面临的工程化、安全合规与运维挑战；对AI领域而言，这标志着大模型应用正从单点实验转向系统化集成；企业用户可借此加速AI智能体在客服、运营等场景的规模化应用，但需确保合作方具备足够的安全治理能力以防范新型自动化风险。",
+      "summaryZh": "**OpenAI宣布成立Frontier Alliance Partners计划，联合多家企业帮助客户将AI智能体从试点阶段推进到安全、可扩展的生产部署**；该举措旨在解决企业在AI落地过程中面临的工程化、安全合规与运维挑战；对AI领域而言，这标志着大模型应用正从单点实验转向系统化集成；企业用户可借此加速AI智能体在客服、运营等场景的规模化应用，但需确保合作方具备足够的安全治理能力以防范新型自动化风险。",
+      "summaryEn": "OpenAI has launched the Frontier Alliance Partners program, collaborating with select enterprises to help customers move AI agents from pilot projects to secure, scalable production deployments. This initiative addresses engineering, compliance, and operational challenges in enterprise AI adoption. For the AI field, it signals a shift from experimental use to integrated, production-grade agent systems. Enterprises can accelerate deployment in areas like customer service and operations—but must ensure partners have strong governance to mitigate risks from autonomous AI actions.",
+      "fullText": "OpenAI announces Frontier Alliance Partners to help enterprises move from AI pilots to production with secure, scalable agent deployments.",
+      "imageUrl": "https://tse2.mm.bing.net/th/id/OIP.dBuxR413rq0X4zjmaevwkgHaEK?w=1200&h=630&c=7&r=0&o=5&pid=1.7",
+      "tags": [
         "Agent",
         "Industry"
       ],
       "paperCategory": "",
       "signalReasons": [
-        "来源：GitHub Trending",
+        "来源权威：官方/白名单",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：Anthropic官方发布Claude Code，标志着主流大厂在智能开发工具上的深度布局，推动AI原生开发生态演进。",
-        "热度：68932 / 评论 0"
+        "模型评分：8/10，理由：OpenAI推出前沿联盟合作伙伴计划，聚焦企业AI代理生产化部署，推动AI从试点走向规模化落地，具有关键行业变革意义。",
+        "热度：0 / 评论 0"
       ],
-      "score": 9.8,
-      "publishedAt": "2026-02-22T23:34:10.037046+00:00",
+      "score": 9.4,
+      "publishedAt": "2026-02-23T05:30:00+00:00",
       "authors": []
     },
     {
-      "id": "github_vxcontrol_pentagi",
-      "title": "Pentagi：全自动 AI 渗透测试智能体系统发布",
-      "titleZh": "Pentagi：全自动 AI 渗透测试智能体系统发布",
-      "titleEn": "Pentagi: Fully Autonomous AI Agents for Penetration Testing Released",
-      "url": "https://github.com/vxcontrol/pentagi",
+      "id": "hn_47123590",
+      "title": "Anthropic发布AI Fluency Index：深度对话提升协作质量，成品输出易致盲目信任",
+      "titleZh": "Anthropic发布AI Fluency Index：深度对话提升协作质量，成品输出易致盲目信任",
+      "titleEn": "Anthropic Releases AI Fluency Index: Iterative Dialogue Boosts Collaboration Quality, Polished Outputs Breed Complacency",
+      "url": "https://www.anthropic.com/research/AI-fluency-index",
+      "type": "news",
+      "source": "Hacker News",
+      "summary": "**Anthropic发布《AI Fluency Index》报告，基于9830段匿名对话分析发现：用户与Claude的深度迭代对话（如反复修改、追问推理）显著提升AI协作质量，平均展现2.67项流畅行为，是非迭代对话的两倍；但当AI生成代码或文档等‘成品’时，用户反而更少质疑其准确性或缺失上下文**；该研究首次量化人类-AI协作中的‘流畅度’，揭示当前用户易被表面完好的输出误导；对普通人而言，应养成‘把AI首答当草稿’的习惯，主动要求解释推理、指出不确定性，并持续追问以提升协作效果。",
+      "summaryZh": "**Anthropic发布《AI Fluency Index》报告，基于9830段匿名对话分析发现：用户与Claude的深度迭代对话（如反复修改、追问推理）显著提升AI协作质量，平均展现2.67项流畅行为，是非迭代对话的两倍；但当AI生成代码或文档等‘成品’时，用户反而更少质疑其准确性或缺失上下文**；该研究首次量化人类-AI协作中的‘流畅度’，揭示当前用户易被表面完好的输出误导；对普通人而言，应养成‘把AI首答当草稿’的习惯，主动要求解释推理、指出不确定性，并持续追问以提升协作效果。",
+      "summaryEn": "Anthropic’s new AI Fluency Index report, analyzing 9,830 anonymized Claude conversations, finds that iterative dialogues—where users refine outputs through follow-ups—exhibit 2.67 AI fluency behaviors on average, double that of non-iterative chats, especially in critically evaluating model reasoning. However, when AI generates artifacts like code or documents, users are less likely to question accuracy or missing context, despite providing clearer initial instructions. This first-of-its-kind quantification of human-AI collaboration reveals a tendency to trust polished outputs uncritically. For everyday users, the takeaway is clear: treat AI’s first response as a draft, explicitly ask for reasoning explanations, and keep iterating to unlock safer, more effective collaboration.",
+      "fullText": "Skip to main content Skip to footer Research Economic Futures Commitments Learn News Try Claude Announcements Anthropic Education Report: The AI Fluency Index Feb 23, 2026 People are integrating AI tools into their daily routines at a pace that would have been difficult to predict even a year ago. But adoption alone doesn’t tell us much about the impact of these tools. A further, equally important question is: as AI becomes part of everyday life, are individuals developing the skills to use it well? Previous Anthropic Education Reports have studied how university students and educators use Claude. We found that students use it to create reports and analyze lab results; educators use it to build lesson materials and automate routine work. But we know that any person who uses AI is likely to improve at what they do. We wanted to explore this further, and to understand how people using AI develop “fluency” with this technology over time. In this report, we begin answering that question. We track the presence or absence of a taxonomy of behaviors that we take to represent AI fluency across a large sample of anonymized conversations. In line with our recent Economic Index , we find that the most common expression of AI fluency is augmentative —treating AI as a thought partner, rather than delegating work entirely. In fact, these conversations exhibit more than double the number of AI fluency behaviors than quick, back-and-forth chats. But we also find that when AI produces artifacts—including apps, code, documents, or interactive tools—users are less likely to question its reasoning (-3.1 percentage points) or identify missing context (-5.2pp). This aligns with related patterns we observed in our recent study on coding skills . These initial findings present us with a baseline that we can use to study the development of AI fluency over time. Measuring AI fluency To quantify AI fluency, we use the 4D AI Fluency Framework , developed by Professors Rick Dakan and Joseph Feller in collaboration with Anthropic. This framework helps us define 24 specific behaviors that we take to exemplify safe and effective human-AI collaboration. Of these 24 behaviors, 11 (listed in the graph below) are directly observable when humans interact with Claude on Claude.ai or Claude Code. The other 13 (including things like being honest about AI’s role in work, or considering the consequences of sharing AI-generated output), happen outside Claude.ai’s chat interface, so they’re much harder for us to track. These unobservable behaviors are arguably some of the most consequential dimensions of AI fluency, so in future work we plan to use qualitative methods to assess them. For this study, we focused on the 11 directly observable behaviors. We used our privacy-preserving analysis tool to study 9,830 conversations that included several back-and-forths with Claude on Claude.ai during a 7-day window in January 2026. 1 We then measured the presence or absence of the 11 behaviors; each conversation could display evidence of multiple behaviors. We assessed the reliability of our sample by checking whether our results were consistent across each day of the week, and across the different languages in our sample (we found that they were). 2 This, finally, gave us the AI Fluency Index: a baseline measurement of how people collaborate with AI today, and a foundation for tracking how those behaviors evolve over time as models change. Prevalence of each AI fluency behavioral indicator across 9,830 Claude.ai conversations, ranked from most to least common and color-coded by competency. Results With our first study, we’ve found two main patterns in Claude use: a strong relationship between AI fluency and iteration and refinement through longer conversations with Claude, and changes in users’ fluency behaviors when coding or building other outputs. Fluency is strongly associated with conversations that exhibit iteration and refinement One of the strongest patterns in the data is the relationship between iteration and refinement and every other AI fluency behavior. 85.7% of the conversations in our sample exhibited iteration and refinement: building on previous exchanges to refine the user’s work, rather than accepting the first response and moving to a new task. These conversations showed substantially higher rates of other fluency behaviors, as the chart below shows: Behavioral indicator prevalence in conversations where the user iterates and refines (n=8,424) versus conversations without iteration and refinement (n=1,406). All behaviors are substantially more prevalent in conversations with iteration and refinement. On average, conversations with iteration and refinement exhibit 2.67 additional fluency behaviors—roughly double the non-iterative rate of 1.33. This is especially pronounced for fluency behaviors related to evaluating Claude’s outputs. Conversations with iteration and refinement are 5.6x more likely to involve users questioning Claude’s reasoning, and 4x more likely to see them identify missing context. When creating outputs, users become more directive but less evaluative 12.3% of conversations in our sample involved artifacts , including code, documents, interactive tools, and other outputs. In these conversations, people collaborated with AI quite differently. Specifically, we found substantially higher rates of behaviors that fall within the broader themes of “description” and “delegation.” For instance, these conversations are more likely to see users clarify their goal (+14.7pp), specify a format (+14.5pp), provide examples (+13.4pp), and iterate (+9.7pp) compared to non-artifact conversations. In other words, they’re doing more to direct AI at the outset of their work. But this directiveness doesn’t correspond with greater levels of evaluation or discernment. In fact, it’s the opposite: in conversations where artifacts are created, users are less likely to identify missing context (-5.2pp), check facts (-3.7pp), or question the model’s reasoning by asking it to explain its rationale (-3.1pp). Our Economic Index finds that—unsurprisingly—the most complex tasks are where Claude struggles the most, so this seems particularly noteworthy. Behavioral indicator prevalence in conversations with artifacts (n=1,209) versus without artifacts (n=8,621). Description and delegation behaviors increase in artifact conversations, while all three discernment behaviors decrease. There are several possible explanations for this pattern. It might be that Claude is creating polished, functional-looking outputs, for which it doesn’t seem necessary to question things further: if the work looks finished, users might treat it as such. But it’s also possible that artifact conversations involve tasks where factual precision matters less than aesthetics or functionality (designing a UI, for instance, versus writing a legal analysis). Or users might be evaluating artifacts through channels we can’t observe—running code, testing an app elsewhere, sharing a draft with a colleague—rather than expressing their evaluation within that same initial conversation. Whatever the explanation, the pattern is worth paying attention to. As AI models become increasingly capable of producing polished-looking outputs, the ability to critically evaluate those outputs, whether in direct conversation or through other means, will become more valuable rather than less. Developing your own AI fluency As with all skills, AI fluency is a matter of degree—for most of us, it’s possible to develop our techniques much further. Based on the patterns in our data, there are three areas where we’ve found many users could improve their skills: Staying in the conversation. Iteration and refinement is the single strongest correlate of all other fluency behaviors in our data. So, when you get an initial response, it’s worth treating it as only a starting point: ask follow-up questions, push back on any parts that don’t feel right, and refine what you’re looking for. Questioning polished outputs. When AI models produce something that looks good, it’s the perfect moment to pause and ask: is this accurate? Is anything missing? Does this reasoning hold up? As we discussed above, our data show that polished outputs coincide with lower rates of critical evaluation, even though users go to greater lengths to direct Claude’s work at the outset. Setting the terms of the collaboration. In only 30% of conversations do users tell Claude how they’d like it to interact with them. Try being explicit by adding instructions like, “Push back if my assumptions are wrong,” “Walk me through your reasoning before giving me the answer,” or, “Tell me what you’re uncertain about.” Establishing these expectations up front can change the dynamic of the rest of the conversation. Limitations This research comes with important caveats: Sample limitations: Our sample reflects Claude.ai users who engaged in multi-turn conversations during a single week in January 2026. Since we think this is still relatively early on in the diffusion of AI tools, these users likely skew towards early adopters who are already comfortable with AI—i.e., who may not represent the broader population. Our sample should be understood as providing a baseline for this population, not as a universal benchmark. Because the data comes from a single week, it is also unable to capture any seasonal or longitudinal effects. And because it’s focused on Claude.ai , we don’t capture how users interact with other AI platforms. Partial framework coverage: In this study, we only assessed the 11 of the 24 behavioral indicators that are directly observable in conversations on Claude.ai. All behaviors related to the responsible and ethical use of AI outputs occur outside of these conversations, and are not captured. Binary classification: For each conversation in our sample, we classify each behavior as either present or absent. But this likely misses significant nuance—like arguable or partial demonstrations of behaviors, or overlapping signals between them. Implicit behaviors: Users might demonstrate fluency behaviors mentally (such as fact-checking Claude’s claims against their own knowledge) without expressing these behaviors in conversation. This seems especially relevant for our data on artifacts—users might be evaluating Claude’s outputs through testing and practical use, rather than through conversation-visible behaviors. Correlational findings: The relationships we identify are correlational. We don’t know whether one behavior causes another, or whether they both reflect some common underlying factor, like task complexity or user preferences. Looking ahead This study offers us a baseline that we can use to assess how AI fluency is changing over time. As AI capabilities evolve and adoption increases, we’re aiming to learn whether users are developing more sophisticated behaviors, which skills are emerging naturally with experience, and which will require more intentional development. In future work, we plan to extend our analysis in several directions. First, we plan to conduct “cohort analyses,” comparing new users to experienced ones in order to understand how familiarity with AI is correlated with fluency development. Second, we plan to use qualitative research methods to assess the behaviors that aren’t directly observable in Claude.ai conversations. And third, we aim to explore the causal questions that this work raises—like whether encouraging iterative conversations leads to greater critical evaluation, or whether there are other interventions that could encourage this more effectively. In addition, we’d like to explore AI fluency behaviors in Claude Code, a platform mostly used by software developers. In preparation for this study, we conducted some initial analysis that found consistency between Claude Code conversations and ones in Claude.ai . But this is still preliminary, and Claude Code’s very different user base an",
+      "imageUrl": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fcf98cd90972577bf4dd6457682d9ee82cbf2b858-3840x2160.png&w=3840&q=75",
+      "tags": [
+        "Industry"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源权威：官方/白名单",
+        "跨源重复：1 个来源",
+        "模型评分：7/10，理由：Anthropic发布AI素养指数报告，系统化评估公众AI使用能力，推动人机协同教育发展，具备显著行业影响力和实践价值。",
+        "热度：58 / 评论 54"
+      ],
+      "score": 9.26,
+      "publishedAt": "2026-02-23T15:31:17+00:00",
+      "authors": [
+        "armcat"
+      ]
+    },
+    {
+      "id": "github_CompVis_stable-diffusion",
+      "title": "CompVis/stable-diffusion",
+      "titleZh": "CompVis/stable-diffusion",
+      "titleEn": "CompVis/stable-diffusion",
+      "url": "https://github.com/CompVis/stable-diffusion",
       "type": "news",
       "source": "GitHub Trending",
-      "summary": "**vxcontrol 发布 Pentagi 系统**，一个完全自主的 AI 智能体框架，专为执行复杂渗透测试任务而设计；其重要性在于将自动化红队能力封装为可部署的 AI 代理，降低安全测试门槛；对 AI 领域而言，它展示了多智能体系统在高风险、高专业性场景中的可行性；网络安全从业者可将其用于模拟高级持续性威胁（APT）攻击，但需注意伦理与合规边界。",
-      "summaryZh": "**vxcontrol 发布 Pentagi 系统**，一个完全自主的 AI 智能体框架，专为执行复杂渗透测试任务而设计；其重要性在于将自动化红队能力封装为可部署的 AI 代理，降低安全测试门槛；对 AI 领域而言，它展示了多智能体系统在高风险、高专业性场景中的可行性；网络安全从业者可将其用于模拟高级持续性威胁（APT）攻击，但需注意伦理与合规边界。",
-      "summaryEn": "**vxcontrol has released Pentagi**, a fully autonomous AI agent system designed to perform complex penetration testing tasks. Its importance lies in packaging automated red-teaming capabilities into deployable AI agents, lowering the barrier to advanced security testing. For the AI field, it demonstrates the viability of multi-agent systems in high-stakes, expert domains. Cybersecurity professionals can use it to simulate APT-style attacks—but must adhere to ethical and legal boundaries.",
+      "summary": "Stable Diffusion是由CompVis开发的潜在空间文本到图像扩散模型，通过在压缩的潜在表示上进行去噪扩散过程，高效生成高质量图像，在保持生成能力的同时大幅降低计算需求，成为开源图像生成领域的里程碑式工作，推动了AIGC工具的普及与创新。",
+      "summaryZh": "Stable Diffusion是由CompVis开发的潜在空间文本到图像扩散模型，通过在压缩的潜在表示上进行去噪扩散过程，高效生成高质量图像，在保持生成能力的同时大幅降低计算需求，成为开源图像生成领域的里程碑式工作，推动了AIGC工具的普及与创新。",
+      "summaryEn": "Stable Diffusion, developed by CompVis, is a latent text-to-image diffusion model that generates high-quality images by performing denoising diffusion in a compressed latent space, significantly reducing computational requirements while maintaining strong generative capabilities. It has become a foundational open-source model in AI-generated content, catalyzing widespread innovation and accessibility in image synthesis tools.",
       "fullText": "",
-      "imageUrl": "https://repository-images.githubusercontent.com/913030762/c8502908-380f-4897-aaba-87cfa16d67b4",
+      "imageUrl": "https://github.com/CompVis/stable-diffusion/raw/main/assets/stable-samples/txt2img/merged-0006.png",
       "tags": [
-        "Agent"
+        "Vision",
+        "Diffusion"
       ],
       "paperCategory": "",
       "signalReasons": [
         "来源：GitHub Trending",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：首个全自主AI渗透测试代理系统，具备重大安全领域突破潜力，可能引发全球网络安全格局重构。",
-        "热度：6918 / 评论 0"
+        "模型评分：10/10，理由：Stable Diffusion作为生成式AI奠基模型之一，其持续维护与生态扩展仍具历史性影响。",
+        "热度：72481 / 评论 0"
       ],
-      "score": 8.4,
-      "publishedAt": "2026-02-22T23:34:08.605977+00:00",
+      "score": 9.0,
+      "publishedAt": "2026-02-23T23:40:24.335824+00:00",
       "authors": []
     },
     {
       "id": "github_cloudflare_agents",
-      "title": "Cloudflare 推出边缘 AI 智能体开发平台",
-      "titleZh": "Cloudflare 推出边缘 AI 智能体开发平台",
+      "title": "Cloudflare 推出边缘 AI Agent 构建与部署平台",
+      "titleZh": "Cloudflare 推出边缘 AI Agent 构建与部署平台",
       "titleEn": "Cloudflare Launches Platform to Build and Deploy AI Agents on the Edge",
       "url": "https://github.com/cloudflare/agents",
       "type": "news",
       "source": "GitHub Trending",
-      "summary": "**Cloudflare 推出 AI 智能体开发与部署平台**，允许开发者在其全球边缘网络上构建和运行 AI 智能体；这一举措将 AI 推理与 Cloudflare 的低延迟基础设施结合，使智能体能就近响应用户请求；对 AI 领域而言，它推动了去中心化、边缘化智能体架构的发展；普通开发者可通过 Cloudflare Workers 快速部署轻量级 AI 代理，实现低延迟、高可用的交互式应用。",
-      "summaryZh": "**Cloudflare 推出 AI 智能体开发与部署平台**，允许开发者在其全球边缘网络上构建和运行 AI 智能体；这一举措将 AI 推理与 Cloudflare 的低延迟基础设施结合，使智能体能就近响应用户请求；对 AI 领域而言，它推动了去中心化、边缘化智能体架构的发展；普通开发者可通过 Cloudflare Workers 快速部署轻量级 AI 代理，实现低延迟、高可用的交互式应用。",
-      "summaryEn": "**Cloudflare has launched a platform for building and deploying AI agents** on its global edge network, enabling developers to run intelligent applications close to end users. By integrating AI inference with Cloudflare’s low-latency infrastructure, the platform ensures responsive agent interactions. For the AI community, it advances decentralized, edge-native agent architectures. Developers can now quickly deploy lightweight AI agents via Cloudflare Workers to build low-latency, highly available interactive applications.",
+      "summary": "Cloudflare 推出新工具集，允许开发者在边缘网络上直接构建和部署 AI Agent，利用其全球分布式基础设施实现低延迟、高可用的智能应用，这对希望快速上线轻量级自主代理系统的开发者具有实用价值，普通用户未来可能通过更响应迅速的 AI 服务间接受益。",
+      "summaryZh": "Cloudflare 推出新工具集，允许开发者在边缘网络上直接构建和部署 AI Agent，利用其全球分布式基础设施实现低延迟、高可用的智能应用，这对希望快速上线轻量级自主代理系统的开发者具有实用价值，普通用户未来可能通过更响应迅速的 AI 服务间接受益。",
+      "summaryEn": "Cloudflare has launched a new toolkit enabling developers to build and deploy AI Agents directly on its edge network, leveraging its global infrastructure for low-latency, highly available intelligent applications—offering practical value for teams seeking to rapidly deploy lightweight autonomous agents, with end users potentially benefiting from more responsive AI services.",
       "fullText": "",
-      "imageUrl": "https://opengraph.githubassets.com/d7f57e77901b9acdbbcce60fe892c81366d5e06d5cc52ed62a1129881811b824/cloudflare/agents",
+      "imageUrl": "https://opengraph.githubassets.com/a23cdf3a8fa9862a1d27cbf7997b9a70b5753c7c5a5c10cee7fddb27df5eedd9/cloudflare/agents",
       "tags": [
         "Agent"
       ],
@@ -676,82 +787,79 @@
       "signalReasons": [
         "来源：GitHub Trending",
         "跨源重复：1 个来源",
-        "模型评分：8/10，理由：Cloudflare推出AI Agent部署平台，将AI能力嵌入全球边缘网络基础设施，具有深远产业整合意义。",
-        "热度：3711 / 评论 0"
+        "模型评分：9/10，理由：Cloudflare推出官方AI代理框架，结合边缘计算能力，将重塑AI服务部署模式，具有战略级产业影响。",
+        "热度：3993 / 评论 0"
       ],
-      "score": 7.8,
-      "publishedAt": "2026-02-22T23:34:14.210693+00:00",
+      "score": 8.4,
+      "publishedAt": "2026-02-23T23:40:29.576538+00:00",
       "authors": []
     },
     {
-      "id": "hn_47106686",
-      "title": "开发者分享 Claude Code 高效用法：严格分离规划与执行",
-      "titleZh": "开发者分享 Claude Code 高效用法：严格分离规划与执行",
-      "titleEn": "Developer Shares Efficient Claude Code Workflow: Strict Separation of Planning and Execution",
-      "url": "https://boristane.com/blog/how-i-use-claude-code/",
-      "type": "news",
-      "source": "Hacker News",
-      "summary": "**开发者 Boris Tane 分享其使用 Claude Code 的高效工作流**，核心是严格分离“规划”与“执行”：先通过深度代码阅读生成 research.md，再制定 plan.md 并经多轮人工注释迭代修正，最后才触发完整实现；该方法避免了 AI 直接编码导致的架构偏差和系统冲突，显著提升产出质量；对 AI 编程领域而言，它证明了结构化人机协作优于盲目自动化；普通开发者可借鉴此流程，在开源项目中通过 Markdown 文档作为人机共享状态，实现可控、可追溯的 AI 辅助开发。",
-      "summaryZh": "**开发者 Boris Tane 分享其使用 Claude Code 的高效工作流**，核心是严格分离“规划”与“执行”：先通过深度代码阅读生成 research.md，再制定 plan.md 并经多轮人工注释迭代修正，最后才触发完整实现；该方法避免了 AI 直接编码导致的架构偏差和系统冲突，显著提升产出质量；对 AI 编程领域而言，它证明了结构化人机协作优于盲目自动化；普通开发者可借鉴此流程，在开源项目中通过 Markdown 文档作为人机共享状态，实现可控、可追溯的 AI 辅助开发。",
-      "summaryEn": "**Developer Boris Tane shares his high-efficiency workflow with Claude Code**, centered on strict separation of planning and execution: first generating a detailed research.md through deep codebase analysis, then drafting a plan.md refined over multiple annotation cycles where the human adds inline corrections directly in the document, before finally triggering full implementation. This prevents architectural misalignments and system-breaking changes common in direct AI coding. For the AI programming field, it demonstrates that structured human-AI collaboration outperforms blind automation. Developers can adopt this approach by using Markdown files as shared mutable state for controllable, traceable AI-assisted development.",
-      "fullText": "How I Use Claude Code | Boris Tane How I Use Claude Code | Boris Tane boris tane blog talks projects How I Use Claude Code Feb 10, 2026 Â· [ agents sdlc ] Table of Contents Phase 1: Research Phase 2: Planning The Annotation Cycle Phase 3: Implementation Feedback During Implementation Staying in the Driverâs Seat Single Long Sessions The Workflow in One Sentence Iâve been using Claude Code as my primary development tool for approx 9 months, and the workflow Iâve settled into is radically different from what most people do with AI coding tools. Most developers type a prompt, sometimes use plan mode, fix the errors, repeat. The more terminally online are stitching together ralph loops, mcps, gas towns (remember those?), etc. The results in both cases are a mess that completely falls apart for anything non-trivial. The workflow Iâm going to describe has one core principle: never let Claude write code until youâve reviewed and approved a written plan . This separation of planning and execution is the single most important thing I do. It prevents wasted effort, keeps me in control of architecture decisions, and produces significantly better results with minimal token usage than jumping straight to code. flowchart LR R[Research] --> P[Plan] P --> A[Annotate] A -->|repeat 1-6x| A A --> T[Todo List] T --> I[Implement] I --> F[Feedback & Iterate] Phase 1: Research Every meaningful task starts with a deep-read directive. I ask Claude to thoroughly understand the relevant part of the codebase before doing anything else. And I always require the findings to be written into a persistent markdown file, never just a verbal summary in the chat. read this folder in depth, understand how it works deeply, what it does and all its specificities. when thatâs done, write a detailed report of your learnings and findings in research.md study the notification system in great details, understand the intricacies of it and write a detailed research.md document with everything there is to know about how notifications work go through the task scheduling flow, understand it deeply and look for potential bugs. there definitely are bugs in the system as it sometimes runs tasks that should have been cancelled. keep researching the flow until you find all the bugs, donât stop until all the bugs are found. when youâre done, write a detailed report of your findings in research.md Notice the language: âdeeplyâ , âin great detailsâ , âintricaciesâ , âgo through everythingâ . This isnât fluff. Without these words, Claude will skim. Itâll read a file, see what a function does at the signature level, and move on. You need to signal that surface-level reading is not acceptable. The written artifact ( research.md ) is critical. Itâs not about making Claude do homework. Itâs my review surface. I can read it, verify Claude actually understood the system, and correct misunderstandings before any planning happens. If the research is wrong, the plan will be wrong, and the implementation will be wrong. Garbage in, garbage out. This is the most expensive failure mode with AI-assisted coding, and itâs not wrong syntax or bad logic. Itâs implementations that work in isolation but break the surrounding system. A function that ignores an existing caching layer. A migration that doesnât account for the ORMâs conventions. An API endpoint that duplicates logic that already exists elsewhere. The research phase prevents all of this. Phase 2: Planning Once Iâve reviewed the research, I ask for a detailed implementation plan in a separate markdown file. I want to build a new feature <name and description> that extends the system to perform <business outcome>. write a detailed plan.md document outlining how to implement this. include code snippets the list endpoint should support cursor-based pagination instead of offset. write a detailed plan.md for how to achieve this. read source files before suggesting changes, base the plan on the actual codebase The generated plan always includes a detailed explanation of the approach, code snippets showing the actual changes, file paths that will be modified, and considerations and trade-offs. I use my own .md plan files rather than Claude Codeâs built-in plan mode. The built-in plan mode sucks. My markdown file gives me full control. I can edit it in my editor, add inline notes, and it persists as a real artifact in the project. One trick I use constantly: for well-contained features where Iâve seen a good implementation in an open source repo, Iâll share that code as a reference alongside the plan request. If I want to add sortable IDs, I paste the ID generation code from a project that does it well and say âthis is how they do sortable IDs, write a plan.md explaining how we can adopt a similar approach.â Claude works dramatically better when it has a concrete reference implementation to work from rather than designing from scratch. But the plan document itself isnât the interesting part. The interesting part is what happens next. The Annotation Cycle This is the most distinctive part of my workflow, and the part where I add the most value. flowchart TD W[Claude writes plan.md] --> R[I review in my editor] R --> N[I add inline notes] N --> S[Send Claude back to the document] S --> U[Claude updates plan] U --> D{Satisfied?} D -->|No| R D -->|Yes| T[Request todo list] After Claude writes the plan, I open it in my editor and add inline notes directly into the document . These notes correct assumptions, reject approaches, add constraints, or provide domain knowledge that Claude doesnât have. The notes vary wildly in length. Sometimes a note is two words: ânot optionalâ next to a parameter Claude marked as optional. Other times itâs a paragraph explaining a business constraint or pasting a code snippet showing the data shape I expect. Some real examples of notes Iâd add: âuse drizzle:generate for migrations, not raw SQLâ â domain knowledge Claude doesnât have âno â this should be a PATCH, not a PUTâ â correcting a wrong assumption âremove this section entirely, we donât need caching hereâ â rejecting a proposed approach âthe queue consumer already handles retries, so this retry logic is redundant. remove it and just let it failâ â explaining why something should change âthis is wrong, the visibility field needs to be on the list itself, not on individual items. when a list is public, all items are public. restructure the schema section accordinglyâ â redirecting an entire section of the plan Then I send Claude back to the document: I added a few notes to the document, address all the notes and update the document accordingly. donât implement yet This cycle repeats 1 to 6 times. The explicit âdonât implement yetâ guard is essential. Without it, Claude will jump to code the moment it thinks the plan is good enough. Itâs not good enough until I say it is. Why This Works So Well The markdown file acts as shared mutable state between me and Claude. I can think at my own pace, annotate precisely where something is wrong, and re-engage without losing context. Iâm not trying to explain everything in a chat message. Iâm pointing at the exact spot in the document where the issue is and writing my correction right there. This is fundamentally different from trying to steer implementation through chat messages. The plan is a structured, complete specification I can review holistically. A chat conversation is something Iâd have to scroll through to reconstruct decisions. The plan wins every time. Three rounds of âI added notes, update the planâ can transform a generic implementation plan into one that fits perfectly into the existing system. Claude is excellent at understanding code, proposing solutions, and writing implementations. But it doesnât know my product priorities, my usersâ pain points, or the engineering trade-offs Iâm willing to make. The annotation cycle is how I inject that judgement. The Todo List Before implementation starts, I always request a granular task breakdown: add a detailed todo list to the plan, with all the phases and individual tasks necessary to complete the plan - donât implement yet This creates a checklist that serves as a progress tracker during implementation. Claude marks items as completed as it goes, so I can glance at the plan at any point and see exactly where things stand. Especially valuable in sessions that run for hours. Phase 3: Implementation When the plan is ready, I issue the implementation command. Iâve refined this into a standard prompt I reuse across sessions: implement it all. when youâre done with a task or phase, mark it as completed in the plan document. do not stop until all tasks and phases are completed. do not add unnecessary comments or jsdocs, do not use any or unknown types. continuously run typecheck to make sure youâre not introducing new issues. This single prompt encodes everything that matters: âimplement it allâ : do everything in the plan, donât cherry-pick âmark it as completed in the plan documentâ : the plan is the source of truth for progress âdo not stop until all tasks and phases are completedâ : donât pause for confirmation mid-flow âdo not add unnecessary comments or jsdocsâ : keep the code clean âdo not use any or unknown typesâ : maintain strict typing âcontinuously run typecheckâ : catch problems early, not at the end I use this exact phrasing (with minor variations) in virtually every implementation session. By the time I say âimplement it all,â every decision has been made and validated. The implementation becomes mechanical, not creative. This is deliberate. I want implementation to be boring . The creative work happened in the annotation cycles. Once the plan is right, execution should be straightforward. Without the planning phase, what typically happens is Claude makes a reasonable-but-wrong assumption early on, builds on top of it for 15 minutes, and then I have to unwind a chain of changes. The âdonât implement yetâ guard eliminates this entirely. Feedback During Implementation Once Claude is executing the plan, my role shifts from architect to supervisor. My prompts become dramatically shorter. flowchart LR I[Claude implements] --> R[I review / test] R --> C{Correct?} C -->|No| F[Terse correction] F --> I C -->|Yes| N{More tasks?} N -->|Yes| I N -->|No| D[Done] Where a planning note might be a paragraph, an implementation correction is often a single sentence: âYou didnât implement the deduplicateByTitle function.â âYou built the settings page in the main app when it should be in the admin app, move it.â Claude has the full context of the plan and the ongoing session, so terse corrections are enough. Frontend work is the most iterative part. I test in the browser and fire off rapid corrections: âwiderâ âstill croppedâ âthereâs a 2px gapâ For visual issues, I sometimes attach screenshots. A screenshot of a misaligned table communicates the problem faster than describing it. I also reference existing code constantly: âthis table should look exactly like the users table, same header, same pagination, same row density.â This is far more precise than describing a design from scratch. Most features in a mature codebase are variations on existing patterns. A new settings page should look like the existing settings pages. Pointing to the reference communicates all the implicit requirements without spelling them out. Claude would typically read the reference file(s) before making the correction. When something goes in a wrong direction, I donât try to patch it. I revert and re-scope by discarding the git changes: âI reverted everything. Now all I want is to make the list view more minimal â nothing else.â Narrowing scope after a revert almost always produces better results than trying to incrementally fix a bad appr",
-      "imageUrl": "https://boristane.com/assets/blog/how-i-use-claude-code/og.png",
-      "tags": [
-        "LLM"
-      ],
-      "paperCategory": "",
-      "signalReasons": [
-        "来源：Hacker News",
-        "跨源重复：1 个来源",
-        "模型评分：7/10，理由：提出AI编程中规划与执行分离的系统性工作流，对开发者实践有显著影响，属实用型创新，但未触及行业范式变革。",
-        "热度：865 / 评论 548"
-      ],
-      "score": 7.2,
-      "publishedAt": "2026-02-22T00:29:05+00:00",
-      "authors": [
-        "vinhnx"
-      ]
-    },
-    {
-      "id": "github_abhigyanpatwari_GitNexus",
-      "title": "GitNexus：浏览器内运行的零服务器代码知识图谱工具",
-      "titleZh": "GitNexus：浏览器内运行的零服务器代码知识图谱工具",
-      "titleEn": "GitNexus: Zero-Server Code Intelligence Engine Runs Entirely in Browser",
-      "url": "https://github.com/abhigyanpatwari/GitNexus",
+      "id": "github_muratcankoylan_Agent-Skills-for-Context-Engineering",
+      "title": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "titleZh": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "titleEn": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
       "type": "news",
       "source": "GitHub Trending",
-      "summary": "**GitNexus 是一个零服务器代码智能引擎**，完全在浏览器中运行，用户只需拖入 GitHub 仓库或 ZIP 文件，即可自动生成交互式知识图谱并内置 Graph RAG 智能体；其重要性在于无需后端即可实现本地化代码理解；对 AI 领域而言，它展示了客户端知识图谱与检索增强生成（RAG）结合的轻量化路径；普通开发者可立即用于探索陌生代码库，快速掌握模块关系与调用逻辑，尤其适合离线或隐私敏感场景。",
-      "summaryZh": "**GitNexus 是一个零服务器代码智能引擎**，完全在浏览器中运行，用户只需拖入 GitHub 仓库或 ZIP 文件，即可自动生成交互式知识图谱并内置 Graph RAG 智能体；其重要性在于无需后端即可实现本地化代码理解；对 AI 领域而言，它展示了客户端知识图谱与检索增强生成（RAG）结合的轻量化路径；普通开发者可立即用于探索陌生代码库，快速掌握模块关系与调用逻辑，尤其适合离线或隐私敏感场景。",
-      "summaryEn": "**GitNexus is a zero-server code intelligence engine** that runs entirely in the browser: users drop in a GitHub repo or ZIP file and instantly get an interactive knowledge graph with a built-in Graph RAG agent. Its significance lies in enabling fully client-side code understanding without backend infrastructure. For the AI field, it demonstrates a lightweight path to combining knowledge graphs with retrieval-augmented generation (RAG). Developers can immediately use it to explore unfamiliar codebases, grasp module relationships and call flows—ideal for offline or privacy-sensitive scenarios.",
+      "summary": "该开源项目系统整理了面向上下文工程（Context Engineering）的 Agent 技能集合，涵盖多智能体架构设计、上下文管理优化及生产级 Agent 系统调试方法，为开发者提供可复用的模块化实践指南，有助于提升复杂 Agent 系统在动态环境中的推理一致性与任务执行可靠性。",
+      "summaryZh": "该开源项目系统整理了面向上下文工程（Context Engineering）的 Agent 技能集合，涵盖多智能体架构设计、上下文管理优化及生产级 Agent 系统调试方法，为开发者提供可复用的模块化实践指南，有助于提升复杂 Agent 系统在动态环境中的推理一致性与任务执行可靠性。",
+      "summaryEn": "This open-source repository provides a comprehensive collection of modular agent skills tailored for context engineering, covering multi-agent architecture design, context management optimization, and debugging techniques for production-grade agent systems—offering developers reusable practices to enhance reasoning consistency and task reliability in dynamic environments.",
       "fullText": "",
-      "imageUrl": "https://opengraph.githubassets.com/d7269b5304f6f39fdb45dfb13c9fab0dd1a49293ff9451ad22f5245d6a0a9ffb/abhigyanpatwari/GitNexus",
+      "imageUrl": "https://private-user-images.githubusercontent.com/132029956/535224922-c60fd73f-4a6c-4679-b7c6-bb8ebf2f3a48.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzE4OTAzMjEsIm5iZiI6MTc3MTg5MDAyMSwicGF0aCI6Ii8xMzIwMjk5NTYvNTM1MjI0OTIyLWM2MGZkNzNmLTRhNmMtNDY3OS1iN2M2LWJiOGViZjJmM2E0OC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMjIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDIyM1QyMzQwMjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wYzQyMzgwMGRjNGUzZmQxMGYxMzk0NjVlMzliMmQyYWNjY2UzMzFjNWVkNDE2MGI2N2Y0ZmY5NzIzM2JlNjRmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.aSCM4r4HiyODmlQeyA9g7w1fYOWMtksso4t5jVzjajM",
       "tags": [
-        "Agent",
-        "RAG",
-        "Open Source"
+        "Agent"
       ],
       "paperCategory": "",
       "signalReasons": [
         "来源：GitHub Trending",
         "跨源重复：1 个来源",
-        "模型评分：7/10，理由：浏览器端代码知识图谱引擎，提升本地化代码理解效率，是AI辅助开发的重要补充，具实用价值。",
-        "热度：1471 / 评论 0"
+        "模型评分：8/10，理由：系统化整理AI代理上下文工程技能，对构建复杂多智能体系统具有显著实践指导意义。",
+        "热度：8895 / 评论 0"
       ],
-      "score": 7.2,
-      "publishedAt": "2026-02-22T23:34:15.549364+00:00",
+      "score": 7.8,
+      "publishedAt": "2026-02-23T23:40:21.060863+00:00",
+      "authors": []
+    },
+    {
+      "id": "github_VectifyAI_PageIndex",
+      "title": "VectifyAI/PageIndex",
+      "titleZh": "VectifyAI/PageIndex",
+      "titleEn": "VectifyAI/PageIndex",
+      "url": "https://github.com/VectifyAI/PageIndex",
+      "type": "news",
+      "source": "GitHub Trending",
+      "summary": "PageIndex 是一种新型文档索引方法，专为无向量（vectorless）、基于推理的 RAG（检索增强生成）系统设计，通过结构化页面内容而非传统嵌入向量来支持高效语义检索，有望降低对高维向量数据库的依赖，使资源受限设备也能运行高质量 RAG 应用。",
+      "summaryZh": "PageIndex 是一种新型文档索引方法，专为无向量（vectorless）、基于推理的 RAG（检索增强生成）系统设计，通过结构化页面内容而非传统嵌入向量来支持高效语义检索，有望降低对高维向量数据库的依赖，使资源受限设备也能运行高质量 RAG 应用。",
+      "summaryEn": "PageIndex introduces a novel document indexing approach designed for vectorless, reasoning-based RAG (Retrieval-Augmented Generation) systems, using structured page content instead of traditional embedding vectors to enable efficient semantic retrieval—potentially reducing reliance on high-dimensional vector databases and enabling high-quality RAG on resource-constrained devices.",
+      "fullText": "",
+      "imageUrl": "https://private-user-images.githubusercontent.com/8255061/440120069-571aa074-d803-43c7-80c4-a04254b782a3.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzE4OTAzMjgsIm5iZiI6MTc3MTg5MDAyOCwicGF0aCI6Ii84MjU1MDYxLzQ0MDEyMDA2OS01NzFhYTA3NC1kODAzLTQzYzctODBjNC1hMDQyNTRiNzgyYTMucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDIyMyUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjAyMjNUMjM0MDI4WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NjQ3MjQwYTFmYzBhZjY2M2NkYzliZDhhZTE2MGNjMmM1M2Y5MTQ5ODg3MjU1ODBhZWZkMGNiYWNhNDJiYzkwNCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.Kjvb_EbzGUxTTednpKQP_b4sd4Lb9OeNvk6zTygU72Q",
+      "tags": [
+        "RAG",
+        "Reasoning"
+      ],
+      "paperCategory": "",
+      "signalReasons": [
+        "来源：GitHub Trending",
+        "跨源重复：1 个来源",
+        "模型评分：8/10，理由：提出无向量RAG新范式，聚焦推理能力优化，对下一代检索增强架构具有重要启发意义。",
+        "热度：16741 / 评论 0"
+      ],
+      "score": 7.8,
+      "publishedAt": "2026-02-23T23:40:28.286633+00:00",
       "authors": []
     },
     {
       "id": "github_OpenBB-finance_OpenBB",
-      "title": "OpenBB 推出面向 AI 智能体的开源金融数据平台",
-      "titleZh": "OpenBB 推出面向 AI 智能体的开源金融数据平台",
-      "titleEn": "OpenBB Launches Open-Source Financial Data Platform for AI Agents",
+      "title": "OpenBB-finance/OpenBB",
+      "titleZh": "OpenBB-finance/OpenBB",
+      "titleEn": "OpenBB-finance/OpenBB",
       "url": "https://github.com/OpenBB-finance/OpenBB",
       "type": "news",
       "source": "GitHub Trending",
-      "summary": "**OpenBB 推出面向分析师、量化交易员和 AI 智能体的金融数据平台**，整合多源市场数据、分析工具与 API 接口；其重要性在于为金融 AI 应用提供标准化数据底座；对 AI 领域而言，它降低了金融智能体的数据获取与处理门槛；普通投资者或开发者可通过其开源框架接入实时行情、基本面数据及技术指标，构建自动化策略或研究模型，无需依赖昂贵商业终端。",
-      "summaryZh": "**OpenBB 推出面向分析师、量化交易员和 AI 智能体的金融数据平台**，整合多源市场数据、分析工具与 API 接口；其重要性在于为金融 AI 应用提供标准化数据底座；对 AI 领域而言，它降低了金融智能体的数据获取与处理门槛；普通投资者或开发者可通过其开源框架接入实时行情、基本面数据及技术指标，构建自动化策略或研究模型，无需依赖昂贵商业终端。",
-      "summaryEn": "**OpenBB has launched a financial data platform** tailored for analysts, quants, and AI agents, integrating multi-source market data, analytical tools, and APIs. Its significance lies in providing a standardized data foundation for financial AI applications. For the AI community, it lowers the barrier to accessing and processing financial data. Individual investors and developers can leverage its open-source framework to access real-time quotes, fundamentals, and technical indicators—enabling automated strategies or research models without costly commercial terminals.",
+      "summary": "OpenBB 是一个面向金融分析师、量化交易员和 AI Agent 的开源金融数据平台，整合多源市场数据、分析工具与自动化接口，支持程序化策略开发与智能投研，普通投资者可通过其社区版免费获取专业级金融洞察，降低使用前沿 AI 进行投资决策的门槛。",
+      "summaryZh": "OpenBB 是一个面向金融分析师、量化交易员和 AI Agent 的开源金融数据平台，整合多源市场数据、分析工具与自动化接口，支持程序化策略开发与智能投研，普通投资者可通过其社区版免费获取专业级金融洞察，降低使用前沿 AI 进行投资决策的门槛。",
+      "summaryEn": "OpenBB is an open-source financial data platform built for analysts, quants, and AI agents, integrating multi-source market data, analytical tools, and automation APIs to support algorithmic strategy development and intelligent investment research—enabling retail investors to access professional-grade insights via its free community edition and lowering the barrier to AI-driven decision-making.",
       "fullText": "",
       "imageUrl": "https://repository-images.githubusercontent.com/323048702/4659bbdb-ae11-4f51-8a16-860fa9dfc551",
       "tags": [
@@ -761,76 +869,112 @@
       "signalReasons": [
         "来源：GitHub Trending",
         "跨源重复：1 个来源",
-        "模型评分：6/10，理由：面向金融分析的开源数据平台，具行业应用潜力，但尚未形成广泛影响力或技术颠覆。",
-        "热度：60968 / 评论 0"
+        "模型评分：7/10，理由：面向金融分析与AI代理的开源数据平台，具备实际应用前景和行业落地潜力。",
+        "热度：61415 / 评论 0"
       ],
-      "score": 6.6,
-      "publishedAt": "2026-02-22T23:34:12.922690+00:00",
+      "score": 7.2,
+      "publishedAt": "2026-02-23T23:40:19.530554+00:00",
       "authors": []
     },
     {
-      "id": "rss_9061857003",
-      "title": "三星Galaxy S26将支持Perplexity，打造多AI代理生态",
-      "titleZh": "三星Galaxy S26将支持Perplexity，打造多AI代理生态",
-      "titleEn": "Samsung Adds Perplexity to Galaxy AI for Multi-Agent Ecosystem on Galaxy S26",
-      "url": "https://www.theverge.com/tech/882921/samsung-is-adding-perplexity-to-galaxy-ai",
+      "id": "rss_4773693064",
+      "title": "Anthropic 指控 DeepSeek 等中企大规模蒸馏 Claude 模型训练自家 AI",
+      "titleZh": "Anthropic 指控 DeepSeek 等中企大规模蒸馏 Claude 模型训练自家 AI",
+      "titleEn": "Anthropic Accuses DeepSeek and Other Chinese Firms of Mass-Distilling Claude to Train Their AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/883243/anthropic-claude-deepseek-china-ai-distillation",
       "type": "news",
       "source": "The Verge AI",
-      "summary": "三星将在Galaxy S26中集成Perplexity AI，用户可通过唤醒词“hey, Plex”调用该助手，使其成为Galaxy AI多智能体生态系统的一部分；这一举措标志着三星正推动操作系统支持多个AI代理协同工作，Perplexity将能访问Samsung Notes、日历、相册等原生应用及部分第三方应用，反映出厂商对用户偏好多样化AI助手的重视，普通用户未来可在同一设备上根据任务需求灵活切换不同AI，从而获得更个性化的智能体验。",
-      "summaryZh": "三星将在Galaxy S26中集成Perplexity AI，用户可通过唤醒词“hey, Plex”调用该助手，使其成为Galaxy AI多智能体生态系统的一部分；这一举措标志着三星正推动操作系统支持多个AI代理协同工作，Perplexity将能访问Samsung Notes、日历、相册等原生应用及部分第三方应用，反映出厂商对用户偏好多样化AI助手的重视，普通用户未来可在同一设备上根据任务需求灵活切换不同AI，从而获得更个性化的智能体验。",
-      "summaryEn": "Samsung is integrating Perplexity into Galaxy AI on the upcoming Galaxy S26, allowing users to activate it with the voice command “hey, Plex.” This move forms part of Samsung’s broader “multi-agent ecosystem” strategy, enabling different AI assistants—like Bixby, Gemini, and now Perplexity—to coexist within the OS. Perplexity will gain access to native Samsung apps such as Notes, Calendar, Gallery, Clock, and Reminders, as well as select third-party applications. By supporting multiple specialized AI agents, Samsung aims to differentiate itself from competitors like Apple and Google, offering users greater flexibility to choose their preferred AI for specific tasks—a shift that could reshape how consumers interact with smartphones through personalized, agent-driven interfaces.",
-      "fullText": "Samsung is adding Perplexity to Galaxy AI | The Verge Skip to main content The homepage The Verge The Verge logo. The Verge The Verge logo. Tech Reviews Science Entertainment AI Policy Hamburger Navigation Button The homepage The Verge The Verge logo. Hamburger Navigation Button Navigation Drawer The Verge The Verge logo. Login / Sign Up close Close Search Tech Expand Amazon Apple Facebook Google Microsoft Samsung Business See all tech Reviews Expand Smart Home Reviews Phone Reviews Tablet Reviews Headphone Reviews See all reviews Science Expand Space Energy Environment Health See all science Entertainment Expand TV Shows Movies Audio See all entertainment AI Expand OpenAI Anthropic See all AI Policy Expand Antitrust Politics Law Security See all policy Gadgets Expand Laptops Phones TVs Headphones Speakers Wearables See all gadgets Verge Shopping Expand Buying Guides Deals Gift Guides See all shopping Gaming Expand Xbox PlayStation Nintendo See all gaming Streaming Expand Disney HBO Netflix YouTube Creators See all streaming Transportation Expand Electric Cars Autonomous Cars Ride-sharing Scooters See all transportation Features Verge Video Expand TikTok YouTube Instagram Podcasts Expand Decoder The Vergecast Version History Newsletters Archives Store Verge Product Updates Subscribe Facebook Threads Instagram Youtube RSS The Verge The Verge logo. Samsung is adding Perplexity to Galaxy AI Comments Drawer Comments Loading comments Getting the conversation ready... Tech Close Tech Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Tech AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News Samsung is adding Perplexity to Galaxy AI The company is betting big on a multi-agent AI ecosystem. The company is betting big on a multi-agent AI ecosystem. by Terrence O'Brien Close Terrence O'Brien Weekend Editor Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Terrence O'Brien Feb 22, 2026, 10:15 PM UTC Link Share Gift I wish I could talk to my Plex server… Image: Samsung. Terrence O'Brien Close Terrence O'Brien Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Terrence O'Brien is the Verge’s weekend editor. He has over 18 years of experience, including 10 years as managing editor at Engadget. In addition to summoning Bixby or Gemini , Galaxy S26 users will be able to call on Perplexity by saying “ hey, Plex .” The integration of Perplexity into Galaxy AI is just one element of the company’s embrace of a “multi-agent ecosystem.” Often, people will use different AI agents for different tasks, depending on where their strengths lie. So Samsung is opening up the ability to integrate different agents into the OS. Hey, Plex isn’t just some transparent version of the app baked into a Galaxy phone to quickly get answers to questions. Perplexity will have access to Samsung Notes, Clock, Gallery, Reminder, and Calendar, as well as select third-party apps, though which ones specifically Samsung didn’t say. Samsung seems to believe that people will increasingly use AI to interact with their phones. But, as we’ve learned, people can develop strong attachments to particular AIs. So the company is betting that giving people the freedom to put whatever agent they want at the heart of their phone will help differentiate them from competition like Apple and Google. Of course, Samsung’s next Unpacked event is just around the corner. I’m sure we’ll hear more about Galaxy AI and Samsung’s vision for a multi-agent future on the 25th . Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates. Terrence O'Brien Close Terrence O'Brien Weekend Editor Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Terrence O'Brien AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News Samsung Close Samsung Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Samsung Tech Close Tech Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Tech Most Popular Most Popular Anker’s X1 Pro shouldn’t exist, but I’m so glad it does Georgia says Elon Musk’s America PAC violated election law Stellantis is in a crisis of its own making Trump says Netflix will ‘pay the consequences’ if it doesn’t fire Susan Rice Turtle Beach’s new PC controller with swiveling sticks is 30 percent off The Verge Daily A free daily digest of the news that matters most. Email (required) Sign Up By submitting your email, you agree to our Terms and Privacy Notice . This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. Advertiser Content From This is the title for the native ad More in Tech Retro camera shootout: Camp Snap Pro vs. Flashback One35 V2 Arturia’s FX Collection 6 adds two new effects and a $99 intro version Georgia says Elon Musk’s America PAC violated election law The Pixel 10A and Soundcore Space One are just two of the best deals this week 8 Verge Score Anker’s X1 Pro shouldn’t exist, but I’m so glad it does The best e-reader to buy right now Retro camera shootout: Camp Snap Pro vs. Flashback One35 V2 Antonio G. Di Benedetto 1:00 PM UTC Arturia’s FX Collection 6 adds two new effects and a $99 intro version Terrence O'Brien Feb 21 Georgia says Elon Musk’s America PAC violated election law Terrence O'Brien Feb 21 The Pixel 10A and Soundcore Space One are just two of the best deals this week Brandon Widder Feb 21 Anker’s X1 Pro shouldn’t exist, but I’m so glad it does Thomas Ricker Feb 21 The best e-reader to buy right now Sheena Vasani Feb 20 Advertiser Content From This is the title for the native ad Top Stories 1:00 PM UTC America desperately needs new privacy laws 2:03 PM UTC This magazine plays Tetris — here’s how Two hours ago You need to listen to Laurie Spiegel’s masterpiece of early ambient music Feb 21 Anker’s X1 Pro shouldn’t exist, but I’m so glad it does 1:00 PM UTC Retro camera shootout: Camp Snap Pro vs. Flashback One35 V2 Feb 20 Will Stancil is agitating in Minneapolis The Verge The Verge logo. Facebook Threads Instagram Youtube RSS Contact Tip Us Community Guidelines Archives About Ethics Statement How We Rate and Review Products Cookie Settings Terms of Use Privacy Notice Cookie Policy Licensing FAQ Accessibility Platform Status © 2026 Vox Media , LLC. All Rights Reserved",
-      "imageUrl": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/Samsung-Mobile-Galaxy-AI-Perplexity-AI-Agent-Expansion-of-Galaxy-AI_main1.jpg?quality=90&strip=all&crop=0,3.5026456994597,100,92.994708601081",
+      "summary": "**Anthropic 指控 DeepSeek、MiniMax 和 Moonshot 三家中国 AI 公司通过创建约 24,000 个虚假账户、发起超 1600 万次交互，大规模‘蒸馏’其 Claude 模型以训练自家产品**，此举虽利用了合法技术路径，但绕过了原始模型的安全机制，可能导致缺乏防护的 AI 能力被用于监控或虚假信息等场景；该公司呼吁加强芯片出口管制与行业协作以遏制此类行为，普通用户应警惕来源不明的 AI 服务可能继承未授权模型的风险。",
+      "summaryZh": "**Anthropic 指控 DeepSeek、MiniMax 和 Moonshot 三家中国 AI 公司通过创建约 24,000 个虚假账户、发起超 1600 万次交互，大规模‘蒸馏’其 Claude 模型以训练自家产品**，此举虽利用了合法技术路径，但绕过了原始模型的安全机制，可能导致缺乏防护的 AI 能力被用于监控或虚假信息等场景；该公司呼吁加强芯片出口管制与行业协作以遏制此类行为，普通用户应警惕来源不明的 AI 服务可能继承未授权模型的风险。",
+      "summaryEn": "Anthropic accuses Chinese AI firms DeepSeek, MiniMax, and Moonshot of illicitly distilling its Claude model by creating approximately 24,000 fake accounts and conducting over 16 million interactions—an industrial-scale effort that bypassed Claude’s safety safeguards and could enable unprotected AI capabilities to be deployed in surveillance or disinformation systems. While model distillation is a legitimate technique, Anthropic warns it was misused here to shortcut development costs, and calls for tighter chip export controls and industry coordination; users should remain cautious about AI services built on unverified, potentially unauthorized models.",
+      "fullText": "Anthropic accuses DeepSeek and other Chinese firms of using Claude to train their AI | The Verge Skip to main content The homepage The Verge The Verge logo. The Verge The Verge logo. Tech Reviews Science Entertainment AI Policy Hamburger Navigation Button The homepage The Verge The Verge logo. Hamburger Navigation Button Navigation Drawer The Verge The Verge logo. Login / Sign Up close Close Search Tech Expand Amazon Apple Facebook Google Microsoft Samsung Business See all tech Reviews Expand Smart Home Reviews Phone Reviews Tablet Reviews Headphone Reviews See all reviews Science Expand Space Energy Environment Health See all science Entertainment Expand TV Shows Movies Audio See all entertainment AI Expand OpenAI Anthropic See all AI Policy Expand Antitrust Politics Law Security See all policy Gadgets Expand Laptops Phones TVs Headphones Speakers Wearables See all gadgets Verge Shopping Expand Buying Guides Deals Gift Guides See all shopping Gaming Expand Xbox PlayStation Nintendo See all gaming Streaming Expand Disney HBO Netflix YouTube Creators See all streaming Transportation Expand Electric Cars Autonomous Cars Ride-sharing Scooters See all transportation Features Verge Video Expand TikTok YouTube Instagram Podcasts Expand Decoder The Vergecast Version History Newsletters Archives Store Verge Product Updates Subscribe Facebook Threads Instagram Youtube RSS The Verge The Verge logo. Anthropic accuses DeepSeek and other Chinese firms of using Claude to train their AI Comments Drawer Comments Loading comments Getting the conversation ready... AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News Anthropic Close Anthropic Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Anthropic Anthropic accuses DeepSeek and other Chinese firms of using Claude to train their AI DeepSeek allegedly targeted Claude’s reasoning capabilities, while generating ‘censorship-safe alternatives to politically sensitive questions.’ DeepSeek allegedly targeted Claude’s reasoning capabilities, while generating ‘censorship-safe alternatives to politically sensitive questions.’ by Emma Roth Close Emma Roth News Writer Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Emma Roth Feb 23, 2026, 8:22 PM UTC Link Share Gift Image: Cath Virginia / The Verge Emma Roth Close Emma Roth Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Emma Roth is a news writer who covers the streaming wars, consumer tech, crypto, social media, and much more. Previously, she was a writer and editor at MUO. Anthropic claims DeepSeek and two other Chinese AI companies misused its Claude AI model in an attempt to improve their own products. In an announcement on Monday , Anthropic says the “industrial-scale campaigns” involved the creation of around 24,000 fraudulent accounts and more than 16 million exchanges with Claude, as reported earlier by The Wall Street Journal . The three companies — DeepSeek, MiniMax, and Moonshot — are accused of “distilling” Claude , or training a smaller AI model based on a more advanced one. Though Anthropic says that distillation is a “legitimate training method,” it adds that it can “also be used for illicit purposes,” including “to acquire powerful capabilities from other labs in a fraction of the time, and at a fraction of the cost, that it would take to develop them independently.” Anthropic adds that illicitly distilled models are “unlikely” to carry over existing safeguards. “Foreign labs that distill American models can then feed these unprotected capabilities into military, intelligence, and surveillance systems — enabling authoritarian governments to deploy frontier AI for offensive cyber operations, disinformation campaigns, and mass surveillance,” Anthropic writes. DeepSeek, which caused a stir in the AI industry for its powerful but more efficient models, held over 150,000 exchanges with Claude and targeted its reasoning capabilities, according to Anthropic. It’s also accused of using Claude to generate “censorship-safe alternatives to politically sensitive questions about dissidents, party leaders, or authoritarianism.” In a letter to lawmakers last week, OpenAI similarly accused DeepSeek of “ongoing efforts to free-ride on the capabilities developed by OpenAI and other U.S. frontier labs.” Moonshot and MiniMax had more than 3.4 million and 13 million exchanges with Claude, respectively. Anthropic is calling on other members in the AI industry, cloud providers, and lawmakers to address distillation, adding that “restricted chip access” could limit model training and “the scale of illicit distillation.” Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates. Emma Roth Close Emma Roth News Writer Posts from this author will be added to your daily email digest and your homepage feed. Follow Follow See All by Emma Roth AI Close AI Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All AI Anthropic Close Anthropic Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All Anthropic News Close News Posts from this topic will be added to your daily email digest and your homepage feed. Follow Follow See All News Most Popular Most Popular Inside Microsoft’s big Xbox leadership shake-up Anker’s X1 Pro shouldn’t exist, but I’m so glad it does Yep, it’s fast: Donut Lab’s solid-state battery gets its first test result How many AIs does it take to read a PDF? Nothing couldn’t wait to show off the Phone 4A The Verge Daily A free daily digest of the news that matters most. Email (required) Sign Up By submitting your email, you agree to our Terms and Privacy Notice . This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. Advertiser Content From This is the title for the native ad More in AI Does Big Tech actually care about fighting AI slop? Why is AI so bad at reading PDFs? Samsung is adding Perplexity to Galaxy AI Suspect in Tumbler Ridge school shooting described violent scenarios to ChatGPT Trump is making coal plants even dirtier as AI demands more energy Amazon blames human employees for an AI coding agent’s mistake Does Big Tech actually care about fighting AI slop? Jess Weatherbed 4:00 PM UTC Why is AI so bad at reading PDFs? Josh Dzieza 11:00 AM UTC Samsung is adding Perplexity to Galaxy AI Terrence O'Brien Feb 22 Suspect in Tumbler Ridge school shooting described violent scenarios to ChatGPT Terrence O'Brien Feb 21 Trump is making coal plants even dirtier as AI demands more energy Justine Calma Feb 20 Amazon blames human employees for an AI coding agent’s mistake Robert Hart Feb 20 Advertiser Content From This is the title for the native ad Top Stories 2:54 PM UTC Inside Microsoft’s big Xbox leadership shake-up 8:37 PM UTC Will Trump’s DOJ actually take on Ticketmaster? 8:30 PM UTC Billions of dollars later and still nobody knows what an Xbox is 11:00 AM UTC Why is AI so bad at reading PDFs? 4:00 PM UTC Does Big Tech actually care about fighting AI slop? Feb 22 America desperately needs new privacy laws The Verge The Verge logo. Facebook Threads Instagram Youtube RSS Contact Tip Us Community Guidelines Archives About Ethics Statement How We Rate and Review Products Cookie Settings Terms of Use Privacy Notice Cookie Policy Licensing FAQ Accessibility Platform Status © 2026 Vox Media , LLC. All Rights Reserved",
+      "imageUrl": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/STK269_ANTHROPIC_2_C.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
       "tags": [
         "LLM",
-        "Agent"
+        "Industry"
       ],
       "paperCategory": "",
       "signalReasons": [
         "来源：The Verge AI",
         "跨源重复：1 个来源",
-        "模型评分：9/10，理由：三星将Perplexity纳入Galaxy AI，标志消费电子巨头构建多代理生态系统，预示终端AI融合新范式。",
+        "模型评分：9/10，理由：Anthropic指控中国AI公司大规模滥用Claude模型训练，涉及知识产权、国际竞争与AI伦理核心议题，具有全球产业政策与战略影响。",
         "热度：0 / 评论 0"
       ],
-      "score": 5.4,
-      "publishedAt": "2026-02-22T22:15:30+00:00",
+      "score": 6.4,
+      "publishedAt": "2026-02-23T20:22:55+00:00",
       "authors": [
-        "Terrence O’Brien"
+        "Emma Roth"
       ]
     }
   ],
   "stats": {
-    "total_papers_ingested": 258,
-    "total_news_ingested": 9,
-    "l1_papers_passed": 121,
-    "l1_news_passed": 9,
-    "l2_papers_scored": 50,
-    "l2_news_scored": 7,
+    "total_papers_ingested": 193,
+    "total_news_ingested": 37,
+    "l1_papers_passed": 83,
+    "l1_news_passed": 30,
+    "l2_papers_scored": 47,
+    "l2_news_scored": 23,
     "l3_papers_selected": 18,
-    "l3_news_selected": 7,
+    "l3_news_selected": 11,
     "news_source_counts": {
-      "GitHub Trending": 6,
-      "Hacker News": 1,
-      "The Verge AI": 1,
-      "TechCrunch AI": 1
+      "GitHub Trending": 10,
+      "TechCrunch AI": 10,
+      "Hacker News": 6,
+      "AWS Machine Learning Blog": 4,
+      "The Verge AI": 3,
+      "OpenAI Blog": 2,
+      "NVIDIA Blog": 1,
+      "MIT Tech Review AI": 1
     },
     "rss_source_counts": {
-      "The Verge AI": 1,
-      "TechCrunch AI": 1
+      "TechCrunch AI": 10,
+      "AWS Machine Learning Blog": 4,
+      "The Verge AI": 3,
+      "OpenAI Blog": 2,
+      "NVIDIA Blog": 1,
+      "MIT Tech Review AI": 1
     },
     "news_title_source_counts": {
-      "how i use claude code separation of planning and execution": 1,
-      "vxcontrol pentagi": 1,
-      "anthropics claude code": 1,
+      "show hn ai timeline 171 llms from transformer 2017 to gpt 5 3 2026": 1,
+      "ask hn how do you know if ai agents will choose your tool": 1,
+      "detecting and preventing distillation attacks": 1,
+      "anthropic education the ai fluency index": 1,
+      "ibm plunges after anthropic s latest update takes on cobol": 1,
+      "car wash test with 53 models": 1,
       "x1xhlol system prompts and models of ai tools": 1,
       "openbb finance openbb": 1,
-      "cloudflare agents": 1,
+      "muratcankoylan agent skills for context engineering": 1,
+      "f prompts chat": 1,
+      "compvis stable diffusion": 1,
       "abhigyanpatwari gitnexus": 1,
-      "samsung is adding perplexity to galaxy ai": 1,
-      "6 days left to lock in the lowest techcrunch disrupt 2026 rates": 1
+      "vectifyai pageindex": 1,
+      "cloudflare agents": 1,
+      "nevamind ai memu": 1,
+      "clash verge rev clash verge rev": 1,
+      "why we no longer evaluate swe bench verified": 1,
+      "openai announces frontier alliance partners": 1,
+      "nvidia brings ai powered cybersecurity to world s critical infrastructure": 1,
+      "anthropic accuses deepseek and other chinese firms of using claude to train their ai": 1,
+      "does big tech actually care about fighting ai slop": 1,
+      "how many ais does it take to read a pdf": 1,
+      "with ai investor loyalty is almost dead at least a dozen openai vcs now also back anthropic": 1,
+      "anthropic accuses chinese ai labs of mining claude as us debates ai chip exports": 1,
+      "google s cloud ai leads on the three frontiers of model capability": 1,
+      "openai calls in the consultants for its enterprise push": 1,
+      "guide labs debuts a new kind of interpretable llm": 1,
+      "particle s ai news app listens to podcasts for interesting clips so you you don t have to": 1,
+      "spotify rolls out ai powered prompted playlists to the uk and other markets": 1,
+      "5 days left to lock in the lowest techcrunch disrupt 2026 ticket rates": 1,
+      "how ai agents could destroy the economy": 1,
+      "defense secretary summons anthropic s amodei over military use of claude": 1,
+      "the human work behind humanoid robots is being hidden": 1,
+      "scaling data annotation using vision language models to power physical ai systems": 1,
+      "how sonrai uses amazon sagemaker ai to accelerate precision medicine trials": 1,
+      "accelerating ai model production at hexagon with amazon sagemaker hyperpod": 1,
+      "agentic ai with multi model framework using hugging face smolagents on aws": 1
     },
-    "total_papers_deduped": 258,
-    "total_news_deduped": 9,
-    "news_recent_filtered": 9
+    "total_papers_deduped": 193,
+    "total_news_deduped": 37,
+    "news_recent_filtered": 37
   }
 }

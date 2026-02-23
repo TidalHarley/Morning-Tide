@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-23",
+    "papers_count": 18,
+    "news_count": 11,
+    "top_paper": "WorkflowPerturb: Calibrated Stress Tests for Evaluating Multi-Agent Workflow Metrics",
+    "top_news": "Anthropic曝光三家中企大规模蒸馏攻击窃取Claude能力"
+  },
+  {
     "date": "2026-02-22",
     "papers_count": 18,
     "news_count": 7,
